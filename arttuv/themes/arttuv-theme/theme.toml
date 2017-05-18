@@ -7,6 +7,8 @@ tags = []
 features = []
 min_version = "0.0.1"
 
+baseURL = ""
+
 [author]
   name = ""
   homepage = ""
