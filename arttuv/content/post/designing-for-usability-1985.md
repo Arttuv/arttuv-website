@@ -1,6 +1,6 @@
 +++
 date = "2017-05-11T18:48:24+03:00"
-draft = true
+draft = false
 title = "Designing for usability 1985"
 
 +++

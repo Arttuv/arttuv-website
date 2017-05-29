@@ -1,6 +1,6 @@
 +++
 date = "2017-05-11T18:48:47+03:00"
-draft = true
+draft = false
 title = "Nielsen: Web UX 2016 vs 2004"
 
 +++
