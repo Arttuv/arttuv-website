@@ -1,4 +1,4 @@
-
+baseURL = "https://arttuv.github.io/arttuv-website/"
 languageCode = "en-us"
 title = "arttuv"
 publishDir = "docs"
