@@ -1,6 +1,7 @@
 baseURL = "http://arttuv.com"
 languageCode = "en-us"
 title = "arttuv"
+publishDir = "docs"
 
 [taxonomies]
 	tag = "tags"
