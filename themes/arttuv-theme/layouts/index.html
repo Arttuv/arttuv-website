@@ -4,7 +4,7 @@
 <header>
 	<!-- Check if header is not set or empty -->
 	{{ if (not (isset .Site.Params "header")) | or (eq .Site.Params.header "") }}
-		<h1>What I'm Thinking</h1>
+		<h1>Writings</h1>
 	{{ else }}
 		<h1>{{ .Site.Params.header }}</h1>
 	{{ end }}
