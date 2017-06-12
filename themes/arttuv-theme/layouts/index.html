@@ -1,21 +1,29 @@
 {{ partial "head.html" . }}
-{{ partial "nav.html" . }}
+<body>
+	
+	<div class="container">
 
-<header>
-	<!-- Check if header is not set or empty -->
-	{{ if (not (isset .Site.Params "header")) | or (eq .Site.Params.header "") }}
-		<h1>Writings</h1>
-	{{ else }}
-		<h1>{{ .Site.Params.header }}</h1>
-	{{ end }}
-</header>
-{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Section" "post") }}
-{{ range $paginator.Pages }}
-	{{ .Render "summary"}}
-{{ end }}
+			{{ partial "nav.html" . }}
 
-<div class="text-center center-block">
-	{{ template "_internal/pagination.html" . }}
-</div>
+			<header>
+				<!-- Check if header is not set or empty -->
+				{{ if (not (isset .Site.Params "header")) | or (eq .Site.Params.header "") }}
+					<h1>Writings</h1>
+				{{ else }}
+					<h1>{{ .Site.Params.header }}</h1>
+				{{ end }}
+			</header>
+			{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Section" "post") }}
+			{{ range $paginator.Pages }}
+				{{ .Render "summary"}}
+			{{ end }}
 
-{{ partial "footer.html" . }}
+			<div class="text-center center-block">
+				{{ template "_internal/pagination.html" . }}
+			</div>
+
+			{{ partial "footer.html" . }}
+
+	</div>
+</body>
+</html>
