@@ -8,6 +8,7 @@ body {
   /* Margin bottom by footer height */
   padding-top: 2em;
   margin-bottom: 60px;
+  min-width: 500px;
 }
 .footer {
   position: absolute;
@@ -47,6 +48,6 @@ code {
 nav {
   border-bottom-style: solid;
   border-bottom-width: 0.5em;
-  border-bottom-color: blue;
+  border-bottom-color: #0275d8;
   background-color: white;
 }
