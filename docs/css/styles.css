@@ -23,6 +23,13 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
+/* Customize container */
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+
 body > .container {
   padding: 60px 15px 0;
 }
