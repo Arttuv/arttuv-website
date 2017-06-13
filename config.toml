@@ -28,10 +28,10 @@ publishDir = "docs"
 	# Each of these are optional
 	[[params.socialbuttons]]
 	faicon = "github"
-	url = "https://github.com/alexurquhart"
+	url = ""
 	[[params.socialbuttons]]
 	faicon = "twitter"
-	url = "https://twitter.com/alexanderurq"
+	url = ""
 	[[params.socialbuttons]]
 	faicon = "linkedin"
 	url = "https://linkedin.com"

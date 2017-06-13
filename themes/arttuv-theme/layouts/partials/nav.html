@@ -10,11 +10,22 @@
 				{{ else }}
 					<a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> 
 				{{ end }}
-				
+
+				<div class="navbar-text">Development and usability</div>	
 			</div>
 
 
 	<div class="collapse navbar-collapse" id="navbarCollapse">
+
+		<div class="ml-auto">
+				<a class="btn btn-social-icon btn-twitter" href="https://twitter.com/arttuv">
+					<span class="fa fa-twitter"></span>
+				</a>
+				<a class="btn btn-social-icon btn-linkedin" href="www.linkedin.com/in/arttu-viljakainen">
+					<span class="fa fa-linkedin"></span>
+				</a>
+		</div>
+
 		<ul class="navbar-nav ml-auto">
 			{{ $url := .Site.BaseURL }}
 			{{ range .Site.Params.navlinks }}
@@ -22,7 +33,7 @@
 				<a class="nav-link" href="{{ $url }}{{ .url }}">{{ .name }}</a>
 			</li>
 			{{ end }}
-		</ul>
+		</ul> 
 		<!--
 		<form class="form-inline mt-2 mt-md-0">
 			<input class="form-control mr-sm-2" type="text" placeholder="Search">
