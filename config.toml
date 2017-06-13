@@ -44,6 +44,3 @@ publishDir = "docs"
 	name = "About"
 	url = "about/"
 	
-	[[params.navlinks]]
-	name = "Writings"
-	url = ""
