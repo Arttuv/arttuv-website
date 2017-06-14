@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writings on Arttu Viljakainen</title>
+    <link>http://arttuv.com/categories/writings/</link>
+    <description>Recent content in Writings on Arttu Viljakainen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 May 2017 18:48:47 +0300</lastBuildDate>
+    
+	<atom:link href="http://arttuv.com/categories/writings/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nielsen: Web UX 2016 vs 2004</title>
+      <link>http://arttuv.com/post/nielsen-web-ux-2016-vs-2004/</link>
+      <pubDate>Thu, 11 May 2017 18:48:47 +0300</pubDate>
+      
+      <guid>http://arttuv.com/post/nielsen-web-ux-2016-vs-2004/</guid>
+      <description>Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They made a study on web UX on 2016 and reflected that to the results from similar study in 2004. The video is only 20 minutes and worth watching. Below you can find a short summary.
+  Link to YouTube or to their Nielsen Norman Group website.
+Abbreviated to one paragraph Most of the problems are in findability and search, so information architecture is a crucial thing and worth attending to.</description>
+    </item>
+    
+    <item>
+      <title>Designing for usability 1985</title>
+      <link>http://arttuv.com/post/designing-for-usability-1985/</link>
+      <pubDate>Thu, 11 May 2017 18:48:24 +0300</pubDate>
+      
+      <guid>http://arttuv.com/post/designing-for-usability-1985/</guid>
+      <description>It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key Principles and What Designers Think (Gould &amp;amp; Lewis, 1985). Gould and Lewis introduce three principles that they argue are vital for creating usable applications, and then they go through common arguments against them and try to justify why these principles matter.
+These three principles are (Gould &amp;amp; Lewis, 1985):</description>
+    </item>
+    
+  </channel>
+</rss>

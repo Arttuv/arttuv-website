@@ -1,5 +1,7 @@
 {{ partial "head.html" . }}
 
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
 <div class="container">
 	
 	{{ partial "nav.html" . }}
@@ -8,12 +10,17 @@
 		<header>
 			<h1>{{ .Title }}</h1>
 		</header>
-
-		<article>
-			{{ .Content }}
+        <div class="row">
+  <div class="col-sm-6">
+        <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="arttu-viljakainen"><a class="LI-simple-link" href='https://fi.linkedin.com/in/arttu-viljakainen?trk=profile-badge'>Arttu Viljakainen</a></div>			
+  </div>
+		  <div class="col-sm-6">
+        <article>
+            {{ .Content }}
 		</article>
+        </div>
 	</main>
-
+    </div>
 	<div id="tags-area" class="text-center center-block">
 		<ul id="tags">
 			{{ range .Params.tags }}

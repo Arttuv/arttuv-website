@@ -2,6 +2,7 @@
 date = "2015-07-28T09:51:51-04:00"
 draft = false
 title = "About Me"
+type = "about"
 +++
 
 I'm a software developer interested in human-computer interaction and everything related to usability. I have a master's degree on software development but I've also done basic studies in psychology and cognitive science.

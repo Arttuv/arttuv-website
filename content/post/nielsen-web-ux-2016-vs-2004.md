@@ -2,7 +2,8 @@
 date = "2017-05-11T18:48:47+03:00"
 draft = false
 title = "Nielsen: Web UX 2016 vs 2004"
-
+tags = [ "Usability" ]
+categories = [ "Writings" ]
 +++
 
 Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They made a study on web UX on 2016 and reflected that to the results from similar study in 2004. The video is only 20 minutes and worth watching. Below you can find a short summary.

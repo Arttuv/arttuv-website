@@ -2,7 +2,8 @@
 date = "2017-05-11T18:48:24+03:00"
 draft = false
 title = "Designing for usability 1985"
-
+tags = [ "Usability" ]
+categories = [ "Writings" ]
 +++
 
 It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: [Designing for Usability: Key Principles and What Designers Think (Gould & Lewis, 1985)](http://dl.acm.org/citation.cfm?id=3170). Gould and Lewis introduce three principles that they argue are vital for creating usable applications, and then they go through common arguments against them and try to justify why these principles matter.

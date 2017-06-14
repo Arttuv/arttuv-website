@@ -5,6 +5,7 @@ publishDir = "docs"
 
 [taxonomies]
 	tag = "tags"
+	category = "categories"
 
 [params]
 
