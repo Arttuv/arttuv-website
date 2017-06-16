@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Arttu Viljakainen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 May 2017 18:48:47 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jun 2017 21:46:54 +0300</lastBuildDate>
     
 	<atom:link href="http://arttuv.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reference types in Java</title>
+      <link>http://arttuv.com/post/java-reference-types/</link>
+      <pubDate>Thu, 15 Jun 2017 21:46:54 +0300</pubDate>
+      
+      <guid>http://arttuv.com/post/java-reference-types/</guid>
+      <description>Differences between references in Java can be explained by reachability. This is what Java API Specification says about reachability:
+ Reachability from strongest to weakest:
+An object is strongly reachable if it can be reached by some thread without traversing any reference objects. A newly-created object is strongly reachable by the thread that created it.
+An object is softly reachable if it is not strongly reachable but can be reached by traversing a soft reference.</description>
+    </item>
     
     <item>
       <title>Nielsen: Web UX 2016 vs 2004</title>
