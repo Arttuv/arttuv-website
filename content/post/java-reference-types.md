@@ -4,6 +4,9 @@ draft = true
 title = "Reference types in Java"
 +++
 
+[TT]: Is the purpose that the article starts here or is there going to some sort of introduction before? It might benefit from having a sort of short introduction for all the possible reference types; now the text jumps straight into weak and soft references, but later on introduces some more.
+[TT]: Is there a strong reference? It is referenced (pun intented) in few places, but there is no separate chapter for it. Or is the reachability kind of the same thing?
+
 Weak and soft references (or indefinite references) in Java allow objects to be reused (Oaks, 2014, p. 208). Usually they are **used to cache the result of a long calculation or a database lookup rather than to reuse a simple object**. The advantage is that indefinite references will eventually be reclaimed by the garbage collector (Oaks, 2014, p. 209), and the JVM can free up space if the heap starts running low. 
 
 The disadvantage is that **indefinite references have a slightly greater effect on the efficiency of the garbage collector**. Indefinite references (like SoftReference<T> or WeakReference<T>) are just like any other object – they consume memory and they are referenced strongly by other objects. It takes at least two GC cycles for an indefinite reference to be reclaimed by the garbage collector. 
@@ -35,6 +38,8 @@ However, reference objects are just like any other Java objects: they are create
 > Weak reference is not like a soft reference that is freed more quickly: softly referenced object will usually be available for minutes or even hours, but a weakly referenced object will be available only for as long as its referent is still around (Oaks, 2014, p.215).
 
 ## Collections
+
+[TT]: Is there a collection for soft references or phantom references? If not, maybe make this a subchapter for Weak reference?
 
 JDK provides two classes that utilize indefinite references: **WeakHashMap** and **WeakIdentityMap**. Using these classes is convenient, but they have two costs. First, indefinite references can have a negative effect on garbage collector. Second, the class itself must periodically perform an operation to clear all the unreferenced data in the collection.
 
