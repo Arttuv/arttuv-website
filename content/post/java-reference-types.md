@@ -2,6 +2,8 @@
 date = "2017-06-15T21:46:54+03:00"
 draft = false
 title = "Reference types in Java"
+tags = [ "Java" ]
+categories = [ "Writings" ]
 +++
 
 Differences between references in Java can be explained by **reachability**. This is what [Java API Specification](https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#reachability) says about reachability:
