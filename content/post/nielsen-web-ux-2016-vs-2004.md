@@ -12,11 +12,11 @@ Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They ma
 
 Link to [YouTube](https://www.youtube.com/watch?v=xKOlga_xkKA) or to their [Nielsen Norman Group website](https://www.nngroup.com/news/item/keynote/).
 
-## Abbreviated to one paragraph
+# Abbreviated to one paragraph
 
-Most of the problems are in findability and search, so information architecture is a crucial thing and worth attending to. Usability has improved from 2004 and the success rate of user tasks has gone up to 82% from 66%. However, only 30% of the tasks succeeded completely smoothly and easily. In addition, annoyance is twice as common (30%) feeling as pleasure (16%).
+> Most of the problems are in **findability and search**, so **information architecture is a crucial thing** and worth attending to. Usability has improved from 2004 and the success rate of user tasks has gone up to 82% from 66%. However, only 30% of the tasks succeeded completely smoothly and easily. In addition, **annoyance is twice as common (30%) feeling as pleasure (16%)**.
 
-## Summary on Web UX 2016 vs 2004
+# Notes on Web UX 2016 vs 2004
 
 * There has been a loss of information density. We don’t miss the complexity, but we have much larger screens with a lot less content.
 * Some designers still use overlays / splash screens (we should get rid of it).
@@ -27,7 +27,7 @@ Most of the problems are in findability and search, so information architecture 
 		* Small pleasure is desirable.
 	* There are sites with minimal content that have designed to look good and there are sites that have way too much content visible. Confusing views with too much content cause negative emotions.
 * Causes of User Failure
-	* Findability was the biggest cause with 60% share and search the second biggest with 12%. Getting where you need to be in the website is the biggest problem.
+	* **Findability was the biggest cause of failure with 60% share and search the second biggest with 12%. Getting where you need to be in the website is the biggest problem.**
 		* Alphabetical listings are not good.
 		* Information design is vital.
 		* Banner blindness, people don’t see buttons or links that look like advertising banners.
