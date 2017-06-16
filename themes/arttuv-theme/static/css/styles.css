@@ -1,3 +1,4 @@
+@import 'markdown-styling.css';
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -53,4 +54,12 @@ nav {
 
 #tags-area ul {
   list-style: none;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+.panel-footer {
+  padding-bottom: 1em;
 }
