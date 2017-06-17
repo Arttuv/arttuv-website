@@ -13,14 +13,14 @@
     
     <item>
       <title>Reference types in Java</title>
-      <link>http://arttuv.com/post/java-reference-types/</link>
+      <link>http://arttuv.com/post/java/java-reference-types/</link>
       <pubDate>Thu, 15 Jun 2017 21:46:54 +0300</pubDate>
       
-      <guid>http://arttuv.com/post/java-reference-types/</guid>
-      <description>Differences between references in Java can be explained by reachability. This is what Java API Specification says about reachability:
+      <guid>http://arttuv.com/post/java/java-reference-types/</guid>
+      <description>Different reference types in Java provide access to the object lifecycle giving us tools for object reuse (object pools) and even a possibility to achieve reliable object finalization.
+Differences between references in Java can be explained by reachability. This is what Java API Specification says about reachability:
  Reachability from strongest to weakest:
-An object is strongly reachable if it can be reached by some thread without traversing any reference objects. A newly-created object is strongly reachable by the thread that created it.
-An object is softly reachable if it is not strongly reachable but can be reached by traversing a soft reference.</description>
+An object is strongly reachable if it can be reached by some thread without traversing any reference objects.</description>
     </item>
     
   </channel>

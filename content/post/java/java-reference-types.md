@@ -6,6 +6,8 @@ tags = [ "Java" ]
 categories = [ "Writings" ]
 +++
 
+Different reference types in Java provide access to the object lifecycle giving us tools for object reuse (object pools) and even a possibility to achieve reliable object finalization.
+
 Differences between references in Java can be explained by **reachability**. This is what [Java API Specification](https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#reachability) says about reachability:
 
 > Reachability from strongest to weakest:
@@ -69,6 +71,8 @@ JDK provides two classes that utilize indefinite references: **WeakHashMap** and
 For example WeakHashMap uses weak references for its keys. When the weakly referenced key is no longer available, WeakHashMap must clear out the value in the map that used to be associated with that key. This operation is carried out every time the map is referenced. This means that the weak reference and its associated value won’t be freed until the map is used again, and on the other hand the performance of operations on the map is unpredictable.
 
 # Phantom reference 
+
+Phantom reference gives us insight to the end of object lifecycle - it tells us when phantom references are the only kinds of references pointing to the referent object and it has been reclaimed by the GC. This means it can be used for implementing object finalization.
 
 Phantom reference objects (**PhantomReference<T>**) are enqueued after the collector determines that their referents may otherwise be reclaimed (Java API, 2017). They can be used for scheduling pre-mortem cleanup actions. In order to ensure that reclaimable objects remain reclaimable, the referent of a phantom reference may not be retrieved – the get method always returns null. 
 

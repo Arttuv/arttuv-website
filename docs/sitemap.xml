@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://arttuv.com/post/java-reference-types/</loc>
+    <loc>http://arttuv.com/post/java/java-reference-types/</loc>
     <lastmod>2017-06-15T21:46:54+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://arttuv.com/post/nielsen-web-ux-2016-vs-2004/</loc>
+    <loc>http://arttuv.com/post/usability/nielsen-web-ux-2016-vs-2004/</loc>
     <lastmod>2017-05-11T18:48:47+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://arttuv.com/post/designing-for-usability-1985/</loc>
+    <loc>http://arttuv.com/post/usability/designing-for-usability-1985/</loc>
     <lastmod>2017-05-11T18:48:24+03:00</lastmod>
   </url>
   
