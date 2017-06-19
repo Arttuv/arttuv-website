@@ -9,6 +9,9 @@ publishDir = "docs"
 
 [params]
 
+	# Analytics
+	googleAnalytics = "UA-101290596-1"
+
 	# Include favicon
 	favicon = "favicon.ico"
  
