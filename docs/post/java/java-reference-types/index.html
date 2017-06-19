@@ -16,7 +16,7 @@
     
     <meta property="og:tags" content="Java">
     
-    <meta name="generator" content="Hugo 0.23" />
+    <meta name="generator" content="Hugo 0.20.7" />
     <title>Reference types in Java &middot; Arttu Viljakainen</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -73,9 +73,7 @@
 		<article>
 			
 
-<p>Different reference types in Java provide access to the object lifecycle giving us tools for object reuse (object pools) and even a possibility to achieve reliable object finalization.</p>
-
-<p>Differences between references in Java can be explained by <strong>reachability</strong>. This is what <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#reachability">Java API Specification</a> says about reachability:</p>
+<p>Different reference types in Java provides access to the object lifecycle, giving us tools for object reuse (object pools) and even a possibility to achieve a reliable object finalization. Differences between references can be explained by <strong>reachability</strong>. This is what <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#reachability">Java API Specification</a> says about reachability:</p>
 
 <blockquote>
 <p>Reachability from strongest to weakest:</p>
@@ -145,9 +143,7 @@ Weak and soft references (or indefinite references) in Java allow objects to be 
 
 <h1 id="phantom-reference">Phantom reference</h1>
 
-<p>Phantom reference gives us insight to the end of object lifecycle - it tells us when phantom references are the only kinds of references pointing to the referent object and it has been reclaimed by the GC. This means it can be used for implementing object finalization.</p>
-
-<p>Phantom reference objects (<strong>PhantomReference<T></strong>) are enqueued after the collector determines that their referents may otherwise be reclaimed (Java API, 2017). They can be used for scheduling pre-mortem cleanup actions. In order to ensure that reclaimable objects remain reclaimable, the referent of a phantom reference may not be retrieved – the get method always returns null.</p>
+<p>Phantom reference objects (<strong>PhantomReference<T></strong>) gives us visibility to the end of object lifecycle - it tells us when phantom references are the only kind of references pointing to the referent object and it has been finalized (and is ready to be reclaimed by the GC). This means it can be used for scheduling pre-mortem cleanup actions (object finalization). In order to ensure that reclaimable objects remain reclaimable, the referent of a phantom reference may not be retrieved – the get method always returns null (Java API, 2017).</p>
 
 <p>Garbage collector appends registered reference objects to <strong>ReferenceQueue<T></strong> after the appropriate reachability changes are detected (Java API, 2017). PhantomReference may then be retrieved by using the remove() or poll() methods of the ReferenceQueue. At that point the object itself is no longer reachable (remember that PhantomReference.get() always returns null), so you should keep track of any resources that need to be freed by other means. Extending PhantomReference is one option.</p>
 
