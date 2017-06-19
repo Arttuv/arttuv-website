@@ -6,7 +6,7 @@ tags = [ "Java" ]
 categories = [ "Writings" ]
 +++
 
-Different reference types in Java provides access to the object lifecycle, giving us tools for object reuse (object pools) and even a possibility to achieve a reliable object finalization. Differences between references can be explained by **reachability**. This is what [Java API Specification](https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#reachability) says about reachability:
+Different reference types in Java provide access to the object lifecycle, giving us tools for object reuse (object pools) and even a possibility to achieve a reliable object finalization. Differences between references can be explained by **reachability**. This is how [Java API Specification](https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#reachability) defines reachability:
 
 > Reachability from strongest to weakest:
 
