@@ -36,3 +36,15 @@ article h2 {
   text-transform: uppercase;
   font-size: 1rem;
 }
+
+/* Text size */
+article p {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+/* Text size on list view */
+.panel-body {
+  font-size: 1.1rem;
+  color: #000;
+}

@@ -76,14 +76,14 @@ Garbage collector appends registered reference objects to **ReferenceQueue<T>** 
 
 ## Finalizable Phantom Reference
 
-**FinalizablePhantomReference<T>** is an extension of the PhantomReference<T> providing **finalizeReferent()** method that streamlines process and eliminates the need for polling ReferenceQueue<T>.
+**FinalizablePhantomReference<T>** is an extension of the PhantomReference<T> providing **finalizeReferent()** method that streamlines process and eliminates the need for polling ReferenceQueue<T> (Guava API, 2017). This is probably the easiest way to get a reliable object finalization on Java.
 
 
 # References 
 
-Oaks, S (2014) Java Performance: The Definitive Guide, Sebastopol, California: O’Reilly Media.
+[Oaks, S (2014) Java Performance: The Definitive Guide](http://shop.oreilly.com/product/0636920028499.do), Sebastopol, California: O’Reilly Media.
 
-[Java API API Specification,](https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html), (14.6.2017)
+[Java API API Specification](https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html), (14.6.2017)
 
 [Java API Specification, Reachability](https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#reachability), (16.6.2017)
 
