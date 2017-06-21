@@ -9,6 +9,7 @@ publishDir = "docs"
 
 [params]
 
+	pygmentsstyle = "rainbow_dash"
 	# Analytics
 	googleAnalytics = "UA-101290596-1"
 

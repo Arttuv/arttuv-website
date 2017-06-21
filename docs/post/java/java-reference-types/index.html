@@ -90,13 +90,13 @@
 </blockquote>
 
 <p>Strong reference is the most common one, like:
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">StringBuilder</span> <span style="color: #f8f8f2">builder</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">StringBuilder</span><span style="color: #f92672">();</span>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>StringBuilder builder <span style="color: #2c5dcd">=</span> <span style="color: #2c5dcd; font-weight: bold">new</span> StringBuilder<span style="color: #2c5dcd">();</span>
 </pre></div>
 
 Soft, Weak and Phantom references have their own classes:
- <div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">SoftReference</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">T</span><span style="color: #f92672">&gt;</span>
-<span style="color: #f8f8f2">WeakReference</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">T</span><span style="color: #f92672">&gt;</span>
-<span style="color: #f8f8f2">PhantomReference</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">T</span><span style="color: #f92672">&gt;</span>
+ <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>SoftReference<span style="color: #2c5dcd">&lt;</span>T<span style="color: #2c5dcd">&gt;</span>
+WeakReference<span style="color: #2c5dcd">&lt;</span>T<span style="color: #2c5dcd">&gt;</span>
+PhantomReference<span style="color: #2c5dcd">&lt;</span>T<span style="color: #2c5dcd">&gt;</span>
 </pre></div>
 
 Weak and soft references (or indefinite references) in Java allow objects to be reused (Oaks, 2014, p. 208). Usually they are <strong>used to cache the result of a long calculation or a database lookup rather than to reuse a simple object</strong>. The advantage is that indefinite references will eventually be reclaimed by the garbage collector (Oaks, 2014, p. 209), and the JVM can free up space if the heap starts running low.</p>
@@ -111,9 +111,9 @@ Weak and soft references (or indefinite references) in Java allow objects to be 
 
 <p>Soft reference is freed during a GC cycle only if the referent is not strongly referenced elsewhere and if the soft reference has not recently been accessed. Based on Oaks, the calculation is as follows:</p>
 
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">long</span> <span style="color: #f8f8f2">ms</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">SoftRefLRUPolicyMSPerMB</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">AmountOfFreeMemoryInMB</span><span style="color: #f92672">;</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">now</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">last_access_to_reference</span> <span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">ms</span><span style="color: #f92672">)</span>
-    <span style="color: #f8f8f2">free</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">reference</span>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #5918bb; font-weight: bold">long</span> ms <span style="color: #2c5dcd">=</span> SoftRefLRUPolicyMSPerMB <span style="color: #2c5dcd">*</span> AmountOfFreeMemoryInMB<span style="color: #2c5dcd">;</span>
+<span style="color: #2c5dcd; font-weight: bold">if</span> <span style="color: #2c5dcd">(</span>now <span style="color: #2c5dcd">-</span> last_access_to_reference <span style="color: #2c5dcd">&gt;</span> ms<span style="color: #2c5dcd">)</span>
+    free the reference
 </pre></div>
 
 

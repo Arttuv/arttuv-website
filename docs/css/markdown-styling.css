@@ -15,6 +15,10 @@ blockquote hr {
   border-top-color: #a6d5ec;
 }
 
+blockquote p {
+  margin-bottom: 0px;
+}
+
 article h1, h2, h3 {
     padding-bottom: 5px;
     border-bottom: 1px solid #0275d8;
@@ -47,4 +51,16 @@ article p {
 .panel-body {
   font-size: 1.1rem;
   color: #000;
+}
+
+.highlight {
+
+  padding: 0.5em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #bcdff1;
+}
+
+.highlight pre {
+  margin: 0px;
 }
