@@ -2,12 +2,15 @@
 
 blockquote {
   padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
+  margin-bottom: 0rem;
+
+  border-left: 5px solid #d9edf7;
+
+  /*border: 1px solid transparent;
   border-radius: 0.25rem;
 
   background-color: #d9edf7;
-  border-color: #bcdff1;
+  border-color: #bcdff1;*/
   color: #31708f;
 }
 
@@ -44,6 +47,7 @@ article h2 {
 /* Text size */
 article p {
   font-size: 1.1rem;
+  line-height: 1.58;
   color: #000;
 }
 
@@ -53,12 +57,13 @@ article p {
   color: #000;
 }
 
-.highlight {
+article .highlight {
 
   padding: 0.5em;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #bcdff1;
+  border-left: 5px solid #bcdff1;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  background-image: url("/img/highlight-background.png") !important;
 }
 
 .highlight pre {
