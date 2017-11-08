@@ -6,18 +6,50 @@
 			{{ partial "nav.html" . }}
 
 			<header>
-				<!-- Check if header is not set or empty -->
-				{{ if (not (isset .Site.Params "header")) | or (eq .Site.Params.header "") }}
-					<h1>Writings</h1>
-				{{ else }}
-					<h1>{{ .Site.Params.header }}</h1>
-				{{ end }}
+			
 			</header>
+
+			<div class="jumbotron">
+			<p>
+				I've published some not-so-formal writings on this site. I include the references I've used in each writing, but the texts
+				also contain my personal opinions which may or may not make sense. I work as a software engineer and have 5+ years of
+				experience creating different kinds of software. I have a master's degree on software development including minors in
+				psychology and cognitive science.
+			</p>
+			<p>
+				This is a static site to keep it as low maintenance as possible. Made with Hugo. 
+			</p>
+			<h2>Tags</h2>
+			<ul class="tags">
+			{{ range ($.Site.GetPage "taxonomyTerm" "tags").Pages }}
+				<li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
+
+			{{ end }}
+			</ul>
+
+
+				  {{/* 
+			<section>
+					{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+					<h1>{{ $taxonomyname }}</h1>
+						{{ range $key, $value := $taxonomy }}
+						<h2> {{ $key }} </h2>
+								<ul class="list-group">
+								{{ range $value.Pages }}
+									<li class="list-group-item" hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+								{{ end }}
+								</ul>
+						{{ end }}
+					{{ end }}
+			</section>
+		</div>
+				  
+			
 			{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Section" "post") }}
 			{{ range $paginator.Pages }}
 				{{ .Render "summary"}}
 			{{ end }}
-
+			*/}}
 			<div class="text-center center-block">
 				{{ template "_internal/pagination.html" . }}
 			</div>

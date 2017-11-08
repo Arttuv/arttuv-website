@@ -24,6 +24,9 @@
 				<a class="nav-link" href="{{ $url }}{{ .url }}">{{ .name }}</a>
 			</li>
 			{{ end }}
+			{{ range ($.Site.GetPage "taxonomyTerm" "tags").Pages }}
+			<li class="nav-item"><a class="nav-link" href="{{ .Permalink }}">{{ .Title}}</a></li>
+		   {{ end }}
 		</ul> 
 		<!--
 		<form class="form-inline mt-2 mt-md-0">
