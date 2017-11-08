@@ -16,7 +16,7 @@
     
     <meta property="og:tags" content="Java">
     
-    <meta name="generator" content="Hugo 0.20.7" />
+    <meta name="generator" content="Hugo 0.30.2" />
     <title>Reference types in Java &middot; Arttu Viljakainen</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -56,6 +56,11 @@
 				<a class="nav-link" href="http://arttuv.com/about/">About</a>
 			</li>
 			
+			
+			<li class="nav-item"><a class="nav-link" href="http://arttuv.com/tags/java/">Java</a></li>
+		   
+			<li class="nav-item"><a class="nav-link" href="http://arttuv.com/tags/usability/">Usability</a></li>
+		   
 		</ul> 
 		
 
@@ -92,15 +97,11 @@
 </blockquote>
 
 <p>Strong reference is the most common one, like:
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>StringBuilder builder <span style="color: #2c5dcd">=</span> <span style="color: #2c5dcd; font-weight: bold">new</span> StringBuilder<span style="color: #2c5dcd">();</span>
-</pre></div>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">StringBuilder builder <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">();</span></code></pre></div>
 Soft, Weak and Phantom references have their own classes:
- <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>SoftReference<span style="color: #2c5dcd">&lt;</span>T<span style="color: #2c5dcd">&gt;</span>
-WeakReference<span style="color: #2c5dcd">&lt;</span>T<span style="color: #2c5dcd">&gt;</span>
-PhantomReference<span style="color: #2c5dcd">&lt;</span>T<span style="color: #2c5dcd">&gt;</span>
-</pre></div>
-
+ <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">SoftReference<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span>
+WeakReference<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span>
+PhantomReference<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span></code></pre></div>
 Weak and soft references (or indefinite references) in Java allow objects to be reused (Oaks, 2014, p. 208). Usually they are <strong>used to cache the result of a long calculation or a database lookup rather than to reuse a simple object</strong>. The advantage is that indefinite references will eventually be reclaimed by the garbage collector (Oaks, 2014, p. 209), and the JVM can free up space if the heap starts running low.</p>
 
 <p>The disadvantage is that <strong>indefinite references have a slightly greater effect on the efficiency of the garbage collector</strong>. Indefinite references (like SoftReference<T> or WeakReference<T>) are just like any other object – they consume memory and they are referenced strongly by other objects. It takes at least two GC cycles for an indefinite reference to be reclaimed by the garbage collector.</p>
@@ -113,11 +114,9 @@ Weak and soft references (or indefinite references) in Java allow objects to be 
 
 <p>Soft reference is freed during a GC cycle only if the referent is not strongly referenced elsewhere and if the soft reference has not recently been accessed. Based on Oaks, the calculation is as follows:</p>
 
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #5918bb; font-weight: bold">long</span> ms <span style="color: #2c5dcd">=</span> SoftRefLRUPolicyMSPerMB <span style="color: #2c5dcd">*</span> AmountOfFreeMemoryInMB<span style="color: #2c5dcd">;</span>
-<span style="color: #2c5dcd; font-weight: bold">if</span> <span style="color: #2c5dcd">(</span>now <span style="color: #2c5dcd">-</span> last_access_to_reference <span style="color: #2c5dcd">&gt;</span> ms<span style="color: #2c5dcd">)</span>
-    free the reference
-</pre></div>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">long</span> ms <span style="color:#f92672">=</span> SoftRefLRUPolicyMSPerMB <span style="color:#f92672">*</span> AmountOfFreeMemoryInMB<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>now <span style="color:#f92672">-</span> last_access_to_reference <span style="color:#f92672">&gt;</span> ms<span style="color:#f92672">)</span>
+    free the reference</code></pre></div>
 
 <p>First value is set by the flag <em>–xx:SoftRefLRUPolicyMSPerMB=N</em>, with the default value of 1000. The second value is the amount of free heap after the GC cycle (Oaks, 2014, p. 213). Soft references are reclaimed more frequently if SoftRefLRUPolicyMSPerMG flag is decreased.</p>
 
