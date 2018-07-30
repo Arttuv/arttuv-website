@@ -23,12 +23,6 @@
   </url>
   
   <url>
-    <loc>http://arttuv.com/</loc>
-    <lastmod>2017-06-15T21:46:54+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://arttuv.com/categories/</loc>
     <priority>0</priority>
   </url>
@@ -59,6 +53,12 @@
   
   <url>
     <loc>http://arttuv.com/categories/writings/</loc>
+    <lastmod>2017-06-15T21:46:54+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://arttuv.com/</loc>
     <lastmod>2017-06-15T21:46:54+03:00</lastmod>
     <priority>0</priority>
   </url>

@@ -20,18 +20,18 @@
 			<p>
 				This is a static site to keep it as low maintenance as possible. Made with Hugo.
 			</p>
-			<h1>Writings by tags</h1>
 
 			<div>
 				{{range $name, $tags := .Site.Taxonomies.tags }}
 				<div>
+						
+						<h3> {{$name}}</h3>
+						
 					<ul class="list-group">
-						<li class="list-group-item active">
-							<strong> {{$name}}</strong>
-						</li>
+						
 						{{ range $tags.Pages }}
 
-						<li class="list-group-item" hugo-nav="{{ .RelPermalink}}">
+						<li class="" hugo-nav="{{ .RelPermalink}}">
 							<a href="{{ .Permalink}}"> {{ .LinkTitle }} </a>
 						</li>
 					</ul>
