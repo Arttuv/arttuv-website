@@ -1,11 +1,9 @@
 baseURL = "http://arttuv.com/"
-languageCode = "en-us"
+languageCode = "en"
 title = "arttuv"
-publishDir = "docs"
+theme = "whiteplain"
 
-[taxonomies]
-	tag = "tags"
-	category = "categories"
+publishDir = "docs"
 
 [params]
 
@@ -13,39 +11,40 @@ publishDir = "docs"
 	# Analytics
 	googleAnalytics = "UA-101290596-1"
 
-	# Include favicon
-	favicon = "favicon.ico"
- 
-	# Email (optional)
+	[params.author]
+	name = "Arttu Viljakainen"
+	# Gravatar or Abatar image
+	gravatar = "arttu.viljakainen@gmail.com"
+	twitter = "arttuv"
+	linkedin = "www.linkedin.com/in/arttu-viljakainen"
 	email = "arttu.viljakainen@gmail.com"
-	
-	# Header Title for the main page
-	header = "Writings"
-	
-	# Sidebar profile picture
-	profilepic = "img/smugmug.jpg"
-	
-	# Title/subtitle for the sidebar
-	title = "Arttu Viljakainen"
-	subtitle = "UX Oriented software engineer"
-	
-	# Social buttons for sidebar
-	# Each of these are optional
-	[[params.socialbuttons]]
-	faicon = "github"
-	url = ""
-	[[params.socialbuttons]]
-	faicon = "twitter"
-	url = ""
-	[[params.socialbuttons]]
-	faicon = "linkedin"
-	url = "https://linkedin.com"
-	[[params.socialbuttons]]
-	faicon = "google-plus"
-	url = "https://plus.google.com/+YourID"
 
-	# Nav links below the profile picture
-	[[params.navlinks]]
+[taxonomies]
+	category = "categories"
+	tag = "tags"
+	series = "series"
+
+# Header Menu
+[[menu.main]]
+	name = "Categories"
+	identifier = "categories"
+	url = "/categories/"
+	weight = 1
+	[[menu.main]]
+	name = "Tags"
+	identifier = "tags"
+	url = "/tags/"
+	weight = 2
+	[[menu.main]]
+	[[menu.main]]
 	name = "About"
-	url = "about/"
-	
+	identifier = "about"
+	url = "/about/"
+	weight = 3
+
+# Footer Menu
+[[menu.footer]]
+	name = "About"
+	weight = 1
+	identifier = "about"
+	url = "/about/"
