@@ -16,7 +16,7 @@ publishDir = "docs"
 	# Gravatar or Abatar image
 	gravatar = "arttu.viljakainen@gmail.com"
 	twitter = "arttuv"
-	linkedin = "www.linkedin.com/in/arttu-viljakainen"
+	linkedin = "arttu-viljakainen"
 	email = "arttu.viljakainen@gmail.com"
 
 [taxonomies]
