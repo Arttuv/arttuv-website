@@ -1,0 +1,11 @@
+body {
+    height: 100%;
+}
+
+.starter-template {
+    text-align: center;
+}
+
+.highlighted-text {
+    text-color: red;
+}

@@ -1,0 +1,38 @@
+body {
+    height: 100%;
+}
+
+.starter-template {
+    text-align: center;
+}
+
+.drop-cap::first-letter {
+    float: left;
+    font-family: Georgia;
+    font-size: 4rem;
+    line-height: 4rem;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+.nav-selected {
+    color: white !important;
+    font-weight: bold;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+    min-height: 100hv !important;
+}
+
+.blog-writing {
+    
+}
+
+.blog-writing img {
+    width: 100%;
+}
