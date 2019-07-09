@@ -5,7 +5,6 @@ body {
 html {
     overflow-y: scroll;
 }
-
 .starter-template {
     text-align: center;
 }
@@ -50,12 +49,4 @@ footer {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.icon-black-border {
-    border: 2px solid black;
-}
-
-.icon-white-border {
-    border: 2px solid white;
 }
