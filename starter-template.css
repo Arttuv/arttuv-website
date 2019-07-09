@@ -2,6 +2,9 @@ body {
     height: 100%;
 }
 
+html {
+    overflow-y: scroll;
+}
 .starter-template {
     text-align: center;
 }
