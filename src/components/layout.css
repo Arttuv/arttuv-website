@@ -2,7 +2,10 @@
     display: flex;
     justify-content: flex-end;
 }
-
+.article a h3 {
+    text-decoration: none;
+    color: black;
+}
 a {
     color: red;
     text-decoration: none;
