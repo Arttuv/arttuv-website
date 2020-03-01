@@ -9,7 +9,7 @@ const ListLink = props => (
 )
 
 const Header = ({ siteTitle }) => (
-  <div style={{ margin: `0 auto`, maxWidth: 960, padding: `1rem 1.0875rem 1.45rem` }}>
+  <div style={{ margin: `0 auto`, padding: `1rem 1.0875rem 1.45rem` }}>
     <header style={{ marginBottom: `1.5rem` }}>
       <Link to="/" style={{ textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
           <h3 style={{ display: `inline`, decoration: `none`}}>Arttu V.</h3>

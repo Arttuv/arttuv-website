@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import WritingsGallery from "../components/writings-gallery"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
@@ -23,7 +24,11 @@ const IndexPage = () => (
     <p>
       This pages is under construction - I'm transitioning my content from WP to Gatsby.
     </p>
-  </Layout>
+    <div className="archive">
+      <WritingsGallery />
+    </div>
+
+    </Layout>
 )
 
 export default IndexPage
