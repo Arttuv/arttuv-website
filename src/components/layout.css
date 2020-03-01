@@ -1,3 +1,26 @@
+.article-read-more {
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: black;
+  }
+  
+  a:visited {
+    color: red;
+  }
+  
+  
 .bordered-title-bar {
     display: inline-block;
     position: relative;
@@ -24,6 +47,7 @@
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     grid-gap: 32px;
     grid-auto-flow: dense;
+    font-size: smaller;
   }
   
   /* Extra-wide grid-posts */
