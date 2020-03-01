@@ -1,3 +1,24 @@
+.bordered-title-bar {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.bordered-title-bar h4 {
+    display: block;
+    position: absolute;
+    background-color: white;
+    padding-right: 5px;
+    text-transform: uppercase;
+}
+
+.bordered-title-bar div {
+    display: block;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    margin-top: 10.5px;
+}
+
 .archive {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));

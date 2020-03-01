@@ -8,8 +8,12 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
     <h1>Software, Human-Computer Interaction</h1>
+    <SEO title="Home" />
+    <div className="bordered-title-bar">
+      <h4>About Me</h4>
+      <div></div>
+    </div>
     <p>Hi, I'm Arttu and I work with software. Currently I'm a software 
       consultant focusing on how to help organizations work in a more agile way.
     </p>
@@ -24,6 +28,10 @@ const IndexPage = () => (
     <p>
       This pages is under construction - I'm transitioning my content from WP to Gatsby.
     </p>
+    <div className="bordered-title-bar">
+      <h4>Writings</h4>
+      <div></div>
+    </div>
     <div className="archive">
       <WritingsGallery />
     </div>

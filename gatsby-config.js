@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Human-Centered Software`,
-    description: `Arttu Viljakainen, software development consultancy`,
-    author: `@gatsbyjs`,
+    title: `Human-Centered Software Development`,
+    description: `Arttu Viljakainen, software developer`,
+    author: `@arttuv`,
   },
   pathPrefix: "/arttuv-website",
   plugins: [
