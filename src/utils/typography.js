@@ -3,18 +3,18 @@ const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
   headerFontFamily: [
-    "Simonetta",
+    "Old Standard TT",
   ],
-  bodyFontFamily: ["Roboto"],
+  bodyFontFamily: ["Open Sans"],
   googleFonts: [
     {
-      name: 'Simonetta',
+      name: 'Old Standard TT',
       styles: [
         '400',
       ],
     },
     {
-      name: 'Roboto',
+      name: 'Open Sans',
       styles: [
         '300',
       ],
