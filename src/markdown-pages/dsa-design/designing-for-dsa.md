@@ -10,10 +10,10 @@ Both Situation Awareness and Distributed Situation Awareness are interesting con
 
 I’ve written about SA and DSA before:
 
-[Situation Awareness](../sa/situation-awareness.md)
+[Situation Awareness](/writings/situation-awareness)
 Endsley’s three level individual level SA model
 
-[Distributed Situation Awareness](../dsa/distributed-situation-awareness.md)
+[Distributed Situation Awareness](/writings/distributed-situation-awareness-dsa)
 Stanton et al. system level DSA model
 
 Endsley, Bolte and Jones have published a book named Designing for situation awareness: An approach to human-centered design on SA-oriented design (Endsley et al 2003). Salmon, Stanton, Walker and Jenkins have published their view on DSA-oriented design in a book Distributed Situation Awareness: Theory, Measurement and Application to Teamwork (Stanton et al 2009).
