@@ -3,6 +3,7 @@ path: "/writings/ux-of-a-platform-game"
 date: "2019-06-30"
 title: "UX of a Platform Game"
 summary: "Some years ago I tried building a platformer game (PC / Android) and found the experience interesting from the UX point of view. This is my recap of what I remember. TLDR: You can cheat to make it feel more like a game. Physics simulation rarely makes a good game (at least you'll need to fine tune your character movement physics)."
+featuredImage: "Corner-cases-in-platformer-physics.003.png"
 ---
 
 Few days ago I started to think that yes, actually I have some experience on developing a platform game, and there were quite a many surprisingly important things to consider when designing the platform game experience. Ultimately it means keeping a balance between simulation and a game that feels fun.
