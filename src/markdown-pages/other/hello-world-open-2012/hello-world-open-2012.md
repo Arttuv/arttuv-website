@@ -60,7 +60,7 @@ Our first task was to recreate the Pong game visualization on our client so we c
 
 In the screenshot below you can see our local visualization of the game and ball movement predictions on side of “official” game visualization.
 
-[Local HWO testing](HWO_Testing2.png)
+![Local HWO testing](HWO_Testing2.png)
 
 After we were able to run and visualize the game and move the paddle, it was time to create the AI itself. First we needed to simulate the ball movement so we could predict where we should move the paddle next. Teemu did very good job with this and we got the simulation work very well. Then it was quite easy to made the paddle move to the expected location.
 
@@ -72,6 +72,6 @@ Sometimes we had problems to make the prediction go exactly right which caused o
 
 We had quite a lot of problems with Git and Egit during the competition and we lost valuable time solving those. The competition was quite well arranged although I would have hoped them to communicate a bit more. Some rules were not clearly stated. However this was the first time they held the competition. They didn’t expect more than 30 teams to participate and in the end there were 200 teams and almost 100 bots.
 
-[HWO Results](HelloWorldOpenTop26.png)
+![HWO Results](HelloWorldOpenTop26.png)
 
 I’m quite happy to our rank and the competition itself was a good experience. This was my first proper introduction to Git and JSON.
