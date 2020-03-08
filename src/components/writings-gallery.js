@@ -26,10 +26,11 @@ export default () => (
                     }
                 }
               }
+              
             }
           }
         }
-      }
+      }     
     `}
 
     render={data => (

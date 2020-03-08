@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import BorderedTitle from "../components/bordered-title"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,8 +35,14 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
+        <footer style={{
+          borderTopStyle: `solid`,
+          borderTopWidth: `1px`,
+          marginTop: '1.5rem',
+          minHeight: `100%`,
+          paddingTop: `1.5rem`
+        }}>
+          © {new Date().getFullYear()} Arttu V. Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>

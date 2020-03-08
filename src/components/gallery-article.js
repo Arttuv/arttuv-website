@@ -1,8 +1,10 @@
 import React from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import { BackgroundImage } from "gatsby-background-image"
 
 const GalleryArticle = ({ post }) => (
+
   <article className="article">
       <Link to={post.frontmatter.path}>
         <h3>{post.frontmatter.title}</h3>
@@ -12,7 +14,6 @@ const GalleryArticle = ({ post }) => (
     )}
     {post.frontmatter.summary !== null && (<p>{post.frontmatter.summary}</p>)} 
     {post.frontmatter.summary === null && (<p>{post.excerpt}</p>)} 
-    
     <div className="article-read-more">
         <Link to={post.frontmatter.path}>
         {post.frontmatter.date}

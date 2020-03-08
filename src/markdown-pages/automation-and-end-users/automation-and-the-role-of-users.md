@@ -10,7 +10,7 @@ Below is a graph of one way how the work of human operators may change, when sys
 
 ![](Human-skill-performance-1.png)
 
-In the first graph human operators are actively engaged in using the system and making decisions. Performance varies by operator, and there may be local peaks or drops in performance – it depends heavily on the expertise of individuals.
+In the first graph human operators are actively engaged in using the system and making decisions. Performance varies by operator, and there may be local peaks or drops in performance – it depends heavily on the expertise of individuals. 
 
 ![](Human-system-performance-optimization.png)
 
@@ -20,7 +20,7 @@ The performance of the system can be optimized and there should be no local, una
 
 ## Potential Problems
 
-Combining ever increasing levels of automation to the work of human operators seems to be surprisingly hard and may cause many kinds of problems to the end users working with automation. When the level of automation rises and approaches autonomy, the complexity of the system increases, which means that mental models of the end users must also be complex – understanding what the system does is hard.
+Combining ever increasing levels of automation to the work of human operators seems to be surprisingly hard and may cause many kinds of problems to the end users working with automation. When the level of automation rises and approaches autonomy, the complexity of the system increases, which means that **mental models of the end users must also be complex – understanding what the system does is hard**.
 
 ![Mental models. Image from Flatart (Iconfinder).](iconfinder_100_user_process_success_man_thinking_4307927.png)
 
@@ -37,13 +37,13 @@ Some performance gains may fail to realize because often it’s necessary to gua
 
 ## Security
 
-Andrew Rae has considered automation in security critical environments in his article The Operator or The Automation: In Whom Should We Place Ultimate Trust. One approach to security is, that system design should prevent dangerous system states. Another approach is that human operator is the ultimate link in security. Andrew notes, that these two are in conflict when system avoiding to enter unsafe state limits the options of human operator to recover from a dangerous situation. Automation may fail to detect the state of the overall system, and “unsafe” operation by the user may actually be the least dangerous action, even if it wasn’t envisioned by the system designers.
+Andrew Rae has considered automation in security critical environments in his article The Operator or The Automation: In Whom Should We Place Ultimate Trust. One approach to security is, that system design should prevent dangerous system states. Another approach is that human operator is the ultimate link in security. Andrew notes, that these two are in conflict when system avoiding to enter unsafe state limits the options of human operator to recover from a dangerous situation. Automation may fail to detect the state of the system as a whole, and “unsafe” operation by the user may actually be the least dangerous action, even if it wasn’t envisioned by the system designers.
 
 Always trusting humans is not the final answer, because there have also been many incidents in which human operators have explicitly disabled safety features thus causing the disaster (think Chernobyl). Rae concludes that trustworthiness of the actor should determine the ultimate authority – but calculating that trustworthiness is probably the big question.
 
 ## Final Thoughts
 
-Based on studies done on automation, it seems apparent that special caution should be taken when designing automation for work domains, especially when security is of importance. Security critical or not, it should be ensured that the role of human operator stays coherent and meaningful, even if it potentially hinders the overall system performance.
+Based on studies done on automation, it seems apparent that special caution should be taken when designing automation for work domains, especially when security is of importance. Security critical or not, it should be ensured that the role of human operator stays coherent and meaningful, even if it potentially hinders the overall system peak performance.
 
 I’ve been considering using situation awareness as the framework for designing automation. You can read my blog post on Designing to Support (Distributed) Situation Awareness. I can’t help but think that systemic view on SA (distributed situation awareness) by Stanton et al. might be an invaluable approach to design.
 
