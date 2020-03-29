@@ -1,22 +1,23 @@
 import Typography from "typography"
+
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
   headerFontFamily: [
-    "Old Standard TT",
+    "Libre Caslon Display",
   ],
-  bodyFontFamily: ["Open Sans"],
+  bodyFontFamily: ["Roboto"],
   googleFonts: [
     {
-      name: 'Old Standard TT',
+      name: 'Libre Caslon Display',
       styles: [
         '400',
       ],
     },
     {
-      name: 'Open Sans',
+      name: 'Crimson Text',
       styles: [
-        '300',
+        '400',
       ],
     },
   ],

@@ -4,25 +4,17 @@ date: "2019-06-28"
 title: "Automation and the role of human operators"
 ---
 
-Automation and analytics are good means to improve operator and overall system performance. Ever increasing amount of data means that in many situations human operators are no longer able to keep up with the pace, and using software to help is a must.
+Automation and analytics are good means to improve operator and overall system performance. Ever increasing amount of data means that in many situations human operators are no longer able to keep up with the pace, and using software to help is a must. 
 
-Below is a graph of one way how the work of human operators may change, when systems become networked and analytics start being used in optimizing the actions.
+Earlier a lot has relied on human actions and at the best human operateors have been actively engaged in using the system and making decisions. Performance varies by operator, and there may be local peaks or drops in performance – it depends heavily on the expertise of individuals. 
 
-![](Human-skill-performance-1.png)
+When we start adding analytics and automation to the systems, the role of the human operators may change to data providers and system supervisors. They may not be able to directly alter the decisions of the overall system. It is noteworthy that they may not even have all the relevant information to make decisions.
 
-In the first graph human operators are actively engaged in using the system and making decisions. Performance varies by operator, and there may be local peaks or drops in performance – it depends heavily on the expertise of individuals. 
-
-![](Human-system-performance-optimization.png)
-
-In the second graph the system has been changed so that everyone works with the same networked system, which is able to do analysis on the data it gets, and makes decisions. The role of the operators is changing to data providers and system supervisors. They may not be able to directly alter the decisions of the overall system. It is noteworthy that they may not even have all the relevant information to make decisions.
-
-The performance of the system can be optimized and there should be no local, unanticipated lows. At the same time, there may not be peaks in the performance either – consistent performance in good and in bad.
+This way the performance of the system can be optimized and there should be no local, unanticipated lows. At the same time, there may not be peaks in the performance either – consistent performance in good and in bad.
 
 ## Potential Problems
 
 Combining ever increasing levels of automation to the work of human operators seems to be surprisingly hard and may cause many kinds of problems to the end users working with automation. When the level of automation rises and approaches autonomy, the complexity of the system increases, which means that **mental models of the end users must also be complex – understanding what the system does is hard**.
-
-![Mental models. Image from Flatart (Iconfinder).](iconfinder_100_user_process_success_man_thinking_4307927.png)
 
 Of course this may not be a problem it the users don’t need to understand everything. But in many work environments, like in industry or military, users are ultimately in response and should be able to
 

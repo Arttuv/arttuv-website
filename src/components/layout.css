@@ -2,10 +2,28 @@
     display: flex;
     justify-content: flex-end;
 }
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
 .article a h3 {
     text-decoration: none;
     color: black;
+    font-size: 2rem;
 }
+
+p:first-child:first-letter {
+  float: left;
+  font-family: Georgia;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
 a {
     color: red;
     text-decoration: none;
