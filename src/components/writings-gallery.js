@@ -17,6 +17,7 @@ export default () => (
                 date(formatString: "MMMM DD, YYYY")
                 path
                 title
+                tags
                 summary
                 featuredImage {
                     childImageSharp {

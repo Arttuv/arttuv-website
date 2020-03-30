@@ -2,6 +2,7 @@
 path: "/writings/designing-to-support-dsa"
 date: "2019-06-26"
 title: "Designing to Support (Distributed) Situation Awareness"
+tags: ["hci"]
 summary: "Situation awareness and distributed situation awareness are interesting concepts, but how does it map to the real world? How can we as designers take the concept and use it to guide our designs, to support rather than hinder the situation awareness of the end users?"
 ---
 Designing to Support (Distributed) Situation Awareness

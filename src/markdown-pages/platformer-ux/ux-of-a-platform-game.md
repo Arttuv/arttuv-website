@@ -2,6 +2,7 @@
 path: "/writings/ux-of-a-platform-game"
 date: "2019-06-30"
 title: "Platformer (game) UX"
+tags: ["hci"]
 summary: "Some years ago I tried building a platformer game (PC / Android) and found the experience interesting from the UX point of view. This is my recap of what I remember. TLDR: You can cheat to make it feel more like a game. Physics simulation rarely makes a good game (at least you'll need to fine tune your character movement physics)."
 featuredImage: "Corner-cases-in-platformer-physics.003.png"
 ---

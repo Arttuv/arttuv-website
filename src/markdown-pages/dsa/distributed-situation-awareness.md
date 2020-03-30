@@ -2,6 +2,7 @@
 path: "/writings/distributed-situation-awareness-dsa"
 date: "2019-06-24"
 title: "Distributed Situation Awareness (DSA)"
+tags: ["hci"]
 ---
 Distributed situation awareness (DSA) is model that takes a systemic view to situation awareness (SA). Stanton et al. have described their DSA model in an article “Distributed situation awareness in dynamic systems: theoretical development and application of an ergonomics methodology”, from year 2006 (Stanton et al. 2006). They propose that both human and non-human agents in the system each have their own situation awareness (at least by holding contextually relevant information) . Different agents have different goals and thus their SA may also be different, but compatible.
 

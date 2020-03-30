@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Human-Centered Software Development`,
-    description: `Arttu Viljakainen, software developer`,
+    title: `The Feedback Loop`,
+    description: `Creating software and human-computer interactions.`,
     author: `@arttuv`,
   },
   plugins: [

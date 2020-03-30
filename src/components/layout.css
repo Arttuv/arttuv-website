@@ -14,6 +14,11 @@ h2 {
     font-size: 2rem;
 }
 
+.site-title {
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 p:first-child:first-letter {
   float: left;
   font-family: Georgia;
@@ -69,6 +74,16 @@ a {
     margin-left: 1.5rem;
   }
 
+.article .gatsby-image-wrapper {
+  width: 40%;
+  max-height: 200px;
+  max-width: 250px;
+  float: left;
+  margin-right: 1.5rem;
+  filter: grayScale(100%);
+  filter: opacity(.8);
+}
+
 .archive {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -77,16 +92,33 @@ a {
     font-size: smaller;
   }
   
+  .article .article-topic {
+    margin-top: -1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .article p {
+    margin-bottom: 0px;
+  }
+
+  .archive .article {
+    display: flex;
+    flex-direction: column;
+  }
+
   /* Extra-wide grid-posts */
   .article:nth-child(31n + 1) {
     grid-column: 1 / -1;
-    
+    flex-direction: row;
   }
   .article:nth-child(16n + 2) {
     grid-column: -3 / -1;
+    flex-direction: column;
   }
   .article:nth-child(16n + 10) {
     grid-column: 1 / -2;
+    flex-direction: column;
   }
   
   /* Single column display for phones */
@@ -100,5 +132,8 @@ a {
   @media (max-width: 620px) {
     .about-me-image {
         display: none;
+    }
+    .article .gatsby-image-wrapper {
+      display: none;
     }
   }

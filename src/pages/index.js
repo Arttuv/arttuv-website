@@ -11,7 +11,7 @@ import ImageFace from "../components/image-face"
 const IndexPage = () => (
   <Layout>
     <h1>The Feedback Loop</h1>
-    <p>On creating software and human-computer interactions</p>
+    <div class="site-title">On creating digital tools and human-computer interactions in them</div>
     <SEO title="Home" />
     <div><BorderedTitle title="About Me" /></div>
     <div className="about-me-container">
