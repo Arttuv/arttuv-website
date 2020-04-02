@@ -1,3 +1,9 @@
+.page-container {
+    margin: 0 auto;
+    max-width: 60rem;
+    padding: 0 1.0875rem 1.45rem;
+ 
+}
 .article-read-more {
     display: flex;
     justify-content: flex-end;
@@ -211,9 +217,16 @@ a {
 
   @media (max-width: 756px) {
 
+    .page-container {
+      padding: 0 0.1rem 0.1rem;
+  }  
     header {
       margin: 0px;
 
+    }
+
+    header ul {
+      margin-bottom: 0px;
     }
 
     .latest-writings-item {
