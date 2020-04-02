@@ -2,6 +2,8 @@
 path: "/writings/designing-for-usability-1985"
 date: "2017-05-11"
 title: "Designing for Usability 1985"
+tags: ["hci"]
+featuredImage: "../../../images/hci-placeholder.png"
 ---
 
 It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key Principles and What Designers Think (Gould & Lewis, 1985). Gould and Lewis introduce three principles that they argue are vital for creating usable applications, and then they go through common arguments against them and try to justify why these principles matter.

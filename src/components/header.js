@@ -10,11 +10,17 @@ const ListLink = props => (
 
 const Header = ({ siteTitle }) => (
   <div style={{ margin: `0 auto`, maxWidth: `60rem`, padding: `1rem 1.0875rem 1.45rem` }}>
-    <header style={{ marginBottom: `1.5rem` }}>
-      <Link to="/" style={{ textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
-          <h3 style={{ display: `inline`, decoration: `none`}}>Arttu V.</h3>
-      </Link>
-      <ul style={{ listStyle: `none`, float: `right` }}>
+    <header style={{ marginBottom: `1.5rem`, width: '100%', display: 'inline-flex', justifyContent: 'space-between', flexDirection: 'row' }}>
+      <span style={{display: 'block'}}></span>
+      
+        <span className="site-title">
+        <Link to="/" style={{ textAlign: 'center', textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
+          <h1>The <br/>Feedback Loop</h1>
+          </Link>
+          <div className="site-description">On creating digital tools and human-computer interactions in them</div>
+        </span>
+      
+      <ul style={{ listStyle: `none`}}>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/writings/">Writings</ListLink>
         <ListLink to="/cv/">CV</ListLink>

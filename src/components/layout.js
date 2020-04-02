@@ -45,6 +45,7 @@ const Layout = ({ children }) => {
           © {new Date().getFullYear()} Arttu V. Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <span>, icons by <a href="https://webkul.github.io/vivid/">Vivid</a></span>
         </footer>
       </div>
     </>

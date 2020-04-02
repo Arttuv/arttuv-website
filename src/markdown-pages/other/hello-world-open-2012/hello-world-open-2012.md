@@ -2,6 +2,8 @@
 path: "/writings/26th-in-hello-world-open-2012"
 date: "2012-10-18"
 title: "26th in the Hello World Open 2012"
+tags: ["dev"]
+featuredImage: "HWO_Testing2.png"
 ---
 
 We participated in the first Hello World Open with Louhigames’ crew. Hello World Open is a Finnish coding competition and this was the first year it was organized. 200 teams participated and around 100 of them were able to enter a working program.

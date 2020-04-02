@@ -2,6 +2,8 @@
 path: "/writings/potilastietojarjestelmien-kaytettavyys-2010"
 date: "2012-04-18"
 title: "Potilastietojärjestelmien käytettävyys 2010"
+tags: ["hci"]
+featuredImage: "../../../images/hci-placeholder.png"
 ---
 This is about the usability of health care systems (EPR) in Finland. You can read an English summary of the usability study in the end of the article in [this link](http://www.laakariliitto.fi/files/potilastietojarjestelmatWinblad.pdf).
 
