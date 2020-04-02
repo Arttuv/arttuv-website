@@ -9,8 +9,8 @@ const ListLink = props => (
 )
 
 const Header = ({ siteTitle }) => (
-  <div style={{ margin: `0 auto`, maxWidth: `60rem`, padding: `1rem 1.0875rem 1.45rem` }}>
-    <header style={{ marginBottom: `1.5rem`, width: '100%', display: 'inline-flex', justifyContent: 'space-between', flexDirection: 'row' }}>
+  <div style={{ margin: `0 auto`, maxWidth: `60rem`, padding: `1rem 1.0875rem 0rem` }}>
+    <header style={{ width: '100%', display: 'inline-flex', justifyContent: 'space-between', flexDirection: 'row' }}>
       <span style={{display: 'block'}}></span>
       
         <span className="site-title">

@@ -23,16 +23,17 @@ const GalleryArticle = ({ post }) => (
           </Link>
       </div>
     </div>
+  
     <div className="archive-article-item-image">
   
-  {post.frontmatter.featuredImage !== null && (
-    <Img 
-        sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-        style={{margin: 'auto auto', width: '128px'}}
-      />
-  )}
+      {post.frontmatter.featuredImage !== null && (
+        <Img 
+            sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
+            style={{margin: 'auto auto', width: '128px'}}
+          />
+      )}
 
-</div>
+    </div>
 </article>
 )
 export default GalleryArticle
