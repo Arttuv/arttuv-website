@@ -77,7 +77,7 @@ a {
 }
 
 .latest-writings-item {
-  min-width:459px;
+  min-width:259px;
   margin: 1rem;
   font-size: smaller;
   display: flex;
@@ -191,6 +191,8 @@ min-width: 100px;  max-width: 200px;
       display: flex;
       flex-direction: column;
     }
+
+    
   }
 
   @media (max-width: 620px) {
@@ -205,9 +207,29 @@ min-width: 100px;  max-width: 200px;
     .article .gatsby-image-wrapper {
       display: none;
     }
+
+   
   }
 
   @media (max-width: 756px) {
+
+    .latest-writings-item {
+      margin-right: 0px;
+      margin-left: 0px;
+      padding-right: 0.5rem;
+    }
+
+    .latest-writings-item-image {
+      margin-right: 0px;
+      margin-left: 0px;
+      padding-right: 0.5rem;
+    }
+    .latest-writings-item-image .gatsby-image-wrapper {
+      margin-right: 0px;
+      margin-left: 0px;
+      padding-right: 0.5rem;
+      max-width: 96px;
+    }
     .archive-article-item:nth-of-type(odd) {
       border-right: none;
       margin-right: 1rem;
