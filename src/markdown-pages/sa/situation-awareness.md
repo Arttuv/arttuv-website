@@ -2,6 +2,7 @@
 path: "/writings/situation-awareness"
 date: "2019-06-23"
 title: "Situation Awareness (SA)"
+featuredImage: "Endsley-SA-model_BW_Black.png"
 ---
 
 Situation awareness (SA) is an interesting concept to consider in software design. The term comes from human factors research and was at first made popular by [Mica R. Endsley](https://www.researchgate.net/profile/Mica_Endsley), one of the most cited SA researchers.

@@ -10,14 +10,14 @@ const GalleryArticle = ({ post }) => (
         <Img sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
       )}
       <div>
-        <Link to={post.frontmatter.path}>
-          <h3>{post.frontmatter.title}</h3>
-        </Link>
         {post.frontmatter.tags !== null && ( 
           <div className="article-topic">{post.frontmatter.tags}</div>
         )}
-        {post.frontmatter.summary !== null && (<p>{post.frontmatter.summary}</p>)} 
-        {post.frontmatter.summary === null && (<p>{post.excerpt}</p>)} 
+        <Link to={post.frontmatter.path}>
+          <h3>{post.frontmatter.title}</h3>
+        </Link>
+        {post.frontmatter.summary !== null && (<p className="post-summary">{post.frontmatter.summary}</p>)} 
+        {post.frontmatter.summary === null && (<p className="post-summary">{post.excerpt}</p>)} 
         <div className="article-read-more">
             <Link to={post.frontmatter.path}>
             {post.frontmatter.date}

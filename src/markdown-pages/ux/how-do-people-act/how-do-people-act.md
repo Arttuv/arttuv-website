@@ -2,6 +2,7 @@
 path: "/writings/how-do-people-act"
 date: "2010-11-14"
 title: "How do people act"
+featuredImage: "Action-Cycle-Simplified.png"
 ---
 Creating usable software is not easy. You are blind to the usability problems of your user interface because you know how things work. You don’t need feedback in a way that other users of your system need. You don’t need the system to tell you what actions are available in each situation. If an action takes some time, you know what is happening(right?), but it must be told for the others!
 
