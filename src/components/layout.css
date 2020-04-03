@@ -24,9 +24,7 @@ a h3 {
 header {
   margin-top: 1rem;
 }
-.site-title {
 
-}
 .site-description {
   margin-top: -1rem;
   margin-bottom: 0px;
@@ -205,8 +203,6 @@ a {
     }
     .site-description {
       font-size: smaller;
-    }
-    .about-me-image {
     }
     .article .gatsby-image-wrapper {
       display: none;
