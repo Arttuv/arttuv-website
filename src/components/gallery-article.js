@@ -29,7 +29,7 @@ const GalleryArticle = ({ post }) => (
       {post.frontmatter.featuredImage !== null && (
         <Img 
             sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-            style={{margin: 'auto auto', width: '128px'}}
+            style={{margin: 'auto auto', width: '96px'}}
           />
       )}
 

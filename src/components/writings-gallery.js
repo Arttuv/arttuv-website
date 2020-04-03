@@ -21,7 +21,7 @@ export default () => (
                 summary
                 featuredImage {
                     childImageSharp {
-                        sizes(maxWidth: 630) {
+                        sizes(maxWidth: 250) {
                         ...GatsbyImageSharpSizes
                         }
                     }
