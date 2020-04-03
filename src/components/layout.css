@@ -251,6 +251,13 @@ a {
     .archive {
       display: grid;
       grid-template-columns: auto;
+      margin: 0.5rem;
+      gap: 0px;
+    }
+
+    .archive-article-item {
+      margin-left: 0rem;
+      margin-right: 0rem;
     }
 
     .archive-article-item-image {
