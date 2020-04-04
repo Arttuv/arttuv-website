@@ -83,7 +83,7 @@ a {
 .latest-writings-item {
   min-width:259px;
   margin: 1rem;
-  font-size: smaller;
+  font-size: initial;
   display: flex;
   flex-direction: row;
 }

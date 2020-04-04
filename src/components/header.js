@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
       <ul style={{ listStyle: `none`}}>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/writings/">Writings</ListLink>
-        <ListLink to="/cv/">CV</ListLink>
+        <ListLink to="/author/">Author</ListLink>
       </ul>
   </header>
 </div>
