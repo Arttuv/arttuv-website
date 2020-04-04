@@ -123,6 +123,25 @@ a {
   width: inherit;
 }
 
+.editors-choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.editors-choice article a {
+  color: black;
+}
+.editors-choice article {
+  max-width: 250px;
+
+  padding: 1rem;
+}
+
+.editors-choice article:last-of-type {
+  border-right: none;
+}
+
 .archive {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -188,6 +207,10 @@ a {
     padding-right: 2rem;
   }
   
+  .archive-article-item:last-of-type {
+    border-right: none;
+  }
+
   .archive-article-item-summary {
     display: none;
   }
@@ -260,6 +283,15 @@ a {
       margin-left: 0px;
       padding-right: 0.5rem;
       max-width: 96px;
+    }
+
+    .editors-choice {
+      flex-direction: column;
+    }
+
+    .editors-choice article {
+      border-right: none;
+      min-width: 100%;
     }
     .archive-article-item:nth-of-type(odd) {
       border-right: none;
