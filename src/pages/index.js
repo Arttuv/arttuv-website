@@ -37,7 +37,7 @@ const IndexPage = () => (
           
       </div>
 
-        <BorderedTitle title="Editors' choice" />
+        <BorderedTitle title="Pages" />
         <div className="editors-choice">
         <article>
           <h3> <Link to="/notetaking/">Notetaking</Link></h3>

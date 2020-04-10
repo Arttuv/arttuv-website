@@ -8,11 +8,11 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout>
+    <Layout small="small">
       <div className="blog-post-container">
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
+          <p className="blog-post-date">{frontmatter.date}</p>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}

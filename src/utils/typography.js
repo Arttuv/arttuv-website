@@ -1,21 +1,21 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  baseFontSize: "18px",
-  baseLineHeight: 1.666,
+  baseFontSize: "21px",
+  baseLineHeight: 1.5,
   headerFontFamily: [
-    "Libre Caslon Display",
+    "Girassol",
   ],
-  bodyFontFamily: ["Roboto"],
+  bodyFontFamily: ["Source Serif Pro"],
   googleFonts: [
     {
-      name: 'Libre Caslon Display',
+      name: 'Girassol',
       styles: [
         '400',
       ],
     },
     {
-      name: 'Crimson Text',
+      name: 'Source Serif Pro',
       styles: [
         '400',
       ],

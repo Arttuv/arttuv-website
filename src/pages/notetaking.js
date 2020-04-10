@@ -22,6 +22,9 @@ const IndexPage = ({data}) => (
                 I like taking notes by handwriting - you can almost always bring your notebook with you, and
                 it doesn't feel as disrespectful to not down some words by hand compared to using computer for the same task.
             </p>
+
+            <Img fluid={data.leuchtturmPentelTradio.childImageSharp.fluid}  />
+
             <p>
                 Sometimes it isn't practical to use physical notebook, so I also have an iPad Pro with Apple Pencil for digital notetaking. iPad is exceptionally well suited for reading and marking books if they are in PDF format.
             </p>
@@ -29,6 +32,9 @@ const IndexPage = ({data}) => (
             <p>
                 My go-to notebook is Leuchttur1917 with dotted pages. The paper is of good quality, dots are right on spot and the pages have a bit yellowish color to them. For example Noona notebooks are too white and the dots are too close to each other. 
             </p>
+
+            <Img fluid={data.leuchtturmBauhaus.childImageSharp.fluid}  />
+
             <p>
                 Currently my favorite pen is Pentel Tradio 05. I like using rollerball pens because they are so smooth but also leave a solid mark.
             </p>
@@ -36,6 +42,7 @@ const IndexPage = ({data}) => (
             <p> 
                 I went through a lot of devices when I was looking for the perfect match for digital notetaking with a pen. Of course, there is no perfect way to do it, but the closest I could find is iPad Pro with Apple Pencil.
             </p>
+            <Img fluid={data.ipadproprocreate.childImageSharp.fluid}  />
             <p>I have three kinds of digital notetaking needs:</p>
             <ul>
                 <li>Reading and annotating PDF files</li>
@@ -57,14 +64,29 @@ const IndexPage = ({data}) => (
 
 export const query = graphql`
 query {
-    fileName: file(relativePath: { eq: "arttu_face_2019.jpg" }) {
+    ipadproprocreate: file(relativePath: { eq: "ipad-pro-procreate.jpeg" }) {
       childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
+        fluid(maxWidth: 800, maxHeight: 550) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-  }
+    leuchtturmPentelTradio: file(relativePath: { eq: "leuchtturm1917-pentel-tradio-05.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800, maxHeight: 550) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      leuchtturmBauhaus: file(relativePath: { eq: "leuchtturm1917-bauhaus.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800, maxHeight: 550) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    
+}
 
 `
 

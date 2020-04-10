@@ -37,8 +37,7 @@ How the hero interacts with the world is of course part of the physics too, but 
 
 Maps were procedurally generated so the paths that the player had to follow were not always optimal. Let’s consider the following image.
 
-![Problem with equally sized blocks and paths near the ceiling](Corner-cases-in-platformer-physics.004.png)
-Problem with equally sized blocks and paths near the ceiling
+![Problem with equally sized blocks and paths near the ceiling](Corner-cases-in-platformer-physics.004.png "Problem with equally sized blocks and paths near the ceiling")
 
 The hero is equally sized to map blocks, so there wasn’t additional space for jumps, if the cave was one block high. How do you jump from the situation like in the picture? Naive preconditions for jumping would be
 
@@ -60,8 +59,7 @@ Another problem in the image is jumping to a gap that is close to the ceiling. I
 
 Image below represents a classical platform game challenge. Hero has to jump from level to level – death below and ceiling just a little bit too low above. It’s important to be able to control the jump precisely.
 
-![Classical platform game challenges](Corner-cases-in-platformer-physics.003.png)
-Classical platform game challenges
+![Classical platform game challenges](Corner-cases-in-platformer-physics.003.png "Patfromer challenges")
 
 So fine-tunings to fix this scenario are
 
