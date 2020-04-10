@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-
+import BlogPostSummary from "../components/blog-post-summary"
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -12,7 +12,9 @@ export default function Template({
       <div className="blog-post-container">
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
-          <p className="blog-post-date">{frontmatter.date}</p>
+          <div>
+            <p className="blog-post-date">{frontmatter.date} <br />{frontmatter.tags}</p>
+          </div>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -31,6 +33,15 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
+        summary
+        featuredImage {
+            childImageSharp {
+                sizes(maxWidth: 250) {
+                ...GatsbyImageSharpSizes
+                }
+            }
+        }
       }
     }
   }

@@ -3,7 +3,7 @@ path: "/writings/ux-of-a-platform-game"
 date: "2019-06-30"
 title: "Platformer (game) UX"
 tags: ["hci"]
-summary: "Some years ago I tried building a platformer game (PC / Android) and found the experience interesting from the UX point of view. This is my recap of what I remember. TLDR: You can cheat to make it feel more like a game. Physics simulation rarely makes a good game (at least you'll need to fine tune your character movement physics)."
+summary: "Some years ago I tried building a platformer game (PC / Android) and found the experience interesting from the UX point of view. This is my recap of what I remember. TLDR: You can cheat to make it feel more like a game. Physics simulation rarely makes a good platformer (although Trine might beg to differ). At least you'll need to fine tune your character movement physics."
 featuredImage: "Corner-cases-in-platformer-physics.003.png"
 ---
 
@@ -18,7 +18,7 @@ The platform game I was working on was a 2D one with procedurally generated maps
 
 The gif is from the Android version, but originally I designed the game to be played using a keyboard. Physical keys enable much more precise controls than the touch screen and I enjoyed optimising the user experience of the game.
 
-## The elements of UX in platform game
+## Elements of platformer UX
 Areas I found important in a UX of a platform game are
 
 - Hero physics
