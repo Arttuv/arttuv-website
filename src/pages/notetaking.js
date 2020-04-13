@@ -12,7 +12,7 @@ import TagsComponent from "../components/tags-component"
 import Img from "gatsby-image"
 
 const IndexPage = ({data}) => (
-  <Layout>
+  <Layout small="small">
     <SEO title="Notetaking" />
         <article>
             <h1>

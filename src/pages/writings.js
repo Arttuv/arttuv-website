@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import AllWritings from "../components/all-writings"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout small="small">
     <AllWritings />
   </Layout>)
 
