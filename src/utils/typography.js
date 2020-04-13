@@ -1,12 +1,12 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  baseFontSize: "21px",
+  baseFontSize: "16px",
   baseLineHeight: 1.5,
   headerFontFamily: [
     "Girassol",
   ],
-  bodyFontFamily: ["Source Serif Pro"],
+  bodyFontFamily: ["Libre Caslon Text"],
   googleFonts: [
     {
       name: 'Girassol',
@@ -15,7 +15,7 @@ const typography = new Typography({
       ],
     },
     {
-      name: 'Source Serif Pro',
+      name: 'Libre Caslon Text',
       styles: [
         '400',
       ],
