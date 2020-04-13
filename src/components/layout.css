@@ -187,7 +187,13 @@ a {
     min-width: 96px;
     margin-left: 3rem;
     margin-right: 1rem;
-  }
+}
+
+.embedVideoIframe {
+  object-fit: contain;
+  height: inherit;
+  width: inherit;
+}
 
 .gatsby-image-wrapper {
   margin-right: 0.5rem;
