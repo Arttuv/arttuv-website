@@ -8,7 +8,7 @@ featuredImage: "../../../images/hci-placeholder.png"
 
 It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key Principles and What Designers Think (Gould & Lewis, 1985). Gould and Lewis introduce three principles that they argue are vital for creating usable applications, and then they go through common arguments against them and try to justify why these principles matter.
 
-*These three principles for designing for usability are (Gould & Lewis, 1985):*
+**These three principles for designing for usability are (Gould & Lewis, 1985):**
 
 1. Early Focus on Users and Tasks
 2. Empirical Measurement
@@ -18,15 +18,15 @@ I remember I’ve read this article years back, but I was still a bit shocked ho
 
 This writing is a short recap of the paper and what I think is the most important and useful parts.
 
-## Early Focus on Users and Tasks
+**Early Focus on Users and Tasks**
 
 This principle emphasizes that designers must get the understanding of who the end users will be and what is the nature of the work expected to be accomplished.
 
-## Empirical Measurement
+**Empirical Measurement**
 
 Intended users should use simulations and prototypes early in the development process to carry out real work. Their performance and reactions should be observed, recorded and analyzed.
 
-## Iterative Design
+**Iterative Design**
 
 Problems found in empirical user tests must be fixed, which implies that the design must be iterative. Emphasis is on a cycle of design, test and measure, and redesign. This way the development process will ensure that usability goals like “easy to use” or “user friendly” are being met.
 

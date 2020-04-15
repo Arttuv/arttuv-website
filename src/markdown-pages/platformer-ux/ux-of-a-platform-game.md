@@ -8,8 +8,9 @@ featuredImage: "Corner-cases-in-platformer-physics.003.png"
 ---
 Interactions in games are fascinating because usually, people have a gut feeling when the game feels right, but it’s not an easy task to replicate the experience. Controls and how the character follows players' interactions are vital in platform games – winning or losing can be determined by milliseconds of differences in the timing of button presses. The game mechanics and difficulty should match the gamers' understanding of a fair and challenging game.
 
+`youtube: https://youtu.be/0MV0MXj0Y8s`
 [YouTube video of a platformer prototype from 2013](https://youtu.be/0MV0MXj0Y8s)
-At this point, I had already started porting the game to Android, which made it much slower.
+At this point, I had already started porting the game to Android, which made it much slower. Not necessarily because there wouldn't be enough resources, but because controls touch screen is so much slower to use.
 
 The platform game I was working on was a 2D one with procedurally generated maps. We never finished it – life got on the way. The world consisted of equally sized squares that formed the caves and obstacles. For some reason, I decided to make the character to be equally sized square. The idea was that the maps would be procedurally generated and somehow “endless”, and that the player could build new blocks and destroy old ones. Minecraft style.
 

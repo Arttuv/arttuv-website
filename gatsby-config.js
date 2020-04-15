@@ -66,7 +66,8 @@ module.exports = {
           {
             resolve: "gatsby-remark-embed-video",
             options: {
-              width: "auto",
+              width: 300,
+              height:170, 
               ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
               //height: auto, // Optional: Overrides optional.ratio
               related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.

@@ -20,6 +20,7 @@ const Header = ({ siteTitle, small}) => (
           <Link to="/" style={{ textAlign: 'center', textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
             <h1>The <br/>Feedback Loop</h1>
           </Link>
+
           <div className="site-description">On creating digital tools and human-computer interactions in them</div>
         </span>
         )}
@@ -28,7 +29,6 @@ const Header = ({ siteTitle, small}) => (
           <Link to="/" style={{ textAlign: 'center', textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
             <h1>The Feedback Loop</h1>
           </Link>
-          <div className="site-description-small">On creating digital tools and human-computer interactions in them</div>
         </span>
         )}    
 

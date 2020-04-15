@@ -39,13 +39,13 @@ The team should usually be the smallest acting entity in building software. So w
 
 ![Team working together](team-kanban-dots.jpeg "Team working together")
 
-One option is to *agree on a practice that nobody in a team is allowed to wrestle on a blocker problem more than 30 minutes alone*. This can make it clear for everyone that asking for help is seen as a good thing and makes the team perform more efficiently. Everybody knows that you don’t only have permission to ask for help, it’s expected of you.
+One option is to **agree on a practice that nobody in a team is allowed to wrestle on a blocker problem more than 30 minutes alone**. This can make it clear for everyone that asking for help is seen as a good thing and makes the team perform more efficiently. Everybody knows that you don’t only have permission to ask for help, it’s expected of you.
 
-Another practice is to *track how long a task stays in the same phase* (column, when talking about Kanban). The easiest way to do this is to add a dot to it in each daily. This helps the team to focus on tasks that seem to be blocked and proactively offer for help. I must emphasize that this kind of practice should be agreed on as a team - otherwise this can also add the wrong kind of pressure for the team members. 
+Another practice is to **track how long a task stays in the same phase** (column, when talking about Kanban). The easiest way to do this is to add a dot to it in each daily. This helps the team to focus on tasks that seem to be blocked and proactively offer for help. I must emphasize that this kind of practice should be agreed on as a team - otherwise this can also add the wrong kind of pressure for the team members. 
 
 Each policy should be discussed and agreed as a team so that everybody knows what is the change you intend to achieve.
 
-Kanban's way of *limiting work in progress* is also partly a way to encourage collaboration and to make sure nobody is left alone with problems.
+Kanban's way of **limiting work in progress** is also partly a way to encourage collaboration and to make sure nobody is left alone with problems.
 
 ## Vulnerability
 
