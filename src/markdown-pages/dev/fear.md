@@ -47,6 +47,8 @@ Each policy should be discussed and agreed as a team so that everybody knows wha
 
 Kanban's way of **limiting work in progress** is also partly a way to encourage collaboration and to make sure nobody is left alone with problems.
 
+I'd still keep in mind with all these, that people like to work differently. Some of us like to debug problems collaborately, but sometimes it's also good to be able to use some time alone to be able to concentrate and understand the problem on your own - that should still be possible too.
+
 ## Vulnerability
 
 The best way to start is leading by example: Make it acceptable to ask for help and admit you don’t know how to proceed. Show others you are not afraid to be vulnerable and maybe they will follow.

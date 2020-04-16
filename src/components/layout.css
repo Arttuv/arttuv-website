@@ -12,6 +12,8 @@ body {
   border-left-width: 1px;
   border-left-color: lightgray;
   padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin: 0.5rem;
   border-right-style: solid;
   border-right-width: 1px;
@@ -425,7 +427,12 @@ a {
 
     .blog-post {
       font-size: smaller;
+      border-left-style: none;
+      border-right-style: none;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
     }
+    
     .blog-post-summary {
       flex-direction: column-reverse;
     }
