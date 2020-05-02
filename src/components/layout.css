@@ -1,6 +1,68 @@
 body {
   color: #000;
 }
+
+footer .copyright {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.bottomNavigation {
+  display: flex;
+  justify-content: center;
+}
+.rssSubscribe h1 {
+  font-size: 1.2rem;
+}
+
+.mailchimpSubscribe form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
+  max-width: 360px;
+}
+
+.mailchimpSubscribe fieldset {
+  border: none;
+}
+
+.mailchimpSubscribe .av-checkbox {
+  margin-left: 1rem;
+}
+.rssSubscribe p {
+  font-size: smaller;
+}
+
+.mailchimpSubscribe h1 {
+  font-size: 1.2rem;
+}
+
+.mailchimpSubscribe h2 {
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+
+.mailchimpSubscribe p {
+  font-size: smaller;
+}
+
+.mailchimpSubscribe button {
+  border: none;
+  color: brown;
+}
+
+.mailchimpSubscribeButton {
+  border: 1px solid lightgray;
+  color: brown;
+}
+
+.mailchimpSubscribe iframe {
+  display: block;
+  margin: 0 auto;
+  
+}
+
 .page-container {
     margin: 0 auto;
     max-width: 60rem;

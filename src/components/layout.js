@@ -9,7 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "./header";
+import Footer from "./footer";
 import "./layout.css"
 import BorderedTitle from "../components/bordered-title"
 
@@ -29,18 +30,7 @@ const Layout = ({ children, small }) => {
       <Header siteTitle={data.site.siteMetadata.title} small={small}/>
       <div className = "page-container">
         <main>{children}</main>
-        <footer style={{
-          borderTopStyle: `solid`,
-          borderTopWidth: `1px`,
-          marginTop: '1.5rem',
-          minHeight: `100%`,
-          paddingTop: `1.5rem`
-        }}>
-          © {new Date().getFullYear()} Arttu V. Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-          <span>, icons by <a href="https://webkul.github.io/vivid/">Vivid</a></span>
-        </footer>
+        <Footer siteTitle={data.site.siteMetadata.title} small={small}/>
       </div>
     </>
   )

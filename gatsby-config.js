@@ -6,7 +6,12 @@ module.exports = {
     author: `@arttuv`,
   },
   plugins: [
-
+    {
+      resolve: `gatsby-plugin-mailchimp`,
+      options: {
+        endpoint: `https://arttuv.us8.list-manage.com/subscribe/post?u=e6fa8cd1f7936f091c9072614&amp;id=d39685d12d`,
+      }
+    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-google-analytics`,
