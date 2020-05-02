@@ -20,6 +20,9 @@ body {
   border-right-color: lightgray;
 }
 
+.blog-post pre {
+  overflow: scroll;
+}
 .embedVideo-container {
   text-align: center;
 }
@@ -80,7 +83,7 @@ body {
 .blog-post .gatsby-resp-image-figcaption {
   text-align: center;
   font-weight: lighter;
-  font-size: smaller;
+  font-size: normal;
 }
 .article-read-more {
     display: flex;
