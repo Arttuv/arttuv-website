@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[The Feedback Loop]]></title><description><![CDATA[Creating software and human-computer interactions.]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 02 May 2020 14:23:20 GMT</lastBuildDate><item><title><![CDATA[Fear]]></title><description><![CDATA[Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the…]]></description><link>https://www.arttuv.com/dev/fear/</link><guid isPermaLink="false">https://www.arttuv.com/dev/fear/</guid><pubDate>Sun, 12 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven&apos;t mastered yet. That can be a lot to bear and a source of anxiety. Kati Vilkki wrote &lt;a href=&quot;https://www.reaktor.com/blog/facing-up-to-a-culture-of-fear/&quot;&gt;a good blog post on culture of fear&lt;/a&gt;, which inspired me to think about the subject from my perspective, on team and single developer level.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/274676133dbe990a11a9a3cbff7c11c5/7e1b6/coder-fear.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.75675675675677%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHrlDUkf//EABsQAAIBBQAAAAAAAAAAAAAAAAABAgMQERIx/9oACAEBAAEFAqk2bMXJJoxK3//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABoQAAEFAQAAAAAAAAAAAAAAABAAAQIRMUH/2gAIAQEABj8CqBfqwf/EABkQAQEBAQEBAAAAAAAAAAAAAAERADEhgf/aAAgBAQABPyELAU7cXL9zULqIOrN7cY5v/9oADAMBAAIAAwAAABBAD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESFBMVGRscH/2gAIAQEAAT8QLoI6M6++JQKXXAxc5iWIotQG71EwuZpQb9wUB0T/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Being stuck alone brings stress and fear&quot;
+        title=&quot;Being stuck alone brings stress and fear&quot;
+        src=&quot;/static/274676133dbe990a11a9a3cbff7c11c5/1c72d/coder-fear.jpg&quot;
+        srcset=&quot;/static/274676133dbe990a11a9a3cbff7c11c5/a80bd/coder-fear.jpg 148w,
+/static/274676133dbe990a11a9a3cbff7c11c5/1c91a/coder-fear.jpg 295w,
+/static/274676133dbe990a11a9a3cbff7c11c5/1c72d/coder-fear.jpg 590w,
+/static/274676133dbe990a11a9a3cbff7c11c5/a8a14/coder-fear.jpg 885w,
+/static/274676133dbe990a11a9a3cbff7c11c5/fbd2c/coder-fear.jpg 1180w,
+/static/274676133dbe990a11a9a3cbff7c11c5/7e1b6/coder-fear.jpg 1310w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Being stuck alone brings stress and fear&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Fear consumes energy, hinders our cognitive functions and may make us withdraw from other people. It can also increase stress, and prolonged stress can, for example, make us less creative and thus hinder our problem-solving skills. Many of these effects are interconnected and can lead to a vicious cycle. Stress and fear may distance you from colleagues which is exactly the opposite of what you should probably be doing.&lt;/p&gt;
+&lt;p&gt;Everything depends on the context: What is causing the fear, who are there to face it with you, and where it happens. Kati lists multiple sources of fear, and I want to concentrate on the following (listing from Kati’s writing):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Loss of status&lt;/li&gt;
+&lt;li&gt;Loss of appreciation&lt;/li&gt;
+&lt;li&gt;Loss of identity&lt;/li&gt;
+&lt;li&gt;Loss of work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I have never been in a workplace where I would have needed to fear being treated badly, like being yelled at or threatened to kick me out. Instead, I have often felt I’m not good enough or that I should be doing better. &lt;/p&gt;
+&lt;p&gt;I’m talking about the situation in which you feel you should manage by yourself, so you don’t ask for help. The longer you struggle alone the harder it’s to ask for help, because then others would know how much time you have wasted without results. I can admit I’m guilty of this and based on discussions with others (that have worked on the field for over 10 years), I’m not alone. &lt;/p&gt;
+&lt;p&gt;Some kind of nerd pride is connected to programming so that admitting you don’t know something is linked to your very being as a developer and raises the fear of losing your status or identity. Even if you know how to finish the task, it often feels like you should have done it faster. Others would have, or so you’d think.&lt;/p&gt;
+&lt;h2&gt;Creating Software Is Hard&lt;/h2&gt;
+&lt;p&gt;Creating software is hard. Admitting that there are a lot of uncertainties even in the simpler tasks helps people feel like they are trusted to get the work done, and if it takes some time, it’s because it’s hard, not because the person doing it is incompetent.&lt;/p&gt;
+&lt;p&gt;Impostor syndrome is common in IT field and means, that you think other people are much smarter than you are and you are just a fraud. A colleague once said he had gotten over with impostor syndrome after reading that it can result from you keeping yourself too important to admit others you don’t know something. That hit somewhat home for me too. Admitting that I don&apos;t know something is hard every single time. Especially if it&apos;s not directly asked, but I should proactively open my mouth.&lt;/p&gt;
+&lt;p&gt;By admitting that you need help you are creating an example for others in the team as well. As you probably know, psychological safety is a common feature in high performing teams (&lt;a href=&quot;https://rework.withgoogle.com/blog/five-keys-to-a-successful-google-team/&quot;&gt;according to studies made at Google&lt;/a&gt;). By showing that it’s ok to show weakness, you help to build a safe environment and it will help your team to grow to be a better environment for everyone.&lt;/p&gt;
+&lt;h2&gt;The Team is the Smallest Entity&lt;/h2&gt;
+&lt;p&gt;The team should usually be the smallest acting entity in building software. So what could a team do to tackle the fear? David J. Anderson has listed some team practices in his &lt;a href=&quot;https://www.goodreads.com/book/show/8086552-kanban&quot;&gt;Kanban book&lt;/a&gt;, which can help to make it easier to ask for help and collaborate. &lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/b536e/team-kanban-dots.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.94594594594594%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHbVlLSQ//EABoQAAICAwAAAAAAAAAAAAAAAAABAhAREiH/2gAIAQEAAQUCbZ0RKOTSv//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAAQASEx/9oACAEBAAY/AjXFr//EABoQAAMBAQEBAAAAAAAAAAAAAAABESExQZH/2gAIAQEAAT8hoiZfafBqjXuPpXQSiP/aAAwDAQACAAMAAAAQQA//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAbEAEBAQACAwAAAAAAAAAAAAABEQAhYTFxgf/aAAgBAQABPxCzF3O8hWAF8hZ9zCrdIBAQDKYIFYt9JyY5G//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Team working together&quot;
+        title=&quot;Team working together&quot;
+        src=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/1c72d/team-kanban-dots.jpg&quot;
+        srcset=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/a80bd/team-kanban-dots.jpg 148w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/1c91a/team-kanban-dots.jpg 295w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/1c72d/team-kanban-dots.jpg 590w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/a8a14/team-kanban-dots.jpg 885w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/fbd2c/team-kanban-dots.jpg 1180w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/b536e/team-kanban-dots.jpg 1454w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Team working together&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;One option is to &lt;strong&gt;agree on a practice that nobody in a team is allowed to wrestle on a blocker problem more than 30 minutes alone&lt;/strong&gt;. This can make it clear for everyone that asking for help is seen as a good thing and makes the team perform more efficiently. Everybody knows that you don’t only have permission to ask for help, it’s expected of you.&lt;/p&gt;
+&lt;p&gt;Another practice is to &lt;strong&gt;track how long a task stays in the same phase&lt;/strong&gt; (column, when talking about Kanban). The easiest way to do this is to add a dot to it in each daily. This helps the team to focus on tasks that seem to be blocked and proactively offer for help. I must emphasize that this kind of practice should be agreed on as a team - otherwise this can also add the wrong kind of pressure for the team members. &lt;/p&gt;
+&lt;p&gt;Each policy should be discussed and agreed as a team so that everybody knows what is the change you intend to achieve.&lt;/p&gt;
+&lt;p&gt;Kanban&apos;s way of &lt;strong&gt;limiting work in progress&lt;/strong&gt; is also partly a way to encourage collaboration and to make sure nobody is left alone with problems.&lt;/p&gt;
+&lt;p&gt;I&apos;d still keep in mind with all these, that people like to work differently. Some of us like to debug problems collaborately, but sometimes it&apos;s also good to be able to use some time alone to be able to concentrate and understand the problem on your own - that should still be possible too.&lt;/p&gt;
+&lt;h2&gt;Vulnerability&lt;/h2&gt;
+&lt;p&gt;The best way to start is leading by example: Make it acceptable to ask for help and admit you don’t know how to proceed. Show others you are not afraid to be vulnerable and maybe they will follow.&lt;/p&gt;
+&lt;p&gt;Saturday night 12. April 2020. ”The quarantine stories”.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Platformer (game) UX]]></title><description><![CDATA[Interactions in games are fascinating because usually, people have a gut feeling when the game feels right, but it’s not an easy task to…]]></description><link>https://www.arttuv.com/platformer-ux/ux-of-a-platform-game/</link><guid isPermaLink="false">https://www.arttuv.com/platformer-ux/ux-of-a-platform-game/</guid><pubDate>Sun, 30 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Interactions in games are fascinating because usually, people have a gut feeling when the game feels right, but it’s not an easy task to replicate the experience. Controls and how the character follows players&apos; interactions are vital in platform games – winning or losing can be determined by milliseconds of differences in the timing of button presses. The game mechanics and difficulty should match the gamers&apos; understanding of a fair and challenging game.&lt;/p&gt;
+&lt;p&gt;
+        &lt;div class=&quot;embedVideo-container&quot;&gt;
+            &lt;iframe
+              width=&quot;300&quot;
+              height=&quot;170&quot;
+              src=&quot;https://www.youtube-nocookie.com/embed/0MV0MXj0Y8s?rel=0&quot;
+              class=&quot;embedVideo-iframe&quot;
+              style=&quot;border:0&quot;
+              allowfullscreen
+            &gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+&lt;a href=&quot;https://youtu.be/0MV0MXj0Y8s&quot;&gt;YouTube video of a platformer prototype from 2013&lt;/a&gt;
+At this point, I had already started porting the game to Android, which made it much slower. Not necessarily because there wouldn&apos;t be enough resources, but because controls touch screen is so much slower to use.&lt;/p&gt;
+&lt;p&gt;The platform game I was working on was a 2D one with procedurally generated maps. We never finished it – life got on the way. The world consisted of equally sized squares that formed the caves and obstacles. For some reason, I decided to make the character to be equally sized square. The idea was that the maps would be procedurally generated and somehow “endless”, and that the player could build new blocks and destroy old ones. Minecraft style.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;Loikka-build-and-dig.gif&quot;&gt;Gif of building and digging (Android version)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The gif is from the Android version, but originally I designed the game to be played using a keyboard. Physical keys enable much more precise controls than the touch screen and I enjoyed optimizing the user experience of the game.&lt;/p&gt;
+&lt;h2&gt;Elements of platformer UX&lt;/h2&gt;
+&lt;p&gt;Areas I found important in the UX of a platform game are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hero physics&lt;/li&gt;
+&lt;li&gt;Interactions between hero and world&lt;/li&gt;
+&lt;li&gt;The balance between fair and unfair challenge&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Hero physics&lt;/h2&gt;
+&lt;p&gt;The physics of a platformer is interesting. I had used Box2d before and at first thought that realistic physics would be fun. They weren’t. A game character that follows realistic physics, especially in a 2D game tend not to be that fun. At least I want the controlled character to follow controls snappily, and Newtonian physics makes it too hover-like.&lt;/p&gt;
+&lt;p&gt;I made custom “physics” that made the character feel more responsive – jumps started snappily and were unrealistically high. Leaning to a wall during the jump slowed down the falling, and you were also able to jump again from the wall (just once per overall jump). You were able to change direction mid-air to some extent and to end jump early by pressing down.&lt;/p&gt;
+&lt;h2&gt;Interactions between hero and world&lt;/h2&gt;
+&lt;p&gt;How the hero interacts with the world is of course part of the physics too, but now I mean those tricky corner cases that you need to consider when designing the physics of a game.&lt;/p&gt;
+&lt;p&gt;Maps were procedurally generated so the paths that the player had to follow were not always optimal. Let’s consider the following image.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2c9004578cf99b7e534affeb4d40218f/2bef9/Corner-cases-in-platformer-physics.004.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAAB60lEQVQ4y61Ty4oaURBtHxsVEoVkiA74WLkRZ5LsogaViJ9gPiKbEZ/jCxe6EPyILAxk68JNwIV+geuoCwUdFQ0mit1RPJmq0NIZacjAFBy6qrruqXvr3CsIggAZGo0Ger3+UaA1Sg7hQfAUEE5d7HY7crkcUqkUMpkM0uk0Q/YpTyA/kUhwrdPphJKDCbVaLQfBYBBkx+MR/2vRaBRKjn8I/X4/JEnCcrnEer3GarVikD8ajTAYDDAcDjEej9Hv9zGfzxEIBNQJfT4fNpsNptMpdrsdJFGE+HuP7/0B3G43zGYzrFYrDAYDjEYjTCaTkuicMBQKnY5SKBRwdXWN25tPkH7+wIuXF1wTi8XQarXQaDTQbDbh9XrPZygHNpsN8XgcxWIRtstLzr36mEfy8zdcWJ5xnM/nuaF4v3uySCRyfmQZdASPx3NqoLnH85uvuL79ApPub00ymWTRJpMJk5KQqjOkbtvtFg6Hg2dEuQ/v30H8tYbZYuGYrgvZYrFg4nA4rE5I3UhBnU532vXrN28xvbvjfyRIvV7H4XDAbDbDfr/nuasSyqJ0u110Oh202230ej3O0XWi3dOXjMhUZ6h8KeVyGdVqFbVajVGpVFjxUqnEYpFPyGazXOtyuc5VfvK3rATN7zF4uP4PkHEnlf3U9wMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Problem with equally sized blocks and paths near the ceiling&quot;
+        title=&quot;Problem with equally sized blocks and paths near the ceiling&quot;
+        src=&quot;/static/2c9004578cf99b7e534affeb4d40218f/fcda8/Corner-cases-in-platformer-physics.004.png&quot;
+        srcset=&quot;/static/2c9004578cf99b7e534affeb4d40218f/12f09/Corner-cases-in-platformer-physics.004.png 148w,
+/static/2c9004578cf99b7e534affeb4d40218f/e4a3f/Corner-cases-in-platformer-physics.004.png 295w,
+/static/2c9004578cf99b7e534affeb4d40218f/fcda8/Corner-cases-in-platformer-physics.004.png 590w,
+/static/2c9004578cf99b7e534affeb4d40218f/efc66/Corner-cases-in-platformer-physics.004.png 885w,
+/static/2c9004578cf99b7e534affeb4d40218f/2bef9/Corner-cases-in-platformer-physics.004.png 1024w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Problem with equally sized blocks and paths near the ceiling&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;The hero is equally sized to map blocks, so there wasn’t additional space for jumps if the cave was one block high. How do you jump from the situation like in the picture? Naive preconditions for jumping would be&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The hero is standing on top of a level&lt;/li&gt;
+&lt;li&gt;The hero is not hitting the ceiling&lt;/li&gt;
+&lt;li&gt;The player is pressing the jump button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This would make it impossible to play a spot like in the image above. Fixed preconditions would be&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The hero is standing on top of a level or has been falling less than 100 ms&lt;/li&gt;
+&lt;li&gt;The hero is not hitting the ceiling&lt;/li&gt;
+&lt;li&gt;The player is pressing the jump button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;100 ms of falling is a too short time for the player to notice, and the jump feels natural. It also makes it just a little bit less likely to fall from platforms by accident – last-minute jump might save the day.&lt;/p&gt;
+&lt;p&gt;Another problem in the image is jumping to a gap that is close to the ceiling. It would be impossible to jump perfectly to the gap. The hero always hits the ceiling, which might cause the end of a jump and unexpected death. This was fixed so that if the hero jumped to the gap and collision detection concluded it to be just a bit below the level, it would be fixed on the level. This made it just a little bit easier to jump on top of platforms.&lt;/p&gt;
+&lt;h2&gt;Balance between fair and unfair challenge&lt;/h2&gt;
+&lt;p&gt;The image below represents a classical platform game challenge. The hero has to jump from level to level – death below and ceiling just a little bit too low above. It’s important to be able to control the jump precisely.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/59c5630f6238d78b19272827bb560611/2bef9/Corner-cases-in-platformer-physics.003.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABn0lEQVQ4y62TTWrCUBDH8yXGYAMtWhsXNSpkoaCiiKAbz9I7dOe3gi5d9xY9gAZREzcewDsoKIo7+bfvadKYFNpSAz/mzZCZzMw/j2EYBhYsy0IQhD9Bcpw1GJdzCxj7K/F4HP1+H+12G71eD51Oh9LtdilOv9VqYTAYIJlMwlnjqmAul8NiscB4rGNumJjPDcxmMxiGQSFngmmamEwmWC6XKBaLNJfjOO/IoihCURRElSeI/xnZguN4PMhB+B+fIb++wx/VaFzw+cDzvD0a6YZYEvudKNI92Jc3CJeCTkgRUtAxorvoV0DTNCqKfBe0X1A/hRoOh1SMcDh8tZ5ms0lzPKJYXyuVStB1HbFYDAx7jmUyGaxWK0yn03P8UlCWZYxGI5TL5e9Fce8iFAohEolQ+5MQnpEtAoEA8vk8UqkUstksPRNLIJ2m02nbEgqFAiRJ8opitVupVHA6nbDZbHA4HLDdbrHb7bDf722IfzwesV6vQZ5qteod2WpZVVW6/Hq9ThfeaDQo5Oz2a7UavTGJRMIrys3vsvs/+wvu/A82DrJhoXfcSwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Classical platform game challenges&quot;
+        title=&quot;Patfromer challenges&quot;
+        src=&quot;/static/59c5630f6238d78b19272827bb560611/fcda8/Corner-cases-in-platformer-physics.003.png&quot;
+        srcset=&quot;/static/59c5630f6238d78b19272827bb560611/12f09/Corner-cases-in-platformer-physics.003.png 148w,
+/static/59c5630f6238d78b19272827bb560611/e4a3f/Corner-cases-in-platformer-physics.003.png 295w,
+/static/59c5630f6238d78b19272827bb560611/fcda8/Corner-cases-in-platformer-physics.003.png 590w,
+/static/59c5630f6238d78b19272827bb560611/efc66/Corner-cases-in-platformer-physics.003.png 885w,
+/static/59c5630f6238d78b19272827bb560611/2bef9/Corner-cases-in-platformer-physics.003.png 1024w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Patfromer challenges&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;So fine-tunings to fix this scenario are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow the hero to jump even though it has been falling for few tens of ms&lt;/li&gt;
+&lt;li&gt;Allow the player to control the height of a jump&lt;/li&gt;
+&lt;li&gt;If the jump falls just a little bit short and hero is still moving towards the level, fix it on top of the level&lt;/li&gt;
+&lt;li&gt;Make the hero stop intuitively after the player has stopped pressing move buttons&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The player shouldn’t be required to control the hero overly strictly at the right time. Therefore I allowed some slack to the beginning and end of the jump – just enough to make it feel more natural without looking odd. Game physics is not 100% precise anyway and correctly implemented this kind of fine-tunings makes the mechanics feel intuitive without giving the feeling that player has training feel.&lt;/p&gt;
+&lt;p&gt;Physics also need to determine how long the character moves after the player has stopped pressing “move left” or “move right” buttons. Immediate stop doesn’t feel natural, but too slow stop feels the hero is moving on top of the ice. It makes it hard to hit narrow platforms.&lt;/p&gt;
+&lt;h2&gt;Game, not a simulation&lt;/h2&gt;
+&lt;p&gt;This kind of alleviation in simulation or game mechanics may feel like giving training wheels to the player. That’s not the point. The game doesn’t need to be easy, but it needs to be fair and intuitive. Visuals and controls in a game in combination with the abilities of a human player never allow 100% precise control. 2D objects in a virtual simulation can achieve much more precise movement than humans in real life, so there needs to be some flexibility in the simulation to make game playable and fun.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Automation and the role of human operators]]></title><description><![CDATA[Automation and analytics are a good means to improve operator and overall system performance. The ever-increasing amount of data means that…]]></description><link>https://www.arttuv.com/automation-and-end-users/automation-and-the-role-of-users/</link><guid isPermaLink="false">https://www.arttuv.com/automation-and-end-users/automation-and-the-role-of-users/</guid><pubDate>Fri, 28 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Automation and analytics are a good means to improve operator and overall system performance. The ever-increasing amount of data means that in many situations human operators are no longer able to keep up with the pace, and using software to help is a must. &lt;/p&gt;
+&lt;p&gt;Earlier a lot has relied on human actions and at the best human operators have been actively engaged in using the system and making decisions. Performance varies by operator, and there may be local peaks or drops in performance – it depends heavily on the expertise of individuals. &lt;/p&gt;
+&lt;p&gt;When we start adding analytics and automation to the systems, the role of the human operators may change to data providers and system supervisors. They may not be able to directly alter the decisions of the overall system. It is noteworthy that they may not even have all the relevant information to make decisions.&lt;/p&gt;
+&lt;p&gt;This way the performance of the system can be optimized and there should be no local, unanticipated lows. At the same time, there may not be peaks in the performance either – consistent performance in good and in bad.&lt;/p&gt;
+&lt;h2&gt;Potential Problems&lt;/h2&gt;
+&lt;p&gt;Combining ever-increasing levels of automation to the work of human operators seems to be surprisingly hard and may cause many kinds of problems to the end-users working with automation. When the level of automation rises and approaches autonomy, the complexity of the system increases, which means that &lt;strong&gt;mental models of the end-users must also be complex – understanding what the system does is hard&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Of course, this may not be a problem it the users don’t need to understand everything. But in many work environments, like in industry or military, users are ultimately in response and should be able to&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;notice when automation is not up to the task and&lt;/li&gt;
+&lt;li&gt;be able to handle the task that automation failed&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Of course, this is not always easy. Endsley has written in her article (Endsley 2017), that there seems to exist an automation conundrum, which means that the more reliable and robust the automation is, the lower the situation awareness of the human operators will be, and less likely they will be able to take over manual control if the situation demands it. Endsley has reasoned that this phenomenon may set some kind of limit to the usable level of automation in security-critical situations.&lt;/p&gt;
+&lt;p&gt;Endsley also notes that some researchers talk about the irony of automation – automation works when the mental workload is low anyway (the situation is not complex), but fails when the mental workload is high (the situation gets tricky), adding the load on the operator (Endsley 2017).&lt;/p&gt;
+&lt;p&gt;Some performance gains may fail to realize because often it’s necessary to guarantee some minimum level of performance to maintain a safe and secure level of operation.&lt;/p&gt;
+&lt;h2&gt;Security&lt;/h2&gt;
+&lt;p&gt;Andrew Rae has considered automation in security-critical environments in his article The Operator or The Automation: In Whom Should We Place Ultimate Trust. One approach to security is, that system design should prevent dangerous system states. Another approach is that the human operator is the ultimate link in security. Andrew notes, that these two conflicts when the system avoiding to enter an unsafe state limit the options of the human operator to recover from a dangerous situation. Automation may fail to detect the state of the system as a whole, and “unsafe” operation by the user may be the least dangerous action, even if it wasn’t envisioned by the system designers.&lt;/p&gt;
+&lt;p&gt;Always trusting humans is not the final answer, because there have also been many incidents in which human operators have explicitly disabled safety features thus causing the disaster (think Chernobyl). Rae concludes that the trustworthiness of the actor should determine the ultimate authority – but calculating that trustworthiness is probably the big question.&lt;/p&gt;
+&lt;h2&gt;Final Thoughts&lt;/h2&gt;
+&lt;p&gt;Based on studies done on automation, it seems apparent that special caution should be taken when designing automation for work domains, especially when security is of importance. Security critical or not, it should be ensured that the role of the human operator stays coherent and meaningful, even if it potentially hinders the overall system peak performance.&lt;/p&gt;
+&lt;p&gt;I’ve been considering using situation awareness as the framework for designing automation. You can read my blog post on Designing to Support (Distributed) Situation Awareness. I can’t help but think that a systemic view on SA (distributed situation awareness) by Stanton et al. might be an invaluable approach to design.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Designing to Support (Distributed) Situation Awareness]]></title><description><![CDATA[Both Situation Awareness and Distributed Situation Awareness are interesting concepts to consider when designing complex systems. Both have…]]></description><link>https://www.arttuv.com/dsa-design/designing-for-dsa/</link><guid isPermaLink="false">https://www.arttuv.com/dsa-design/designing-for-dsa/</guid><pubDate>Wed, 26 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Both Situation Awareness and Distributed Situation Awareness are interesting concepts to consider when designing complex systems. Both have their own design methods, processes and measurement methods, which should help system designers to support high SA on end users. But the real question is, how do you use these models to improve design?&lt;/p&gt;
+&lt;p&gt;I’ve written about SA and DSA before:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/writings/situation-awareness&quot;&gt;Situation Awareness&lt;/a&gt;
+Endsley’s three level individual level SA model&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/writings/distributed-situation-awareness-dsa&quot;&gt;Distributed Situation Awareness&lt;/a&gt;
+Stanton et al. system level DSA model&lt;/p&gt;
+&lt;p&gt;Endsley, Bolte and Jones have published a book named Designing for situation awareness: An approach to human-centered design on SA-oriented design (Endsley et al 2003). Salmon, Stanton, Walker and Jenkins have published their view on DSA-oriented design in a book Distributed Situation Awareness: Theory, Measurement and Application to Teamwork (Stanton et al 2009).&lt;/p&gt;
+&lt;p&gt;Both of these are briefly covered here. The figure below is a top level description combining both approaches: analysis-specification-build-measure-repeat -cycles.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/82036fce0c84a136dc50c14d3bf980bf/2bef9/SA-and-DSA-design-processes-combined.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.513513513513516%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAAB20lEQVQoz22RTWsTURSG5xe40bY2JZm5M5PJfCWZJJi4sX4shBQRq7U2SWlFrV9ValtqGoJZKN1LF03VneBG6W+wFMRuXCgi+DNUKIri452bWFy4eDjcc9/3nHvP0UzLxrQl+9HCNCW2g2noZMbqeLUFvMl5vEt3JXfwG4tkzsz0NMqXVh4hBJqRGMIYHpAMYhweQCRHEKmkyqWGDhFc65A+cgwRRBheDiHxZlcJbjzCjsroBw9gJAaVxzRNNPfcFbwp2fnibbz6Is5oFbtyAl++qthYIPvgOWZYIHd6nGJtnoIkutrGPT9HcHNNRb92j3T5uCqqjW99Znb3B1PbX5je/cmp7mvCzgtqb77TfLfHxPY3nKUNpl+9p/0J7n/4TWPrI+HDl0zs7DGz85XJt7/kGJbVD7X8rTVKzS7R0mMKzU28C9dxqzUqrSdUVtY52n6GPTpG9nKTcmuT8mqXwlwHp1qn1HpKcXmd/MoGzsmzalya76TJehkc08DWkzIKLLmM1Mgweh81UynW93MJ0lIfug6+Y+MIHUsYiHiGfhCSzeUVuSjC8wMsq7/tv0ih2nz/HBudTIZCsUQQZpU3CEPps9DiVccCIcx+FIpekf8T38dm13V7Df7R/wE9oBd3+FsDOwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Top-level description combining results from SA-oriented design and DSA-oriented de-sign, derived from Endsley et al (2003) and Salmon et al (2009)&quot;
+        title=&quot;Top-level description combining results from SA-oriented design and DSA-oriented de-sign, derived from Endsley et al (2003) and Salmon et al (2009)&quot;
+        src=&quot;/static/82036fce0c84a136dc50c14d3bf980bf/fcda8/SA-and-DSA-design-processes-combined.png&quot;
+        srcset=&quot;/static/82036fce0c84a136dc50c14d3bf980bf/12f09/SA-and-DSA-design-processes-combined.png 148w,
+/static/82036fce0c84a136dc50c14d3bf980bf/e4a3f/SA-and-DSA-design-processes-combined.png 295w,
+/static/82036fce0c84a136dc50c14d3bf980bf/fcda8/SA-and-DSA-design-processes-combined.png 590w,
+/static/82036fce0c84a136dc50c14d3bf980bf/efc66/SA-and-DSA-design-processes-combined.png 885w,
+/static/82036fce0c84a136dc50c14d3bf980bf/2bef9/SA-and-DSA-design-processes-combined.png 1024w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Top-level description combining results from SA-oriented design and DSA-oriented de-sign, derived from Endsley et al (2003) and Salmon et al (2009)&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h2&gt;SA-Oriented Design&lt;/h2&gt;
+&lt;p&gt;Endsley, Bolet and Jones divide SA-oriented design process to three main stages: requirements analysis, SA-oriented design principles and SA measurement. SA requirements analysis consists of goal directed task analysis (GDTA) . GDTA is interested in goals of the task, decisions the operator must make to achieve goals and information that is needed to make those decisions. Focus is on so called dynamic information requirements, which means information that changes dynamically during the task, opposed to general system knowledge. GDTA is conducted by interviewing experienced operators and by combining this data with knowledge from other sources, like written materials, documentation, protocols etc.. The GDTA results are then validated by large number of experienced operators.&lt;/p&gt;
+&lt;p&gt;There are also a number of design principles for SA oriented design listed in the book. Examples of these are “Organise information around goals”, “Present Level 2 information directly” and “Provide assistance for Level 3 SA projections”. Most of the principles concern GDTA results or are general recommendations relating to three level model of SA.&lt;/p&gt;
+&lt;p&gt;Design principles and GDTA results do not automatically lead to design solutions, which is why designs need to be objectively measured. There are many direct and indirect ways of measuring SA, but direct and objective measurements in conjunction with workload and performance evaluation is the most thorough approach. Situation awareness global assessment technique (SAGAT) is one often used method to measure SA. SAGAT requires the task under analysis to be halted at random periods and batteries of questions to be presented at operators. Answers are then evaluated by subject matter experts.&lt;/p&gt;
+&lt;p&gt;Whichever the SA measurement method is, the important part is to feed results back to design to improve solutions until SA requirements are satisfied.&lt;/p&gt;
+&lt;h2&gt;DSA-Oriented Design&lt;/h2&gt;
+&lt;p&gt;DSA design process is quite similar to SA-oriented design process, but the tools and focus are different. DSA is also interested in the tasks operators are performing, but the method to analyze them is hierarchical task analysis (HTA), which uses data from observations, documentation, interviews with subject matter experts, training materials, etc.. HTA is used to identify the SA requirements, which should be further refined to build a propositional network describing the relations between information elements. Information elements will be further categorized (by using HTA, propositional network and subject matter experts) to compatible and transactive elements – meaning information that is used in different ways by different operators, and information that is passed between operators.&lt;/p&gt;
+&lt;p&gt;Results of the SA requirements analysis is used to create a design specification describing what information, to whom, in what format, for which need should be presented. Specification should link end user tasks to information elements to be presented, as well as what other information elements are likely to be used in conjunction. There are also 18 design guidelines that can be used to guide the design process (Salmon et al 2009, 218-223).&lt;/p&gt;
+&lt;p&gt;Finally, mock ups should be built based on the design specification, to test how well they support DSA. The nature of testing depends on what is to be tested – mock ups can be tested using a propositional network method, but operators use of prototypes can also be analyzed using critical decision method interviews. Findings from the test should be fed back to the design phase.&lt;/p&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Top level image at the beginning shows that SA- or DSA-oriented design processes both are based on a basic design-build-measure-repeat -cycle. The real value is in methods that are used to gather and describe requirements, and how SA or DSA is measured. It is important to note that prototyping is encouraged to avoid spending time implementing systems that are not going to fulfill the requirements – SA and DSA can (to some point) be measured using prototypes as well.&lt;/p&gt;
+&lt;p&gt;Concentrating on the tasks and information elements seems to be the key in designing to support situation awareness, no matter if you consider it on the individual or systems level. It would be interesting to analyse these more deeply to see how the results of these processes differ and does it show somehow in the final designs.&lt;/p&gt;
+&lt;p&gt;These design methods are also quite heavy and demand time, resources and skills. On the other hand, they are also to be used in situations which require special consideration on performance, security and so on.&lt;/p&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;Endsley, M. R., Bolte, B., &amp;#x26; Jones, D. G. (2003). Designing for situation awareness: An approach to human-centered design. London, UK: Taylor &amp;#x26; Francis.&lt;/p&gt;
+&lt;p&gt;Salmon, P.M., N.A. Stanton, G.H. Walker, and D.P. Jenkins. 2009. Distributed Situation Awareness: Theory, Measurement and Application to Teamwork. Ashgate: Aldershot.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Distributed Situation Awareness (DSA)]]></title><description><![CDATA[Distributed situation awareness (DSA) is model that takes a systemic view to situation awareness (SA). Stanton et al. have described their…]]></description><link>https://www.arttuv.com/dsa/distributed-situation-awareness/</link><guid isPermaLink="false">https://www.arttuv.com/dsa/distributed-situation-awareness/</guid><pubDate>Mon, 24 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Distributed situation awareness (DSA) is model that takes a systemic view to situation awareness (SA). Stanton et al. have described their DSA model in an article “Distributed situation awareness in dynamic systems: theoretical development and application of an ergonomics methodology”, from year 2006 (Stanton et al. 2006). They propose that both human and non-human agents in the system each have their own situation awareness (at least by holding contextually relevant information) . Different agents have different goals and thus their SA may also be different, but compatible.&lt;/p&gt;
+&lt;p&gt;DSA analysis focuses on the interactions between agents, which may be verbal or non-verbal behavior, customs, etc. DSA also indicates that SA holds loosely coupled systems together and one agent may compensate for degradation in SA in another agent (Stanton et al 2006).&lt;/p&gt;
+&lt;p&gt;Following tenets define the theory (these are directly from an article by Stanton et al: State-of-science: situation awareness in individuals, teams and systems):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Situation awareness is an emergent property of a sociotechnical system&lt;/li&gt;
+&lt;li&gt;SA is distributed between human and non-human agents in the system&lt;/li&gt;
+&lt;li&gt;Systems have a dynamic network of information and each operator have unique view to it&lt;/li&gt;
+&lt;li&gt;SA is maintained via transactions in awareness between agents&lt;/li&gt;
+&lt;li&gt;Effective performance requires agents to have compatible SA&lt;/li&gt;
+&lt;li&gt;Schemata are in key role in SA transactions and compatibility&lt;/li&gt;
+&lt;li&gt;DSA holds loosely coupled systems together&lt;/li&gt;
+&lt;li&gt;An agent can compensate degradation of SA in another agent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Following image, which tries to bind different elements of DSA together, can be found from their book too:
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b62f40be5b0e2675b59c2b05c7a912eb/2bef9/Distributed-Situation-Awareness_BW_Black-1024x656.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.1891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAABqElEQVQ4y51T2XKCQBCkULlUbpFDARVU0FLzC9H8/ydNtjsmD0kllnnYcnad6enuGTRN0+TRGY/HMpslslyWUpYV4+l0+lv+Y8DJZCqLxVIcZyy2bTP2ff9/gCjM80LO57OsVmvGh8NR1uu1FMXiZ43jOBKGoSRJwoM7WBiGSbBlWUoUxUqiK4PhUL0FBLYsW3a7vXgqx/M8ZcOMOZppWhLHM3b+/K3rFb06KVav16u4rqeaOGSAHADh7rquYnugBU3T0lsNnebzVBk/YQcAIRnAfX+Q4/FIIPzXtlvZbncsDMOI4JAeBKFkKp8MgyAgSJ7nUtU1QSALLPf7jpOFfAzkdDpL1/d8Q9MkmbMJwBF7nhqUrg++JKEwy3KJlR+Qcbm8yO32xilDia+a473rerIGMzAEYKrqgKMZhsEhQEYcx+yUphnjqqpYPBp9MAQIPIcdAIGSzWbDoYEI7n+uja7rajUKNiirikA4mDJWBlZZlvXcHpqmSSnwKooiMt00DeXChqcXG75iCBgI2AG8v68KdvZpwNHIIAhkN22rPGvu37JL77/nvwNYAjB02fJ93wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Model of Distributed Situation Awareness, from Distributed Situation Awareness: Theory, Measurement and Application to Teamwork (2009)&quot;
+        title=&quot;Model of Distributed Situation Awareness, from Distributed Situation Awareness: Theory, Measurement and Application to Teamwork (2009)&quot;
+        src=&quot;/static/b62f40be5b0e2675b59c2b05c7a912eb/fcda8/Distributed-Situation-Awareness_BW_Black-1024x656.png&quot;
+        srcset=&quot;/static/b62f40be5b0e2675b59c2b05c7a912eb/12f09/Distributed-Situation-Awareness_BW_Black-1024x656.png 148w,
+/static/b62f40be5b0e2675b59c2b05c7a912eb/e4a3f/Distributed-Situation-Awareness_BW_Black-1024x656.png 295w,
+/static/b62f40be5b0e2675b59c2b05c7a912eb/fcda8/Distributed-Situation-Awareness_BW_Black-1024x656.png 590w,
+/static/b62f40be5b0e2675b59c2b05c7a912eb/efc66/Distributed-Situation-Awareness_BW_Black-1024x656.png 885w,
+/static/b62f40be5b0e2675b59c2b05c7a912eb/2bef9/Distributed-Situation-Awareness_BW_Black-1024x656.png 1024w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Model of Distributed Situation Awareness, from Distributed Situation Awareness: Theory, Measurement and Application to Teamwork (2009)&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;DSA is an interesting approach to complex systems because it concentrates on deep understanding of the tasks in a system and on what information each agent needs in any specific time. Being able to identify these requirements would be highly beneficial for systems designers. It might also help to reduce the mental workload relating to perception and comprehension of the data in the system. Considering DSA, it may not be optimal to strain each operator in the system with all the available data.&lt;/p&gt;
+&lt;p&gt;In addition, it is beneficial to be able to study the system as a whole – concentrating on single operators gives a limited view on the situation and may fail to reveal problems on systems level.&lt;/p&gt;
+&lt;p&gt;DSA can also be scaled down to individual level, as it is based on a perceptual cycle model by Neisser (Neisser 1976).&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/2bef9/Perceptual-Cycle_BW_Black-1024x907.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 88.51351351351352%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsSAAALEgHS3X78AAAB8klEQVQ4y5WUyXLCQAxEDRiD2Tezg1kLCBcMFf7/z5R5AoHDVslBNZ5BUrdaEp7nefJohUJBSqWSnuVyWarVqp5YsViUSqUiQRDIq1jv1WM+n9cggpPjUb7PZ0mSRE6nk4RhqL/h8+eEGMmy2azkfF+63a5EzvSey31i9z4hwf1+XyaTiQwGAxkOhxLHsURRpAD/Ktl3rObzuSwWC+l0OvqNkWg2m8lyuVR9PybMZDK3x/V6rYn4RjPTDRl4a7VamvRjwmazKb1eT8bjsZqBUHp47Th3A8ZnNBopsIE/MaRzq9XqqYOMEAwfJwFJAAL0pYa1Wu3GLggKqhkBzCFsmEPYWENoEmBpuTxDIxiNLCHjgTN3YwAgTPmN+3Q61W+aeEuI4ATCotFoaEOsCbBjZHhvt9uawLaHc7fbKQh3cmAegTCAdtElQsM4ZjRW6gwq7Ov1uviODW8knrpyKTndA0h5bAKaEPS138vhcNBhhpUivtgg82c2207TlmNPVdfSL07M1Wa7lYlD32w2mvDXjKaEpzF0GEawZYtS4BcnVgrDifJIim6PDBnqrQPW8lJjler0fa54pGs2h+wyOiEBxtrRJEuC9pT/sIZ3dFAxEuKojXJywAqz1aORgHHS4bd/DrCzmUuvGRKYpul3gLPXmTT7AXpYkBMj0sJ+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Perceptual Cycle model by Neisser, from Salmon et al (2018)&quot;
+        title=&quot;Perceptual Cycle model by Neisser, from Salmon et al (2018)&quot;
+        src=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/fcda8/Perceptual-Cycle_BW_Black-1024x907.png&quot;
+        srcset=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/12f09/Perceptual-Cycle_BW_Black-1024x907.png 148w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/e4a3f/Perceptual-Cycle_BW_Black-1024x907.png 295w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/fcda8/Perceptual-Cycle_BW_Black-1024x907.png 590w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/efc66/Perceptual-Cycle_BW_Black-1024x907.png 885w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/2bef9/Perceptual-Cycle_BW_Black-1024x907.png 1024w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Perceptual Cycle model by Neisser, from Salmon et al (2018)&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Perceptual cycle model describes how human behavior is schema-driven. Diagram above shows how the schemata directs perception and actions, which in turn sample and change the world, which continually modifies the schemata (Salmon et al 2018).&lt;/p&gt;
+&lt;p&gt;I’ve been working with complex, distributed systems during my career and DSA is an interesting model for me. I like how it is based on schema theory and perceptual cycle model, and that it acknowledges that SA will hardly ever be exactly the same in two agents in the system, and that agents holding SA may or may not be humans.&lt;/p&gt;
+&lt;p&gt;The notion that also non-human agents hold SA may be a helpful view when working with advanced automation and artificial intelligence – AI agent is just another agent in the system, and needs to be considered as such.&lt;/p&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;Stanton N. A, R. Stewart , D. Harris , R. J. Houghton , C. Baber , R. McMaster , P. Salmon , G. Hoyle , G. Walker , M. S. Young , M. Linsell , R. Dymott &amp;#x26; D. Green (2006) Distributed situation awareness in dynamic systems: theoretical development and application of an ergonomics methodology, Ergonomics, 49:12-13, 1288-1311, DOI: 10.1080/00140130600612762&lt;/p&gt;
+&lt;p&gt;Salmon, P.M., N.A. Stanton, G.H. Walker, and D.P. Jenkins. 2009. Distributed Situation Awareness: Theory, Measurement and Application to Teamwork. Ashgate: Aldershot.&lt;/p&gt;
+&lt;p&gt;Stanton, N. A., Salmon, P. M., Walker, G. H., Salas, E., &amp;#x26; Hancock, P. A. (2017). State-of-science: situation awareness in individuals, teams and systems. Ergonomics, 60(4), 449–466. &lt;a href=&quot;https://doi.org/10.1080/00140139.2017.1278796&quot;&gt;https://doi.org/10.1080/00140139.2017.1278796&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Salmon, Paul &amp;#x26; Read, Gemma &amp;#x26; Walker, Guy &amp;#x26; Lenné, Michael &amp;#x26; Stanton, Neville. (2018). Distributed Situation Awareness in Road Transport: Theory, Measurement, and Application to Intersection Design. 10.4324/9781315609256.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Situation Awareness (SA)]]></title><description><![CDATA[Situation awareness (SA) is an interesting concept to consider in software design. The term comes from human factors research and was at…]]></description><link>https://www.arttuv.com/sa/situation-awareness/</link><guid isPermaLink="false">https://www.arttuv.com/sa/situation-awareness/</guid><pubDate>Sun, 23 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Situation awareness (SA) is an interesting concept to consider in software design. The term comes from human factors research and was at first made popular by &lt;a href=&quot;https://www.researchgate.net/profile/Mica_Endsley&quot;&gt;Mica R. Endsley&lt;/a&gt;, one of the most cited SA researchers.&lt;/p&gt;
+&lt;p&gt;Stanton et al. have published a really nice &lt;a href=&quot;https://www.tandfonline.com/doi/full/10.1080/00140139.2017.1278796&quot;&gt;state-of-science article&lt;/a&gt; on situation awareness. Situation awareness could be described as “knowing what is going around you”, and it can be regarded on individual, team or systems level (Stanton et al 2017). SA has become an important concept and there are also many formal definitions for it. One of the most commonly used and cited is from 1988 by Endsley:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;…perception of the elements in the environment within a volume of time and space, the comprehension of their meaning and a projection of their status in the near future.
+Definition of SA by Endsley (Endsley 1988)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The fastest way to understand the concept of SA by Endsley is to study this diagram, which is from Wikipedia (the diagram itself is by Endsley, this version is just a combination of multiple different instances).&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/257aefe44b0255dfe8a37da30573b079/e088a/Endsley-SA-model_BW_Black.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.51351351351351%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAABlUlEQVQ4y5WTV4sqURCEx5xzzoI5B1BREEERX/T//5xavoZZXO+d5d6HYqbndFd39alxHMeRFyKRiDKZjCGdTn8jFArplzpvwnA4rEAgoEKhoFqtpmg0Kr/fb4Q+n+//Cd1JEomEKpWKPYlp4lnHIaDzJ5DMdNPpVM1mU8lkUqlUyoiZPhgM/gGHBBJzuZwhm83azorFopHl83mdz2cjJSY/Ho9bDWANLoiNcLlcar/fa71e63Q66X6/63q96vF46HK5aDabaTKZaLVaWbN3ie+7tHe6QlSv162AYuT1+331ej01Gg2VSiW12211u10DZ4vFQq1Wy74fDgdtNhurc6rVqhEy7vF41Hw+N2vsdjuLOS+Xy9putxoOh9YUFbfbzXKofb1eej6fGgwGclg8B7AjnUL2BhHFTMCymbLT6ZgS10auR1GBC9ijw22ORiNbOnKZkBhZ4/HYwDvdyWF6Gry74Z99CNxiPBmLxeyWUUXs8cf8vLHPPwAypsJG2AUPsg5IPQz++4Q0gAiPur7Dqxj7L3L1BbSjM97XzRREAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Situation Awareness Diagram&quot;
+        title=&quot;Situation Awareness Diagram&quot;
+        src=&quot;/static/257aefe44b0255dfe8a37da30573b079/fcda8/Endsley-SA-model_BW_Black.png&quot;
+        srcset=&quot;/static/257aefe44b0255dfe8a37da30573b079/12f09/Endsley-SA-model_BW_Black.png 148w,
+/static/257aefe44b0255dfe8a37da30573b079/e4a3f/Endsley-SA-model_BW_Black.png 295w,
+/static/257aefe44b0255dfe8a37da30573b079/fcda8/Endsley-SA-model_BW_Black.png 590w,
+/static/257aefe44b0255dfe8a37da30573b079/efc66/Endsley-SA-model_BW_Black.png 885w,
+/static/257aefe44b0255dfe8a37da30573b079/e088a/Endsley-SA-model_BW_Black.png 1015w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Situation Awareness Diagram&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Endsley’s model contains three levels: perception (Level1), comprehension (Level 2) and projection (Level 3), which together form the situation awareness (Endsley 1988).&lt;/p&gt;
+&lt;p&gt;One needs to understand the situation before making decisions, so SA is the precondition for decisions, which leads to action, changing the state of the world and feeding feedback to the perception phase. Task and environment factors (like stressors, complexity and interface design, automation, etc.) and individual factors (goals, experience, etc.) affect the process as well.&lt;/p&gt;
+&lt;p&gt;As was noted by Stanton, SA can be considered on three level: individual, team and system. Endsley’s model describes the SA on individual level. Many systems of today are networked and consist of multiple systems and operators, which hints it might not be sufficient to concentrate on individual operator SA. However in many situations it is a helpful model for user interface design, as it can be used to analyse what kind of information should be presented to a single operator.&lt;/p&gt;
+&lt;p&gt;Endsley has also defined a method to evaluate SA: SAGAT, or Situation Awareness Global Assessment Technique. SAGAT would be a topic of another writing, but basically it’s a freeze probe technique to measure SA in real-time situations. The situation is frozen and subjects are queried for their understanding of the situation at hand.&lt;/p&gt;
+&lt;p&gt;The need to freeze the situation means that the technique is most convenient in simulator environments, and naturally causing breaks to action can (and will) alter how people act and answer the questionnaires. It doesn’t mean that the technique is bad or invalid, but it limits its usability mainly to simulations or environments in which it’s ok to stop the action. Some special care needs to be given to the interpretation of the results as well.&lt;/p&gt;
+&lt;p&gt;The good thing is, that designers are able to evaluate their designs to make informed decisions on whether the SA requirements have been met or not.&lt;/p&gt;
+&lt;p&gt;Situation awareness is an interesting concept and can be helpful when designing interfaces for single operators, by enabling designers to think what kind of data operators should be at their disposal at any given task.&lt;/p&gt;
+&lt;p&gt;If you are interested in situation awareness in collaborative environments, check Distributed Situation Awareness (DSA).&lt;/p&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.researchgate.net/profile/Mica_Endsley&quot;&gt;https://www.researchgate.net/profile/Mica_Endsley&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Endsley, M.R.. (1988). Situation global assessment technique (SAGAT). Situation Awareness Global Assessment Technique (SAGAT). 3. 789 – 795 vol.3. 10.1109/NAECON.1988.195097.&lt;/p&gt;
+&lt;p&gt;Stanton, N. A., Salmon, P. M., Walker, G. H., Salas, E., &amp;#x26; Hancock, P. A. (2017). State-of-science: situation awareness in individuals, teams and systems. Ergonomics, 60(4), 449–466. &lt;a href=&quot;https://doi.org/10.1080/00140139.2017.1278796&quot;&gt;https://doi.org/10.1080/00140139.2017.1278796&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Nielsen: Web UX 2016 vs 2004]]></title><description><![CDATA[Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They made a study on web UX in 2016 and reflected that to the…]]></description><link>https://www.arttuv.com/ux/web-ux-2004-vs-2016/web-ux-2016-vs-2004/</link><guid isPermaLink="false">https://www.arttuv.com/ux/web-ux-2004-vs-2016/web-ux-2016-vs-2004/</guid><pubDate>Thu, 15 Jun 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They made a study on web UX in 2016 and reflected that to the results from a similar study in 2004. The video is only 20 minutes and worth watching. Below you can find a summary.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xKOlga_xkKA&quot;&gt;Link to YouTube&lt;/a&gt; or to their &lt;a href=&quot;https://www.nngroup.com/news/item/keynote/&quot;&gt;Nielsen Norman Group website&lt;/a&gt;.
+
+        &lt;div class=&quot;embedVideo-container&quot;&gt;
+            &lt;iframe
+              width=&quot;300&quot;
+              height=&quot;170&quot;
+              src=&quot;https://www.youtube-nocookie.com/embed/xKOlga_xkKA?rel=0&quot;
+              class=&quot;embedVideo-iframe&quot;
+              style=&quot;border:0&quot;
+              allowfullscreen
+            &gt;&lt;/iframe&gt;
+        &lt;/div&gt;&lt;/p&gt;
+&lt;h2&gt;Abbreviated to one paragraph&lt;/h2&gt;
+&lt;p&gt;Most of the problems are in findability and search, so information architecture is a crucial thing and worth attending to. Usability has improved from 2004 and the success rate of user tasks has gone up to 82% from 66%. However, only 30% of the tasks succeeded completely smoothly and easily. Also, annoyance is twice as common (30%) feeling as pleasure (16%).&lt;/p&gt;
+&lt;h2&gt;Notes on Web UX 2016 vs 2004&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;There has been a loss of information density. We don’t miss the complexity, but we have much larger screens with a lot less content.&lt;/li&gt;
+&lt;li&gt;Some designers still use overlays/splash screens (we should get rid of it).&lt;/li&gt;
+&lt;li&gt;The success rate on user tasks is up from 66% in 2004 to 82% in 2016.
+This is good, but it’s not just about whether people are going to succeed on your site, it is much more.
+Only 30% of the success was smooth and easy. 23% succeeded with minimal difficulty, 13% succeeded with some difficulty, 4% succeeded with major difficulty and 15% succeeded partially. 15% failed.
+In 16% of cases, there was some amount of enjoyment and in 30% of cases, there was some annoyance. Annoyance is twice as common as pleasure. 54% had no emotion.&lt;/li&gt;
+&lt;li&gt;Small pleasure is desirable.
+There are sites with minimal content that have designed to look good and there are sites that have way too much content visible. Confusing views with too much content cause negative emotions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Causes of User Failure&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Findability was the biggest cause of failure with a 60% share and search the second biggest with 12%. Getting where you need to be on the website is the biggest problem.&lt;/li&gt;
+&lt;li&gt;Alphabetical listings are not good.&lt;/li&gt;
+&lt;li&gt;Information design is vital.&lt;/li&gt;
+&lt;li&gt;Banner blindness, people don’t see buttons or links that look like advertising banners.&lt;/li&gt;
+&lt;li&gt;Misuse of common components (like checkboxes, that work like radio buttons or selection).&lt;/li&gt;
+&lt;li&gt;In 2004 findability had a portion of 27% and search 15% and information 19%. Findability and search have always been big, but nowadays people are more pleased with the information they finally find.&lt;/li&gt;
+&lt;li&gt;The success rate is much higher now and people have fewer problems, and those problems are mainly with findability. Search is still not perfect but much better than in 2004.&lt;/li&gt;
+&lt;li&gt;Information architecture is a crucial thing and worth attending to.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Reference Types in Java]]></title><description><![CDATA[Different reference types in Java provide access to the object lifecycle, giving us tools for object reuse (object pools) and even a…]]></description><link>https://www.arttuv.com/java/reference-types/reference-types-in-java/</link><guid isPermaLink="false">https://www.arttuv.com/java/reference-types/reference-types-in-java/</guid><pubDate>Thu, 15 Jun 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Different reference types in Java provide access to the object lifecycle, giving us tools for object reuse (object pools) and even a possibility to achieve a reliable object finalization. Differences between references can be explained by reachability. This is how Java API Specification defines reachability:&lt;/p&gt;
+&lt;h2&gt;Reachability from strongest to weakest:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;An object is strongly reachable if it can be reached by some thread without traversing any reference objects. A newly-created object is strongly reachable by the thread that created it.&lt;/li&gt;
+&lt;li&gt;An object is softly reachable if it is not strongly reachable but can be reached by traversing a soft reference.&lt;/li&gt;
+&lt;li&gt;An object is weakly reachable if it is neither strongly nor softly reachable but can be reached by traversing a weak reference. When the weak references to a weakly-reachable object are cleared, the object becomes eligible for finalization.&lt;/li&gt;
+&lt;li&gt;An object is phantom reachable if it is neither strongly, softly, nor weakly reachable, it has been finalized, and some phantom reference refers to it.&lt;/li&gt;
+&lt;li&gt;Finally, an object is unreachable, and therefore eligible for reclamation, when it is not reachable in any of the above ways.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Strong reference is the most common one, like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;StringBuilder builder = new StringBuilder();
+Soft, Weak and Phantom references have their own classes:
+
+SoftReference&amp;#x3C;T&gt;
+WeakReference&amp;#x3C;T&gt;
+PhantomReference&amp;#x3C;T&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Weak and soft references (or indefinite references) in Java allow objects to be reused (Oaks, 2014, p. 208). Usually they are used to cache the result of a long calculation or a database lookup rather than to reuse a simple object. The advantage is that indefinite references will eventually be reclaimed by the garbage collector (Oaks, 2014, p. 209), and the JVM can free up space if the heap starts running low.&lt;/p&gt;
+&lt;p&gt;The disadvantage is that indefinite references have a slightly greater effect on the efficiency of the garbage collector. Indefinite references (like SoftReference or WeakReference) are just like any other object – they consume memory and they are referenced strongly by other objects. It takes at least two GC cycles for an indefinite reference to be reclaimed by the garbage collector.&lt;/p&gt;
+&lt;p&gt;The referent will stick around until the JVM decides that the object has not been used recently enough (Oaks, 2014, p. 210). When that happens, the first GC cycle frees the referent, but not the indefinite reference object itself. All strong references to the indefinite reference object must be cleared before the object can be reclaimed by the garbage collector.&lt;/p&gt;
+&lt;h2&gt;Soft reference&lt;/h2&gt;
+&lt;p&gt;Soft references are used when the object has a good chance of being reused in the future, but you want to let the garbage collector reclaim the object if it hasn’t been used very recently (Oaks, 2014, p. 212). This calculation also takes into consideration how much memory the heap has available. Soft references are essentially one large, least recently used (LRU) object pool. Getting good performance from them is to make sure that they are cleared on a timely basis.&lt;/p&gt;
+&lt;p&gt;Soft reference is freed during a GC cycle only if the referent is not strongly referenced elsewhere and if the soft reference has not recently been accessed. Based on Oaks, the calculation is as follows:&lt;/p&gt;
+&lt;p&gt;long ms = SoftRefLRUPolicyMSPerMB * AmountOfFreeMemoryInMB;
+if (now - last&lt;em&gt;access&lt;/em&gt;to_reference &gt; ms)
+free the reference&lt;/p&gt;
+&lt;p&gt;First value is set by the flag –xx:SoftRefLRUPolicyMSPerMB=N, with the default value of 1000. The second value is the amount of free heap after the GC cycle (Oaks, 2014, p. 213). Soft references are reclaimed more frequently if SoftRefLRUPolicyMSPerMG flag is decreased.&lt;/p&gt;
+&lt;p&gt;JVM will clear all soft references if it completely runs out of memory or starts thrashing too severely, which prevents OutOfMemoryError but is not ideal. SoftRefLRUPolicyMSPerMB value should be lowered if GC logs indicates that a very large number of soft references are being cleared unexpectedly.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Too many soft references can easily fill up the entire heap and they should be used with caution.
+Oaks, 2014, p. 214&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Weak reference&lt;/h2&gt;
+&lt;p&gt;Weak references should be used when the referent will be used by several threads simultaneously – otherwise the weak reference is too likely to be reclaimed by the garbage collectors (Oaks, 2014, 214). Only weakly referenced objects are reclaimed at every GC cycle. This is where weak reference greatly differs from soft reference: weak reference is immediately freed when strong references are removed.&lt;/p&gt;
+&lt;p&gt;However, reference objects are just like any other Java objects: they are created in the young generation and eventually promoted to the old generation (Oaks, 2014, p. 214). If the referent of the weak reference is freed while the weak reference itself is still in the young generation, minor GC will free the weak reference quick. If the weak reference has been promoted to the old generation, it will not be freed until the next concurrent or full GC cycle.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Weak reference is not like a soft reference that is freed more quickly: softly referenced object will usually be available for minutes or even hours, but a weakly referenced object will be available only for as long as its referent is still around.
+Oaks, 2014, p.215&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Weak reference collections&lt;/h2&gt;
+&lt;p&gt;JDK provides two classes that utilize indefinite references: WeakHashMap and WeakIdentityMap. Using these classes is convenient, but they have two costs. First, indefinite references can have a negative effect on garbage collector. Second, the class itself must periodically perform an operation to clear all the unreferenced data in the collection.&lt;/p&gt;
+&lt;p&gt;For example WeakHashMap uses weak references for its keys. When the weakly referenced key is no longer available, WeakHashMap must clear out the value in the map that used to be associated with that key. This operation is carried out every time the map is referenced. This means that the weak reference and its associated value won’t be freed until the map is used again, and on the other hand the performance of operations on the map is unpredictable.&lt;/p&gt;
+&lt;h2&gt;Phantom reference&lt;/h2&gt;
+&lt;p&gt;Phantom reference objects (PhantomReference) gives us visibility to the end of object lifecycle – it tells us when phantom references are the only kind of references pointing to the referent object and it has been finalized (and is ready to be reclaimed by the GC). This means it can be used for scheduling pre-mortem cleanup actions (object finalization). In order to ensure that reclaimable objects remain reclaimable, the referent of a phantom reference may not be retrieved – the get method always returns null (Java API, 2017).&lt;/p&gt;
+&lt;p&gt;Garbage collector appends registered reference objects to ReferenceQueue after the appropriate reachability changes are detected (Java API, 2017). PhantomReference may then be retrieved by using the remove() or poll() methods of the ReferenceQueue. At that point the object itself is no longer reachable (remember that PhantomReference.get() always returns null), so you should keep track of any resources that need to be freed by other means. Extending PhantomReference is one option.&lt;/p&gt;
+&lt;h3&gt;Finalizable Phantom Reference&lt;/h3&gt;
+&lt;p&gt;FinalizablePhantomReference is an extension of the PhantomReference providing finalizeReferent()method that streamlines process and eliminates the need for polling ReferenceQueue (Guava API, 2017). This is probably the easiest way to get a reliable object finalization on Java.&lt;/p&gt;
+&lt;p&gt;References&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://shop.oreilly.com/product/0636920028499.do&quot;&gt;Oaks, S (2014) Java Performance: The Definitive Guide&lt;/a&gt;, Sebastopol, California: O’Reilly Media.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html&quot;&gt;Java API API Specification&lt;/a&gt;, (14.6.2017)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#reachability&quot;&gt;Java API Specification, Reachability&lt;/a&gt;, (16.6.2017)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/FinalizablePhantomReference.html&quot;&gt;Guava API Specification&lt;/a&gt;, (14.6.2017)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Designing for Usability 1985]]></title><description><![CDATA[It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key…]]></description><link>https://www.arttuv.com/ux/designing-for-usability-1985/designing-for-usability-1985/</link><guid isPermaLink="false">https://www.arttuv.com/ux/designing-for-usability-1985/designing-for-usability-1985/</guid><pubDate>Thu, 11 May 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key Principles and What Designers Think (Gould &amp;#x26; Lewis, 1985). Gould and Lewis introduce three principles that they argue are vital for creating usable applications, and then they go through common arguments against them and try to justify why these principles matter.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;These three principles for designing for usability are (Gould &amp;#x26; Lewis, 1985):&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Early Focus on Users and Tasks&lt;/li&gt;
+&lt;li&gt;Empirical Measurement&lt;/li&gt;
+&lt;li&gt;Iterative Design&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I remember I’ve read this article years back, but I was still a bit shocked how old these ideas are. Gould and Lewis even say in the paper that they have been recommending these principles since the 1970’s and this paper is about analyzing why these principles are not used and rationalizing why they should be used more.&lt;/p&gt;
+&lt;p&gt;This writing is a short recap of the paper and what I think is the most important and useful parts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Early Focus on Users and Tasks&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This principle emphasizes that designers must get the understanding of who the end users will be and what is the nature of the work expected to be accomplished.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Empirical Measurement&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Intended users should use simulations and prototypes early in the development process to carry out real work. Their performance and reactions should be observed, recorded and analyzed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Iterative Design&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Problems found in empirical user tests must be fixed, which implies that the design must be iterative. Emphasis is on a cycle of design, test and measure, and redesign. This way the development process will ensure that usability goals like “easy to use” or “user friendly” are being met.&lt;/p&gt;
+&lt;h2&gt;Motivation for Using the Principles&lt;/h2&gt;
+&lt;p&gt;Gould and Lewis have listed a lot of motivations for using these principles, and I’ve listed here the ones that I felt the most importand and most relevant today.&lt;/p&gt;
+&lt;h3&gt;Design is much harder than one might think&lt;/h3&gt;
+&lt;p&gt;Developers and designers may believe that system design is fundamentally a rational analysis of how a task should be done and there is no need to involve users (Gould &amp;#x26; Lewis, 1985). After all, usually you can design really complex parts of the system’s internal logic before implementing them. There are also a lot of user interface design guidelines to help in designing the interface.&lt;/p&gt;
+&lt;p&gt;Unfortunately, rational analysis doesn’t tell you what you have to analyze and things are left out, and design guidelines can’t predict user actions in every situation (Gould &amp;#x26; Lewis, 1985). Systems almost always have to interact with preexisting work methods and mismatches can be a major problem. Guidelines are also bad with choices that are highly dependent on context and should be viewed as informal collection of suggestions which need to be verified empirically.&lt;/p&gt;
+&lt;h3&gt;Humans are unpredictable&lt;/h3&gt;
+&lt;p&gt;Adding humans to the equation brings a lot of unpredictable behavior (and input) and makes it impossible to get the user interface right the first time. However, this is not a permission for sloppiness and careful design does pay off (Gould &amp;#x26; Lewis, 1985). Doing the initial design well gets the first version of the system or prototype closer to the final product and is a good starting point for iterative improvements.&lt;/p&gt;
+&lt;p&gt;The paper strongly encourages to start interacting with the intended users in the early stages of development.&lt;/p&gt;
+&lt;p&gt;Designers need to understand the potential users, not just “identify”, “describe” and “stereotype” them. To achieve this the design team should be in direct contact with the users, doing interviews, discussions and actual observations (Gould &amp;#x26; Lewis, 1985).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Just as “insider” knowledge is essential to develop a really useful software, so is an “inside” view of user requirements essential in creating a superior user interface.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Prototyping is cheap and beneficial&lt;/h3&gt;
+&lt;p&gt;Prototypes can be built with paper and pencil to test the critical features of the interface even before the development begins, which is relatively cheap. Informal or simulated prototypes can also help a new project off the ground and gives something concrete for others to see. User testing still has a price, but it usually isn’t as high as commonly supposed (Gould &amp;#x26; Lewis, 1985). Prototypes should not be used to match against user requirements but to find out how easily people can learn and use the prototype and how they react to it. Users should be given simple tasks to carry out and their performance, thoughts and attitudes should be recorded and analyzed. This can be continued throughout the development.&lt;/p&gt;
+&lt;h2&gt;Recap&lt;/h2&gt;
+&lt;p&gt;The article still sounds very reasonable after 30 years and is worth reading. Iterative development cycle with user testing is a solid way to ensure that user requirements are being met, and is self-evident. I think the most important part is the importance of being in direct contact with the user. This is still undervalued (at least in some places) and often causes (unpleasant) surprises. Often different user groups are not taken into account and the system in production doesn’t work well for every group.&lt;/p&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://dl.acm.org/citation.cfm?id=3170&quot;&gt;Gould, J.D., Lewis, C.: Designing for Usability: Key Principles and What Designers Think. Communications of the ACM 28(3), 300–311 (1985)&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[26th in the Hello World Open 2012]]></title><description><![CDATA[We participated in the first Hello World Open with Louhigames’ crew. Hello World Open is a Finnish coding competition and this was the first…]]></description><link>https://www.arttuv.com/other/hello-world-open-2012/hello-world-open-2012/</link><guid isPermaLink="false">https://www.arttuv.com/other/hello-world-open-2012/hello-world-open-2012/</guid><pubDate>Thu, 18 Oct 2012 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;We participated in the first Hello World Open with Louhigames’ crew. Hello World Open is a Finnish coding competition and this was the first year it was organized. 200 teams participated and around 100 of them were able to enter a working program.&lt;/p&gt;
+&lt;p&gt;We won 338 games and lost 147 and our final ranking was 26. We didn’t have much time to concentrate on this so I must be happy to the final results. I’m satisfied that our bot didn’t crash during the competition and won over 50% of the games it played. We didn’t break any rules and the AI worked as it was meant to.&lt;/p&gt;
+&lt;h2&gt;Explaining the task&lt;/h2&gt;
+&lt;p&gt;The objective was to create an artificial intelligence client player for a Pong game run on a server. Here is a representation of the system. You can check the details on Github.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 495px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9aed76e3edde34ad3c67f1ac807b188e/a4d88/HWO-Pong-representation.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 86.48648648648648%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsSAAALEgHS3X78AAADSUlEQVQ4y5VTaUjUURCfXXfX3VVXdzVXWw/yQMq1zLMyLZIorA8GFUYZ4q67HoS14ZGhpoIHWq54JpqaHRRBQgZhSQd2QUGHHRsRtqH0JTogS0qneX//63qU0MDw3syb+b3fm5kHsFCEpEpS1SIqhP8QGak7nyQhFc9S5vPgY/4t2AZgreISmChIwxYJdxYAOLLNvXwQUK5wqs2OAzbDJkvdwIUW31lsbWwE/OpD6jKH0Ml5V/5sBu/JVujEDohldqAHuLE1KNzfKSRqGQe4y7RVxIeHySXgyTZfzKD63QoJbP+oiIDRdkMvrMA+sntBz2ytr4ONhQNfAle+hs6OUpF6c/B0eYhZC3ZRXgesZfbTYr5ZfVkQ/6MJcCgPDlIY5zt+o9Cv51VNdPH57A3HLh5I6H5ZHU2+Zezs61k1x3aiGUzjlHe/ADRznly1AxIt5YB1O6ESIIAxAvOtogvN90uxbqAAawfyseVBKTbcOXqFa8aZKAlPJP9BIfwKUYOWTLWfipsKgBelEEa00VoNmbZL6m8W9TfdLcaKy7lY1X8YG4eKkS4Z5J76LI4YlgOBldAz0VcJ4eT2VkjBebqGXVTD01SLTkizARKbTV3DVYeO9Bhq8zp09WxPvi3sbLjdf7qGPWD4XA9YuJX7CHaZbIMcvARIaw8XiEWCWcdKftDtY/JpuvjUYRM1EvEayJn9vIQfLTpQUMdqxhshlNVCLgaNXCHzUXoqfLVxwfL9JckilZerZomPinU7yEsB/hzwKdhO43adWEr58aPBbp37Lb2cpT5SB1GEk1i83EMm80J+uDRKibunQuwplwhXysTCiN0xSsf5v80+2HUaAc2hYN68K//y7Rb4xltUwjmgI4YMzrAa9ZK3ev2q77m5oX3JyeubEhOTJkwHtZY0w/KR6viAn51xYVdN2rjGfYHb8NzGFe9PxESONcSqWe5YQ4z9C44YDBwzAgv4mJ2NFp0OH+7di7dTUtBqNKBVn2UdrU0Y/Na+Dp9UROCjY6vxcVkETnXH41jDmjIO0BwrmqFMgNz6LiPDhfZGS3p65nBaWubj1FSjRZeeM6LL2kOASR/MMTlvaqIzX1dHGV9WRhkILHfUHBvJA86U6w+ykS90oxIrlgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Diagram&quot;
+        title=&quot;Diagram&quot;
+        src=&quot;/static/9aed76e3edde34ad3c67f1ac807b188e/a4d88/HWO-Pong-representation.png&quot;
+        srcset=&quot;/static/9aed76e3edde34ad3c67f1ac807b188e/12f09/HWO-Pong-representation.png 148w,
+/static/9aed76e3edde34ad3c67f1ac807b188e/e4a3f/HWO-Pong-representation.png 295w,
+/static/9aed76e3edde34ad3c67f1ac807b188e/a4d88/HWO-Pong-representation.png 495w&quot;
+        sizes=&quot;(max-width: 495px) 100vw, 495px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Diagram&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;In the beginning the server is waiting for players. Client connects to the server using TCP/IP and sens a “join” message. Messages send between clients and server were specific JSON messages. For example, the join message looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt; {“msgType”:”join”,”data”:”name of the bot“}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Server confirms the join with “joined” message:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{“msgType”:”joined”,”data”:”http://boris.helloworldopen.fi/visualize.html#game_id”}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then the client waits for the game to begin. After both clients have joined, server begins the game and sends “game started” messages:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{“msgType”:”gameStarted”,”data”:[“left player“, “right player“]}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The game ends with the “game over” message.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{“msgType”:”gameIsOver”,”data”:”winner’s name“}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;During the game server sends 15 update messages per second, telling the positions and sizes of the objects on the game.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{ “msgType”:”gameIsOn”,
+“data”: { “time”:1336219278079,
+“left”:{“y”:186.0,”playerName”:”left player“},
+“right”:{“y”:310.0,”playerName”:”*right player”},
+“ball”:{“pos”:{“x”:291.0,”y”:82.0}},
+“conf”:{“maxWidth”:640,”maxHeight”:480,”paddleHeight”:50,”paddleWidth”:10,”ballRadius”:5,”tickInterval”:15}}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that the game server doesn’t give any information of the&lt;/p&gt;
+&lt;p&gt;Actual speeds
+Accleration
+How the ball bounces from the walls
+Each client sends commands to the server to move the paddle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{“msgType”:”changeDir”,”data”:1.0}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The value in “change dir” message is a float number from 0.0 to 1.0 representing how fast the paddle should move (again, server doesn’t give more specific information of the speed). Maximum number of commands per second is 10 and if the client sends more, it will be disqualified.&lt;/p&gt;
+&lt;p&gt;In the finals they also added missiles to the game.&lt;/p&gt;
+&lt;h2&gt;Our solution&lt;/h2&gt;
+&lt;p&gt;We wanted to use Java because we were most familiar with that. Basically any language able to run on top of JVM was acceptable. Python could have been a very good option to use because it is so fast to use compared to Java.&lt;/p&gt;
+&lt;p&gt;Our first task was to recreate the Pong game visualization on our client so we could test the client easily. This was a rather simple task, but we did lose some time as we wanted to create our own server for the testing. We managed to made it, but in the end we didn’t have enough time to fully use it to improve our client. We should have concentrated on the client AI itself from the very beginning.&lt;/p&gt;
+&lt;p&gt;In the screenshot below you can see our local visualization of the game and ball movement predictions on side of “official” game visualization.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f2baec3d34169ec4ea9204c11bda784b/29007/HWO_Testing2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsSAAALEgHS3X78AAABmUlEQVQoz31Qy0rDUBC9eTVpbh5t0yQNRUrprovu+gUqvlDTZ9qKK8G/0IUixsaPUlHcq+iiahFULNpWEBStqY6JxYLiWcw9w50z5zBoLl+cMQuT87mxOXN01pzIFYBMmfnx6ZnFpeXG1W3z5v7osrVzfL17crN/drd3drd72jpodA8vHlEgEEC/QBAEVFXTF6pWpVywSsVysVDMz1esUtUq16xSrWLBF5IlmUIETf4AlLARYz6qaizLon8wEovRns8waIYJBoOKqomSRNOUruvpdDqRSGSz2VQqlclkkskkDCCO40jI+VfsqKZzQR7zPMwwDENRlKqqPM/7XJZlhDEmCQTdUHCSBjuS1GLGlxhjaP2lIIBQPlcUBUxI9NfFoITCChNgITM4f4tDIWYgjsfjaKvurKyu2vXtLcepO47tOJt23badtfWNtY1NLIh+zt9iQRBQ7+2113M/Buj3veq6wB7aHVkOcSwLsf0rDMeWJAm57ruHnv9A9/zy+th96rS7jfOmKMngHIlEQCaKomEY4XBY9ADH+wTikYOzemmAmwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Local HWO testing&quot;
+        title=&quot;Local HWO testing&quot;
+        src=&quot;/static/f2baec3d34169ec4ea9204c11bda784b/fcda8/HWO_Testing2.png&quot;
+        srcset=&quot;/static/f2baec3d34169ec4ea9204c11bda784b/12f09/HWO_Testing2.png 148w,
+/static/f2baec3d34169ec4ea9204c11bda784b/e4a3f/HWO_Testing2.png 295w,
+/static/f2baec3d34169ec4ea9204c11bda784b/fcda8/HWO_Testing2.png 590w,
+/static/f2baec3d34169ec4ea9204c11bda784b/efc66/HWO_Testing2.png 885w,
+/static/f2baec3d34169ec4ea9204c11bda784b/c83ae/HWO_Testing2.png 1180w,
+/static/f2baec3d34169ec4ea9204c11bda784b/29007/HWO_Testing2.png 1600w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Local HWO testing&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;After we were able to run and visualize the game and move the paddle, it was time to create the AI itself. First we needed to simulate the ball movement so we could predict where we should move the paddle next. Teemu did very good job with this and we got the simulation work very well. Then it was quite easy to made the paddle move to the expected location.&lt;/p&gt;
+&lt;p&gt;As the ball bounces differently depending on where it hits on the paddle, we made the AI move so that it would hit the ball with the edge of the paddle. If the angle of the ball was already high enough, we would then hit the ball with a different edge. We didn’t have time to optimize this so we had to rely on that our simple heuristics are enough to beat the enemy.&lt;/p&gt;
+&lt;h2&gt;Problems&lt;/h2&gt;
+&lt;p&gt;Sometimes we had problems to make the prediction go exactly right which caused our AI to make a small corrective move, which sometimes caused it to miss the ball. In addition we didn’t have time to learn how to make optimal hits to the ball to make it move optimally.&lt;/p&gt;
+&lt;p&gt;We had quite a lot of problems with Git and Egit during the competition and we lost valuable time solving those. The competition was quite well arranged although I would have hoped them to communicate a bit more. Some rules were not clearly stated. However this was the first time they held the competition. They didn’t expect more than 30 teams to participate and in the end there were 200 teams and almost 100 bots.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4fb7c47f990ce8f2f1c30286bbc52351/442cb/HelloWorldOpenTop26.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 131.0810810810811%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAIAAAA44esqAAAACXBIWXMAAAsSAAALEgHS3X78AAADXklEQVQ4y2WU6ZabOBCF/f5vN5NO0jZiEyB2hEAS4M6P+QROd2bGR6csH+vqLlVwW52fFtcbR41bl3RhVSN7yyoGV0027RybfffH7ufVtdqBGoy7GeuNfYHTzsrBqSmAAfD3tjm/Uf21AHO4DmA3Lu62WK/XQH6CXTm4rAfmPwE7a/8T7NvZWe/HxcPsWO1s9WqTU6oc+Msdu9sDwG0v5rDZ93C40RbmS7bDBhrYwIzy5BR/4r+YL/LLM75enuc1KFHaIR7BgPNQEW/PSmChJi0E/nkA9mq8mD2eHba7OWQmGpf3FhjMxIsE6qVFNBarRwA7DoOiwgynG16yA23W2dm6bf+y+p+08bw41wew9csZIOKRBy2WuKIc7Vfg/0v79OxvowlpTYsNrWpXAo8aywn/u8OfSCQcZ9qttpY+E5g2ejbzOPaz0bIskjR5RKKqqkJmSRoXRc5GFpmUWcj/2OZZ1029LHPf9zc9jeM4DGO/LibPsyQRAVBIET8qVVq7LqtxbuV7C+Cd81Lmy2LGAbAG2g/jsC4zyG9vf+d5msQiSeLvP966rv34OM4+b8HzsRmjlVLWLqpWt2kajJm7run7FnAus23foPLeQkv9l+cge6qq0vm1BgwtNqxbh6GLY5GmSSQedY3rMksT6n7sYBB8Mu9aT1JK520A930364mdnichHnEc3d9/Zlma5Sk/IxGpuiQFLkXI6XkiEWdX7g2eYVaqZINbwFkaJ3xSAZ5suOLxuMsixzYSONa2Nb5QF2TjeZwGNiCFiMCUpYyiR/C/eTqE82vOYIYpeHZr2zaAka3JcNZjaGwp0QwyTmN6W5S5LOS6mudz91er9FSWBWBVVcEzHWMti85lij2Y4aTloe1pHEV31qRHZLNIW6nqxcxsTdOIE3pGq1Auy/w0L87xdJyD+VIeWqWnpgmeqbd+6M4+t0hgNsgG/iyEJrDACTJjmcWEF+AJbrsmyFbI7towYUOPGdhELM7GiPv9/u3tL7JBJ5o5fU1YmG2laFUNGOmMK9dQYWOhGZ3IIUUwz+dBWq/X0AkmMHpe0ueubcKQNIqjggl5vHPdr18fYD4+nudgud8TGjybT3BZ3tpGIYxBJ7ksS97ff1BxC3+pJA/WibzeJ6/ZLmQeHgxV/QME7qTmeFQ2xAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;HWO Results&quot;
+        title=&quot;HWO Results&quot;
+        src=&quot;/static/4fb7c47f990ce8f2f1c30286bbc52351/fcda8/HelloWorldOpenTop26.png&quot;
+        srcset=&quot;/static/4fb7c47f990ce8f2f1c30286bbc52351/12f09/HelloWorldOpenTop26.png 148w,
+/static/4fb7c47f990ce8f2f1c30286bbc52351/e4a3f/HelloWorldOpenTop26.png 295w,
+/static/4fb7c47f990ce8f2f1c30286bbc52351/fcda8/HelloWorldOpenTop26.png 590w,
+/static/4fb7c47f990ce8f2f1c30286bbc52351/442cb/HelloWorldOpenTop26.png 752w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;HWO Results&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;I’m quite happy to our rank and the competition itself was a good experience. This was my first proper introduction to Git and JSON.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Usability of Patient Record Systems 2010]]></title><description><![CDATA[This is about the usability of health care systems (EPR) in Finland. You can read an English summary of the usability study in the end of…]]></description><link>https://www.arttuv.com/ux/usability-of-patient-record-systems/usability-of-patient-record-systems/</link><guid isPermaLink="false">https://www.arttuv.com/ux/usability-of-patient-record-systems/usability-of-patient-record-systems/</guid><pubDate>Wed, 18 Apr 2012 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This is about the usability of health care systems (EPR) in Finland. You can read an English summary of the usability study in the end of the article in &lt;a href=&quot;http://www.laakariliitto.fi/files/potilastietojarjestelmatWinblad.pdf&quot;&gt;this link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Potilastietojärjestelmien käytettävyyttä on viime aikoina tutkittu aika paljon. Vuonna 2010 aiheesta järjestettiin laaja kyselytutkimus, johon vastasi 3929 lääkäriä, joka vastaa noin kolmannesta aktiivisesti töissä olevasta lääkärikunnasta. Tutkimuksen tulokset voi lukea lääkäriliiton sivuilta:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.laakariliitto.fi/files/potilastietojarjestelmatWinblad.pdf&quot;&gt;Lääkäriliitto: Potilastietojärjestelmät tuotemerkeittäin arvioitu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vastaajia pyydettiin arvioimaan käyttämäänsä järjestelmää kouluarvosanalla. Keskiarvot liikkuivat välttävän ja tyydyttävän välillä, kuten taulukosta voi nähdä.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 259px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/372fc82c543e4918a75ff38d7ee61128/a2ead/patient-record-systems-by-vendor.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 122.97297297297298%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAIAAAC+dZmEAAAACXBIWXMAAAsSAAALEgHS3X78AAADEElEQVQ4y4WU6W/aSBiH5/+XdrXxEQNV+yGt0n5ZpWq65QjNhjQhxZjTBw7YGDC+3RTjg9vTMdm0zSYko0cjy9JjvfPO7zUQZa3RGdY5pdYZdmSN7WmCpPGSXmGVJnrT1xvCsC4MFM0daG69M6q0FaFvCIoZzVdAHDgtyWJ7Zu3a4GSz2UtoyxYr25xsCQNXUBxecUbWVNEnfN/i+7ag2OLQtSYR6EoDrjugW9cXTOeq0b2si+e0MA0jCNdxvIIImLBZL5ZL9PBrxRACvfR6XHptXxwsm4cx+27TfrtuvUU7ZN8lcHewh5E78sNZ4PthGN7cfJOkHrDye/YJpmb34uo+/B36PhU8tCQviKae5/s+kq9FEZgn5OAfQtmi5shRlpCPCfEI+16iYD0TVzOQ2VJNhZZ8KwdBYBh6jakBM08gYZxHJhFcUhs6vfiaml1RazoFmfQvqtTvsm1ZLMsCfasZBWL0CZ9XUrCehrU7dsuWabZaraRs+SOuZnHjhFgiuZaOmQTIPCWjsnmhA27+JaUPmP2ZnJ7vr/5X6hNl25YoXgM1S6h5MqQzsPkirr2Au2DSiez/J5uGznIcsAt/ye//GH78c1HGIU3Ayg6+YoEpTfzQm0zQVaGyOZ4HVvtMa57ZbCmSvsDxFVR3MCrPPXe+WM5ns8Vi4XmTsaaBbl+tshLDyjSrrDabbeweAa3VegPvL6AWXw6LL63Sq3XjALbe7KR5EDrDaRD50ymKp2PbkiwDI4/ZRVzPYaifT0ETP+O5bZiRnFnPo3smnFMKdRvWMjthUj+7jRrmuq4odoBZIIwi6ZyS7imJgnkbrKdDspWdZDCsAhoJfJTD5WNshuRGJkYJrT8v8+ie1U/4MEtoOSLZ80TnCJOPcfS5qEzdi/eDeG5DUiT1Aol2s0iGl1RwQaEdsaafiacgCIksHu31j/FxjligwWg8NlIPZNM0OI4HWhYdmIhuT3vXqmenajuSbfD9bB8ddfqF2jlPD2Xfdxy72+0C9A8Q/t7rfcCicuqRah/InuehhOm6Vi6XfwC3P+e6PzFEYAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina&quot;
+        title=&quot;Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina&quot;
+        src=&quot;/static/372fc82c543e4918a75ff38d7ee61128/a2ead/patient-record-systems-by-vendor.png&quot;
+        srcset=&quot;/static/372fc82c543e4918a75ff38d7ee61128/12f09/patient-record-systems-by-vendor.png 148w,
+/static/372fc82c543e4918a75ff38d7ee61128/a2ead/patient-record-systems-by-vendor.png 259w&quot;
+        sizes=&quot;(max-width: 259px) 100vw, 259px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina&lt;/figcaption&gt;
+  &lt;/figure&gt;
+Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina [lähde].&lt;/p&gt;
+&lt;p&gt;Terveyskeskuslääkäreiltä tuli 919 vastausta. Noin puolet 48 % käytti pääasiallisesti Efficaa, 39 % Pegasosta, 5% Mediatria, 5% Graafista Finstaria, ja 6,7 % jotain muuta. &lt;/p&gt;
+&lt;p&gt;Valtaosa piti järjestelmiä vakaina ja nopeasti reagoivina, poikkeuksena Pegasos. Tiedonkulku oman organisaation lääkäreiden välillä oli toimivaa.  Kaikkien tuotemerkkien käyttäjien mielestä kirjautumisiin ja tilastointiin kului liikaa aikaa. Myös hyvän yhteenvetonäkymän puuttuminen oli yleinen ongelma. Tietojärjestelmien käyttö vei huomion potilaista kaikkien järjestelmien kohdalla. Osa järjestelmistä kykeni auttamaan estämään lääkitykseen liittyviä virheitä.&lt;/p&gt;
+&lt;p&gt;Sairaalalääkäreistä vastasi 1950, joista 48 % käytti pääasiallisesti Mirandaa, 24 % Efficaa, 11 % ESKOa, 5 % Pegasosta, 4 % Mediatria ja loput 7 % jotain muuta.&lt;/p&gt;
+&lt;p&gt;Yhteenvetonäkymän puuttuminen tai huono laatu oli ongelma kaikkien sairaalajärjestelmien kohdalla. Myös lääkelista oli epäselvä, eikä auttanut estämään lääkitykseen liittyviä virheitä. Tiedonkulku oman organisaation lääkäreiden kesken toimi pääosin hyvin. Järjestelmät eivät tukeneet hoitajille annettujen määräysten perillemenoa, niiden käyttö vei huomiota potilaista, ja tilastointi ja kirjautumiset vievät liikaa aikaa.&lt;/p&gt;
+&lt;p&gt;Ylläolevista esimerkeistä ja taulukosta voi todeta, että kehittämistä todellakin riittää. Luonnollisesti järjestelmissä on hyvääkin (toisissa enemmän kuin toisissa); Esimerkiksi ESKOn käyttäjät pitivät järjestelmää vakaana, helposti opittavana ja nopeana. Yleisemmin potilastiedon saatavuutta paikasta riippumatta pidettiin tärkeänä ja toimivana ominaisuutena. Myös laboratoriotulosten vertailtavuutta arvostettiin ja sairaalajärjestelmissä suosikkireseptien tallentamista.&lt;/p&gt;
+&lt;p&gt;Esimerkiksi yhteenvetonäkymän puute tai huonous, sekä järjestelmien oman työn kehittämisen tukemattomuus tuntuvat aika perustavanlaatuisilta ongelmilta. Näiden lisäksi eri järjestelmiin kirjautumisen tarve ja sen hitaus varmasti lisäävät turhautumista ja laskevat tuottavuutta, joten on vaikea ymmärtää, kuinka tällaiseen tilanteeseen on päädytty. Yksi vastaus on varmasti hankintaprosessi ja käytettävyysvaatimusten määrittelemisen epäonnistuminen, jota käsittelee esimerkiksi &lt;a href=&quot;http://www.finnanest.fi/files/jokelat_terveydenhuollon.pdf&quot;&gt;Timo Jokela artikkelissa Terveydenhuollon tietojärjestelmät – Sitä saa mitä tilaa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Pidän koko tarjouskilpailumallia aika ongelmallisena, jos se tehdään niin, että asiakas järjestää tarjouskilpailun ja määrittelee etukäteen melko pitkälle, mitä haluaa, jolloin toimittajien täytyy osata myös etukäteen hinnoitella työnsä juuri näiden vaatimusten pohjalta. Hinta on yksi iso tekijä arvostelussa, joten kaikki pyritään tekemään halvalla. Jos tarjouskilpailussa ei puhuta käytettävyydestä niin, että siitä voi saada kilpailuetua ja se kannattaa huomioida, sitä ei tulla huomioimaan. Tältä pohjalta on vaikea alkaa mitään käytettävää rakentamaan tai puhua &lt;a href=&quot;k%C3%A4ytt%C3%A4j%C3%A4keskeisen%20suunnittelun%20perusperiaatteista&quot;&gt;käyttäjäkeskeisen suunnittelun perusperiaatteista&lt;/a&gt; jne. &lt;/p&gt;
+&lt;p&gt;En usko, että osaamisen puute olisi ongelma, vaan se ettei käytettävyyden kehittämiseen ole rahaa, eikä sitä arvosteta riittävästi. Vieläkään.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ISO 9241-210 (ISO 13407:n korvaaja)]]></title><description><![CDATA[This is in Finnish about ISO 9241-210 (former ISO 13407). You can read about that for example in Userfocus or by getting a copy of the…]]></description><link>https://www.arttuv.com/ux/iso-9241-210/iso-9241-210/</link><guid isPermaLink="false">https://www.arttuv.com/ux/iso-9241-210/iso-9241-210/</guid><pubDate>Thu, 29 Mar 2012 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This is in Finnish about ISO 9241-210 (former ISO 13407). You can read about that for example in &lt;a href=&quot;http://www.userfocus.co.uk/articles/iso-13407-is-dead.html&quot;&gt;Userfocus&lt;/a&gt; or by getting a copy of the standard from &lt;a href=&quot;http://www.iso.org/iso/catalogue_detail.htm?csnumber=52075&quot;&gt;ISO&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Huomasin gradua tehdessäni, että ISO 13407 onkin vanhentunutta tietoa, sillä nykyisin se tunnetaan nimellä &lt;a href=&quot;http://www.iso.org/iso/catalogue_detail.htm?csnumber=52075&quot;&gt;ISO 9241-210&lt;/a&gt;. Myös sisältö on jonkin verran uudistunut. Tässä on pintapuolinen esittely standardin aktiviteeteista ja periaatteista.&lt;/p&gt;
+&lt;p&gt;ISO 9241-210 on kansainvälinen standardi, joka tarjoaa opastusta käyttäjäkeskeisen suunnittelun aktiviteetteihin suoritettavaksi interaktiivisen tuotteen elinkaaren aikana. Aiemmin standardi tunnettiin nimellä ISO 13407, mutta vuonna 2010 se sisällytettiin ISO 9241:n [Jok10], joka määrittelee tarkemmin suunnittelun lähestymistapoja [SPR06]. Nimenvaihdoksen lisäksi myös standardin sisältö on muuttunut. Standardi sisältää kuusi ihmiskeskeisen suunnittelun periaatetta ja neljä ihmiskeskeisen suunnittelun aktiviteettia [Jok10, s. 88].&lt;/p&gt;
+&lt;h2&gt;Malli käyttäjäkeskeiseen suunnitteluun&lt;/h2&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c2c243e8d0c9b73463ecb56908038231/d7abb/ISO9241-210Prosessimalli-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.83783783783784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACYElEQVQ4y5VSPWhaURi9z2d8tklMpKWhgtB2KGiXkjVIQFrqUhcRSu3kkoiCg5tLCyaUtOjo0MXJJaSb1GJCBi0aEBV/wT/8i0ENEoPgFPN67uMZSu3vB4d7ufd+537f+Q4hhKwAWuAJ8BR4CEg0Gs2Cx+ORYk94nmfK5TJDVwoixuHhIfld0EcSET+eMT+dEfED8s8RjUYFgna7/fz8/Pw4mUx+TafTX05OTkL1ev347OzMNyP1er1/J5y1lEqlXo/H4yZICrlcrlQoFIoXFxeNTqezj2sZfRMMBucJpFLpI47jHsvl8gcUSqVSsb6+zont/jJUKpUcWKT7SCTCDAYDBpUz6ES4XwLuAmvAbYAVyRQymWwVK8W9WVWBQGDGy4qYa1EKKPDTHazLp6enK9PpVOH3++X03mKxMDqdjun3+zc5sVjsFt4uud3u+z6fbw37xUajoQiFQhxptVpBlMyXSqVrgC8Wi1fD4ZCv1Wq7NNnlcskZhllgWVbmcDiET6Dr59FoxCP3qtls8iC7vry8pLleks/nTZjgx0Qi8TYcDnsxZQ8G8gF6PKPJOzs70u3tbcZoNEqOjo6EFqvV6qter7dHP61UKu+73e47aLiXzWZf/HHiGxsb1EIc+Z9A/5LJZMKibJZaxul0cpubmysGg4E1m81UwwWtVrtM36ECwaMmk4nT6/WrOKM5EnEV8snW1hax2Wy0DQLL3PgQMryBPrVMJpOFuQuQIQuN0GFlX3SDYG61Wk0ODg6I3W4nVqt1vuJ4PC5UAW1fgiANxGDqb6guBqRg8k8zMgxpLv87hZNSMpnj3QQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Malli käyttäjäkeskeiseen suunnitteluun&quot;
+        title=&quot;Malli käyttäjäkeskeiseen suunnitteluun&quot;
+        src=&quot;/static/c2c243e8d0c9b73463ecb56908038231/fcda8/ISO9241-210Prosessimalli-1.png&quot;
+        srcset=&quot;/static/c2c243e8d0c9b73463ecb56908038231/12f09/ISO9241-210Prosessimalli-1.png 148w,
+/static/c2c243e8d0c9b73463ecb56908038231/e4a3f/ISO9241-210Prosessimalli-1.png 295w,
+/static/c2c243e8d0c9b73463ecb56908038231/fcda8/ISO9241-210Prosessimalli-1.png 590w,
+/static/c2c243e8d0c9b73463ecb56908038231/efc66/ISO9241-210Prosessimalli-1.png 885w,
+/static/c2c243e8d0c9b73463ecb56908038231/d7abb/ISO9241-210Prosessimalli-1.png 959w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Malli käyttäjäkeskeiseen suunnitteluun&lt;/figcaption&gt;
+  &lt;/figure&gt;
+ISO 9241-210 –standardin malli käyttäjäkeskeiseen suunnitteluun [Jok10]&lt;/p&gt;
+&lt;p&gt;Kuvasta nähdään, että ISO 9241-210 määrittelee neljä käyttäjäkeskeistä suunnitteluaktiviteettia, jotka ovat järjestelmäkehitysprojektin ytimessä:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Käyttökontekstin ymmärtäminen ja määrittäminen&lt;/li&gt;
+&lt;li&gt;Käyttäjävaatimusten määritteleminen&lt;/li&gt;
+&lt;li&gt;Suunnitteluratkaisujen muodostaminen&lt;/li&gt;
+&lt;li&gt;Suunnitteluratkaisujen arvioiminen määrityksiä vasten&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Aiempaan standardiin verrattuna aktiviteetit ovat lähes samannimiset, eikä myöskään prosessimallin kaavio ole juuri muuttunut, mutta aktiviteettien kuvauksia on kuitenkin päivitetty [Jok10, s. 90].&lt;/p&gt;
+&lt;h2&gt;Käyttäjäkeskeisen suunnittelun perusperiaatteet&lt;/h2&gt;
+&lt;p&gt;Aktiviteettien lisäksi standardi määrittelee kuusi käyttäjäkeskeisen suunnittelun perusperiaatetta [Jok10, s. 88]:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Suunnittelu perustuu käyttäjien, työtehtävien ja ympäristöjen eksplisiittiselle ymmärtämiselle. &lt;/li&gt;
+&lt;li&gt;Käyttäjät osallistuvat suunnitteluun ja kehitykseen koko prosessin elinkaaren ajan.&lt;/li&gt;
+&lt;li&gt;Suunnittelua ajaa ja jalostaa käyttäjäkeskeinen arviointi.&lt;/li&gt;
+&lt;li&gt;Prosessi on iteratiivinen.&lt;/li&gt;
+&lt;li&gt;Suunnittelu kattaa koko käyttäjäkokemuksen.&lt;/li&gt;
+&lt;li&gt;Kehitysryhmä sisältää monialaista tietoa ja näkökulmia.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Prosessia tulisi suorittaa iteratiivisesti aina projektin alusta sen loppuun saakka [SRP06]. Uudistetussa standardissa iteratiivisuudesta sanotaan, että kaikkein parasta suunnitteluratkaisua ei tyypillisesti saavuteta ilman iteratiivisuutta [Jok10, s. 89]. Tämän mukaan iteratiivisuutta ei siis sinänsä tulisi tavoitella, mutta siihen tulisi varautua. En ole (lukemani kirjallisuuden perusteella) aivan samaa mieltä iteratiivisuuden “väheksymisestä”, sillä näkisin sen olevan oleellinen osa kehitystä projektista riippuen.  &lt;/p&gt;
+&lt;p&gt;Elinkaarimallia tulisi edeltää suunnitteluvaihe, jossa määritellään [SRP06]: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Suunnitteluaktiviteetit ja kuinka ne integroidaan muihin järjestelmäke-hityksen aktiviteetteihin&lt;/li&gt;
+&lt;li&gt;Kuka on vastuussa näistä suunnitteluaktiviteeteista&lt;/li&gt;
+&lt;li&gt;Kuinka palautteen kerääminen ja kommunikaatio toteutetaan ja doku-mentoidaan&lt;/li&gt;
+&lt;li&gt;Virstanpylväät ja aikaskaalat, jotka mahdollistavat palautteen sisällyt-tämisen projektiaikatauluun&lt;/li&gt;
+&lt;li&gt;Suunnitteluvaihetta ei tulisi unohtaa, sillä se luo pohjan koko loppumallin hyödyntämiselle.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Standardia ei tietenkään tulisi nähdä valmiina prosessimallina, jota hyödynnetään suoraan. Jokainen malli tulee aina sovittaa kulloiseenkin projektiin. ISO 9241-210 tarjoaa käyttökelpoisia periaatteita ja aktiviteetteja käyttäjäkeskeisen suunnittelun toteuttamiseen. Tässä standardia on käyty läpi hyvin pintapuolisesti ja kiinnostuneiden kannattaakin joko hankkia standardi käsiinsä, tai mieluiten kirja, joka sitä käsittelee. Standardi on myös suomennettu.&lt;/p&gt;
+&lt;h2&gt;Lähteet&lt;/h2&gt;
+&lt;p&gt;[Jok10] Jokela T.: Navigoi oikein käytettävyyden vesillä, Opas käytettävyysohjattuun vuorovaikutussuunnitteluun. Väylä-Yhtiöt Oy, sähköinen versio, 2010.   [SRP06] &lt;/p&gt;
+&lt;p&gt;Sharp H., Rogers Y., Preece J.: Interaction Design: Beyond human-computer interaction. John Wiley &amp;#x26; Sons Ltd, Hoboken, NJ 2009.   &lt;/p&gt;
+&lt;p&gt;Standardin voi hankkia ISOlta: Englanniksi: &lt;a href=&quot;http://www.iso.org/iso/catalogue_detail.htm?csnumber=52075&quot;&gt;http://www.iso.org/iso/catalogue_detail.htm?csnumber=52075&lt;/a&gt; Suomeksi: &lt;a href=&quot;http://sales.sfs.fi/sfs/servlets/ProductServlet?action=showquicksearch&amp;#x26;keywords=9241-210&amp;#x26;x=0&amp;#x26;y=0&quot;&gt;http://sales.sfs.fi/sfs/servlets/ProductServlet?action=showquicksearch&amp;#x26;keywords=9241-210&amp;#x26;x=0&amp;#x26;y=0&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How do people act]]></title><description><![CDATA[Creating usable software is not easy. You are blind to the usability problems of your user interface because you know how things work. You…]]></description><link>https://www.arttuv.com/ux/how-do-people-act/how-do-people-act/</link><guid isPermaLink="false">https://www.arttuv.com/ux/how-do-people-act/how-do-people-act/</guid><pubDate>Sun, 14 Nov 2010 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Creating usable software is not easy. You are blind to the usability problems of your user interface because you know how things work. You don’t need feedback in a way that other users of your system need. You don’t need the system to tell you what actions are available in each situation. If an action takes some time, you know what is happening(right?), but it must be told for the others!&lt;/p&gt;
+&lt;p&gt;When designing an user interface, it helps if you know something about how people act, that is, how they plan their actions and how they see and structure the world. It’s good to realize in the first place, that people’s behavior could better be described as situational than planned. They don’t always have a plan to follow; probably they don’t even know what is possible in the first place. You may also have a nice mental model of your softwares function in your head, but you should remember that other users probably never has the same model. They construct their own based on the things they see and actions they do and the feedback they receive.&lt;/p&gt;
+&lt;h2&gt;The Action Cycle&lt;/h2&gt;
+&lt;p&gt;Donald A. Norman has one way to describe people’s behavior. He calls it The Seven Stages of Action (The Design of Everyday Things). The basic idea is simple and consists of four things. Everything starts from goals, the objective to the action. Second thing is the world which is the target of all actions. Goals picture states in which the user would like to see the world. Two things are between the goals and the world: execution and evaluation. In execution the user makes actions for the world and then she evaluates the state of the world after the actions and compares it to the goals. This is called the action cycle.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 536px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a96e20176e3ff986ed42438b426d5ddf/2d920/Action-Cycle-Simplified.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABKElEQVQoz42RvWqEUBCFXX8QNLVYGDtBQUvfxkLYxlLtBBUEQX0NwSqd1m5lJ+gD7C7sWtiohW+QiSZC2BvIV8hl5oznMINhf0MQBEmS2P+BAfiez+f7/X65XOq6fjwevu8frV+cTidiA0xwHKdpGoqmaXZd97EBD8/zoAgtEIBs1yOcKYpCRoUxaCHU7xuqqiqKwnHcHgc4ou1vnudlWZYkSRRFQRC+PHRdX5ZlGIZxHNd17ft+H3jdBbTmeX4+n6CcpknTNAw84zgOgiCKoizLbNs+9kz8sJs7jpOmaZIkYRiCGIIg9vdqi8zyXT1MYCsMw0DRMIyyLIuiyPO8qirLsqDIsuxxFwDxu/0Gruvebre2bZumuV6vEBJ9ZyQQgd1420AcaeMTIklgSWt004EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Action Cycle Simplified&quot;
+        title=&quot;Action Cycle Simplified&quot;
+        src=&quot;/static/a96e20176e3ff986ed42438b426d5ddf/2d920/Action-Cycle-Simplified.png&quot;
+        srcset=&quot;/static/a96e20176e3ff986ed42438b426d5ddf/12f09/Action-Cycle-Simplified.png 148w,
+/static/a96e20176e3ff986ed42438b426d5ddf/e4a3f/Action-Cycle-Simplified.png 295w,
+/static/a96e20176e3ff986ed42438b426d5ddf/2d920/Action-Cycle-Simplified.png 536w&quot;
+        sizes=&quot;(max-width: 536px) 100vw, 536px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Action Cycle Simplified&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, there is only three action related sections here and the model was called seven stages of action. Execution and evaluation can bot be divided to three subtasks.&lt;/p&gt;
+&lt;h2&gt;The seven stages of action.&lt;/h2&gt;
+&lt;p&gt;Goals needs to be translated into intentions which are more specific executable and achievable statements of what is to be done. These intentions are then turned to sequence of actions that really result in achieving the intention. Finally, this sequence of actions is executed which changes the world.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 560px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/302db0eaca73a5ff617398c091b59a00/b06ae/Action-Cycle.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 118.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAA7CAAAOwgEVKEqAAAAC6klEQVQ4y6VUS0iqURA+qT1IegiVr8LCIshLrUKIkDZuhKBFCyOIyiCjFhoJQSZF0K5NJWEv3LgSt0LaJpdqi0SlskLLQrDCgrBM6n713yz+3yi432KYc87MnDPfzBlC8kEkEkml0sbGRsja2loWi0V+REFBASSHwzk5Oclms7FYDDKZTNbX1+dO6Q6sD0AvLi7mcrnDw8NTU1NarXZychKysrKytLS0pKSEzWZzPkB/DtbYJb9HWVlZU1NTQ0NDS0tLW1sbkhQKhYjC/gAVrqOjY3Z2dmZmxmg0GgwG6EqlkqjV6sfHRyR2d3d3fX2dyWTsdvvXDOEPOTc39/r6CrObm5tUKgV9fX2dDA4OQjs7O4tGo6enp9BdLhfTGXfCMxAIhEKhYDCIa5aXl8nQ0BAcwOrLywsk9J2dHabz+Pg4Qnu93oODg/39/UgkYjKZiEQiwct7e3v7+/sh+/r6Ojs7mdQUFRVVVFSAoLq6Oh6PV15eDvI/jwsLC39DMKJ8FlylUvl8vr29vZxcWlr6+myqnqg8Xut2u2Gzu7sLMzQC0Wg0SPXo6AiExePxp6cnp9PJzHl+fh50wOzy8hLs3t/fv7FNEYYCYDeRSHzHNgqLisLg6uoKzrhjbW2NyOXyjY2N1dVVi8UCubm5CWKZz0Z2Vqt1ZWVle3vbbDZDgmbyX2hubtbpdLhtenp6YmJCr9d3d3czv1p7e/vY2BgIGh0dHRkZga5QKN4Io5okJ/M2CQhD/56fnyPt4+Pjh4eHra2tf4ThA19cXICJ7whbWFjAUTgchtnh4SF0cETQVbe3twgJtiHR9DabjemMdHAbyuvxePx+P0q1uLhI0GU1NTVVVVUCgQCtyufz0Xrw5HwBlhgG1dXVknfAGC5oVfpUQaw84+YdGDL0UUEbQziGEcKjH0HHwMAA6O3q6kLnY58qe86YHp7KsKen5/n5OZ1O49+CG4fDkTv6GcjwzztkMllra6tYLM47Pf8CVK6Wq1mw8NoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Seven Stages of Action&quot;
+        title=&quot;Seven Stages of Action&quot;
+        src=&quot;/static/302db0eaca73a5ff617398c091b59a00/b06ae/Action-Cycle.png&quot;
+        srcset=&quot;/static/302db0eaca73a5ff617398c091b59a00/12f09/Action-Cycle.png 148w,
+/static/302db0eaca73a5ff617398c091b59a00/e4a3f/Action-Cycle.png 295w,
+/static/302db0eaca73a5ff617398c091b59a00/b06ae/Action-Cycle.png 560w&quot;
+        sizes=&quot;(max-width: 560px) 100vw, 560px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Seven Stages of Action&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;After and while executing the actions, we perceive the world and get the sense of its state. By perceiving the world we get data which we need to translate into information. In other words, we try to interpret the perception, make sense of it. Finally we judge if the change in the world is what we wanted in the first place by evaluating the interpretations.&lt;/p&gt;
+&lt;p&gt;These stages form the model to explain how people do things. Problems in any of the stages makes the user feel uneasy and judge the software she is using. Or actually, makes her blame herself for she can’t use the program, another topic of the book. This model can be used to help you design and evaluate your user interface. It should be clear for the user what the software can do (goals) and how it does it (intentions). Possible actions should be available and understandable so the user may see what it takes to fulfill the intentions (sequence of actions). Interaction with the software should be intuitive and obvious, natural (execution).&lt;/p&gt;
+&lt;p&gt;The user has no idea what the system does in the background so all feedback is welcome (perceiving the state of the world). All informative feedback is welcome. Everything you give to the user should say something to her and be meaningful. Use internal logs for everything else to avoid confusion. If an action takes time, tell it to the user. If there is a problem, tell what’s wrong. If possible, tell the user what the program needs before it can finish. Based on the feedback, the user judges if the things she did was correct or not and it her goals was met (interpreting the perception and evaluating the interpretations). It’s not only what you show but how you do it also counts.&lt;/p&gt;
+&lt;p&gt;Remember that this is not a full theory of human behavior but rather a directional model to explain it. All the stages are not required for all action. The sequence of actions may be completely different in some situations. If you want to know more (and if you ever work with user interfaces, you should), start by reading the Design of Everyday Things.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Who's fault is it anyway?]]></title><description><![CDATA[People tend to use faulty mental models when thinking what caused some action to fail or succeed. People blame environment for their own…]]></description><link>https://www.arttuv.com/ux/whos-fault-is-it-anyway/whos-fault-is-it-anyway/</link><guid isPermaLink="false">https://www.arttuv.com/ux/whos-fault-is-it-anyway/whos-fault-is-it-anyway/</guid><pubDate>Mon, 11 Oct 2010 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;People tend to use faulty mental models when thinking what caused some action to fail or succeed.&lt;/p&gt;
+&lt;p&gt;People blame environment for their own misfortunes. If things go wrong, it wasn’t my fault but the environment caused it. I got no chance. And the opposite happens when things go well. It all worked out since I was in flames today.&lt;/p&gt;
+&lt;p&gt;Outside observes do the opposite conclusions. If someone else succeeds, they say she was lucky. If she doesn’t, they say she just wasn’t good enough to make it.&lt;/p&gt;
+&lt;p&gt;So why, why on Earth do people blame themselves if they can’t use some software or any device in general? Somehow people assume that they should be able to use them. If they don’t succeed, people give up and decide they can’t manage, that they are just too bad with devices and computers. This is learned helplessness. It’s easy to admit after couple of fails that it is just impossible for them to do the task and ask someone else to do it.&lt;/p&gt;
+&lt;p&gt;Why don’t they stop to think that why I, a fairly intelligent human, can’t manage to handle this situation? Donald A. Norman can tell you why: Because the software or device you are trying to use is designed badly. There aren’t that many tasks in the world that should require reading a tight manual or taking a course. This is not an excuse for the learned helplessness, though. When you next time you have problems doing a task, think about it. Is it because of you or is it the bad design? How would you improve it? But don’t just give up.&lt;/p&gt;
+&lt;p&gt;And if you are the designer, you don’t have excuses.&lt;/p&gt;</content:encoded></item></channel></rss>
