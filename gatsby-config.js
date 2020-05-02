@@ -2,9 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `The Feedback Loop`,
     description: `Creating software and human-computer interactions.`,
+    siteUrl: `https://www.arttuv.com`,
     author: `@arttuv`,
   },
   plugins: [
+
+    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
