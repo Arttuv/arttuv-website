@@ -9,9 +9,7 @@ const CVPage = () => (
   <Layout>
     <SEO title="Author" />
     <h1>Author</h1>
-    <p>I have 10 years of experience working with software. I've been called a programmer, software 
-        developer, senior software developer or scrum master - but in reality I've always been part 
-        of a team building software.
+    <p>I have 10 years of experience working with software. Most of that time I've been a developer.
     </p>
   </Layout>
 )

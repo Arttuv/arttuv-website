@@ -10,7 +10,7 @@ Creating software is complex, and we are all the time facing problems we are sol
 
 ![Being stuck alone brings stress and fear](coder-fear.jpeg "Being stuck alone brings stress and fear")
 
-Fear consumes energy, hinders our cognitive functions and may make us withdraw from other people. It can also increase stress, and prolonged stress can, for example, make us less creative and thus hinder our problem-solving skills. Many of these effects are interconnected and can lead to a negative reinforcing cycle. Stress and fear may distance you from colleagues which is exactly the opposite of what you should probably be doing.
+Fear consumes energy, hinders our cognitive functions and may make us withdraw from other people. It can also increase stress, and prolonged stress can, for example, make us less creative and thus hinder our problem-solving skills. Many of these effects are interconnected and can lead to a negatively affecting reinforcing cycle. Stress and fear may distance you from colleagues which is exactly the opposite of what you should probably be doing.
 
 Everything depends on the context: What is causing the fear, who are there to face it with you, and where it happens. Kati lists multiple sources of fear, and I want to concentrate on the following (listing from Kati’s writing):
 

@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import ReCAPTCHA from "react-google-recaptcha";
-import { Link } from "gatsby"
 
 const MailchimpState = {
     ADVERTISE: "advertise",

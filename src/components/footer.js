@@ -24,6 +24,7 @@ const Footer = ({ siteTitle, small}) => (
             <ListLink to="/">Home</ListLink>
             <ListLink to="/writings/">Writings</ListLink>
             <ListLink to="/author/">Author</ListLink>
+            <a href="#heading">^Top</a>
           </ul>
         </div>
 
