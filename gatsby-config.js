@@ -6,6 +6,7 @@ module.exports = {
     author: `@arttuv`,
   },
   plugins: [
+    'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-plugin-mailchimp`,
       options: {
