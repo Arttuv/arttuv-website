@@ -8,8 +8,10 @@ footer .copyright {
 }
 
 .bottomNavigation {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  font-size: smaller;
 }
 .rssSubscribe h1 {
   font-size: 1.2rem;
