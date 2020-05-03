@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.arttuv.com/sitemap.xml
+Host: https://www.arttuv.com

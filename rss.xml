@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[The Feedback Loop]]></title><description><![CDATA[Creating software and human-computer interactions.]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 03 May 2020 09:26:05 GMT</lastBuildDate><item><title><![CDATA[Fear]]></title><description><![CDATA[Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the…]]></description><link>https://www.arttuv.com/dev/fear/</link><guid isPermaLink="false">https://www.arttuv.com/dev/fear/</guid><pubDate>Sun, 12 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven&apos;t mastered yet. That can be a lot to bear and a source of anxiety. Kati Vilkki wrote &lt;a href=&quot;https://www.reaktor.com/blog/facing-up-to-a-culture-of-fear/&quot;&gt;a good blog post on culture of fear&lt;/a&gt;, which inspired me to think about the subject from my perspective, on team and single developer level.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[The Feedback Loop]]></title><description><![CDATA[Creating software and human-computer interactions.]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 03 May 2020 19:16:27 GMT</lastBuildDate><item><title><![CDATA[Augment, Complement and Empower Human Cognitive Skills]]></title><description><![CDATA[The expert group for the EU has published guidelines to promote Trustworthy AI. By Trustworthy AI they mean an AI that is Lawful Ethical…]]></description><link>https://www.arttuv.com/automation-and-end-users/augment-complement-and-empower/</link><guid isPermaLink="false">https://www.arttuv.com/automation-and-end-users/augment-complement-and-empower/</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;The expert group for the EU has published &lt;a href=&quot;https://ec.europa.eu/futurium/en/ai-alliance-consultation&quot;&gt;guidelines to promote Trustworthy AI&lt;/a&gt;. By Trustworthy AI they mean an AI that is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lawful&lt;/li&gt;
+&lt;li&gt;Ethical&lt;/li&gt;
+&lt;li&gt;Robust&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The document specifies a list of requirements the systems should meet to be considered trustworthy. They also define a rough framework and an assessment list to offer guidance on practical implementation. The objective is to empower humans and offer them meaningful work instead of replacing them. The document doesn’t concentrate on the ”lawful” part - AI should follow the applicable local laws and regulations.&lt;/p&gt;
+&lt;p&gt;I like the approach this expert group has taken towards AI. Total autonomy is still too hard (and then we get to the human-autonomy teaming) and I think there is a lot of potential in augmenting humans and empowering them using AI. Most importantly, the focus is too often in technology and how to replace human users.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 512px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6c6a8d97fe1790d19f54a94203dec566/01e7c/human-in-the-loop.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB/UlEQVQ4y6XUSUhVURzH8ZvixgkcVpIIkoj6Fg4bkwR3UtIqBBcRtEzJRStBQhRCsFqkkWIE1SJFKCpQXKRFk+KUQ+YAESoupDQnokCt7x9+V07qewoe+PDOve+e/z3D/389L3Q74QgP8n+Yd4wWg3wUINm5H36UwYnIQTbS0IxX2MBfbKJb/x0a1JZxHnUoRr2CfMOY+mYRQ7jgjNsXyNOymjCCD6jCc/V/OAHn9cwvpAY7BH+5TRq0jae4jd/OPfudRBt+4nGo5frtJTq0VAvSg3UFG8QXvWRNS4/wB0Yjypmh7d9VPEQLOvEVc9pDGzyhwAt4rQOzlXmxKEEZinAW/XiBy7iGLrTiCT7q+o8C2ktmsaJYXgICqNZbB9CLN5qJXb9ToLdiwZecw7HnnvnLjVeuVTsPHMYCfld/QHt5zg+YoIDXsaUDmNOeTTqHYIey4wRc0SwntM+7WRKHLNRiWSdr07+JR9p0N1XMfZ2uVcvFg3IvQtVgARs0W8u7difglli/EZeQEqrcbmAVd3BLs+hR0u7dw5ogebvbTuMePqm8LG368F6lZfs0rhy0/l2ccfJ2X2tWoQ9jCjOYxmcFsReNOtdWzw/2lOt/rRCVqECpUsC+IFdQrqqxJM9FHtKRFOqrnKaTDugjai0SmY4MnBIrsZPH/Vofqf0DSZ6oLbQWHUMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Human in the Loop&quot;
+        title=&quot;Human in the Loop&quot;
+        src=&quot;/static/6c6a8d97fe1790d19f54a94203dec566/01e7c/human-in-the-loop.png&quot;
+        srcset=&quot;/static/6c6a8d97fe1790d19f54a94203dec566/12f09/human-in-the-loop.png 148w,
+/static/6c6a8d97fe1790d19f54a94203dec566/e4a3f/human-in-the-loop.png 295w,
+/static/6c6a8d97fe1790d19f54a94203dec566/01e7c/human-in-the-loop.png 512w&quot;
+        sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Human in the Loop&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;To give a short overview, here are the &lt;strong&gt;principles&lt;/strong&gt; and &lt;strong&gt;requirements&lt;/strong&gt; for Trustworthy AI.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Principles&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect for human autonomy&lt;/li&gt;
+&lt;li&gt;Prevention of harm&lt;/li&gt;
+&lt;li&gt;Fairness and explicability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Human agency and oversight&lt;/li&gt;
+&lt;li&gt;Technical robustness and safety&lt;/li&gt;
+&lt;li&gt;Privacy and data governance&lt;/li&gt;
+&lt;li&gt;Transparency&lt;/li&gt;
+&lt;li&gt;Diversity, non-discrimination, and fairness&lt;/li&gt;
+&lt;li&gt;Environmental and societal well-being&lt;/li&gt;
+&lt;li&gt;Accountability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From the human-computer interaction point of view, I’d like to highlight ”respect for human autonomy” and the corresponding requirement for ”human agency and oversight”. &lt;/p&gt;
+&lt;p&gt;The document states that AI systems should be designed to ”augment, complement and empower human cognitive, social and cultural skills”. This viewpoint is human-centric aiming to keep humans relevant and their work meaningful. The system should allow a meaningful opportunity for human choice securing also the human oversight.&lt;/p&gt;
+&lt;p&gt;Sometimes it feels like this is the value that is easiest to forget. Laws and regulations (and even public attention) make sure you don’t create a system that causes harm or is unfair, but often it feels like nobody is thinking about the end-users who will need to interact with the system and &lt;strong&gt;do the tasks that the AI is not able to&lt;/strong&gt;. &lt;/p&gt;
+&lt;h2&gt;Keep Them In The Loop&lt;/h2&gt;
+&lt;p&gt;Oversimplifying the situation: &lt;/p&gt;
+&lt;p&gt;Engineers want to see how novel AI systems they can create, and the procurer wants to automate as much as possible to get cost and time savings. This can lead to a situation in which everything that can be automated, will be automated, and humans need to care about the incoherent collection of random tasks that are left behind. If you are not actively part of the work the system does, it’s hard to understand what is happening and you start to lose the skills that are needed when the system fails.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;David A. Mindell&lt;/strong&gt; has described this problem in &lt;a href=&quot;https://www.goodreads.com/book/show/24611446-our-robots-ourselves&quot;&gt;Our Robots, Ourselves&lt;/a&gt; comparing two solutions for performing landings in bad weather.&lt;/p&gt;
+&lt;p&gt;Fully autonomous landing systems turn pilots into observers that may have a hard time understanding what the system is doing, and why. It may be hard for them to intervene if the system fails because they are out of the loop. On the other hand, they may also lose the skills to do the landing manually.&lt;/p&gt;
+&lt;p&gt;Heads up displays use a different approach by providing additional information to the pilot, who then makes the decisions and is handling the flying. The same tools can be used in good and bad weather making the experience similar in each situation. This means they are learning all the time and landing in bad weather is not a completely different experience.&lt;/p&gt;
+&lt;p&gt;I’m advocating this augmentation approach whenever it makes sense. Often keeping the human in the loop, or &quot;coupled to the dynamics of an environment&quot; as &lt;a href=&quot;https://doi.org/10.1080/00140139.2017.1278796&quot;&gt;Stanton et al. describes it&lt;/a&gt;, is beneficial and also socially and ethically viable. It helps to keep the users informed on what happens which is important for security. There is also the concern about security and on who should we put the ultimate trust on (see for example &lt;a href=&quot;https://www.researchgate.net/profile/Andrew_Rae/publication/224384227_The_Operator_or_the_Automation_In_Whom_Should_We_Place_Ultimate_Trust/links/00b4952209eaa3ab6f000000/The-Operator-or-the-Automation-In-Whom-Should-We-Place-Ultimate-Trust.pdf&quot;&gt;Andrew Rae&lt;/a&gt;? In general, I’d say that human users should always be able to override AI decisions (and in a meaningful way as well), but it’s not always that simple.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Human Oversight&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For human oversight the document lists three different approaches:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Human-in-the-loop (HITL): Human intervention in every decision cycle&lt;/li&gt;
+&lt;li&gt;Human-on-the-loop (HOTL): Monitoring  the system’s operation&lt;/li&gt;
+&lt;li&gt;Human-in-command (HIC): Overseeing the overall activity of the AI system and deciding when and if and how to use the system in any situation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If I&apos;m understanding correctly, I’d say that an autonomous landing system would mean human-on-the-loop, HUD system human-in-the-loop, and entity deciding which one to use and how it affects the pilots and safety would be human-in-command.&lt;/p&gt;
+&lt;h2&gt;The Design Perspective&lt;/h2&gt;
+&lt;p&gt;Ethics Guidelines for Trustworthy AI lists principles and requirements and assessment lists, but making sure we design systems that fullfill the requirements is not easy. Also the document itself emphasizes that often different requirements are in conflict and you need to make informed decisions to balance between them. &lt;/p&gt;
+&lt;p&gt;How do you ensure human agency and make sure users can self-assess and challenge the system? If security is at all of the importance and the work requires special skills that should be kept up to date: I’d say keep end-users as much in-the-loop as possible and concentrate on giving them &quot;superpowers&quot; by utilizing improved sensor technology, increased amounts of data and advanced analytics that can be done with it.&lt;/p&gt;
+&lt;p&gt;For understanding the work and environment of the end-users and how to improve them with technology there are a lot of good tools from Beyer&apos;s &amp;#x26; Holtzblatt&apos;s Contextual Design to everything under the human-centered design umbrella. There are tools for &lt;a href=&quot;/writings/designing-to-support-dsa&quot;&gt;designing to support situation awareness&lt;/a&gt; and tools to measure the SA. Task analysis can be used to analyze the work and help to decide how different tasks should be allocated to both AI and humans, and what kind of information is needed to transfer SA. Providing training environments in which humans and automation can learn to work together will be important when AI is being added to systems.&lt;/p&gt;
+&lt;p&gt;The real value of this document is on helping to create an ethical starting point and requirements for the design of the system. Even keeping the users in the center of the design is hard when there are money and technical viewpoints competing - with ethics it might be even harder. &lt;/p&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://ec.europa.eu/futurium/en/ai-alliance-consultation&quot;&gt;Ethics Guidelines for Trustworthy AI&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/24611446-our-robots-ourselves&quot;&gt;Our Robots, Ourselves&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1080/00140139.2017.1278796&quot;&gt;Stanton, N. A., Salmon, P. M., Walker, G. H., Salas, E., &amp;#x26; Hancock, P. A. (2017). State-of-science: situation awareness in individuals, teams and systems. Ergonomics, 60(4), 449–466.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.iconfinder.com/icons/3957659/allocation_human_online_outsource_outsourcing_icon&quot;&gt;Image is from Iconfinder (Flatart)&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Fear]]></title><description><![CDATA[Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the…]]></description><link>https://www.arttuv.com/dev/fear/</link><guid isPermaLink="false">https://www.arttuv.com/dev/fear/</guid><pubDate>Sun, 12 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven&apos;t mastered yet. That can be a lot to bear and a source of anxiety. Kati Vilkki wrote &lt;a href=&quot;https://www.reaktor.com/blog/facing-up-to-a-culture-of-fear/&quot;&gt;a good blog post on culture of fear&lt;/a&gt;, which inspired me to think about the subject from my perspective, on team and single developer level.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -34,7 +118,7 @@
     &lt;/span&gt;
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Being stuck alone brings stress and fear&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;Fear consumes energy, hinders our cognitive functions and may make us withdraw from other people. It can also increase stress, and prolonged stress can, for example, make us less creative and thus hinder our problem-solving skills. Many of these effects are interconnected and can lead to a negative reinforcing cycle. Stress and fear may distance you from colleagues which is exactly the opposite of what you should probably be doing.&lt;/p&gt;
+&lt;p&gt;Fear consumes energy, hinders our cognitive functions and may make us withdraw from other people. It can also increase stress, and prolonged stress can, for example, make us less creative and thus hinder our problem-solving skills. Many of these effects are interconnected and can lead to a negatively affecting reinforcing cycle. Stress and fear may distance you from colleagues which is exactly the opposite of what you should probably be doing.&lt;/p&gt;
 &lt;p&gt;Everything depends on the context: What is causing the fear, who are there to face it with you, and where it happens. Kati lists multiple sources of fear, and I want to concentrate on the following (listing from Kati’s writing):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Loss of status&lt;/li&gt;
