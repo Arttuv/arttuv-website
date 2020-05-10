@@ -3,10 +3,11 @@ module.exports = {
     title: `The Feedback Loop`,
     description: `Creating software and human-computer interactions.`,
     siteUrl: `https://www.arttuv.com`,
-    author: `@arttuv`,
+    author: `Arttu Viljakainen`,
   },
   plugins: [
     'gatsby-plugin-robots-txt',
+    `gatsby-remark-reading-time`,
     {
       resolve: `gatsby-plugin-mailchimp`,
       options: {

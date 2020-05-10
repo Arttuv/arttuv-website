@@ -28,9 +28,11 @@ const LatestWritingsItem = ({ post }) => (
         {post.frontmatter.tags !== null && ( 
           <div className="latest-writings-item-topic">{post.frontmatter.tags}</div>
         )}
-            <Link to={post.frontmatter.path}>
-            {post.frontmatter.date}
-            </Link>
+            <span>
+              <Link to={post.frontmatter.path}>
+              {post.frontmatter.date}
+              </Link>{", " + post.fields.readingTime.text}
+            </span>
         </div>
       </div>
   </article>

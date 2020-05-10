@@ -12,7 +12,7 @@ import TagsComponent from "../components/tags-component"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Home"/>
     <div><BorderedTitle title="Latest" /></div>
     <LatestWritings />
     <div><BorderedTitle title="Author" /></div>
@@ -23,9 +23,9 @@ const IndexPage = () => (
       
         <article className="about-me-text">
           <p>
-            Arttu works as a software consultant focusing on how to help organizations work 
-            in a more agile way. Programming has been a long passion for him, but he also 
-            enjoys focusing on human-computer interaction and other aspects of software development.
+            Arttu works as a software consultant focusing on how to help organizations build software 
+            in an agile way. Programming has been a long passion for him, but he also 
+            enjoys the field of human-computer interaction and other aspects of software development.
           </p>
           <p>
             Follow on <a href="https://twitter.com/arttuv">Twitter</a> or add on <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn.</a> Read more about <Link to="/author/">author</Link>.
@@ -52,7 +52,7 @@ const IndexPage = () => (
         <article>
           <h3><Link to="/research/">Research</Link></h3>
           <p>I'm a PhD researcher at Tampere University.</p>
-          <p>My research interest is how to design software applications to support human performance.</p>
+          <p>My research interest is how to design software to augment human cognitive performance.</p>
         </article>
         </div>
         <BorderedTitle title="Archive" />

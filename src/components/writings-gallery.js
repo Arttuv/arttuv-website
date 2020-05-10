@@ -27,7 +27,12 @@ export default () => (
                     }
                 }
               }
-              
+              fields {
+                slug
+                readingTime {
+                  text
+                }
+              }
             }
           }
         }
