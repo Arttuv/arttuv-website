@@ -7,9 +7,19 @@ import SEO from "../components/seo"
 
 const CVPage = () => (
   <Layout>
-    <SEO title="Author" />
-    <h1>Author</h1>
-    <p>I have 10 years of experience working with software. Most of that time I've been a developer.
+    <SEO title="Arttu Viljakainen" />
+    <h1>Arttu Viljakainen</h1>
+    <p>
+      I as a software consultant focusing on how to help organizations build software 
+      in an agile way. Programming has been a long passion for him, but he also 
+      enjoys the field of human-computer interaction and other aspects of software development.
+    </p>
+    <p>
+      I'm a PhD researcher in Tampere University focusing to studying how advanced automation and
+      artificial intelligence should be incorporated to digital tools to empower human users.
+    </p>
+    <p>
+      Follow on <a href="https://twitter.com/arttuv">Twitter</a> or add on <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn.</a>
     </p>
   </Layout>
 )

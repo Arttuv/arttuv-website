@@ -30,6 +30,13 @@ const TagImage = ({tagName}) => {
           }
         }
       }
+      researchPlaceholderImage: file(relativePath: { eq: "research-placeholder.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 128) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -40,7 +47,11 @@ const TagImage = ({tagName}) => {
     }
     {tagName === 'dev' && 
       <Img fluid={data.devPlaceholderImage.childImageSharp.fluid}  />
-    } </div>
+    } 
+    {tagName === 'research' && 
+      <Img fluid={data.researchPlaceholderImage.childImageSharp.fluid}  />
+    } 
+    </div>
 }
 
 export default TagImage

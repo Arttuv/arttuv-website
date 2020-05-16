@@ -34,7 +34,7 @@ const Footer = ({ siteTitle, small}) => (
           © {new Date().getFullYear()} Arttu V. Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-          <span>, icons by <a href="https://webkul.github.io/vivid/">Vivid</a></span>
+          <span>, icons by <a href="https://webkul.github.io/vivid/">Vivid</a> and <a href="https://www.iconfinder.com/Flatart">Flatart</a></span>
       </div>
       </footer>
       )

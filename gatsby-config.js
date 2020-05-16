@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `The Feedback Loop`,
-    description: `Creating software and human-computer interactions.`,
+    description: `On creating digital tools and human-computer interactions in them`,
     siteUrl: `https://www.arttuv.com`,
     author: `Arttu Viljakainen`,
   },

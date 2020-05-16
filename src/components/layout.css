@@ -3,6 +3,10 @@ body {
   background-color: #fff;
 }
 
+footer {
+  padding: 1rem;
+}
+
 footer .copyright {
   margin-top: 1rem;
   text-align: center;
