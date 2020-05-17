@@ -10,7 +10,7 @@ const CVPage = () => (
     <SEO title="Arttu Viljakainen" />
     <h1>Arttu Viljakainen</h1>
     <p>
-      I as a software consultant focusing on how to help organizations build software 
+      I work as a software consultant focusing on how to help organizations build software 
       in an agile way. Programming has been a long passion for him, but he also 
       enjoys the field of human-computer interaction and other aspects of software development.
     </p>

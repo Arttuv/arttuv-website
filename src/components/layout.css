@@ -14,7 +14,7 @@ footer .copyright {
 
 .commentsSection {
   border-top: 1px solid lightgray;
-  font-size: smaller;
+  font-size: normal;
   padding-top: 1rem;
   margin: 1rem;
 }
@@ -23,7 +23,7 @@ footer .copyright {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  font-size: smaller;
+  font-size: normal;
 }
 .rssSubscribe h1 {
   font-size: 1.2rem;
@@ -210,7 +210,7 @@ header li {
   margin-bottom: 0px;
   text-align: center;
   font-weight: normal;
-  font-size: smaller;
+  font-size: normal;
 }
 
 .site-title-small h1 {
@@ -360,13 +360,13 @@ a {
 
   .post-summary {
     display:initial;
-    font-size: smaller;
+    font-size: normal;
   }
 
   .article-read-more {
     display: none;
     float: right;
-    font-size: smaller;
+    font-size: normal;
   }
 
   .archive-description {
@@ -395,7 +395,7 @@ a {
   .archive-article-item {
     margin: 1rem;
     min-width: 259px;
-    font-size: smaller;
+    font-size: normal;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -444,7 +444,7 @@ a {
       font-size: 1.5rem;
     }
     .site-description {
-      font-size: smaller;
+      font-size: normal;
     }
     .article .gatsby-image-wrapper {
       display: none;
