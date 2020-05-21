@@ -29,6 +29,7 @@ p {
 footer .copyright {
   margin-top: 1rem;
   text-align: center;
+  font-size: smaller;
 }
 
 .commentsSection {
@@ -111,6 +112,7 @@ footer .copyright {
     margin: 0 auto;
     max-width: 60rem;
     padding: 0 1.0875rem 1.45rem;
+    padding-bottom: 0px;
 }
 
 .blog-post {

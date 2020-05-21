@@ -21,25 +21,28 @@ const Footer = ({ siteTitle, small}) => (
       }}>
   <div className="footerContent">
 
-      <div>
-      <MailchimpSubscribe />      
+  <div>
+    <MailchimpSubscribe />      
+    </div>
+    <div className="bottomNavigation">
+        <ul style={{ listStyle: `none`}}>
+          <ListLink to="/">Home</ListLink>
+          <ListLink to="/writings/">Writings</ListLink>
+          <ListLink to="/author/">Author</ListLink>
+          <a href="#top">^ Top</a>
+        </ul>
       </div>
-      <div className="bottomNavigation">
-          <ul style={{ listStyle: `none`}}>
-            <ListLink to="/">Home</ListLink>
-            <ListLink to="/writings/">Writings</ListLink>
-            <ListLink to="/author/">Author</ListLink>
-            <a href="#top">^ Top</a>
-          </ul>
-        </div>
   </div>
         <div className="copyright">
-          © {new Date().getFullYear()} Arttu V. Built with
+          <p>
+          © {new Date().getFullYear()} Arttu Viljakainen. 
+          All texts published are under <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike License</a> - attribution is required. Ask permission before using any photos.
+          Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
           <span>, icons by <a href="https://webkul.github.io/vivid/">Vivid</a> and <a href="https://www.iconfinder.com/Flatart">Flatart</a></span>
+          </p>
       </div>
-
       </footer>
       )
 

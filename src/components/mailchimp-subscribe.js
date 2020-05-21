@@ -16,8 +16,9 @@ const MailchimpSubscribe = ({ siteTitle, small}) => {
 
             <div className="mailchimpSubscribe">
                 <h2>Follow using Mailchimp</h2>
+                <a href="http://eepurl.com/g130PD" target="_blank" rel="noopener noreferrer">Mailchimp subscribtion</a>
                 <p>Emails are used only to provide updates on this website, not to deliver any kind of advertisements.</p>
-                <p>Go to the Mailchimp <a href="http://eepurl.com/g130PD" target="_blank" rel="noopener noreferrer">subscribtion form</a>.</p>
+                
             </div>
         </>
     )
