@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import WritingsGallery from "../components/writings-gallery"
@@ -10,9 +10,23 @@ import ImageFace from "../components/image-face"
 import LatestWritings from "../components/latest-writings"
 import TagsComponent from "../components/tags-component"
 import Img from "gatsby-image"
+import BackgroundSection from "../components/background-section"
+import Header from "../components/header";
+
 
 const IndexPage = ({data}) => (
+  
+  <>
+    <BackgroundSection>
+    <div className = {"page-container"}>
+        <main>
+        <h1>Notetaking</h1>
+      <p>Handwritten notetaking is undervalued, and today you can do it both traditionally with pen and paper and digitally with iPad Pro.</p>
+        </main>
+     </div>
+    </BackgroundSection>
   <Layout small="small">
+
     <SEO title="Notetaking" />
         <article>
             <h1>
@@ -60,6 +74,8 @@ const IndexPage = ({data}) => (
             </p>
         </article>
     </Layout>
+    </>
+
 )
 
 export const query = graphql`
@@ -85,10 +101,14 @@ query {
           }
         }
       }
+      site {
+        siteMetadata {
+          title
+        }
+      }
     
 }
 
 `
 
 export default IndexPage
-
