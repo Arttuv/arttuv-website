@@ -2,6 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 import { BackgroundImage } from "gatsby-background-image"
+import kebabCase from "lodash/kebabCase"
 
 const GalleryArticle = ({ post }) => (
 
@@ -16,12 +17,15 @@ const GalleryArticle = ({ post }) => (
       
       <div className="archive-article-item-summary-read-more">
       {post.frontmatter.tags !== null && ( 
-        <div className="archive-article-item-topic">{post.frontmatter.tags}</div>
-      )}
+          post.frontmatter.tags.map( tag => {
+            return <div className="archive-article-item-topic"><Link to={`/tags/${kebabCase(tag)}/`}>
+                    {"#" + tag}
+                  </Link></div>
+          }))}
+
       <span>
-        <Link to={post.frontmatter.path}>
         {post.frontmatter.date}
-        </Link>{", " + post.fields.readingTime.text}
+        {", " + post.fields.readingTime.text}
       </span>
       </div>
     </div>

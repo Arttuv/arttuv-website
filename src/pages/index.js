@@ -12,7 +12,7 @@ import TagsComponent from "../components/tags-component"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="The Feedback Loop"/>
+    <SEO title="Arttu Viljakainen"/>
     <div><BorderedTitle title="Latest" /></div>
     <LatestWritings />
     <div><BorderedTitle title="Author" /></div>
@@ -41,13 +41,13 @@ const IndexPage = () => (
         <div className="editors-choice">
         <article>
           <h3> <Link to="/notetaking/">Notetaking</Link></h3>
-          <p>I really like taking notes, both by traditional pen & paper but also using an iPad and Apple Pencil.</p>
+          <p>I like taking handwritten notes, be it traditional pen & paper or digital iPad Pro & Apple Pencil.</p>
           <p>I buy too many pens and notebooks, and I'll never stop searching That Perfect notetaking app.</p>
         </article>
         <article>
           <h3> <Link to="/books/">Books</Link></h3>
           <p>I love books and I try to read as much as I can. I share the best over here.</p>
-          <p>Most of them are non-fiction for sure.</p>
+          <p>Concentrating on non-fiction.</p>
         </article>
         <article>
           <h3><Link to="/research/">Research</Link></h3>

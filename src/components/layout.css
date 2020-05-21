@@ -1,10 +1,29 @@
 body {
+  /*color: hsla(0,0%,0%,0.8);*/
   color: #000;
   background-color: #fff;
 }
 
+/*
+  dark background:
+  #242424
+  creamy beackground:
+  #ede4d5
+  
+  red
+  #ce4f25
+*/
 footer {
   padding: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: row;
 }
 
 footer .copyright {
@@ -17,6 +36,7 @@ footer .copyright {
   font-size: normal;
   padding-top: 1rem;
   margin: 1rem;
+  font-size: smaller;
 }
 
 .bottomNavigation {
@@ -25,8 +45,17 @@ footer .copyright {
   justify-content: flex-end;
   font-size: normal;
 }
+
+.bottomNavigation li {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  text-align: right;
+}
+
 .rssSubscribe h1 {
-  font-size: 1.2rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .mailchimpSubscribe form {
@@ -45,30 +74,31 @@ footer .copyright {
   margin-left: 1rem;
 }
 .rssSubscribe p {
-  font-size: smaller;
-}
-
-.mailchimpSubscribe h1 {
-  font-size: 1.2rem;
+  font-size: normal;
 }
 
 .mailchimpSubscribe h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mailchimpSubscribe h3 {
   padding-top: 1rem;
   font-size: 1rem;
 }
 
 .mailchimpSubscribe p {
-  font-size: smaller;
+  font-size: normal;
 }
 
 .mailchimpSubscribe button {
   border: none;
-  color: brown;
+  color: #3190F5;
 }
 
 .mailchimpSubscribeButton {
   border: 1px solid lightgray;
-  color: brown;
+  color: #3190F5;
 }
 
 .mailchimpSubscribe iframe {
@@ -105,8 +135,8 @@ footer .copyright {
 }
 
 .blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5 {
-  padding-left: 0.5rem;
-  margin-left: -1.5rem;
+  padding-left: 0rem;
+  margin-left: 0rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-top: 0rem;
@@ -165,7 +195,16 @@ footer .copyright {
 }
 
 .blog-post ul {
-  margin-left: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-post ul li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-post p {
+  margin-bottom: 1rem;
 }
 
 .article-read-more {
@@ -181,8 +220,8 @@ h2 {
 a h3 {
     text-decoration: none;
     color: black;
-    font-size: 1.5rem;
-    margin-bottom: 0.3rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     font-weight: normal;
 }
 
@@ -191,7 +230,7 @@ header {
 }
 
 header h1 {
-  margin-bottom: 0px;
+  margin-bottom: 0.5rem;
   font-weight: normal;
 }
 
@@ -228,15 +267,15 @@ header li {
 
  .blog-post-content p:first-child:first-letter {
   float: left;
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 3.4rem;
+  line-height: 3.5rem;
   padding-top: 0px;
   padding-right: 0.5rem;
   padding-left: 0px;
 }
 
 a {
-    color: brown;
+    color: #3190F5;
     text-decoration: none;
   }
   
@@ -249,7 +288,7 @@ a {
   }
   
   a:visited {
-    color: brown;
+    color: #3190F5;
   }
   
   
@@ -257,7 +296,7 @@ a {
     display: inline-block;
     position: relative;
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 .bordered-title-bar h4 {
     display: block;
@@ -265,13 +304,14 @@ a {
     background-color: white;
     padding-right: 5px;
     text-transform: uppercase;
+    margin-bottom: 0rem;
 }
 
 .bordered-title-bar div {
     display: block;
     border-bottom-style: solid;
     border-bottom-width: thin;
-    margin-top: 10.5px;
+    margin-top: 9.5px;
 }
 
 .latest-writings-item {
@@ -292,6 +332,10 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.latest-writings-item-summary-read-more span {
+  margin-right: 0.5rem;
 }
 
 .about-me-text {
@@ -323,19 +367,27 @@ a {
 }
 
 .editors-choice {
+  padding: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.editors-choice article a {
-  color: black;
+.editors-choice article:not(first-child) {
+  padding-left: 1rem;
 }
 .editors-choice article {
-  max-width: 250px;
-  padding-left: 1rem;
+  border-right: 1px solid lightgray;
   padding-right: 1rem;
+}
 
+.editors-choice h3 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.editors-choice article a {
+  color: black;
 }
 
 .editors-choice article:last-of-type {
@@ -375,6 +427,8 @@ a {
 
   .archive-tags {
     margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
     width: 100%;
     display: inline-flex;
     flex-direction: row;
@@ -400,9 +454,13 @@ a {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .archive-article-item h3 {
+    font-size: 1.5rem;
+  }
   
   .archive-article-item:nth-of-type(odd) {
-    border-right: 1px solid lightslategray;
+    border-right: 1px solid lightgray;
     margin-right: 0px;
     padding-right: 2rem;
   }
@@ -487,12 +545,17 @@ a {
 
     .editors-choice {
       flex-direction: column;
+      padding-left: 0px;
+      padding-right: 0px;
     }
 
     .editors-choice article {
       border-right: none;
+      padding-right: 0px;
+      padding-left: 0px;
       min-width: 100%;
     }
+
     .archive-article-item:nth-of-type(odd) {
       border-right: none;
       margin-right: 0rem;
@@ -516,7 +579,7 @@ a {
     }
 
     .blog-post {
-      font-size: smaller;
+      font-size: normal;
       border-left-style: none;
       border-right-style: none;
       padding-left: 0.5rem;

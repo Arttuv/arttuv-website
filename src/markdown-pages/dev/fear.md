@@ -1,7 +1,7 @@
 ---
 path: "/writings/fear"
 date: "2020-04-12"
-title: "Fear"
+title: "The difficulty of saying I don't know"
 tags: ["dev"]
 featuredImage: "coder-fear.jpeg"
 summary: "Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven't mastered yet. That can be a lot to bear and a source of anxiety. By being vulnerable and admitting you need help, you can start creating a safer environment."

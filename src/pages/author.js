@@ -7,12 +7,10 @@ import SEO from "../components/seo"
 
 const CVPage = () => (
   <Layout>
-    <SEO title="Arttu Viljakainen" />
+    <SEO title="Arttu Viljakainen CV" />
     <h1>Arttu Viljakainen</h1>
     <p>
-      I work as a software consultant focusing on how to help organizations build software 
-      in an agile way. Programming has been a long passion for him, but he also 
-      enjoys the field of human-computer interaction and other aspects of software development.
+      I'm a software developer.
     </p>
     <p>
       I'm a PhD researcher in Tampere University focusing to studying how advanced automation and

@@ -27,6 +27,7 @@ const Layout = ({ children, small }) => {
 
   return (
     <>
+      <a name="top"></a>
       <Header siteTitle={data.site.siteMetadata.title} small={small}/>
       <div className = {"page-container"}>
         <main>{children}</main>

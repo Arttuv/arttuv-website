@@ -1,10 +1,10 @@
 ---
 path: "/writings/rss-and-the-future-or-past-of-web"
 date: "2020-05-16"
-title: "RSS And the future, or past, of web"
+title: "RSS And The Future, or Past, of Web"
 tags: ["research"]
 featuredImage: "handrawn-google-trend-rss.png"
-summary: "I was using RSS a lot around 2013, and I want to go back. I'd like to be more in control on what stories I see each day. At the same time I know the amount of items in RSS feeds can be intimidating, so I'm excited to try out new tools to combat information overload as well. I'm glad to see that RSS is not *dead*, even though I understand it probably should evolve as well. Feed aggregators must evolve as wee, because the very basis of their being is dissolving."
+summary: "I was using RSS a lot around 2013, and I want to go back. I'd like to be more in control on what stories I see each day. At the same time I know the amount of items in RSS feeds can be intimidating, so I'm excited to try out new tools to combat information overload as well. I'm glad to see that RSS is not *dead*, even though I understand it probably should evolve as well. Feed aggregators must evolve as well, because the very basis of their being is dissolving."
 ---
 
 Fine, you can call me a dinosaur but I miss RSS. After a few years of break, I logged in to [Feedly](https://feedly.com/i/welcome) to find the world as it was back in 2014. There were even a few interesting articles I had saved and then forgotten - for example, “Sketching as a professional practice” from Futurcice’s blog (the link is dead and I couldn’t find the post anymore). This demonstrates one beautiful aspect of RSS feeds - you can easily store it and I was able the read the article even though it might have been abandoned by the original publisher already.
@@ -15,11 +15,11 @@ Anyway, this is not about me but RSS. I was a [Google Reader](https://en.wikiped
 
 ## Declining popularity
 
-Google didn't kill RSS, the decline on RSS popularity had started much earlier as you can see from the Google Trens graph
+Google didn't kill RSS, the decline on RSS popularity had started much earlier as you can see from the Google Trends graph:
 
 ![Google Trend - RSS](handrawn-google-trend-rss.png "Google Trend - RSS")
 
-Vice has a good story on the history of RSS: [The Rise and Demise of RSS - VICE](https://www.vice.com/en_us/article/a3mm4z/the-rise-and-demise-of-rss)
+Vice has a good story on the history of RSS: [The Rise and Demise of RSS - VICE](https://www.vice.com/en_us/article/a3mm4z/the-rise-and-demise-of-rss).
 
 I understand completely the declining popularity of RSS - it is not for everyone. It requires work to set up your feeds and filter them. The result can, however, be much more interesting than if you only see “trending” or “most read” content. Using algorithms to provide that service makes sense: A lot of people want to see those entertaining stories of the day as easily as possible, and there is nothing wrong with that. 
 
@@ -39,7 +39,9 @@ Brian Barrett from Wired published a post on 2018 with a title “[It’s Time f
 
 The problem of RSS feeds is the lack of analytics, missing ad revenue, and missing branding. As someone not making his living on publishing, I'd say that the content should be the solution for these: You are not forced to publish the whole story in the RSS feed, and the content itself should be the thing that draws people in - they will be happy to see your publication in their feed and click it to go to your website.
 
-I subscribed to Feedly Pro+ (because I'm interested in [Leo](https://blog.feedly.com/leo/)) and look forward to seeing how it goes. I’ve also started to gather some tools to help finding and getting those RSS feeds and I’ll share them in the future. I must admit that the beginning has not been very convincing. A lot of scientific article publishers have removed or abandoned their feeds. 
+I subscribed to Feedly Pro+ (because I'm interested in [Leo](https://blog.feedly.com/leo/)) and look forward to seeing how it goes. **Update:** I had to cancel Feedly subscription, because it didn't contain all the features I want in Pro+ tier, and business is not feasible for individual users. I like the Feedly UI and what they are doing, but for my use case it's just not the perfect choice.
+
+I’ve also started to gather some tools to help finding and getting those RSS feeds and I’ll share them in the future. I must admit that the beginning has not been very convincing. A lot of scientific article publishers have removed or abandoned their feeds. 
 
 For news aggregators, machine learning and AI brings opportunities, paywalls and dying feeds threats.
 

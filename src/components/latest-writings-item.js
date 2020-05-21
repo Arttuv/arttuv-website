@@ -2,7 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 import { BackgroundImage } from "gatsby-background-image"
-  
+import kebabCase from "lodash/kebabCase"
+
 const LatestWritingsItem = ({ post }) => (
 
   <article className="latest-writings-item">
@@ -26,12 +27,15 @@ const LatestWritingsItem = ({ post }) => (
         
         <div className="latest-writings-item-summary-read-more">
         {post.frontmatter.tags !== null && ( 
-          <div className="latest-writings-item-topic">{post.frontmatter.tags}</div>
-        )}
+          post.frontmatter.tags.map( tag => {
+            return <span><Link to={`/tags/${kebabCase(tag)}/`}>
+                    {"#" + tag}
+                  </Link></span>
+          }))
+          }
             <span>
-              <Link to={post.frontmatter.path}>
               {post.frontmatter.date}
-              </Link>{", " + post.fields.readingTime.text}
+              {", " + post.fields.readingTime.text}
             </span>
         </div>
       </div>

@@ -2,25 +2,28 @@ import Typography from "typography"
 
 const typography = new Typography({
   baseFontSize: "16px",
-  baseLineHeight: 1.5,
+  baseLineHeight: 1.8,
   headerFontFamily: [
-    "Girassol",
+    "Oswald",  "sans-serif"
   ],
-  bodyFontFamily: ["Libre Caslon Text"],
+  bodyFontFamily: ["Open Sans", "sans-serif"],
   googleFonts: [
     {
-      name: 'Girassol',
+      name: 'Oswald',
       styles: [
         '400',
       ],
     },
     {
-      name: 'Libre Caslon Text',
+      name: 'Open Sans',
       styles: [
         '400',
       ],
     },
   ],
   
-})
+});
+
+typography.injectStyles();
+
 export default typography

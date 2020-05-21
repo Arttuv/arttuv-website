@@ -19,7 +19,7 @@ const IndexPage = ({data}) => (
                 Notetaking
             </h1>
             <p>
-                I like taking notes by handwriting - you can almost always bring your notebook with you, and
+                I like taking handwritten notes - you can almost always bring your notebook with you, and
                 it doesn't feel as disrespectful to not down some words by hand compared to using computer for the same task.
             </p>
 
