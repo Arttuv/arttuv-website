@@ -17,17 +17,20 @@ import Header from "../components/header";
 const IndexPage = ({data}) => (
   
   <>
+    <SEO title="Notetaking" />
+
     <BackgroundSection>
-    <div className = {"page-container"}>
-        <main>
-        <h1>Notetaking</h1>
-      <p>Handwritten notetaking is undervalued, and today you can do it both traditionally with pen and paper and digitally with iPad Pro.</p>
-        </main>
+    <div className = {"page-container graphical-page"}>
+          <div className="title-section">
+            <h1>Notetaking</h1>
+            <div className="title-motivation">
+              <p>Handwritten notetaking is undervalued, and today you can do it both traditionally with pen and paper and digitally with iPad Pro.</p>
+            </div>
+          </div>
      </div>
     </BackgroundSection>
   <Layout small="small">
 
-    <SEO title="Notetaking" />
         <article>
             <h1>
                 Notetaking
