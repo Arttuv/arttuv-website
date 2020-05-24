@@ -52,3 +52,7 @@ If I'd try predicting something about the future of feed aggregators, I'd say th
 Up until recent years feed aggregators have been able to concentrate on the feed aggregating and processing part, but in the future they are forced to build capabilities to build those feeds as well. Otherwise their users, and they as a service, are depending on other services to provide those feeds. It cuts away large portion of users
 
 PS,  [please add RSS support to your site](https://kevq.uk/please-add-rss-support-to-your-site/).
+
+# Updates to This Text
+
+* **24. May 2020**: Daniel Miessler published a post with a title "[It's Time to Get Back Into RSS](https://danielmiessler.com/blog/its-time-to-get-back-into-rss/?utm_source=hackernewsletter&utm_medium=email&utm_term=fav)" and did a much better work describing why RSS is great. He also encourages people to log in to Feedly and try following some RSS feeds. I'd like to add that [Inoreader](https://www.inoreader.com/) is also a great option if you have problems with the limitations in Feedly's free tier.
