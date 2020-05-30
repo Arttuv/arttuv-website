@@ -4,29 +4,69 @@ body {
   background-color: #fff;
 }
 
+.graphical-page-background {
+  background-color: #242424;
+}
+
 .graphical-page .title-section {
-  background-color: #24242488;
+  background-color: #242424;
+  max-width: 50rem;
   color: #ce4f25;
-  max-width: 20rem;
-  padding: 1rem;
-  position: absolute;
-  margin: auto 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  padding: 0rem;
+  margin: 0px auto;
 }
 
 .graphical-page .title-motivation {
-  background-color: #ce4f25;
-  color: #242424;
-  padding: 1rem;
+  background-color: #242424;
+  color: #ce4f25;
+  padding: 0px 1rem;
 }
 
+.graphical-page .title-motivation p {
+  margin-bottom: 0px;
+}
+
+.graphical-page-menu {
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.graphical-page-menu ul {
+  margin: 0px;
+}
+
+.graphical-page-menu a, .graphical-page-menu a:visited {
+  font-size: 1rem;
+  color: white;
+  text-decoration: underline;
+}
 
 .graphical-page h1 {
-  color: #ce4f25;
+  color: #fff;
   display: table;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+}
+
+.graphical-page-header-image .gatsby-image-wrapper {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  background-color: #242424;
+}
+
+.graphical-page-container {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #EDE4D5;
+}
+
+.graphical-page-container footer {
+  background-color: #242424;
+  color: #fff;
 }
 
 /*

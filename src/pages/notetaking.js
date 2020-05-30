@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-import Layout from "../components/layout"
+import GraphicalLayout from "../components/graphical-layout"
 import WritingsGallery from "../components/writings-gallery"
 import Image from "../components/image"
 import SEO from "../components/seo"
@@ -18,23 +18,17 @@ const IndexPage = ({data}) => (
   
   <>
     <SEO title="Notetaking" />
+    <div className="graphical-page-background">
+    <div className="graphical-page-header-image">
+      <BackgroundSection>
+      
+      </BackgroundSection>
+    </div>
 
-    <BackgroundSection>
-    <div className = {"page-container graphical-page"}>
-          <div className="title-section">
-            <h1>Notetaking</h1>
-            <div className="title-motivation">
-              <p>Handwritten notetaking is undervalued, and today you can do it both traditionally with pen and paper and digitally with iPad Pro.</p>
-            </div>
-          </div>
-     </div>
-    </BackgroundSection>
-  <Layout small="small">
+  
+  <GraphicalLayout small="small">
 
         <article>
-            <h1>
-                Notetaking
-            </h1>
             <p>
                 I like taking handwritten notes - you can almost always bring your notebook with you, and
                 it doesn't feel as disrespectful to not down some words by hand compared to using computer for the same task.
@@ -76,7 +70,9 @@ const IndexPage = ({data}) => (
                 Procreate is an awesome piece of software for painting and a really good candidate for <strong>sketchnoting</strong> as well. It has a good selection of calligraphy pens and writing and drawing always feels a pleasure. As a painting software it doesn't support multiple pages, unless you count the layers, so it can't be recommending it for notetaking is a bit risky. Still, nothing in the world of digital notetaking beats the feel of Procreate on iPad with Apple Pencil.
             </p>
         </article>
-    </Layout>
+    </GraphicalLayout>
+    </div>
+
     </>
 
 )

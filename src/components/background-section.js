@@ -42,7 +42,7 @@ const BackgroundSection = ({ className, children }) => {
           fluid={imageData}
           backgroundColor={`#040e18`}
           // Title get's passed to both container and noscriptImg.
-          title="gbitest"
+          title="Notetaking"
           // style={{
           //   // Defaults are overwrite-able by setting one of the following:
           //   // backgroundSize: '',
@@ -56,9 +56,9 @@ const BackgroundSection = ({ className, children }) => {
           // set this to true to disable the "opacity hack":
           // preserveStackingContext={true}
           // You can "safely" (look them up beforehand ; ) add other props:
-          id="gbitest"
+          id="notetaking"
           role="img"
-          aria-label="gbitest"
+          aria-label="notetaking"
         >
          {children}
 

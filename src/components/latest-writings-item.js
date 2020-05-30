@@ -6,7 +6,7 @@ import kebabCase from "lodash/kebabCase"
 
 const LatestWritingsItem = ({ post }) => (
 
-  <article className="latest-writings-item">
+  <article className="latest-writings-item" key={post.frontmatter.title}>
     <div className="latest-writings-item-image">
     
       {post.frontmatter.featuredImage !== null && (
