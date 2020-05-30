@@ -14,9 +14,7 @@ What is the best feed aggregator, reader or feed service depends on your needs, 
 I will explain why, and why I might also return to Feedly.
 
 # What Makes a Feed Aggregator
-I noticed that I need to define more precisely what I’m gonna need, to find the best tool(s) for the job as well.
-
-This is what a feed aggregator does, and what features I need.
+I noticed that I need to define more precisely what I’m gonna need, to find the best tool(s) for the job as well. This is what a feed aggregator does, and what features I need.
 
 ## Essential Features
 
@@ -35,7 +33,7 @@ Finally, you have the content, so you’d like to store and search it, and just 
 
 ![Feed aggregator differentiators](feed-aggregator-differentiators.jpeg "Feed aggregator differentiators")
 
-Feedly and Inoreader have some differences in the essential features, and a bit surprisingly Inoreader is stronger on this front. Both can handle RSS and Twitter, but only Inoreader can extract [feed from a website that doesn’t provide RSS](https://blog.inoreader.com/2020/04/convert-almost-any-webpage-into-rss-feed-with-inoreaders-web-feeds.html) (if the structure of the website is simple enough) and give you *an email address to be used to subscribe for newsletters*.
+Feedly and Inoreader have some differences in the essential features, and a bit surprisingly Inoreader is stronger on this front. Both can handle RSS and Twitter, but only Inoreader can extract [feed from a website that doesn’t provide RSS](https://blog.inoreader.com/2020/04/convert-almost-any-webpage-into-rss-feed-with-inoreaders-web-feeds.html) (if the structure of the website is simple enough) and give you **an email address to be used to subscribe for newsletters**.
 
 Inoreader is also able to **fetch the full article in reading view**, which Feedly is not able to do. Originally I thought it wouldn’t matter that much, but it makes skimming the content faster, even though you’d use another app to read the article. It’s also like using the reading view on the browser.
 
@@ -48,16 +46,7 @@ Finally, Inoreader lets you [create your own feeds](https://blog.inoreader.com/2
 
 The most interesting advanced feature is **AI**. You’ll get overwhelmed with the amount of content pretty quickly, and AI is one of the most promising ways to ease that burden. This is an advanced feature because it doesn’t do much if you don’t get the content in the first place, and be able to read it. 
 
-That’s lower in the need hierarchy. 
-
-Especially [named entity recognition](https://blog.feedly.com/named-entity-recognition-skill-leo/) would make life so much easier. When I was experimenting with Feedly, I was able to filter out Trump and COVID-19 as named entities, and that’s it. Inoreader does not have AI capabilities, so I’d need to create the rule manually, trying to find the combination of words that match what I mean. 
-
-[Topic detection](https://blog.feedly.com/leo-and-topics/) might be even more important - after all, a lot of articles may mention Trump or COVID-19, but they are not necessarily an important part of the article. I don’t want to avoid seeing those words, I want to avoid the noise that they generate.
-
-Naturally, those features can be used to both filter the content and alert on important topics.
-
-## Need Hierarchy of Feed Aggregators
-The importance goes from bottom to top: If you don’t have the things on the bottom, you’ll not care about the things on top.
+That’s lower in the need hierarchy. To me the importance of features would go something like this (the most important ones on the bottom).
 
 * AI 
 * EXPORT
@@ -65,6 +54,12 @@ The importance goes from bottom to top: If you don’t have the things on the bo
 * READ
 * FILTER, ALERT, COMBINE
 * GETTING THE CONTENT IN
+
+Especially [named entity recognition](https://blog.feedly.com/named-entity-recognition-skill-leo/) would make life so much easier. When I was experimenting with Feedly, I was able to filter out Trump and COVID-19 as named entities, and that’s it. Inoreader does not have AI capabilities, so I’d need to create the rule manually, trying to find the combination of words that match what I mean. 
+
+[Topic detection](https://blog.feedly.com/leo-and-topics/) might be even more important - after all, a lot of articles may mention Trump or COVID-19, but they are not necessarily an important part of the article. I don’t want to avoid seeing those words, I want to avoid the noise that they generate.
+
+Naturally, those features can be used to both filter the content and alert on important topics.
 
 ## Features That I Don’t Care About
 > Some features are so far from the core of the feed aggregator, that they’d be better off on another platform. There is value in these features, but they might need specialization and specialized services tend to be better.
@@ -78,6 +73,14 @@ I don’t think **social features** are important to me. It’s kind of nice to 
 **Highlights and notes** are a mystery to me. I keep them elsewhere (and I could see myself using Evernote, Pocket, Instapaper, or even plain old PDF for that. I have a hunch that this might be something I haven’t figured out yet - maybe highlights and comments in a feedreader could be used more as a quick preprocessing step in the process.
 
 # Why Inoreader is Better for Me
+Feedly's and Inoreader's margeting texts support beautifully my valuation of their features:
+
+> "Take back control of you news feed"
+
+> "Goodbye information overload"
+
+First I need to get back the control of my feed and then I can battle the information overload.
+
 Right now Inoreader is better focused on getting the content in (and out) and making it easy to read that content as well. They can generate feeds from websites that don’t provide RSS if the structure of the website is clear enough. It has worked for me every time. It’s ridiculous that nowadays even some blogs don’t provide RSS feeds.
 
 Inoreader can also generate an email address that you can use to follow newsletters, which then pop up to Inoreader as a feed. For example, some academic sources do not allow any kind of RSS or other feeds, and the only option may be email alerts. If you can give the address, you can use the one Inoreader generates for you. Otherwise, you’ll need to create a forward from your email to Inoreader. Tampere University is using Office365 and it was easy to create rules and forwarding.
@@ -93,22 +96,14 @@ Feedly is prettier. I like their UI and I’d like to use it. Inoreader website 
 
 People from Feedly have hinted they are implementing support for generating feeds for non-RSS websites and newsletters. It’ll take some months (as of May 2020), but they should be coming. Feedly’s support has also been helpful so I wouldn’t mind supporting the company.
 
-# If I Could Decide
+# If I Could Get Anything
 The optimal solution would of course be a combination of both - focus on getting the content in where ever and in which format it is, and combining NLP and beautiful UI (and native apps) on top of it. If I can’t get all the sources to the one app, I will need to be using multiple apps, or app and emails, or whatever: It takes time and leads me to forget where I saw That One Article. No social features and no notes or highlights beyond tagging and starring.
 
 Nowadays you can demand a beautiful and snappy application, and you should. The application you use to read most of the content on the web should be beautiful and pleasant to read with. Reading view could be themed based on the color theme of the source website, to help differentiate the reading experience and notice what kind of article you are reading
 
 Everything this under $100 a year
 
-Btw, Feedly's and Inoreader's margeting texts support beautifully my valuation of their features. 
-
-> "Take back control of you news feed"
-
-> "Goodbye information overload"
-
-First I need to get back the control of my feed and then I can battle the information overload.
-
-## My Feature List For Feeds Aggregator
+## Feature Summary For Feeds Aggregator
 
 This is the feature list I use to select a feed aggregator.
 

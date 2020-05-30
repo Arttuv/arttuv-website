@@ -1,9 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `The Feedback Loop`,
+    titleTemplate: "%s · ",
     description: `On creating digital tools and human-computer interactions in them`,
     siteUrl: `https://www.arttuv.com`,
+    url: `https://www.arttuv.com`,
+    image: `../images/arttu_face_2019.jpg`,
     author: `Arttu Viljakainen`,
+    twitterUsername: "@arttuv",
   },
   plugins: [
     'gatsby-plugin-robots-txt',
@@ -44,10 +48,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
+        fonts: [
+          `oswald\:400`,
+          `lora\:400,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -62,6 +70,12 @@ module.exports = {
         name: `mages`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-html-attributes`,
+      options: {
+        lang: `en`
+      }
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,

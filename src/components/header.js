@@ -10,8 +10,7 @@ const ListLink = props => (
 
 const Header = ({ siteTitle, small}) => (
 
-  <div style={{ margin: `0 auto`, maxWidth: `60rem`, padding: `1rem 1.0875rem 0rem` }}>
-    <header style={{ width: '100%', display: 'inline-flex', justifyContent: 'space-between', flexDirection: 'row' }}>
+    <header>
       <span style={{display: 'block'}}></span>
       
 
@@ -40,7 +39,6 @@ const Header = ({ siteTitle, small}) => (
         <ListLink to="/author/">Author</ListLink>
       </ul>
   </header>
-</div>
 )
 
 Header.propTypes = {

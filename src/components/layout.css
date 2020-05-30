@@ -2,6 +2,31 @@ body {
   /*color: hsla(0,0%,0%,0.8);*/
   color: #000;
   background-color: #fff;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: 'lora', serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+}
+
+p {
+  font-size: 1.02rem;
+  line-height: 1.8;;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font: 100%/1.8 'Oswald', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 /*
@@ -52,6 +77,7 @@ footer .copyright {
   justify-content: right;
   width: 100%;
   text-align: right;
+  margin-bottom: 0.5rem;
 }
 
 .rssSubscribe h1 {
@@ -94,12 +120,12 @@ footer .copyright {
 
 .mailchimpSubscribe button {
   border: none;
-  color: #3190F5;
+  color: #2c78ca;
 }
 
 .mailchimpSubscribeButton {
   border: 1px solid lightgray;
-  color: #3190F5;
+  color: #2c78ca;
 }
 
 .mailchimpSubscribe iframe {
@@ -195,13 +221,19 @@ footer .copyright {
   font-size: normal;
 }
 
+.blog-post {
+}
+
+.blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4 {
+} 
+
 .blog-post ul {
   margin-left: 2rem;
   margin-bottom: 1rem;
 }
 
 .blog-post ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .blog-post p {
@@ -228,10 +260,15 @@ a h3 {
 
 header {
   margin-top: 1rem;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 header h1 {
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   font-weight: normal;
 }
 
@@ -266,18 +303,23 @@ header li {
 }
 
 .blog-post-container {
-  max-width: 45rem;
+  max-width: 48rem;
   margin: auto;
+}
+
+/*body {
+  background-color: #EDE4D5 !important;
 }
 
 .blog-post-container {
   background-color: #F2ECE2;
   border: 1px solid lightgray;
-}
+}*/
 
 .blog-post-container blockquote {
   padding-left: 0.5rem;
   border-left: 2px solid lightcoral;
+  margin-bottom: 1rem;
 }
 
 .blog-post-container strong {
@@ -295,7 +337,7 @@ header li {
 }
 
 a {
-    color: #3190F5;
+    color: #2c78ca;
     text-decoration: none;
   }
   
@@ -308,7 +350,7 @@ a {
   }
   
   a:visited {
-    color: #3190F5;
+    color: #2c78ca;
   }
   
   
@@ -331,7 +373,7 @@ a {
     display: block;
     border-bottom-style: solid;
     border-bottom-width: thin;
-    margin-top: 9.5px;
+    margin-top: 30px;
 }
 
 .latest-writings-item {
@@ -340,6 +382,10 @@ a {
   font-size: initial;
   display: flex;
   flex-direction: row;
+}
+
+.latest-writings-item h3 {
+  margin-top: 1rem;
 }
 
 .latest-writings-item-topic {
@@ -377,13 +423,16 @@ a {
 
 .gatsby-image-wrapper {
   margin-right: 0.5rem;
- 
 }
 
 .gatsby-image-wrapper .picture img {
   object-fit: contain;
   height: inherit;
   width: inherit;
+}
+
+.gatsby-resp-image-image {
+  border: 1px solid lightslategray;
 }
 
 .editors-choice {
@@ -556,6 +605,7 @@ a {
       margin-left: 0px;
       padding-right: 0.5rem;
     }
+
     .latest-writings-item-image .gatsby-image-wrapper {
       margin-right: 0px;
       margin-left: 0px;
