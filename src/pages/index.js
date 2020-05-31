@@ -56,7 +56,7 @@ const IndexPage = () => (
         </article>
         </div>
         <BorderedTitle title="Archive" />
-        <p className="archive-description">I have quite resently realized, that systems thinking is something that resonates with me and somewhat describes how I approach the world. Most of these writings are about human-computer interaction, but I expect there to be a lot of texts about how organizations do software in the future.</p>
+        <p className="archive-description">I have quite resently realized, that systems thinking is something that resonates with me and somewhat describes how I approach the world. Most of these writings are about human-computer interaction, but I expect there to be a lot of texts about how organizations build software in the future.</p>
         <div className="archive-tags">
           <TagsComponent />
         </div>

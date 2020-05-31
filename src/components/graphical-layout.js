@@ -36,20 +36,22 @@ const GraphicalLayout = ({ children, small }) => {
     <>
       <a name="top"></a>
       <div className = {"page-container graphical-page"}>
-      <div className="title-section">
-        <h1>Notetaking</h1>
-        <div className="title-motivation">
-          <p>Handwritten notetaking is undervalued, and today you can do it both traditionally with pen and paper and digitally with iPad Pro. This is my setup.</p>
+        
+        <div className="title-section">
+          <h1>Notetaking</h1>
+          <div className="title-motivation">
+            <p>Handwritten notetaking is undervalued, and today you can do it both traditionally with pen and paper and digitally with iPad Pro. This is my setup.</p>
+          </div>
+      
+          
         </div>
-       
+        <div className="graphical-page-menu">
+            <ul style={{ listStyle: `none`}}>
+              <ListLink to="/">Back Home</ListLink>
+            </ul>
+          </div>
       </div>
-    
-      </div>
-      <div className="graphical-page-menu">
-        <ul style={{ listStyle: `none`}}>
-          <ListLink to="/">Back Home</ListLink>
-        </ul>
-      </div>
+     
       <div className = {"graphical-page-container"}>
         <main>{children}</main>
         <Footer siteTitle={data.site.siteMetadata.title} small={small}/>

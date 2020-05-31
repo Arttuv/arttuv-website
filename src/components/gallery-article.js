@@ -18,7 +18,7 @@ const GalleryArticle = ({ post }) => (
       <div className="archive-article-item-summary-read-more">
       {post.frontmatter.tags !== null && ( 
           post.frontmatter.tags.map( tag => {
-            return <div className="archive-article-item-topic"><Link to={`/tags/${kebabCase(tag)}/`}>
+            return <div className="archive-article-item-topic" key={"gallery-article-item-topic" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
                     {"#" + tag}
                   </Link></div>
           }))}

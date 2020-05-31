@@ -28,7 +28,7 @@ const LatestWritingsItem = ({ post }) => (
         <div className="latest-writings-item-summary-read-more">
         {post.frontmatter.tags !== null && ( 
           post.frontmatter.tags.map( tag => {
-            return <span><Link to={`/tags/${kebabCase(tag)}/`}>
+            return <span key={"link-to-"+tag}><Link to={`/tags/${kebabCase(tag)}/`}>
                     {"#" + tag}
                   </Link></span>
           }))

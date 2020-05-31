@@ -3,6 +3,9 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogPostSummary from "../components/blog-post-summary"
+import { Link } from "gatsby"
+import kebabCase from "lodash/kebabCase"
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -15,7 +18,18 @@ export default function Template({
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <div>
-            <p className="blog-post-date">{frontmatter.date} <br />{frontmatter.tags}</p>
+            <p className="blog-post-date">{frontmatter.date} <br />
+            
+            {frontmatter.tags !== null && ( 
+              frontmatter.tags.map( tag => {
+                return <span><Link to={`/tags/${kebabCase(tag)}/`}>
+                        {"#" + tag}
+                  </Link></span>
+          }))
+          }
+            
+            
+            </p>
           </div>
           <div
             className="blog-post-content"

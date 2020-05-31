@@ -25,7 +25,6 @@ const IndexPage = ({data}) => (
       </BackgroundSection>
     </div>
 
-  
   <GraphicalLayout small="small">
 
         <article>
