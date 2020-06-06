@@ -1,7 +1,7 @@
 ---
 path: "/writings/rss-and-the-future-or-past-of-web"
 date: "2020-05-16"
-title: "RSS And The Future, or Past, of Web"
+title: "Feeds Are The Future"
 tags: ["research"]
 featuredImage: "handrawn-google-trend-rss.png"
 summary: "I was using RSS a lot around 2013, and I want to go back. I'd like to be more in control on what stories I see each day. At the same time I know the amount of items in RSS feeds can be intimidating, so I'm excited to try out new tools to combat information overload as well. I'm glad to see that RSS is not *dead*, even though I understand it probably should evolve as well. Feed aggregators must evolve as well, because the very basis of their being is dissolving."
@@ -52,6 +52,8 @@ For news aggregators, machine learning and AI brings opportunities, paywalls and
 If I'd try predicting something about the future of feed aggregators, I'd say that the focus will drift away from RSS: **Newsletters, API integrations and web crawling will be the main source for updates**, and the hardest part will be copyright issues. For now for example Twitter is easy, because they provide a great API to use. Scientific publishers on the other hand are mainly providing only email subscriptions for paying customers - you'll not get an RSS feed even if you pay. On top of feeds you can build services like Leo - AI to help get alerts and filter out duplicates and unwanted headlines. Those are only second tier features, because without the feeds they are useless. 
 
 Up until recent years feed aggregators have been able to concentrate on the feed aggregating and processing part, but in the future they are forced to build capabilities to build those feeds as well. Otherwise their users, and they as a service, are depending on other services to provide those feeds. It cuts away large portion of users
+
+So, maybe feeds are not the future, but I'll try out if it could be for me.
 
 PS,  [please add RSS support to your site](https://kevq.uk/please-add-rss-support-to-your-site/).
 

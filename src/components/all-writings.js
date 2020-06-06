@@ -8,36 +8,42 @@ export default () => (
   <StaticQuery
     query={graphql`
     query {
-        allMarkdownRemark( sort: { order: DESC, fields: [frontmatter___date] }) {
-          edges {
-            node {
-              id
-              excerpt(pruneLength: 250)
-              frontmatter {
-                date(formatString: "MMMM DD, YYYY")
-                path
-                title
-                tags
-                summary
-                featuredImage {
-                    childImageSharp {
-                        sizes(maxWidth: 250) {
-                        ...GatsbyImageSharpSizes
-                        }
-                    }
-                }
+      allMarkdownRemark( sort: { order: DESC, fields: [frontmatter___date] }) {
+        edges {
+          node {
+            id
+            excerpt(pruneLength: 250)
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              path
+              title
+              tags
+              summary
+              featuredImage {
+                  childImageSharp {
+                      sizes(maxWidth: 800) {
+                      ...GatsbyImageSharpSizes
+                      }
+                      fluid(maxWidth: 800, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluidLimitPresentationSize
+                        
+                      }
+                  }
+                  
               }
-              fields {
-                slug
-                readingTime {
-                  text
-                }
+            }
+            fields {
+              slug
+              readingTime {
+                text
               }
             }
           }
         }
-      }     
-    `}
+      }
+    }     
+  `}
 
     render={data => (
                 data.allMarkdownRemark.edges

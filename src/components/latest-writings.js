@@ -21,10 +21,16 @@ export default () => (
                 summary
                 featuredImage {
                     childImageSharp {
-                        sizes(maxWidth: 250) {
+                        sizes(maxWidth: 800) {
                         ...GatsbyImageSharpSizes
                         }
+                        fluid(maxWidth: 800, quality: 100) {
+                          ...GatsbyImageSharpFluid
+                          ...GatsbyImageSharpFluidLimitPresentationSize
+                          
+                        }
                     }
+                    
                 }
               }
               fields {

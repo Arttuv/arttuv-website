@@ -3,21 +3,19 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+  <li>
     <Link to={props.to}>{props.children}</Link>
   </li>
 )
 
 const Header = ({ siteTitle, small}) => (
 
-    <header>
-      <span style={{display: 'block'}}></span>
-      
-
+    <header className={small ? "small-header" : "normal-header"}>
+      {!small ? (<span style={{display: 'block'}}></span>) : null}
         {!small && (
           <span className="site-title">
           <Link to="/" style={{ textAlign: 'center', textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
-            <h1>The <br/>Feedback Loop</h1>
+            <h1>A. <br /> Viljakainen</h1>
           </Link>
 
           <div className="site-description">On creating digital tools and human-computer interactions in them</div>
@@ -26,7 +24,7 @@ const Header = ({ siteTitle, small}) => (
         {small && (
           <span className="site-title-small">
           <Link to="/" style={{ textAlign: 'center', textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
-            <h1>The Feedback Loop</h1>
+            <h1>A. Viljakainen</h1>
           </Link>
         </span>
         )}    

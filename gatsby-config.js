@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `The Feedback Loop`,
-    titleTemplate: "%s · ",
+    title: `Arttu Viljakainen`,
+    titleTemplate: "%s · Arttu Viljakainen",
     description: `On creating digital tools and human-computer interactions in them`,
     siteUrl: `https://www.arttuv.com`,
     url: `https://www.arttuv.com`,

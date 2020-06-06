@@ -13,10 +13,10 @@ What is the best feed aggregator, reader or feed service depends on your needs, 
 
 I will explain why, and why I might also return to Feedly.
 
-# What Makes a Feed Aggregator
+## What Makes a Feed Aggregator
 I noticed that I need to define more precisely what I’m gonna need, to find the best tool(s) for the job as well. This is what a feed aggregator does, and what features I need.
 
-## Essential Features
+### Essential Features
 
 > Essential features are the essense of the service: Without them other features don't matter.
 
@@ -28,7 +28,7 @@ All that content is going to overwhelm, so you will also need means to filter, c
 
 Finally, you have the content, so you’d like to store and search it, and just maybe do some reading as well.
 
-## The Differentiators
+### The Differentiators
 > The differentiators are essential features, that are missing or implemented exceptionally well. These are the ones that can draw users from competitors, and that you can use to justify higher prices.
 
 ![Feed aggregator differentiators](feed-aggregator-differentiators.jpeg "Feed aggregator differentiators")
@@ -72,7 +72,7 @@ I don’t think **social features** are important to me. It’s kind of nice to 
 
 **Highlights and notes** are a mystery to me. I keep them elsewhere (and I could see myself using Evernote, Pocket, Instapaper, or even plain old PDF for that. I have a hunch that this might be something I haven’t figured out yet - maybe highlights and comments in a feedreader could be used more as a quick preprocessing step in the process.
 
-# Why Inoreader is Better for Me
+## Why Inoreader is Better for Me
 Feedly's and Inoreader's margeting texts support beautifully my valuation of their features:
 
 > "Take back control of you news feed"
@@ -89,14 +89,14 @@ Inoreader fetches the full article so you can read it in their application. It d
 
 Pricing is important, and Inoreader is much cheaper. Current Feedly Pro+ price of $140 feels too much, and because managing feeds and setting up the system is a lot of work, it starts to feel like a vendor lock. Moving out is a big effort, but staying costs a bit too much - it generates cognitive dissonance. I understand that NLP tools are not cheap and cost per users, but I hope they can get the prices a bit lower.
 
-## What I’ll Miss From Feedly 
+### What I’ll Miss From Feedly 
 I was excited about Feedly’s AI offering and it seemed to work at least “OK”. I will probably return to Feedly because of this. 
 
 Feedly is prettier. I like their UI and I’d like to use it. Inoreader website is functional and good enough on desktop, but not on iPad or iPhone, and the apps are not good enough. 
 
 People from Feedly have hinted they are implementing support for generating feeds for non-RSS websites and newsletters. It’ll take some months (as of May 2020), but they should be coming. Feedly’s support has also been helpful so I wouldn’t mind supporting the company.
 
-# If I Could Get Anything
+## If I Could Get Anything
 The optimal solution would of course be a combination of both - focus on getting the content in where ever and in which format it is, and combining NLP and beautiful UI (and native apps) on top of it. If I can’t get all the sources to the one app, I will need to be using multiple apps, or app and emails, or whatever: It takes time and leads me to forget where I saw That One Article. No social features and no notes or highlights beyond tagging and starring.
 
 Nowadays you can demand a beautiful and snappy application, and you should. The application you use to read most of the content on the web should be beautiful and pleasant to read with. Reading view could be themed based on the color theme of the source website, to help differentiate the reading experience and notice what kind of article you are reading

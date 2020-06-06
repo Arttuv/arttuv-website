@@ -18,8 +18,26 @@ export default function Template({
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <div>
-            <p className="blog-post-date">{frontmatter.date} <br />
-            
+            <p className="blog-post-date">{frontmatter.date} 
+            </p>
+          </div>
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </div>
+      </div>
+      
+      <div className="commentsSection">
+        <p>
+          No comments, huh? I haven't found an easy and non-intrusive way to implements comments. I mean, I don't want to add a comment system that tracks people visiting this site etc. That's unfortunate, because I'd like to discuss topics I'm writing about, because any given text is just my understanding of it at that moment. You'd definitely have something valuable to say that would enable me to learn something new. 
+        </p>
+        <p>
+          If you found a mistake, disagree or would like to discuss, <a href="https://twitter.com/arttuv">DM me on Twitter</a> or 
+          <a href={"mailto:arttu.viljakainen@gmail.com?subject=" + frontmatter.title + ""}> send me an email</a>.
+        </p>
+      </div>
+      <p className="blog-post-bottom-tag">
             {frontmatter.tags !== null && ( 
               frontmatter.tags.map( tag => {
                 return <span><Link to={`/tags/${kebabCase(tag)}/`}>
@@ -30,22 +48,6 @@ export default function Template({
             
             
             </p>
-          </div>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-      </div>
-      <div className="commentsSection">
-        <p>
-          No comments, huh? I haven't found an easy and non-intrusive way to implements comments. I mean, I don't want to add a comment system that tracks people visiting this site etc. That's unfortunate, because I'd like to discuss topics I'm writing about, because any given text is just my understanding of it at that moment. You'd definitely have something valuable to say that would enable me to learn something new. 
-        </p>
-        <p>
-          If you found a mistake, disagree or would like to discuss, <a href="https://twitter.com/arttuv">DM me on Twitter</a> or 
-          <a href={"mailto:arttu.viljakainen@gmail.com?subject=" + frontmatter.title + ""}> send me an email</a>.
-        </p>
-      </div>
     </Layout>
   )
 }

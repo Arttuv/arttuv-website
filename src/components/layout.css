@@ -236,6 +236,10 @@ footer .copyright {
   text-align: center;
 }
 
+.blog-post h1 {
+  text-align: center;
+}
+
 .blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5 {
   padding-left: 0rem;
   margin-left: 0rem;
@@ -277,18 +281,27 @@ footer .copyright {
   white-space: nowrap;
 }
 .blog-post-date {
-  font-size: 1.5rem;
-  float: right;
+  text-align: center;
+  color: #ce4f25;
   font-weight: normal;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
-  border-left: solid;
-  border-left-width: 1px;
-  border-left-color: lightgray;
-  border-bottom: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: lightgray;
+  padding-left: auto;
+  margin-left: auto;
 }
+
+.blog-post-date {
+  margin-top: 0px;
+}
+
+.blog-post-bottom-tag {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ce4f25;
+  font-weight: normal;
+  padding-left: auto;
+  margin-left: auto;
+}
+
+
 .blog-post .gatsby-resp-image-figcaption {
   text-align: center;
   font-weight: lighter;
@@ -338,7 +351,17 @@ a h3 {
   padding: 0 0.2rem;
 }
 
-header {
+.small-header {
+  margin-top: 1rem;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-bottom: 1px solid lightgray;
+
+}
+
+.normal-header {
   margin-top: 1rem;
   width: 100%;
   display: inline-flex;
@@ -356,8 +379,15 @@ header ul {
   margin-bottom: 0px;
 }
 
-header li {
+header ul li {
+  display: inline-block;
   margin-bottom: 0.5rem;
+  margin-left: 0px;
+  margin-right: 1rem;
+}
+
+header ul li:last-of-type {
+  margin-right: 0.5rem;
 }
 
 .site-title h1 {
@@ -370,6 +400,9 @@ header li {
   font-size: normal;
 }
 
+.site-title-small {
+  margin-left: 0.5rem;
+}
 .site-title-small h1 {
   font-size: 1.5rem;
 }
@@ -416,6 +449,10 @@ header li {
   padding-left: 0px;
 }
 
+.blog-post-content h3 {
+  font-size: 1.5rem;
+}
+
 a {
     color: #2c78ca;
     text-decoration: none;
@@ -453,7 +490,26 @@ a {
     display: block;
     border-bottom-style: solid;
     border-bottom-width: thin;
-    margin-top: 30px;
+    margin-top: 31px;
+}
+
+.latest-writings {
+    display:grid;
+    /*grid-template-columns: repeat( auto-fit, minmax(420px, 1fr));*/
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    font-size: normal;
+}
+
+.latest-writings-item:nth-of-type(odd) {
+  border-right: 1px solid lightgray;
+  margin-right: 0px;
+  padding-right: 2rem;
+}
+
+.latest-writings-item:last-of-type {
+  border-right: none;
 }
 
 .latest-writings-item {
@@ -466,18 +522,30 @@ a {
 
 .latest-writings-item h3 {
   margin-top: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .latest-writings-item-topic {
   align-self: center;
 }
+.latest-image-item-background-image {
+  min-height: 350px;
+}
 
+.latest-writings-item-title {
+}
 .latest-writings-item-image {
+  
   align-self: center;
   padding-right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.latest-writings-item-summary-read-more {
+  text-align: right;
 }
 
 .latest-writings-item-summary-read-more span {
@@ -645,12 +713,17 @@ a {
       flex-direction: column;
     }
 
+    .latest-writings {
+      display: flex;
+      flex-direction: column;
+    }
+
     
   }
 
   @media (max-width: 620px) {
     h1 {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
     }
     .site-description {
       font-size: normal;
@@ -658,14 +731,17 @@ a {
     .article .gatsby-image-wrapper {
       display: none;
     }
-
-   
+    
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
   }
 
   @media (max-width: 756px) {
 
   .page-container {
-      padding: 0 0.2rem 0.2rem;
+      
+      padding: 0 0.5rem 0.5rem;
   }  
     header {
       margin: 0px;
@@ -674,25 +750,6 @@ a {
 
     header ul {
       margin-bottom: 0px;
-    }
-
-    .latest-writings-item {
-      margin-right: 0px;
-      margin-left: 0px;
-      padding-right: 0.5rem;
-    }
-
-    .latest-writings-item-image {
-      margin-right: 0px;
-      margin-left: 0px;
-      padding-right: 0.5rem;
-    }
-
-    .latest-writings-item-image .gatsby-image-wrapper {
-      margin-right: 0px;
-      margin-left: 0px;
-      padding-right: 0.5rem;
-      max-width: 96px;
     }
 
     .editors-choice {
@@ -718,6 +775,15 @@ a {
       grid-template-columns: auto;
       margin: 0.5rem;
       gap: 0px;
+    }
+
+    .latest-writings {
+      display: grid;
+      grid-template-columns: auto;
+    }
+
+    .latest-writings-item:nth-of-type(odd) {
+      border-right: none;
     }
 
     .archive-article-item {

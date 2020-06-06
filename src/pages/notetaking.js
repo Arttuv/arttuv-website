@@ -17,7 +17,8 @@ import Header from "../components/header";
 const IndexPage = ({data}) => (
   
   <>
-    <SEO title="Notetaking" />
+    <SEO title="Note-taking" />
+    <Header small="small"></Header>
     <div className="graphical-page-background">
     <div className="graphical-page-header-image">
       <BackgroundSection>

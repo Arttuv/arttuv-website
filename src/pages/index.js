@@ -12,9 +12,11 @@ import TagsComponent from "../components/tags-component"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Arttu Viljakainen"/>
+    <SEO title="Home"/>
     <div><BorderedTitle title="Latest" /></div>
-    <LatestWritings />
+    <div className="latest-writings">
+      <LatestWritings className="latest-writings" />
+    </div>
     <div><BorderedTitle title="Author" /></div>
     <div className="about-me-container">
       <div className="about-me-image">

@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const CVPage = () => (
   <Layout>
-    <SEO title="Arttu Viljakainen CV" />
+    <SEO title="CV" />
     <h1>Arttu Viljakainen</h1>
     <p>
       I'm a software developer.
