@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Arttu Viljakainen]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 06 Jun 2020 12:27:28 GMT</lastBuildDate><item><title><![CDATA[Inoreader vs Feedly, and the ultimate feed reader (in 2020)]]></title><description><![CDATA[What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs…]]></description><link>https://www.arttuv.com/research/information-overload/feedly-vs-inoreader-and-the-ultimate-feed-reader/</link><guid isPermaLink="false">https://www.arttuv.com/research/information-overload/feedly-vs-inoreader-and-the-ultimate-feed-reader/</guid><pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs - yours might vary.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Arttu Viljakainen]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 06 Jun 2020 16:03:25 GMT</lastBuildDate><item><title><![CDATA[Inoreader vs Feedly, and the ultimate feed reader (in 2020)]]></title><description><![CDATA[What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs…]]></description><link>https://www.arttuv.com/research/information-overload/feedly-vs-inoreader-and-the-ultimate-feed-reader/</link><guid isPermaLink="false">https://www.arttuv.com/research/information-overload/feedly-vs-inoreader-and-the-ultimate-feed-reader/</guid><pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs - yours might vary.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;writings/../rss-and-the-future-or-past-of-web.md&quot;&gt;As I wrote&lt;/a&gt;, I’ve started using RSS again after some five years break. &lt;a href=&quot;https://feedly.com/&quot;&gt;Feedly&lt;/a&gt; and &lt;a href=&quot;https://www.inoreader.com/&quot;&gt;Inoreader&lt;/a&gt; are two services I’ve been comparing now, and I think I will need to be using Inoreader. &lt;/p&gt;
 &lt;p&gt;I will explain why, and why I might also return to Feedly.&lt;/p&gt;
-&lt;h1&gt;What Makes a Feed Aggregator&lt;/h1&gt;
+&lt;h2&gt;What Makes a Feed Aggregator&lt;/h2&gt;
 &lt;p&gt;I noticed that I need to define more precisely what I’m gonna need, to find the best tool(s) for the job as well. This is what a feed aggregator does, and what features I need.&lt;/p&gt;
-&lt;h2&gt;Essential Features&lt;/h2&gt;
+&lt;h3&gt;Essential Features&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Essential features are the essense of the service: Without them other features don&apos;t matter.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -14,26 +14,26 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/2f5de05c9e77d33a06c36df530566b6d/fa188/feed-aggregator-features.jpg&quot;
+    href=&quot;/static/367e1942ced5633375226610ab798961/32840/feed-aggregator-features.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.21621621621621%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAEDBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe5NIUH/xAAXEAADAQAAAAAAAAAAAAAAAAAAEBES/9oACAEBAAEFAqacX//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABkQAQEBAAMAAAAAAAAAAAAAAAEAERAhUf/aAAgBAQABPyFypaI7LDyxx//aAAwDAQACAAMAAAAQUM//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAZEAEBAQEBAQAAAAAAAAAAAAABEQAhMXH/2gAIAQEAAT8QeNwgP3KigiL4mQCbssV93SzABAm//9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 43.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAQADBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe0bITH/xAAVEAEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAQABBQJr/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFRABAQAAAAAAAAAAAAAAAAAAASD/2gAIAQEABj8Ca//EABsQAQEAAQUAAAAAAAAAAAAAAAERACAhMVFx/9oACAEBAAE/IavrKjsvHeDTR//aAAwDAQACAAMAAAAQ4A//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAaEAEBAAMBAQAAAAAAAAAAAAABEQAhQSAx/9oACAEBAAE/EFRGhEH4Yi9BTbJDu9pPH//Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Feed aggregator essential features&quot;
         title=&quot;Feed aggregator essential features&quot;
-        src=&quot;/static/2f5de05c9e77d33a06c36df530566b6d/1c72d/feed-aggregator-features.jpg&quot;
-        srcset=&quot;/static/2f5de05c9e77d33a06c36df530566b6d/a80bd/feed-aggregator-features.jpg 148w,
-/static/2f5de05c9e77d33a06c36df530566b6d/1c91a/feed-aggregator-features.jpg 295w,
-/static/2f5de05c9e77d33a06c36df530566b6d/1c72d/feed-aggregator-features.jpg 590w,
-/static/2f5de05c9e77d33a06c36df530566b6d/a8a14/feed-aggregator-features.jpg 885w,
-/static/2f5de05c9e77d33a06c36df530566b6d/fbd2c/feed-aggregator-features.jpg 1180w,
-/static/2f5de05c9e77d33a06c36df530566b6d/fa188/feed-aggregator-features.jpg 2025w&quot;
+        src=&quot;/static/367e1942ced5633375226610ab798961/1c72d/feed-aggregator-features.jpg&quot;
+        srcset=&quot;/static/367e1942ced5633375226610ab798961/a80bd/feed-aggregator-features.jpg 148w,
+/static/367e1942ced5633375226610ab798961/1c91a/feed-aggregator-features.jpg 295w,
+/static/367e1942ced5633375226610ab798961/1c72d/feed-aggregator-features.jpg 590w,
+/static/367e1942ced5633375226610ab798961/a8a14/feed-aggregator-features.jpg 885w,
+/static/367e1942ced5633375226610ab798961/fbd2c/feed-aggregator-features.jpg 1180w,
+/static/367e1942ced5633375226610ab798961/32840/feed-aggregator-features.jpg 1938w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -45,7 +45,7 @@
 &lt;p&gt;It’s all about getting content in in a civilized manner and then consuming that content. Trusting just RSS is not going to be enough, you will also need support for newsletters, websites that don’t provide RSS, and probably Twitter as well. Twitter is not my favorite, but it seems to be important in modern scientific communication.&lt;/p&gt;
 &lt;p&gt;All that content is going to overwhelm, so you will also need means to filter, create alerts, and combine feeds into buckets. &lt;/p&gt;
 &lt;p&gt;Finally, you have the content, so you’d like to store and search it, and just maybe do some reading as well.&lt;/p&gt;
-&lt;h2&gt;The Differentiators&lt;/h2&gt;
+&lt;h3&gt;The Differentiators&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The differentiators are essential features, that are missing or implemented exceptionally well. These are the ones that can draw users from competitors, and that you can use to justify higher prices.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -113,7 +113,7 @@
 &lt;p&gt;I don’t think &lt;strong&gt;social features&lt;/strong&gt; are important to me. It’s kind of nice to see if some article is read a lot, but by no means important. I don’t need “likes” or discussion about the topic, because usually, it would only happen with the people that use the same service. It would be good if the service would have a strong, smart, and active user base, but I kind of don’t think it will happen. Why not do the discussion on a platform that is meant for it, like Twitter or Reddit?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Team or business features&lt;/strong&gt; are not important to me and I don’t think I would be sending newsletters either. I can see how team features could be amazing with a research group or with colleagues, but I have never had that extensive need for content monitoring.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Highlights and notes&lt;/strong&gt; are a mystery to me. I keep them elsewhere (and I could see myself using Evernote, Pocket, Instapaper, or even plain old PDF for that. I have a hunch that this might be something I haven’t figured out yet - maybe highlights and comments in a feedreader could be used more as a quick preprocessing step in the process.&lt;/p&gt;
-&lt;h1&gt;Why Inoreader is Better for Me&lt;/h1&gt;
+&lt;h2&gt;Why Inoreader is Better for Me&lt;/h2&gt;
 &lt;p&gt;Feedly&apos;s and Inoreader&apos;s margeting texts support beautifully my valuation of their features:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&quot;Take back control of you news feed&quot;&lt;/p&gt;
@@ -126,11 +126,11 @@
 &lt;p&gt;Inoreader can also generate an email address that you can use to follow newsletters, which then pop up to Inoreader as a feed. For example, some academic sources do not allow any kind of RSS or other feeds, and the only option may be email alerts. If you can give the address, you can use the one Inoreader generates for you. Otherwise, you’ll need to create a forward from your email to Inoreader. Tampere University is using Office365 and it was easy to create rules and forwarding.&lt;/p&gt;
 &lt;p&gt;Inoreader fetches the full article so you can read it in their application. It doesn’t work every time because it is not based on RSS - they need to crawl the target website and parse the content out of it. It has been working almost flawlessly to me.&lt;/p&gt;
 &lt;p&gt;Pricing is important, and Inoreader is much cheaper. Current Feedly Pro+ price of $140 feels too much, and because managing feeds and setting up the system is a lot of work, it starts to feel like a vendor lock. Moving out is a big effort, but staying costs a bit too much - it generates cognitive dissonance. I understand that NLP tools are not cheap and cost per users, but I hope they can get the prices a bit lower.&lt;/p&gt;
-&lt;h2&gt;What I’ll Miss From Feedly&lt;/h2&gt;
+&lt;h3&gt;What I’ll Miss From Feedly&lt;/h3&gt;
 &lt;p&gt;I was excited about Feedly’s AI offering and it seemed to work at least “OK”. I will probably return to Feedly because of this. &lt;/p&gt;
 &lt;p&gt;Feedly is prettier. I like their UI and I’d like to use it. Inoreader website is functional and good enough on desktop, but not on iPad or iPhone, and the apps are not good enough. &lt;/p&gt;
 &lt;p&gt;People from Feedly have hinted they are implementing support for generating feeds for non-RSS websites and newsletters. It’ll take some months (as of May 2020), but they should be coming. Feedly’s support has also been helpful so I wouldn’t mind supporting the company.&lt;/p&gt;
-&lt;h1&gt;If I Could Get Anything&lt;/h1&gt;
+&lt;h2&gt;If I Could Get Anything&lt;/h2&gt;
 &lt;p&gt;The optimal solution would of course be a combination of both - focus on getting the content in where ever and in which format it is, and combining NLP and beautiful UI (and native apps) on top of it. If I can’t get all the sources to the one app, I will need to be using multiple apps, or app and emails, or whatever: It takes time and leads me to forget where I saw That One Article. No social features and no notes or highlights beyond tagging and starring.&lt;/p&gt;
 &lt;p&gt;Nowadays you can demand a beautiful and snappy application, and you should. The application you use to read most of the content on the web should be beautiful and pleasant to read with. Reading view could be themed based on the color theme of the source website, to help differentiate the reading experience and notice what kind of article you are reading&lt;/p&gt;
 &lt;p&gt;Everything this under $100 a year&lt;/p&gt;
