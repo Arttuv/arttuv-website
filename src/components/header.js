@@ -8,9 +8,18 @@ const ListLink = props => (
   </li>
 )
 
-const Header = ({ siteTitle, small}) => (
+function getClassNames(small, dark) {
+  let classNames = small ? "small-header" : "normal-header";
+  classNames += dark ? " dark-header" : " light-header";
+  return classNames;
+}
 
-    <header className={small ? "small-header" : "normal-header"}>
+const Header = ({ small, dark }) => 
+
+(
+
+
+    <header className={getClassNames(small, dark)}>
       {!small ? (<span style={{display: 'block'}}></span>) : null}
         {!small && (
           <span className="site-title">

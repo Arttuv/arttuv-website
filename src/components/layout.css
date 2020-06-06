@@ -86,6 +86,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 4rem;
 }
 
+.graphical-page-container blockquote {
+  padding-left: 0.5rem;
+  border-left: 2px solid lightcoral;
+  margin-bottom: 1rem;
+}
+
+
 .graphical-page-header-image {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
   background-color: #242424;
@@ -351,18 +358,33 @@ a h3 {
   padding: 0 0.2rem;
 }
 
+header {
+  margin-top: 0px;
+}
+
+.dark-header {
+  background-color: #242424;
+  color: #fff;
+}
+
+.dark-header h1 {
+  color: #fff;
+}
+.dark-header a, .dark-header a:visited {
+  color: #fff;
+}
+
 .small-header {
-  margin-top: 1rem;
+  margin-top: 0rem;
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
   flex-direction: row;
   border-bottom: 1px solid lightgray;
-
 }
 
 .normal-header {
-  margin-top: 1rem;
+  margin-top: 0rem;
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
