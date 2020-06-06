@@ -3,7 +3,7 @@ path: "/writings/whos-fault-is-it-anyway"
 date: "2010-10-11"
 title: "Who's fault is it anyway?"
 tags: ["hci"]
-featuredImage: "../../../images/hci-placeholder.png"
+featuredImage: "../../../../images/hci-placeholder.png"
 ---
 People tend to use faulty mental models when thinking what caused some action to fail or succeed.
 

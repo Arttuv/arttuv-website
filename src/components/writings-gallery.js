@@ -15,6 +15,7 @@ export default () => (
               excerpt(pruneLength: 250)
               frontmatter {
                 date(formatString: "MMMM DD, YYYY")
+                type
                 path
                 title
                 tags
@@ -42,6 +43,7 @@ export default () => (
     render={data => (
                 data.allMarkdownRemark.edges
                     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+                    .filter(edge => edge.node.frontmatter.type !== "graphical-page")
                     .map(edge => <GalleryArticle key={edge.node.id} post={edge.node} />)
        
     )}

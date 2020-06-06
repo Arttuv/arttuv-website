@@ -8,7 +8,6 @@ const GalleryArticle = ({ post }) => (
 
   <article className="archive-article-item">
     <div>
-      
       <Link to={post.frontmatter.path}>
         <h3>{post.frontmatter.title}</h3>
       </Link>

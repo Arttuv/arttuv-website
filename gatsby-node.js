@@ -25,6 +25,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+  const pageTemplate = path.resolve(`src/templates/pageTemplate.js`)
   const tagTemplate = path.resolve("src/templates/tags.js")
   
   const result = await graphql(`
@@ -39,6 +40,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               slug
             }
             frontmatter {
+              type
               tags
               path
             }
@@ -59,9 +61,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  const posts = result.data.postsRemark.edges
+  const posts = result.data.postsRemark.edges;
+
   // Create post detail pages
-  posts.forEach(({ node }) => {
+  posts.filter( ({node}) => node.frontmatter.type === "graphical-page").forEach(({ node }) =>
+  {
+    console.log(node);
+    createPage({
+      path: node.frontmatter.path,
+      component: pageTemplate,
+      context: {}, // additional data can be passed via context
+    })
+  })
+
+  posts.filter(({node}) => node.frontmatter.type !== "graphical-page").forEach(({ node }) => {
+    console.log(node);
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,

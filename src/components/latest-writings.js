@@ -15,7 +15,8 @@ export default () => (
               excerpt(pruneLength: 250)
               frontmatter {
                 date(formatString: "MMMM DD, YYYY")
-                path
+                type
+                path                
                 title
                 tags
                 summary
@@ -48,6 +49,7 @@ export default () => (
     render={data => (
                 data.allMarkdownRemark.edges
                     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+                    .filter(edge => edge.node.frontmatter.type !== "graphical-page")
                     .map(edge => <LatestWritingsItem key={edge.node.id} post={edge.node} />)
        
     )}

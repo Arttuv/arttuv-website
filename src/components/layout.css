@@ -309,7 +309,7 @@ footer .copyright {
 }
 
 
-.blog-post .gatsby-resp-image-figcaption {
+.blog-post-content .gatsby-resp-image-figcaption {
   text-align: center;
   font-weight: lighter;
   font-size: normal;
