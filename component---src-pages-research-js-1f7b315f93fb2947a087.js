@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{LTVh:function(e,t,n){"use strict";n.r(t),n.d(t,"query",(function(){return u}));var a=n("q1tI"),r=n.n(a),c=(n("Wbzz"),n("Bl7J")),l=(n("HfFq"),n("tBDR"),n("vrFN")),u=(n("fs3b"),n("yQm6"),n("d6D7"),n("WIKP"),n("9eSz"),"2830463694");t.default=function(e){e.data;return r.a.createElement(c.a,null,r.a.createElement(l.a,{title:"Research"}),r.a.createElement("p",null,"This page describes my research quite well."))}}}]);
+//# sourceMappingURL=component---src-pages-research-js-1f7b315f93fb2947a087.js.map
