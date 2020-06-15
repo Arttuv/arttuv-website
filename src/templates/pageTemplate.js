@@ -16,6 +16,12 @@ import Img from "gatsby-image"
 import BackgroundSection from "../components/background-section"
 import Header from "../components/header";
 
+function getClassNames(small, dark) {
+  let classNames = small ? "small-header-container" : "normal-header-container";
+  classNames += dark ? " dark-header-container" : " light-header-container";
+  return classNames;
+}
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -23,15 +29,17 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <>
-      <SEO title="Notetaking" />
-      <Header small="small" dark="dark"></Header>
+      <SEO title={frontmatter.title} />
+      <div className={"header-container " + getClassNames("small", "dark")}>
+        <Header small="small" dark="dark"></Header>
+      </div>
       <div className="graphical-page-background">
         <div className="graphical-page-header-image">
-          <BackgroundSection> 
+          <BackgroundSection nameForClass="className" featuredImage={frontmatter.featuredImage} imageId={frontmatter.imageId}> 
           </BackgroundSection>
         </div>
 
-        <GraphicalLayout small="small">
+        <GraphicalLayout small="small" title={frontmatter.title} summary={frontmatter.summary}>
           <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }}/>
         </GraphicalLayout>
       </div>
@@ -50,12 +58,13 @@ export const pageQuery = graphql`
         title
         tags
         summary
+        imageId
         featuredImage {
-            childImageSharp {
-                sizes(maxWidth: 250) {
-                ...GatsbyImageSharpSizes
-                }
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 4160) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
+          }
         }
       }
       fields {
@@ -65,31 +74,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    ipadproprocreate: file(relativePath: { eq: "ipad-pro-procreate.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 800, maxHeight: 550) {
-          ...GatsbyImageSharpFluid
-        }
+    site {
+      siteMetadata {
+        title
       }
     }
-    leuchtturmPentelTradio: file(relativePath: { eq: "leuchtturm1917-pentel-tradio-05.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800, maxHeight: 550) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      leuchtturmBauhaus: file(relativePath: { eq: "leuchtturm1917-bauhaus.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800, maxHeight: 550) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      site {
-        siteMetadata {
-          title
-        }
-      }
   }
 `

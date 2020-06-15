@@ -2,6 +2,7 @@
 path: "/writings/situation-awareness"
 date: "2019-06-23"
 title: "Situation Awareness (SA)"
+tags: ["hci"]
 featuredImage: "Endsley-SA-model_BW_Black.png"
 ---
 

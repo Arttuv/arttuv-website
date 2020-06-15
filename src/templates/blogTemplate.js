@@ -52,7 +52,7 @@ export default function Template({
   )
 }
 
-export const writingsQuery = graphql`
+export const writings = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html

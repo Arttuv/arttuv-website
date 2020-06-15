@@ -15,22 +15,9 @@ import { StyledFullScreenWrapper } from './SharedStyledComponents'
  * @return {*}
  * @constructor
  */
-const BackgroundSection = ({ className, children }) => {
-  const { desktop } = useStaticQuery(
-    graphql`
-      query {
-        desktop: file(relativePath: { eq: "leuchtturm1917-bauhaus.jpeg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `
-  )
+const BackgroundSection = styled(({ title, className, children, featuredImage, imageId }) => {
 
-  const imageData = desktop.childImageSharp.fluid
+  const imageData = featuredImage.childImageSharp.fluid
   return (
       <>
     <StyledFullScreenWrapper>
@@ -42,7 +29,7 @@ const BackgroundSection = ({ className, children }) => {
           fluid={imageData}
           backgroundColor={`#040e18`}
           // Title get's passed to both container and noscriptImg.
-          title="Notetaking"
+          title={imageId}
           // style={{
           //   // Defaults are overwrite-able by setting one of the following:
           //   // backgroundSize: '',
@@ -56,9 +43,9 @@ const BackgroundSection = ({ className, children }) => {
           // set this to true to disable the "opacity hack":
           // preserveStackingContext={true}
           // You can "safely" (look them up beforehand ; ) add other props:
-          id="notetaking"
+          id={imageId}
           role="img"
-          aria-label="notetaking"
+          aria-label={imageId}
         >
          {children}
 
@@ -67,34 +54,20 @@ const BackgroundSection = ({ className, children }) => {
     </StyledFullScreenWrapper>
     </>
   )
-}
+})`
+width: 100vw;
 
-const StyledSymetryWrapper = styled.div`
-  width: 50vw;
-  height: 100%;
-  overflow: hidden;
+// These three crucial styles (if existing) are directly parsed and added to 
+// the pseudo-elements without further ado (except when overwritten).
+//background-repeat: repeat-y;
+//background-position: left center;
+//background-size: cover;
+
+// For pseudo-elements you have to overwrite the default options (see style={{}} above).
+// See: https://github.com/timhagn/gatsby-background-image/#styling--passed-through-styles 
+//&:after, &:before {
+//   background-clip: content-box;
+//   background-size: contain;
+//}
 `
-
-const StyledWelcomeImage = styled(Img)`
-  width: 100vw;
-  height: auto;
-`
-
-const StyledBackgroundSection = styled(BackgroundSection)`
-  width: 100vw;
-  
-  // These three crucial styles (if existing) are directly parsed and added to 
-  // the pseudo-elements without further ado (except when overwritten).
-  //background-repeat: repeat-y;
-  //background-position: left center;
-  //background-size: cover;
-  
-  // For pseudo-elements you have to overwrite the default options (see style={{}} above).
-  // See: https://github.com/timhagn/gatsby-background-image/#styling--passed-through-styles 
-  //&:after, &:before {
-  //   background-clip: content-box;
-  //   background-size: contain;
-  //}
-`
-
-export default StyledBackgroundSection
+export default BackgroundSection;

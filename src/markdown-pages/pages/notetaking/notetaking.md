@@ -3,9 +3,9 @@ type: "graphical-page"
 path: "/notetaking"
 date: "2020-05-03"
 title: "Notetaking"
-summary: "Notetaking"
-tags: ["hci"]
+summary: "Handwritten notetaking is undervalued, and today you can do it both traditionally with pen and paper and digitally with iPad Pro. This is my setup."
 featuredImage: "leuchtturm1917-bauhaus.jpeg"
+imageId: "leuchtturm1917-bauhaus"
 ---
 
 I like taking handwritten notes - you can almost always bring your notebook with you, and it doesn't feel as disrespectful to not down some words by hand compared to using computer for the same task.

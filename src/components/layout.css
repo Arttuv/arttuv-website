@@ -3,7 +3,6 @@ body {
   color: #000;
   background-color: #fff;
   font-weight: normal;
-  font-size: 16px;
   font-family: 'lora', serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
@@ -17,10 +16,12 @@ body {
   font-variant-east-asian: normal;
 
   margin: 0px;
+
+  overflow: visible;
 }
 
 p {
-  font-size: 1.02rem;
+  font-size: 1.1rem;
   line-height: 1.8;;
 }
 
@@ -51,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #242424;
   color: #ce4f25;
   padding: 0px 1rem;
+  text-align: center;
 }
 
 .graphical-page .title-motivation p {
@@ -153,6 +155,10 @@ footer .copyright {
   font-size: normal;
 }
 
+.bottomNavigation ul {
+  padding-inline-start: 1rem;
+}
+
 .bottomNavigation li {
   display: flex;
   justify-content: right;
@@ -233,7 +239,6 @@ footer .copyright {
   border-left-style: solid;
   border-left-width: 1px;
   border-left-color: lightgray;*/
-
 }
 
 .blog-post pre {
@@ -353,13 +358,23 @@ a h3 {
 }
 
 .header-container {
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: 0 0.2rem;
+  text-align: center;
+  padding: 0 0;
+}
+
+.dark-header-container {
+  background-color: #242424;
+}
+
+.small-header-container {
+  border-bottom: 1px solid lightgray;
 }
 
 header {
-  margin-top: 0px;
+  max-width: 60rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
 }
 
 .dark-header {
@@ -380,7 +395,6 @@ header {
   display: inline-flex;
   justify-content: space-between;
   flex-direction: row;
-  border-bottom: 1px solid lightgray;
 }
 
 .normal-header {
@@ -399,6 +413,8 @@ header h1 {
 
 header ul {
   margin-bottom: 0px;
+  margin-left: 0px;
+  padding-inline-start: 0px;
 }
 
 header ul li {
@@ -567,11 +583,19 @@ a {
 }
 
 .latest-writings-item-summary-read-more {
-  text-align: right;
+  text-align: center;
 }
 
 .latest-writings-item-summary-read-more span {
   margin-right: 0.5rem;
+}
+
+.latest-writing-item-date {
+  text-align: center;
+}
+
+.highlight-color {
+  color: #ce4f25;
 }
 
 .about-me-text {
@@ -625,6 +649,7 @@ a {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: normal;
+  text-align: center;
 }
 
 .editors-choice article a {
@@ -740,6 +765,12 @@ a {
       flex-direction: column;
     }
 
+    .latest-writings-item:nth-of-type(odd) {
+      border-right: 1px solid lightgray;
+      margin-right: 1rem;
+      padding-right: 0rem;
+    }
+    
     
   }
 
@@ -754,9 +785,6 @@ a {
       display: none;
     }
     
-    h1, h2, h3, h4, h5, h6 {
-      text-align: center;
-    }
   }
 
   @media (max-width: 756px) {
@@ -823,6 +851,8 @@ a {
       border-right-style: none;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
+      border-radius: 0px;
+      border-radius: 0px;
     }
     
     .blog-post-summary {

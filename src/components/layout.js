@@ -14,7 +14,13 @@ import Footer from "./footer";
 import "./layout.css"
 import BorderedTitle from "../components/bordered-title"
 
-const Layout = ({ children, small }) => {
+function getClassNames(small, dark) {
+  let classNames = small ? "small-header-container" : "normal-header-container";
+  classNames += dark ? " dark-header-container" : " light-header-container";
+  return classNames;
+}
+
+const Layout = ({ children, small, dark }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,7 +34,7 @@ const Layout = ({ children, small }) => {
   return (
     <>
       <a name="top"></a>
-      <div className="header-container">
+      <div className={"header-container " + getClassNames(small, dark)}>
         <Header siteTitle={data.site.siteMetadata.title} small={small}/>
       </div>
       <div className = {"page-container"}>
