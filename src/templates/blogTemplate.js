@@ -40,7 +40,7 @@ export default function Template({
       <p className="blog-post-bottom-tag">
             {frontmatter.tags !== null && ( 
               frontmatter.tags.map( tag => {
-                return <span><Link to={`/tags/${kebabCase(tag)}/`}>
+                return <span key={"link-span-key" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
                         {"#" + tag}
                   </Link></span>
           }))
@@ -64,7 +64,7 @@ export const writings = graphql`
         summary
         featuredImage {
             childImageSharp {
-                sizes(maxWidth: 250) {
+                sizes(maxWidth: 850) {
                 ...GatsbyImageSharpSizes
                 }
             }

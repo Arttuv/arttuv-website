@@ -21,8 +21,8 @@ body {
 }
 
 p {
-  font-size: 1.1rem;
-  line-height: 1.8;;
+  font-size: 1.0rem;
+  line-height: 1.8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -153,6 +153,7 @@ footer .copyright {
   display: flex;
   justify-content: flex-end;
   font-size: normal;
+  text-align: right;
 }
 
 .bottomNavigation ul {
@@ -315,8 +316,9 @@ footer .copyright {
 
 
 .blog-post-content .gatsby-resp-image-figcaption {
+  margin-top: 0.4rem;
   text-align: center;
-  font-weight: lighter;
+  font-weight: normal;
   font-size: normal;
 }
 
@@ -332,7 +334,7 @@ footer .copyright {
 }
 
 .blog-post ul li {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
 }
 
 .blog-post p {
@@ -359,7 +361,7 @@ a h3 {
 
 .header-container {
   text-align: center;
-  padding: 0 0;
+  padding: 0 0 0 0.5rem;
 }
 
 .dark-header-container {
@@ -560,7 +562,7 @@ a {
 
 .latest-writings-item h3 {
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
@@ -573,6 +575,7 @@ a {
 
 .latest-writings-item-title {
 }
+
 .latest-writings-item-image {
   
   align-self: center;
@@ -592,6 +595,7 @@ a {
 
 .latest-writing-item-date {
   text-align: center;
+  margin-bottom: 0px;
 }
 
 .highlight-color {
@@ -755,21 +759,7 @@ a {
   /* Single column display for phones */
   @media (max-width: 459px) {
    
-    .archive {
-      display: flex;
-      flex-direction: column;
-    }
 
-    .latest-writings {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .latest-writings-item:nth-of-type(odd) {
-      border-right: 1px solid lightgray;
-      margin-right: 1rem;
-      padding-right: 0rem;
-    }
     
     
   }
@@ -868,4 +858,29 @@ a {
     .blog-post-summary-image {
       display: none;
     }
+
+    .archive {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .latest-writings {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .latest-writings-item:nth-of-type(odd) {
+      border-right: 0px solid lightgray;
+      margin-right: 1rem;
+      padding-right: 0rem;
+    }
+
+    .latest-writings-item-image {
+      align-self: center;
+      padding-right: 0rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
   }
