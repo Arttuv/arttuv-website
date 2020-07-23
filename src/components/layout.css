@@ -8,21 +8,18 @@ body {
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   font-feature-settings: "kern", "liga", "clig", "calt";
-
   font-style: normal;
   font-variant-ligatures: normal;
   font-variant-caps: normal;
   font-variant-numeric: normal;
   font-variant-east-asian: normal;
-
   margin: 0px;
-
   overflow: visible;
 }
 
 p {
-  font-size: 1.0rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -103,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 .graphical-page-container {
   max-width: 50rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #EDE4D5;
 }
 
@@ -416,6 +413,7 @@ header h1 {
 header ul {
   margin-bottom: 0px;
   margin-left: 0px;
+  margin-right: 0.3rem;
   padding-inline-start: 0px;
 }
 
@@ -480,11 +478,13 @@ header ul li:last-of-type {
   color: black;
 }
 
- .blog-post-content:first-letter {
+ .blog-post-content::first-letter {
   float: left;
-  font-size: 3.4rem;
-  line-height: 3.5rem;
+  color: #242424;
+  font-size: 3.15rem;
+  line-height: 3rem;
   padding-top: 0px;
+  padding-bottom: 0px;
   padding-right: 0.5rem;
   padding-left: 0px;
 }
@@ -573,9 +573,6 @@ a {
   min-height: 350px;
 }
 
-.latest-writings-item-title {
-}
-
 .latest-writings-item-image {
   
   align-self: center;
@@ -605,6 +602,7 @@ a {
 .about-me-text {
   margin: 1rem;
 }
+
 .about-me-image {
     float: right;
     width: 16%;
@@ -727,6 +725,7 @@ a {
 
   .archive-article-item h3 {
     font-size: 1.5rem;
+    font-weight: 300;
   }
   
   .archive-article-item:nth-of-type(odd) {
@@ -749,19 +748,14 @@ a {
   
   .archive-article-item-image {
     align-self: center;
-    padding-left: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: block;
+    padding-left: 0.5rem;
   }
   
 
   /* Single column display for phones */
   @media (max-width: 459px) {
    
-
-    
-    
   }
 
   @media (max-width: 620px) {

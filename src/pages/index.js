@@ -25,9 +25,10 @@ const IndexPage = () => (
       
         <article className="about-me-text">
           <p>
-            Arttu works as a software consultant focusing on how to help organizations build software 
-            in an agile way. Programming has been a long passion for him, but he also 
-            enjoys the field of human-computer interaction and other aspects of software development.
+            Arttu is a software developer and works as a software consultant focusing on how to help 
+            organizations build software in an agile way. Programming has been a long passion for him, but he also 
+            enjoys the field of human-computer interaction and other aspects of software development. Humans as 
+            collaborative digital tool makers is an interesting viewpoint.
           </p>
           <p>
             Follow on <a href="https://twitter.com/arttuv">Twitter</a> or add on <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn.</a> Read more about <Link to="/author/">author</Link>.
@@ -58,7 +59,7 @@ const IndexPage = () => (
         </article>
         </div>
         <BorderedTitle title="Archive" />
-        <p className="archive-description">I have quite resently realized, that systems thinking is something that resonates with me and somewhat describes how I approach the world. Most of these writings are about human-computer interaction, but I expect there to be a lot of texts about how organizations build software in the future.</p>
+        <p className="archive-description">I have quite recently realized that systems thinking is something that resonates with me and somewhat describes how I approach the world. Most of these writings are about human-computer interaction, but I expect there to be a lot of texts about how organizations build software in the future.</p>
         <div className="archive-tags">
           <TagsComponent />
         </div>

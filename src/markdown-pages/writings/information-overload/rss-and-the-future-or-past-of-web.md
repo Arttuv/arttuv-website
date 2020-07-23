@@ -6,7 +6,6 @@ tags: ["research"]
 featuredImage: "handrawn-google-trend-rss.png"
 summary: "I was using RSS a lot around 2013, and I want to go back. I'd like to be more in control on what stories I see each day. At the same time I know the amount of items in RSS feeds can be intimidating, so I'm excited to try out new tools to combat information overload as well. I'm glad to see that RSS is not *dead*, even though I understand it probably should evolve as well. Feed aggregators must evolve as well, because the very basis of their being is dissolving."
 ---
-
 You can call me a dinosaur, but I miss RSS. After a few years of break, I logged in to [Feedly](https://feedly.com/i/welcome) to find the world as it was back in 2014. There were even a few interesting articles I had saved and then forgotten - for example, “Sketching as a professional practice” from Futurcice’s blog (the link is dead and I couldn’t find the post anymore). This demonstrates one beautiful aspect of RSS feeds - you can easily store it and I was able the read the article even though it might have been abandoned by the original publisher already.
 
 Based on the Feedly snapshot, six years ago I was interested in Java, Delphi, software architecture, UX, game design, and game development (LibGDX). A bit more surprising one was about [becoming a public speaking pro](https://googleblog.blogspot.com/2013/04/become-public-speaking-pro-learning-how.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+blogspot/MKuf+(The+Keyword+%7C+Official+Google+Blog))
