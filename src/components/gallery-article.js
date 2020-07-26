@@ -8,6 +8,12 @@ const GalleryArticle = ({ post }) => (
 
   <article className="archive-article-item">
     <div>
+      {post.frontmatter.tags !== null && ( 
+          post.frontmatter.tags.map( tag => {
+            return <div className="archive-article-item-topic" key={"gallery-article-item-topic" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
+                    {"" + tag}
+                  </Link></div>
+          }))}
       <Link to={post.frontmatter.path}>
         <h3>{post.frontmatter.title}</h3>
       </Link>
@@ -15,13 +21,6 @@ const GalleryArticle = ({ post }) => (
       {post.frontmatter.summary === null && (<p className="archive-article-item-summary">{post.excerpt}</p>)} 
       
       <div className="archive-article-item-summary-read-more">
-      {post.frontmatter.tags !== null && ( 
-          post.frontmatter.tags.map( tag => {
-            return <div className="archive-article-item-topic" key={"gallery-article-item-topic" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
-                    {"#" + tag}
-                  </Link></div>
-          }))}
-
       <span>
         {post.frontmatter.date}
         {", " + post.fields.readingTime.text}

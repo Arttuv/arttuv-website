@@ -13,7 +13,7 @@ import TagsComponent from "../components/tags-component"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home"/>
-    <div><BorderedTitle title="Latest" /></div>
+    <div><BorderedTitle title="Latest Writings" /></div>
     <div className="latest-writings">
       <LatestWritings className="latest-writings" />
     </div>

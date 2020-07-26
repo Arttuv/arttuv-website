@@ -8,11 +8,9 @@ const LatestWritingsItem = ({ post }) => (
 
   <article className="latest-writings-item" key={post.frontmatter.title}>
       <div>
-        <div className="latest-writings-item-image">  
         <Link className="latest-writings-item-title" to={post.frontmatter.path}>
           <h3>{post.frontmatter.title}</h3>
         </Link>
-        </div>
         <div>
             <p className="latest-writing-item-date">
               <span className="highlight-color">{post.frontmatter.date}</span>{", " + post.fields.readingTime.text}
@@ -23,7 +21,7 @@ const LatestWritingsItem = ({ post }) => (
         {post.frontmatter.featuredImage !== null && (
             <Img 
                 sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-                style={{margin: 'auto auto', width: '100%'}}
+                style={{margin: 'auto auto', width: '100%', maxWidth: '400px'}}
               />
             )}
         <div className="latest-writings-item-summary-read-more">
@@ -31,7 +29,7 @@ const LatestWritingsItem = ({ post }) => (
           {post.frontmatter.tags !== null && ( 
             post.frontmatter.tags.map( tag => {
               return <span key={"link-to-"+tag}><Link to={`/tags/${kebabCase(tag)}/`}>
-                      {"#" + tag}
+                      {"" + tag}
                     </Link></span>
             }))
           }
