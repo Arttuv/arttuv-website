@@ -1,4 +1,168 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Arttu Viljakainen]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Jul 2020 19:31:48 GMT</lastBuildDate><item><title><![CDATA[Inoreader vs Feedly, and the ultimate feed reader (in 2020)]]></title><description><![CDATA[What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs…]]></description><link>https://www.arttuv.com/information-overload/feedly-vs-inoreader-and-the-ultimate-feed-reader/</link><guid isPermaLink="false">https://www.arttuv.com/information-overload/feedly-vs-inoreader-and-the-ultimate-feed-reader/</guid><pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs - your&apos;s will vary so take this writing as a personal journy instead of an objective comparison. &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Arttu Viljakainen]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 26 Jul 2020 15:17:37 GMT</lastBuildDate><item><title><![CDATA[PDF as a Read It Later Service]]></title><description><![CDATA[Being in control is the best aspect of using PDF as a read it later service: you can modify how the website looks like, save it so that it’s…]]></description><link>https://www.arttuv.com/information-overload/pdf-as-a-read-it-later-service/</link><guid isPermaLink="false">https://www.arttuv.com/information-overload/pdf-as-a-read-it-later-service/</guid><pubDate>Sat, 25 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Being in control is the best aspect of using PDF as a read it later service: you can modify how the website looks like, save it so that it’s yours to read, annotate and store however you like to. &lt;/p&gt;
+&lt;p&gt;It’s not perfect, but it’s surprisingly good.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;styling makes reading the article more memorable compared to read-it-later services&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;PDF has been the best format to read books on iPad, which got me thinking that why not using it for reading web long reads as well. PDF works on every platform and can render the website as it is with all the fonts and visuals. It makes reading the article more memorable compared to read-it-later services like Instapaper and Pocket.&lt;/p&gt;
+&lt;p&gt;If you want to archive an article in a readable format, so that it can have styles and images too, PDF is the best option I’ve found. iPad with an Apple Pencil has emphasized this more as now it’s &lt;strong&gt;easy to annotate and doodle the file with the pencil&lt;/strong&gt; - while still being able to keep the file as a multi-platform PDF.&lt;/p&gt;
+&lt;p&gt;iPad also has enough power to render even the largest PDF files so that the experience is snappy - and using the Pencil is as useful as ever.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ad20bac7e8d853099b731d0c5d123d8c/c06f5/pdf-longread-annotation.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 98.64864864864865%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECBAP/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB1V0wpcmqA5A//8QAHBAAAgMAAwEAAAAAAAAAAAAAAQIAAxIEERMU/9oACAEBAAEFAm49ZnyJEoCDVmm9nWvQXIhHU2Z//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEREP/aAAgBAwEBPwGsu//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EAB0QAAIBBAMAAAAAAAAAAAAAAAABAgMRMTISICP/2gAIAQEABj8CzI3kWTY7UzXiz0z0/8QAHRABAAMAAwADAAAAAAAAAAAAAQARITFBUWFxsf/aAAgBAQABPyFhU3upZtp9yymc6xESocb5mCAH2Zjy9eT4IGj9lHk//9oADAMBAAIAAwAAABBg4Dz/xAAYEQACAwAAAAAAAAAAAAAAAAAAARBRYf/aAAgBAwEBPxBXD3P/xAAYEQACAwAAAAAAAAAAAAAAAAAAARARMf/aAAgBAgEBPxDCnP8A/8QAHRABAAMAAgMBAAAAAAAAAAAAAQARMSFBUWFxsf/aAAgBAQABPxBWrbSKblI5RVhP2WRh5Avjr5EC+YV+sgQQ6NETvSJJLAcH0wmrqDUN5qZqVebn/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Annotating with the Pencil in PDFExpert&quot;
+        title=&quot;PDFExpert and Pencil&quot;
+        src=&quot;/static/ad20bac7e8d853099b731d0c5d123d8c/1c72d/pdf-longread-annotation.jpg&quot;
+        srcset=&quot;/static/ad20bac7e8d853099b731d0c5d123d8c/a80bd/pdf-longread-annotation.jpg 148w,
+/static/ad20bac7e8d853099b731d0c5d123d8c/1c91a/pdf-longread-annotation.jpg 295w,
+/static/ad20bac7e8d853099b731d0c5d123d8c/1c72d/pdf-longread-annotation.jpg 590w,
+/static/ad20bac7e8d853099b731d0c5d123d8c/a8a14/pdf-longread-annotation.jpg 885w,
+/static/ad20bac7e8d853099b731d0c5d123d8c/fbd2c/pdf-longread-annotation.jpg 1180w,
+/static/ad20bac7e8d853099b731d0c5d123d8c/c06f5/pdf-longread-annotation.jpg 1668w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;PDFExpert and Pencil&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;I hadn&apos;t realized that i-ecosystem has amazing web to PDF features: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Safari browser on Mac OS can export the website (as it looks like in the browser) by File =&gt; Export as PDF&lt;/li&gt;
+&lt;li&gt;iPad OS (or iOS) you can take a screenshot, and expand it to cover the full website. As long as the website doesn’t do anything malicious like paging, you can get the full website in high detail&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It has been a while I’ve been this happy to find a new functionality from my devices:&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cd0b709bec1e0936bf587aec2b415498/c06f5/ipad-screenshot-view.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 143.24324324324326%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAdABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABiNV44I8S+3C6JxMN/8QAHBAAAgIDAQEAAAAAAAAAAAAAAgMAAQQSExEz/9oACAEBAAEFAud+aFLG/UMAVlkVGnsxCRJQLFUyPv1YM7tm1lP/xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAwEBPwFj/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHhAAAwEAAQUBAAAAAAAAAAAAAAERAjIQEiJBcZH/2gAIAQEABj8CsZx1+dEnuC7Lv4NxoTZ4+zRM6iObLp1n/8QAIBAAAgEEAQUAAAAAAAAAAAAAAAERITFBcVGBkaGxwf/aAAgBAQABPyGVVbpShsde5EYKVsnMHNOpByEPgPq8hw9F3GvsQOzI8n4KtvBBlZZcLs//2gAMAwEAAgADAAAAEDzcjP/EABkRAAEFAAAAAAAAAAAAAAAAAAEAEBEhMf/aAAgBAwEBPxCgxSX/AP/EABcRAQEBAQAAAAAAAAAAAAAAAAEQEUH/2gAIAQIBAT8QHkwn/8QAIRABAAICAQMFAAAAAAAAAAAAAQARIXFBMVHRYYGhscH/2gAIAQEAAT8QMuLVv8BBGBzXiiZAODSbIg5FDecu0soJWhsu5uJJmGGWPZix9XmXkQryrprcz0PpKo46ANX7QAUw4APyKFmWhVz/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;iPad screenshot view&quot;
+        title=&quot;iPad screenshot view&quot;
+        src=&quot;/static/cd0b709bec1e0936bf587aec2b415498/1c72d/ipad-screenshot-view.jpg&quot;
+        srcset=&quot;/static/cd0b709bec1e0936bf587aec2b415498/a80bd/ipad-screenshot-view.jpg 148w,
+/static/cd0b709bec1e0936bf587aec2b415498/1c91a/ipad-screenshot-view.jpg 295w,
+/static/cd0b709bec1e0936bf587aec2b415498/1c72d/ipad-screenshot-view.jpg 590w,
+/static/cd0b709bec1e0936bf587aec2b415498/a8a14/ipad-screenshot-view.jpg 885w,
+/static/cd0b709bec1e0936bf587aec2b415498/fbd2c/ipad-screenshot-view.jpg 1180w,
+/static/cd0b709bec1e0936bf587aec2b415498/c06f5/ipad-screenshot-view.jpg 1668w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;iPad screenshot view&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/38e5260fbf4d938b6b9fff5981d1db36/c06f5/ipad-full-page-screenshot.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 143.24324324324326%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAdABQDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAABAACAwUG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAT5KRLxJsjWef2VR4//EABsQAQADAQADAAAAAAAAAAAAAAIAAQMEEhQz/9oACAEBAAEFAhg2b5tYigstgBWy0jq0+cG8fGjOn71toZ7GsSt3/8QAFREBAQAAAAAAAAAAAAAAAAAAESD/2gAIAQMBAT8BY//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EAB8QAAICAQQDAAAAAAAAAAAAAAABAhExEiEyoSNBgf/aAAgBAQAGPwLUlf049mliTTZ4Y4zY3Koy9oVo2RIqMqRy6Llk/8QAIBAAAgIBAwUAAAAAAAAAAAAAAAERMSFBgbFRYXGR8f/aAAgBAQABPyFN9EPhhwwNdxw4c1ViNaoHu4nkgjCbliSqk4/AsW0Drz2DK6Wtn//aAAwDAQACAAMAAAAQbD8w/8QAGBEBAQADAAAAAAAAAAAAAAAAEQEAEKH/2gAIAQMBAT8QUicx3//EABcRAQEBAQAAAAAAAAAAAAAAABEBABD/2gAIAQIBAT8QliOe/wD/xAAeEAEBAAMAAwADAAAAAAAAAAABEQAhMUFRcWGx4f/aAAgBAQABPxCNIqcOfcGAsPGYivWQ+L4yjkljRXcU6kbSCakfxlfYCVkOPrEjql9XLwKbhf24kkpvj4yfI2AXuCCzHD+Gayn0S5//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;iPad full page screenshot&quot;
+        title=&quot;iPad full page screenshot&quot;
+        src=&quot;/static/38e5260fbf4d938b6b9fff5981d1db36/1c72d/ipad-full-page-screenshot.jpg&quot;
+        srcset=&quot;/static/38e5260fbf4d938b6b9fff5981d1db36/a80bd/ipad-full-page-screenshot.jpg 148w,
+/static/38e5260fbf4d938b6b9fff5981d1db36/1c91a/ipad-full-page-screenshot.jpg 295w,
+/static/38e5260fbf4d938b6b9fff5981d1db36/1c72d/ipad-full-page-screenshot.jpg 590w,
+/static/38e5260fbf4d938b6b9fff5981d1db36/a8a14/ipad-full-page-screenshot.jpg 885w,
+/static/38e5260fbf4d938b6b9fff5981d1db36/fbd2c/ipad-full-page-screenshot.jpg 1180w,
+/static/38e5260fbf4d938b6b9fff5981d1db36/c06f5/ipad-full-page-screenshot.jpg 1668w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;iPad full page screenshot&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Mac OS
+&lt;a href=&quot;https://support.apple.com/guide/preview/crop-or-rotate-a-pdf-prvw11567/mac&quot;&gt;Crop or rotate a PDF in Preview on Mac - Apple Support&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;iPad OS (iOS)
+&lt;a href=&quot;https://support.apple.com/guide/iphone/take-a-screenshot-or-screen-recording-iphc872c0115/ios&quot;&gt;Take a screenshot or screen recording on iPhone - Apple Support&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If for some reason the screenshot way of doing this fails, you still have the option to print to PDF, which generates a more boring result.&lt;/p&gt;
+&lt;p&gt;I noticed that there seems to be a limit for a full-page screenshot on iPad OS. Mac OS Safari has been more reliable on getting very long texts as PDF, but I guess I’ll see in time if this is going to be a deal-breaker.&lt;/p&gt;
+&lt;h2&gt;Reading as it’s meant to&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If I’d be a person with a tendency to kitchen psychology, I’d say that reading articles so that they are more uniquely formatted and styled, leaves a bigger memory footprint.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Visuals&lt;/h3&gt;
+&lt;p&gt;Using PDF you can read the article the way it was delivered. This can be both a negative and a positive aspect, but luckily websites are usually quite pleasant looking today (at least if you block the ads). I love the design of The New Yorker and enjoy reading the articles rendered as they have styled them.&lt;/p&gt;
+&lt;p&gt;I appreciate services like &lt;a href=&quot;https://www.instapaper.com/&quot;&gt;Instapaper&lt;/a&gt; and &lt;a href=&quot;https://getpocket.com/&quot;&gt;Pocket&lt;/a&gt;, and if they work for you, they are great options (&lt;strong&gt;pick Instapaper if you don’t need tagging or if you need notes, Pocket if you need tags and highlights are enough without notes&lt;/strong&gt;). These services can parse the content from the website and reflow them to be readable on any screen.&lt;/p&gt;
+&lt;p&gt;But... They make all the articles look the same as well. I was a bit surprised to notice it bothers me. Most of the websites I follow are beautiful, and seeing the visuals helps me keep in mind what I’m reading and from where, and probably also helps to remember the individual article as well. If I’d be a person with a tendency to kitchen psychology, I’d say that reading articles so that they are more uniquely formatted and styled, leaves a bigger memory footprint.&lt;/p&gt;
+&lt;h3&gt;Paid content&lt;/h3&gt;
+&lt;p&gt;Some read it later services are not able to get the content behind a paywall, even if you have the subscription, or then you’d need to give your credentials to the service. Website to PDF doesn’t have that problem, you can export any website you can open in your browser.&lt;/p&gt;
+&lt;h3&gt;Archive&lt;/h3&gt;
+&lt;p&gt;The most comforting idea of using PDF for long reads is that then they are already in an achievable format. I can dumb them to some cloud drive and forget there. Or maybe do some tagging and build a searchable database. I have the option, and I’m not depending on a single service that might go down - or more annoyingly would change their pricing model to be too aggressive.&lt;/p&gt;
+&lt;h2&gt;Concerns&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;PDF files can take a lot of space&lt;/strong&gt;, like one longer article can be 10Mb. It remains to be seen if it will cause some problems in the future. It isn’t too hard to export old ones to a cloud drive, so I think it will be ok. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The screenshot way of creating the PDF removes links&lt;/strong&gt;, unfortunately. It can still extract the text though. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you read a lot with a phone, read-it-later services might be a better option.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you use Mac and iPad, you should not have any problems with the &lt;strong&gt;resolution&lt;/strong&gt; of the displays. You might want to make sure that the width of your browser is practical when you do the export. Most websites are responsive as well, so you can try what is the optimal width for each. Reading those PDFs with iPhone is not optimal, and if you do the capture with the iPhone, it’s not optimal for other larger devices. The landscape is your friend here, and to me, this is not such a big issue. If you read a lot with a phone, read-it-later services might be a better option.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PDF’n very long websites might not be practical.&lt;/strong&gt; I tend to trim the PDF a bit in Preview (using Mac), but if the PDF is too long, cropping doesn’t work. Export to PDF and full-page screenshot creates a PDF file that has one very long page - printing to PDF might be a better solution for very long texts. &lt;/p&gt;
+&lt;p&gt;The full-page screenshot also has a limit after which it just cuts the page. I hope they will update this to just continue with another page in the future, but for now it works most of the time.&lt;/p&gt;
+&lt;p&gt;One important feature in a read it-later-app is to remember the progress in each story. Because the PDF is one long single page, some applications are not able to &lt;strong&gt;remember the location&lt;/strong&gt; you are at when you close the file and reopen it. Notability is one that does remember. GoodNotes remembers if you don’t close the file. PDF Expert seems to be working ok so that you can have the PDF files in the cloud.&lt;/p&gt;
+&lt;h2&gt;Apps for reading and annotating the PDF files&lt;/h2&gt;
+&lt;p&gt;Using a dedicated note-taking app means a better user experience, but then you can’t keep the files as PDFs in the cloud. Usually, notetaking apps support exporting to PDF so this might not be a dealbreaker - but it&apos;s an annoyance and an extra step in the process. &lt;/p&gt;
+&lt;p&gt;Just because of the better user experience, if you don’t need to have your articles as PDF all the time, I’d recommend Notability or GoodNotes.&lt;/p&gt;
+&lt;p&gt;Some of the apps are excellent at transforming handwritten notes to texts: This means you can for example &lt;strong&gt;add handwritten tags&lt;/strong&gt; to the files which then will be indexed. &lt;/p&gt;
+&lt;h3&gt;Notability&lt;/h3&gt;
+&lt;p&gt;Notability is an excellent notetaking and PDF reading app. The only caveat is that you need to import the PDF to the application, so you can’t have them on iCloud as PDFs or whatever it’s you are using. You can export them from the app though, and you can also create an automatic backup as PDF to your chosen cloud, so that might be a good compromise.&lt;/p&gt;
+&lt;p&gt;Mac app for Notability is missing features compared to the iPad app, which is disappointing.&lt;/p&gt;
+&lt;h3&gt;PDF Expert&lt;/h3&gt;
+&lt;p&gt;PDF Expert might be the most promising app for the job. The reason is that it’s able to use the PDFs directly from the cloud and they can stay as PDF. The UI is also quite nice because you can hide all the toolbars when you are reading (this should be a mandatory feature for all apps - one tap hides the toolbars, another brings them back, and there is a nod for the scrollbar always visible). &lt;/p&gt;
+&lt;p&gt;The notetaking experience is not as good as with Notability and GoodNotes, and I have had some concerns with saving files - at some point, it felt like the app didn’t always automatically save to the cloud. &lt;/p&gt;
+&lt;p&gt;Managing the files in iCloud is also a bit of a hassle (I have a todo-folder, and after reading I move the file to another folder: I can’t do it by having the file open and I need to go to another view to do the move).&lt;/p&gt;
+&lt;h3&gt;GoodNotes&lt;/h3&gt;
+&lt;p&gt;GoodNotes would be a great option otherwise, but it has one annoying problem: It doesn’t remember the reading position if you are reading a long single-page PDF file. Notetaking experience is best in the class and organization is better than with Notability. &lt;/p&gt;
+&lt;p&gt;Similar to Notability, you’ll need to import PDF files to the app, but they also have a good desktop app so it might be a full solution.&lt;/p&gt;
+&lt;h3&gt;Apple Books&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://support.apple.com/en-au/HT205751&quot;&gt;Books can also be used to read &amp;#x26; annotate PDF files.&lt;/a&gt; I have not been using it like that and found the feature by accident, but it might be a low-cost option. Disappointedly it remembers the reading progress on the page level, so reading those one-pagers that Safari produces is not optimal. I wish I had a direct way to give feedback to developers...&lt;/p&gt;
+&lt;h1&gt;Seems promising this far&lt;/h1&gt;
+&lt;p&gt;I&apos;ve been using PDF for reading long web stories about a month now and it seems to be a good way to read articles I find by using a RSS reader. I tend to collect more to the reading queue than I&apos;m able to read, but that happens with any service. I have an app idea that would make this process much more flowing, but I just don&apos;t have the time (or knowledge) to implement that now.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Inoreader vs Feedly, and the ultimate feed reader (in 2020)]]></title><description><![CDATA[What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs…]]></description><link>https://www.arttuv.com/information-overload/feedly-vs-inoreader-and-the-ultimate-feed-reader/</link><guid isPermaLink="false">https://www.arttuv.com/information-overload/feedly-vs-inoreader-and-the-ultimate-feed-reader/</guid><pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs - your&apos;s will vary so take this writing as a personal journey instead of an objective comparison. &lt;/p&gt;
 &lt;p&gt;As I wrote, &lt;a href=&quot;writings/../rss-and-the-future-or-past-of-web.md&quot;&gt;I’ve started using RSS again&lt;/a&gt; after some five years break. &lt;a href=&quot;https://feedly.com/&quot;&gt;Feedly&lt;/a&gt; and &lt;a href=&quot;https://www.inoreader.com/&quot;&gt;Inoreader&lt;/a&gt; are two services I’ve been comparing now, and I think I will need to be using Inoreader. &lt;/p&gt;
 &lt;p&gt;I will explain why, and why I might also return to Feedly.&lt;/p&gt;
 &lt;h2&gt;What Makes a Feed Aggregator&lt;/h2&gt;
