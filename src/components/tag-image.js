@@ -18,21 +18,21 @@ const TagImage = ({tagName}) => {
     query {
       hciPlaceholderImage: file(relativePath: { eq: "hci-placeholder.png" }) {
         childImageSharp {
-          fluid(maxWidth: 128) {
+          fluid(maxWidth: 96) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       devPlaceholderImage: file(relativePath: { eq: "dev-placeholder.png" }) {
         childImageSharp {
-          fluid(maxWidth: 128) {
+          fluid(maxWidth: 96) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       researchPlaceholderImage: file(relativePath: { eq: "research-placeholder.png" }) {
         childImageSharp {
-          fluid(maxWidth: 128) {
+          fluid(maxWidth: 96) {
             ...GatsbyImageSharpFluid
           }
         }

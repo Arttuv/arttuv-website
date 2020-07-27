@@ -4,6 +4,10 @@ import { graphql, StaticQuery } from "gatsby"
 import TagComponent from "./tag-item"
 
 export default () => (
+  <div className="archive-tags-container">
+    <h3>Tags</h3>
+  <div className="archive-tags">
+    
     <StaticQuery
     query={graphql`
     query {
@@ -16,10 +20,13 @@ export default () => (
       }
     `}
 
-    render={data => (
+    render=
+      {data => (
                 data.allMarkdownRemark.group
                     .map(edge => <TagComponent key={edge.fieldValue} tagName={edge.fieldValue} tagCount={edge.totalCount} />) 
     )}
     
   />
+  </div>
+  </div>
 )

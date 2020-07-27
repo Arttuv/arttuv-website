@@ -4,11 +4,13 @@ import PostLink from "../components/post-link"
 import Layout from "../components/layout"
 import GalleryArticle from "./gallery-article"
 
+var types = ["quote", "title-and-image", "title-and-image", "title-and-image", "title-and-image", "title-and-image", "title-and-image","quote","quote", "quote"];
+
 export default () => (
   <StaticQuery
     query={graphql`
     query {
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+        allMarkdownRemark(skip: 2, limit: 10, sort: { order: DESC, fields: [frontmatter___date] }) {
           edges {
             node {
               id
@@ -39,13 +41,12 @@ export default () => (
         }
       }     
     `}
+    render={ data => (
 
-    render={data => (
                 data.allMarkdownRemark.edges
                     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
                     .filter(edge => edge.node.frontmatter.type !== "graphical-page")
-                    .map(edge => <GalleryArticle key={edge.node.id} post={edge.node} />)
-       
+                    .map( (edge, index) => <GalleryArticle key={edge.node.id} post={edge.node} type={types[index]} />)
     )}
     
   />

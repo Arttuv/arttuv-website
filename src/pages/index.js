@@ -58,11 +58,21 @@ const IndexPage = () => (
           <p>My research interest is how to design software to augment human cognitive performance.</p>
         </article>
         </div>
-        <BorderedTitle title="Archive" />
-        <p className="archive-description">I have quite recently realized that systems thinking is something that resonates with me and somewhat describes how I approach the world. Most of these writings are about human-computer interaction, but I expect there to be a lot of texts about how organizations build software in the future.</p>
-        <div className="archive-tags">
-          <TagsComponent />
+        <BorderedTitle title="Topics" />
+        <div className="archive-description">
+          <p>
+            Topics on this site are related to software development from various viewpoints - I don't limit myself too much. I'm conducting research on human-computer interaction and naturally have something to say about that as well.
+          </p>
+          <p>
+            Lately I've been mainly interested in how teams and organizations create software, what kind of problems large software teams are facing, and how we could help them perform better.
+          </p>
+          <p>
+            Learning new things is a big part of my life, and that's why I also write about notetaking, information processing (RSS and such), and everything related.
+          </p>
         </div>
+          
+        <TagsComponent />
+        <BorderedTitle title="Excerpts" />
         <div className="archive">
           <WritingsGallery />
         </div>
