@@ -10,22 +10,31 @@ Being in control is the best aspect of using PDF as a read it later service: you
 
 It’s not perfect, but it’s surprisingly good.
 
+**Updates to this text**
+
+* **31.7.2020** At first I thought the only way to get a good PDF on iPad OS was to take the full page screenshot, but luckily there was also an option to create a **Web Archive** PDF in the sharing view. I changed the text to include this.
+
 > styling makes reading the article more memorable compared to read-it-later services
 
 PDF has been the best format to read books on iPad, which got me thinking that why not using it for reading web long reads as well. PDF works on every platform and can render the website as it is with all the fonts and visuals. It makes reading the article more memorable compared to read-it-later services like Instapaper and Pocket.
 
-If you want to archive an article in a readable format, so that it can have styles and images too, PDF is the best option I’ve found. iPad with an Apple Pencil has emphasized this more as now it’s **easy to annotate and doodle the file with the pencil** - while still being able to keep the file as a multi-platform PDF.
+If you want to archive an article in a readable format, so that it can have styles of the source website and images, PDF is the best option I’ve found. iPad with an Apple Pencil has emphasized this more as now it’s **easy to annotate and doodle the file with the pencil** - while still being able to keep the file as a multi-platform PDF.
 
 iPad also has enough power to render even the largest PDF files so that the experience is snappy - and using the Pencil is as useful as ever.
 
 ![Annotating with the Pencil in PDFExpert](pdf-longread-annotation.jpeg "PDFExpert and Pencil")
 
-I hadn't realized that i-ecosystem has amazing web to PDF features: 
+Apple ecosystem has amazing web to PDF features: 
 
 - Safari browser on Mac OS can export the website (as it looks like in the browser) by File => Export as PDF
-- iPad OS (or iOS) you can take a screenshot, and expand it to cover the full website. As long as the website doesn’t do anything malicious like paging, you can get the full website in high detail
+- iPad OS (or iOS) you can take a screenshot, and expand it to cover the full website so you can annotate right away, and then save as PDF
+- iPad share to PDF has additional options to create an "archive" PDF that looks just like the website (no paging), which you can then annotate with whatever application.
 
 It has been a while I’ve been this happy to find a new functionality from my devices:
+
+![iPad share PDF](ipad-share-pdf.jpeg "iPad share PDF")
+
+![iPad share PDF options](ipad-share-pdf-options.jpeg "iPad share PDF options")
 
 ![iPad screenshot view](ipad-screenshot-view.jpeg "iPad screenshot view")
 
@@ -37,9 +46,7 @@ Mac OS
 iPad OS (iOS)
 [Take a screenshot or screen recording on iPhone - Apple Support](https://support.apple.com/guide/iphone/take-a-screenshot-or-screen-recording-iphc872c0115/ios)
 
-If for some reason the screenshot way of doing this fails, you still have the option to print to PDF, which generates a more boring result.
-
-I noticed that there seems to be a limit for a full-page screenshot on iPad OS. Mac OS Safari has been more reliable on getting very long texts as PDF, but I guess I’ll see in time if this is going to be a deal-breaker.
+I noticed that there seems to be a limit for a full-page screenshot on iPad OS. Sharing as a "Web Archive" seems to be working better. Print to PDF is another option, but I don't like the paged end result, that you can't control.
 
 ## Reading as it’s meant to
 
@@ -63,25 +70,25 @@ The most comforting idea of using PDF for long reads is that then they are alrea
 
 **PDF files can take a lot of space**, like one longer article can be 10Mb. It remains to be seen if it will cause some problems in the future. It isn’t too hard to export old ones to a cloud drive, so I think it will be ok. 
 
-**The screenshot way of creating the PDF removes links**, unfortunately. It can still extract the text though. 
+**The screenshot way of creating the PDF removes links**, unfortunately. It can still extract the text though, but it's better to use sharing as the Web Archive.
 
 > If you read a lot with a phone, read-it-later services might be a better option.
 
 If you use Mac and iPad, you should not have any problems with the **resolution** of the displays. You might want to make sure that the width of your browser is practical when you do the export. Most websites are responsive as well, so you can try what is the optimal width for each. Reading those PDFs with iPhone is not optimal, and if you do the capture with the iPhone, it’s not optimal for other larger devices. The landscape is your friend here, and to me, this is not such a big issue. If you read a lot with a phone, read-it-later services might be a better option.
 
-**PDF’n very long websites might not be practical.** I tend to trim the PDF a bit in Preview (using Mac), but if the PDF is too long, cropping doesn’t work. Export to PDF and full-page screenshot creates a PDF file that has one very long page - printing to PDF might be a better solution for very long texts. 
+**PDF’n very long websites might not be practical.** I tend to trim the PDF a bit in Preview (using Mac), but if the PDF is too long, cropping doesn’t work. Export to PDF and full-page screenshot creates a PDF file that is a one very long page - printing to PDF might be a better solution for very long texts. 
 
-The full-page screenshot also has a limit after which it just cuts the page. I hope they will update this to just continue with another page in the future, but for now it works most of the time.
+The full-page screenshot also has a limit after which it just cuts the page, but using the share view with "Web Archive" seems to be working better.
 
-One important feature in a read it-later-app is to remember the progress in each story. Because the PDF is one long single page, some applications are not able to **remember the location** you are at when you close the file and reopen it. Notability is one that does remember. GoodNotes remembers if you don’t close the file. PDF Expert seems to be working ok so that you can have the PDF files in the cloud.
+One important feature in a read it-later-app is to remember the progress in each story. Because the PDF is one long single page, some applications are not able to **remember the location** you are at when you close the file and reopen it. Notability is one that does remember. GoodNotes remembers if you don’t close the file. PDF Expert seems to be working ok so that you can have the PDF files in the cloud (it has failed occasionally though).
 
 ## Apps for reading and annotating the PDF files
 
-Using a dedicated note-taking app means a better user experience, but then you can’t keep the files as PDFs in the cloud. Usually, notetaking apps support exporting to PDF so this might not be a dealbreaker - but it's an annoyance and an extra step in the process. 
+Using a dedicated note-taking app means a better user experience, but then you can’t keep the files as PDFs in the cloud. Usually, notetaking apps support exporting to PDF so this might not be a dealbreaker - but it's an annoyance and an extra step in the process, and can be a pain if you need to access the files on different devices.
 
 Just because of the better user experience, if you don’t need to have your articles as PDF all the time, I’d recommend Notability or GoodNotes.
 
-Some of the apps are excellent at transforming handwritten notes to texts: This means you can for example **add handwritten tags** to the files which then will be indexed. 
+Some of the apps are excellent at transforming handwritten notes to texts: This means you can for example **add handwritten tags** to the files which then will be indexed. GoodNotes excels at this.
 
 ### Notability
 

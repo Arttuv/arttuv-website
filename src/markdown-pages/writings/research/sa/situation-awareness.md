@@ -4,6 +4,7 @@ date: "2019-06-23"
 title: "Situation Awareness (SA)"
 tags: ["hci"]
 featuredImage: "Endsley-SA-model_BW_Black.png"
+summary: "Situation awareness (SA) is a concept that describes how people stay entangled into events happening around them. SA model can be used to design systems so that they support users acquiring and maintaining situational awareness.  Mica R. Endsley is one of the most cited researchers on SA, and has created a formal definition of SA."
 ---
 
 Situation awareness (SA) is an interesting concept to consider in software design. The term comes from human factors research and was at first made popular by [Mica R. Endsley](https://www.researchgate.net/profile/Mica_Endsley), one of the most cited SA researchers.
@@ -31,7 +32,7 @@ The good thing is, that designers are able to evaluate their designs to make inf
 
 Situation awareness is an interesting concept and can be helpful when designing interfaces for single operators, by enabling designers to think what kind of data operators should be at their disposal at any given task.
 
-If you are interested in situation awareness in collaborative environments, check Distributed Situation Awareness (DSA).
+If you are interested in situation awareness in collaborative environments, check [Distributed Situation Awareness (DSA)](../dsa/distributed-situation-awareness.md).
 
 ## References
 
