@@ -1,4 +1,102 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Arttu Viljakainen]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 31 Jul 2020 18:21:11 GMT</lastBuildDate><item><title><![CDATA[PDF as a Read It Later Service]]></title><description><![CDATA[Being in control is the best aspect of using PDF as a read it later service: you can modify how the website looks like, save it so that it’s…]]></description><link>https://www.arttuv.com/information-overload/pdf-as-a-read-it-later-service/</link><guid isPermaLink="false">https://www.arttuv.com/information-overload/pdf-as-a-read-it-later-service/</guid><pubDate>Sat, 25 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Being in control is the best aspect of using PDF as a read it later service: you can modify how the website looks like, save it so that it’s yours to read, annotate and store however you like to. &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Arttu Viljakainen]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 Aug 2020 15:06:18 GMT</lastBuildDate><item><title><![CDATA[Don’t ask people to commit to fulfill a forecast]]></title><description><![CDATA[Estimating programming work is hard and communicating uncertainty can be tricky as well, even inside the team. Scrum.org has a text about…]]></description><link>https://www.arttuv.com/coaching/commitment-vs-forecast/</link><guid isPermaLink="false">https://www.arttuv.com/coaching/commitment-vs-forecast/</guid><pubDate>Sun, 02 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Estimating programming work is hard and communicating uncertainty can be tricky as well, even inside the team.&lt;/p&gt;
+&lt;p&gt;Scrum.org has a text about &lt;a href=&quot;https://www.scrum.org/resources/commitment-vs-forecast&quot;&gt;Commitment vs. Forecast:  A Subtle But Important Change to Scrum | Scrum.org&lt;/a&gt;. in which they elaborate the matter:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;In Scrum, the Development Team is now asked to forecast the specific work that can be done in a Sprint, rather than commit to it.&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Everyone knows that software is hard to estimate, and asking people to commit to those forecasts sets the wrong tone. The team does its best to forecast what happens during the next iteration (or iterations, if using something like SAFe). The team knows it’s their best guess at the time - forcing them to explicitly state that they are “committed” to it feels almost like abuse of power. If you want to know how confident they are to the forecast, ask how confident they are.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7bc6dfb4ed19595908f7b300efef0c8e/d0cbf/estimated-end-date.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.1891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAb7kNNgH/8QAGRAAAwADAAAAAAAAAAAAAAAAAAERAgMQ/9oACAEBAAEFAq7Sj141c//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABkQAAIDAQAAAAAAAAAAAAAAAAEQITEyUf/aAAgBAQAGPwIyb68h/wD/xAAbEAACAwADAAAAAAAAAAAAAAAAAREhQTFRcf/aAAgBAQABPyFG5w0UuxN3Y3Nlni8RB//aAAwDAQACAAMAAAAQ0M//xAAXEQADAQAAAAAAAAAAAAAAAAABEBFB/9oACAEDAQE/EIMX/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHBABAQADAAMBAAAAAAAAAAAAAREAITFRYXGR/9oACAEBAAE/ELHgg0nfFwI1NGR64IsH0wNpTQu/3AqTRbDAhuvu5//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Estimating the end date&quot;
+        title=&quot;Estimating the end date&quot;
+        src=&quot;/static/7bc6dfb4ed19595908f7b300efef0c8e/1c72d/estimated-end-date.jpg&quot;
+        srcset=&quot;/static/7bc6dfb4ed19595908f7b300efef0c8e/a80bd/estimated-end-date.jpg 148w,
+/static/7bc6dfb4ed19595908f7b300efef0c8e/1c91a/estimated-end-date.jpg 295w,
+/static/7bc6dfb4ed19595908f7b300efef0c8e/1c72d/estimated-end-date.jpg 590w,
+/static/7bc6dfb4ed19595908f7b300efef0c8e/a8a14/estimated-end-date.jpg 885w,
+/static/7bc6dfb4ed19595908f7b300efef0c8e/d0cbf/estimated-end-date.jpg 950w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Estimating the end date&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Scrum.org explains the terminology much better than I could:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“… if we pay attention to the meaning of the words, this would lead us to have a broken commitment versus a non-materialized forecast. When a commitment is broken or not fulfilled, it is usual to expect some sort of accountability, fault, or even compensation. When a forecast doesn’t come true, it is easier to think about matters such as learning from the experience, improvement, and - in one word - empiricism, which at the end is what Scrum is about.” &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Business needs predictable forecasting, but it should come from the proven track record of the work team has already delivered, and from the trust coming from working together. The longer the team works with the same project, the better it becomes in forecasting future. Spending more time on planning and estimation improves the accuracy to some extent, but simultaneously it also creates more waste.&lt;/p&gt;
+&lt;h2&gt;SAFe would benefit from using the same terminology as Scrum.&lt;/h2&gt;
+&lt;p&gt;As is explained on the &lt;a href=&quot;https://www.scaledagileframework.com/pi-objectives/&quot;&gt;Scaled Agile Framework website about PI objectives&lt;/a&gt;, &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“A vote of confidence is held near the end of PI planning, where the teams commit to the PI objectives.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So you are forced to &lt;strong&gt;commit&lt;/strong&gt; to the PI Objectives to complete the planning. SAFe tries to make uncertainty more visible by dividing the PI Objectives to “Committed” and “Uncommitted” and by adding that during the PI teams should also “escalate” immediately if they discover that commitments are not achievable, for corrective actions. However, the ask for a commitment at the end of PI planning is still there. &lt;/p&gt;
+&lt;p&gt;That adds a huge pressure to those that don’t feel confident in committing to fulfill a forecast. At the end of planning people are already tired and it’s hard to start discussing what “commitment” really means. Canceling the planning sets all the schedules explicitly back and people need to clear their calendars for another planning. &lt;/p&gt;
+&lt;p&gt;Ending the intensive planning by asking “is the team committed to the objective” gives a negative connotation to planning work: this is now your commitment and we’ll be holding you to it. Doing that when everybody knows that the result of two days planning for the next eight weeks (in case of SAFe) is just a guess or forecast, is forcing people to promise more than they know they can deliver. &lt;/p&gt;
+&lt;h2&gt;Agile is about being responsible and transparent&lt;/h2&gt;
+&lt;p&gt;Being responsible is already built in an agile way of working - when the team accepts tasks, they also accept the responsibility of doing their best to deliver good quality, updating the estimate when needed, and communicating the status of the task (&lt;a href=&quot;https://www.goodreads.com/book/show/45280021-clean-agile&quot;&gt;Clean Agile, pages 60-61&lt;/a&gt;). &lt;/p&gt;
+&lt;p&gt;The trust comes from empiricism - agile produces data on finished end to end slices and that data can be used to predict how long tasks take in the future. &lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c0f6a45a204a65d324916c5540e56610/873c3/velocity-remaining-work.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHaESNsSJ//xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIDMREhIv/aAAgBAQABBQJHaz0LbiOv/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFxAAAwEAAAAAAAAAAAAAAAAAAAEQcf/aAAgBAQAGPwIcYsn/xAAbEAEBAAEFAAAAAAAAAAAAAAABABARMVGhsf/aAAgBAQABPyFmD3OIdS72N63/2gAMAwEAAgADAAAAEDgP/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/ENiv/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Qh//EABsQAQACAgMAAAAAAAAAAAAAAAEAMRFxQaHw/9oACAEBAAE/EACtre4AckKOoeYneSuiW+cT/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Empiricism in Agile&quot;
+        title=&quot;Empiricism in Agile&quot;
+        src=&quot;/static/c0f6a45a204a65d324916c5540e56610/1c72d/velocity-remaining-work.jpg&quot;
+        srcset=&quot;/static/c0f6a45a204a65d324916c5540e56610/a80bd/velocity-remaining-work.jpg 148w,
+/static/c0f6a45a204a65d324916c5540e56610/1c91a/velocity-remaining-work.jpg 295w,
+/static/c0f6a45a204a65d324916c5540e56610/1c72d/velocity-remaining-work.jpg 590w,
+/static/c0f6a45a204a65d324916c5540e56610/a8a14/velocity-remaining-work.jpg 885w,
+/static/c0f6a45a204a65d324916c5540e56610/873c3/velocity-remaining-work.jpg 939w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Empiricism in Agile&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;This also emphasises the importance of implementing &lt;strong&gt;end to end slices&lt;/strong&gt;: Business needs features for the end users, and from that point of view it&apos;s more important to be able to forecast how long an end to end user feature takes to implement. If one team does the backend, another the front, and third takes the whole thing to the production, it&apos;s much more complex to &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;understand how long it&apos;s going to take&lt;/li&gt;
+&lt;li&gt;debug the problems that &lt;strong&gt;will&lt;/strong&gt; happen&lt;/li&gt;
+&lt;li&gt;handle the whole, including helpful metrics logs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It’s not that easy, nor a silver bullet, but it is a way to get better at forecasting the future of the project. &lt;/p&gt;
+&lt;p&gt;The problem of forecast vs commitment might seem like a minor one, but I’ve experienced that wrong wording in this matter can cause negative feelings in the team and cause vain friction between stakeholders. &lt;/p&gt;
+&lt;p&gt;The estimation itself is hard, and I don’t think I’ve ever seen it done too well, so it would be good to get all the stakeholders to understand that, and work towards better predictability together.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[PDF as a Read It Later Service]]></title><description><![CDATA[Being in control is the best aspect of using PDF as a read it later service: you can modify how the website looks like, save it so that it’s…]]></description><link>https://www.arttuv.com/information-overload/pdf-as-a-read-it-later-service/</link><guid isPermaLink="false">https://www.arttuv.com/information-overload/pdf-as-a-read-it-later-service/</guid><pubDate>Sat, 25 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Being in control is the best aspect of using PDF as a read it later service: you can modify how the website looks like, save it so that it’s yours to read, annotate and store however you like to. &lt;/p&gt;
 &lt;p&gt;It’s not perfect, but it’s surprisingly good.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Updates to this text&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
