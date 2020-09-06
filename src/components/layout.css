@@ -24,7 +24,7 @@ body {
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   line-height: 1.6;
 }
 
@@ -836,7 +836,7 @@ a {
     }
 
     .blog-post-container blockquote p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
 
     .archive-article-item blockquote {
