@@ -13,13 +13,13 @@ const MailchimpSubscribe = ({ siteTitle, small}) => {
                     <p>Yes, RSS still exists \o/ Full text is provided in RSS so you'll never need to visit this site if you don't want to.</p>
                 </div>
             </div>
-
+            {/*
             <div className="mailchimpSubscribe">
                 <h2>Follow using Mailchimp</h2>
                 <a href="http://eepurl.com/g130PD" target="_blank" rel="noopener noreferrer">Mailchimp subscribtion</a>
                 <p>Emails are used only to provide updates on this website, not to deliver any kind of advertisements.</p>
                 
-            </div>
+            </div>*/}
         </>
     )
 };

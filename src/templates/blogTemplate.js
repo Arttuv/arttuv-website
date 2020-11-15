@@ -16,10 +16,18 @@ export default function Template({
       <SEO title={frontmatter.title} />
       <div className="blog-post-container">
         <div className="blog-post">
+          <p className="blog-post-category">
+            {frontmatter.tags !== null && (
+                  frontmatter.tags.map( tag => {
+                    return <span key={"link-span-key" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
+                            {tag}
+                      </Link></span>
+                  }))
+            }
+          </p>
           <h1>{frontmatter.title}</h1>
           <div>
-            <p className="blog-post-date">{frontmatter.date} 
-            </p>
+            <p className="blog-post-date">{frontmatter.date} </p>
           </div>
           <div
             className="blog-post-content"
@@ -36,18 +44,16 @@ export default function Template({
           If you found a mistake, disagree or would like to discuss, <a href="https://twitter.com/arttuv">DM me on Twitter</a> or 
           <a href={"mailto:arttu.viljakainen@gmail.com?subject=" + frontmatter.title + ""}> send me an email</a>.
         </p>
-      </div>
-      <p className="blog-post-bottom-tag">
+        </div>
+          {/*<p className="blog-post-bottom-tag">
             {frontmatter.tags !== null && ( 
               frontmatter.tags.map( tag => {
                 return <span key={"link-span-key" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
                         {"#" + tag}
                   </Link></span>
-          }))
-          }
-            
-            
-            </p>
+              }))
+            }
+          </p>*/}
     </Layout>
   )
 }

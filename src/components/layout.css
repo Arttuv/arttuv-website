@@ -24,7 +24,7 @@ body {
 }
 
 p {
-  font-size: 1.0rem;
+  font-size: 1.02rem;
   line-height: 1.6;
 }
 
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 .graphical-page .title-section {
   background-color: #242424;
   max-width: 50rem;
-  color: #ce4f25;
+  color: #e7131a;
   padding: 0rem;
   margin: 0px auto;
 }
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .graphical-page .title-motivation {
   background-color: #242424;
-  color: #ce4f25;
+  color: #e7131a;
   padding: 0px 1rem;
   text-align: center;
 }
@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6 {
   #ede4d5
   
   red
-  #ce4f25
+  #e7131a
 */
 footer {
   padding: 1rem;
@@ -252,14 +252,10 @@ footer .copyright {
   text-align: center;
 }
 
-.blog-post h1 {
-  text-align: center;
-}
-
 .blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5 {
   padding-left: 0rem;
   margin-left: 0rem;
-  padding-top: 0.5rem;
+  padding-top: 0rem;
   padding-bottom: 0.5rem;
   margin-top: 0rem;
   margin-bottom: 0.5rem;
@@ -271,10 +267,11 @@ footer .copyright {
   /*border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: lightgray;*/
+  text-align: left;
   text-decoration: none;
   margin-left: 0px;
   padding-bottom: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 0rem;
   margin-bottom: 1.5rem;
   font-weight: normal;
 }
@@ -297,10 +294,25 @@ footer .copyright {
   text-align: right;
   white-space: nowrap;
 }
+
+.blog-post .blog-post-category {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-top: 1rem;
+}
+
+.blog-post .blog-post-category a {
+  color: #e7131a;
+}
+
 .blog-post-date {
-  text-align: center;
-  color: #ce4f25;
-  font-weight: normal;
+  text-align: left;
+  color: #000;
+  font-weight: bold;
   padding-left: auto;
   margin-left: auto;
 }
@@ -312,7 +324,7 @@ footer .copyright {
 .blog-post-bottom-tag {
   font-size: 1.5rem;
   text-align: center;
-  color: #ce4f25;
+  color: #e7131a;
   font-weight: normal;
   padding-left: auto;
   margin-left: auto;
@@ -457,7 +469,7 @@ header ul li {
 }
 
 .blog-post-container {
-  max-width: 46rem;
+  max-width: 50rem;
   margin: auto;
 }
 
@@ -474,7 +486,7 @@ header ul li {
   padding-left: 0.5rem;
   border-left: 2px solid lightcoral;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.02rem;
 }
 
 .blog-post-container strong {
@@ -485,8 +497,8 @@ header ul li {
  .blog-post-content::first-letter {
   float: left;
   color: #242424;
-  font-size: 3.4rem;
-  line-height: 3.5rem;
+  font-size: 3.2rem;
+  line-height: 3.3rem;
   padding-top: 0px;
   padding-bottom: 0px;
   padding-right: 0.5rem;
@@ -576,10 +588,10 @@ a {
 }
 
 .latest-writings-item h3 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
   font-size: 1.8rem;
-  text-align: center;
+  text-align: left;
 }
 
 .latest-writings-item-topic {
@@ -587,20 +599,26 @@ a {
 }
 
 .latest-writings-item-summary-read-more {
-  text-align: center;
+  text-align: left;
+  text-transform: uppercase;
+  
 }
 
 .latest-writings-item-summary-read-more span {
   margin-right: 0.5rem;
 }
 
+.latest-writings-item-summary-read-more a {
+  color: #e7131a;
+}
+
 .latest-writing-item-date {
-  text-align: center;
+  text-align: left;
   margin-bottom: 0px;
 }
 
 .highlight-color {
-  color: #ce4f25;
+  color: #e7131a;
 }
 
 .about-me-text {
@@ -798,7 +816,7 @@ a {
   }
 
   .archive-article-item blockquote {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-left: 0.5rem;
     border-left: 2px solid lightcoral;
     margin-bottom: 1rem;
@@ -836,11 +854,11 @@ a {
     }
 
     .blog-post-container blockquote p {
-      font-size: 1.2rem;
+      font-size: 1.02rem;
     }
 
     .archive-article-item blockquote {
-      font-size: 1.2rem;
+      font-size: 1.02rem;
     }
 
   }
