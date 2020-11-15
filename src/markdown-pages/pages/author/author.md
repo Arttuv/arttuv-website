@@ -3,7 +3,7 @@ type: "graphical-page"
 path: "/author"
 date: "2020-05-03"
 title: "Arttu Viljakainen"
-summary: "I work in software development"
+summary: ""
 featuredImage: "arttu-hiedanranta.jpg"
 imageId: "arttu-hiedanranta"
 ---
