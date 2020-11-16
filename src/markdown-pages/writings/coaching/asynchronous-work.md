@@ -3,8 +3,8 @@ path: "/writings/asynchronous-work"
 date: "2020-11-15"
 title: "Becoming fluent in remote work"
 tags: ["dev"]
-featuredImage: ""
-summary: "GitLab has a course on Leading remote teams and it "
+featuredImage: "asynchronous-work.png"
+summary: "Remote work has different requirements and success factors than co-located work. Trying to mimic co-located work in a remote setting leads to inefficiencies and misses the potential benefits of working remotely. GitLab has published a Leading remote teams -course on Coursera and I went through it to get new ideas on how to improve my work, and they really do have some interesting ideas. Asynchronous workflows is one fundamental one."
 ---
 
 I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional meetings with others - that’s easy and only thing you need to worry is getting lonely. Now I work with a team on things that require collaboration, so it’s much harder - you can’t just mimic the co-located way of working remotely. Or you can, but it’s suboptimal and leads into inefficiencies. By GitLab terms that stage of remote is called [skeuomorph](https://about.gitlab.com/company/culture/all-remote/phases-of-remote-adaptation/).
@@ -24,6 +24,8 @@ You also get tired being in a video meeting (we also have a new term, [Zoom Fati
 At least that’ my feeling of the year 2020, and I’d like to change that. 
 
 In the Leading Remote Teams course they suggest **asynchronous workflows**, **low context communication**, **iteration**, **asynchronous communication instead of synchronous meetings** and pedantic **documentation** as means to make remote work more efficient. Following is a bit more detailed listing on the contents of the course. I don’t necessarily agree with everything nor have tried if they work in practice, but for sure there was a lot of thought provoking content.
+
+![Asynchronous work](asynchronous-work.png "Asynchronous work")
 
 # Work in a remote-first company
 Work in a remote-first way has different requirements, and thus also different success factors than traditional co-located, or mostly office way of working. At GitLab they have concluded that it’s important to 
@@ -48,11 +50,6 @@ In order for this to work, **you should not evaluate people by the speed they re
 That’s why you need to plan for the asynchronicity in your communication and working.
 
 What this seems to be meaning is, that instead of concentrating on speeding up the cycle times, you need to make work tasks independent and detached from blockers. That allows people to work on them independently. This also means that they might be proceeding with multiple threads at the same time, switching from task to task when they get to a point they get finished or blocked. This sounds a bit like a flash from the past by maximising the utilisation, but then again we’ll need to remember that it’s different to work when everyone is working remotely. Switching context from one task to other is not as much of a problem than being blocked because others aren’t there to help you.
-
-### Use synchronous communication where it matters the most
-Remote work also increases feelings of loneliness and risk of burnout: Being always on burns out people, so they should be encouraged to also have time off. As said before, **people should not be valued on how quickly they respond to messages**. It's harder to detect how people are doing, so you should make effort to create a safe environment to bring up feelings of burnout. 
-
-For example one on one meetings can be used for this, or other synchronous communication methods.
 
 ## Progress over perfection: Iterate 
 Asynchronous workflow slows down the communication and cycle time, and concentrating on iterations is important: **progress over perfection**. You should iterate and share work that is  in a draft state. 
@@ -84,19 +81,40 @@ Meeting should also be recorded whenever possible, and even using some transcrip
 
 The idea is to allow people who were not able to participate to watch the recording, and then use the meeting agenda document afterwards to give their input.
 
-GitLab course instructors even go so far as to say that people should be empowered to manage their time even in meetings. So you should not shame people if you need to repeat something because they were concentrating on different work tasks while in a meeting. People should also be encouraged to leave meeting, if they notice that it’s not for them. The reason for this is to encourage even busy people to attend the meetings. 
+### Use synchronous communication where it matters the most
+Remote work also increases feelings of loneliness and risk of burnout: Being always on burns out people, so they should be encouraged to also have time off. As said before, **people should not be valued on how quickly they respond to messages**. It's harder to detect how people are doing, so you should make effort to create a safe environment to bring up feelings of burnout. 
 
-This idea sounds weird to me, but I guess it works if combined with the tendency to avoid meetings at all cost. For me it would require some learning to not be annoyed if someone is not participating in the meeting and thus wasting everyones time. 
+For example one on one meetings can be used for this, or other synchronous communication methods.
 
 ## Documentation
 Slower communication in asynchronous works means that often it’s not feasible or desirable to ask things from other people in the team - it might slow everyone down, and you’d be blocked until they answer. 
 
-This is why documentation and having a single source of truth is so essential in remote work: to remove blockers. 
+This is why documentation and having a **single source of truth** is so essential in remote work: to remove blockers. 
 
-Everyone should be encouraged to find information by themselves, and discussion should be redirected to the single source of truth. 
+Everyone should be encouraged to find information by themselves, and **discussion should be redirected to the single source of truth**. 
 
 At GitLab they have the handbook in git, and process proposals vial merge requests: I really like this idea and it would be interesting to test it. Having changes as merge requests might make it easy for everyone to track the changes, and would create a natural setting to discuss the change, and further elaborate it.
 
 Documentation is always hard and it’s difficult to convince people to use their limited time for it. Hopefully we are starting to find better ways to incorporate it to ways of working and also improve the experience of writing documentation. 
 
-Too many times I’ve had to write manually versioned word documents, that are stored conveniently on some web drive.
+# Wrap up
+
+I didn't go through the states a company transitioning to remote work go through (or could go according to GitLab), but here they are:
+* Skeumorph (imitating)
+* Functional state (functional changes to promote remote work)
+* Asynchronous state (work is being done independently)
+* Intentionality (organization is built for remote)
+
+All companies are not aiming to be intentionally built for remote work nor should they, but it's good to understand what elements they could take into use to make remote working more efficient, and in a sense move on a higher ladder in the transition as well.
+
+Some of the tools proposed by GitLab are
+
+* Emphasise asynchronicity and non-linear workdays
+* Use low context communication
+* Iterate
+* Avoid synchronous meetings (and then make the most of them)
+* Document everything 
+
+It remains to be seen how you can keep the collaborative aspect of work while you also enable asynchronous workflows and independent working. After all solving complex problems require real collaboration and not just working on different bits of a larger whole.
+
+Meanwhile, going through the contents in Leading remote teams -course is not a waste of your time.
