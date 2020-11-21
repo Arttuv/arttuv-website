@@ -4,7 +4,7 @@ import PostLink from "../components/post-link"
 import Layout from "../components/layout"
 import GalleryArticle from "./gallery-article"
 
-var types = ["quote", "title-and-image", "title-and-image", "title-and-image", "title-and-image", "title-and-image", "title-and-image","quote","quote", "quote"];
+var types = ["title-and-image", "title-and-image", "title-and-image", "title-and-image", "title-and-image", "title-and-image", "title-and-image","title-and-image","title-and-image", "title-and-image"];
 
 export default () => (
   <StaticQuery
@@ -42,7 +42,6 @@ export default () => (
       }     
     `}
     render={ data => (
-
                 data.allMarkdownRemark.edges
                     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
                     .filter(edge => edge.node.frontmatter.type !== "graphical-page")

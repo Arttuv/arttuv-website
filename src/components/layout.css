@@ -826,6 +826,7 @@ a {
   
   /* Single column display for phones */
   @media (max-width: 459px) {
+
     .archive {
       display: flex;
       flex-direction: column;
@@ -960,7 +961,7 @@ a {
 
   .archive {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(2, 1fr);
     margin: 0.5rem;
     grid-gap: 0.5rem;
   }

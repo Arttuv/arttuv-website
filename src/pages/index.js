@@ -72,7 +72,7 @@ const IndexPage = () => (
         </div>
           
         <TagsComponent />
-        <BorderedTitle title="Excerpts" />
+        <BorderedTitle title="Writings" />
         <div className="archive">
           <WritingsGallery />
         </div>
