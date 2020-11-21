@@ -36,13 +36,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .graphical-page-background {
-  background-color: #242424;
+  background-color: #fff;
 }
 
 .graphical-page .title-section {
-  background-color: #242424;
+  background-color: #fff;
   max-width: 50rem;
-  color: #e7131a;
   padding: 0rem;
   margin: 0px auto;
 }
@@ -52,10 +51,9 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 0px;
 }
 .graphical-page .title-motivation {
-  background-color: #242424;
-  color: #e7131a;
+  background-color: #fff;
   padding: 0px 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .graphical-page .title-motivation p {
@@ -78,13 +76,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .graphical-page-menu a, .graphical-page-menu a:visited {
-  font-size: 1rem;
-  color: white;
-  text-decoration: underline;
+  
+  
 }
 
 .graphical-page h1 {
-  color: #fff;
   display: table;
   margin: 0 auto;
   margin-bottom: 1rem;
@@ -97,7 +93,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-
 .graphical-page-header-image {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
   background-color: #242424;
@@ -107,12 +102,11 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 50rem;
   margin: 0 auto;
   padding: 1rem;
-  background-color: #EDE4D5;
+  background-color: #fff;
 }
 
 .graphical-page-container footer {
-  background-color: #242424;
-  color: #fff;
+  background-color: #fff;
 }
 
 /*
@@ -494,7 +488,8 @@ header ul li {
   color: black;
 }
 
- .blog-post-content::first-letter {
+ /*Does not work on firefox 
+ blog-post-content::first-letter {
   float: left;
   color: #242424;
   font-size: 3.2rem;
@@ -503,7 +498,7 @@ header ul li {
   padding-bottom: 0px;
   padding-right: 0.5rem;
   padding-left: 0px;
-}
+}*/
 
 .blog-post-content h3 {
   font-size: 1.5rem;
