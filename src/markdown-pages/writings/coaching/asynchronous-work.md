@@ -3,7 +3,7 @@ path: "/writings/asynchronous-work"
 date: "2020-11-15"
 title: "Becoming fluent in remote work"
 tags: ["dev"]
-featuredImage: "asynchronous-work.png"
+featuredImage: "asynchronous-work-drawing.png"
 summary: "Remote work has different requirements and success factors than co-located work. Trying to mimic co-located work in a remote setting leads to inefficiencies and misses the potential benefits of working remotely. GitLab has published a Leading remote teams -course on Coursera and I went through it to get new ideas on how to improve my work, and they really do have some interesting ideas. Asynchronous workflows is one fundamental one."
 ---
 
@@ -25,7 +25,7 @@ At least that’ my feeling of the year 2020, and I’d like to change that.
 
 In the Leading Remote Teams course they suggest **asynchronous workflows**, **low context communication**, **iteration**, **asynchronous communication instead of synchronous meetings** and pedantic **documentation** as means to make remote work more efficient. Following is a bit more detailed listing on the contents of the course. I don’t necessarily agree with everything nor have tried if they work in practice, but for sure there was a lot of thought provoking content.
 
-![Asynchronous work](asynchronous-work.png "Asynchronous work")
+![Asynchronous work](asynchronous-work-drawing.png "Asynchronous work")
 
 # Work in a remote-first company
 Work in a remote-first way has different requirements, and thus also different success factors than traditional co-located, or mostly office way of working. At GitLab they have concluded that it’s important to 
@@ -115,6 +115,10 @@ Some of the tools proposed by GitLab are
 * Avoid synchronous meetings (and then make the most of them)
 * Document everything 
 
-It remains to be seen how you can keep the collaborative aspect of work while you also enable asynchronous workflows and independent working. After all solving complex problems require real collaboration and not just working on different bits of a larger whole.
+My experience is that companies are more ofthen on the level of skeumorph or functional - you can do occasional remote work, but it's more imitating colocated work and making sure that the systems support remote connections etc. 
+
+What's missing is enabling asynchronous workflows and non-linear workdays, and that's something I think people should be more considerable about. Especially during COVID-19 when people oftne need to attend to their children while working at home.
+
+It remains to be seen how you can keep the collaborative aspect of work while you also enable asynchronous workflows and independent working. After all solving complex problems require real collaboration and not just working on different bits of a larger whole. In complex environment working on separate parts of the whole doesn't benefit the whole but instead damages it ([Organize for Complexity](https://www.researchgate.net/publication/275605232_Organize_for_Complexity_How_to_Get_Life_Back_Into_Work_to_Build_the_High-Performance_Organization)).
 
 Meanwhile, going through the contents in Leading remote teams -course is not a waste of your time.
