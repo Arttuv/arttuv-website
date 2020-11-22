@@ -6,13 +6,15 @@ tags: ["research"]
 featuredImage: "pdf-longread-annotation.jpeg"
 summary: "PDF seems to be the best format to read books on iPad, and now I've started using it for reading web long reads as well. Being in control is the best part: You can decide how the website looks like, save it so it's yours to read and annotate however you like, and store it forever."
 ---
+**Updates to this text**
+
+* **31. July 2020** At first I thought the only way to get a good PDF on iPad OS was to take the full page screenshot, but luckily there was also an option to create a **Web Archive** PDF in the sharing view. I changed the text to include this.
+
+* **22. November 2020** My joy didn't last that long - Web Archibe feature was changed in the iOS14, or at least it looks like it. Now the website is saved in webarchive format instead of PDF. You can still get the PDF but it's divided to pages, which makes it less appealing to read. 
+
 Being in control is the best aspect of using PDF as a read it later service: you can modify how the website looks like, save it so that it’s yours to read, annotate and store however you like to. 
 
 It’s not perfect, but it’s surprisingly good.
-
-**Updates to this text**
-
-* **31.7.2020** At first I thought the only way to get a good PDF on iPad OS was to take the full page screenshot, but luckily there was also an option to create a **Web Archive** PDF in the sharing view. I changed the text to include this.
 
 > styling makes reading the article more memorable compared to read-it-later services
 
