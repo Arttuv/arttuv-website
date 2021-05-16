@@ -10,10 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 
-import Header from "./header";
 import Footer from "./footer";
 import "./layout.css"
-import BorderedTitle from "../components/bordered-title"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>

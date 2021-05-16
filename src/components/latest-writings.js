@@ -1,10 +1,8 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import PostLink from "../components/post-link"
-import Layout from "../components/layout"
 import LatestWritingsItem from "./latest-writings-item"
 
-export default () => (
+const LatestWritings = () => (
   <StaticQuery
     query={graphql`
     query {
@@ -22,13 +20,8 @@ export default () => (
                 summary
                 featuredImage {
                     childImageSharp {
-                        sizes(maxWidth: 800) {
-                        ...GatsbyImageSharpSizes
-                        }
-                        fluid(maxWidth: 800, quality: 100) {
-                          ...GatsbyImageSharpFluid
-                          ...GatsbyImageSharpFluidLimitPresentationSize
-                          
+                        fluid(maxWidth: 800) {
+                        ...GatsbyImageSharpFluid_tracedSVG
                         }
                     }
                     
@@ -56,3 +49,5 @@ export default () => (
     
   />
 )
+
+export default LatestWritings;

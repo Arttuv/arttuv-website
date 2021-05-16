@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import WritingsGallery from "../components/writings-gallery"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import BorderedTitle from "../components/bordered-title"
 import ImageFace from "../components/image-face"
 import LatestWritings from "../components/latest-writings"
@@ -11,7 +11,7 @@ import TagsComponent from "../components/tags-component"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home"/>
+    <Seo title="Home"/>
     <div><BorderedTitle title="Latest Writings" /></div>
     <div className="latest-writings">
       <LatestWritings className="latest-writings" />

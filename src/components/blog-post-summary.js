@@ -1,18 +1,13 @@
 import React from "react"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
-import { BackgroundImage } from "gatsby-background-image"
-  
+
 const BlogPostSummary = ({ post }) => (
 
   <article className="blog-post-summary">
     <div className="blog-post-summary-image">
     
       {post.frontmatter.featuredImage !== null && (
-        <Img 
-            sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-            style={{margin: 'auto auto', width: '128px'}}
-          />
+        <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
       )}
 
     </div>

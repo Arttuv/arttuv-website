@@ -19,7 +19,7 @@ const ImageFace = () => {
       placeholderImage: file(relativePath: { eq: "arttu_face_2019.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

@@ -1,7 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 import kebabCase from "lodash/kebabCase"
 
 const LatestWritingsItem = ({ post }) => (
@@ -28,10 +27,7 @@ const LatestWritingsItem = ({ post }) => (
         {post.frontmatter.summary !== null && (<p className="latest-writings-item-summary">{post.frontmatter.summary}</p>)} 
         {post.frontmatter.summary === null && (<p className="latest-writings-item-summary">{post.excerpt}</p>)} 
         {post.frontmatter.featuredImage !== null && (
-            <Img 
-                sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-                style={{margin: 'auto auto', width: '100%', maxWidth: '400px'}}
-              />
+            <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
             )}
       </div>
   </article>

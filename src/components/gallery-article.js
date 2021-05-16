@@ -1,7 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
-import { BackgroundImage } from "gatsby-background-image"
 import kebabCase from "lodash/kebabCase"
 
 const GalleryArticle = ({ post, type }) => (
@@ -14,7 +13,7 @@ const GalleryArticle = ({ post, type }) => (
           {post.frontmatter.tags !== null && (
             post.frontmatter.tags.map(tag => {
               return <div className="archive-article-item-topic" key={"gallery-article-item-topic" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
-                {"" + tag}
+                {tag}
               </Link></div>
             }))}
           <Link to={post.frontmatter.path}>
@@ -31,10 +30,7 @@ const GalleryArticle = ({ post, type }) => (
         <div className="archive-article-item-image">
 
           {post.frontmatter.featuredImage !== null && (
-            <Img
-              sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-              style={{ margin: 'auto auto', width: '96px' }}
-            />
+            <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
           )}
 
         </div>
@@ -47,7 +43,7 @@ const GalleryArticle = ({ post, type }) => (
           {post.frontmatter.tags !== null && (
             post.frontmatter.tags.map(tag => {
               return <div className="archive-article-item-topic" key={"gallery-article-item-topic" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
-                {"" + tag}
+                {tag}
               </Link></div>
             }))}
           <Link to={post.frontmatter.path}>

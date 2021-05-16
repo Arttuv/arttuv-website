@@ -1,8 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import addToMailchimp from 'gatsby-plugin-mailchimp';
-import MailchimpSubscribe from "./mailchimp-subscribe";
 
 const ListLink = props => (
   <li>
@@ -22,7 +20,13 @@ const Footer = ({ siteTitle, small}) => (
   <div className="footerContent">
 
   <div>
-    <MailchimpSubscribe />      
+  <div className="rssSubscribe">
+                <h1>Follow the updates on this site</h1>
+                <div>
+                    <a href="/rss.xml">All posts RSS link</a>
+                    <p>Yes, RSS still exists \o/ Full text is provided in RSS so you'll never need to visit this site if you don't want to.</p>
+                </div>
+            </div>
     </div>
     <div className="bottomNavigation">
         <ul style={{ listStyle: `none`}}>

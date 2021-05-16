@@ -1,19 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import BlogPostSummary from "../components/blog-post-summary"
+import Seo from "../components/seo"
 import { Link } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 
-export default function Template({
+const BlogTemplate = function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
     <Layout small="small">
-      <SEO title={frontmatter.title} />
+      <Seo title={frontmatter.title} />
       <div className="blog-post-container">
         <div className="blog-post">
           <p className="blog-post-category">
@@ -71,8 +70,8 @@ export const writings = graphql`
         summary
         featuredImage {
             childImageSharp {
-                sizes(maxWidth: 850) {
-                ...GatsbyImageSharpSizes
+                fluid(maxWidth: 850) {
+                ...GatsbyImageSharpFluid_tracedSVG
                 }
             }
         }
@@ -86,3 +85,5 @@ export const writings = graphql`
     }
   }
 `
+
+export default BlogTemplate;

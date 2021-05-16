@@ -1,18 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import BlogPostSummary from "../components/blog-post-summary"
-import { Link } from "gatsby"
-import kebabCase from "lodash/kebabCase"
+import Seo from "../components/seo"
 import GraphicalLayout from "../components/graphical-layout"
-import WritingsGallery from "../components/writings-gallery"
-import Image from "../components/image"
-import BorderedTitle from "../components/bordered-title"
-import ImageFace from "../components/image-face"
-import LatestWritings from "../components/latest-writings"
-import TagsComponent from "../components/tags-component"
-import Img from "gatsby-image"
 import BackgroundSection from "../components/background-section"
 import Header from "../components/header";
 
@@ -29,7 +18,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <>
-      <SEO title={frontmatter.title} />
+      <Seo title={frontmatter.title} />
       <div className={"header-container " + getClassNames("small", "dark")}>
         <Header small="small" dark="dark"></Header>
       </div>
@@ -61,7 +50,7 @@ export const pageQuery = graphql`
         imageId
         featuredImage {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
+            fluid(maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

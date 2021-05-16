@@ -1,7 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
 import { Link } from "gatsby"
-import { BackgroundImage } from "gatsby-background-image"
 import kebabCase from "lodash/kebabCase"
 import TagImage from "./tag-image"
 

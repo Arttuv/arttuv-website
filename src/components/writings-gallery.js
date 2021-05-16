@@ -1,12 +1,10 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import PostLink from "../components/post-link"
-import Layout from "../components/layout"
 import GalleryArticle from "./gallery-article"
 
 var types = ["title-and-image", "title-and-image", "title-and-image", "title-and-image", "title-and-image", "title-and-image", "title-and-image","title-and-image","title-and-image", "title-and-image"];
 
-export default () => (
+const WritingsGallery = () => (
   <StaticQuery
     query={graphql`
     query {
@@ -24,8 +22,8 @@ export default () => (
                 summary
                 featuredImage {
                     childImageSharp {
-                        sizes(maxWidth: 250) {
-                        ...GatsbyImageSharpSizes
+                        fluid(maxWidth: 250) {
+                        ...GatsbyImageSharpFluid_tracedSVG
                         }
                     }
                 }
@@ -50,3 +48,5 @@ export default () => (
     
   />
 )
+
+export default WritingsGallery;

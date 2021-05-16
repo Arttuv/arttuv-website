@@ -12,7 +12,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header";
 import Footer from "./footer";
 import "./layout.css"
-import BorderedTitle from "../components/bordered-title"
 
 function getClassNames(small, dark) {
   let classNames = small ? "small-header-container" : "normal-header-container";
