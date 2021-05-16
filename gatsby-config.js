@@ -9,6 +9,8 @@ module.exports = {
     author: `Arttu Viljakainen`,
     twitterUsername: "@arttuv",
   },
+  // pathPrefix is not needed in my case, but deploy to gh-pages fails without this.
+  pathPrefix: "",
   plugins: [
     'gatsby-plugin-robots-txt',
     `gatsby-remark-reading-time`,
