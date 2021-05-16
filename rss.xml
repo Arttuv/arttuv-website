@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[arttuv.com RSS feed]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 16 May 2021 15:36:23 GMT</lastBuildDate><item><title><![CDATA[Becoming fluent in remote work]]></title><description><![CDATA[I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional…]]></description><link>https://www.arttuv.com/writings/asynchronous-work</link><guid isPermaLink="false">https://www.arttuv.com/writings/asynchronous-work</guid><pubDate>Sun, 15 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional meetings with others - that’s easy and only thing you need to worry is getting lonely. Now I work with a team on things that require collaboration, so it’s much harder - you can’t just mimic the co-located way of working remotely. Or you can, but it’s suboptimal and leads into inefficiencies. By GitLab terms that stage of remote is called &lt;a href=&quot;https://about.gitlab.com/company/culture/all-remote/phases-of-remote-adaptation/&quot;&gt;skeuomorph&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[arttuv.com RSS feed]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 16 May 2021 15:38:44 GMT</lastBuildDate><item><title><![CDATA[Becoming fluent in remote work]]></title><description><![CDATA[I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional…]]></description><link>https://www.arttuv.com/writings/asynchronous-work</link><guid isPermaLink="false">https://www.arttuv.com/writings/asynchronous-work</guid><pubDate>Sun, 15 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional meetings with others - that’s easy and only thing you need to worry is getting lonely. Now I work with a team on things that require collaboration, so it’s much harder - you can’t just mimic the co-located way of working remotely. Or you can, but it’s suboptimal and leads into inefficiencies. By GitLab terms that stage of remote is called &lt;a href=&quot;https://about.gitlab.com/company/culture/all-remote/phases-of-remote-adaptation/&quot;&gt;skeuomorph&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I went through the &lt;a href=&quot;https://www.coursera.org/learn/remote-team-management&quot;&gt;GitLab Leading remote teams Coursera course&lt;/a&gt; and I feel it gave me some fresh ideas on how to approach working fully remotely.&lt;/p&gt;
 &lt;p&gt;Most of my work experience is from working in an traditional agile way; co-located, collaborating, discussing directly with the people who are needed to solve the task at hand, immediately when the need arises: Going through the difficulties with a whiteboard, having retrospectives with post-it notes, etc.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -16,7 +16,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/6d8fa6fb4666cb1bf6bca24400bf19b7/f8544/asynchronous-work-drawing.png&quot;
+    href=&quot;/static/6d8fa6fb4666cb1bf6bca24400bf19b7/f8544/asynchronous-work-drawing.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -29,13 +29,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Asynchronous work&quot;
         title=&quot;Asynchronous work&quot;
-        src=&quot;/arttuv-website/static/6d8fa6fb4666cb1bf6bca24400bf19b7/fcda8/asynchronous-work-drawing.png&quot;
-        srcset=&quot;/arttuv-website/static/6d8fa6fb4666cb1bf6bca24400bf19b7/12f09/asynchronous-work-drawing.png 148w,
-/arttuv-website/static/6d8fa6fb4666cb1bf6bca24400bf19b7/e4a3f/asynchronous-work-drawing.png 295w,
-/arttuv-website/static/6d8fa6fb4666cb1bf6bca24400bf19b7/fcda8/asynchronous-work-drawing.png 590w,
-/arttuv-website/static/6d8fa6fb4666cb1bf6bca24400bf19b7/efc66/asynchronous-work-drawing.png 885w,
-/arttuv-website/static/6d8fa6fb4666cb1bf6bca24400bf19b7/c83ae/asynchronous-work-drawing.png 1180w,
-/arttuv-website/static/6d8fa6fb4666cb1bf6bca24400bf19b7/f8544/asynchronous-work-drawing.png 1811w&quot;
+        src=&quot;/static/6d8fa6fb4666cb1bf6bca24400bf19b7/fcda8/asynchronous-work-drawing.png&quot;
+        srcset=&quot;/static/6d8fa6fb4666cb1bf6bca24400bf19b7/12f09/asynchronous-work-drawing.png 148w,
+/static/6d8fa6fb4666cb1bf6bca24400bf19b7/e4a3f/asynchronous-work-drawing.png 295w,
+/static/6d8fa6fb4666cb1bf6bca24400bf19b7/fcda8/asynchronous-work-drawing.png 590w,
+/static/6d8fa6fb4666cb1bf6bca24400bf19b7/efc66/asynchronous-work-drawing.png 885w,
+/static/6d8fa6fb4666cb1bf6bca24400bf19b7/c83ae/asynchronous-work-drawing.png 1180w,
+/static/6d8fa6fb4666cb1bf6bca24400bf19b7/f8544/asynchronous-work-drawing.png 1811w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -125,7 +125,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/7bc6dfb4ed19595908f7b300efef0c8e/d0cbf/estimated-end-date.jpg&quot;
+    href=&quot;/static/7bc6dfb4ed19595908f7b300efef0c8e/d0cbf/estimated-end-date.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -138,12 +138,12 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Estimating the end date&quot;
         title=&quot;Estimating the end date&quot;
-        src=&quot;/arttuv-website/static/7bc6dfb4ed19595908f7b300efef0c8e/1c72d/estimated-end-date.jpg&quot;
-        srcset=&quot;/arttuv-website/static/7bc6dfb4ed19595908f7b300efef0c8e/a80bd/estimated-end-date.jpg 148w,
-/arttuv-website/static/7bc6dfb4ed19595908f7b300efef0c8e/1c91a/estimated-end-date.jpg 295w,
-/arttuv-website/static/7bc6dfb4ed19595908f7b300efef0c8e/1c72d/estimated-end-date.jpg 590w,
-/arttuv-website/static/7bc6dfb4ed19595908f7b300efef0c8e/a8a14/estimated-end-date.jpg 885w,
-/arttuv-website/static/7bc6dfb4ed19595908f7b300efef0c8e/d0cbf/estimated-end-date.jpg 950w&quot;
+        src=&quot;/static/7bc6dfb4ed19595908f7b300efef0c8e/1c72d/estimated-end-date.jpg&quot;
+        srcset=&quot;/static/7bc6dfb4ed19595908f7b300efef0c8e/a80bd/estimated-end-date.jpg 148w,
+/static/7bc6dfb4ed19595908f7b300efef0c8e/1c91a/estimated-end-date.jpg 295w,
+/static/7bc6dfb4ed19595908f7b300efef0c8e/1c72d/estimated-end-date.jpg 590w,
+/static/7bc6dfb4ed19595908f7b300efef0c8e/a8a14/estimated-end-date.jpg 885w,
+/static/7bc6dfb4ed19595908f7b300efef0c8e/d0cbf/estimated-end-date.jpg 950w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -175,7 +175,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/c0f6a45a204a65d324916c5540e56610/873c3/velocity-remaining-work.jpg&quot;
+    href=&quot;/static/c0f6a45a204a65d324916c5540e56610/873c3/velocity-remaining-work.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -188,12 +188,12 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Empiricism in Agile&quot;
         title=&quot;Empiricism in Agile&quot;
-        src=&quot;/arttuv-website/static/c0f6a45a204a65d324916c5540e56610/1c72d/velocity-remaining-work.jpg&quot;
-        srcset=&quot;/arttuv-website/static/c0f6a45a204a65d324916c5540e56610/a80bd/velocity-remaining-work.jpg 148w,
-/arttuv-website/static/c0f6a45a204a65d324916c5540e56610/1c91a/velocity-remaining-work.jpg 295w,
-/arttuv-website/static/c0f6a45a204a65d324916c5540e56610/1c72d/velocity-remaining-work.jpg 590w,
-/arttuv-website/static/c0f6a45a204a65d324916c5540e56610/a8a14/velocity-remaining-work.jpg 885w,
-/arttuv-website/static/c0f6a45a204a65d324916c5540e56610/873c3/velocity-remaining-work.jpg 939w&quot;
+        src=&quot;/static/c0f6a45a204a65d324916c5540e56610/1c72d/velocity-remaining-work.jpg&quot;
+        srcset=&quot;/static/c0f6a45a204a65d324916c5540e56610/a80bd/velocity-remaining-work.jpg 148w,
+/static/c0f6a45a204a65d324916c5540e56610/1c91a/velocity-remaining-work.jpg 295w,
+/static/c0f6a45a204a65d324916c5540e56610/1c72d/velocity-remaining-work.jpg 590w,
+/static/c0f6a45a204a65d324916c5540e56610/a8a14/velocity-remaining-work.jpg 885w,
+/static/c0f6a45a204a65d324916c5540e56610/873c3/velocity-remaining-work.jpg 939w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -234,7 +234,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/ad20bac7e8d853099b731d0c5d123d8c/c06f5/pdf-longread-annotation.jpg&quot;
+    href=&quot;/static/ad20bac7e8d853099b731d0c5d123d8c/c06f5/pdf-longread-annotation.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -247,13 +247,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Annotating with the Pencil in PDFExpert&quot;
         title=&quot;PDFExpert and Pencil&quot;
-        src=&quot;/arttuv-website/static/ad20bac7e8d853099b731d0c5d123d8c/1c72d/pdf-longread-annotation.jpg&quot;
-        srcset=&quot;/arttuv-website/static/ad20bac7e8d853099b731d0c5d123d8c/a80bd/pdf-longread-annotation.jpg 148w,
-/arttuv-website/static/ad20bac7e8d853099b731d0c5d123d8c/1c91a/pdf-longread-annotation.jpg 295w,
-/arttuv-website/static/ad20bac7e8d853099b731d0c5d123d8c/1c72d/pdf-longread-annotation.jpg 590w,
-/arttuv-website/static/ad20bac7e8d853099b731d0c5d123d8c/a8a14/pdf-longread-annotation.jpg 885w,
-/arttuv-website/static/ad20bac7e8d853099b731d0c5d123d8c/fbd2c/pdf-longread-annotation.jpg 1180w,
-/arttuv-website/static/ad20bac7e8d853099b731d0c5d123d8c/c06f5/pdf-longread-annotation.jpg 1668w&quot;
+        src=&quot;/static/ad20bac7e8d853099b731d0c5d123d8c/1c72d/pdf-longread-annotation.jpg&quot;
+        srcset=&quot;/static/ad20bac7e8d853099b731d0c5d123d8c/a80bd/pdf-longread-annotation.jpg 148w,
+/static/ad20bac7e8d853099b731d0c5d123d8c/1c91a/pdf-longread-annotation.jpg 295w,
+/static/ad20bac7e8d853099b731d0c5d123d8c/1c72d/pdf-longread-annotation.jpg 590w,
+/static/ad20bac7e8d853099b731d0c5d123d8c/a8a14/pdf-longread-annotation.jpg 885w,
+/static/ad20bac7e8d853099b731d0c5d123d8c/fbd2c/pdf-longread-annotation.jpg 1180w,
+/static/ad20bac7e8d853099b731d0c5d123d8c/c06f5/pdf-longread-annotation.jpg 1668w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -276,7 +276,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/6085b3cb9926d9b47af4bf5264307d69/70dea/ipad-share-pdf.jpg&quot;
+    href=&quot;/static/6085b3cb9926d9b47af4bf5264307d69/70dea/ipad-share-pdf.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -289,11 +289,11 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;iPad share PDF&quot;
         title=&quot;iPad share PDF&quot;
-        src=&quot;/arttuv-website/static/6085b3cb9926d9b47af4bf5264307d69/1c72d/ipad-share-pdf.jpg&quot;
-        srcset=&quot;/arttuv-website/static/6085b3cb9926d9b47af4bf5264307d69/a80bd/ipad-share-pdf.jpg 148w,
-/arttuv-website/static/6085b3cb9926d9b47af4bf5264307d69/1c91a/ipad-share-pdf.jpg 295w,
-/arttuv-website/static/6085b3cb9926d9b47af4bf5264307d69/1c72d/ipad-share-pdf.jpg 590w,
-/arttuv-website/static/6085b3cb9926d9b47af4bf5264307d69/70dea/ipad-share-pdf.jpg 861w&quot;
+        src=&quot;/static/6085b3cb9926d9b47af4bf5264307d69/1c72d/ipad-share-pdf.jpg&quot;
+        srcset=&quot;/static/6085b3cb9926d9b47af4bf5264307d69/a80bd/ipad-share-pdf.jpg 148w,
+/static/6085b3cb9926d9b47af4bf5264307d69/1c91a/ipad-share-pdf.jpg 295w,
+/static/6085b3cb9926d9b47af4bf5264307d69/1c72d/ipad-share-pdf.jpg 590w,
+/static/6085b3cb9926d9b47af4bf5264307d69/70dea/ipad-share-pdf.jpg 861w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -309,7 +309,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/dc6cd86798cb1ee6222199d2450618c2/4f216/ipad-share-pdf-options.jpg&quot;
+    href=&quot;/static/dc6cd86798cb1ee6222199d2450618c2/4f216/ipad-share-pdf-options.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -322,11 +322,11 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;iPad share PDF options&quot;
         title=&quot;iPad share PDF options&quot;
-        src=&quot;/arttuv-website/static/dc6cd86798cb1ee6222199d2450618c2/1c72d/ipad-share-pdf-options.jpg&quot;
-        srcset=&quot;/arttuv-website/static/dc6cd86798cb1ee6222199d2450618c2/a80bd/ipad-share-pdf-options.jpg 148w,
-/arttuv-website/static/dc6cd86798cb1ee6222199d2450618c2/1c91a/ipad-share-pdf-options.jpg 295w,
-/arttuv-website/static/dc6cd86798cb1ee6222199d2450618c2/1c72d/ipad-share-pdf-options.jpg 590w,
-/arttuv-website/static/dc6cd86798cb1ee6222199d2450618c2/4f216/ipad-share-pdf-options.jpg 839w&quot;
+        src=&quot;/static/dc6cd86798cb1ee6222199d2450618c2/1c72d/ipad-share-pdf-options.jpg&quot;
+        srcset=&quot;/static/dc6cd86798cb1ee6222199d2450618c2/a80bd/ipad-share-pdf-options.jpg 148w,
+/static/dc6cd86798cb1ee6222199d2450618c2/1c91a/ipad-share-pdf-options.jpg 295w,
+/static/dc6cd86798cb1ee6222199d2450618c2/1c72d/ipad-share-pdf-options.jpg 590w,
+/static/dc6cd86798cb1ee6222199d2450618c2/4f216/ipad-share-pdf-options.jpg 839w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -342,7 +342,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/cd0b709bec1e0936bf587aec2b415498/c06f5/ipad-screenshot-view.jpg&quot;
+    href=&quot;/static/cd0b709bec1e0936bf587aec2b415498/c06f5/ipad-screenshot-view.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -355,13 +355,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;iPad screenshot view&quot;
         title=&quot;iPad screenshot view&quot;
-        src=&quot;/arttuv-website/static/cd0b709bec1e0936bf587aec2b415498/1c72d/ipad-screenshot-view.jpg&quot;
-        srcset=&quot;/arttuv-website/static/cd0b709bec1e0936bf587aec2b415498/a80bd/ipad-screenshot-view.jpg 148w,
-/arttuv-website/static/cd0b709bec1e0936bf587aec2b415498/1c91a/ipad-screenshot-view.jpg 295w,
-/arttuv-website/static/cd0b709bec1e0936bf587aec2b415498/1c72d/ipad-screenshot-view.jpg 590w,
-/arttuv-website/static/cd0b709bec1e0936bf587aec2b415498/a8a14/ipad-screenshot-view.jpg 885w,
-/arttuv-website/static/cd0b709bec1e0936bf587aec2b415498/fbd2c/ipad-screenshot-view.jpg 1180w,
-/arttuv-website/static/cd0b709bec1e0936bf587aec2b415498/c06f5/ipad-screenshot-view.jpg 1668w&quot;
+        src=&quot;/static/cd0b709bec1e0936bf587aec2b415498/1c72d/ipad-screenshot-view.jpg&quot;
+        srcset=&quot;/static/cd0b709bec1e0936bf587aec2b415498/a80bd/ipad-screenshot-view.jpg 148w,
+/static/cd0b709bec1e0936bf587aec2b415498/1c91a/ipad-screenshot-view.jpg 295w,
+/static/cd0b709bec1e0936bf587aec2b415498/1c72d/ipad-screenshot-view.jpg 590w,
+/static/cd0b709bec1e0936bf587aec2b415498/a8a14/ipad-screenshot-view.jpg 885w,
+/static/cd0b709bec1e0936bf587aec2b415498/fbd2c/ipad-screenshot-view.jpg 1180w,
+/static/cd0b709bec1e0936bf587aec2b415498/c06f5/ipad-screenshot-view.jpg 1668w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -377,7 +377,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/38e5260fbf4d938b6b9fff5981d1db36/c06f5/ipad-full-page-screenshot.jpg&quot;
+    href=&quot;/static/38e5260fbf4d938b6b9fff5981d1db36/c06f5/ipad-full-page-screenshot.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -390,13 +390,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;iPad full page screenshot&quot;
         title=&quot;iPad full page screenshot&quot;
-        src=&quot;/arttuv-website/static/38e5260fbf4d938b6b9fff5981d1db36/1c72d/ipad-full-page-screenshot.jpg&quot;
-        srcset=&quot;/arttuv-website/static/38e5260fbf4d938b6b9fff5981d1db36/a80bd/ipad-full-page-screenshot.jpg 148w,
-/arttuv-website/static/38e5260fbf4d938b6b9fff5981d1db36/1c91a/ipad-full-page-screenshot.jpg 295w,
-/arttuv-website/static/38e5260fbf4d938b6b9fff5981d1db36/1c72d/ipad-full-page-screenshot.jpg 590w,
-/arttuv-website/static/38e5260fbf4d938b6b9fff5981d1db36/a8a14/ipad-full-page-screenshot.jpg 885w,
-/arttuv-website/static/38e5260fbf4d938b6b9fff5981d1db36/fbd2c/ipad-full-page-screenshot.jpg 1180w,
-/arttuv-website/static/38e5260fbf4d938b6b9fff5981d1db36/c06f5/ipad-full-page-screenshot.jpg 1668w&quot;
+        src=&quot;/static/38e5260fbf4d938b6b9fff5981d1db36/1c72d/ipad-full-page-screenshot.jpg&quot;
+        srcset=&quot;/static/38e5260fbf4d938b6b9fff5981d1db36/a80bd/ipad-full-page-screenshot.jpg 148w,
+/static/38e5260fbf4d938b6b9fff5981d1db36/1c91a/ipad-full-page-screenshot.jpg 295w,
+/static/38e5260fbf4d938b6b9fff5981d1db36/1c72d/ipad-full-page-screenshot.jpg 590w,
+/static/38e5260fbf4d938b6b9fff5981d1db36/a8a14/ipad-full-page-screenshot.jpg 885w,
+/static/38e5260fbf4d938b6b9fff5981d1db36/fbd2c/ipad-full-page-screenshot.jpg 1180w,
+/static/38e5260fbf4d938b6b9fff5981d1db36/c06f5/ipad-full-page-screenshot.jpg 1668w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -465,7 +465,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/367e1942ced5633375226610ab798961/32840/feed-aggregator-features.jpg&quot;
+    href=&quot;/static/367e1942ced5633375226610ab798961/32840/feed-aggregator-features.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -478,13 +478,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Feed aggregator essential features&quot;
         title=&quot;Feed aggregator essential features&quot;
-        src=&quot;/arttuv-website/static/367e1942ced5633375226610ab798961/1c72d/feed-aggregator-features.jpg&quot;
-        srcset=&quot;/arttuv-website/static/367e1942ced5633375226610ab798961/a80bd/feed-aggregator-features.jpg 148w,
-/arttuv-website/static/367e1942ced5633375226610ab798961/1c91a/feed-aggregator-features.jpg 295w,
-/arttuv-website/static/367e1942ced5633375226610ab798961/1c72d/feed-aggregator-features.jpg 590w,
-/arttuv-website/static/367e1942ced5633375226610ab798961/a8a14/feed-aggregator-features.jpg 885w,
-/arttuv-website/static/367e1942ced5633375226610ab798961/fbd2c/feed-aggregator-features.jpg 1180w,
-/arttuv-website/static/367e1942ced5633375226610ab798961/32840/feed-aggregator-features.jpg 1938w&quot;
+        src=&quot;/static/367e1942ced5633375226610ab798961/1c72d/feed-aggregator-features.jpg&quot;
+        srcset=&quot;/static/367e1942ced5633375226610ab798961/a80bd/feed-aggregator-features.jpg 148w,
+/static/367e1942ced5633375226610ab798961/1c91a/feed-aggregator-features.jpg 295w,
+/static/367e1942ced5633375226610ab798961/1c72d/feed-aggregator-features.jpg 590w,
+/static/367e1942ced5633375226610ab798961/a8a14/feed-aggregator-features.jpg 885w,
+/static/367e1942ced5633375226610ab798961/fbd2c/feed-aggregator-features.jpg 1180w,
+/static/367e1942ced5633375226610ab798961/32840/feed-aggregator-features.jpg 1938w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -507,7 +507,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/3b1fa58edf7edadbf6d88c903b70331b/e1596/feed-aggregator-differentiators.jpg&quot;
+    href=&quot;/static/3b1fa58edf7edadbf6d88c903b70331b/e1596/feed-aggregator-differentiators.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -520,13 +520,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Feed aggregator differentiators&quot;
         title=&quot;Feed aggregator differentiators&quot;
-        src=&quot;/arttuv-website/static/3b1fa58edf7edadbf6d88c903b70331b/1c72d/feed-aggregator-differentiators.jpg&quot;
-        srcset=&quot;/arttuv-website/static/3b1fa58edf7edadbf6d88c903b70331b/a80bd/feed-aggregator-differentiators.jpg 148w,
-/arttuv-website/static/3b1fa58edf7edadbf6d88c903b70331b/1c91a/feed-aggregator-differentiators.jpg 295w,
-/arttuv-website/static/3b1fa58edf7edadbf6d88c903b70331b/1c72d/feed-aggregator-differentiators.jpg 590w,
-/arttuv-website/static/3b1fa58edf7edadbf6d88c903b70331b/a8a14/feed-aggregator-differentiators.jpg 885w,
-/arttuv-website/static/3b1fa58edf7edadbf6d88c903b70331b/fbd2c/feed-aggregator-differentiators.jpg 1180w,
-/arttuv-website/static/3b1fa58edf7edadbf6d88c903b70331b/e1596/feed-aggregator-differentiators.jpg 2048w&quot;
+        src=&quot;/static/3b1fa58edf7edadbf6d88c903b70331b/1c72d/feed-aggregator-differentiators.jpg&quot;
+        srcset=&quot;/static/3b1fa58edf7edadbf6d88c903b70331b/a80bd/feed-aggregator-differentiators.jpg 148w,
+/static/3b1fa58edf7edadbf6d88c903b70331b/1c91a/feed-aggregator-differentiators.jpg 295w,
+/static/3b1fa58edf7edadbf6d88c903b70331b/1c72d/feed-aggregator-differentiators.jpg 590w,
+/static/3b1fa58edf7edadbf6d88c903b70331b/a8a14/feed-aggregator-differentiators.jpg 885w,
+/static/3b1fa58edf7edadbf6d88c903b70331b/fbd2c/feed-aggregator-differentiators.jpg 1180w,
+/static/3b1fa58edf7edadbf6d88c903b70331b/e1596/feed-aggregator-differentiators.jpg 2048w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -631,7 +631,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/f284ce370d83512b09427e91dcd9315f/6c9f4/handrawn-google-trend-rss.png&quot;
+    href=&quot;/static/f284ce370d83512b09427e91dcd9315f/6c9f4/handrawn-google-trend-rss.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -644,13 +644,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Google Trend - RSS&quot;
         title=&quot;Google Trend - RSS&quot;
-        src=&quot;/arttuv-website/static/f284ce370d83512b09427e91dcd9315f/fcda8/handrawn-google-trend-rss.png&quot;
-        srcset=&quot;/arttuv-website/static/f284ce370d83512b09427e91dcd9315f/12f09/handrawn-google-trend-rss.png 148w,
-/arttuv-website/static/f284ce370d83512b09427e91dcd9315f/e4a3f/handrawn-google-trend-rss.png 295w,
-/arttuv-website/static/f284ce370d83512b09427e91dcd9315f/fcda8/handrawn-google-trend-rss.png 590w,
-/arttuv-website/static/f284ce370d83512b09427e91dcd9315f/efc66/handrawn-google-trend-rss.png 885w,
-/arttuv-website/static/f284ce370d83512b09427e91dcd9315f/c83ae/handrawn-google-trend-rss.png 1180w,
-/arttuv-website/static/f284ce370d83512b09427e91dcd9315f/6c9f4/handrawn-google-trend-rss.png 2326w&quot;
+        src=&quot;/static/f284ce370d83512b09427e91dcd9315f/fcda8/handrawn-google-trend-rss.png&quot;
+        srcset=&quot;/static/f284ce370d83512b09427e91dcd9315f/12f09/handrawn-google-trend-rss.png 148w,
+/static/f284ce370d83512b09427e91dcd9315f/e4a3f/handrawn-google-trend-rss.png 295w,
+/static/f284ce370d83512b09427e91dcd9315f/fcda8/handrawn-google-trend-rss.png 590w,
+/static/f284ce370d83512b09427e91dcd9315f/efc66/handrawn-google-trend-rss.png 885w,
+/static/f284ce370d83512b09427e91dcd9315f/c83ae/handrawn-google-trend-rss.png 1180w,
+/static/f284ce370d83512b09427e91dcd9315f/6c9f4/handrawn-google-trend-rss.png 2326w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -705,7 +705,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/6c6a8d97fe1790d19f54a94203dec566/01e7c/human-in-the-loop.png&quot;
+    href=&quot;/static/6c6a8d97fe1790d19f54a94203dec566/01e7c/human-in-the-loop.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -718,10 +718,10 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Human in the Loop&quot;
         title=&quot;Human in the Loop&quot;
-        src=&quot;/arttuv-website/static/6c6a8d97fe1790d19f54a94203dec566/01e7c/human-in-the-loop.png&quot;
-        srcset=&quot;/arttuv-website/static/6c6a8d97fe1790d19f54a94203dec566/12f09/human-in-the-loop.png 148w,
-/arttuv-website/static/6c6a8d97fe1790d19f54a94203dec566/e4a3f/human-in-the-loop.png 295w,
-/arttuv-website/static/6c6a8d97fe1790d19f54a94203dec566/01e7c/human-in-the-loop.png 512w&quot;
+        src=&quot;/static/6c6a8d97fe1790d19f54a94203dec566/01e7c/human-in-the-loop.png&quot;
+        srcset=&quot;/static/6c6a8d97fe1790d19f54a94203dec566/12f09/human-in-the-loop.png 148w,
+/static/6c6a8d97fe1790d19f54a94203dec566/e4a3f/human-in-the-loop.png 295w,
+/static/6c6a8d97fe1790d19f54a94203dec566/01e7c/human-in-the-loop.png 512w&quot;
         sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -768,14 +768,13 @@
 &lt;h2&gt;The Design Perspective&lt;/h2&gt;
 &lt;p&gt;Ethics Guidelines for Trustworthy AI lists principles and requirements and assessment lists, but making sure we design systems that fullfill the requirements is not easy. Also the document itself emphasizes that often different requirements are in conflict and you need to make informed decisions to balance between them.&lt;/p&gt;
 &lt;p&gt;How do you ensure human agency and make sure users can self-assess and challenge the system? If security is at all of the importance and the work requires special skills that should be kept up to date: I’d say keep end-users as much in-the-loop as possible and concentrate on giving them &quot;superpowers&quot; by utilizing improved sensor technology, increased amounts of data and advanced analytics that can be done with it.&lt;/p&gt;
-&lt;p&gt;For understanding the work and environment of the end-users and how to improve them with technology there are a lot of good tools from Beyer&apos;s &amp;#x26; Holtzblatt&apos;s Contextual Design to everything under the human-centered design umbrella. There are tools for &lt;a href=&quot;/arttuv-website/writings/designing-to-support-dsa&quot;&gt;designing to support situation awareness&lt;/a&gt; and tools to measure the SA. Task analysis can be used to analyze the work and help to decide how different tasks should be allocated to both AI and humans, and what kind of information is needed to transfer SA. Providing training environments in which humans and automation can learn to work together will be important when AI is being added to systems.&lt;/p&gt;
+&lt;p&gt;For understanding the work and environment of the end-users and how to improve them with technology there are a lot of good tools from Beyer&apos;s &amp;#x26; Holtzblatt&apos;s Contextual Design to everything under the human-centered design umbrella. There are tools for &lt;a href=&quot;/writings/designing-to-support-dsa&quot;&gt;designing to support situation awareness&lt;/a&gt; and tools to measure the SA. Task analysis can be used to analyze the work and help to decide how different tasks should be allocated to both AI and humans, and what kind of information is needed to transfer SA. Providing training environments in which humans and automation can learn to work together will be important when AI is being added to systems.&lt;/p&gt;
 &lt;p&gt;The real value of this document is on helping to create an ethical starting point and requirements for the design of the system. Even keeping the users in the center of the design is hard when there are money and technical viewpoints competing - with ethics it might be even harder.&lt;/p&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://ec.europa.eu/futurium/en/ai-alliance-consultation&quot;&gt;Ethics Guidelines for Trustworthy AI&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/24611446-our-robots-ourselves&quot;&gt;Our Robots, Ourselves&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1080/00140139.2017.1278796&quot;&gt;Stanton, N. A., Salmon, P. M., Walker, G. H., Salas, E., &amp;#x26; Hancock, P. A. (2017). State-of-science: situation awareness in individuals, teams and systems. Ergonomics, 60(4), 449–466.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.iconfinder.com/icons/3957659/allocation_human_online_outsource_outsourcing_icon&quot;&gt;Image is from Iconfinder (Flatart)&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Arttu Viljakainen]]></title><description><![CDATA[I'm a software developer working as a consultant, and a PhD researcher in Tampere University focusing to studying how advanced automation…]]></description><link>https://www.arttuv.com/author</link><guid isPermaLink="false">https://www.arttuv.com/author</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m a software developer working as a consultant, and a PhD researcher in Tampere University focusing to studying how advanced automation and artificial intelligence should be incorporated to digital tools to empower human users.&lt;/p&gt;
-&lt;p&gt;You can find me on &lt;a href=&quot;https://twitter.com/arttuv&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://www.linkedin.com/in/arttu-viljakainen/&quot;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Notetaking]]></title><description><![CDATA[I like taking handwritten notes - you can almost always bring your notebook with you, and it doesn't feel as disrespectful to not down some…]]></description><link>https://www.arttuv.com/notetaking</link><guid isPermaLink="false">https://www.arttuv.com/notetaking</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I like taking handwritten notes - you can almost always bring your notebook with you, and it doesn&apos;t feel as disrespectful to not down some words by hand compared to using computer for the same task.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.iconfinder.com/icons/3957659/allocation_human_online_outsource_outsourcing_icon&quot;&gt;Image is from Iconfinder (Flatart)&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Notetaking]]></title><description><![CDATA[I like taking handwritten notes - you can almost always bring your notebook with you, and it doesn't feel as disrespectful to not down some…]]></description><link>https://www.arttuv.com/notetaking</link><guid isPermaLink="false">https://www.arttuv.com/notetaking</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I like taking handwritten notes - you can almost always bring your notebook with you, and it doesn&apos;t feel as disrespectful to not down some words by hand compared to using computer for the same task.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -783,7 +782,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/8ed955013e7d23e4043383a8164f943b/d2602/leuchtturm1917-pentel-tradio-05.jpg&quot;
+    href=&quot;/static/8ed955013e7d23e4043383a8164f943b/d2602/leuchtturm1917-pentel-tradio-05.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -796,13 +795,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Leuchtturm1917, Pentel Tradio 05&quot;
         title=&quot;Leuchtturm1917, Pentel Tradio 05&quot;
-        src=&quot;/arttuv-website/static/8ed955013e7d23e4043383a8164f943b/1c72d/leuchtturm1917-pentel-tradio-05.jpg&quot;
-        srcset=&quot;/arttuv-website/static/8ed955013e7d23e4043383a8164f943b/a80bd/leuchtturm1917-pentel-tradio-05.jpg 148w,
-/arttuv-website/static/8ed955013e7d23e4043383a8164f943b/1c91a/leuchtturm1917-pentel-tradio-05.jpg 295w,
-/arttuv-website/static/8ed955013e7d23e4043383a8164f943b/1c72d/leuchtturm1917-pentel-tradio-05.jpg 590w,
-/arttuv-website/static/8ed955013e7d23e4043383a8164f943b/a8a14/leuchtturm1917-pentel-tradio-05.jpg 885w,
-/arttuv-website/static/8ed955013e7d23e4043383a8164f943b/fbd2c/leuchtturm1917-pentel-tradio-05.jpg 1180w,
-/arttuv-website/static/8ed955013e7d23e4043383a8164f943b/d2602/leuchtturm1917-pentel-tradio-05.jpg 4032w&quot;
+        src=&quot;/static/8ed955013e7d23e4043383a8164f943b/1c72d/leuchtturm1917-pentel-tradio-05.jpg&quot;
+        srcset=&quot;/static/8ed955013e7d23e4043383a8164f943b/a80bd/leuchtturm1917-pentel-tradio-05.jpg 148w,
+/static/8ed955013e7d23e4043383a8164f943b/1c91a/leuchtturm1917-pentel-tradio-05.jpg 295w,
+/static/8ed955013e7d23e4043383a8164f943b/1c72d/leuchtturm1917-pentel-tradio-05.jpg 590w,
+/static/8ed955013e7d23e4043383a8164f943b/a8a14/leuchtturm1917-pentel-tradio-05.jpg 885w,
+/static/8ed955013e7d23e4043383a8164f943b/fbd2c/leuchtturm1917-pentel-tradio-05.jpg 1180w,
+/static/8ed955013e7d23e4043383a8164f943b/d2602/leuchtturm1917-pentel-tradio-05.jpg 4032w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -821,7 +820,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/95186faed46e7f709a8914a9a5c9b458/d2602/leuchtturm1917-bauhaus.jpg&quot;
+    href=&quot;/static/95186faed46e7f709a8914a9a5c9b458/d2602/leuchtturm1917-bauhaus.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -834,13 +833,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Leuchtturm1917 Bauhaus&quot;
         title=&quot;Leuchtturm1917 Bauhaus&quot;
-        src=&quot;/arttuv-website/static/95186faed46e7f709a8914a9a5c9b458/1c72d/leuchtturm1917-bauhaus.jpg&quot;
-        srcset=&quot;/arttuv-website/static/95186faed46e7f709a8914a9a5c9b458/a80bd/leuchtturm1917-bauhaus.jpg 148w,
-/arttuv-website/static/95186faed46e7f709a8914a9a5c9b458/1c91a/leuchtturm1917-bauhaus.jpg 295w,
-/arttuv-website/static/95186faed46e7f709a8914a9a5c9b458/1c72d/leuchtturm1917-bauhaus.jpg 590w,
-/arttuv-website/static/95186faed46e7f709a8914a9a5c9b458/a8a14/leuchtturm1917-bauhaus.jpg 885w,
-/arttuv-website/static/95186faed46e7f709a8914a9a5c9b458/fbd2c/leuchtturm1917-bauhaus.jpg 1180w,
-/arttuv-website/static/95186faed46e7f709a8914a9a5c9b458/d2602/leuchtturm1917-bauhaus.jpg 4032w&quot;
+        src=&quot;/static/95186faed46e7f709a8914a9a5c9b458/1c72d/leuchtturm1917-bauhaus.jpg&quot;
+        srcset=&quot;/static/95186faed46e7f709a8914a9a5c9b458/a80bd/leuchtturm1917-bauhaus.jpg 148w,
+/static/95186faed46e7f709a8914a9a5c9b458/1c91a/leuchtturm1917-bauhaus.jpg 295w,
+/static/95186faed46e7f709a8914a9a5c9b458/1c72d/leuchtturm1917-bauhaus.jpg 590w,
+/static/95186faed46e7f709a8914a9a5c9b458/a8a14/leuchtturm1917-bauhaus.jpg 885w,
+/static/95186faed46e7f709a8914a9a5c9b458/fbd2c/leuchtturm1917-bauhaus.jpg 1180w,
+/static/95186faed46e7f709a8914a9a5c9b458/d2602/leuchtturm1917-bauhaus.jpg 4032w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -860,7 +859,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/1fef1d5339eb91038c3edb12cf307177/9568a/ipad-pro-procreate.jpg&quot;
+    href=&quot;/static/1fef1d5339eb91038c3edb12cf307177/9568a/ipad-pro-procreate.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -873,13 +872,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;iPad Pro Procreate&quot;
         title=&quot;iPad Pro Procreate&quot;
-        src=&quot;/arttuv-website/static/1fef1d5339eb91038c3edb12cf307177/1c72d/ipad-pro-procreate.jpg&quot;
-        srcset=&quot;/arttuv-website/static/1fef1d5339eb91038c3edb12cf307177/a80bd/ipad-pro-procreate.jpg 148w,
-/arttuv-website/static/1fef1d5339eb91038c3edb12cf307177/1c91a/ipad-pro-procreate.jpg 295w,
-/arttuv-website/static/1fef1d5339eb91038c3edb12cf307177/1c72d/ipad-pro-procreate.jpg 590w,
-/arttuv-website/static/1fef1d5339eb91038c3edb12cf307177/a8a14/ipad-pro-procreate.jpg 885w,
-/arttuv-website/static/1fef1d5339eb91038c3edb12cf307177/fbd2c/ipad-pro-procreate.jpg 1180w,
-/arttuv-website/static/1fef1d5339eb91038c3edb12cf307177/9568a/ipad-pro-procreate.jpg 3024w&quot;
+        src=&quot;/static/1fef1d5339eb91038c3edb12cf307177/1c72d/ipad-pro-procreate.jpg&quot;
+        srcset=&quot;/static/1fef1d5339eb91038c3edb12cf307177/a80bd/ipad-pro-procreate.jpg 148w,
+/static/1fef1d5339eb91038c3edb12cf307177/1c91a/ipad-pro-procreate.jpg 295w,
+/static/1fef1d5339eb91038c3edb12cf307177/1c72d/ipad-pro-procreate.jpg 590w,
+/static/1fef1d5339eb91038c3edb12cf307177/a8a14/ipad-pro-procreate.jpg 885w,
+/static/1fef1d5339eb91038c3edb12cf307177/fbd2c/ipad-pro-procreate.jpg 1180w,
+/static/1fef1d5339eb91038c3edb12cf307177/9568a/ipad-pro-procreate.jpg 3024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -899,7 +898,8 @@
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.goodnotes.com/&quot;&gt;GoodNotes&lt;/a&gt;&lt;/strong&gt; has more features in this sense, but to me its UI feels a bit too crowded and I haven&apos;t used it that much.&lt;/p&gt;
 &lt;p&gt;I&apos;m been using &lt;a href=&quot;https://bear.app/&quot;&gt;Bear&lt;/a&gt; a bit for keeping typed notes, and it also has very limited capability for hand written notes, but it definitely is not meant to be used that way. Bear is beautiful and simple, so if you need typed notes, it&apos;s an excellent option. Built in &lt;a href=&quot;https://en.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt; support and a tagging system.&lt;/p&gt;
 &lt;blockquote&gt;...nothing in the world of digital notetaking beats the feel of Procreate on iPad with Apple Pencil&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://procreate.art/&quot;&gt;Procreate&lt;/a&gt; is an awesome piece of software for art and a really good candidate for &lt;strong&gt;sketchnoting&lt;/strong&gt; as well. It has a good selection of calligraphy pens and writing and drawing always feels a pleasure. As a painting software it doesn&apos;t support multiple pages, unless you count the layers, so recommending it for notetaking is a bit risky. Still, nothing in the world of digital notetaking beats the feel of Procreate on iPad with Apple Pencil. I try to move towards sketchnoting and Procreate has been excellent for that.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The difficulty of saying I don't know]]></title><description><![CDATA[Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the…]]></description><link>https://www.arttuv.com/writings/fear</link><guid isPermaLink="false">https://www.arttuv.com/writings/fear</guid><pubDate>Sun, 12 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven&apos;t mastered yet. That can be a lot to bear and a source of anxiety. Kati Vilkki wrote &lt;a href=&quot;https://www.reaktor.com/blog/facing-up-to-a-culture-of-fear/&quot;&gt;a good blog post on culture of fear&lt;/a&gt;, which inspired me to think about the subject from my perspective, on team and single developer level.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://procreate.art/&quot;&gt;Procreate&lt;/a&gt; is an awesome piece of software for art and a really good candidate for &lt;strong&gt;sketchnoting&lt;/strong&gt; as well. It has a good selection of calligraphy pens and writing and drawing always feels a pleasure. As a painting software it doesn&apos;t support multiple pages, unless you count the layers, so recommending it for notetaking is a bit risky. Still, nothing in the world of digital notetaking beats the feel of Procreate on iPad with Apple Pencil. I try to move towards sketchnoting and Procreate has been excellent for that.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Arttu Viljakainen]]></title><description><![CDATA[I'm a software developer working as a consultant, and a PhD researcher in Tampere University focusing to studying how advanced automation…]]></description><link>https://www.arttuv.com/author</link><guid isPermaLink="false">https://www.arttuv.com/author</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m a software developer working as a consultant, and a PhD researcher in Tampere University focusing to studying how advanced automation and artificial intelligence should be incorporated to digital tools to empower human users.&lt;/p&gt;
+&lt;p&gt;You can find me on &lt;a href=&quot;https://twitter.com/arttuv&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://www.linkedin.com/in/arttu-viljakainen/&quot;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The difficulty of saying I don't know]]></title><description><![CDATA[Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the…]]></description><link>https://www.arttuv.com/writings/fear</link><guid isPermaLink="false">https://www.arttuv.com/writings/fear</guid><pubDate>Sun, 12 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven&apos;t mastered yet. That can be a lot to bear and a source of anxiety. Kati Vilkki wrote &lt;a href=&quot;https://www.reaktor.com/blog/facing-up-to-a-culture-of-fear/&quot;&gt;a good blog post on culture of fear&lt;/a&gt;, which inspired me to think about the subject from my perspective, on team and single developer level.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -907,7 +907,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/274676133dbe990a11a9a3cbff7c11c5/7e1b6/coder-fear.jpg&quot;
+    href=&quot;/static/274676133dbe990a11a9a3cbff7c11c5/7e1b6/coder-fear.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -920,13 +920,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Being stuck alone brings stress and fear&quot;
         title=&quot;Being stuck alone brings stress and fear&quot;
-        src=&quot;/arttuv-website/static/274676133dbe990a11a9a3cbff7c11c5/1c72d/coder-fear.jpg&quot;
-        srcset=&quot;/arttuv-website/static/274676133dbe990a11a9a3cbff7c11c5/a80bd/coder-fear.jpg 148w,
-/arttuv-website/static/274676133dbe990a11a9a3cbff7c11c5/1c91a/coder-fear.jpg 295w,
-/arttuv-website/static/274676133dbe990a11a9a3cbff7c11c5/1c72d/coder-fear.jpg 590w,
-/arttuv-website/static/274676133dbe990a11a9a3cbff7c11c5/a8a14/coder-fear.jpg 885w,
-/arttuv-website/static/274676133dbe990a11a9a3cbff7c11c5/fbd2c/coder-fear.jpg 1180w,
-/arttuv-website/static/274676133dbe990a11a9a3cbff7c11c5/7e1b6/coder-fear.jpg 1310w&quot;
+        src=&quot;/static/274676133dbe990a11a9a3cbff7c11c5/1c72d/coder-fear.jpg&quot;
+        srcset=&quot;/static/274676133dbe990a11a9a3cbff7c11c5/a80bd/coder-fear.jpg 148w,
+/static/274676133dbe990a11a9a3cbff7c11c5/1c91a/coder-fear.jpg 295w,
+/static/274676133dbe990a11a9a3cbff7c11c5/1c72d/coder-fear.jpg 590w,
+/static/274676133dbe990a11a9a3cbff7c11c5/a8a14/coder-fear.jpg 885w,
+/static/274676133dbe990a11a9a3cbff7c11c5/fbd2c/coder-fear.jpg 1180w,
+/static/274676133dbe990a11a9a3cbff7c11c5/7e1b6/coder-fear.jpg 1310w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -959,7 +959,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/5c4ae38c99b2d4e63f7dd2038d845193/b536e/team-kanban-dots.jpg&quot;
+    href=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/b536e/team-kanban-dots.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -972,13 +972,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Team working together&quot;
         title=&quot;Team working together&quot;
-        src=&quot;/arttuv-website/static/5c4ae38c99b2d4e63f7dd2038d845193/1c72d/team-kanban-dots.jpg&quot;
-        srcset=&quot;/arttuv-website/static/5c4ae38c99b2d4e63f7dd2038d845193/a80bd/team-kanban-dots.jpg 148w,
-/arttuv-website/static/5c4ae38c99b2d4e63f7dd2038d845193/1c91a/team-kanban-dots.jpg 295w,
-/arttuv-website/static/5c4ae38c99b2d4e63f7dd2038d845193/1c72d/team-kanban-dots.jpg 590w,
-/arttuv-website/static/5c4ae38c99b2d4e63f7dd2038d845193/a8a14/team-kanban-dots.jpg 885w,
-/arttuv-website/static/5c4ae38c99b2d4e63f7dd2038d845193/fbd2c/team-kanban-dots.jpg 1180w,
-/arttuv-website/static/5c4ae38c99b2d4e63f7dd2038d845193/b536e/team-kanban-dots.jpg 1454w&quot;
+        src=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/1c72d/team-kanban-dots.jpg&quot;
+        srcset=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/a80bd/team-kanban-dots.jpg 148w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/1c91a/team-kanban-dots.jpg 295w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/1c72d/team-kanban-dots.jpg 590w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/a8a14/team-kanban-dots.jpg 885w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/fbd2c/team-kanban-dots.jpg 1180w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/b536e/team-kanban-dots.jpg 1454w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1035,7 +1035,7 @@ At this point, I had already started porting the game to Android, which made it 
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/2c9004578cf99b7e534affeb4d40218f/2bef9/Corner-cases-in-platformer-physics.004.png&quot;
+    href=&quot;/static/2c9004578cf99b7e534affeb4d40218f/2bef9/Corner-cases-in-platformer-physics.004.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1048,12 +1048,12 @@ At this point, I had already started porting the game to Android, which made it 
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Problem with equally sized blocks and paths near the ceiling&quot;
         title=&quot;Problem with equally sized blocks and paths near the ceiling&quot;
-        src=&quot;/arttuv-website/static/2c9004578cf99b7e534affeb4d40218f/fcda8/Corner-cases-in-platformer-physics.004.png&quot;
-        srcset=&quot;/arttuv-website/static/2c9004578cf99b7e534affeb4d40218f/12f09/Corner-cases-in-platformer-physics.004.png 148w,
-/arttuv-website/static/2c9004578cf99b7e534affeb4d40218f/e4a3f/Corner-cases-in-platformer-physics.004.png 295w,
-/arttuv-website/static/2c9004578cf99b7e534affeb4d40218f/fcda8/Corner-cases-in-platformer-physics.004.png 590w,
-/arttuv-website/static/2c9004578cf99b7e534affeb4d40218f/efc66/Corner-cases-in-platformer-physics.004.png 885w,
-/arttuv-website/static/2c9004578cf99b7e534affeb4d40218f/2bef9/Corner-cases-in-platformer-physics.004.png 1024w&quot;
+        src=&quot;/static/2c9004578cf99b7e534affeb4d40218f/fcda8/Corner-cases-in-platformer-physics.004.png&quot;
+        srcset=&quot;/static/2c9004578cf99b7e534affeb4d40218f/12f09/Corner-cases-in-platformer-physics.004.png 148w,
+/static/2c9004578cf99b7e534affeb4d40218f/e4a3f/Corner-cases-in-platformer-physics.004.png 295w,
+/static/2c9004578cf99b7e534affeb4d40218f/fcda8/Corner-cases-in-platformer-physics.004.png 590w,
+/static/2c9004578cf99b7e534affeb4d40218f/efc66/Corner-cases-in-platformer-physics.004.png 885w,
+/static/2c9004578cf99b7e534affeb4d40218f/2bef9/Corner-cases-in-platformer-physics.004.png 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1085,7 +1085,7 @@ At this point, I had already started porting the game to Android, which made it 
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/59c5630f6238d78b19272827bb560611/2bef9/Corner-cases-in-platformer-physics.003.png&quot;
+    href=&quot;/static/59c5630f6238d78b19272827bb560611/2bef9/Corner-cases-in-platformer-physics.003.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1098,12 +1098,12 @@ At this point, I had already started porting the game to Android, which made it 
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Classical platform game challenges&quot;
         title=&quot;Patfromer challenges&quot;
-        src=&quot;/arttuv-website/static/59c5630f6238d78b19272827bb560611/fcda8/Corner-cases-in-platformer-physics.003.png&quot;
-        srcset=&quot;/arttuv-website/static/59c5630f6238d78b19272827bb560611/12f09/Corner-cases-in-platformer-physics.003.png 148w,
-/arttuv-website/static/59c5630f6238d78b19272827bb560611/e4a3f/Corner-cases-in-platformer-physics.003.png 295w,
-/arttuv-website/static/59c5630f6238d78b19272827bb560611/fcda8/Corner-cases-in-platformer-physics.003.png 590w,
-/arttuv-website/static/59c5630f6238d78b19272827bb560611/efc66/Corner-cases-in-platformer-physics.003.png 885w,
-/arttuv-website/static/59c5630f6238d78b19272827bb560611/2bef9/Corner-cases-in-platformer-physics.003.png 1024w&quot;
+        src=&quot;/static/59c5630f6238d78b19272827bb560611/fcda8/Corner-cases-in-platformer-physics.003.png&quot;
+        srcset=&quot;/static/59c5630f6238d78b19272827bb560611/12f09/Corner-cases-in-platformer-physics.003.png 148w,
+/static/59c5630f6238d78b19272827bb560611/e4a3f/Corner-cases-in-platformer-physics.003.png 295w,
+/static/59c5630f6238d78b19272827bb560611/fcda8/Corner-cases-in-platformer-physics.003.png 590w,
+/static/59c5630f6238d78b19272827bb560611/efc66/Corner-cases-in-platformer-physics.003.png 885w,
+/static/59c5630f6238d78b19272827bb560611/2bef9/Corner-cases-in-platformer-physics.003.png 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1143,9 +1143,9 @@ At this point, I had already started porting the game to Android, which made it 
 &lt;p&gt;Based on studies done on automation, it seems apparent that special caution should be taken when designing automation for work domains, especially when security is of importance. Security critical or not, it should be ensured that the role of the human operator stays coherent and meaningful, even if it potentially hinders the overall system peak performance.&lt;/p&gt;
 &lt;p&gt;I’ve been considering using situation awareness as the framework for designing automation. You can read my blog post on Designing to Support (Distributed) Situation Awareness. I can’t help but think that a systemic view on SA (distributed situation awareness) by Stanton et al. might be an invaluable approach to design.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Designing to Support (Distributed) Situation Awareness]]></title><description><![CDATA[Both Situation Awareness and Distributed Situation Awareness are interesting concepts to consider when designing complex systems. Both have…]]></description><link>https://www.arttuv.com/writings/designing-to-support-dsa</link><guid isPermaLink="false">https://www.arttuv.com/writings/designing-to-support-dsa</guid><pubDate>Wed, 26 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Both Situation Awareness and Distributed Situation Awareness are interesting concepts to consider when designing complex systems. Both have their own design methods, processes and measurement methods, which should help system designers to support high SA on end users. But the real question is, how do you use these models to improve design?&lt;/p&gt;
 &lt;p&gt;I’ve written about SA and DSA before:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;/arttuv-website/writings/situation-awareness&quot;&gt;Situation Awareness&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/writings/situation-awareness&quot;&gt;Situation Awareness&lt;/a&gt;
 Endsley’s three level individual level SA model&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;/arttuv-website/writings/distributed-situation-awareness-dsa&quot;&gt;Distributed Situation Awareness&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/writings/distributed-situation-awareness-dsa&quot;&gt;Distributed Situation Awareness&lt;/a&gt;
 Stanton et al. system level DSA model&lt;/p&gt;
 &lt;p&gt;Endsley, Bolte and Jones have published a book named Designing for situation awareness: An approach to human-centered design on SA-oriented design (Endsley et al 2003). Salmon, Stanton, Walker and Jenkins have published their view on DSA-oriented design in a book Distributed Situation Awareness: Theory, Measurement and Application to Teamwork (Stanton et al 2009).&lt;/p&gt;
 &lt;p&gt;Both of these are briefly covered here. The figure below is a top level description combining both approaches: analysis-specification-build-measure-repeat -cycles.&lt;/p&gt;
@@ -1156,7 +1156,7 @@ Stanton et al. system level DSA model&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/82036fce0c84a136dc50c14d3bf980bf/2bef9/SA-and-DSA-design-processes-combined.png&quot;
+    href=&quot;/static/82036fce0c84a136dc50c14d3bf980bf/2bef9/SA-and-DSA-design-processes-combined.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1169,12 +1169,12 @@ Stanton et al. system level DSA model&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Top-level description combining results from SA-oriented design and DSA-oriented de-sign, derived from Endsley et al (2003) and Salmon et al (2009)&quot;
         title=&quot;Top-level description combining results from SA-oriented design and DSA-oriented de-sign, derived from Endsley et al (2003) and Salmon et al (2009)&quot;
-        src=&quot;/arttuv-website/static/82036fce0c84a136dc50c14d3bf980bf/fcda8/SA-and-DSA-design-processes-combined.png&quot;
-        srcset=&quot;/arttuv-website/static/82036fce0c84a136dc50c14d3bf980bf/12f09/SA-and-DSA-design-processes-combined.png 148w,
-/arttuv-website/static/82036fce0c84a136dc50c14d3bf980bf/e4a3f/SA-and-DSA-design-processes-combined.png 295w,
-/arttuv-website/static/82036fce0c84a136dc50c14d3bf980bf/fcda8/SA-and-DSA-design-processes-combined.png 590w,
-/arttuv-website/static/82036fce0c84a136dc50c14d3bf980bf/efc66/SA-and-DSA-design-processes-combined.png 885w,
-/arttuv-website/static/82036fce0c84a136dc50c14d3bf980bf/2bef9/SA-and-DSA-design-processes-combined.png 1024w&quot;
+        src=&quot;/static/82036fce0c84a136dc50c14d3bf980bf/fcda8/SA-and-DSA-design-processes-combined.png&quot;
+        srcset=&quot;/static/82036fce0c84a136dc50c14d3bf980bf/12f09/SA-and-DSA-design-processes-combined.png 148w,
+/static/82036fce0c84a136dc50c14d3bf980bf/e4a3f/SA-and-DSA-design-processes-combined.png 295w,
+/static/82036fce0c84a136dc50c14d3bf980bf/fcda8/SA-and-DSA-design-processes-combined.png 590w,
+/static/82036fce0c84a136dc50c14d3bf980bf/efc66/SA-and-DSA-design-processes-combined.png 885w,
+/static/82036fce0c84a136dc50c14d3bf980bf/2bef9/SA-and-DSA-design-processes-combined.png 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1219,7 +1219,7 @@ Stanton et al. system level DSA model&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/b62f40be5b0e2675b59c2b05c7a912eb/2bef9/Distributed-Situation-Awareness_BW_Black-1024x656.png&quot;
+    href=&quot;/static/b62f40be5b0e2675b59c2b05c7a912eb/2bef9/Distributed-Situation-Awareness_BW_Black-1024x656.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1232,12 +1232,12 @@ Stanton et al. system level DSA model&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Model of Distributed Situation Awareness, from Distributed Situation Awareness: Theory, Measurement and Application to Teamwork (2009)&quot;
         title=&quot;Model of Distributed Situation Awareness, from Distributed Situation Awareness: Theory, Measurement and Application to Teamwork (2009)&quot;
-        src=&quot;/arttuv-website/static/b62f40be5b0e2675b59c2b05c7a912eb/fcda8/Distributed-Situation-Awareness_BW_Black-1024x656.png&quot;
-        srcset=&quot;/arttuv-website/static/b62f40be5b0e2675b59c2b05c7a912eb/12f09/Distributed-Situation-Awareness_BW_Black-1024x656.png 148w,
-/arttuv-website/static/b62f40be5b0e2675b59c2b05c7a912eb/e4a3f/Distributed-Situation-Awareness_BW_Black-1024x656.png 295w,
-/arttuv-website/static/b62f40be5b0e2675b59c2b05c7a912eb/fcda8/Distributed-Situation-Awareness_BW_Black-1024x656.png 590w,
-/arttuv-website/static/b62f40be5b0e2675b59c2b05c7a912eb/efc66/Distributed-Situation-Awareness_BW_Black-1024x656.png 885w,
-/arttuv-website/static/b62f40be5b0e2675b59c2b05c7a912eb/2bef9/Distributed-Situation-Awareness_BW_Black-1024x656.png 1024w&quot;
+        src=&quot;/static/b62f40be5b0e2675b59c2b05c7a912eb/fcda8/Distributed-Situation-Awareness_BW_Black-1024x656.png&quot;
+        srcset=&quot;/static/b62f40be5b0e2675b59c2b05c7a912eb/12f09/Distributed-Situation-Awareness_BW_Black-1024x656.png 148w,
+/static/b62f40be5b0e2675b59c2b05c7a912eb/e4a3f/Distributed-Situation-Awareness_BW_Black-1024x656.png 295w,
+/static/b62f40be5b0e2675b59c2b05c7a912eb/fcda8/Distributed-Situation-Awareness_BW_Black-1024x656.png 590w,
+/static/b62f40be5b0e2675b59c2b05c7a912eb/efc66/Distributed-Situation-Awareness_BW_Black-1024x656.png 885w,
+/static/b62f40be5b0e2675b59c2b05c7a912eb/2bef9/Distributed-Situation-Awareness_BW_Black-1024x656.png 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1256,7 +1256,7 @@ Stanton et al. system level DSA model&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/7ff24e004c90cb6d31fc44b91bda32e6/2bef9/Perceptual-Cycle_BW_Black-1024x907.png&quot;
+    href=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/2bef9/Perceptual-Cycle_BW_Black-1024x907.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1269,12 +1269,12 @@ Stanton et al. system level DSA model&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Perceptual Cycle model by Neisser, from Salmon et al (2018)&quot;
         title=&quot;Perceptual Cycle model by Neisser, from Salmon et al (2018)&quot;
-        src=&quot;/arttuv-website/static/7ff24e004c90cb6d31fc44b91bda32e6/fcda8/Perceptual-Cycle_BW_Black-1024x907.png&quot;
-        srcset=&quot;/arttuv-website/static/7ff24e004c90cb6d31fc44b91bda32e6/12f09/Perceptual-Cycle_BW_Black-1024x907.png 148w,
-/arttuv-website/static/7ff24e004c90cb6d31fc44b91bda32e6/e4a3f/Perceptual-Cycle_BW_Black-1024x907.png 295w,
-/arttuv-website/static/7ff24e004c90cb6d31fc44b91bda32e6/fcda8/Perceptual-Cycle_BW_Black-1024x907.png 590w,
-/arttuv-website/static/7ff24e004c90cb6d31fc44b91bda32e6/efc66/Perceptual-Cycle_BW_Black-1024x907.png 885w,
-/arttuv-website/static/7ff24e004c90cb6d31fc44b91bda32e6/2bef9/Perceptual-Cycle_BW_Black-1024x907.png 1024w&quot;
+        src=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/fcda8/Perceptual-Cycle_BW_Black-1024x907.png&quot;
+        srcset=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/12f09/Perceptual-Cycle_BW_Black-1024x907.png 148w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/e4a3f/Perceptual-Cycle_BW_Black-1024x907.png 295w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/fcda8/Perceptual-Cycle_BW_Black-1024x907.png 590w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/efc66/Perceptual-Cycle_BW_Black-1024x907.png 885w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/2bef9/Perceptual-Cycle_BW_Black-1024x907.png 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1304,7 +1304,7 @@ Definition of SA by Endsley (Endsley 1988)&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/257aefe44b0255dfe8a37da30573b079/e088a/Endsley-SA-model_BW_Black.png&quot;
+    href=&quot;/static/257aefe44b0255dfe8a37da30573b079/e088a/Endsley-SA-model_BW_Black.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1317,12 +1317,12 @@ Definition of SA by Endsley (Endsley 1988)&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Situation Awareness Diagram&quot;
         title=&quot;Situation Awareness Diagram&quot;
-        src=&quot;/arttuv-website/static/257aefe44b0255dfe8a37da30573b079/fcda8/Endsley-SA-model_BW_Black.png&quot;
-        srcset=&quot;/arttuv-website/static/257aefe44b0255dfe8a37da30573b079/12f09/Endsley-SA-model_BW_Black.png 148w,
-/arttuv-website/static/257aefe44b0255dfe8a37da30573b079/e4a3f/Endsley-SA-model_BW_Black.png 295w,
-/arttuv-website/static/257aefe44b0255dfe8a37da30573b079/fcda8/Endsley-SA-model_BW_Black.png 590w,
-/arttuv-website/static/257aefe44b0255dfe8a37da30573b079/efc66/Endsley-SA-model_BW_Black.png 885w,
-/arttuv-website/static/257aefe44b0255dfe8a37da30573b079/e088a/Endsley-SA-model_BW_Black.png 1015w&quot;
+        src=&quot;/static/257aefe44b0255dfe8a37da30573b079/fcda8/Endsley-SA-model_BW_Black.png&quot;
+        srcset=&quot;/static/257aefe44b0255dfe8a37da30573b079/12f09/Endsley-SA-model_BW_Black.png 148w,
+/static/257aefe44b0255dfe8a37da30573b079/e4a3f/Endsley-SA-model_BW_Black.png 295w,
+/static/257aefe44b0255dfe8a37da30573b079/fcda8/Endsley-SA-model_BW_Black.png 590w,
+/static/257aefe44b0255dfe8a37da30573b079/efc66/Endsley-SA-model_BW_Black.png 885w,
+/static/257aefe44b0255dfe8a37da30573b079/e088a/Endsley-SA-model_BW_Black.png 1015w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1478,7 +1478,7 @@ Oaks, 2014, p.215&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/9aed76e3edde34ad3c67f1ac807b188e/a4d88/HWO-Pong-representation.png&quot;
+    href=&quot;/static/9aed76e3edde34ad3c67f1ac807b188e/a4d88/HWO-Pong-representation.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1491,10 +1491,10 @@ Oaks, 2014, p.215&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Diagram&quot;
         title=&quot;Diagram&quot;
-        src=&quot;/arttuv-website/static/9aed76e3edde34ad3c67f1ac807b188e/a4d88/HWO-Pong-representation.png&quot;
-        srcset=&quot;/arttuv-website/static/9aed76e3edde34ad3c67f1ac807b188e/12f09/HWO-Pong-representation.png 148w,
-/arttuv-website/static/9aed76e3edde34ad3c67f1ac807b188e/e4a3f/HWO-Pong-representation.png 295w,
-/arttuv-website/static/9aed76e3edde34ad3c67f1ac807b188e/a4d88/HWO-Pong-representation.png 495w&quot;
+        src=&quot;/static/9aed76e3edde34ad3c67f1ac807b188e/a4d88/HWO-Pong-representation.png&quot;
+        srcset=&quot;/static/9aed76e3edde34ad3c67f1ac807b188e/12f09/HWO-Pong-representation.png 148w,
+/static/9aed76e3edde34ad3c67f1ac807b188e/e4a3f/HWO-Pong-representation.png 295w,
+/static/9aed76e3edde34ad3c67f1ac807b188e/a4d88/HWO-Pong-representation.png 495w&quot;
         sizes=&quot;(max-width: 495px) 100vw, 495px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1543,7 +1543,7 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/f2baec3d34169ec4ea9204c11bda784b/29007/HWO_Testing2.png&quot;
+    href=&quot;/static/f2baec3d34169ec4ea9204c11bda784b/29007/HWO_Testing2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1556,13 +1556,13 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Local HWO testing&quot;
         title=&quot;Local HWO testing&quot;
-        src=&quot;/arttuv-website/static/f2baec3d34169ec4ea9204c11bda784b/fcda8/HWO_Testing2.png&quot;
-        srcset=&quot;/arttuv-website/static/f2baec3d34169ec4ea9204c11bda784b/12f09/HWO_Testing2.png 148w,
-/arttuv-website/static/f2baec3d34169ec4ea9204c11bda784b/e4a3f/HWO_Testing2.png 295w,
-/arttuv-website/static/f2baec3d34169ec4ea9204c11bda784b/fcda8/HWO_Testing2.png 590w,
-/arttuv-website/static/f2baec3d34169ec4ea9204c11bda784b/efc66/HWO_Testing2.png 885w,
-/arttuv-website/static/f2baec3d34169ec4ea9204c11bda784b/c83ae/HWO_Testing2.png 1180w,
-/arttuv-website/static/f2baec3d34169ec4ea9204c11bda784b/29007/HWO_Testing2.png 1600w&quot;
+        src=&quot;/static/f2baec3d34169ec4ea9204c11bda784b/fcda8/HWO_Testing2.png&quot;
+        srcset=&quot;/static/f2baec3d34169ec4ea9204c11bda784b/12f09/HWO_Testing2.png 148w,
+/static/f2baec3d34169ec4ea9204c11bda784b/e4a3f/HWO_Testing2.png 295w,
+/static/f2baec3d34169ec4ea9204c11bda784b/fcda8/HWO_Testing2.png 590w,
+/static/f2baec3d34169ec4ea9204c11bda784b/efc66/HWO_Testing2.png 885w,
+/static/f2baec3d34169ec4ea9204c11bda784b/c83ae/HWO_Testing2.png 1180w,
+/static/f2baec3d34169ec4ea9204c11bda784b/29007/HWO_Testing2.png 1600w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1583,7 +1583,7 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/4fb7c47f990ce8f2f1c30286bbc52351/442cb/HelloWorldOpenTop26.png&quot;
+    href=&quot;/static/4fb7c47f990ce8f2f1c30286bbc52351/442cb/HelloWorldOpenTop26.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1596,11 +1596,11 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;HWO Results&quot;
         title=&quot;HWO Results&quot;
-        src=&quot;/arttuv-website/static/4fb7c47f990ce8f2f1c30286bbc52351/fcda8/HelloWorldOpenTop26.png&quot;
-        srcset=&quot;/arttuv-website/static/4fb7c47f990ce8f2f1c30286bbc52351/12f09/HelloWorldOpenTop26.png 148w,
-/arttuv-website/static/4fb7c47f990ce8f2f1c30286bbc52351/e4a3f/HelloWorldOpenTop26.png 295w,
-/arttuv-website/static/4fb7c47f990ce8f2f1c30286bbc52351/fcda8/HelloWorldOpenTop26.png 590w,
-/arttuv-website/static/4fb7c47f990ce8f2f1c30286bbc52351/442cb/HelloWorldOpenTop26.png 752w&quot;
+        src=&quot;/static/4fb7c47f990ce8f2f1c30286bbc52351/fcda8/HelloWorldOpenTop26.png&quot;
+        srcset=&quot;/static/4fb7c47f990ce8f2f1c30286bbc52351/12f09/HelloWorldOpenTop26.png 148w,
+/static/4fb7c47f990ce8f2f1c30286bbc52351/e4a3f/HelloWorldOpenTop26.png 295w,
+/static/4fb7c47f990ce8f2f1c30286bbc52351/fcda8/HelloWorldOpenTop26.png 590w,
+/static/4fb7c47f990ce8f2f1c30286bbc52351/442cb/HelloWorldOpenTop26.png 752w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1620,7 +1620,7 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/372fc82c543e4918a75ff38d7ee61128/a2ead/patient-record-systems-by-vendor.png&quot;
+    href=&quot;/static/372fc82c543e4918a75ff38d7ee61128/a2ead/patient-record-systems-by-vendor.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1633,9 +1633,9 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina&quot;
         title=&quot;Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina&quot;
-        src=&quot;/arttuv-website/static/372fc82c543e4918a75ff38d7ee61128/a2ead/patient-record-systems-by-vendor.png&quot;
-        srcset=&quot;/arttuv-website/static/372fc82c543e4918a75ff38d7ee61128/12f09/patient-record-systems-by-vendor.png 148w,
-/arttuv-website/static/372fc82c543e4918a75ff38d7ee61128/a2ead/patient-record-systems-by-vendor.png 259w&quot;
+        src=&quot;/static/372fc82c543e4918a75ff38d7ee61128/a2ead/patient-record-systems-by-vendor.png&quot;
+        srcset=&quot;/static/372fc82c543e4918a75ff38d7ee61128/12f09/patient-record-systems-by-vendor.png 148w,
+/static/372fc82c543e4918a75ff38d7ee61128/a2ead/patient-record-systems-by-vendor.png 259w&quot;
         sizes=&quot;(max-width: 259px) 100vw, 259px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1663,7 +1663,7 @@ Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina [läh
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/c2c243e8d0c9b73463ecb56908038231/d7abb/ISO9241-210Prosessimalli-1.png&quot;
+    href=&quot;/static/c2c243e8d0c9b73463ecb56908038231/d7abb/ISO9241-210Prosessimalli-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1676,12 +1676,12 @@ Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina [läh
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Malli käyttäjäkeskeiseen suunnitteluun&quot;
         title=&quot;Malli käyttäjäkeskeiseen suunnitteluun&quot;
-        src=&quot;/arttuv-website/static/c2c243e8d0c9b73463ecb56908038231/fcda8/ISO9241-210Prosessimalli-1.png&quot;
-        srcset=&quot;/arttuv-website/static/c2c243e8d0c9b73463ecb56908038231/12f09/ISO9241-210Prosessimalli-1.png 148w,
-/arttuv-website/static/c2c243e8d0c9b73463ecb56908038231/e4a3f/ISO9241-210Prosessimalli-1.png 295w,
-/arttuv-website/static/c2c243e8d0c9b73463ecb56908038231/fcda8/ISO9241-210Prosessimalli-1.png 590w,
-/arttuv-website/static/c2c243e8d0c9b73463ecb56908038231/efc66/ISO9241-210Prosessimalli-1.png 885w,
-/arttuv-website/static/c2c243e8d0c9b73463ecb56908038231/d7abb/ISO9241-210Prosessimalli-1.png 959w&quot;
+        src=&quot;/static/c2c243e8d0c9b73463ecb56908038231/fcda8/ISO9241-210Prosessimalli-1.png&quot;
+        srcset=&quot;/static/c2c243e8d0c9b73463ecb56908038231/12f09/ISO9241-210Prosessimalli-1.png 148w,
+/static/c2c243e8d0c9b73463ecb56908038231/e4a3f/ISO9241-210Prosessimalli-1.png 295w,
+/static/c2c243e8d0c9b73463ecb56908038231/fcda8/ISO9241-210Prosessimalli-1.png 590w,
+/static/c2c243e8d0c9b73463ecb56908038231/efc66/ISO9241-210Prosessimalli-1.png 885w,
+/static/c2c243e8d0c9b73463ecb56908038231/d7abb/ISO9241-210Prosessimalli-1.png 959w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1733,7 +1733,7 @@ ISO 9241-210 –standardin malli käyttäjäkeskeiseen suunnitteluun [Jok10]&lt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/a96e20176e3ff986ed42438b426d5ddf/2d920/Action-Cycle-Simplified.png&quot;
+    href=&quot;/static/a96e20176e3ff986ed42438b426d5ddf/2d920/Action-Cycle-Simplified.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1746,10 +1746,10 @@ ISO 9241-210 –standardin malli käyttäjäkeskeiseen suunnitteluun [Jok10]&lt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Action Cycle Simplified&quot;
         title=&quot;Action Cycle Simplified&quot;
-        src=&quot;/arttuv-website/static/a96e20176e3ff986ed42438b426d5ddf/2d920/Action-Cycle-Simplified.png&quot;
-        srcset=&quot;/arttuv-website/static/a96e20176e3ff986ed42438b426d5ddf/12f09/Action-Cycle-Simplified.png 148w,
-/arttuv-website/static/a96e20176e3ff986ed42438b426d5ddf/e4a3f/Action-Cycle-Simplified.png 295w,
-/arttuv-website/static/a96e20176e3ff986ed42438b426d5ddf/2d920/Action-Cycle-Simplified.png 536w&quot;
+        src=&quot;/static/a96e20176e3ff986ed42438b426d5ddf/2d920/Action-Cycle-Simplified.png&quot;
+        srcset=&quot;/static/a96e20176e3ff986ed42438b426d5ddf/12f09/Action-Cycle-Simplified.png 148w,
+/static/a96e20176e3ff986ed42438b426d5ddf/e4a3f/Action-Cycle-Simplified.png 295w,
+/static/a96e20176e3ff986ed42438b426d5ddf/2d920/Action-Cycle-Simplified.png 536w&quot;
         sizes=&quot;(max-width: 536px) 100vw, 536px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1768,7 +1768,7 @@ ISO 9241-210 –standardin malli käyttäjäkeskeiseen suunnitteluun [Jok10]&lt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/arttuv-website/static/302db0eaca73a5ff617398c091b59a00/b06ae/Action-Cycle.png&quot;
+    href=&quot;/static/302db0eaca73a5ff617398c091b59a00/b06ae/Action-Cycle.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1781,10 +1781,10 @@ ISO 9241-210 –standardin malli käyttäjäkeskeiseen suunnitteluun [Jok10]&lt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Seven Stages of Action&quot;
         title=&quot;Seven Stages of Action&quot;
-        src=&quot;/arttuv-website/static/302db0eaca73a5ff617398c091b59a00/b06ae/Action-Cycle.png&quot;
-        srcset=&quot;/arttuv-website/static/302db0eaca73a5ff617398c091b59a00/12f09/Action-Cycle.png 148w,
-/arttuv-website/static/302db0eaca73a5ff617398c091b59a00/e4a3f/Action-Cycle.png 295w,
-/arttuv-website/static/302db0eaca73a5ff617398c091b59a00/b06ae/Action-Cycle.png 560w&quot;
+        src=&quot;/static/302db0eaca73a5ff617398c091b59a00/b06ae/Action-Cycle.png&quot;
+        srcset=&quot;/static/302db0eaca73a5ff617398c091b59a00/12f09/Action-Cycle.png 148w,
+/static/302db0eaca73a5ff617398c091b59a00/e4a3f/Action-Cycle.png 295w,
+/static/302db0eaca73a5ff617398c091b59a00/b06ae/Action-Cycle.png 560w&quot;
         sizes=&quot;(max-width: 560px) 100vw, 560px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
