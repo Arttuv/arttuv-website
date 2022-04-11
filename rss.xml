@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[arttuv.com RSS feed]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 11 Apr 2022 17:13:09 GMT</lastBuildDate><item><title><![CDATA[Becoming fluent in remote work]]></title><description><![CDATA[I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional…]]></description><link>https://www.arttuv.com/writings/asynchronous-work</link><guid isPermaLink="false">https://www.arttuv.com/writings/asynchronous-work</guid><pubDate>Sun, 15 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional meetings with others - that’s easy and only thing you need to worry is getting lonely. Now I work with a team on things that require collaboration, so it’s much harder - you can’t just mimic the co-located way of working remotely. Or you can, but it’s suboptimal and leads into inefficiencies. By GitLab terms that stage of remote is called &lt;a href=&quot;https://about.gitlab.com/company/culture/all-remote/phases-of-remote-adaptation/&quot;&gt;skeuomorph&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[arttuv.com RSS feed]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 11 Apr 2022 18:17:00 GMT</lastBuildDate><item><title><![CDATA[Becoming fluent in remote work]]></title><description><![CDATA[I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional…]]></description><link>https://www.arttuv.com/writings/asynchronous-work</link><guid isPermaLink="false">https://www.arttuv.com/writings/asynchronous-work</guid><pubDate>Sun, 15 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional meetings with others - that’s easy and only thing you need to worry is getting lonely. Now I work with a team on things that require collaboration, so it’s much harder - you can’t just mimic the co-located way of working remotely. Or you can, but it’s suboptimal and leads into inefficiencies. By GitLab terms that stage of remote is called &lt;a href=&quot;https://about.gitlab.com/company/culture/all-remote/phases-of-remote-adaptation/&quot;&gt;skeuomorph&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I went through the &lt;a href=&quot;https://www.coursera.org/learn/remote-team-management&quot;&gt;GitLab Leading remote teams Coursera course&lt;/a&gt; and I feel it gave me some fresh ideas on how to approach working fully remotely.&lt;/p&gt;
 &lt;p&gt;Most of my work experience is from working in an traditional agile way; co-located, collaborating, discussing directly with the people who are needed to solve the task at hand, immediately when the need arises: Going through the difficulties with a whiteboard, having retrospectives with post-it notes, etc.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -213,15 +213,19 @@
 &lt;/ul&gt;
 &lt;p&gt;It’s not that easy, nor a silver bullet, but it is a way to get better at forecasting the future of the project.&lt;/p&gt;
 &lt;p&gt;The problem of forecast vs commitment might seem like a minor one, but I’ve experienced that wrong wording in this matter can cause negative feelings in the team and cause vain friction between stakeholders.&lt;/p&gt;
-&lt;p&gt;The estimation itself is hard, and I don’t think I’ve ever seen it done too well, so it would be good to get all the stakeholders to understand that, and work towards better predictability together.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[PDF as a Read It Later Service]]></title><description><![CDATA[Updates to this text 31. July 2020 At first I thought the only way to get a good PDF on iPad OS was to take the full page screenshot, but…]]></description><link>https://www.arttuv.com/writings/pdf-as-a-read-it-later-service</link><guid isPermaLink="false">https://www.arttuv.com/writings/pdf-as-a-read-it-later-service</guid><pubDate>Sat, 25 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Updates to this text&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The estimation itself is hard, and I don’t think I’ve ever seen it done too well, so it would be good to get all the stakeholders to understand that, and work towards better predictability together.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[PDF as a Read It Later Service]]></title><description><![CDATA[Updates to this text 11. April 2022 Nowadays I'm using Reeder for both RSS and my read it later -needs. The application is beautiful on iOS…]]></description><link>https://www.arttuv.com/writings/pdf-as-a-read-it-later-service</link><guid isPermaLink="false">https://www.arttuv.com/writings/pdf-as-a-read-it-later-service</guid><pubDate>Sat, 25 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Updates to this text&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;31. July 2020&lt;/strong&gt; At first I thought the only way to get a good PDF on iPad OS was to take the full page screenshot, but luckily there was also an option to create a &lt;strong&gt;Web Archive&lt;/strong&gt; PDF in the sharing view. I changed the text to include this.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;11. April 2022&lt;/strong&gt; Nowadays I&apos;m using &lt;a href=&quot;https://reederapp.com&quot;&gt;Reeder&lt;/a&gt; for both RSS and my read it later -needs. The application is beautiful on iOS, iPad OS and MacOS.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;22. November 2020&lt;/strong&gt; My joy didn&apos;t last that long - Web Archibe feature was changed in the iOS14, or at least it looks like it. Now the website is saved in webarchive format instead of PDF. You can still get the PDF but it&apos;s divided to pages, which makes it less appealing to read.&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;31. July 2020&lt;/strong&gt; At first I thought the only way to get a good PDF on iPad OS was to take the full page screenshot, but luckily there was also an option to create a &lt;strong&gt;Web Archive&lt;/strong&gt; PDF in the sharing view. I changed the text to include this.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Original text:&lt;/p&gt;
 &lt;p&gt;Being in control is the best aspect of using PDF as a read it later service: you can modify how the website looks like, save it so that it’s yours to read, annotate and store however you like to.&lt;/p&gt;
 &lt;p&gt;It’s not perfect, but it’s surprisingly good.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -457,7 +461,12 @@
 &lt;h3&gt;Apple Books&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://support.apple.com/en-au/HT205751&quot;&gt;Books can also be used to read &amp;#x26; annotate PDF files.&lt;/a&gt; I have not been using it like that and found the feature by accident, but it might be a low-cost option. Disappointedly it remembers the reading progress on the page level, so reading those one-pagers that Safari produces is not optimal. I wish I had a direct way to give feedback to developers...&lt;/p&gt;
 &lt;h1&gt;Seems promising this far&lt;/h1&gt;
-&lt;p&gt;I&apos;ve been using PDF for reading long web stories about a month now and it seems to be a good way to read articles I find by using a RSS reader. I tend to collect more to the reading queue than I&apos;m able to read, but that happens with any service. I have an app idea that would make this process much more flowing, but I just don&apos;t have the time (or knowledge) to implement that now.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Inoreader vs Feedly, and the ultimate feed reader (in 2020)]]></title><description><![CDATA[What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs…]]></description><link>https://www.arttuv.com/writings/feedly-vs-inoreader-and-the-ultimate-feed-aggregator</link><guid isPermaLink="false">https://www.arttuv.com/writings/feedly-vs-inoreader-and-the-ultimate-feed-aggregator</guid><pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs - your&apos;s will vary so take this writing as a personal journey instead of an objective comparison.&lt;/p&gt;
+&lt;p&gt;I&apos;ve been using PDF for reading long web stories about a month now and it seems to be a good way to read articles I find by using a RSS reader. I tend to collect more to the reading queue than I&apos;m able to read, but that happens with any service. I have an app idea that would make this process much more flowing, but I just don&apos;t have the time (or knowledge) to implement that now.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Inoreader vs Feedly, and the ultimate feed reader (in 2020)]]></title><description><![CDATA[Updates to this text 11. April 2022 Note that this post is probably obsolete already regarding the comments on Feedly and Inoreader. Btw…]]></description><link>https://www.arttuv.com/writings/feedly-vs-inoreader-and-the-ultimate-feed-aggregator</link><guid isPermaLink="false">https://www.arttuv.com/writings/feedly-vs-inoreader-and-the-ultimate-feed-aggregator</guid><pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Updates to this text&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;11. April 2022&lt;/strong&gt; Note that this post is probably obsolete already regarding the comments on Feedly and Inoreader. Btw nowadays I&apos;m a happy user of &lt;a href=&quot;https://reederapp.com&quot;&gt;Reeder&lt;/a&gt; for both RSS and read it later. Highly recommended.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Original text:&lt;/p&gt;
+&lt;p&gt;What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs - your&apos;s will vary so take this writing as a personal journey instead of an objective comparison.&lt;/p&gt;
 &lt;p&gt;As I wrote, &lt;a href=&quot;writings/../rss-and-the-future-or-past-of-web.md&quot;&gt;I’ve started using RSS again&lt;/a&gt; after some five years break. &lt;a href=&quot;https://feedly.com/&quot;&gt;Feedly&lt;/a&gt; and &lt;a href=&quot;https://www.inoreader.com/&quot;&gt;Inoreader&lt;/a&gt; are two services I’ve been comparing now, and I think I will need to be using Inoreader.&lt;/p&gt;
 &lt;p&gt;I will explain why, and why I might also return to Feedly.&lt;/p&gt;
 &lt;h2&gt;What Makes a Feed Aggregator&lt;/h2&gt;
@@ -968,7 +977,42 @@
 &lt;p&gt;By admitting that you need help you are creating an example for others in the team as well. As you probably know, psychological safety is a common feature in high performing teams (&lt;a href=&quot;https://rework.withgoogle.com/blog/five-keys-to-a-successful-google-team/&quot;&gt;according to studies made at Google&lt;/a&gt;). By showing that it’s ok to show weakness, you help to build a safe environment and it will help your team to grow to be a better environment for everyone.&lt;/p&gt;
 &lt;h2&gt;The Team is the Smallest Entity&lt;/h2&gt;
 &lt;p&gt;The team should usually be the smallest acting entity in building software. So what could a team do to tackle the fear? David J. Anderson has listed some team practices in his &lt;a href=&quot;https://www.goodreads.com/book/show/8086552-kanban&quot;&gt;Kanban book&lt;/a&gt;, which can help to make it easier to ask for help and collaborate.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;team-kanban-dots.jpeg&quot; alt=&quot;Team working together&quot; title=&quot;Team working together&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/b536e/team-kanban-dots.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.94594594594594%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHbVlLSQ//EABoQAAICAwAAAAAAAAAAAAAAAAABAhEQEiH/2gAIAQEAAQUCdnREo2aY/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAgMAAAAAAAAAAAAAAAAAABABITH/2gAIAQEABj8CNcWv/8QAGhAAAwADAQAAAAAAAAAAAAAAAAERITFBUf/aAAgBAQABPyFqiZe+PBqjLzh7K2CUR//aAAwDAQACAAMAAAAQQA//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAEBAQABBQAAAAAAAAAAAAABEQBhITFBcYH/2gAIAQEAAT8QuxczmZCowT4LPuaq3TCgIL3MECsW+k6mORv/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Team working together&quot;
+        title=&quot;Team working together&quot;
+        src=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/1c72d/team-kanban-dots.jpg&quot;
+        srcset=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/a80bd/team-kanban-dots.jpg 148w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/1c91a/team-kanban-dots.jpg 295w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/1c72d/team-kanban-dots.jpg 590w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/a8a14/team-kanban-dots.jpg 885w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/fbd2c/team-kanban-dots.jpg 1180w,
+/static/5c4ae38c99b2d4e63f7dd2038d845193/b536e/team-kanban-dots.jpg 1454w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Team working together&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;One option is to &lt;strong&gt;agree on a practice that nobody in a team is allowed to wrestle on a blocker problem more than 30 minutes alone&lt;/strong&gt;. This can make it clear for everyone that asking for help is seen as a good thing and makes the team perform more efficiently. Everybody knows that you don’t only have permission to ask for help, it’s expected of you.&lt;/p&gt;
 &lt;p&gt;Another practice is to &lt;strong&gt;track how long a task stays in the same phase&lt;/strong&gt; (column, when talking about Kanban). The easiest way to do this is to add a dot to it in each daily. This helps the team to focus on tasks that seem to be blocked and proactively offer for help. I must emphasize that this kind of practice should be agreed on as a team - otherwise this can also add the wrong kind of pressure for the team members.&lt;/p&gt;
 &lt;p&gt;Each policy should be discussed and agreed as a team so that everybody knows what is the change you intend to achieve.&lt;/p&gt;
@@ -1220,7 +1264,41 @@ Stanton et al. system level DSA model&lt;/p&gt;
 &lt;p&gt;DSA is an interesting approach to complex systems because it concentrates on deep understanding of the tasks in a system and on what information each agent needs in any specific time. Being able to identify these requirements would be highly beneficial for systems designers. It might also help to reduce the mental workload relating to perception and comprehension of the data in the system. Considering DSA, it may not be optimal to strain each operator in the system with all the available data.&lt;/p&gt;
 &lt;p&gt;In addition, it is beneficial to be able to study the system as a whole – concentrating on single operators gives a limited view on the situation and may fail to reveal problems on systems level.&lt;/p&gt;
 &lt;p&gt;DSA can also be scaled down to individual level, as it is based on a perceptual cycle model by Neisser (Neisser 1976).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;Perceptual-Cycle_BW_Black-1024x907.png&quot; alt=&quot;Perceptual Cycle model by Neisser, from Salmon et al (2018)&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/2bef9/Perceptual-Cycle_BW_Black-1024x907.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 88.51351351351352%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8klEQVQ4y5WT23KCQBBE8YaiCIgogqJ4Q+JDUiWV/P+fTepMXILkUsnDFuzubE9P94xlWZa012g00jUcDvU7Ho/FcZz6bDKZSK/Xk+/eWt8d8pjle568vr1JVVVyu93k+eVFBrYtvu9Lt9v9OyALVuabpqksl0vpdDpi2/Zv7H4G7Pf7slqtFCyOY/3fbDYym80U/F8M0elwOOji8fl8lt1uJ0mSyOl00v8/A1JWWZaqE3sMQE/P95U1Z+v1Wtn+CrhYLCSKIsnzXP8N+GAwUEBYNx8ej0eNX8ax+EHwFRChMYDy2lmn0+kXQNd1NTkJW+V/Bs3nczXAtA4MSMQ5plA+phiA/X6vgFTyAAgzNGOZcglkj8vsAWEPW/MYc0xsDUgpnudpdtgRxJmZDMQnIW4naarGmMa/Xq8aQxKNdxyx2ECZhS60Bdrk+b4eMVhOPU8TUTL32+32wWkSKXuC2HBZPpVyqyplQ+lMRdsgklJilm21fcIwrBneJ+jDxXNRSFEUWvLlcqnBDPum8BiUZZmyxRikaHTBfcyS5MNJ11UtAafkNkOcN9qZs1bc57jxhRls+lpWplqZyYA9SbUz7iAAmwl6AASEtiAboATRKmg2jyKZhWHNKggC1Zk7tPtxlptd39SOxjb9xz2LcxK0mlreAUv6kAQ4SXCnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Perceptual Cycle model by Neisser, from Salmon et al (2018)&quot;
+        title=&quot;Perceptual Cycle model by Neisser, from Salmon et al (2018)&quot;
+        src=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/fcda8/Perceptual-Cycle_BW_Black-1024x907.png&quot;
+        srcset=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/12f09/Perceptual-Cycle_BW_Black-1024x907.png 148w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/e4a3f/Perceptual-Cycle_BW_Black-1024x907.png 295w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/fcda8/Perceptual-Cycle_BW_Black-1024x907.png 590w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/efc66/Perceptual-Cycle_BW_Black-1024x907.png 885w,
+/static/7ff24e004c90cb6d31fc44b91bda32e6/2bef9/Perceptual-Cycle_BW_Black-1024x907.png 1024w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Perceptual Cycle model by Neisser, from Salmon et al (2018)&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Perceptual cycle model describes how human behavior is schema-driven. Diagram above shows how the schemata directs perception and actions, which in turn sample and change the world, which continually modifies the schemata (Salmon et al 2018).&lt;/p&gt;
 &lt;p&gt;I’ve been working with complex, distributed systems during my career and DSA is an interesting model for me. I like how it is based on schema theory and perceptual cycle model, and that it acknowledges that SA will hardly ever be exactly the same in two agents in the system, and that agents holding SA may or may not be humans.&lt;/p&gt;
 &lt;p&gt;The notion that also non-human agents hold SA may be a helpful view when working with advanced automation and artificial intelligence – AI agent is just another agent in the system, and needs to be considered as such.&lt;/p&gt;
