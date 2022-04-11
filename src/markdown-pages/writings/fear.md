@@ -37,7 +37,7 @@ By admitting that you need help you are creating an example for others in the te
 
 The team should usually be the smallest acting entity in building software. So what could a team do to tackle the fear? David J. Anderson has listed some team practices in his [Kanban book](https://www.goodreads.com/book/show/8086552-kanban), which can help to make it easier to ask for help and collaborate. 
 
-![Team working together](team-kanban-dots.jpeg "Team working together")
+![Team working together](../../images/team-kanban-dots.jpeg "Team working together")
 
 One option is to **agree on a practice that nobody in a team is allowed to wrestle on a blocker problem more than 30 minutes alone**. This can make it clear for everyone that asking for help is seen as a good thing and makes the team perform more efficiently. Everybody knows that you don’t only have permission to ask for help, it’s expected of you.
 

@@ -29,7 +29,7 @@ In addition, it is beneficial to be able to study the system as a whole – conc
 
 DSA can also be scaled down to individual level, as it is based on a perceptual cycle model by Neisser (Neisser 1976).
 
-![Perceptual Cycle model by Neisser, from Salmon et al (2018)](Perceptual-Cycle_BW_Black-1024x907.png)
+![Perceptual Cycle model by Neisser, from Salmon et al (2018)](../../images/Perceptual-Cycle_BW_Black-1024x907.png)
 
 Perceptual cycle model describes how human behavior is schema-driven. Diagram above shows how the schemata directs perception and actions, which in turn sample and change the world, which continually modifies the schemata (Salmon et al 2018).
 
