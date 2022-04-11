@@ -676,10 +676,6 @@ a {
   .archive-article-item:last-of-type {
     border-right: none;
   }
-
-  .archive-article-item-summary {
-    
-  }
   
   .archive-article-item-topic {
     align-self: center;
