@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[arttuv.com RSS feed]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 16 May 2021 15:38:44 GMT</lastBuildDate><item><title><![CDATA[Becoming fluent in remote work]]></title><description><![CDATA[I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional…]]></description><link>https://www.arttuv.com/writings/asynchronous-work</link><guid isPermaLink="false">https://www.arttuv.com/writings/asynchronous-work</guid><pubDate>Sun, 15 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional meetings with others - that’s easy and only thing you need to worry is getting lonely. Now I work with a team on things that require collaboration, so it’s much harder - you can’t just mimic the co-located way of working remotely. Or you can, but it’s suboptimal and leads into inefficiencies. By GitLab terms that stage of remote is called &lt;a href=&quot;https://about.gitlab.com/company/culture/all-remote/phases-of-remote-adaptation/&quot;&gt;skeuomorph&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[arttuv.com RSS feed]]></title><description><![CDATA[On creating digital tools and human-computer interactions in them]]></description><link>https://www.arttuv.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 11 Apr 2022 16:21:02 GMT</lastBuildDate><item><title><![CDATA[Becoming fluent in remote work]]></title><description><![CDATA[I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional…]]></description><link>https://www.arttuv.com/writings/asynchronous-work</link><guid isPermaLink="false">https://www.arttuv.com/writings/asynchronous-work</guid><pubDate>Sun, 15 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional meetings with others - that’s easy and only thing you need to worry is getting lonely. Now I work with a team on things that require collaboration, so it’s much harder - you can’t just mimic the co-located way of working remotely. Or you can, but it’s suboptimal and leads into inefficiencies. By GitLab terms that stage of remote is called &lt;a href=&quot;https://about.gitlab.com/company/culture/all-remote/phases-of-remote-adaptation/&quot;&gt;skeuomorph&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I went through the &lt;a href=&quot;https://www.coursera.org/learn/remote-team-management&quot;&gt;GitLab Leading remote teams Coursera course&lt;/a&gt; and I feel it gave me some fresh ideas on how to approach working fully remotely.&lt;/p&gt;
 &lt;p&gt;Most of my work experience is from working in an traditional agile way; co-located, collaborating, discussing directly with the people who are needed to solve the task at hand, immediately when the need arises: Going through the difficulties with a whiteboard, having retrospectives with post-it notes, etc.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -39,6 +39,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -132,7 +133,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 64.1891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAG69LTo0P/EABoQAAICAwAAAAAAAAAAAAAAAAARAQIQEyH/2gAIAQEAAQUCiR8Zrq8f/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAwEBAAAAAAAAAAAAAAAAARAxIVH/2gAIAQEABj8COm9cD//EABoQAQADAAMAAAAAAAAAAAAAAAEAETFBYYH/2gAIAQEAAT8hW4k7oW4iaTa8gWueEqf/2gAMAwEAAgADAAAAEIAP/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARQf/aAAgBAwEBPxCDF//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQEBAAMAAwAAAAAAAAAAAAERACExUUFxkf/aAAgBAQABPxBr8gzp75cAlKGT5cQtH3qNbZab+5gUcXowTf/Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 64.1891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAG69LTo0P/EABoQAAICAwAAAAAAAAAAAAAAAAABAhEQEyH/2gAIAQEAAQUCTL5Zrinj/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAwEBAAAAAAAAAAAAAAAAARAxIVH/2gAIAQEABj8COm9cD//EABoQAQACAwEAAAAAAAAAAAAAAAEAETFBYYH/2gAIAQEAAT8ha4k6Qtpi4ma8QLdeEqf/2gAMAwEAAgADAAAAEIAP/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARQf/aAAgBAwEBPxCDF//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQEAAgMBAQAAAAAAAAAAAAERACExQVFhcf/aAAgBAQABPxBabL6e+XBEpQyduCLD9ygW7mm8+4yFGrwYE+5//9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -147,6 +148,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -182,7 +184,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 43.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwX/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHZEkbxBP/EABkQAAIDAQAAAAAAAAAAAAAAAAECACExEf/aAAgBAQABBQINXbEOtEz/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAWEAEBAQAAAAAAAAAAAAAAAAABEAD/2gAIAQEABj8CzSf/xAAZEAACAwEAAAAAAAAAAAAAAAAAAREhsTH/2gAIAQEAAT8hqSxRuGlHQyNz/9oADAMBAAIAAwAAABDrz//EABYRAAMAAAAAAAAAAAAAAAAAAAEQEf/aAAgBAwEBPxChf//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/EIf/xAAbEAEAAwADAQAAAAAAAAAAAAABABExIWFxof/aAAgBAQABPxBVgvW3mIPFlC9QbifezXjNfU//2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 43.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAGQAAAQUAAAAAAAAAAAAAAAAAAAECAwQF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB2VYDYIxP/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAIBITER/9oACAEBAAEFAoau2TrCZ//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAQEBAAAAAAAAAAAAAAAAAAEQAP/aAAgBAQAGPwLNJ//EABoQAAICAwAAAAAAAAAAAAAAAAABEbEhMUH/2gAIAQEAAT8h7GKOYTlSbiovP//aAAwDAQACAAMAAAAQiM//xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8QoX//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCH/8QAHBABAAEEAwAAAAAAAAAAAAAAAQARITFhcaGx/9oACAEBAAE/EFSgN7LuIPCpQXUOknbZlwz1T//Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -197,6 +199,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -234,29 +237,30 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ad20bac7e8d853099b731d0c5d123d8c/c06f5/pdf-longread-annotation.jpg&quot;
+    href=&quot;/static/b2b985c45161971fc0e2673e87541ca7/aaf7f/pdf-longread-annotation.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 98.64864864864865%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB1R08UsJpiFYP/8QAHBAAAgMBAAMAAAAAAAAAAAAAAQIAAxIRBBMU/9oACAEBAAEFAm8esz5EiUhBqzre51r1nIhHJsz/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREQ/9oACAEDAQE/Aay7/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAECMREDEiAjMv/aAAgBAQAGPwK5HuRhNjxplbWdl8P/xAAeEAEAAgIBBQAAAAAAAAAAAAABABEhMVFBYXGhsf/aAAgBAQABPyFBU3rUszaeZZyN5ZSZUOG9zABB5lddb6nYgZH2UcT/2gAMAwEAAgADAAAAEEAnPP/EABgRAAIDAAAAAAAAAAAAAAAAAAABEFFh/9oACAEDAQE/EFcPU//EABgRAAIDAAAAAAAAAAAAAAAAAAABEBEx/9oACAECAQE/EMKc/wD/xAAcEAEBAAIDAQEAAAAAAAAAAAABEQAxIUFRcbH/2gAIAQEAAT8QvRdSI5EcolCfplYs8gXzr5i6vkEx7hhL0YRO9mclCwJPjRM7dvuDQbrbNaKe3P/Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 98.64864864864865%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAABYlAAAWJQFJUiTwAAAETklEQVQ4y1WS2W8bdRDH9y/oE2pJK3hAoLYKbePEdo7mgAZqQlGCUIXUNHaPhFaIvhA1QCmNhIQaB15RWwQPUAloekR17uDE9vpK7Hg3ibveXfvX3WTt2I4dH/Ft7673h+xQAR+NRhqNRjPz1RdZefMz2wG1pUZjrVHbDlXCerDP/nq//fAV2xv99iNXLK9oLC+ft9T0WWv6rAf7rIfUtpfOOTuGKA+JfDF4XaXqbGyUNyqa5HVNyoYWeV1js6K1WdFWe+RE7eETx47K9uJ4bUP9cWXdMXmLsv3qwKdutxu58KXsxsP9N8f3n712uLX1naaTza1vdza2dTS3dZw6/V5Le4dMoZTJlTK5okGhaFAo6+WKk+3tfWo1QRDIM++SL2Qk/XqaXaFIyuFafTq7MPPX4pwB1Zusk/MLZvuyc9WNuSmapmiKoigSAEBVQcpiGUqwLEIoQQhhUYTJgljgy4nEbiwaj+4kookUF4owoXg4HApXCYVC6XTa5/MhBPHMZrO6XCskRXo8HqfTueRYAQwLcxmYSoq5bJEXSdqLra4FAoGtFySTycqwD/gsFjOKmpwOp3vNbTKiVosVRdFNv3913c1ubkIId6LRbDZbLpfFKpIkFYtFmqaRgD/gWHZazFaHawV16eftumnzE93igwXHlG7xAcMCCCGGYUaj0WazGQwGFEUJghBFsTJMgLUp9DHDUMlIOBxnuYgvHA9Ek+FYOhJJBsWKGBDHsfW1NQAAjuMEQVSk2dvMBoAZW9zafB7xkjucP74Tj8cS8VglJ2KJTDoDITSaTJOzc6jZQtN0JBLJ5ip4vV5E4EWBF3P5fDqXz+XzmUwmm610s9lsPp+XJEmC8Kfvbn3b3flWi1Lz4fvvdnRoPuqemZkJBoMISXrGHo7pJnT6Rb3JbDIYDZNTExOTusnJiXm9fnp2FjCs8dEvj66d65Yd/XHo6kD36SHNWZdzaZPjkN/u/1qvqFd1qXrVvf2fDGguaj7oPqPqUnWd6bp4ub/3vHpqaubu3XtfX/i4+bVXf749fEopP7Bv3/T0TDAYQsbHx3t6ei5dvvTNreHbI1qtVjv6/Q/a0dGREe3w8PDg54Mmo8nkdP8+9uTenTs4jn914+bQ9SGWWuc2GIRl2adTc38+1tmXrF4vSXsBw24w7AbLsA6HAzWhwa0glMqlUkkQhFQqBctiSoB/UMIaG0V2k8kMLz3f3t2OxwQhl8tVRarIVLUrhKIoCkLFG4VCsVAs5jOp7bRw3yMFcxDBMIyiaIr2OlcwhmFxHN/Y2GAYBgCwvb0NALDb7QCAPVcJggD/A+JyuQiC4LhNhmE4jgsGg1tbW36OwzDM4/FgGGaz2RwOh9/vd7lcJEkmE4lisVjiBZ4XEJ7nC4VC6QWFfwq+WGWv4nlekqRSqRSLxTiOKxQKEEJJkhBBEKof/ouUz8L/nydJEgAgEAhEIhEcx5eXl51V/gZ53n6UNjovEwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Annotating with the Pencil in PDFExpert&quot;
         title=&quot;PDFExpert and Pencil&quot;
-        src=&quot;/static/ad20bac7e8d853099b731d0c5d123d8c/1c72d/pdf-longread-annotation.jpg&quot;
-        srcset=&quot;/static/ad20bac7e8d853099b731d0c5d123d8c/a80bd/pdf-longread-annotation.jpg 148w,
-/static/ad20bac7e8d853099b731d0c5d123d8c/1c91a/pdf-longread-annotation.jpg 295w,
-/static/ad20bac7e8d853099b731d0c5d123d8c/1c72d/pdf-longread-annotation.jpg 590w,
-/static/ad20bac7e8d853099b731d0c5d123d8c/a8a14/pdf-longread-annotation.jpg 885w,
-/static/ad20bac7e8d853099b731d0c5d123d8c/fbd2c/pdf-longread-annotation.jpg 1180w,
-/static/ad20bac7e8d853099b731d0c5d123d8c/c06f5/pdf-longread-annotation.jpg 1668w&quot;
+        src=&quot;/static/b2b985c45161971fc0e2673e87541ca7/fcda8/pdf-longread-annotation.png&quot;
+        srcset=&quot;/static/b2b985c45161971fc0e2673e87541ca7/12f09/pdf-longread-annotation.png 148w,
+/static/b2b985c45161971fc0e2673e87541ca7/e4a3f/pdf-longread-annotation.png 295w,
+/static/b2b985c45161971fc0e2673e87541ca7/fcda8/pdf-longread-annotation.png 590w,
+/static/b2b985c45161971fc0e2673e87541ca7/efc66/pdf-longread-annotation.png 885w,
+/static/b2b985c45161971fc0e2673e87541ca7/c83ae/pdf-longread-annotation.png 1180w,
+/static/b2b985c45161971fc0e2673e87541ca7/aaf7f/pdf-longread-annotation.png 1668w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -283,7 +287,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 106.08108108108108%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAVABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFBv/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABn3eM7dJ0xMHTKnGsf//EABsQAAICAwEAAAAAAAAAAAAAAAECAAMEESEU/9oACAEBAAEFAvfYYNx2YHUA5eunfkfLsWNfY5//xAAXEQEBAQEAAAAAAAAAAAAAAAAAEQEx/9oACAEDAQE/AVb1X//EABURAQEAAAAAAAAAAAAAAAAAABBB/9oACAECAQE/ASH/xAAbEAEAAgIDAAAAAAAAAAAAAAABADERkQIQIf/aAAgBAQAGPwKuMpnhvohdQgGJlTU//8QAHBAAAwACAwEAAAAAAAAAAAAAAAERITFBYXHh/9oACAEBAAE/IV9WPhfWCzKQWti3m4FoX0fbGxbo34RZaFiprA//2gAMAwEAAgADAAAAELQ3Pf/EABcRAQEBAQAAAAAAAAAAAAAAAAABETH/2gAIAQMBAT8QrUcFp//EABcRAQEBAQAAAAAAAAAAAAAAAAABETH/2gAIAQIBAT8QYnTI/8QAHxABAQACAgEFAAAAAAAAAAAAAREAITFxQVFhkbHB/9oACAEBAAE/EBARrPX95GEO2NOe/f4MDHqlG7U/MdkJucecuTGND05fMHJF5MjU7vDc3q6NK0MgmCNGq5//2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 106.08108108108108%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAVABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFBv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABm3eN7eJ0yMHVGlDn/8QAGxAAAgMBAQEAAAAAAAAAAAAAAQIAAxEEFCH/2gAIAQEAAQUC99hg2OzA5APl6gOxyP12JH6LHP8A/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAEQETH/2gAIAQMBAT8BLHsf/8QAFREBAQAAAAAAAAAAAAAAAAAAEEH/2gAIAQIBAT8BIf/EABsQAAICAwEAAAAAAAAAAAAAAAABETECECGR/9oACAEBAAY/AqwKZxe6QroQkoJcH//EABwQAAICAwEBAAAAAAAAAAAAAAERADEhQXFhkf/aAAgBAQABPyEWvgYeD6qDKktI4uDObUGD6H0zFW4U0tkRgWrAn//aAAwDAQACAAMAAAAQ9DC+/8QAFxEBAQEBAAAAAAAAAAAAAAAAAAERIf/aAAgBAwEBPxCtRXLa/8QAFxEBAQEBAAAAAAAAAAAAAAAAAAERMf/aAAgBAgEBPxBidMj/xAAeEAEAAgIDAAMAAAAAAAAAAAABABEhMUFhcZGxwf/aAAgBAQABPxCiAW1WT7lMK26DfvfwQsurOy7T8jkBM1qXsxpgfGGlA2RdkqKc2eG4UqaXs4IDoRTDi3vuf//Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -297,6 +301,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -316,7 +321,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 111.48648648648648%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAWABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMFBgT/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAV1j9eRISUF0XPED/8QAHBAAAgMAAwEAAAAAAAAAAAAAAQIAAwQRISIj/9oACAEBAAEFAk1u9nEsJBpP3DS8+k6tbYqx9Qc//8QAFhEBAQEAAAAAAAAAAAAAAAAAEAEx/9oACAEDAQE/AS6f/8QAFREBAQAAAAAAAAAAAAAAAAAAEEH/2gAIAQIBAT8BIf/EAB0QAAIBBAMAAAAAAAAAAAAAAAABAhASIXERMlH/2gAIAQEABj8CjG1ZphIhui0Ql4zqzm1n/8QAHBABAQEAAgMBAAAAAAAAAAAAAREAIUEQMVFh/9oACAEBAAE/IXyYpRcX9wcRx3upPXykiRiTWv7jwKE5d//aAAwDAQACAAMAAAAQUCD/AP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxC2SEtv/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAEQETH/2gAIAQIBAT8QKEtR/8QAHBABAQADAQADAAAAAAAAAAAAAREAITFBUXHB/9oACAEBAAE/EDlTXC9e4wEieL3AZzSrdrlEAnN33Iai3GW5Rz7cSCkYDLN40ViuhrAJGgHyv7n/2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 111.48648648648648%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAWABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMFBgT/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAY7/AB2vIkBKC5LnjB//xAAdEAACAgEFAAAAAAAAAAAAAAABAgADBBESIzIz/9oACAEBAAEFAq8q17NJYWBp9g0v7IeVswLHyt5//8QAFhEBAQEAAAAAAAAAAAAAAAAAARAh/9oACAEDAQE/AYuz/8QAFREBAQAAAAAAAAAAAAAAAAAAEEH/2gAIAQIBAT8BIf/EAB4QAAECBwEAAAAAAAAAAAAAAAABAhAREiFRcaEy/9oACAEBAAY/AmtWm64haQzcE0MXCnjpOnp//8QAGhABAQEAAwEAAAAAAAAAAAAAAREAITFBUf/aAAgBAQABPyHidwwvyYGOJ7l5nXJ8yukiFeDMBTcMhMJn/9oADAMBAAIAAwAAABAA777/xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQMBAT8QtkCWt//EABcRAQEBAQAAAAAAAAAAAAAAAAABETH/2gAIAQIBAT8QYk6Y/8QAHBAAAgIDAQEAAAAAAAAAAAAAAREAIUFRYXGx/9oACAEBAAE/EClkMSQp3FgUTG4IhJijtmHNRjA7AqBXyGKOn0wSlVGhVx74DwV+QhEaBbJOuz//2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -330,6 +335,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -349,7 +355,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 143.24324324324326%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAdABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABxFV4wR41DbB6BpnG/8QAHBAAAgMBAAMAAAAAAAAAAAAAAgMAARETBBIz/9oACAEBAAEFAuZZ6FLG9QwBXfkVGnrEJElAsV0/7dWDOzZtlP/EABURAQEAAAAAAAAAAAAAAAAAABEg/9oACAEDAQE/AWP/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAeEAADAQAABwAAAAAAAAAAAAAAARECEBIiMjNBkf/aAAgBAQAGPwKxs7dfOGU9QXIns05BNnT7NEzuI8jK3Wf/xAAeEAEAAgIDAAMAAAAAAAAAAAABABEhMUFRYZGhsf/aAAgBAQABPyEYn3BZF3Pz4FGTx3FIpvGe4w2qmuIl5tWHjE2e5/Yi0j78MidEoLY8zG2f/9oADAMBAAIAAwAAABDswLz/xAAZEQABBQAAAAAAAAAAAAAAAAABABARITH/2gAIAQMBAT8QoMUl/wD/xAAXEQEBAQEAAAAAAAAAAAAAAAABEBFB/9oACAECAQE/EB5MJ//EAB8QAQACAgEFAQAAAAAAAAAAAAEAESFBMVFhcaHRsf/aAAgBAQABPxCxlNW/QThI3Xyh4w6aHkmOOQmWXSNINlx42XZuN1zW6wwwYlxWPd9hJcK2l0dien/CVQNwAxcvEOgUS+qy03P/2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 143.24324324324326%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAdABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABxFVwwh41DbB6BxmG/8QAHBAAAgIDAQEAAAAAAAAAAAAAAgMAAQQRExIz/9oACAEBAAEFAuZa8FLG9oYArvIqNPbEpElAsVzI+/Vgzs2bsp//xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAwEBPwFj/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHhAAAgIBBQEAAAAAAAAAAAAAAAECERIQIjIzQZH/2gAIAQEABj8CumzjL5pFOVCwTmN40Js2+kiozpHYy5O2f//EAB8QAAICAgIDAQAAAAAAAAAAAAABESExQVFhkaGxwf/aAAgBAQABPyGZV7yUob3fniMLXTyNIs5q+RxZVDjQ6eSinqjP7f0QvAez+CsTgggUsd6GWf/aAAwDAQACAAMAAAAQ/MiM/8QAGREAAQUAAAAAAAAAAAAAAAAAAQAQESEx/9oACAEDAQE/EKDFJf8A/8QAFxEBAQEBAAAAAAAAAAAAAAAAARARQf/aAAgBAgEBPxAeTCf/xAAfEAEAAgIBBQEAAAAAAAAAAAABABEhQTFRYXGh0bH/2gAIAQEAAT8QLIp5foIJwN18o+FJpoeSDHKhOp0jSCpceNl2bj/VdvwYYUy1Fj3fYTYlaC6OxPRfiVRNwBi5eIGgol1Rlpyz/9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -365,6 +371,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -384,7 +391,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 143.24324324324326%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAdABQDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAABAACAwUG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAT5pRLxJkj2ee2VR4//EABsQAQADAQADAAAAAAAAAAAAAAIAAQMEEhMz/9oACAEBAAEFAhztm+bWIorLYgVq9I6tPnBvHxozp+9baGe/WJWr/8QAFREBAQAAAAAAAAAAAAAAAAAAESD/2gAIAQMBAT8BY//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EAB4QAAICAgIDAAAAAAAAAAAAAAABAhESMTKhISNB/9oACAEBAAY/Askuzj2Ysimmz0x1uxuTSl9FaPCJlRlSOZb2f//EACAQAAICAgEFAQAAAAAAAAAAAAABESExYUFxgaGxwfH/2gAIAQEAAT8hRUHPQfjR6oa2Mil3xkSp5QTutTcEIzd+xJYpPK+CpahBzuXZDG+Wyz//2gAMAwEAAgADAAAAEKz7AP/EABgRAQEAAwAAAAAAAAAAAAAAABEBABCh/9oACAEDAQE/EFInMd//xAAXEQEBAQEAAAAAAAAAAAAAAAARAQAQ/9oACAECAQE/EJYjnv8A/8QAHhABAQACAgIDAAAAAAAAAAAAAREAITFBUbFxweH/2gAIAQEAAT8QGmpNhawMEh1iDtcSH1j9wKJorm4bkELzk1ImRNIRUIWPjN1O3flmiFNwPtxJJTT0xyJcAMuSFY6Pyzkr+Euf/9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 143.24324324324326%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAdABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAABAACBQb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABPtKJeJNkevz+6o8f/8QAGxABAAMBAQEBAAAAAAAAAAAAAgABAwQTEjP/2gAIAQEAAQUCPO0b5tYigstiBWz0jq0+cHx+aM6f3rbQz31iVq//xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAwEBPwFj/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHhAAAgICAgMAAAAAAAAAAAAAAAECERIxMqEhI0H/2gAIAQEABj8CyS7OPZiyKabPTHW7G5tKX0Vo8IkVGVI5ly2f/8QAIBAAAgIBAwUAAAAAAAAAAAAAAAERMSFBUWFxgbHw8f/aAAgBAQABPyFXQcj40eMDXIyKb6WIU7QY3GheYGoZvPkSVUnv6C5cUg13LshndLWz/9oADAMBAAIAAwAAABCsMTD/xAAYEQEBAAMAAAAAAAAAAAAAAAARAQAQof/aAAgBAwEBPxBSJzHf/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAEP/aAAgBAgEBPxASy6vf/8QAHhABAAICAgMBAAAAAAAAAAAAAQARITFBUXGRseH/2gAIAQEAAT8QP0p2BwwFCQ4iRvLKPF8ReoFpWyhOQQvrZiqSDYaKUFGnqdnuPlLINmaDPtiStTJ8SohaBalQrBo/KdbXlXP/2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -400,6 +407,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -465,29 +473,30 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/367e1942ced5633375226610ab798961/32840/feed-aggregator-features.jpg&quot;
+    href=&quot;/static/aab63c504c7cc0dc9f44bdffc1b7f44d/896c7/feed-aggregator-features.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 43.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAQADBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe0bITH/xAAVEAEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAQABBQJr/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFRABAQAAAAAAAAAAAAAAAAAAASD/2gAIAQEABj8Ca//EABoQAQACAwEAAAAAAAAAAAAAAAEAESAhcZH/2gAIAQEAAT8hVfUtHS+wbMP/2gAMAwEAAgADAAAAEOAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGhABAQACAwAAAAAAAAAAAAAAAREAQSAhMf/aAAgBAQABPxBJjQBB8MRdBU7ZJW3dJw//2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 43.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABRNAAAUTQGUyo0vAAABc0lEQVQoz2WRS2/bMAyA8/9/x867Dj20l6YHb4PbpJGfiiXZjmVHfiheZFmSLQ8ximVbeSAIkB9IfNwsn0IpNQyDlHKaJqXU/21r/5SbZVl+SRVmtBPSaG2tZYwBABBCCUIAAAghISSKo77vV/ZfOG/7ry9uVHUXzimlnHOUJEVRpIRgjOMo9vceDOKC0hRjdsqXeb7Dbky+OfvtPrqKgZ3PKCVilPNizTzd7mL968OPc0LrtkFxRBNop+kOZ6xz/GOYV9baw/v7k/Pis2ybHADFfX9hZb17dHnewCNMoyAPwLLYO7yD6YMbHLJSysEDnuPv3ujxGe6DkoyjbKv27cnFHiJpimHcFKdxGIzWH/Cp4YBQLmTbNASTsmXt9eZmXt00VfP67Gqpr0Icw3D33Qndn8gDH/DWR18enbioL7yz1gohcIKKU5Fl2aotTeKkKqu6rruum1dbds2bT1+8bdPGyPEWSilt9DzPWmullDHm7+HfhA307HO84m8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Feed aggregator essential features&quot;
         title=&quot;Feed aggregator essential features&quot;
-        src=&quot;/static/367e1942ced5633375226610ab798961/1c72d/feed-aggregator-features.jpg&quot;
-        srcset=&quot;/static/367e1942ced5633375226610ab798961/a80bd/feed-aggregator-features.jpg 148w,
-/static/367e1942ced5633375226610ab798961/1c91a/feed-aggregator-features.jpg 295w,
-/static/367e1942ced5633375226610ab798961/1c72d/feed-aggregator-features.jpg 590w,
-/static/367e1942ced5633375226610ab798961/a8a14/feed-aggregator-features.jpg 885w,
-/static/367e1942ced5633375226610ab798961/fbd2c/feed-aggregator-features.jpg 1180w,
-/static/367e1942ced5633375226610ab798961/32840/feed-aggregator-features.jpg 1938w&quot;
+        src=&quot;/static/aab63c504c7cc0dc9f44bdffc1b7f44d/fcda8/feed-aggregator-features.png&quot;
+        srcset=&quot;/static/aab63c504c7cc0dc9f44bdffc1b7f44d/12f09/feed-aggregator-features.png 148w,
+/static/aab63c504c7cc0dc9f44bdffc1b7f44d/e4a3f/feed-aggregator-features.png 295w,
+/static/aab63c504c7cc0dc9f44bdffc1b7f44d/fcda8/feed-aggregator-features.png 590w,
+/static/aab63c504c7cc0dc9f44bdffc1b7f44d/efc66/feed-aggregator-features.png 885w,
+/static/aab63c504c7cc0dc9f44bdffc1b7f44d/c83ae/feed-aggregator-features.png 1180w,
+/static/aab63c504c7cc0dc9f44bdffc1b7f44d/896c7/feed-aggregator-features.png 1938w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -514,7 +523,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdxIsD//xAAXEAADAQAAAAAAAAAAAAAAAAAAEBES/9oACAEBAAEFAqaUIv/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABoQAAMAAwEAAAAAAAAAAAAAAAABERAhYfD/2gAIAQEAAT8hct8PIIneKUP/2gAMAwEAAgADAAAAEKAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxABAQADAAMAAAAAAAAAAAAAAREAITFBcYH/2gAIAQEAAT8QEaeHebxhBCJasVB39xou3Nu7ZN4AgT1n/9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdxIsD//xAAXEAADAQAAAAAAAAAAAAAAAAAAEBES/9oACAEBAAEFAqaUIv/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABoQAAMAAwEAAAAAAAAAAAAAAAABERAhYfD/2gAIAQEAAT8hct8PIIneKUP/2gAMAwEAAgADAAAAEKMP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxABAQADAAMAAAAAAAAAAAAAAREAITFBcbH/2gAIAQEAAT8QEaeHebxhBCJasVB+40Xbm3dsm8AQA9Z//9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -530,6 +539,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -654,6 +664,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -725,6 +736,7 @@
         sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -774,7 +786,8 @@
 &lt;p&gt;&lt;a href=&quot;https://ec.europa.eu/futurium/en/ai-alliance-consultation&quot;&gt;Ethics Guidelines for Trustworthy AI&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/24611446-our-robots-ourselves&quot;&gt;Our Robots, Ourselves&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1080/00140139.2017.1278796&quot;&gt;Stanton, N. A., Salmon, P. M., Walker, G. H., Salas, E., &amp;#x26; Hancock, P. A. (2017). State-of-science: situation awareness in individuals, teams and systems. Ergonomics, 60(4), 449–466.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.iconfinder.com/icons/3957659/allocation_human_online_outsource_outsourcing_icon&quot;&gt;Image is from Iconfinder (Flatart)&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Notetaking]]></title><description><![CDATA[I like taking handwritten notes - you can almost always bring your notebook with you, and it doesn't feel as disrespectful to not down some…]]></description><link>https://www.arttuv.com/notetaking</link><guid isPermaLink="false">https://www.arttuv.com/notetaking</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I like taking handwritten notes - you can almost always bring your notebook with you, and it doesn&apos;t feel as disrespectful to not down some words by hand compared to using computer for the same task.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.iconfinder.com/icons/3957659/allocation_human_online_outsource_outsourcing_icon&quot;&gt;Image is from Iconfinder (Flatart)&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Arttu Viljakainen]]></title><description><![CDATA[I'm a software developer working as a consultant, and a PhD researcher in Tampere University focusing to studying how advanced automation…]]></description><link>https://www.arttuv.com/author</link><guid isPermaLink="false">https://www.arttuv.com/author</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m a software developer working as a consultant, and a PhD researcher in Tampere University focusing to studying how advanced automation and artificial intelligence should be incorporated to digital tools to empower human users.&lt;/p&gt;
+&lt;p&gt;You can find me on &lt;a href=&quot;https://twitter.com/arttuv&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://www.linkedin.com/in/arttu-viljakainen/&quot;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Notetaking]]></title><description><![CDATA[I like taking handwritten notes - you can almost always bring your notebook with you, and it doesn't feel as disrespectful to not down some…]]></description><link>https://www.arttuv.com/notetaking</link><guid isPermaLink="false">https://www.arttuv.com/notetaking</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I like taking handwritten notes - you can almost always bring your notebook with you, and it doesn&apos;t feel as disrespectful to not down some words by hand compared to using computer for the same task.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -789,7 +802,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAAB10VRdChP/8QAGxAAAwACAwAAAAAAAAAAAAAAAQIDAAQSISL/2gAIAQEAAQUC1+5cCcQeIWWQGyuLZAP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAAIf/aAAgBAgEBPwFH/8QAHBAAAgEFAQAAAAAAAAAAAAAAAAERISIxMqHB/9oACAEBAAY/ArOmRelZZqyD/8QAGRABAAMBAQAAAAAAAAAAAAAAAQARIUGR/9oACAEBAAE/IRcYrWmspt3mwaMVgWHk5YukqXmcn//aAAwDAQACAAMAAAAQfz//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EGKzT//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQIBAT8QJNcv/8QAHBABAQACAwEBAAAAAAAAAAAAAREAITFRYXHw/9oACAEBAAE/EBVdm0WW3zDe9Onr7hqACiGzEcNUA2/ODGAurOMLlH5ps5z/2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAAB10VRdChP/8QAGxAAAwACAwAAAAAAAAAAAAAAAQIDAAQSISL/2gAIAQEAAQUC1+5cCcQeIWWQGyuLZAP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAAIf/aAAgBAgEBPwFH/8QAHBAAAgAHAAAAAAAAAAAAAAAAAAERIjEyQaHB/9oACAEBAAY/ApNlRdMstZA//8QAGhABAAMBAQEAAAAAAAAAAAAAAQARIUExkf/aAAgBAQABPyEZ4rWmspt3mx6MVhLD5OWLpKl5nJ//2gAMAwEAAgADAAAAEH8//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERIf/aAAgBAwEBPxAVmn//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/EBqsP//EABwQAQEAAgMBAQAAAAAAAAAAAAERACExUWFx8P/aAAgBAQABPxAUbs2iy2+Yb3pOHr7hoEBRDZiOKqAbfnBjAXVnGFyj802c5//Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -805,6 +818,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -827,7 +841,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADBf/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAFREhQ7FhRf/8QAGhAAAgMBAQAAAAAAAAAAAAAAAgMAARIRFP/aAAgBAQABBQJ1YAWXczUa4WLFfC9AT//EABcRAAMBAAAAAAAAAAAAAAAAAAEQEUH/2gAIAQMBAT8BNxf/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwEn/8QAGxAAAgMAAwAAAAAAAAAAAAAAAAECESEQMaH/2gAIAQEABj8CdYxbw4qy3Lw6kf/EABwQAQACAgMBAAAAAAAAAAAAAAEAETFBUXGR4f/aAAgBAQABPyE3UbE3gvM7PZViXaYg3VK19QApbyf/2gAMAwEAAgADAAAAEIwP/8QAFhEAAwAAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/ELBP/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARMf/aAAgBAgEBPxCRq//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQVFxobH/2gAIAQEAAT8QUmgGHN6iYSiqpWzP2ZWjbtLuvKJyu9xkpIQx7x5QugDdZe5//9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADBf/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAFREhQ7FhRf/8QAGhAAAgMBAQAAAAAAAAAAAAAAAgMAARIRFP/aAAgBAQABBQJw4AWXczUa4WLFfC9AT//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/AWf/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwEn/8QAGxAAAgMAAwAAAAAAAAAAAAAAAAECESEQMaH/2gAIAQEABj8CdYxbw4qy3Lw6kf/EAB0QAQACAgIDAAAAAAAAAAAAAAEAETFBIZFRceH/2gAIAQEAAT8hJVGxN4L5ns7lWJa5rEK6pWvqAFLdT//aAAwDAQACAAMAAAAQjA//xAAXEQEAAwAAAAAAAAAAAAAAAAABEBEh/9oACAEDAQE/ELpkf//EABcRAAMBAAAAAAAAAAAAAAAAAAEQETH/2gAIAQIBAT8Qkav/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUFRcaGx/9oACAEBAAE/EEZoBhzeo2EoqqVsz9mVo27S6q6McrvcVKSEre8eUPoA3WXuf//Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -843,6 +857,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -866,7 +881,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 133.1081081081081%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAUG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAWNHowUFlSjSTYOeJ//EAB0QAAICAQUAAAAAAAAAAAAAAAECAAMEEBETISP/2gAIAQEAAQUCFjicl0R90q6cSoeYyArnLWVZCisx9P/EABYRAQEBAAAAAAAAAAAAAAAAABEQAf/aAAgBAwEBPwGYjP/EABYRAQEBAAAAAAAAAAAAAAAAABARIf/aAAgBAgEBPwEuw//EACEQAAECBAcAAAAAAAAAAAAAAAEAAhEhMlEDEBIgYZGh/9oACAEBAAY/AoNZLlU+IErEFsgnagYmypKEndbP/8QAHBAAAgMBAAMAAAAAAAAAAAAAAAERITFhcZGx/9oACAEBAAE/IbocJaFFZQ0tqxL1tMne4ZqPRMzz9Gq1DrhTanTnRZue86FUYh7Hp//aAAwDAQACAAMAAAAQEwiO/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAx/9oACAEDAQE/EI0U7P/EABgRAQEBAQEAAAAAAAAAAAAAAAEAESEx/9oACAECAQE/EAuyNA8sv//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVHBYZH/2gAIAQEAAT8QOUQlNcF9/ZnPwp7E2pwcMEUVHuv5KuoUKCIggZbXfY8jritgMU5yMahdgUY/FkchlO7gEmSnUSpw/Jswfk//2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 133.1081081081081%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAUG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAWNHowUFlSjSTYOeJ//EAB0QAAICAQUAAAAAAAAAAAAAAAECAAMEEBETISL/2gAIAQEAAQUCFlgnJdEfdKunEqHgZAVjlrKchRWY+n//xAAXEQEAAwAAAAAAAAAAAAAAAAAQAREx/9oACAEDAQE/ASMs/8QAFhEBAQEAAAAAAAAAAAAAAAAAEBEh/9oACAECAQE/AS7D/8QAIhAAAQIEBwEAAAAAAAAAAAAAAQACESEyUQMQEiAxYZGh/9oACAEBAAY/AoNZLtU/ECeViCxzdqBibKkoSd5s/8QAHBABAAMBAQADAAAAAAAAAAAAAQAhMRFhUZGx/9oACAEBAAE/IbgeBZDlcONLFwXKgbuTNc+p0L6/sd1Ka8lNBR7sEnteeoT4juOz/9oADAMBAAIAAwAAABATCI7/xAAXEQEBAQEAAAAAAAAAAAAAAAABEBEx/9oACAEDAQE/EJtCez//xAAYEQEBAQEBAAAAAAAAAAAAAAABABEhMf/aAAgBAgEBPxALsjQPLL//xAAeEAEAAwACAgMAAAAAAAAAAAABABEhMUFhkVFxwf/aAAgBAQABPxAxRDiXD7mx6afsblYA6bqEOqBN6LKPEKFBEr4N5F+RLfRGBlO9GNeTgKMWXSnQ1PN+YYaG7xEqdPiLWHqf/9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -882,6 +897,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -898,8 +914,7 @@
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.goodnotes.com/&quot;&gt;GoodNotes&lt;/a&gt;&lt;/strong&gt; has more features in this sense, but to me its UI feels a bit too crowded and I haven&apos;t used it that much.&lt;/p&gt;
 &lt;p&gt;I&apos;m been using &lt;a href=&quot;https://bear.app/&quot;&gt;Bear&lt;/a&gt; a bit for keeping typed notes, and it also has very limited capability for hand written notes, but it definitely is not meant to be used that way. Bear is beautiful and simple, so if you need typed notes, it&apos;s an excellent option. Built in &lt;a href=&quot;https://en.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt; support and a tagging system.&lt;/p&gt;
 &lt;blockquote&gt;...nothing in the world of digital notetaking beats the feel of Procreate on iPad with Apple Pencil&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://procreate.art/&quot;&gt;Procreate&lt;/a&gt; is an awesome piece of software for art and a really good candidate for &lt;strong&gt;sketchnoting&lt;/strong&gt; as well. It has a good selection of calligraphy pens and writing and drawing always feels a pleasure. As a painting software it doesn&apos;t support multiple pages, unless you count the layers, so recommending it for notetaking is a bit risky. Still, nothing in the world of digital notetaking beats the feel of Procreate on iPad with Apple Pencil. I try to move towards sketchnoting and Procreate has been excellent for that.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Arttu Viljakainen]]></title><description><![CDATA[I'm a software developer working as a consultant, and a PhD researcher in Tampere University focusing to studying how advanced automation…]]></description><link>https://www.arttuv.com/author</link><guid isPermaLink="false">https://www.arttuv.com/author</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m a software developer working as a consultant, and a PhD researcher in Tampere University focusing to studying how advanced automation and artificial intelligence should be incorporated to digital tools to empower human users.&lt;/p&gt;
-&lt;p&gt;You can find me on &lt;a href=&quot;https://twitter.com/arttuv&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://www.linkedin.com/in/arttu-viljakainen/&quot;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The difficulty of saying I don't know]]></title><description><![CDATA[Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the…]]></description><link>https://www.arttuv.com/writings/fear</link><guid isPermaLink="false">https://www.arttuv.com/writings/fear</guid><pubDate>Sun, 12 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven&apos;t mastered yet. That can be a lot to bear and a source of anxiety. Kati Vilkki wrote &lt;a href=&quot;https://www.reaktor.com/blog/facing-up-to-a-culture-of-fear/&quot;&gt;a good blog post on culture of fear&lt;/a&gt;, which inspired me to think about the subject from my perspective, on team and single developer level.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://procreate.art/&quot;&gt;Procreate&lt;/a&gt; is an awesome piece of software for art and a really good candidate for &lt;strong&gt;sketchnoting&lt;/strong&gt; as well. It has a good selection of calligraphy pens and writing and drawing always feels a pleasure. As a painting software it doesn&apos;t support multiple pages, unless you count the layers, so recommending it for notetaking is a bit risky. Still, nothing in the world of digital notetaking beats the feel of Procreate on iPad with Apple Pencil. I try to move towards sketchnoting and Procreate has been excellent for that.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The difficulty of saying I don't know]]></title><description><![CDATA[Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the…]]></description><link>https://www.arttuv.com/writings/fear</link><guid isPermaLink="false">https://www.arttuv.com/writings/fear</guid><pubDate>Sun, 12 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven&apos;t mastered yet. That can be a lot to bear and a source of anxiety. Kati Vilkki wrote &lt;a href=&quot;https://www.reaktor.com/blog/facing-up-to-a-culture-of-fear/&quot;&gt;a good blog post on culture of fear&lt;/a&gt;, which inspired me to think about the subject from my perspective, on team and single developer level.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -914,7 +929,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 81.75675675675677%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAECBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHXFEtDD//EABsQAAIBBQAAAAAAAAAAAAAAAAABAgMQERIx/9oACAEBAAEFAqk5GzFxpoxK3//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABoQAAEFAQAAAAAAAAAAAAAAABAAAQIRMUH/2gAIAQEABj8CqBfqwf/EABkQAQADAQEAAAAAAAAAAAAAAAEAETEhgf/aAAgBAQABPyEDQKbcLy/Y1Cy5Bq52xDJ//9oADAMBAAIAAwAAABBgz//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQVGRscH/2gAIAQEAAT8QBoI6s8ffEpVLrQxcxMrGUUoAbviJhczSg37goHRP/9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 81.75675675675677%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAECBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHXFAtjD//EABsQAAICAwEAAAAAAAAAAAAAAAACAREDEBIx/9oACAEBAAEFAsjsdSR41wU2v//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABoQAAEFAQAAAAAAAAAAAAAAABAAAQIRMUH/2gAIAQEABj8CqBfqwf/EABkQAQEBAQEBAAAAAAAAAAAAAAERADEhgf/aAAgBAQABPyEDAU7cXL9zULhVOrN7ac3/2gAMAwEAAgADAAAAEHAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHBABAAICAwEAAAAAAAAAAAAAAQARIUExUZHB/9oACAEBAAE/EAaCOjOvvkoVLDgYucxLFQsUBu9RAKMtKDcFA6J//9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -930,6 +945,7 @@
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -952,41 +968,7 @@
 &lt;p&gt;By admitting that you need help you are creating an example for others in the team as well. As you probably know, psychological safety is a common feature in high performing teams (&lt;a href=&quot;https://rework.withgoogle.com/blog/five-keys-to-a-successful-google-team/&quot;&gt;according to studies made at Google&lt;/a&gt;). By showing that it’s ok to show weakness, you help to build a safe environment and it will help your team to grow to be a better environment for everyone.&lt;/p&gt;
 &lt;h2&gt;The Team is the Smallest Entity&lt;/h2&gt;
 &lt;p&gt;The team should usually be the smallest acting entity in building software. So what could a team do to tackle the fear? David J. Anderson has listed some team practices in his &lt;a href=&quot;https://www.goodreads.com/book/show/8086552-kanban&quot;&gt;Kanban book&lt;/a&gt;, which can help to make it easier to ask for help and collaborate.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/b536e/team-kanban-dots.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 70.94594594594594%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHbVlLSQ//EABoQAAICAwAAAAAAAAAAAAAAAAABAhEQEiH/2gAIAQEAAQUCdnREo2aY/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAgMAAAAAAAAAAAAAAAAAABABITH/2gAIAQEABj8CNcWv/8QAGhAAAwADAQAAAAAAAAAAAAAAAAERITFRQf/aAAgBAQABPyFqiZfaa4NUdeHsrYJRH//aAAwDAQACAAMAAAAQQA//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAEBAQABBQAAAAAAAAAAAAABEQBBITFhcYH/2gAIAQEAAT8QuxeZeZkKxCeCz7mFW6dKAgvcwQKRb6TqY5G//9k=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Team working together&quot;
-        title=&quot;Team working together&quot;
-        src=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/1c72d/team-kanban-dots.jpg&quot;
-        srcset=&quot;/static/5c4ae38c99b2d4e63f7dd2038d845193/a80bd/team-kanban-dots.jpg 148w,
-/static/5c4ae38c99b2d4e63f7dd2038d845193/1c91a/team-kanban-dots.jpg 295w,
-/static/5c4ae38c99b2d4e63f7dd2038d845193/1c72d/team-kanban-dots.jpg 590w,
-/static/5c4ae38c99b2d4e63f7dd2038d845193/a8a14/team-kanban-dots.jpg 885w,
-/static/5c4ae38c99b2d4e63f7dd2038d845193/fbd2c/team-kanban-dots.jpg 1180w,
-/static/5c4ae38c99b2d4e63f7dd2038d845193/b536e/team-kanban-dots.jpg 1454w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Team working together&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;team-kanban-dots.jpeg&quot; alt=&quot;Team working together&quot; title=&quot;Team working together&quot;&gt;&lt;/p&gt;
 &lt;p&gt;One option is to &lt;strong&gt;agree on a practice that nobody in a team is allowed to wrestle on a blocker problem more than 30 minutes alone&lt;/strong&gt;. This can make it clear for everyone that asking for help is seen as a good thing and makes the team perform more efficiently. Everybody knows that you don’t only have permission to ask for help, it’s expected of you.&lt;/p&gt;
 &lt;p&gt;Another practice is to &lt;strong&gt;track how long a task stays in the same phase&lt;/strong&gt; (column, when talking about Kanban). The easiest way to do this is to add a dot to it in each daily. This helps the team to focus on tasks that seem to be blocked and proactively offer for help. I must emphasize that this kind of practice should be agreed on as a team - otherwise this can also add the wrong kind of pressure for the team members.&lt;/p&gt;
 &lt;p&gt;Each policy should be discussed and agreed as a team so that everybody knows what is the change you intend to achieve.&lt;/p&gt;
@@ -995,25 +977,10 @@
 &lt;h2&gt;Vulnerability&lt;/h2&gt;
 &lt;p&gt;The best way to start is leading by example: Make it acceptable to ask for help and admit you don’t know how to proceed. Show others you are not afraid to be vulnerable and maybe they will follow.&lt;/p&gt;
 &lt;p&gt;Saturday night 12. April 2020. ”The quarantine stories”.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Platformer (game) UX]]></title><description><![CDATA[Interactions in games are fascinating because usually, people have a gut feeling when the game feels right, but it’s not an easy task to…]]></description><link>https://www.arttuv.com/writings/ux-of-a-platform-game</link><guid isPermaLink="false">https://www.arttuv.com/writings/ux-of-a-platform-game</guid><pubDate>Sun, 30 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Interactions in games are fascinating because usually, people have a gut feeling when the game feels right, but it’s not an easy task to replicate the experience. Controls and how the character follows players&apos; interactions are vital in platform games – winning or losing can be determined by milliseconds of differences in the timing of button presses. The game mechanics and difficulty should match the gamers&apos; understanding of a fair and challenging game.&lt;/p&gt;
-&lt;p&gt;
-        &lt;div class=&quot;embedVideo-container&quot;&gt;
-            &lt;iframe
-              title=&quot;&quot;
-              width=&quot;300&quot;
-              height=&quot;170&quot;
-              src=&quot;https://www.youtube-nocookie.com/embed/0MV0MXj0Y8s?rel=0&quot;
-              class=&quot;embedVideo-iframe&quot;
-              style=&quot;border:0&quot;
-              
-              loading=&quot;eager&quot;
-              allowfullscreen
-	      sandbox=&quot;allow-same-origin allow-scripts allow-popups&quot;
-            &gt;&lt;/iframe&gt;
-        &lt;/div&gt;
-&lt;a href=&quot;https://youtu.be/0MV0MXj0Y8s&quot;&gt;YouTube video of a platformer prototype from 2013&lt;/a&gt;
-At this point, I had already started porting the game to Android, which made it much slower. Not necessarily because there wouldn&apos;t be enough resources, but because controls touch screen is so much slower to use.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/0MV0MXj0Y8s&quot;&gt;YouTube video of a platformer prototype from 2013&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;At this point, I had already started porting the game to Android, which made it much slower. Not necessarily because there wouldn&apos;t be enough resources, but because controls touch screen is so much slower to use.&lt;/p&gt;
 &lt;p&gt;The platform game I was working on was a 2D one with procedurally generated maps. We never finished it – life got on the way. The world consisted of equally sized squares that formed the caves and obstacles. For some reason, I decided to make the character to be equally sized square. The idea was that the maps would be procedurally generated and somehow “endless”, and that the player could build new blocks and destroy old ones. Minecraft style.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;Loikka-build-and-dig.gif&quot;&gt;Gif of building and digging (Android version)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../images/Loikka-build-and-dig.gif&quot;&gt;Gif of building and digging (Android version)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The gif is from the Android version, but originally I designed the game to be played using a keyboard. Physical keys enable much more precise controls than the touch screen and I enjoyed optimizing the user experience of the game.&lt;/p&gt;
 &lt;h2&gt;Elements of platformer UX&lt;/h2&gt;
 &lt;p&gt;Areas I found important in the UX of a platform game are&lt;/p&gt;
@@ -1057,6 +1024,7 @@ At this point, I had already started porting the game to Android, which made it 
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1107,6 +1075,7 @@ At this point, I had already started porting the game to Android, which made it 
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1178,6 +1147,7 @@ Stanton et al. system level DSA model&lt;/p&gt;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1241,6 +1211,7 @@ Stanton et al. system level DSA model&lt;/p&gt;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1249,40 +1220,7 @@ Stanton et al. system level DSA model&lt;/p&gt;
 &lt;p&gt;DSA is an interesting approach to complex systems because it concentrates on deep understanding of the tasks in a system and on what information each agent needs in any specific time. Being able to identify these requirements would be highly beneficial for systems designers. It might also help to reduce the mental workload relating to perception and comprehension of the data in the system. Considering DSA, it may not be optimal to strain each operator in the system with all the available data.&lt;/p&gt;
 &lt;p&gt;In addition, it is beneficial to be able to study the system as a whole – concentrating on single operators gives a limited view on the situation and may fail to reveal problems on systems level.&lt;/p&gt;
 &lt;p&gt;DSA can also be scaled down to individual level, as it is based on a perceptual cycle model by Neisser (Neisser 1976).&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/2bef9/Perceptual-Cycle_BW_Black-1024x907.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 88.51351351351352%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8klEQVQ4y5WT23KCQBBE8YaiCIgogqJ4Q+JDUiWV/P+fTepMXILkUsnDFuzubE9P94xlWZa012g00jUcDvU7Ho/FcZz6bDKZSK/Xk+/eWt8d8pjle568vr1JVVVyu93k+eVFBrYtvu9Lt9v9OyALVuabpqksl0vpdDpi2/Zv7H4G7Pf7slqtFCyOY/3fbDYym80U/F8M0elwOOji8fl8lt1uJ0mSyOl00v8/A1JWWZaqE3sMQE/P95U1Z+v1Wtn+CrhYLCSKIsnzXP8N+GAwUEBYNx8ej0eNX8ax+EHwFRChMYDy2lmn0+kXQNd1NTkJW+V/Bs3nczXAtA4MSMQ5plA+phiA/X6vgFTyAAgzNGOZcglkj8vsAWEPW/MYc0xsDUgpnudpdtgRxJmZDMQnIW4naarGmMa/Xq8aQxKNdxyx2ECZhS60Bdrk+b4eMVhOPU8TUTL32+32wWkSKXuC2HBZPpVyqyplQ+lMRdsgklJilm21fcIwrBneJ+jDxXNRSFEUWvLlcqnBDPum8BiUZZmyxRikaHTBfcyS5MNJ11UtAafkNkOcN9qZs1bc57jxhRls+lpWplqZyYA9SbUz7iAAmwl6AASEtiAboATRKmg2jyKZhWHNKggC1Zk7tPtxlptd39SOxjb9xz2LcxK0mlreAUv6kAQ4SXCnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Perceptual Cycle model by Neisser, from Salmon et al (2018)&quot;
-        title=&quot;Perceptual Cycle model by Neisser, from Salmon et al (2018)&quot;
-        src=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/fcda8/Perceptual-Cycle_BW_Black-1024x907.png&quot;
-        srcset=&quot;/static/7ff24e004c90cb6d31fc44b91bda32e6/12f09/Perceptual-Cycle_BW_Black-1024x907.png 148w,
-/static/7ff24e004c90cb6d31fc44b91bda32e6/e4a3f/Perceptual-Cycle_BW_Black-1024x907.png 295w,
-/static/7ff24e004c90cb6d31fc44b91bda32e6/fcda8/Perceptual-Cycle_BW_Black-1024x907.png 590w,
-/static/7ff24e004c90cb6d31fc44b91bda32e6/efc66/Perceptual-Cycle_BW_Black-1024x907.png 885w,
-/static/7ff24e004c90cb6d31fc44b91bda32e6/2bef9/Perceptual-Cycle_BW_Black-1024x907.png 1024w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Perceptual Cycle model by Neisser, from Salmon et al (2018)&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;Perceptual-Cycle_BW_Black-1024x907.png&quot; alt=&quot;Perceptual Cycle model by Neisser, from Salmon et al (2018)&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Perceptual cycle model describes how human behavior is schema-driven. Diagram above shows how the schemata directs perception and actions, which in turn sample and change the world, which continually modifies the schemata (Salmon et al 2018).&lt;/p&gt;
 &lt;p&gt;I’ve been working with complex, distributed systems during my career and DSA is an interesting model for me. I like how it is based on schema theory and perceptual cycle model, and that it acknowledges that SA will hardly ever be exactly the same in two agents in the system, and that agents holding SA may or may not be humans.&lt;/p&gt;
 &lt;p&gt;The notion that also non-human agents hold SA may be a helpful view when working with advanced automation and artificial intelligence – AI agent is just another agent in the system, and needs to be considered as such.&lt;/p&gt;
@@ -1326,6 +1264,7 @@ Definition of SA by Endsley (Endsley 1988)&lt;/p&gt;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1342,49 +1281,7 @@ Definition of SA by Endsley (Endsley 1988)&lt;/p&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.researchgate.net/profile/Mica_Endsley&quot;&gt;https://www.researchgate.net/profile/Mica_Endsley&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Endsley, M.R.. (1988). Situation global assessment technique (SAGAT). Situation Awareness Global Assessment Technique (SAGAT). 3. 789 – 795 vol.3. 10.1109/NAECON.1988.195097.&lt;/p&gt;
-&lt;p&gt;Stanton, N. A., Salmon, P. M., Walker, G. H., Salas, E., &amp;#x26; Hancock, P. A. (2017). State-of-science: situation awareness in individuals, teams and systems. Ergonomics, 60(4), 449–466. &lt;a href=&quot;https://doi.org/10.1080/00140139.2017.1278796&quot;&gt;https://doi.org/10.1080/00140139.2017.1278796&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Nielsen: Web UX 2016 vs 2004]]></title><description><![CDATA[Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They made a study on web UX in 2016 and reflected that to the…]]></description><link>https://www.arttuv.com/writings/nielsen-wb-ux-2016-vs-2004</link><guid isPermaLink="false">https://www.arttuv.com/writings/nielsen-wb-ux-2016-vs-2004</guid><pubDate>Thu, 15 Jun 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They made a study on web UX in 2016 and reflected that to the results from a similar study in 2004. The video is only 20 minutes and worth watching. Below you can find a summary.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xKOlga_xkKA&quot;&gt;Link to YouTube&lt;/a&gt; or to their &lt;a href=&quot;https://www.nngroup.com/news/item/keynote/&quot;&gt;Nielsen Norman Group website&lt;/a&gt;.
-
-        &lt;div class=&quot;embedVideo-container&quot;&gt;
-            &lt;iframe
-              title=&quot;&quot;
-              width=&quot;300&quot;
-              height=&quot;170&quot;
-              src=&quot;https://www.youtube-nocookie.com/embed/xKOlga_xkKA?rel=0&quot;
-              class=&quot;embedVideo-iframe&quot;
-              style=&quot;border:0&quot;
-              
-              loading=&quot;eager&quot;
-              allowfullscreen
-	      sandbox=&quot;allow-same-origin allow-scripts allow-popups&quot;
-            &gt;&lt;/iframe&gt;
-        &lt;/div&gt;&lt;/p&gt;
-&lt;h2&gt;Abbreviated to one paragraph&lt;/h2&gt;
-&lt;p&gt;Most of the problems are in findability and search, so information architecture is a crucial thing and worth attending to. Usability has improved from 2004 and the success rate of user tasks has gone up to 82% from 66%. However, only 30% of the tasks succeeded completely smoothly and easily. Also, annoyance is twice as common (30%) feeling as pleasure (16%).&lt;/p&gt;
-&lt;h2&gt;Notes on Web UX 2016 vs 2004&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;There has been a loss of information density. We don’t miss the complexity, but we have much larger screens with a lot less content.&lt;/li&gt;
-&lt;li&gt;Some designers still use overlays/splash screens (we should get rid of it).&lt;/li&gt;
-&lt;li&gt;The success rate on user tasks is up from 66% in 2004 to 82% in 2016.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This is good, but it’s not just about whether people are going to succeed on your site, it is much more.
-Only 30% of the success was smooth and easy. 23% succeeded with minimal difficulty, 13% succeeded with some difficulty, 4% succeeded with major difficulty and 15% succeeded partially. 15% failed.
-In 16% of cases, there was some amount of enjoyment and in 30% of cases, there was some annoyance. Annoyance is twice as common as pleasure. 54% had no emotion.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Small pleasure is desirable.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;There are sites with minimal content that have designed to look good and there are sites that have way too much content visible. Confusing views with too much content cause negative emotions.&lt;/p&gt;
-&lt;h2&gt;Causes of User Failure&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Findability was the biggest cause of failure with a 60% share and search the second biggest with 12%. Getting where you need to be on the website is the biggest problem.&lt;/li&gt;
-&lt;li&gt;Alphabetical listings are not good.&lt;/li&gt;
-&lt;li&gt;Information design is vital.&lt;/li&gt;
-&lt;li&gt;Banner blindness, people don’t see buttons or links that look like advertising banners.&lt;/li&gt;
-&lt;li&gt;Misuse of common components (like checkboxes, that work like radio buttons or selection).&lt;/li&gt;
-&lt;li&gt;In 2004 findability had a portion of 27% and search 15% and information 19%. Findability and search have always been big, but nowadays people are more pleased with the information they finally find.&lt;/li&gt;
-&lt;li&gt;The success rate is much higher now and people have fewer problems, and those problems are mainly with findability. Search is still not perfect but much better than in 2004.&lt;/li&gt;
-&lt;li&gt;Information architecture is a crucial thing and worth attending to.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Reference Types in Java]]></title><description><![CDATA[Different reference types in Java provide access to the object lifecycle, giving us tools for object reuse (object pools) and even a…]]></description><link>https://www.arttuv.com/writings/reference-types-in-java</link><guid isPermaLink="false">https://www.arttuv.com/writings/reference-types-in-java</guid><pubDate>Thu, 15 Jun 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Different reference types in Java provide access to the object lifecycle, giving us tools for object reuse (object pools) and even a possibility to achieve a reliable object finalization. Differences between references can be explained by reachability. This is how Java API Specification defines reachability:&lt;/p&gt;
+&lt;p&gt;Stanton, N. A., Salmon, P. M., Walker, G. H., Salas, E., &amp;#x26; Hancock, P. A. (2017). State-of-science: situation awareness in individuals, teams and systems. Ergonomics, 60(4), 449–466. &lt;a href=&quot;https://doi.org/10.1080/00140139.2017.1278796&quot;&gt;https://doi.org/10.1080/00140139.2017.1278796&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Reference Types in Java]]></title><description><![CDATA[Different reference types in Java provide access to the object lifecycle, giving us tools for object reuse (object pools) and even a…]]></description><link>https://www.arttuv.com/writings/reference-types-in-java</link><guid isPermaLink="false">https://www.arttuv.com/writings/reference-types-in-java</guid><pubDate>Thu, 15 Jun 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Different reference types in Java provide access to the object lifecycle, giving us tools for object reuse (object pools) and even a possibility to achieve a reliable object finalization. Differences between references can be explained by reachability. This is how Java API Specification defines reachability:&lt;/p&gt;
 &lt;h2&gt;Reachability from strongest to weakest:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;An object is strongly reachable if it can be reached by some thread without traversing any reference objects. A newly-created object is strongly reachable by the thread that created it.&lt;/li&gt;
@@ -1435,7 +1332,34 @@ Oaks, 2014, p.215&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://shop.oreilly.com/product/0636920028499.do&quot;&gt;Oaks, S (2014) Java Performance: The Definitive Guide&lt;/a&gt;, Sebastopol, California: O’Reilly Media.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html&quot;&gt;Java API API Specification&lt;/a&gt;, (14.6.2017)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#reachability&quot;&gt;Java API Specification, Reachability&lt;/a&gt;, (16.6.2017)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/FinalizablePhantomReference.html&quot;&gt;Guava API Specification&lt;/a&gt;, (14.6.2017)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Designing for Usability 1985]]></title><description><![CDATA[It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key…]]></description><link>https://www.arttuv.com/writings/designing-for-usability-1985</link><guid isPermaLink="false">https://www.arttuv.com/writings/designing-for-usability-1985</guid><pubDate>Thu, 11 May 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key Principles and What Designers Think (Gould &amp;#x26; Lewis, 1985). Gould and Lewis introduce three principles that they argue are vital for creating usable applications, and then they go through common arguments against them and try to justify why these principles matter.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/FinalizablePhantomReference.html&quot;&gt;Guava API Specification&lt;/a&gt;, (14.6.2017)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Nielsen: Web UX 2016 vs 2004]]></title><description><![CDATA[Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They made a study on web UX in 2016 and reflected that to the…]]></description><link>https://www.arttuv.com/writings/nielsen-wb-ux-2016-vs-2004</link><guid isPermaLink="false">https://www.arttuv.com/writings/nielsen-wb-ux-2016-vs-2004</guid><pubDate>Thu, 15 Jun 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They made a study on web UX in 2016 and reflected that to the results from a similar study in 2004. The video is only 20 minutes and worth watching. Below you can find a summary.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xKOlga_xkKA&quot;&gt;Link to YouTube&lt;/a&gt; or to their &lt;a href=&quot;https://www.nngroup.com/news/item/keynote/&quot;&gt;Nielsen Norman Group website&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Abbreviated to one paragraph&lt;/h2&gt;
+&lt;p&gt;Most of the problems are in findability and search, so information architecture is a crucial thing and worth attending to. Usability has improved from 2004 and the success rate of user tasks has gone up to 82% from 66%. However, only 30% of the tasks succeeded completely smoothly and easily. Also, annoyance is twice as common (30%) feeling as pleasure (16%).&lt;/p&gt;
+&lt;h2&gt;Notes on Web UX 2016 vs 2004&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;There has been a loss of information density. We don’t miss the complexity, but we have much larger screens with a lot less content.&lt;/li&gt;
+&lt;li&gt;Some designers still use overlays/splash screens (we should get rid of it).&lt;/li&gt;
+&lt;li&gt;The success rate on user tasks is up from 66% in 2004 to 82% in 2016.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is good, but it’s not just about whether people are going to succeed on your site, it is much more.
+Only 30% of the success was smooth and easy. 23% succeeded with minimal difficulty, 13% succeeded with some difficulty, 4% succeeded with major difficulty and 15% succeeded partially. 15% failed.
+In 16% of cases, there was some amount of enjoyment and in 30% of cases, there was some annoyance. Annoyance is twice as common as pleasure. 54% had no emotion.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Small pleasure is desirable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are sites with minimal content that have designed to look good and there are sites that have way too much content visible. Confusing views with too much content cause negative emotions.&lt;/p&gt;
+&lt;h2&gt;Causes of User Failure&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Findability was the biggest cause of failure with a 60% share and search the second biggest with 12%. Getting where you need to be on the website is the biggest problem.&lt;/li&gt;
+&lt;li&gt;Alphabetical listings are not good.&lt;/li&gt;
+&lt;li&gt;Information design is vital.&lt;/li&gt;
+&lt;li&gt;Banner blindness, people don’t see buttons or links that look like advertising banners.&lt;/li&gt;
+&lt;li&gt;Misuse of common components (like checkboxes, that work like radio buttons or selection).&lt;/li&gt;
+&lt;li&gt;In 2004 findability had a portion of 27% and search 15% and information 19%. Findability and search have always been big, but nowadays people are more pleased with the information they finally find.&lt;/li&gt;
+&lt;li&gt;The success rate is much higher now and people have fewer problems, and those problems are mainly with findability. Search is still not perfect but much better than in 2004.&lt;/li&gt;
+&lt;li&gt;Information architecture is a crucial thing and worth attending to.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Designing for Usability 1985]]></title><description><![CDATA[It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key…]]></description><link>https://www.arttuv.com/writings/designing-for-usability-1985</link><guid isPermaLink="false">https://www.arttuv.com/writings/designing-for-usability-1985</guid><pubDate>Thu, 11 May 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key Principles and What Designers Think (Gould &amp;#x26; Lewis, 1985). Gould and Lewis introduce three principles that they argue are vital for creating usable applications, and then they go through common arguments against them and try to justify why these principles matter.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;These three principles for designing for usability are (Gould &amp;#x26; Lewis, 1985):&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Early Focus on Users and Tasks&lt;/li&gt;
@@ -1498,6 +1422,7 @@ Oaks, 2014, p.215&lt;/p&gt;
         sizes=&quot;(max-width: 495px) 100vw, 495px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1550,7 +1475,7 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABuElEQVQoz32RXUsbQRSGZzIzO7szzs5m6+xuIL1IzV0u6lX+gKWK0rj5TpReFfov6oVFTLL5U7W09L4t2hJqERQJ8aMFpWV3E0liRKj04TC8A/Oec+YcUChW1vzyynrxWcFfeuEvF8tLBX/VLz1fXXv56nXv6PTnyeDzYf/dl+O9rycfvvXf7/f3Dvofe5effvwCmqaBf4AQAgCU42w2a41qqV4tVyulSmm9Uas067WNernZqG026kBKiSDECZRAtwETCY1SzrlyXEop+A+PPQ9P6tyHEGIYxrxyTFNijD3Py+VymUwmn89ns9mni4sLC08YY0A3DAQAfKjtecfVDcYZ03WdEIIQUkoxxjDGCCHTNMEc5whCbXK/gxCCEXK81NjMOcZ4mlRKiQmZatu2x1XAQxMbP00+Ihp1XVfX9VuzZZGZOZ1Og3YneLO11Qq67SDodIN2p7vb7rRawfbbne2dXT4nGGN3G7Esi8y0EAKE4d8wjEczhsPJGcej4Whwdi6lRSnFGE+ncL/t8Z/jOIrCKVEYRlEUXV3/ubz4fTa4+N47FKZkjNm2LaUUQqRSqWQyKSYopW4AgGmEDKV7JS0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABrElEQVQoz32QT0sbURTF75t5b+bNe5l5ScY3kxBKCNllkV0+QS22lcYx/yZRuir4LXShiGPGD1XF4r4tdZGqFFQU/0QotNhkopipNKD0t7j3bM69hwPVWmPWq7+em5+uei/feTPz9emq98arvXo7+/7DUu/H6dHJxefD849fjre/nuzun+3sn21/O//U6+8d3ICmafAEhBAASMdd7PjtVt1vNlqNeqM21/abHb+14DcX2v5ixwdhCRUQVv6BENI0jXM2JR1d1+E/vMhk8PjPJJgQwzBs6ZiWhbHqum6pVMrn85VKpVgslsvlQqFgGAZQShUA9FzsKcelBuOMUUoJIaqqSikZY7EWQgDnXEFAVHUiuIIxVhXFyWQfzJxjjOOjQghMSKxt2waEFHiuMQBIpmyi6a7rUkr/mpNJ8mjO5XKw2Q2XV1aC7tZmGHbDMAjDjaAbBOHq2vrq+gZPmHHOp+ZEIgGDP7eDQXT3yGg0nlF0NxpdXl0LkaS6jjGOW5iMbVkWRNFwzCBe0XD46/ftTf/n9VW/9/3ItARjLJ1OCyFM08xms6lUyhwjpbwH4pGDs+pOmb8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1566,6 +1491,7 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1590,7 +1516,7 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 131.0810810810811%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAIAAAA44esqAAAACXBIWXMAAAsTAAALEwEAmpwYAAADkklEQVQ4y11U2ZKsNgzl/z8vmdw7w2IbgwHvm2Rg8pKIns5Dulwu0eVjnUXQVcRQ0GXwBZkGbkBYUB6YBmFgD3hEXBzt14X3hbGgSVgAfcEuQ8uVKpeRG1gcbgFXD9JirHT6Ol97O892Xy1WPBJUfMAVWyz0ly/IDUqHwmKqdO48/78ecLMZKzZfWpcBUyUmocB0wKRBOkCkhj/rarROPB8KsYKOWPBNO1aSHSvR5uZRa+lubA0a/fBZ7Wz33UIh/YU6Y5egZSCdL8OYhtki0zhp7HfahcXhgK+dTPmbwO2IUIAeu4KYn8okHA+YLS31mCwdub04EiIsuIzfN9F0mSA2E21y379pz5aOxkpMb1KL35QQWfXY3mJBneDV70W7mYyxNm4aN6hCmy0Jua7zZfJTnO0Bp9oo55fbPoPPEEu1qTKd2ZGHLVWAs9VSM2BFrLUWgHKS8xgLmFgqEKpLKaQUvLcphWWZ2TSM47CskrFxmkYp53nmUgopBXW+r+DdcWw5R+dMF4N3zvrgS45C8IkN60oINo3bplqjeM+zvSK7vy/n7LoupSTvXRfjA/YupTBNw58ff6xqYXyaZ/7r14d19r7PF56G5D5jDFoftaZt3zrnbc7JWK2PfRqHVS1PH2g/M/KesOsFvrynzgDlOPbOWpNSBCjW6nEYhqH/9fuvRc5C8K+vT7nM50V3IdJF32/aAHXf9846E4NXao3Rj2M/TuMwfAnBZ8mnaRinQVIxjtOADe779M5uStWat20lzTHF49hCcPPMp3EQgnHOGRtnKZRaZ0H1offrPu/7DN4Zo+t/tHPOIXpr9Dj04zgIyeUy9/3XssjzfEbtJs1PcYXglFoBqtbHQzuGnFMIngum1MIZG4aeCyZnwfjEOIsxvMGn927fVK1l31RnjXHO+OBS8kKwR62gJdiySinFNI3D2MdEeKId3HHsAMVY3XnvQvApRWs1GUPjNfOn4XWdz1RjO+Gd8/XS/BOVcxSVMYe1hrGxH3q5CMHZNI2Mjesq2TRxzkrJ787eWvMDNlY7a6i/t+M0TA9ACNZT4B/G6NYAoLQGPxMW3L7vpHlXnTE6hqCUCt698lxWedGQ/Uz1m/zzAfy+QvBPzmXbVKf1EYM35ogxDMPX5+dvY/VFaHxyas+b2M7XB/DRrNRaa1Zq7bTec46I1Vkjpej7z1nyeX7exEVs+/ry7A0m2tu2ApR/c/4HaOqkKr0/u4gAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 131.0810810810811%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAIAAAA44esqAAAACXBIWXMAAAsTAAALEwEAmpwYAAADm0lEQVQ4y2WU2Y7lNgxE/f+fF2TS3ba1ete+kLJ985LQtyeDJIAg8EEyi6dK7ipiKOgK+ILcgDCgLCwe+AHSwBZwjzg72q+r3RfGgiZhweYLdgVbBqpcRmlgcrgGnD1qi7HifbXnDu3nSUWquCeoiL5iV7HF2mJFn1EYnBwqi6nSufP877ovOmwzVmyhtK4ApkpKYgF20Jo8QMPrxPNZ13dbqkl2hSMidSbZQG1DoU9IC9K+x0bAhq1Ba+2kAp/ivlssNP/TGbsENPMa0JfGDTFTFvmB7MCvjXZpsd/ha0OX2583qd0jFGgut64gZiBaNuG4E2plcXkgTw4e1DA5UuQyvm6S6TJmoMm7DETfP7JJsEPtIFVS+nq8ed2N1hv7TbSPCNTvH9kmE0ZhUBpcQ9OWDDuv8w35ouJs31a1x+fTl9b5DD5DLNWlyvfM9zysuQKcDWrNQI5WqAWgPOTJFBMrIPoMXUohpeC9TSnoSXE2jOMwzZrzkbFxmpRSQmuptTrP9npd3rt9X3OOztkuRu+c88GXEqUUjI/zorVWnI/rtjyy8R2v1vB+Xd7ZeZ5Kyd77LgTvnQ3epRRGNvz++2/LMgnBlJIfHz+cs6/X9Sth9xmjP4691rRua+e8zTlZexzHxsZhXvTTBFoDxNoaPAk73yG778t7Oy8zQN33rbPWpBQBqrXHOA7D0P/x8WPSSkrx9flBo170LWzwzHy7RzZA3batc87EGNZ1TikwNjA2jmMvpdCTpJoNWkv2wMMG1NnZdV2g5nVdCFhKcd/XEJxSfBwHKTkXnPNRabksk5KC82Hf1+s+7/sM3hlzAJRv2TnnEL01JJsuazFNqu/7adLvR3Hd7XzP/LpC8OuyANTj2Dv7yM45xeCE4PODuh++uORaCc5HIViM4boeqwiY29YFIG/r0lljnDMhuJS8lFxKobRUWkrJp5kMZ3wcWB9TeLJ9huD2fQMoxh6d9y4EGtvag/HxiZcSgnHBrvt8Uo3thJ8+X/+a2TmbcjTmcNZyzoah15OUQjA2cs7meRKcCcFLydc7JME7Z34Be2T7EBxZRRe0lHwY+o/PH8YerQFAaQ3Pn5f3bYNa9m3tjHn7vITgOGf0GObpCcb7H/aO1/ttEjCiTT4X8tkce4zBmCMlPwz919endea+r+da+//DCMEvy1xrXpa5O44954hYnTVay77/VFporZSSelbrtryZff89H9nUGcrfPv8F986lD9LCwy0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1604,6 +1530,7 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1627,7 +1554,7 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 122.97297297297298%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAIAAAC+dZmEAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMElEQVQ4y42T+4/aRhSF5/9X1Qo8Bu+2TaVslVC1StSEXcBkQx5LlgBeHn7xsI0Zv3msANuwgJmpgE20zZLS0ffDaDRHc+fcc4GkWpyg34g6JyNZtZsdS1IsvmuVmlq9hSTV5sQ+J+qGe9vVvarULzU0SbNbPXcdbYCsjxpdT1A9ru2I2qDWcRpdr6m4vOrxiifpI6k3FLWhMfAV81bUPFEdiL1BG41G0wVoKajZ1kv1zvuKXGp035Xl61pnsVoRsiF4Q0i0J4pWq3VEHiyMCTDfnVkfzobFp1Hj2aaZ2jSfR43nWEgRIUX4FBH+2JHC4p/hZBCE88D35/P5cDjsdDrAZWMuG7NyMVJN4nKClBOksqNMPwDiCuOPrMnMn04ms9lsOBhIkgQclu6dwy1paGS3++4rSn4ZD4oM4U5x9ZRsOcHcr/7YmfnBdDoNwxD19UqVAw4LUQbaLLRycHGdjMrM3TWz+JTcVE5I9SsM5n7Zi2fTaRAEtmXyvADMDGVkt0ojA9eVE8J9oXpYvHs5ME2jVqsBJ0+rr+NmlvLe0FH5/jauHhEbBpIkGYwu6e7f8VEhMfuQ+Hep/1W2Y9tyqwXQBTTZxF31lNR//mLPY74xLDAQ2v7Zy/6kvPjBvPgxuqbI5+8Rx+XEvlWTySQIfLQXu/W3Vq0w5AtL9SMxigQdBqNPc3+yuLtbzOfL5XI8HpumBSTFqIi9UkO9adt4FztyaGGM19Hmm0OA8k/Q5ZPR1W+4cYabv5PDnGH+WXDr+UHoz2ZhGDqOoygqsLMxl427bJxUE/fxPACNKyf+yP76ZwMhQRC3IVFeU7fvk6R++n/c3rfKc11RFIHLQidPj97S40JiXWYOJeRAn13XkWUZ2DmonVP9DKWlqW08b3bZvDku5nkeoAzsZ6CVhSgLzSyUX8a0NNW/oJYl5kHCH8UTIV4QgJuHDgu9PO1d0vNicvYxGRa3HJsqSxQl4OZp6UWsl6asHIwqzH3Z3NHBMPi920YOLssMqW2twscM24qDwDTNer0OxgXaysGwmCTcQdl3psqxW+020M8p8a+YmqZWn5lH1R5+eR6Gek+7uir+A30L56SYea90AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 122.97297297297298%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAIAAAC+dZmEAAAACXBIWXMAAAsTAAALEwEAmpwYAAADKElEQVQ4y42T62/aSBTF5/+XVtvEYzD0tR8SbVOpG62WhBiSdJuGpGDeNjYEY/Dbg00D2ECIzUxlonZRStId/TQfRnPmXp05F0iKWRUGNVGtSlpHsYSuKfXMVs8q8v1mR5cUqyaqNVE10K2soqqklZr9dt++UVEYrUBb9epdxPdQpWMLyrDacRoyanSdZg81ZdQaeK2+KyiuPvRl/avQQzHKsK167ngB2rLa7AyK9ZsLTio2up9K4nXtZrFcErIiOIohMVF4fx9GZGNhTID5ad/6vO9e7YWNdxF/EDYPwua7Ff+etDY5wOKH2XgYzOaB78/nc891ZbkLUG7Hye2Y7C6pJDGXIFyClJOknCClTWjMpfyRNfWD6WTi+77nupIoAitH949gTAbqLD04hvI/sH24GxQYUknjcprEpHDltT+yp34wmUxms5mmDjiuDGwWallosdBk6cU1E5WYu2tmcZVccSlS/gGDK68exNPJJAgC0zR4XgBGltJPoLl+IuRSpPKd8nbxunJgGHqtVgNOnlYylMnC4RkdleKruJzC3K/FoiQB74zu/r3rfUxMLxKrx5on27YsS2p3gJaFRi5xV06T+ktceUm2k8bVN5uVdV3jBQEg9oV8+Jtx/Ht0DUnxKShcSvqeOZ764/E4CPy1uAWc+rlZOx/y/y57n4leINp2sHY198eLu7vFfL5cLkejkWGYoNXVSoLypS7XOiZex45sWxjjMFo9OgRa/o129ta9/AM39nBzn2xnD/N/Brf/xdOxbbnXAza7i/IUylPreCbJdhK4nH6I5w/DWi0RWCxUMvD2glm7nSbbSeHq682vQghJkgicHLRPae+cHp0nwhLzEJJf/jNybEmSgHUClQylZiklQ8XxrH7nWbHj2HyTB9oxVLPQPIl34wS2D3eUDKUdU8svzEbCH8dT17R4MNApbefg8JRGZ/T8KhlcJmeFmOenyrLM2DAnT0t/7QyOKIuFEcfEDf+PqdJ1XRBa65Fk4X0pluHtbv0kDgLDMOr1Ovj6kTZzcFZI/lTtubZt2+50bsDgiBI/xCaFReZp/aO2Z4NB//Ky8A0/U+i2Rk0/0gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1639,6 +1566,7 @@ Each client sends commands to the server to move the paddle:&lt;/p&gt;
         sizes=&quot;(max-width: 259px) 100vw, 259px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1685,6 +1613,7 @@ Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina [läh
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1740,7 +1669,7 @@ ISO 9241-210 –standardin malli käyttäjäkeskeiseen suunnitteluun [Jok10]&lt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABM0lEQVQoz42RP4qDQBTG38wEYyLbBXKBWBo7E4KHsA6kCOkErcbGwjN4gOAd0g2IpSBJEHsvEMgQJDCkXdYB2WUny/7Ked983/sDoGI0GhmG8dFjGIamafAfCCEAcDgcuq6r6/p8Pj+fzzRNh9IPEEK4hxCCEJIhnufleZ5l2fF4zPOcUoox1nV9EGOMEUIKL0VC/65Qj8djq8d13c1mY5rm0I78IHMAYLFYrNdrx3GWy6VlWZPJBGzbfjwe9/udc/56vdq2fbeOpmmEELfbjXMuhFitVjCbzYIg8H0/DENK6X6/H5r8DgBst1tKaRRFvu8HQTCfz9X7+x3714YIIbL8NUl/qsvlUhQFY+x6vSZJAgDT6VRaS73CS8budruqqhhjp9OpLMs4jtV3fsdwfOUUkk8Zu2B5yItBygAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABM0lEQVQoz42RsYrCQBCGZ2dXzIYrBZ8g6bJlEPEd7IUUxsqgaYxVyEPYik9hISzpRSOktxSSKqCEvMBxCYY7bz3uq5ad3X9nvgVQQSnlnH/UcM47nQ78B0opAMxms7Is0zS9XC5VVW02m7b0A0IIrWGMIWK32wWA8XgspdztdtvtVkq5Wq0QUdM0RKRPCCGvWU35d0dY87qraZplWUKI0Wg0HA5N02zaaYPbtWEYg8HAtm1RwzkHIURRFFmW5Xn+eDyu1+s7HUmS3O/32+3WnLRtG3q93mKxmM/nvu8HQTCdTt9dnkwmQRCs12vP85bLZb/fV/tTzqwwRAhhjDUCEfFrEgDXdc/ncxzHh8MhSZIoigBA1/VGJ6tRZDXPOo5zOp2klPv9/ng8hmGo/ue/UcR/4xP12l+SHVoCJgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1753,6 +1682,7 @@ ISO 9241-210 –standardin malli käyttäjäkeskeiseen suunnitteluun [Jok10]&lt;
         sizes=&quot;(max-width: 536px) 100vw, 536px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
@@ -1775,7 +1705,7 @@ ISO 9241-210 –standardin malli käyttäjäkeskeiseen suunnitteluun [Jok10]&lt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 118.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAA7CAAAOwgEVKEqAAAADMElEQVQ4y6WUz0sqURTH74w6i0nIsKZfYE0thIJyIGgT7QK3tajAtF9WUrkoSTAzg3YFQWQQmU3/hotq0UaNoIhXGQ40EzOg/Ro0w3DsPmrej9J6BO+zuNwf59x7z/eeewAoAEXR6upqkiTr6upIkiwvLwffAUEQAABBEKIoptNpjuMghBcXFxqN5s9qvgP6GwRBMAwrKSkZHx+fmpqy2WwzMzMDAwNFb2AYhqKo4jf5e8kbge+j0Wjq6+tramoaGhoaGxtJkiwtLUVRVKlUKhQK5RsAgI6ODrfbPTs763K5HA6H2+1ubW0F09PTkiTd3NykUqnb29tcLre6uirL9kc/AIDf74cQ3t3diaKYTCYhhF6vF8zNzUEIY7EYy7IMw0AIA4FAofP6+no8Hj89Pf3xxsPDg8vlAh6PB0KYzWZfXl6y2SyEcGtrq9B5cXGRYZjDw8OTk5Ojo6NYLDY2Ngb0en13d3dXV1dvb29nZ2dPTw9FUYUPo1KpioqKcByvqqqSxZe1+Lv8HYExDPs7sFgskUhkf38/FArt7u5GIhGn01l4bafTGQ6Hg8Hg3t5eMBgMh8Nmsxl4vV5Jki4vL1mW5Xk+l8t9GnMgEJDNBEFgGObp6elV7fn5eQhhIpEQBCGRSHyl9sbGRiaTicfjPM9fXV1JkuTxeIDRaNze3vb5fJubm2trazRNm0ym94LJnb6+vp2dHZ/PR9O03BqNRvBfGAyGiYmJ0dFRh8MxMjIyOTnZ3t5eeHJbW9vw8LDFYhkaGurv77darQaD4VfMkiTJqfJVzH6///7+nmVZQRDOz88zmczCwsKvDItGoxzH/SM9aZp+fn4+OzvjOC4ajUIIXwWz2+3JZPL6+loQBI7jUqnU8vJyofPS0lI6nQ6FQgcHB8fHx4+Pj3a7HeA4ThCEVqutrKzU6XQEQajVagRBlO9AEEStVpeVldXW1up0Oq1WSxAEjuP51etD9n1EpVLllwrkHbIFhmF6vX5wcNBsNptMJqvV2tLSIs/LB7y3/4BCoQAA2Gw2SZJEUeR5HkK4srICAPjwjf5RQIuLiymKam5ubmpqoiiqoqLi0+r5E1G8lJ4qjKOuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 118.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAA7CAAAOwgEVKEqAAAADFUlEQVQ4y6WUy0vjUBTGb1qbFkNbumiMCKYqimDtorpwpUv9A3RR4hN8tEIVhSxkjMWFG8WFGBBpQ/+NLuzKRehGUawYqNL0oYFAH2oFm8gdNGNHzThTmN/iEjj5zrl89/ABoMNgMDQ3N5Mk6XK5SJLEcRzUA4IgAAAcx4vFYqVSEUURQnh1dWW322vVrwLDOwiCoCjqcDgWFxdXVlb8fj9N01NTU42NjRiGmc1mo9HY8I7BYPjUSKuB+nE4HJ2dnW1tbW63u7e3t6OjA8dxBEGM72jthoeHGYb58QZN0+vr6wMDA2B1dVVRFFmWy+WyLMuqqu7t7Wm21fwDAITDYQihLMuFQqFUKkEIQ6EQYBgGQphKpURRvL6+hhByHKcXsywrSdL5+fnFxUUymSwUCmtra2BjYwNCqKoqhFBRlO/EW1tboiienJwkk8mzs7N0Oh0IBEB3d7fP5xsbG6MoanR01Ofz9fX16R/GYrHY7Xabzdba2mp/A0XR32WTyVSPwZ80k5OTiUQiHo/zPH90dJRIJGia1l+bpmme52OxWDwej8ViPM+Pj4+DUCikKIogCOl0OpfLvby8RCIRvTgSiWi/5fP5VCpVqVRe3dYMkyQpl8tJkvSdYQcHB09PT3d3d9ls9ubmplqtMgzz+vocx7Ese3h4uL+/z3EcRVEfDdM+KIqKRqMsy9bOkZER8F94vd6lpaVAIEDT9MLCwvLy8tDQkH7y4ODg3Nzc9PS0ds7Pz3u93lfD6lmScDhcKpWy2awkSYIgVKvVzc3NX+spCEImk/nLekaj0efn58vLy0wmIwgChPDVsGAwWC6XRVG8vb0VRfH+/n5nZ0cv3t7efnx85Hn++Pj49PT04eEhGAwCDMMIgnA6nS0tLS6XiyAIq9WKIEjDBxAEsVqtTU1N7e3tJEk6nU6CIDAM+5peFovlD3HzhpYk38aQtuEoinZ1dc3MzExMTFAUNTs729/fbzKZzGazNqCWWV/ba739fr+qqsViMZ/PQwh3d3cBAP9OKK2fzWbzeDxut7unp8fj8Wjpqx/1E+d7lXN6WdBXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1788,6 +1718,7 @@ ISO 9241-210 –standardin malli käyttäjäkeskeiseen suunnitteluun [Jok10]&lt;
         sizes=&quot;(max-width: 560px) 100vw, 560px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;
