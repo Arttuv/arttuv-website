@@ -4,20 +4,20 @@ path: "/notetaking"
 date: "2020-05-03"
 title: "Notetaking"
 summary: "Handwritten notetaking is undervalued, and today you can do it both traditionally with pen and paper and digitally with iPad Pro. This is my setup."
-featuredImage: "leuchtturm1917-bauhaus.jpeg"
+featuredImage: "../../images/leuchtturm1917-bauhaus.jpeg"
 imageId: "leuchtturm1917-bauhaus"
 ---
 
 I like taking handwritten notes - you can almost always bring your notebook with you, and it doesn't feel as disrespectful to not down some words by hand compared to using computer for the same task.
 
-![Leuchtturm1917, Pentel Tradio 05](leuchtturm1917-pentel-tradio-05.jpeg "Leuchtturm1917, Pentel Tradio 05")
+![Leuchtturm1917, Pentel Tradio 05](../../images/leuchtturm1917-pentel-tradio-05.jpeg "Leuchtturm1917, Pentel Tradio 05")
 
 Sometimes it isn't practical to use physical notebook, so I also have an iPad Pro with Apple Pencil for digital notetaking. iPad is exceptionally well suited for reading and marking books if they are in PDF format.
 
 ## Physical Notetaking
 My go-to notebook is Leuchtturm1917 with dotted pages. The paper is of good quality, dots are right on spot and the pages have a bit yellowish color to them. For example Noona notebooks are too white and the dots are too close to each other. 
 
-![Leuchtturm1917 Bauhaus](leuchtturm1917-bauhaus.jpeg "Leuchtturm1917 Bauhaus")
+![Leuchtturm1917 Bauhaus](../../images/leuchtturm1917-bauhaus.jpeg "Leuchtturm1917 Bauhaus")
 
 Currently my favorite pen is Pentel Tradio 05. I like using rollerball pens because they are so smooth but also leave a solid mark.
 ## Digital Notetaking
@@ -25,7 +25,7 @@ I went through a lot of devices when I was looking for the perfect match for dig
 
 Cheap? No. Satisfying? Very.
 
-![iPad Pro Procreate](ipad-pro-procreate.jpeg "iPad Pro Procreate")
+![iPad Pro Procreate](../../images/ipad-pro-procreate.jpeg "iPad Pro Procreate")
 
 I have three kinds of digital notetaking needs:
 
