@@ -21,11 +21,9 @@ const WritingsGallery = () => (
                 tags
                 summary
                 featuredImage {
-                    childImageSharp {
-                        fluid(maxWidth: 250) {
-                        ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
+                  childImageSharp {
+                    gatsbyImageData(layout: CONSTRAINED)
+                  }
                 }
               }
               fields {

@@ -15,6 +15,9 @@ module.exports = {
     'gatsby-plugin-robots-txt',
     `gatsby-remark-reading-time`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -149,25 +152,7 @@ module.exports = {
               maxWidth: 590,
               showCaptions: true
             },
-          },
-          {
-            resolve: "gatsby-remark-embed-video",
-            options: {
-              width: 300,
-              height:170, 
-              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-              //height: auto, // Optional: Overrides optional.ratio
-              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
-              urlOverrides: [
-                {
-                  id: 'youtube',
-                  embedURL: (videoId) => `https://www.youtube-nocookie.com/embed/${videoId}`,
-                }
-              ] //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
-            }
-          },
-          
+          }
         ],
       },
     },

@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 
@@ -30,7 +30,7 @@ const GalleryArticle = ({ post, type }) => (
         <div className="archive-article-item-image">
 
           {post.frontmatter.featuredImage !== null && (
-            <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
+            <GatsbyImage image={getImage(post.frontmatter.featuredImage.childImageSharp)}/>
           )}
 
         </div>

@@ -15,9 +15,7 @@ export const query = graphql`
 query {
     fileName: file(relativePath: { eq: "arttu_face_2019.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
+        gatsbyImageData(layout: CONSTRAINED)
       }
     }
   }

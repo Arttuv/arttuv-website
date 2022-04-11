@@ -19,12 +19,9 @@ const AllWritings = () => (
               tags
               summary
               featuredImage {
-                  childImageSharp {
-                      fluid(maxWidth: 800) {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                      }
-                  }
-                  
+                childImageSharp {
+                  gatsbyImageData(layout: CONSTRAINED)
+                } 
               }
             }
             fields {

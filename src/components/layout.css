@@ -35,80 +35,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-.graphical-page-background {
-  background-color: #fff;
-}
-
-.graphical-page .title-section {
-  background-color: #fff;
-  max-width: 50rem;
-  padding: 0rem;
-  margin: 0px auto;
-}
-
-.graphical-page {
-  margin-top: -1rem;
-  padding-top: 0px;
-}
-.graphical-page .title-motivation {
-  background-color: #fff;
-  padding: 0px 1rem;
-  text-align: left;
-}
-
-.graphical-page .title-motivation p {
-  margin-bottom: 0px;
-}
-
-.graphical-page-menu {
-  width: 100%;
-  max-width: 58rem;
-  display: inline-flex;
-  justify-content: flex-end;
-  margin-top: 0rem;
-  margin-bottom: 0.5rem;
-  text-align: right;
-  margin: 0.5rem auto;
-}
-
-.graphical-page-menu ul {
-  margin: 0px;
-}
-
-.graphical-page-menu a, .graphical-page-menu a:visited {
-  
-  
-}
-
-.graphical-page h1 {
-  display: table;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  font-size: 4rem;
-}
-
-.graphical-page-container blockquote {
-  padding-left: 0.5rem;
-  border-left: 2px solid lightcoral;
-  margin-bottom: 1rem;
-}
-
-.graphical-page-header-image {
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-  background-color: #242424;
-}
-
-.graphical-page-container {
-  max-width: 50rem;
-  margin: 0 auto;
-  padding: 1rem;
-  background-color: #fff;
-}
-
-.graphical-page-container footer {
-  background-color: #fff;
-}
-
 /*
   dark background:
   #242424
@@ -692,7 +618,7 @@ a {
   }
 
   .tag-image {
-    width: 96px;
+    width: 96px!;
     margin: auto;
   }
 

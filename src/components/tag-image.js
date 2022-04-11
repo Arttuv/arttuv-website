@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -18,38 +18,36 @@ const TagImage = ({tagName}) => {
     query {
       hciPlaceholderImage: file(relativePath: { eq: "hci-placeholder.png" }) {
         childImageSharp {
-          fluid(maxWidth: 96) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(layout: CONSTRAINED)
         }
       }
       devPlaceholderImage: file(relativePath: { eq: "dev-placeholder.png" }) {
         childImageSharp {
-          fluid(maxWidth: 96) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(layout: CONSTRAINED)
         }
       }
       researchPlaceholderImage: file(relativePath: { eq: "research-placeholder.png" }) {
         childImageSharp {
-          fluid(maxWidth: 96) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(layout: CONSTRAINED)
         }
       }
     }
   `)
 
+  const hciPlaceholderImage = getImage(data.hciPlaceholderImage.childImageSharp)
+  const devPlaceholderImage = getImage(data.devPlaceholderImage.childImageSharp)
+  const researchPlaceholderImage = getImage(data.researchPlaceholderImage.childImageSharp)
+
   return <div className="tag-image">
     {console.log(tagName)}
     {tagName === 'hci' && 
-      <Img fluid={data.hciPlaceholderImage.childImageSharp.fluid}  />
+      <GatsbyImage image={hciPlaceholderImage} />
     }
     {tagName === 'dev' && 
-      <Img fluid={data.devPlaceholderImage.childImageSharp.fluid}  />
+      <GatsbyImage image={devPlaceholderImage} />
     } 
     {tagName === 'research' && 
-      <Img fluid={data.researchPlaceholderImage.childImageSharp.fluid}  />
+      <GatsbyImage image={researchPlaceholderImage} />
     } 
     </div>
 }

@@ -1,13 +1,12 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogPostSummary = ({ post }) => (
-
   <article className="blog-post-summary">
     <div className="blog-post-summary-image">
     
       {post.frontmatter.featuredImage !== null && (
-        <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
+        <GatsbyImage image={getImage(post.frontmatter.featuredImage.childImageSharp)}/>
       )}
 
     </div>

@@ -70,10 +70,8 @@ export const writings = graphql`
         summary
         featuredImage {
             childImageSharp {
-                fluid(maxWidth: 850) {
-                ...GatsbyImageSharpFluid_tracedSVG
-                }
-            }
+          gatsbyImageData(layout: CONSTRAINED)
+        }
         }
       }
       fields {

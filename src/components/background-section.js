@@ -15,7 +15,7 @@ import { StyledFullScreenWrapper } from './SharedStyledComponents'
  */
 const BackgroundSection = styled(({ title, className, children, featuredImage, imageId }) => {
 
-  const imageData = featuredImage.childImageSharp.fluid
+  const imageData = featuredImage.childImageSharp
   return (
       <>
     <StyledFullScreenWrapper>

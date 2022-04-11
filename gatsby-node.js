@@ -69,7 +69,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     console.log(node);
     createPage({
       path: node.frontmatter.path,
-      component: pageTemplate,
+      component: blogPostTemplate,
       context: {}, // additional data can be passed via context
     })
   })
