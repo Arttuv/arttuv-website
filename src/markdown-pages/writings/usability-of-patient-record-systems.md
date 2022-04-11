@@ -3,7 +3,7 @@ path: "/writings/usability-of-patient-record-systems"
 date: "2012-04-18"
 title: "Usability of Patient Record Systems 2010"
 tags: ["hci"]
-featuredImage: "patient-record-systems-by-vendor.png"
+featuredImage: "../../images/patient-record-systems-by-vendor.png"
 ---
 This is about the usability of health care systems (EPR) in Finland. You can read an English summary of the usability study in the end of the article in [this link](http://www.laakariliitto.fi/files/potilastietojarjestelmatWinblad.pdf).
 
@@ -13,7 +13,7 @@ Potilastietojärjestelmien käytettävyyttä on viime aikoina tutkittu aika palj
 
 Vastaajia pyydettiin arvioimaan käyttämäänsä järjestelmää kouluarvosanalla. Keskiarvot liikkuivat välttävän ja tyydyttävän välillä, kuten taulukosta voi nähdä.
 
-![Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina](patient-record-systems-by-vendor.png)
+![Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina](../../images/patient-record-systems-by-vendor.png)
 Potilastietojärjestelmät tuotemerkeittäin kouluarvosanoin arvosteltuina [lähde].
 
 Terveyskeskuslääkäreiltä tuli 919 vastausta. Noin puolet 48 % käytti pääasiallisesti Efficaa, 39 % Pegasosta, 5% Mediatria, 5% Graafista Finstaria, ja 6,7 % jotain muuta. 

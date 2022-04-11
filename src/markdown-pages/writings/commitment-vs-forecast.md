@@ -3,7 +3,7 @@ path: "/writings/commitment-vs-forecast"
 date: "2020-08-02"
 title: "Don’t ask people to commit to fulfill a forecast"
 tags: ["dev"]
-featuredImage: "estimated-end-date.jpeg"
+featuredImage: "../../images/estimated-end-date.jpeg"
 summary: "Estimations made in the planning are forecasts and their reliability depends on both the experience and on the length of the time scale they cover. Using the word commitment can make planning more intimidating than it needs to be. The estimation itself is hard, and I don’t think I’ve ever seen it done too well, so it would be good to get all the stakeholders to understand that, and work towards better predictability together."
 ---
 
@@ -15,7 +15,7 @@ Scrum.org has a text about [Commitment vs. Forecast:  A Subtle But Important Cha
 
 Everyone knows that software is hard to estimate, and asking people to commit to those forecasts sets the wrong tone. The team does its best to forecast what happens during the next iteration (or iterations, if using something like SAFe). The team knows it’s their best guess at the time - forcing them to explicitly state that they are “committed” to it feels almost like abuse of power. If you want to know how confident they are to the forecast, ask how confident they are.
 
-![Estimating the end date](estimated-end-date.jpeg "Estimating the end date")
+![Estimating the end date](../../images/estimated-end-date.jpeg "Estimating the end date")
 
 Scrum.org explains the terminology much better than I could:
 
@@ -40,7 +40,7 @@ Being responsible is already built in an agile way of working - when the team ac
 
 The trust comes from empiricism - agile produces data on finished end to end slices and that data can be used to predict how long tasks take in the future. 
   
-![Empiricism in Agile](velocity-remaining-work.jpeg "Empiricism in Agile")
+![Empiricism in Agile](../../images/velocity-remaining-work.jpeg "Empiricism in Agile")
 
 This also emphasises the importance of implementing **end to end slices**: Business needs features for the end users, and from that point of view it's more important to be able to forecast how long an end to end user feature takes to implement. If one team does the backend, another the front, and third takes the whole thing to the production, it's much more complex to 
 

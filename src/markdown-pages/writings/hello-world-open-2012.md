@@ -3,7 +3,7 @@ path: "/writings/26th-in-hello-world-open-2012"
 date: "2012-10-18"
 title: "26th in the Hello World Open 2012"
 tags: ["dev"]
-featuredImage: "HWO_Testing2.png"
+featuredImage: "../../images/HWO_Testing2.png"
 ---
 
 We participated in the first Hello World Open with Louhigames’ crew. Hello World Open is a Finnish coding competition and this was the first year it was organized. 200 teams participated and around 100 of them were able to enter a working program.
@@ -14,7 +14,7 @@ We won 338 games and lost 147 and our final ranking was 26. We didn’t have muc
 
 The objective was to create an artificial intelligence client player for a Pong game run on a server. Here is a representation of the system. You can check the details on Github.
 
-![Diagram](HWO-Pong-representation.png)
+![Diagram](../../images/HWO-Pong-representation.png)
 
 In the beginning the server is waiting for players. Client connects to the server using TCP/IP and sens a “join” message. Messages send between clients and server were specific JSON messages. For example, the join message looks like this:
 ```json
@@ -62,7 +62,7 @@ Our first task was to recreate the Pong game visualization on our client so we c
 
 In the screenshot below you can see our local visualization of the game and ball movement predictions on side of “official” game visualization.
 
-![Local HWO testing](HWO_Testing2.png)
+![Local HWO testing](../../images/HWO_Testing2.png)
 
 After we were able to run and visualize the game and move the paddle, it was time to create the AI itself. First we needed to simulate the ball movement so we could predict where we should move the paddle next. Teemu did very good job with this and we got the simulation work very well. Then it was quite easy to made the paddle move to the expected location.
 
@@ -74,6 +74,6 @@ Sometimes we had problems to make the prediction go exactly right which caused o
 
 We had quite a lot of problems with Git and Egit during the competition and we lost valuable time solving those. The competition was quite well arranged although I would have hoped them to communicate a bit more. Some rules were not clearly stated. However this was the first time they held the competition. They didn’t expect more than 30 teams to participate and in the end there were 200 teams and almost 100 bots.
 
-![HWO Results](HelloWorldOpenTop26.png)
+![HWO Results](../../images/HelloWorldOpenTop26.png)
 
 I’m quite happy to our rank and the competition itself was a good experience. This was my first proper introduction to Git and JSON.

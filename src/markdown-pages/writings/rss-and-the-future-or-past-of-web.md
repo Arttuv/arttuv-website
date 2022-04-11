@@ -3,7 +3,7 @@ path: "/writings/rss-and-the-future-or-past-of-web"
 date: "2020-05-16"
 title: "Feeds Are The Future"
 tags: ["research"]
-featuredImage: "handrawn-google-trend-rss.png"
+featuredImage: "../../images/handrawn-google-trend-rss.png"
 summary: "I was using RSS a lot around 2013, and I want to go back. I'd like to be more in control on what stories I see each day. At the same time I know the amount of items in RSS feeds can be overwhelming, so I'm excited to try out new tools to combat information overload as well. I'm glad to see that RSS is not *dead*, even though I understand it probably should evolve. Feed aggregators must evolve as well, or there might not be enough sources for them in the future."
 ---
 You can call me a dinosaur, but I miss RSS. After a few years of break, I logged in to [Feedly](https://feedly.com/i/welcome) to find the world as it was back in 2014. There were even a few interesting articles I had saved and then forgotten - for example, “Sketching as a professional practice” from Futurcice’s blog (the link is dead and I couldn’t find the post anymore). This demonstrates one beautiful aspect of RSS feeds - you can easily store it and I was able the read the article even though it might have been abandoned by the original publisher already.
@@ -18,7 +18,7 @@ Google+ had somewhat interesting start and it seemed to attract professional use
 
 Google didn't kill RSS, the decline on RSS popularity had started much earlier as you can see from the Google Trends graph:
 
-![Google Trend - RSS](handrawn-google-trend-rss.png "Google Trend - RSS")
+![Google Trend - RSS](../../images/handrawn-google-trend-rss.png "Google Trend - RSS")
 
 Vice has a good story on the history of RSS: [The Rise and Demise of RSS - VICE](https://www.vice.com/en_us/article/a3mm4z/the-rise-and-demise-of-rss).
 

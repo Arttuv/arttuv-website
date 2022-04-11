@@ -3,12 +3,12 @@ path: "/writings/fear"
 date: "2020-04-12"
 title: "The difficulty of saying I don't know"
 tags: ["dev"]
-featuredImage: "coder-fear.jpeg"
+featuredImage: "../../images/coder-fear.jpeg"
 summary: "Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven't mastered yet. That can be a lot to bear and a source of anxiety. By being vulnerable and admitting you need help, you can start creating a safer environment."
 ---
 Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven't mastered yet. That can be a lot to bear and a source of anxiety. Kati Vilkki wrote [a good blog post on culture of fear](https://www.reaktor.com/blog/facing-up-to-a-culture-of-fear/), which inspired me to think about the subject from my perspective, on team and single developer level.
 
-![Being stuck alone brings stress and fear](coder-fear.jpeg "Being stuck alone brings stress and fear")
+![Being stuck alone brings stress and fear](../../images/coder-fear.jpeg "Being stuck alone brings stress and fear")
 
 Fear consumes energy, hinders our cognitive functions and may make us withdraw from other people. It can also increase stress, and prolonged stress can, for example, make us less creative and thus hinder our problem-solving skills. Many of these effects are interconnected and can lead to a negatively affecting reinforcing cycle. Stress and fear may distance you from colleagues which is exactly the opposite of what you should probably be doing.
 

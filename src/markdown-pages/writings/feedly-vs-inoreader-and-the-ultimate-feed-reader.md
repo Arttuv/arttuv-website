@@ -3,7 +3,7 @@ path: "/writings/feedly-vs-inoreader-and-the-ultimate-feed-aggregator"
 date: "2020-05-27"
 title: "Inoreader vs Feedly, and the ultimate feed reader (in 2020)"
 tags: ["research"]
-featuredImage: "feed-aggregator-features.jpeg"
+featuredImage: "../../images/feed-aggregator-features.jpeg"
 summary: "I started to use RSS again and setting the system up requires some work. I also noticed that my needs are so specific that each service does not support them fully. I have compared Feedly and Inoreader, and in the process found out the feature set that matters to me. Choosing which service to use is hard, because none of them is perfect. Some services can also be surprisingly expensive."
 ---
 
@@ -20,7 +20,7 @@ I noticed that I need to define more precisely what I’m gonna need, to find th
 
 > Essential features are the essense of the service: Without them other features don't matter.
 
-![Feed aggregator essential features](feed-aggregator-features.jpeg "Feed aggregator essential features")
+![Feed aggregator essential features](../../images/feed-aggregator-features.png "Feed aggregator essential features")
 
 It’s all about getting content in in a civilized manner and then consuming that content. Trusting just RSS is not going to be enough, you will also need support for newsletters, websites that don’t provide RSS, and probably Twitter as well. Twitter is not my favorite, but it seems to be important in modern scientific communication.
 
@@ -31,7 +31,7 @@ Finally, you have the content, so you’d like to store and search it, and just 
 ### The Differentiators
 > The differentiators are essential features, that are missing or implemented exceptionally well. These are the ones that can draw users from competitors, and that you can use to justify higher prices.
 
-![Feed aggregator differentiators](feed-aggregator-differentiators.jpeg "Feed aggregator differentiators")
+![Feed aggregator differentiators](../../images/feed-aggregator-differentiators.jpeg "Feed aggregator differentiators")
 
 Feedly and Inoreader have some differences in the essential features, and a bit surprisingly Inoreader is stronger on this front. Both can handle RSS and Twitter, but only Inoreader can extract [feed from a website that doesn’t provide RSS](https://blog.inoreader.com/2020/04/convert-almost-any-webpage-into-rss-feed-with-inoreaders-web-feeds.html) (if the structure of the website is simple enough) and give you **an email address to be used to subscribe for newsletters**.
 
