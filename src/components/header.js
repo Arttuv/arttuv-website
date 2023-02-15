@@ -11,7 +11,7 @@ const ListLink = props => (
 const Header = ({ small, dark }) => 
 (
   <>
-      <header className="small-header light-header">  
+      <header>  
         <span className="site-title-small">
           <Link to="/" style={{ textAlign: 'center', textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
             <h1>A. Viljakainen</h1>

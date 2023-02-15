@@ -26,13 +26,10 @@ const Layout = ({ children, small, dark }) => {
 
   return (
     <>
-      <div className={"header-container small-header-container light-header-container"}>
-        <Header siteTitle={data.site.siteMetadata.title} small={small}/>
-      </div>
-      <div className = {"page-container"}>
-        <main>{children}</main>
-        <Footer siteTitle={data.site.siteMetadata.title} small={small}/>
-      </div>
+        <Header siteTitle={data.site.siteMetadata.title}/>
+        <main className="page-container">{children}</main>
+        <Footer siteTitle={data.site.siteMetadata.title}/>
+
     </>
   )
 }

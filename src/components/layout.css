@@ -113,6 +113,7 @@ footer .copyright {
 }
 
 .blog-post h1:first-of-type {
+  font-size: 3rem;
   text-align: left;
   text-decoration: none;
   margin-left: 0px;
@@ -144,7 +145,7 @@ footer .copyright {
 .blog-post .blog-post-category {
   text-transform: uppercase;
   font-weight: normal;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-bottom: 0px;
   padding-bottom: 0px;
   padding-top: 0px;
@@ -214,40 +215,15 @@ a h3 {
     font-weight: normal;
 }
 
-.header-container {
-  text-align: center;
-  padding: 0 0 0 0.5rem;
-}
-
-.small-header-container {
-  border-bottom: 1px solid lightgray;
-}
-
 header {
   max-width: 60rem;
   width: 100%;
   margin: 0 auto;
-  padding: 0 0;
-}
-
-.dark-header {
-  background-color: #242424;
-  color: #fff;
-}
-
-.dark-header h1 {
-  color: #fff;
-}
-.dark-header a, .dark-header a:visited {
-  color: #fff;
-}
-
-.small-header {
-  margin-top: 0rem;
-  width: 100%;
+  padding: 0 0 0 0.5rem;
   display: inline-flex;
   justify-content: space-between;
   flex-direction: row;
+  border-bottom: 1px solid lightgray;
 }
 
 .normal-header {
