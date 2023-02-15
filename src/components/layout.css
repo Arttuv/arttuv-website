@@ -5,7 +5,6 @@ html {
 }
 
 body {
-  /*color: hsla(0,0%,0%,0.8);*/
   color: #000;
   background-color: #fff;
   font-weight: normal;
@@ -35,15 +34,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/*
-  dark background:
-  #242424
-  creamy beackground:
-  #ede4d5
-  
-  red
-  #e7131a
-*/
 footer {
   padding: 1rem;
 }
@@ -112,12 +102,6 @@ footer .copyright {
   padding-left: 1rem;
   padding-right: 1rem;
   margin: 0.5rem;
-  /*border-right-style: solid;
-  border-right-width: 1px;
-  border-right-color: lightgray;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: lightgray;*/
 }
 
 .blog-post pre {
@@ -134,14 +118,9 @@ footer .copyright {
   padding-bottom: 0.5rem;
   margin-top: 0rem;
   margin-bottom: 0.5rem;
-  /*padding-right: 0.5rem;
-  margin-right: -1.5rem;*/
 }
 
 .blog-post h1:first-of-type {
-  /*border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: lightgray;*/
   text-align: left;
   text-decoration: none;
   margin-left: 0px;
@@ -248,10 +227,6 @@ a h3 {
   padding: 0 0 0 0.5rem;
 }
 
-.dark-header-container {
-  background-color: #242424;
-}
-
 .small-header-container {
   border-bottom: 1px solid lightgray;
 }
@@ -348,15 +323,6 @@ header ul li {
   margin: auto;
 }
 
-/*body {
-  background-color: #EDE4D5 !important;
-}
-
-.blog-post-container {
-  background-color: #F2ECE2;
-  border: 1px solid lightgray;
-}*/
-
 .blog-post-container blockquote p {
   padding-left: 0.5rem;
   border-left: 2px solid lightcoral;
@@ -368,18 +334,6 @@ header ul li {
   font-weight: bold;
   color: black;
 }
-
- /*Does not work on firefox 
- blog-post-content::first-letter {
-  float: left;
-  color: #242424;
-  font-size: 3.2rem;
-  line-height: 3.3rem;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 0.5rem;
-  padding-left: 0px;
-}*/
 
 .blog-post-content h3 {
   font-size: 1.5rem;
@@ -415,30 +369,23 @@ a {
     text-transform: uppercase;
     margin-bottom: 0rem;
     padding: 0.2rem 0.5rem;
-    border: 1px solid #B3AFAB;
+    border-bottom: 1px solid lightgray;
     margin-left: 2rem;
     margin-right: 2rem;
 }
 
 .bordered-title-bar div:first-of-type {
-    border-bottom-style: solid;
-    border-bottom-width: thin;
-    border-color: #B3AFAB;
     flex-grow: 2;
     margin-bottom: 0.75rem;
 }
 
 .bordered-title-bar div:last-of-type {
-  border-bottom-style: solid;
-  border-bottom-width: thin;
-  border-color: #B3AFAB;
   flex-grow: 2;
   margin-bottom: 0.75rem;
 }
 
 .latest-writings {
     display:grid;
-    /*grid-template-columns: repeat( auto-fit, minmax(420px, 1fr));*/
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     grid-auto-flow: dense;
@@ -777,7 +724,6 @@ a {
   
   header {
     margin: 0px;
-
   }
 
   header ul {

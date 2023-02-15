@@ -45,15 +45,6 @@ const BlogTemplate = function Template({
           <a href={"mailto:arttu.viljakainen@gmail.com?subject=" + frontmatter.title + ""}> send me an email</a>.
         </p>
         </div>
-          {/*<p className="blog-post-bottom-tag">
-            {frontmatter.tags !== null && ( 
-              frontmatter.tags.map( tag => {
-                return <span key={"link-span-key" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
-                        {"#" + tag}
-                  </Link></span>
-              }))
-            }
-          </p>*/}
     </Layout>
   )
 }

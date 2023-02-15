@@ -7,6 +7,10 @@ summary: ""
 featuredImage: "../../images/arttu-hiedanranta.jpg"
 imageId: "arttu-hiedanranta"
 ---
-I'm a software developer working as a consultant, and a PhD researcher in Tampere University focusing to studying how advanced automation and artificial intelligence should be incorporated to digital tools to empower human users.
+Arttu is a software developer and works as a software consultant focusing on how to help 
+organizations build software in an agile way. Programming has been a long passion for him, but he also 
+enjoys the field of human-computer interaction and other aspects of software development.
+            
+Humans as collaborative digital tool makers is an interesting viewpoint.
 
 You can find me on [Twitter](https://twitter.com/arttuv) or [LinkedIn](https://www.linkedin.com/in/arttu-viljakainen/).
