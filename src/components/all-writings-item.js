@@ -6,16 +6,16 @@ import kebabCase from "lodash/kebabCase"
 const AllWritingsItem = ({ post }) => (
 
   <article className="all-writings-item" key={post.frontmatter.title}>
-      <div>
-        <Link className="all-writings-item-title" to={post.frontmatter.path}>
-          <h3>{post.frontmatter.title}</h3>
-        </Link>   
-        <div>
-          <p className="latest-writing-item-date">
-            <strong>{post.frontmatter.date}</strong>{", " + post.fields.readingTime.text}
-          </p>
-        </div>
-      </div>
+  <Link to={post.frontmatter.path}>
+    <h2>{post.frontmatter.title}</h2>
+  </Link>
+  <div>
+    <p>{post.frontmatter.summary}</p>
+    <time>
+      <strong>{post.frontmatter.date}</strong>{", " + post.fields.readingTime.text}
+    </time>
+  </div>
+
   </article>
 )
 export default AllWritingsItem

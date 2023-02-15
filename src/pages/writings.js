@@ -9,9 +9,9 @@ const WritingsPage = () => (
     <Seo title="Writings" />
     <Layout>
       <BorderedTitle title="Writings" />
-      <div className="all-writings">
+      <article className="all-writings">
         <AllWritings />
-      </div>
+      </article>
     </Layout>
     </>
   )

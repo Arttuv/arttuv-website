@@ -11,11 +11,10 @@ const BlogTemplate = function Template({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout small="small">
+    <Layout>
       <Seo title={frontmatter.title} />
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <p className="blog-post-category">
+        <article className="blog-post">
+          <p className="category">
             {frontmatter.tags !== null && (
                   frontmatter.tags.map( tag => {
                     return <span key={"link-span-key" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
@@ -25,18 +24,16 @@ const BlogTemplate = function Template({
             }
           </p>
           <h1>{frontmatter.title}</h1>
-          <div>
-            <p className="blog-post-date">{frontmatter.date} </p>
-          </div>
+          <time>
+            {frontmatter.date}
+          </time>
           <hr />
           <div
-            className="blog-post-content"
+            className="content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
-        </div>
-      </div>
-      
-      <div className="commentsSection">
+        </article>
+      <div className="comment-section">
         <p>
           No comments, huh? I haven't found an easy and non-intrusive way to implements comments. I mean, I don't want to add a comment system that tracks people visiting this site etc. That's unfortunate, because I'd like to discuss topics I'm writing about, because any given text is just my understanding of it at that moment. You'd definitely have something valuable to say that would enable me to learn something new. 
         </p>
