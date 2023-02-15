@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import LatestWritingsItem from "./latest-writings-item"
+import AllWritingsItem from "./all-writings-item"
 
 const AllWritings = () => (
   <StaticQuery
@@ -40,7 +40,7 @@ const AllWritings = () => (
                 data.allMarkdownRemark.edges
                     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
                     .filter(edge => edge.node.frontmatter.type !== "graphical-page")
-                    .map(edge => <LatestWritingsItem key={edge.node.id} post={edge.node} />)
+                    .map(edge => <AllWritingsItem key={edge.node.id} post={edge.node} />)
        
     )}
     

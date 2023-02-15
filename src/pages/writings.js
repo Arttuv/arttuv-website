@@ -9,7 +9,7 @@ const WritingsPage = () => (
     <Seo title="Writings" />
     <Layout>
       <BorderedTitle title="Writings" />
-      <div className="latest-writings">
+      <div className="all-writings">
         <AllWritings />
       </div>
     </Layout>
