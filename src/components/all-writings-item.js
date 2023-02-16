@@ -9,11 +9,11 @@ const AllWritingsItem = ({ post }) => (
   <Link to={post.frontmatter.path}>
     <h2>{post.frontmatter.title}</h2>
   </Link>
-  <div>
-    <p>{post.frontmatter.summary}</p>
-    <time>
+  <time>
       <strong>{post.frontmatter.date}</strong>{", " + post.fields.readingTime.text}
     </time>
+  <div>
+    <p>{post.frontmatter.summary}</p>
   </div>
 
   </article>

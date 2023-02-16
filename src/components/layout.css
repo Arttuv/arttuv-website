@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
   padding: 1rem;
+  border-top: 10px lightgray;
 }
 
 p {
@@ -39,15 +40,18 @@ p {
   flex-direction: row;
 }
 
-footer .copyright {
+footer .copyright p {
   margin-top: 1rem;
   text-align: center;
-  font-size: smaller;
+  font-size: small;
 }
 
 .comment-section {
   border-top: 1px solid lightgray;
-  font-size: normal;
+}
+
+.comment-section p {
+  font-size: smaller;
   padding-top: 1rem;
   margin: 1rem;
   font-size: smaller;
@@ -73,13 +77,13 @@ footer .copyright {
   margin-bottom: 1rem;
 }
 
-.rssSubscribe h1 {
+.rss-subscribe h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.rssSubscribe p {
-  font-size: normal;
+.rss-subscribe p {
+  font-size: smaller;
 }
 
 main {
@@ -152,14 +156,14 @@ main {
   margin-top: 1rem;
 }
 
-.blog-post .category a {
+.blog-post .category span {
   color: #e7131a;
 }
 
 .blog-post time {
   text-align: left;
   color: #000;
-  font-weight: bold;
+  font-weight: normal;
   padding-left: auto;
   margin-left: auto;
   margin-top: 0px;
@@ -178,7 +182,7 @@ main {
   margin-top: 0.4rem;
   text-align: center;
   font-weight: normal;
-  font-size: normal;
+  font-size: smaller;
 }
 
 .blog-post ul {
@@ -228,15 +232,16 @@ header h1 {
   font-weight: normal;
 }
 
-header ul {
+nav ul {
   margin-bottom: 0px;
+  margin-top: 0.5rem;
   margin-left: 0px;
   margin-right: 0.5rem;
   padding-inline-start: 0px;
   text-align: right;
 }
 
-header ul li {
+nav ul li {
   display: inline-block;
   margin-bottom: 0.5rem;
   margin-left: 0px;
@@ -245,20 +250,14 @@ header ul li {
 }
 
 .site-title h1 {
-  font-size: 2.5rem;
+  font-size: 1.2rem;
 }
+
 .site-description {
   margin-bottom: 0px;
   text-align: center;
   font-weight: normal;
   font-size: normal;
-}
-
-.site-title-small {
-  margin-left: 0.5rem;
-}
-.site-title-small h1 {
-  font-size: 1.5rem;
 }
 
 .site-description-small {
@@ -279,6 +278,11 @@ header ul li {
 .blog-post-container strong {
   font-weight: bold;
   color: black;
+}
+
+nav a {
+  color: black;
+  font-size: smaller;
 }
 
 .blog-post-content h3 {
@@ -336,7 +340,7 @@ a {
 }
 
 .all-writings-item h2 {
-  font-size: normal;
+  font-size: 1.5rem;
   color: black;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -387,17 +391,13 @@ a {
   align-self: center;
 }
 
-.latest-writings-item-summary-read-more {
+.latest-writings-item .category {
   text-align: left;
   text-transform: uppercase;
-  
 }
 
-.latest-writings-item-summary-read-more span {
+.latest-writings-item .category span {
   margin-right: 0.5rem;
-}
-
-.latest-writings-item-summary-read-more a {
   color: #e7131a;
 }
 
@@ -692,12 +692,12 @@ a {
     margin: 0px;
   }
 
-  header ul {
+  nav ul {
     margin-bottom: 0px;
     padding-right: 0.5rem;
   }
 
-  header ul li {
+  nav ul li {
     display: block;
     margin-right: 0px;
   }

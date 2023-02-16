@@ -2,8 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Link } from "gatsby"
-import kebabCase from "lodash/kebabCase"
 
 const BlogTemplate = function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -17,9 +15,9 @@ const BlogTemplate = function Template({
           <p className="category">
             {frontmatter.tags !== null && (
                   frontmatter.tags.map( tag => {
-                    return <span key={"link-span-key" + tag}><Link to={`/tags/${kebabCase(tag)}/`}>
+                    return <span key={"link-span-key" + tag}>
                             {tag}
-                      </Link></span>
+                            </span>
                   }))
             }
           </p>
@@ -35,7 +33,7 @@ const BlogTemplate = function Template({
         </article>
       <div className="comment-section">
         <p>
-          No comments, huh? I haven't found an easy and non-intrusive way to implements comments. I mean, I don't want to add a comment system that tracks people visiting this site etc. That's unfortunate, because I'd like to discuss topics I'm writing about, because any given text is just my understanding of it at that moment. You'd definitely have something valuable to say that would enable me to learn something new. 
+          No comments, huh? I want to keep this site as low maintenance as possible (and not have any tracking). That's unfortunate, because I'd like to discuss topics I'm writing about, because any given text is just my understanding of it at that moment. You'd definitely have something valuable to say that would enable me to learn something new. 
         </p>
         <p>
           If you found a mistake, disagree or would like to discuss, <a href="https://twitter.com/arttuv">DM me on Twitter</a> or 

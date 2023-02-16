@@ -1,18 +1,17 @@
 import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import kebabCase from "lodash/kebabCase"
 
 const LatestWritingsItem = ({ post }) => (
 
   <article className="latest-writings-item" key={post.frontmatter.title}>
       <div>
-      <div className="latest-writings-item-summary-read-more">
+      <div className="category">
           {post.frontmatter.tags !== null && ( 
         post.frontmatter.tags.map( tag => {
-          return <span key={"link-to-"+tag}><Link to={`/tags/${kebabCase(tag)}/`}>
-                  {"" + tag}
-                </Link></span>
+          return <span key={"link-to-"+tag}>
+            {tag}
+            </span>
         }))
       }
     </div>
@@ -20,10 +19,10 @@ const LatestWritingsItem = ({ post }) => (
           <h3>{post.frontmatter.title}</h3>
         </Link>
         <div>
-            <p className="latest-writing-item-date">
-              <strong>{post.frontmatter.date}</strong>{", " + post.fields.readingTime.text}
-            </p>
-          </div>
+          <p className="latest-writing-item-date">
+            <strong>{post.frontmatter.date}</strong>{", " + post.fields.readingTime.text}
+          </p>
+        </div>
         {post.frontmatter.summary !== null && (<p className="latest-writings-item-summary">{post.frontmatter.summary}</p>)} 
         {post.frontmatter.summary === null && (<p className="latest-writings-item-summary">{post.excerpt}</p>)} 
         {post.frontmatter.featuredImage !== null && (

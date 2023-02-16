@@ -12,16 +12,18 @@ const Header = ({ small, dark }) =>
 (
   <>
       <header>  
-        <span className="site-title-small">
+        <span className="site-title">
           <Link to="/" style={{ textAlign: 'center', textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
             <h1>A. Viljakainen</h1>
           </Link>
         </span>
-        <ul style={{ listStyle: `none`}}>
-          <ListLink to="/">Home</ListLink>
-          <ListLink to="/writings/">Writings</ListLink>
-          <ListLink to="/author/">Author</ListLink>
-        </ul>
+        <nav>
+          <ul style={{ listStyle: `none`}}>
+            <ListLink to="/">Home</ListLink>
+            <ListLink to="/writings/">Writings</ListLink>
+            <ListLink to="/author/">Author</ListLink>
+          </ul>
+        </nav>
     </header>
   </>
 )
