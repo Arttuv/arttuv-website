@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-research-js",
-    "path": "/research/",
-    "result": {"data":{"fileName":{"childImageSharp":{"gatsbyImageData":{"layout":"constrained","backgroundColor":"#080808","images":{"fallback":{"src":"/static/bab1b350680bb72f77a5529e3dcb6e84/b8123/arttu_face_2019.jpg","srcSet":"/static/bab1b350680bb72f77a5529e3dcb6e84/73159/arttu_face_2019.jpg 181w,\n/static/bab1b350680bb72f77a5529e3dcb6e84/47674/arttu_face_2019.jpg 362w,\n/static/bab1b350680bb72f77a5529e3dcb6e84/b8123/arttu_face_2019.jpg 724w","sizes":"(min-width: 724px) 724px, 100vw"},"sources":[{"srcSet":"/static/bab1b350680bb72f77a5529e3dcb6e84/72e18/arttu_face_2019.webp 181w,\n/static/bab1b350680bb72f77a5529e3dcb6e84/c28a6/arttu_face_2019.webp 362w,\n/static/bab1b350680bb72f77a5529e3dcb6e84/3919e/arttu_face_2019.webp 724w","type":"image/webp","sizes":"(min-width: 724px) 724px, 100vw"}]},"width":724,"height":1086}}}},"pageContext":{}},
-    "staticQueryHashes": ["3649515864","4202924991"]}
