@@ -6,8 +6,7 @@ module.exports = {
     siteUrl: `https://www.arttuv.com`,
     url: `https://www.arttuv.com`,
     image: `/static-face-image.jpg`,
-    author: `Arttu Viljakainen`,
-    twitterUsername: "@arttuv",
+    author: `Arttu Viljakainen`
   },
   // pathPrefix is not needed in my case, but deploy to gh-pages fails without this.
   pathPrefix: "",

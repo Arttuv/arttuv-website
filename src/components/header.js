@@ -14,7 +14,7 @@ const Header = ({ small, dark }) =>
       <header>  
         <span className="site-title">
           <Link to="/" style={{ textAlign: 'center', textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
-            <h1>A. Viljakainen</h1>
+            <h1>arttuv.com</h1>
           </Link>
         </span>
         <nav>
