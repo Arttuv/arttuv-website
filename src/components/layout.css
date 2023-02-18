@@ -162,6 +162,7 @@ main {
   margin-bottom: 0px;
   padding-bottom: 0px;
   padding-top: 0px;
+  padding-left: 0.12rem;
   margin-top: 1rem;
 }
 
@@ -219,35 +220,40 @@ a:hover h3 {
 header {
   width: 100%;
   margin: 0 auto;
-  padding: 0 0 0 0.5rem;
   display: inline-flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   border-bottom: 1px solid lightgray;
 }
 
 header h1 {
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin-left: 1rem;
   font-weight: normal;
   color: black;
 }
 
-nav ul {
-  margin-bottom: 0px;
-  margin-top: 0.5rem;
-  margin-left: 0px;
+nav {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   margin-right: 0.5rem;
+}
+
+nav ul {
+  margin: 0px;
   padding-inline-start: 0px;
   text-align: right;
 }
 
 nav ul li {
   display: inline-block;
-  margin-bottom: 0.5rem;
   margin-left: 0px;
   margin-right: 1rem;
   text-align: right;
+}
+
+nav ul li { 
+  margin-bottom: 0rem;
 }
 
 .site-title h1 {
@@ -607,9 +613,11 @@ a:visited {
   }
 
   @media (max-width: 620px) {
+
     h1 {
       font-size: 2.5rem;
     }
+
     .site-description {
       font-size: normal;
     }
@@ -647,6 +655,10 @@ a:visited {
   
   header {
     margin: 0px;
+  }
+
+  nav ul li:not(:last-child) { 
+    margin-bottom: 0.5rem;
   }
 
   nav ul {
