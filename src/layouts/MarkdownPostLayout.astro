@@ -1,0 +1,17 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter } = Astro.props;
+---
+<BaseLayout title={frontmatter.title}>
+  <article class="blog-post">
+    <div class="category">
+      {frontmatter.tags.map((tag) => (
+        <span><a href={`/tags/${tag}`}>{tag}</a></span>
+      ))}
+    </div>
+    <h1>{frontmatter.title}</h1>
+    <time>{frontmatter.pubDate.slice(0,10)}</time>
+    <hr />
+    <slot />
+  </article>
+</BaseLayout>

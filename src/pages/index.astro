@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const allPosts = await Astro.glob('./writings/*.md');
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+const pageTitle = "Home Page";
+---
+<BaseLayout pageTitle={pageTitle}>
+  <div>
+    <div class="bordered-title-bar">
+      <div></div>
+      <h4>Latest Writings</h4>
+      <div></div>
+    </div>
+  </div>
+  <div class="latest-writings">
+    {allPosts.splice(0, 2).map((post) => 
+      <article class="latest-writings-item" id={post.frontmatter.title}>
+        <div>
+        <div class="category">
+            {post.frontmatter.tags !== null && ( 
+          post.frontmatter.tags.map( tag => {
+            return <span id={"link-to-"+tag}>
+              <a href={`/tags/${tag}`}>{tag}</a>
+              </span>
+          }))
+        }
+      </div>
+          <a class="latest-writings-item-title" href={post.url}>
+            <h3>{post.frontmatter.title}</h3>
+          </a>
+          <div>
+            <p class="latest-writing-item-date">
+              <strong>{post.frontmatter.pubDate}</strong>
+            </p>
+          </div>
+          {post.frontmatter.summary !== null && (<p class="latest-writings-item-summary">{post.frontmatter.summary}</p>)} 
+          {post.frontmatter.summary === null && (<p class="latest-writings-item-summary"></p>)} 
+          {post.frontmatter.featuredImage !== null && (
+            <img src={post.frontmatter.featuredImage.url} width="300" alt={post.frontmatter.featuredImage.alt} />
+              )}
+        </div>
+    </article>
+    )}
+  </div>
+  <div class="archive">
+    {allPosts.splice(2, 9).map((post) => 
+      <article class={"archive-article-item "}>
+            <>
+              <div>
+                {post.frontmatter.tags !== null && (
+                  post.frontmatter.tags.map(tag => {
+                    return <div class="archive-article-item-topic" id={"gallery-article-item-topic" + tag}>
+                      <a href={`/tags/${tag}`}>{tag}</a>
+                    </div>
+                  }))}
+                <a href={post.url}>
+                  <h3>{post.frontmatter.title}</h3>
+                </a>
+                <div class="archive-article-item-summary-read-more">
+                  <span>
+                    {post.frontmatter.pubDate}
+                  </span>
+                </div>
+              </div>
+            </>
+        </article>
+    )}
+  </div>
+</BaseLayout>
