@@ -211,7 +211,7 @@ a, a:visited, a:active {
     margin-bottom: 0.5rem;
 }
 
-.bordered-title-bar h4 {
+.bordered-title-bar h2 {
     color: #242424;
     text-transform: uppercase;
     margin-bottom: 0rem;
@@ -219,6 +219,7 @@ a, a:visited, a:active {
     border-bottom: 1px solid lightgray;
     margin-left: 2rem;
     margin-right: 2rem;
+    font-size: 1rem;
 }
 
 .bordered-title-bar div:first-of-type {
