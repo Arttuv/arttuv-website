@@ -32,3 +32,65 @@ const username = "withastro";
       </p>
   </div>
 </footer>  
+
+<style>
+  footer {
+    padding: 1rem;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  footer .copyright p {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: small;
+  }
+
+  footer nav a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .bottom-navigation {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: normal;
+    text-align: right;
+  }
+
+  .bottom-navigation ul {
+    padding-inline-start: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom-navigation li {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 1rem;
+  }
+
+  .bottom-navigation li:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  .rss-subscribe h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .rss-subscribe p {
+    font-size: smaller;
+  }
+
+  .rss-subscribe a {
+    color: #2c78ca;
+  }
+
+</style>

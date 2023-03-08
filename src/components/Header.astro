@@ -16,3 +16,73 @@ import Hamburger from './Hamburger.astro';
      </ul>
    </nav>
 </header>
+<style>
+  header {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+  }
+
+  header h1 {
+    margin-left: 1rem;
+    font-weight: normal;
+    color: black;
+  }
+
+  nav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  nav ul {
+    margin: 0px;
+    padding-inline-start: 0px;
+    text-align: right;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 1rem;
+    text-align: right;
+  }
+
+  nav ul li { 
+    margin-bottom: 0rem;
+  }
+
+  nav ul li:not(:last-child) { 
+    margin-right: 1rem;  
+  }
+  nav a, nav a:visited, nav a:active {
+    color: black;
+  }
+  
+  @media (max-width: 620px) {
+  
+    header {
+      margin: 0px;
+    }
+    
+    nav ul li:not(:last-child) { 
+      margin-bottom: 0.5rem;
+      margin-right: 0rem;
+    }
+  
+    nav ul {
+      margin-bottom: 0px;
+      padding-right: 0.5rem;
+    }
+  
+    nav ul li {
+      display: block;
+      margin-right: 0px;
+    }
+
+  }
+</style>

@@ -26,28 +26,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-footer {
-  padding: 1rem;
-}
-
 p {
   margin-bottom: 1rem;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: row;
-}
-
-footer .copyright p {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: small;
-}
-
-footer nav a {
-  color: black;
-  text-decoration: none;
 }
 
 .comment-section {
@@ -59,45 +39,6 @@ footer nav a {
   padding-top: 1rem;
   margin: 1rem;
   font-size: smaller;
-}
-
-.bottom-navigation {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  font-size: normal;
-  text-align: right;
-}
-
-.bottom-navigation ul {
-  padding-inline-start: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.bottom-navigation li {
-  display: flex;
-  justify-content: right;
-  width: 100%;
-  text-align: right;
-  margin-bottom: 1rem;
-}
-
-.bottom-navigation li:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.rss-subscribe h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.rss-subscribe p {
-  font-size: smaller;
-}
-
-.rss-subscribe a {
-  color: #2c78ca;
 }
 
 main {
@@ -204,50 +145,6 @@ a:hover h3 {
   color: black;
 }
 
-header {
-  width: 100%;
-  margin: 0 auto;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  border-bottom: 1px solid lightgray;
-}
-
-header h1 {
-  margin-left: 1rem;
-  font-weight: normal;
-  color: black;
-}
-
-nav {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-nav ul {
-  margin: 0px;
-  padding-inline-start: 0px;
-  text-align: right;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-left: 0px;
-  margin-right: 1rem;
-  text-align: right;
-}
-
-nav ul li { 
-  margin-bottom: 0rem;
-}
-
-nav ul li:not(:last-child) { 
-  margin-right: 1rem;  
-}
-
-
 .site-title h1 {
   font-size: 1.2rem;
 }
@@ -279,12 +176,6 @@ nav ul li:not(:last-child) {
   color: black;
 }
 
-header nav a {
-  color: black;
-  font-size: smaller;
-  text-decoration: none;
-}
-
 .blog-post-content h3 {
   font-size: 1.5rem;
 }
@@ -309,11 +200,7 @@ a:hover {
   text-decoration: underline;
 }
 
-a:active {
-  color: black;
-}
-
-a:visited {
+a, a:visited, a:active {
   color: #2c78ca;
 }
 
@@ -491,7 +378,9 @@ a:visited {
   border-right: none;
 }
 
-.archive-article-item-topic {
+.archive-article-item .category{
+  text-transform: uppercase;
+  font-size: smaller;
   align-self: center;
 }
 
@@ -571,25 +460,6 @@ a:visited {
     .archive-article-item {
       margin-left: 0rem;
       margin-right: 0rem;
-    }
-  
-    header {
-      margin: 0px;
-    }
-  
-    nav ul li:not(:last-child) { 
-      margin-bottom: 0.5rem;
-      margin-right: 0rem;
-    }
-  
-    nav ul {
-      margin-bottom: 0px;
-      padding-right: 0.5rem;
-    }
-  
-    nav ul li {
-      display: block;
-      margin-right: 0px;
     }
     
   }

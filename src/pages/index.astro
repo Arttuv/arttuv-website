@@ -50,7 +50,7 @@ const pageTitle = "Home Page";
               <div>
                 {post.frontmatter.tags !== null && (
                   post.frontmatter.tags.map(tag => {
-                    return <div class="archive-article-item-topic" id={"gallery-article-item-topic" + tag}>
+                    return <div class="category">
                       <a href={`/tags/${tag}`}>{tag}</a>
                     </div>
                   }))}
