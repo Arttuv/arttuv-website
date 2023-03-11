@@ -1,0 +1,143 @@
+---
+const allPosts = Astro.props.allPosts;
+---
+<div class="latest-writings">
+    {allPosts.splice(0, 2).map((post) => 
+      <article class="latest-writings-item" id={post.frontmatter.title}>
+        <div>
+        <div class="category">
+            {post.frontmatter.tags !== null && ( 
+          post.frontmatter.tags.map( tag => {
+            return <span id={"link-to-"+tag}>
+              <a href={`/tags/${tag}`}>{tag}</a>
+              </span>
+          }))
+        }
+      </div>
+          <a class="latest-writings-item-title" href={post.url}>
+            <h3>{post.frontmatter.title}</h3>
+          </a>
+          <div>
+            <p class="latest-writing-item-date">
+              <strong>{post.frontmatter.pubDate}</strong>
+            </p>
+          </div>
+          {post.frontmatter.summary !== null && (<p class="latest-writings-item-summary">{post.frontmatter.summary}</p>)} 
+          {post.frontmatter.summary === null && (<p class="latest-writings-item-summary"></p>)} 
+          {post.frontmatter.featuredImage !== null && (
+            <img src={post.frontmatter.featuredImage.url} width="300" alt={post.frontmatter.featuredImage.alt} />
+              )}
+        </div>
+    </article>
+    )}
+  </div>
+
+  <style>
+    .latest-writing-item-date {
+        font-size: smaller;
+    }
+  
+    .latest-writings {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        grid-auto-flow: dense;
+        font-size: normal;
+    }
+    
+    .latest-writings-item:nth-of-type(odd) {
+        border-right: 1px solid lightgray;
+        margin-right: -1rem;
+        padding-right: 2rem;
+    }
+    
+    .latest-writings-item:last-of-type {
+        border-right: none;
+    }
+    
+    .latest-writings-item {
+        min-width:229px;
+        margin: 0.5rem 1rem;
+        font-size: initial;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .latest-writings-item h3 {
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        text-align: left;
+    }
+    
+    .latest-writings-item-topic {
+        align-self: center;
+    }
+    
+    .latest-writings-item .category {
+        text-align: left;
+        text-transform: uppercase;
+    }
+    
+    .latest-writings-item .category span {
+        margin-right: 0.5rem;
+    }
+    
+    .latest-writing-item-date {
+        text-align: left;
+        margin-bottom: 0px;
+    }
+
+    .category a {
+      color: black;
+    }
+
+    .latest-writings-item-title, 
+    .latest-writings-item-title:active, 
+    .latest-writings-item-title:visited, 
+    .latest-writings-item-title:focus {
+      color: black;
+    }
+
+    @media (max-width: 459px) {
+
+.latest-writings {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.latest-writings-item:nth-of-type(odd) {
+  border-right: 0px solid lightgray;
+  margin-right: 1rem;
+  padding-right: 0rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid lightgray;
+}
+
+.latest-writings-item-image {
+  align-self: center;
+  padding-right: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+}
+
+@media (max-width: 620px) {
+
+.latest-writings {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.latest-writings-item:nth-of-type(odd) {
+  border-right: none;
+  padding-right: 0px;
+  margin-right: 1rem;
+}
+
+}
+
+  </style>

@@ -1,4 +1,6 @@
 ---
+import Archive from '../components/Archive.astro';
+import LatestWritings from '../components/LatestWritings.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const allPosts = await Astro.glob('./writings/*.md');
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
@@ -13,60 +15,8 @@ const pageTitle = "Home Page";
       <div></div>
     </div>
   </div>
-  <div class="latest-writings">
-    {allPosts.splice(0, 2).map((post) => 
-      <article class="latest-writings-item" id={post.frontmatter.title}>
-        <div>
-        <div class="category">
-            {post.frontmatter.tags !== null && ( 
-          post.frontmatter.tags.map( tag => {
-            return <span id={"link-to-"+tag}>
-              <a href={`/tags/${tag}`}>{tag}</a>
-              </span>
-          }))
-        }
-      </div>
-          <a class="latest-writings-item-title" href={post.url}>
-            <h3>{post.frontmatter.title}</h3>
-          </a>
-          <div>
-            <p class="latest-writing-item-date">
-              <strong>{post.frontmatter.pubDate}</strong>
-            </p>
-          </div>
-          {post.frontmatter.summary !== null && (<p class="latest-writings-item-summary">{post.frontmatter.summary}</p>)} 
-          {post.frontmatter.summary === null && (<p class="latest-writings-item-summary"></p>)} 
-          {post.frontmatter.featuredImage !== null && (
-            <img src={post.frontmatter.featuredImage.url} width="300" alt={post.frontmatter.featuredImage.alt} />
-              )}
-        </div>
-    </article>
-    )}
-  </div>
-  <div class="archive">
-    {allPosts.splice(2, 9).map((post) => 
-      <article class={"archive-article-item "}>
-            <>
-              <div>
-                {post.frontmatter.tags !== null && (
-                  post.frontmatter.tags.map(tag => {
-                    return <div class="category">
-                      <a href={`/tags/${tag}`}>{tag}</a>
-                    </div>
-                  }))}
-                <a href={post.url}>
-                  <h3>{post.frontmatter.title}</h3>
-                </a>
-                <div class="archive-article-item-summary-read-more">
-                  <span>
-                    {post.frontmatter.pubDate}
-                  </span>
-                </div>
-              </div>
-            </>
-        </article>
-    )}
-  </div>
+  <LatestWritings allPosts={allPosts} />
+  <Archive allPosts={allPosts} />
 </BaseLayout>
 <style>
   .category a {

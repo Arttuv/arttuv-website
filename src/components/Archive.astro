@@ -1,0 +1,142 @@
+---
+const allPosts = Astro.props.allPosts;
+---
+<div class="archive">
+    {allPosts.splice(2, 9).map((post) => 
+      <article class={"archive-article-item "}>
+            <>
+              <div>
+                {post.frontmatter.tags !== null && (
+                  post.frontmatter.tags.map(tag => {
+                    return <div class="category">
+                      <a href={`/tags/${tag}`}>{tag}</a>
+                    </div>
+                  }))}
+                <a href={post.url} class="archive-article-title">
+                  <h3>{post.frontmatter.title}</h3>
+                </a>
+                <div class="archive-article-item-summary-read-more">
+                  <span>
+                    {post.frontmatter.pubDate}
+                  </span>
+                </div>
+              </div>
+            </>
+        </article>
+    )}
+  </div>
+
+  <style>
+
+    .category a {
+        color: black;
+    }
+
+    .archive-article-item-summary-read-more {
+    text-align: right;
+    }
+
+    .archive-article-item {
+    margin: 1rem;
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+    .archive-article-title,
+    .archive-article-title:focus,
+    .archive-article-title:visited,
+    .archive-article-title:active, {
+        color: black;
+    }
+
+    .archive-article-item h3 {
+    font-size: 1.5rem;
+    margin-top: 0.1rem;
+    font-weight: 300;
+    }
+
+    .archive-article-item:last-of-type {
+    border-right: none;
+    }
+
+    .archive-article-item .category{
+    text-transform: uppercase;
+    font-size: smaller;
+    align-self: center;
+    }
+
+    .archive-article-item blockquote {
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid lightcoral;
+    margin-bottom: 1rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    }
+
+    @media (max-width: 459px) {
+
+.archive {
+  display: flex;
+  flex-direction: column;
+}
+
+.latest-writings {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.latest-writings-item:nth-of-type(odd) {
+  border-right: 0px solid lightgray;
+  margin-right: 1rem;
+  padding-right: 0rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid lightgray;
+}
+
+.latest-writings-item-image {
+  align-self: center;
+  padding-right: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-post-container blockquote p {
+  font-size: 1.02rem;
+}
+
+.archive-article-item blockquote {
+  font-size: 1.02rem;
+}
+
+}
+
+@media (max-width: 620px) {
+
+    .archive-article-item {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    }
+
+}
+
+@media (max-width: 756px) {
+
+.archive-article-item:nth-of-type(odd) {
+border-right: none;
+margin-right: 0rem;
+padding-right: 0px;
+}
+
+.archive {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+margin: 0.5rem;
+grid-gap: 0.5rem;
+}
+
+  </style>
