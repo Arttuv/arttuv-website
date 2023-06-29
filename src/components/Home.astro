@@ -1,0 +1,199 @@
+
+---
+import arttu from "../images/arttuv-bw.jpeg"
+import bw_wood from "../images/IMG_7500.jpeg"
+import flowers from "../images/IMG_8189.jpeg"
+import swimming_lapinniemi from "../images/IMG_7051.jpeg"
+---
+
+<div class="home-page">
+    <div class="welcome-container">
+        <div class="hello-text">
+            Hello! I’m a software development consultant. I write code. I strive to foster teamwork. I’m fascinated by the challenge of complexity.
+        </div>
+        <div class="arttu-photo">
+            <img src={arttu} alt="Photo of Arttu"/>
+        </div>
+    </div>
+    <div class="what-this-is-about">
+        <div>
+            <img src={bw_wood} alt="BW photo of old wood"/>
+        </div>
+        <div class="what-this-is-about-text">
+            <article>
+                <h2>What is a software development consultant?</h2>
+                <p>To me it is a software developer working as a consultant, having a perspective to the whole process of building digital solutions.</p>
+                <strong>Coding</strong>
+                <p>I’ve been coding for a living for 15 years, and writing code for 25 years. I still do.</p>
+                <strong>Teamwork</strong>
+                <p>Teams are essential in creating software: combining interdisciplinary skills in a way that makes the whole more than the sum of each individual. Team forms an entity that is something more.</p>
+                <strong>Processes</strong>
+                <p>Software happens in a complex world, in which you can’t predict the future. That’s why we have agile. I think it is essential to understand the difference between complicated and complex environments, and act accordingly.</p>
+            </article>
+        </div>
+        <div>
+            <img src={flowers} alt="Photo of flowers"/>
+        </div>
+    </div>
+    <div class="bottom-part">
+        <div class="bottom-part-image">
+            <img src={swimming_lapinniemi} alt="Photo of swimming in Lapinniemi"/>
+        </div>
+        <div class="bottom-part-text">
+            <h2>That is a lot</h2>
+            <p>
+                I’m fully aware that it is a lot to a single person - after all, that is why we have people with different skills in our teams: to have that deep knowledge and combine it with skills of others to form a team that can do wonders.
+            </p>
+            <p>
+                Still, I have accepted that my subjects of interests vary, and I find it difficult to focus on just one area.
+            </p>
+            <p>
+                That makes me a generalist. 
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .home-page {
+        width: 100%;
+        margin: auto;
+    }
+    .welcome-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 80vh;
+        width: 100%;
+    }
+    .hello-text {
+        max-width: 40vw;
+        font-size: 2rem;
+    }
+    .arttu-photo img {
+        object-fit: cover;
+        width: 40vw;
+        max-width: 100%;
+        height: 60vh;
+    }
+    
+    .what-this-is-about {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+    }
+    .what-this-is-about img {
+        object-fit: cover;
+        max-width: 20vw;
+        height: 60vh;
+        border-radius: 2rem;
+    }
+    .what-this-is-about :nth-child(1 of div) {
+            display: flex;
+            align-items: start;
+            max-height: 60vw;
+            min-height: 60vw;
+    }
+    .what-this-is-about :nth-child(3 of div) {
+        display: flex;
+        align-items: end;
+        max-height: 60vw;
+        min-height: 60vw;
+    }
+
+    .bottom-part {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 80vh;
+        width: 100%;
+        gap: 2rem;
+    }
+    .bottom-part-text {
+        max-width: 40vw;
+        font-size: 2rem;
+    }
+    .bottom-part-image img {
+        object-fit: cover;
+        width: 40vw;
+        max-width: 100%;
+        height: 60vh;
+    }
+
+    @media (max-width: 800px) {
+        .welcome-container {
+            margin-top: 2rem;
+            flex-direction: column-reverse;
+            justify-content: center;
+            height: auto;
+        }
+        .hello-text {
+            max-width: 100%;
+            font-size: 1.5rem;
+        }
+        .arttu-photo {
+            width: 100%;
+        }
+        .arttu-photo img {
+            object-fit: cover;
+            width: 100%;
+            height: 50vh;
+        }
+        .what-this-is-about {
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: center;
+        }
+        .what-this-is-about img {
+            max-width: 50vw;
+            max-height: 50vw;
+        }
+        .what-this-is-about-text {
+            width: 100%;
+        }
+        .what-this-is-about :nth-child(1 of div) {
+            order: 1;
+            display: flex;
+            align-items: start;
+            max-height: 60vw;
+            min-height: 60vw;
+        }
+        .what-this-is-about :nth-child(3 of div) {
+            order: 2;
+            display: flex;
+            align-items: end;
+            max-height: 60vw;
+            min-height: 60vw;
+        }
+        .what-this-is-about :nth-child(2) {
+            order: 3;
+        }
+
+        .bottom-part {
+            margin-top: 2rem;
+            flex-direction: column;
+            justify-content: center;
+            height: auto;
+        }
+
+        .bottom-part-text {
+            max-width: 100%;
+        }
+
+        .bottom-part-image {
+            width: 100%;
+        }
+
+        .bottom-part-image img {
+            object-fit: cover;
+            width: 100%;
+            height: 50vh;
+        }
+    }
+</style>

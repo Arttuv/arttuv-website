@@ -25,7 +25,7 @@ const allPosts = Astro.props.allPosts;
           {post.frontmatter.summary !== null && (<p class="latest-writings-item-summary">{post.frontmatter.summary}</p>)} 
           {post.frontmatter.summary === null && (<p class="latest-writings-item-summary"></p>)} 
           {post.frontmatter.featuredImage !== null && (
-            <img src={post.frontmatter.featuredImage.url} width="300" alt={post.frontmatter.featuredImage.alt} />
+            <img src={post.frontmatter.featuredImage.url} alt={post.frontmatter.featuredImage.alt} />
               )}
         </div>
     </article>
@@ -33,6 +33,11 @@ const allPosts = Astro.props.allPosts;
   </div>
 
   <style>
+
+    img {
+      max-width: 90%;
+      margin: 0 auto;
+    }
     .latest-writing-item-date {
         font-size: smaller;
     }
@@ -40,15 +45,22 @@ const allPosts = Astro.props.allPosts;
     .latest-writings {
         display:grid;
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        gap: 1rem;
         grid-auto-flow: dense;
         font-size: normal;
     }
     
+    .latest-writings-item img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .latest-writings-item:first-of-type {
+      background-color: #FFF;
+    }
+
     .latest-writings-item:nth-of-type(odd) {
         border-right: 1px solid lightgray;
-        margin-right: -1rem;
-        padding-right: 2rem;
     }
     
     .latest-writings-item:last-of-type {
@@ -61,6 +73,12 @@ const allPosts = Astro.props.allPosts;
         font-size: initial;
         display: flex;
         flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .latest-writings-item:nth-of-type(2) {
+      background-color: #FFF;
     }
     
     .latest-writings-item h3 {
@@ -125,7 +143,7 @@ const allPosts = Astro.props.allPosts;
 
 }
 
-@media (max-width: 620px) {
+@media (max-width: 800px) {
 
 .latest-writings {
   display: grid;

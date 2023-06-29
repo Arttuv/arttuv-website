@@ -4,16 +4,63 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Author";
+import programming_as_human_performance from "../images/IMG_4637.jpeg"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <p>
-        Arttu is a software developer and works as a software consultant focusing on how to help organizations build software in an agile way. Programming has been a long passion for him, but he also enjoys the field of human-computer interaction and other aspects of software development.
-    </p>
-    <p>
-        Humans as collaborative digital tool makers is an interesting viewpoint.
-    </p>
-    <p>
-        You can find Arttu at <a href="https://scholar.social/@arttuv">Mastodon</a> or <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a>.
-    </p>
+    <div class="author-container">
+        <div class="author-text">
+            <h1>Who is Arttu?</h1>
+            <p>
+                I’m a software developer from the Eastern Finland, currently living in Tampere. I have 15 years of experience from product companies to consulting.
+            </p>
+            <p>
+                I never really thought of doing anything else but coding - it was just so fascinating to make computer do anything. I studied computer science, but since the interface of machines and humans is what really matters, I also studied cognitive science and psychology.
+            </p>
+            <p>
+                I’m still learning how to combine all my interests in an optimal way to get the best outcomes.
+            </p>
+            <p>
+                I expect that learning path to take the rest of my career.
+            </p>
+            <p>
+                Humans as collaborative digital tool makers is an interesting viewpoint.
+            </p>
+            <p>
+                You can find Arttu at <a href="https://scholar.social/@arttuv">Mastodon</a> or <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a>.
+            </p>
+        </div>
+        <div class="author-image">
+            <img src={programming_as_human_performance} alt="Photo from a book Psychology of Computer Programming" />
+        </div>
+    </div>
 </BaseLayout>
+
+<style>
+    .author-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .author-image img {
+        max-width: 50vw;
+        max-height: 90vh;
+        object-fit: cover;
+    }
+
+    @media (max-width: 800px) {
+        .author-container {
+            flex-direction: column-reverse;
+        }
+
+        .author-image {
+            width: 100%;
+        }
+        .author-image img {
+            min-width: 100%;
+            max-width: 100%;
+            max-height: 50vh;
+        }
+    }
+</style>
