@@ -1,13 +1,10 @@
 ---
 import Navigation from './Navigation.astro';
 import Hamburger from './Hamburger.astro';
+import svgMastodon from '../images/icons8-mastodon.svg';
+import svgLinkedin from '../images/icons8-linkedin.svg';
 ---
 <header>  
-   <span class="site-title">
-     <a href="/" style={{ textAlign: 'center', textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
-       <h1>arttuv.com</h1>
-     </a>
-   </span>
    <nav>
      <ul style={{ listStyle: `none`}}>
        <li><a href="/">Home</a></li>
@@ -15,11 +12,20 @@ import Hamburger from './Hamburger.astro';
        <li><a href="/author/">Author</a></li>
      </ul>
    </nav>
+   <span class="site-title">
+    <a href="/" style={{ textAlign: 'center', textShadow: `none`, backgroundImage: `none`, textDecoration: `none`, color: `black` }}>
+      <h1>arttuv.com</h1>
+    </a>
+  </span>
+  <div class="header-social">
+    <a href="https://scholar.social/@arttuv"><img src={svgMastodon} alt="Link to Mastodon"/></a>
+    <a href="https://www.linkedin.com/in/arttu-viljakainen/"><img src={svgLinkedin} alt="Link to Linkedin"/></a>
+  </div>
 </header>
 <style>
   header {
     width: 100%;
-    margin: 2rem auto;
+    margin: 1rem auto;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -28,8 +34,26 @@ import Hamburger from './Hamburger.astro';
     background-color: #FFF;
   }
 
+  header nav {
+    min-width: 39vw;
+  }
+  header .site-title {
+    min-width: 22vw;
+  }
+  header .header-social {
+    min-width: 36vw;
+  }
+
+  .site-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-social {
+    text-align: right;
+    padding-right: 1rem;
+  }
+
   header h1 {
-    margin-left: 1rem;
     font-weight: normal;
     color: black;
   }
@@ -37,20 +61,19 @@ import Hamburger from './Hamburger.astro';
   nav {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 1.0875rem;
   }
 
   nav ul {
     margin: 0px;
     padding-inline-start: 0px;
-    text-align: right;
+    text-align: left;
   }
 
   nav ul li {
     display: inline-block;
-    margin-left: 0px;
-    margin-right: 1rem;
-    text-align: right;
+    margin-right: 0px;
+    text-align: left;
   }
 
   nav ul li { 
