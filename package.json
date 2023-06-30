@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/rss": "^2.1.1",
     "@fontsource-variable/roboto-serif": "^5.0.4",
-    "astro": "^2.0.18"
+    "astro": "^2.0.18",
+    "sanitize-html": "^2.11.0"
   }
 }
