@@ -7,7 +7,6 @@ tags: ["dev"]
 featuredImage:
     url: "../../images/asynchronous-work-drawing.png"
     alt: "Asynchronous work drawing"
-description: "This is the first post of my new Astro blog."
 ---
 
 I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional meetings with others - that’s easy and only thing you need to worry is getting lonely. Now I work with a team on things that require collaboration, so it’s much harder - you can’t just mimic the co-located way of working remotely. Or you can, but it’s suboptimal and leads into inefficiencies. By GitLab terms that stage of remote is called [skeuomorph](https://about.gitlab.com/company/culture/all-remote/phases-of-remote-adaptation/).
