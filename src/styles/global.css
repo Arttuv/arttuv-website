@@ -187,34 +187,6 @@ a, a:visited, a:active {
   color: #2c78ca;
 }
 
-.bordered-title-bar {
-    display: inline-flex;
-    position: relative;
-    width: 100%;
-    margin-bottom: 0.5rem;
-}
-
-.bordered-title-bar h2 {
-    color: #242424;
-    text-transform: uppercase;
-    margin-bottom: 0rem;
-    padding: 0.2rem 0.5rem;
-    border-bottom: 1px solid lightgray;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    font-size: 1rem;
-}
-
-.bordered-title-bar div:first-of-type {
-    flex-grow: 2;
-    margin-bottom: 0.75rem;
-}
-
-.bordered-title-bar div:last-of-type {
-  flex-grow: 2;
-  margin-bottom: 0.75rem;
-}
-
 .all-writings {
   display:grid;
   gap: 1rem;

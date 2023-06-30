@@ -3,13 +3,14 @@ import Navigation from './Navigation.astro';
 import Hamburger from './Hamburger.astro';
 import svgMastodon from '../images/icons8-mastodon.svg';
 import svgLinkedin from '../images/icons8-linkedin.svg';
+const { pageTitle } = Astro.props;
 ---
 <header>  
    <nav>
      <ul style={{ listStyle: `none`}}>
-       <li><a href="/">Home</a></li>
-       <li><a href="/writings/">Writings</a></li>
-       <li><a href="/author/">Author</a></li>
+       {pageTitle === 'Home' ? <li><a href="/" style="text-decoration: underline;">Home</a></li> : <li><a href="/">Home</a></li>}
+       {pageTitle === 'Writings' ? <li><a href="/writings/" style="text-decoration: underline;">Writings</a></li> : <li><a href="/writings/">Writings</a></li> }
+       {pageTitle === 'Author' ? <li><a href="/author/" style="text-decoration: underline;">Author</a></li> : <li><a href="/author/">Author</a></li>}
      </ul>
    </nav>
    <span class="site-title">
@@ -25,7 +26,7 @@ import svgLinkedin from '../images/icons8-linkedin.svg';
 <style>
   header {
     width: 100%;
-    margin: 1rem auto;
+    margin: 0rem auto;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -91,6 +92,16 @@ import svgLinkedin from '../images/icons8-linkedin.svg';
   
     header {
       margin: 0px;
+    }
+
+    header nav {
+      min-width: 30vw;
+    }
+    header .site-title {
+      min-width: 22vw;
+    }
+    header .header-social {
+      min-width: 30vw;
     }
     
     nav ul li:not(:last-child) { 

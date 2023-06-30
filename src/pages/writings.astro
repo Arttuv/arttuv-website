@@ -6,11 +6,6 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
 const pageTitle = "Writings";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<div class="bordered-title-bar">
-		<div></div>
-			<h2>Writings</h2>
-		<div></div>
-	</div>
 	<ul>
 		{allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
 	</ul>
