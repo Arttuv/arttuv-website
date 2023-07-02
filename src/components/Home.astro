@@ -29,7 +29,13 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
                 <p>Teams are essential in creating software: combining interdisciplinary skills in a way that makes the whole more than the sum of each individual. Team forms an entity that is something more.</p>
                 <strong>Processes</strong>
                 <p>Software happens in a complex world, in which you can’t predict the future. That’s why we have agile. I think it is essential to understand the difference between complicated and complex environments, and act accordingly.</p>
+                
             </article>
+            <span class="button-container">
+                <form>
+                    <button formaction="/writings/">Writings</button>
+                </form>
+            </span>
         </div>
         <div>
             <img src={flowers} alt="Photo of flowers"/>
@@ -48,13 +54,27 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
                 Still, I have accepted that my subjects of interests vary, and I find it difficult to focus on just one area.
             </p>
             <p>
-                That makes me a generalist. 
+                That makes me a generalist. I can't get as deep as someone focusing no a single area, but I hope I can see the big picture and understand the connections between different areas.
             </p>
         </div>
     </div>
 </div>
 
 <style>
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        }
+    button {
+        background-color: #000;
+        color: white;
+        border: none;
+        border-radius: 0.2rem;
+        padding: 0.5rem 1rem;
+        font-size: smaller;
+        cursor: pointer;
+    }
     .home-page {
         width: 100%;
         margin: auto;
@@ -86,7 +106,7 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
         gap: 2rem;
         width: 100%;
     }
-    .what-this-is-about-text p {
+    .what-this-is-about-text p:not(:first-of-type) {
         font-size: smaller;
     }
     .what-this-is-about img {
