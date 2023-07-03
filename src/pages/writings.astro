@@ -1,13 +1,19 @@
 ---
 import '../styles/global.css'
 import BaseLayout from '../layouts/BaseLayout.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 const allPosts = await Astro.glob('../pages/writings/*.md');
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 const pageTitle = "Writings";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<ul>
-		{allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+		{allPosts.map((post) => (
+			<li>
+				<FormattedDate date={new Date(post.frontmatter.pubDate)}/>
+				&emsp;
+				<a href={post.url}>{post.frontmatter.title}</a>
+			</li>))}
 	</ul>
 </BaseLayout>
 <style>
