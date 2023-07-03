@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout title={frontmatter.title}>
@@ -10,7 +11,7 @@ const { frontmatter } = Astro.props;
       ))}
     </div>
     <h1>{frontmatter.title}</h1>
-    <time>{frontmatter.pubDate.slice(0,10)}</time>
+    <time>{<FormattedDate date={new Date(frontmatter.pubDate)}/>}</time>
     <hr />
     <slot />
   </article>
