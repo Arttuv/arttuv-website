@@ -3,6 +3,8 @@ import Navigation from './Navigation.astro';
 import Hamburger from './Hamburger.astro';
 import svgMastodon from '../images/icons8-mastodon.svg';
 import svgLinkedin from '../images/icons8-linkedin.svg';
+import svgRSS from '../images/rss.svg';
+
 const { pageTitle } = Astro.props;
 ---
 <header>  
@@ -21,6 +23,7 @@ const { pageTitle } = Astro.props;
   <div class="header-social">
     <a href="https://scholar.social/@arttuv"><img src={svgMastodon} alt="Link to Mastodon"/></a>
     <a href="https://www.linkedin.com/in/arttu-viljakainen/"><img src={svgLinkedin} alt="Link to Linkedin"/></a>
+    <a href="/rss.xml"><img src={svgRSS} alt="RSS link"/></a>
   </div>
 </header>
 <style>
@@ -91,7 +94,7 @@ const { pageTitle } = Astro.props;
   @media (max-width: 620px) {
   
     header {
-      margin: 0px;
+      margin: 1rem 0 0 0;
     }
 
     header nav {
@@ -117,6 +120,11 @@ const { pageTitle } = Astro.props;
     nav ul li {
       display: block;
       margin-right: 0px;
+    }
+
+    .header-social {
+      display: flex;
+      flex-direction: column-reverse;
     }
 
   }
