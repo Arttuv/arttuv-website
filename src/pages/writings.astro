@@ -17,7 +17,19 @@ const pageTitle = "Writings";
 	</ul>
 </BaseLayout>
 <style>
+	ul {
+		list-style-type: none;
+		padding-left: 1rem;
+	}
 	ul li {
-		padding-bottom: 0.4rem;
+		display: flex;
+		padding-bottom: 0.3rem;
+	}
+	ul li :global(time) {
+		flex: 0 0 130px;
+		color: #595959;
+	}
+	ul li a:visited {
+		color: #8e32dc;
 	}
 </style>
