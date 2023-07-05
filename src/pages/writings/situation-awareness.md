@@ -34,7 +34,7 @@ The good thing is, that designers are able to evaluate their designs to make inf
 
 Situation awareness is an interesting concept and can be helpful when designing interfaces for single operators, by enabling designers to think what kind of data operators should be at their disposal at any given task.
 
-If you are interested in situation awareness in collaborative environments, check [Distributed Situation Awareness (DSA)](../dsa/distributed-situation-awareness.md).
+If you are interested in situation awareness in collaborative environments, check [Distributed Situation Awareness (DSA)](/writings/distributed-situation-awareness-dsa).
 
 ## References
 

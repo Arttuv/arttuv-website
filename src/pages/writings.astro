@@ -4,11 +4,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 const allPosts = await Astro.glob('../pages/writings/*.md');
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 const pageTitle = "Writings";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<ul>
-		{allPosts.map((post) => (
+		{nonDraftPosts.map((post) => (
 			<li>
 				<FormattedDate date={new Date(post.frontmatter.pubDate)}/>
 				&emsp;
