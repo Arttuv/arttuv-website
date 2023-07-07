@@ -50,7 +50,9 @@ The flexible part is scope. There is a trap there, however. When you cut the sco
 
 As said in the podcast, it is important to keep on shipping, to have that predictable cadence - you just don't always have all the things you might have thought.
 
-It is important to note, that if you are trapped in a feature factory, cutting scope doesn't really help. You'll be forced to cut functionality to fit the promised schedule, but after the deadline, you don't have time to iterate - the next item on the roadmap is pushed to the team and the same game of cutting scope starts.
+It is important to note, that if you are trapped in a feature factory, cutting scope doesn't really help. You'll be forced to cut functionality to fit the promised schedule, but after the deadline, you don't have time to iterate - the next item on the roadmap is pushed to the team and the same game of cutting scope starts. 
+
+What you are missing are honesty and feedback loops.
 
 The end result is a pile of "MVP" implementations, none fulfilling the end user needs. Jira raports and excels look OK, though. The shit hits the fan when the product gets to the hands of the real users.
 
