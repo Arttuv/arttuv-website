@@ -14,6 +14,7 @@ const { frontmatter } = Astro.props;
     <time>{<FormattedDate date={new Date(frontmatter.pubDate)}/>}</time>
     <hr />
     <slot />
+    <hr />
   </article>
 </BaseLayout>
 <style>
