@@ -1,0 +1,38 @@
+---
+import '../styles/global.css'
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+const allPosts = await Astro.glob('../pages/writings/*.md');
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
+const pageTitle = "404 Not Found";
+---
+<BaseLayout pageTitle={pageTitle}>
+    <h1>{pageTitle}</h1>
+    <p>Sorry, that particular page seems to be missing. It could be that the URL has changed as well, maybe it was one of these 🤞</p>
+	<ul>
+		{nonDraftPosts.map((post) => (
+			<li>
+				<FormattedDate date={new Date(post.frontmatter.pubDate)}/>
+				&emsp;
+				<a href={post.url}>{post.frontmatter.title}</a>
+			</li>))}
+	</ul>
+</BaseLayout>
+<style>
+	ul {
+		list-style-type: none;
+		padding-left: 1rem;
+	}
+	ul li {
+		display: flex;
+		padding-bottom: 0.3rem;
+	}
+	ul li :global(time) {
+		flex: 0 0 130px;
+		color: #595959;
+	}
+	ul li a:visited {
+		color: #8e32dc;
+	}
+</style>
