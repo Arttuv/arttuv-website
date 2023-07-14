@@ -1,7 +1,5 @@
 ---
 import Home from '../components/Home.astro';
-import Archive from '../components/Archive.astro';
-import LatestWritings from '../components/LatestWritings.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const allPosts = await Astro.glob('./writings/*.md');
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
