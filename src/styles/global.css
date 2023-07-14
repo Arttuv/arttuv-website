@@ -16,7 +16,7 @@ body {
 }
 
 p {
-  font-size: 1.02rem;
+  font-size: 1.0rem;
   line-height: 1.6;
 }
 
@@ -222,15 +222,6 @@ a, a:visited, a:active {
   display: block;
 }
 
-.archive {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-flow: dense;
-  grid-gap: 1rem;
-  margin: 0 auto;
-}
-
 .article p {
   margin-bottom: 0px;
 }
@@ -239,10 +230,6 @@ a, a:visited, a:active {
   display: none;
   float: right;
   font-size: normal;
-}
-
-.archive-description {
-  margin: 1rem;
 }
 
 .tag-item {
@@ -271,38 +258,7 @@ a, a:visited, a:active {
   /* Single column display for phones */
   @media (max-width: 459px) {
 
-    .archive {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .latest-writings {
-      display: flex;
-      flex-direction: column;
-      gap: 0px;
-    }
-  
-    .latest-writings-item:nth-of-type(odd) {
-      border-right: 0px solid lightgray;
-      margin-right: 1rem;
-      padding-right: 0rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid lightgray;
-    }
-  
-    .latest-writings-item-image {
-      align-self: center;
-      padding-right: 0rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
     .blog-post-container blockquote p {
-      font-size: 1.02rem;
-    }
-
-    .archive-article-item blockquote {
       font-size: 1.02rem;
     }
 
@@ -317,24 +273,9 @@ a, a:visited, a:active {
     .site-description {
       font-size: normal;
     }
-    .article .gatsby-image-wrapper {
-      display: none;
-    }
   
-    .latest-writings {
-      display: grid;
-      grid-template-columns: auto;
-    }
-  
-    .latest-writings-item:nth-of-type(odd) {
-      border-right: none;
-      padding-right: 0px;
-      margin-right: 1rem;
-    }
-  
-    .archive-article-item {
-      margin-left: 0rem;
-      margin-right: 0rem;
+    main {
+      padding: 0 0.5rem 0.5rem;
     }
     
   }
@@ -344,30 +285,5 @@ a, a:visited, a:active {
   .page-container {
       padding: 0 0.5rem 0.5rem;
   }  
-
-  .archive-article-item:nth-of-type(odd) {
-    border-right: none;
-    margin-right: 0rem;
-    padding-right: 0px;
-  }
-
-  .blog-post {
-    font-size: normal;
-    border-left-style: none;
-    border-right-style: none;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    border-radius: 0px;
-    border-radius: 0px;
-    max-width: 50rem;
-    margin: auto;
-  }
-  
-  .archive {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0.5rem;
-    grid-gap: 0.5rem;
-  }
 
 }
