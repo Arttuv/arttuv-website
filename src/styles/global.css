@@ -16,7 +16,7 @@ body {
 }
 
 p {
-  font-size: 1.0rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
 }
 
@@ -28,17 +28,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-bottom: 1rem;
-}
-
-.comment-section {
-  border-top: 1px solid lightgray;
-}
-
-.comment-section p {
-  font-size: smaller;
-  padding-top: 1rem;
-  margin: 1rem;
-  font-size: smaller;
 }
 
 main {
@@ -75,35 +64,6 @@ a, a:visited, a:active {
 .article p {
   margin-bottom: 0px;
 }
-
-.article-read-more {
-  display: none;
-  float: right;
-  font-size: normal;
-}
-
-.tag-item {
-  width: 128px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.tag-image {
-  width: 96px!;
-  margin: auto;
-}
-
-.tag-link {
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.tag-item p {
-  font-size: smaller;
-}
-
   
   /* Single column display for phones */
   @media (max-width: 459px) {
