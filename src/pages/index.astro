@@ -4,9 +4,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const allPosts = await Astro.glob('./writings/*.md');
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
-const pageTitle = "Home";
+const title = "Arttu Viljakainen, a software development consultant from Finland";
+const description = "A personal professional blog on software development: coding, processes, human-computer interaction."
 ---
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout title={title} description={description}>
   <Home />
 </BaseLayout>
 <style>

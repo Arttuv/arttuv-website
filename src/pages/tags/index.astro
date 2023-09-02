@@ -3,9 +3,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const allPosts = await Astro.glob('../writings/*.md');
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
-const pageTitle = "Tag Index";
+const title = "Tag Index";
+const description = "Listing of all the tags used on this site.";
 ---  
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout title={title} description={description}>
     <div class="tags">
       <ul>
         {tags.map((tag) => (

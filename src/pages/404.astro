@@ -5,11 +5,12 @@ import FormattedDate from '../components/FormattedDate.astro';
 const allPosts = await Astro.glob('../pages/writings/*.md');
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
-const pageTitle = "404 Not Found";
+const title = "404 Not Found";
+const description = "This is the 404 - not found page. All the content is listed on this page.";
 ---
-<BaseLayout pageTitle={pageTitle}>
-    <h1>{pageTitle}</h1>
-    <p>Sorry, that particular page seems to be missing. It could be that the URL has changed as well, maybe it was one of these 🤞</p>
+<BaseLayout title={title} description={description}>
+    <h1>{title}</h1>
+    <p>Sorry, that particular page seems to be missing. It could be that the URL has changed as well, maybe it was one of these 🤞.</p>
 	<ul>
 		{nonDraftPosts.map((post) => (
 			<li>

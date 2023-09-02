@@ -3,11 +3,12 @@ import '../styles/global.css'
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Author";
+const title = "Author";
+const description = "Arttu Viljakainen is a software developer from Finland. This page has more information about them.";
 import programming_as_human_performance from "../images/IMG_4637.jpeg"
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout title={title} description={description}>
     <div class="author-container">
         <div class="author-text">
             <h1>Who is Arttu?</h1>

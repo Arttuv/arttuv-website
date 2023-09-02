@@ -3,7 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import '@fontsource-variable/roboto-serif';
-const { pageTitle } = Astro.props;
+const { title, description } = Astro.props;
 ---
 <html lang="en">
   <head>
@@ -13,10 +13,11 @@ const { pageTitle } = Astro.props;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <title>{title}</title>
   </head>
   <body>
-    <Header pageTitle={pageTitle} />
+    <Header title={title} />
     <main>
       <slot />
     </main>
