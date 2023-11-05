@@ -15,11 +15,12 @@ const { frontmatter } = Astro.props;
     <hr />
     <slot />
     <hr />
+    <div class="writing-ending">•</div>
   </article>
 </BaseLayout>
 <style is:global>
   .blog-post {
-    max-width: 65ch;
+    max-width: 70ch;
     margin: 0 auto;
   }
 
@@ -100,9 +101,16 @@ const { frontmatter } = Astro.props;
 .blog-post img {
   object-fit: contain;
   height: inherit;
-  width: 80%;
+  width: 100%;
   border: 1px solid lightslategray;
   margin: 0 auto;
   display: block;
+}
+
+.writing-ending {
+  text-align: center;
+  font-size: 1em;
+  color: #000;
+  margin: 1rem 0;
 }
 </style>
