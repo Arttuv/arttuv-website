@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props;
   <article class="blog-post">
     <div class="category">
       {frontmatter.tags.map((tag) => (
-        <span><a href={`/tags/${tag}`}>{tag}</a></span>
+        <span><a href={`/tags/${tag}`}>#{tag}</a></span>
       ))}
     </div>
     <h1>{frontmatter.title}</h1>
@@ -20,7 +20,7 @@ const { frontmatter } = Astro.props;
 </BaseLayout>
 <style is:global>
   .blog-post {
-    max-width: 70ch;
+    max-width: 87ch;
     margin: 0 auto;
   }
 

@@ -2,6 +2,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  font-size: 18px;
 }
 
 body {
@@ -14,7 +15,6 @@ body {
 }
 
 p {
-  font-size: 0.9375rem;
   line-height: 1.6;
 }
 
@@ -68,7 +68,7 @@ svg {
 }
 
 .dark svg {
-  color: white;
+  color: #F5F5F5;
 }
 
 .blog-post .category a {
@@ -82,12 +82,12 @@ svg {
 }
 
 .dark .blog-post .category a {
-  color: white;
+  color: #F5F5F5;
   text-decoration: none;
 }
 
 .dark .blog-post a {
-  color: white;
+  color: #F5F5F5;
   text-decoration: underline;
 }
 
@@ -99,19 +99,19 @@ html {
 
 html.dark {
 	background-color: #000;
-	color: #fff;
+	color: #F5F5F5;
 }
   
 .dark .nav-links a {
-	color: #fff;
+	color: #F5F5F5;
 }
 
 .dark a {
-	color: white;
+	color: #F5F5F5;
 }
 
 .dark blockquote {
-	color: white;
+	color: #F5F5F5;
 }
 
 .dark h1,
@@ -122,7 +122,7 @@ html.dark {
 .dark h6,
 .dark strong,
 .dark b {
-	color: white;
+	color: #F5F5F5;
 }
 
 nav a, nav a:visited, nav a:active {
@@ -130,7 +130,7 @@ nav a, nav a:visited, nav a:active {
 }
 
 .dark nav a, .dark nav a:visited, .dark nav a:active {
-  color: white;
+  color: #F5F5F5;
 }
 
   
