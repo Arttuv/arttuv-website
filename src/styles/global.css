@@ -48,6 +48,7 @@ a h3 {
 
 nav a {
   text-decoration: none;
+  color: #fff;
 }
 
 a {
@@ -90,12 +91,6 @@ svg {
   text-decoration: none;
 }
 
-.dark .blog-post a {
-  color: #F5F5F5;
-  text-decoration: underline;
-}
-
-
 html {
 	background-color: #F7F7F7;
 	color: #444;
@@ -110,8 +105,16 @@ html.dark {
 	color: #F5F5F5;
 }
 
-.dark a {
-	color: #F5F5F5;
+.dark .header-social a {
+  color: #000;
+}
+
+.header-social a {
+  color: #fff;
+}
+
+.dark a, .dark a:visited, .dark a:active {
+  color: #53a6ff;
 }
 
 .dark blockquote {
