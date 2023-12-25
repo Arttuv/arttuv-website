@@ -105,8 +105,12 @@ html.dark {
 	color: #F5F5F5;
 }
 
-.dark .header-social a {
+.dark .header-social a, .dark .header-social a:visited, .dark .header-social a:active {
   color: #000;
+}
+
+.header-social a, .header-social a:visited, .header-social a:active {
+  color: #fff;
 }
 
 .header-social a {
