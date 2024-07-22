@@ -91,6 +91,10 @@ svg {
   text-decoration: none;
 }
 
+.dark .blog-post time {
+  color: #F5F5F5;
+}
+
 html {
 	background-color: #F7F7F7;
 	color: #444;
