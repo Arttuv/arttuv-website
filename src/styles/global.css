@@ -12,6 +12,7 @@ body {
   text-rendering: optimizeLegibility;
   margin: 0px;
   overflow: visible;
+  min-width: 370px;
 }
 
 p {
@@ -32,6 +33,7 @@ main {
     margin: 0 auto;
     padding: 0 1.0875rem 1.45rem;
     padding-bottom: 0px;
+    max-width: 70rem;
 }
 h1 {
   font-size: 2.5rem;
@@ -176,7 +178,7 @@ nav a, nav a:visited, nav a:active {
 
   @media (max-width: 756px) {
 
-  .page-container {
+  .main {
       padding: 0 0.5rem 0.5rem;
   }  
 

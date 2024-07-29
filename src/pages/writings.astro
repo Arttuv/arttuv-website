@@ -9,6 +9,7 @@ const title = "Writings";
 const description = "A collection of my writings.";
 ---
 <BaseLayout title={title} description={description}>
+	<div class="writing-listing">
 	<ul>
 		{nonDraftPosts.map((post) => (
 			<li>
@@ -17,8 +18,15 @@ const description = "A collection of my writings.";
 				<a href={post.url}>{post.frontmatter.title}</a>
 			</li>))}
 	</ul>
+</div>
 </BaseLayout>
 <style>
+
+	.writing-listing {
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+	}
 	a {
 		text-decoration: none;
 	}
@@ -33,4 +41,5 @@ const description = "A collection of my writings.";
 	ul li :global(time) {
 		flex: 0 0 130px;
 	}
+
 </style>
