@@ -32,7 +32,7 @@ Complex environment can feel out of control, if you are used to thinking that yo
 
 That does not work: schedules and budgets will get overrun, and the end user experience will be as bad as it can be still fulfilling the bare minimum of the contract. Another option is that it will be ridiculously expensive when all the surprises need to be baked in to the price, but usually this option does not get selected due to the price dictating the tender.
 
-## Facing the friction, embracing the difficulty
+## Face the friction, early
 
 It is easier to apply the waterfall-type of thinking that works in a static environment, and refuse to face the real complexity of reality. Some organisations do this by buying the software from subcontractors by dictating the contracts (if they have the economical power), or by demanding impossible work performance from their employees (quite often a pathological organisation by [Westrum culture classification](https://dora.dev/capabilities/generative-organizational-culture/)).
 

@@ -21,7 +21,7 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
         <div class="what-this-is-about-text">
             <article>
                 <h2>What is a software development consultant?</h2>
-                <p>To me it is a person who has a wide understanding of software development, and can help others to improve their process of building digital solutions.</p>
+                <p>I define it to be a person who has a wide understanding of software development, can help others to improve their process of building digital solutions, and in general takes ownership of the outcomes.</p>
                 <p>As Block wrote in <a href="https://www.peterblock.com/books/flawless-consulting-a-guide-to-getting-your-expertise-used-3rd-edition-enhanced-ebook/">Flawless Consulting</a>, consultants are in a unique position as they don't have vested interests in problem solving. 
                     I honestly feel I have been able to do better work focusing on outcomes, when working as an "outsider". 
                     You can read more about my <a href="/writings/consulting">thoughts on consulting</a>.</p>
@@ -32,10 +32,10 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
                 <p>Teams are essential in creating software: combining interdisciplinary skills in a way that makes the whole more than the sum of each individual requires intentional effort.</p>
                 <p>I intend to study teams and get better at making exceptional teams emerge.</p>
                 <strong>Processes</strong>
-                <p>Software happens in a complex world, in which you can’t predict the future. That’s why we have agile (<a href="/writings/agile-still-relevant-in-2024">which is till relevant, by the way</a>). I think it is essential to understand the difference between complicated and complex environments, and act accordingly. Agile never looks the same, and how to make it work is both interesting and rewarding.</p>
+                <p>Software happens in a complex world, in which you can’t predict the future. That’s why we have agile (<a href="/writings/agile-still-relevant-in-2024">which is still relevant, by the way</a>). I think it is essential to understand the difference between complicated and complex environments, and act accordingly. Agile never looks the same, and how to make it work is both interesting and rewarding.</p>
             </article>
             <span class="button-container">
-                <a href="/writings/">Writings</a>
+                <a href="/writings/">More writings &#8594;</a>
             </span>
         </div>
         <div>
@@ -52,7 +52,7 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
                 Coding got me to the field of software development, but I may have stayed because of the people stuff.
             </p>
             <p>
-                I've noticed over the years, that I'm increasingly interested in the human side of software development. People and interactions are essential, and definitely not easy. 
+                I'm increasingly interested in the human side of software development. Issues in projects are rarely related to technology, but on how to work productively and sustainably as a team, and on how to choose what to build next.
             </p>
             <p>
                 Be it coding, teamwork, or processes, I feel like I have a lot to learn. I'm still excited about it.
@@ -88,7 +88,6 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        height: 80vh;
         width: 100%;
     }
     .hello-text {
@@ -98,7 +97,7 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
     .arttu-photo img {
         object-fit: cover;
         width: 40vw;
-        max-width: 80vh;
+        max-width: 30rem;
         max-height: 85vh;
     }
     
@@ -106,7 +105,7 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: stretch;
         gap: 2rem;
         width: 100%;
     }
@@ -115,21 +114,20 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
     }
     .what-this-is-about img {
         object-fit: cover;
-        max-width: 20vw;
-        height: 60vh;
+        width: 20vw;
+        max-width: 15rem;
+        height: 50vh;
+        max-height: 30rem;
+        min-height: 20rem;
         border-radius: 2rem;
     }
     .what-this-is-about :nth-child(1 of div) {
-            display: flex;
-            align-items: start;
-            max-height: 80vh;
-            min-height: 80vh;
+        display: flex;
+        align-items: start;
     }
     .what-this-is-about :nth-child(3 of div) {
         display: flex;
         align-items: end;
-        max-height: 80vh;
-        min-height: 80vh;
     }
 
     .bottom-part {
@@ -146,8 +144,8 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
     .bottom-part-image img {
         object-fit: cover;
         width: 40vw;
-        max-width: 100%;
-        height: 80vh;
+        max-width: 30rem;
+        max-height: 85vh;
     }
 
     @media (max-width: 800px) {
@@ -173,12 +171,13 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
         .what-this-is-about {
             margin-top: 2rem;
             flex-wrap: wrap;
-            align-items: stretch;
+            align-items: center;
             justify-content: center;
         }
         .what-this-is-about img {
-            max-width: 50vw;
-            max-height: 50vw;
+            width: auto;
+            max-width: 40vw;
+            max-height: 15vw;
         }
         .what-this-is-about-text {
             width: 100%;
@@ -187,15 +186,13 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
             order: 1;
             display: flex;
             align-items: start;
-            max-height: 60vw;
-            min-height: 60vw;
+            min-height: 20vw;
         }
         .what-this-is-about :nth-child(3 of div) {
             order: 2;
             display: flex;
             align-items: end;
-            max-height: 60vw;
-            min-height: 60vw;
+            justify-content: space-between;
         }
         .what-this-is-about :nth-child(2) {
             order: 3;
@@ -218,6 +215,7 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
 
         .bottom-part-image img {
             object-fit: cover;
+            max-width: 100%;
             width: 100%;
         }
     }

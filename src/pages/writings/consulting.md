@@ -9,13 +9,13 @@ featuredImage:
 summary: "Consulting can be understood and done in many different ways. These are my thoughts on that."
 ---
 
-There are a lot of different ways of doing consulting, so I want to clarify what my approach and thoughts about it is. The fundamental difference between a consultant and an in-house developer is who pays the salary, and that's it.
+There are a lot of different ways of doing consulting, so I want to clarify my approach and thoughts about it. The fundamental difference between a consultant and an in-house developer is who pays the salary, and that's it.
 
 It comes with a few pros and cons you need to be aware of.
 
 ![team-kanban-dots.jpeg](../../images/three-developers-working-on-whiteboard.png "Developers working on a whiteboard (Midjourney)")
 
-I like the flexibility using consultancies brings: at it's best it is a true win for all. Clients can get exactly the kind of knowhow they need, for exactly the time period they wish. Consultants can pursue the kind of work they are interested in doing, still staying with the same employer and having long-term colleagues there.
+I like the flexibility using consultancies brings: at it's best it is a true win for everyone. Clients can get exactly the kind of knowhow they need, for exactly the time period they wish. Consultants can pursue the kind of work they are interested in doing, still staying with the same employer and having long-term colleagues there.
 
 As a consultant you get to see a lot of different domains and different kinds of organisations each having their own culture of doing software. As we are usually working in a complex environment, that is to be expected: the agile ways of working need to be adapted to specifics of each case. 
 

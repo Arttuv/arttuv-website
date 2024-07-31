@@ -33,13 +33,34 @@ const description = "A collection of my writings.";
 	ul {
 		list-style-type: none;
 		padding-left: 1rem;
+		width: 100%;
 	}
 	ul li {
 		display: flex;
-		padding-bottom: 0.3rem;
+		padding-bottom: 0.8rem;
 	}
 	ul li :global(time) {
-		flex: 0 0 130px;
+		text-align: right;
+		flex: 0 0 10rem;
 	}
+
+	@media (max-width: 756px) {
+		.writing-listing ul li  {
+				font-size: smaller;
+		}
+	
+	}
+
+	@media (max-width: 459px) {
+		.writing-listing ul li  {
+				padding-bottom: 0.3rem;
+		}
+
+		ul li :global(time) {
+			flex: 0 0 6rem;
+		}
+	
+	}
+
 
 </style>
