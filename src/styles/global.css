@@ -55,7 +55,7 @@ nav a {
 
 a {
   text-decoration: underline;
-  color: #2c78ca;
+  color: #0053B3;
 }
   
 a:hover {
@@ -63,7 +63,7 @@ a:hover {
 }
 
 a, a:visited, a:active {
-  color: #2c78ca;
+  color: #0053B3;
 }
 
 .article p {
