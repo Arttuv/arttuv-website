@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import { Image } from 'astro:assets';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -32,7 +33,7 @@ import programming_as_human_performance from "../images/IMG_4637.jpeg"
             </p>
         </div>
         <div class="author-image">
-            <img src={programming_as_human_performance.src} alt="Photo from a book Psychology of Computer Programming" />
+            <Image src={programming_as_human_performance} loading="eager" alt="Psychology of Computer Programming book showing chapter 'Programming as Human Performance'." />
         </div>
     </div>
 </BaseLayout>
