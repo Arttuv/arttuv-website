@@ -4,7 +4,7 @@ pubDate: "2020-05-16"
 title: "Feeds Are The Future"
 tags: ["research"]
 featuredImage: 
-    url: "../../images/handrawn-google-trend-rss.png"
+    url: "/public/images/handrawn-google-trend-rss.png"
     alt: "Downwards going Google Trend graph of RSS"
 summary: "I was using RSS a lot around 2013, and I want to go back. I'd like to be more in control on what stories I see each day. At the same time I know the amount of items in RSS feeds can be overwhelming, so I'm excited to try out new tools to combat information overload as well. I'm glad to see that RSS is not *dead*, even though I understand it probably should evolve. Feed aggregators must evolve as well, or there might not be enough sources for them in the future."
 ---
@@ -28,7 +28,7 @@ Google+ had somewhat interesting start and it seemed to attract professional use
 
 Google didn't kill RSS, the decline on RSS popularity had started much earlier as you can see from the Google Trends graph:
 
-![Google Trend - RSS](../../images/handrawn-google-trend-rss.png "Google Trend - RSS")
+![Google Trend - RSS](/public/images/handrawn-google-trend-rss.png "Google Trend - RSS")
 
 Vice has a good story on the history of RSS: [The Rise and Demise of RSS - VICE](https://www.vice.com/en_us/article/a3mm4z/the-rise-and-demise-of-rss).
 

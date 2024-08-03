@@ -4,7 +4,7 @@ pubDate: "2017-05-11"
 title: "Designing for Usability 1985"
 tags: ["hci"]
 featuredImage: 
-    url: "../../../../images/hci-placeholder.png"
+    url: "../..//public/images/hci-placeholder.png"
     alt: "HCI placeholder"
 ---
 

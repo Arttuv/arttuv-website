@@ -4,7 +4,7 @@ pubDate: "2019-06-28"
 title: "Automation and the role of human operators"
 tags: ["hci"]
 featuredImage: 
-    url: "../../../images/hci-placeholder.png"
+    url: "..//public/images/hci-placeholder.png"
     alt: "HCI placeholder"
 ---
 Automation and analytics are a good means to improve operator and overall system performance. The ever-increasing amount of data means that in many situations human operators are no longer able to keep up with the pace, and using software to help is a must. 

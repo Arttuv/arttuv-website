@@ -4,7 +4,7 @@ pubDate: "2019-06-23"
 title: "Situation Awareness (SA)"
 tags: ["hci"]
 featuredImage: 
-    url: "../../images/Endsley-SA-model_BW_Black.png"
+    url: "/public/images/Endsley-SA-model_BW_Black.png"
     alt: "Situation Awareness model"
 summary: "Situation awareness (SA) is a concept that describes how people stay entangled into events happening around them. SA model can be used to design systems so that they support users acquiring and maintaining situational awareness.  Mica R. Endsley is one of the most cited researchers on SA, and has created a formal definition of SA."
 ---
@@ -18,7 +18,7 @@ Stanton et al. have published a really nice [state-of-science article](https://w
 
 The fastest way to understand the concept of SA by Endsley is to study this diagram, which is from Wikipedia (the diagram itself is by Endsley, this version is just a combination of multiple different instances).
 
-![Situation Awareness Diagram](../../images/Endsley-SA-model_BW_Black.png)
+![Situation Awareness Diagram](/public/images/Endsley-SA-model_BW_Black.png)
 
 Endsley’s model contains three levels: perception (Level1), comprehension (Level 2) and projection (Level 3), which together form the situation awareness (Endsley 1988).
 

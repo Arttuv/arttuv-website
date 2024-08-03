@@ -5,7 +5,7 @@ title: "Becoming fluent in remote work"
 summary: "Remote work has different requirements and success factors than co-located work. Trying to mimic co-located work in a remote setting leads to inefficiencies and misses the potential benefits of working remotely. GitLab has published a Leading remote teams -course on Coursera and I went through it to get new ideas on how to improve my work, and they really do have some interesting ideas. Asynchronous workflows is one fundamental one."
 tags: ["dev"]
 featuredImage:
-    url: "../../images/asynchronous-work-drawing.png"
+    url: "/public/images/asynchronous-work-drawing.png"
     alt: "Asynchronous work drawing"
 ---
 
@@ -27,7 +27,7 @@ At least that’ my feeling of the year 2020, and I’d like to change that.
 
 In the Leading Remote Teams course they suggest **asynchronous workflows**, **low context communication**, **iteration**, **asynchronous communication instead of synchronous meetings** and pedantic **documentation** as means to make remote work more efficient. Following is a bit more detailed listing on the contents of the course. I don’t necessarily agree with everything nor have tried if they work in practice, but for sure there was a lot of thought provoking content.
 
-![Asynchronous work](../../images/asynchronous-work-drawing.png "Asynchronous work")
+![Asynchronous work](/public/images/asynchronous-work-drawing.png "Asynchronous work")
 
 # Work in a remote-first company
 Work in a remote-first way has different requirements, and thus also different success factors than traditional co-located, or mostly office way of working. At GitLab they have concluded that it’s important to 

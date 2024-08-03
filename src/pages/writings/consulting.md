@@ -4,7 +4,7 @@ pubDate: "2023-07-17"
 title: "My Thoughts on Consulting"
 tags: ["dev"]
 featuredImage: 
-    url: "../../images/three-developers-working-on-whiteboard.png"
+    url: "/public/images/three-developers-working-on-whiteboard.png"
     alt: "Developers working on a whiteboard (Midjourney)"
 summary: "Consulting can be understood and done in many different ways. These are my thoughts on that."
 ---
@@ -13,7 +13,7 @@ There are a lot of different ways of doing consulting, so I want to clarify my a
 
 It comes with a few pros and cons you need to be aware of.
 
-![team-kanban-dots.jpeg](../../images/three-developers-working-on-whiteboard.png "Developers working on a whiteboard (Midjourney)")
+![team-kanban-dots.jpeg](/public/images/three-developers-working-on-whiteboard.png "Developers working on a whiteboard (Midjourney)")
 
 I like the flexibility using consultancies brings: at it's best it is a true win for everyone. Clients can get exactly the kind of knowhow they need, for exactly the time period they wish. Consultants can pursue the kind of work they are interested in doing, still staying with the same employer and having long-term colleagues there.
 

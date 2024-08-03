@@ -4,7 +4,7 @@ pubDate: "2020-07-25"
 title: "PDF as a Read It Later Service"
 tags: ["research"]
 featuredImage: 
-    url: "../../images/pdf-longread-annotation.jpeg"
+    url: "/public/images/pdf-longread-annotation.jpeg"
     alt: "Annotated PDF file"
 summary: "PDF seems to be the best format to read books on iPad, and now I've started using it for reading web long reads as well. Being in control is the best part: You can decide how the website looks like, save it so it's yours to read and annotate however you like, and store it forever."
 ---
@@ -30,7 +30,7 @@ If you want to archive an article in a readable format, so that it can have styl
 
 iPad also has enough power to render even the largest PDF files so that the experience is snappy - and using the Pencil is as useful as ever.
 
-![Annotating with the Pencil in PDFExpert](../../images/pdf-longread-annotation.png "PDFExpert and Pencil")
+![Annotating with the Pencil in PDFExpert](/public/images/pdf-longread-annotation.png "PDFExpert and Pencil")
 
 Apple ecosystem has amazing web to PDF features: 
 
@@ -40,13 +40,13 @@ Apple ecosystem has amazing web to PDF features:
 
 It has been a while I’ve been this happy to find a new functionality from my devices:
 
-![iPad share PDF](../../images/ipad-share-pdf.jpeg "iPad share PDF")
+![iPad share PDF](/public/images/ipad-share-pdf.jpeg "iPad share PDF")
 
-![iPad share PDF options](../../images/ipad-share-pdf-options.jpeg "iPad share PDF options")
+![iPad share PDF options](/public/images/ipad-share-pdf-options.jpeg "iPad share PDF options")
 
-![iPad screenshot view](../../images/ipad-screenshot-view.jpeg "iPad screenshot view")
+![iPad screenshot view](/public/images/ipad-screenshot-view.jpeg "iPad screenshot view")
 
-![iPad full page screenshot](../../images/ipad-full-page-screenshot.jpeg "iPad full page screenshot")
+![iPad full page screenshot](/public/images/ipad-full-page-screenshot.jpeg "iPad full page screenshot")
 
 Mac OS
 [Crop or rotate a PDF in Preview on Mac - Apple Support](https://support.apple.com/guide/preview/crop-or-rotate-a-pdf-prvw11567/mac)

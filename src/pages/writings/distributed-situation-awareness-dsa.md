@@ -4,7 +4,7 @@ pubDate: "2019-06-24"
 title: "Distributed Situation Awareness (DSA)"
 tags: ["hci"]
 featuredImage: 
-    url: "../../images/Perceptual-Cycle_BW_Black-1024x907.png"
+    url: "/public/images/Perceptual-Cycle_BW_Black-1024x907.png"
     alt: "Perceptual cycle graph"
 ---
 Distributed situation awareness (DSA) is model that takes a systemic view to situation awareness (SA). Stanton et al. have described their DSA model in an article “Distributed situation awareness in dynamic systems: theoretical development and application of an ergonomics methodology”, from year 2006 (Stanton et al. 2006). They propose that both human and non-human agents in the system each have their own situation awareness (at least by holding contextually relevant information) . Different agents have different goals and thus their SA may also be different, but compatible.
@@ -23,7 +23,7 @@ Following tenets define the theory (these are directly from an article by Stanto
 - An agent can compensate degradation of SA in another agent
 
 Following image, which tries to bind different elements of DSA together, can be found from their book too:
-![Model of Distributed Situation Awareness, from Distributed Situation Awareness: Theory, Measurement and Application to Teamwork (2009)](../../images/Distributed-Situation-Awareness_BW_Black-1024x656.png)
+![Model of Distributed Situation Awareness, from Distributed Situation Awareness: Theory, Measurement and Application to Teamwork (2009)](/public/images/Distributed-Situation-Awareness_BW_Black-1024x656.png)
 
 DSA is an interesting approach to complex systems because it concentrates on deep understanding of the tasks in a system and on what information each agent needs in any specific time. Being able to identify these requirements would be highly beneficial for systems designers. It might also help to reduce the mental workload relating to perception and comprehension of the data in the system. Considering DSA, it may not be optimal to strain each operator in the system with all the available data.
 
@@ -31,7 +31,7 @@ In addition, it is beneficial to be able to study the system as a whole – conc
 
 DSA can also be scaled down to individual level, as it is based on a perceptual cycle model by Neisser (Neisser 1976).
 
-![Perceptual Cycle model by Neisser, from Salmon et al (2018)](../../images/Perceptual-Cycle_BW_Black-1024x907.png)
+![Perceptual Cycle model by Neisser, from Salmon et al (2018)](/public/images/Perceptual-Cycle_BW_Black-1024x907.png)
 
 Perceptual cycle model describes how human behavior is schema-driven. Diagram above shows how the schemata directs perception and actions, which in turn sample and change the world, which continually modifies the schemata (Salmon et al 2018).
 

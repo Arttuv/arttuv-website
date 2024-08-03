@@ -4,7 +4,7 @@ pubDate: "2017-06-15"
 title: "Reference Types in Java"
 tags: ["dev"]
 featuredImage: 
-    url: "../../../../images/dev-placeholder.png"
+    url: "../..//public/images/dev-placeholder.png"
     alt: "Dev post placeholder illustration"
 ---
 

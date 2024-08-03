@@ -5,7 +5,7 @@ title: "Nielsen: Web UX 2016 vs 2004"
 tags: ["hci"]
 sumary: "A nice video of Nielsen comparing web usability on 2016 vss 2004. Information architecture is a vital thing and you should pay attention to it: Findability and and search are the biggest problems."
 featuredImage: 
-    url: "../../../../images/hci-placeholder.png"
+    url: "../..//public/images/hci-placeholder.png"
     alt: "HCI post placeholder illustration"
 ---
 Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They made a study on web UX in 2016 and reflected that to the results from a similar study in 2004. The video is only 20 minutes and worth watching. Below you can find a summary.

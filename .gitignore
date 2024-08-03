@@ -67,5 +67,5 @@ yarn-error.log
 # Astro
 dist/
 .cache
-
+.astro
 .vscode/
