@@ -4,7 +4,7 @@ pubDate: "2023-07-05"
 title: "No-Estimates"
 tags: ["dev"]
 featuredImage: 
-    url: "/public/images/ai-burndown-chart.jpeg"
+    url: "/images/ai-burndown-chart.jpeg"
     alt: "Cartoon version of a burndown or burn-up chart."
 summary: "Estimating software work is difficult, as we usually are in a complex, not complicated domain, and we know what the solution will look like and how long it took to create, after it has been validated with the end users. Days, weeks, months -scale should be enough for estimation, and if you need more detailed than that, you should probably stop and think why, and how to change that."
 ---
@@ -15,7 +15,7 @@ I did a post about [not asking people to commit to fulfill a forecast](https://a
 
 I honestly think that estimations in all shapes and forms take the focus out of what we are really doing and is mostly harmful. Estimation has a wrong premise of being able to predict what happens in a complex environment and leads to roadmap-driven feature factory. The focus will be on output instead of outcomes and causes suboptimal results and unmotivated (and burned out) people.
 
-![Cartoon burn-up chart](/public/images/ai-burndown-chart.jpeg "Cartoon burn-up chart (midjourney)")
+![Cartoon burn-up chart](/images/ai-burndown-chart.jpeg "Cartoon burn-up chart (midjourney)")
 
 The only positive thing about estimates is that you need to go through the idea and your assumptions in detail. However, nothing prevents you from planning and going through the problem without playing the estimation game. In addition, if you don't do the formal estimation, you don't give an illusion that it is possible or useful to estimate software in that detail.
 

@@ -5,7 +5,7 @@ title: "Platformer (game) UX"
 tags: ["hci"]
 summary: "Some years ago I tried building a platformer game (PC / Android) and found the experience interesting from the UX point of view. This is my recap of what I remember. TLDR: You can cheat to make it feel more like a game. Physics simulation rarely makes a good platformer (although Trine might beg to differ). At least you'll need to fine-tune your character movement physics."
 featuredImage: 
-    url: "/public/images/Corner-cases-in-platformer-physics.003.png"
+    url: "/images/Corner-cases-in-platformer-physics.003.png"
     alt: "Platformer game illustration"
 ---
 Interactions in games are fascinating because usually, people have a gut feeling when the game feels right, but it’s not an easy task to replicate the experience. Controls and how the character follows players' interactions are vital in platform games – winning or losing can be determined by milliseconds of differences in the timing of button presses. The game mechanics and difficulty should match the gamers' understanding of a fair and challenging game.
@@ -16,7 +16,7 @@ At this point, I had already started porting the game to Android, which made it 
 
 The platform game I was working on was a 2D one with procedurally generated maps. We never finished it – life got on the way. The world consisted of equally sized squares that formed the caves and obstacles. For some reason, I decided to make the character to be equally sized square. The idea was that the maps would be procedurally generated and somehow “endless”, and that the player could build new blocks and destroy old ones. Minecraft style.
 
-[Gif of building and digging (Android version)](/public/images/Loikka-build-and-dig.gif)
+[Gif of building and digging (Android version)](/images/Loikka-build-and-dig.gif)
 
 The gif is from the Android version, but originally I designed the game to be played using a keyboard. Physical keys enable much more precise controls than the touch screen and I enjoyed optimizing the user experience of the game.
 
@@ -39,7 +39,7 @@ How the hero interacts with the world is of course part of the physics too, but 
 
 Maps were procedurally generated so the paths that the player had to follow were not always optimal. Let’s consider the following image.
 
-![Problem with equally sized blocks and paths near the ceiling](/public/images/Corner-cases-in-platformer-physics.004.png "Problem with equally sized blocks and paths near the ceiling")
+![Problem with equally sized blocks and paths near the ceiling](/images/Corner-cases-in-platformer-physics.004.png "Problem with equally sized blocks and paths near the ceiling")
 
 The hero is equally sized to map blocks, so there wasn’t additional space for jumps if the cave was one block high. How do you jump from the situation like in the picture? Naive preconditions for jumping would be
 
@@ -61,7 +61,7 @@ Another problem in the image is jumping to a gap that is close to the ceiling. I
 
 The image below represents a classical platform game challenge. The hero has to jump from level to level – death below and ceiling just a little bit too low above. It’s important to be able to control the jump precisely.
 
-![Classical platform game challenges](/public/images/Corner-cases-in-platformer-physics.003.png "Patfromer challenges")
+![Classical platform game challenges](/images/Corner-cases-in-platformer-physics.003.png "Patfromer challenges")
 
 So fine-tunings to fix this scenario are
 

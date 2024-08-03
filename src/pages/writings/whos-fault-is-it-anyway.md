@@ -4,7 +4,7 @@ pubDate: "2010-10-11"
 title: "Who's fault is it anyway?"
 tags: ["hci"]
 featuredImage: 
-    url: "../..//public/images/hci-placeholder.png"
+    url: "../..//images/hci-placeholder.png"
     alt: "HCI post placeholder illustration"
 ---
 People tend to use faulty mental models when thinking what caused some action to fail or succeed.

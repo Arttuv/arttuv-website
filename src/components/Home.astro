@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import arttu from "../images/arttuv-bw.jpeg"
 import bw_wood from "../images/IMG_7500.jpeg"
 import flowers from "../images/IMG_8189.jpeg"
@@ -11,12 +12,12 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
             Hello! I’m a software development consultant. I write code. I strive to foster teamwork. I’m fascinated by the challenge of complexity.
         </div>
         <div class="arttu-photo">
-            <img src={arttu.src} alt="Photo of Arttu"/>
+            <Image src={arttu} alt="Photo of Arttu"/>
         </div>
     </div>
     <div class="what-this-is-about">
         <div>
-            <img src={bw_wood.src} alt="BW photo of old wood"/>
+            <Image src={bw_wood} alt="BW photo of old wood"/>
         </div>
         <div class="what-this-is-about-text">
             <article>
@@ -39,12 +40,12 @@ import swimming_lapinniemi from "../images/IMG_7051.jpeg"
             </span>
         </div>
         <div>
-            <img src={flowers.src} alt="Photo of flowers"/>
+            <Image src={flowers} alt="Photo of flowers"/>
         </div>
     </div>
     <div class="bottom-part">
         <div class="bottom-part-image">
-            <img src={swimming_lapinniemi.src} alt="Photo of swimming in Lapinniemi"/>
+            <Image src={swimming_lapinniemi} alt="Photo of swimming in Lapinniemi"/>
         </div>
         <div class="bottom-part-text">
             <h2>I'm a generalist</h2>

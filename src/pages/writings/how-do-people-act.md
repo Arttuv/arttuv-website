@@ -4,7 +4,7 @@ pubDate: "2010-11-14"
 title: "How do people act"
 tags: ["hci"]
 featuredImage: 
-    url: "/public/images/Action-Cycle-Simplified.png"
+    url: "/images/Action-Cycle-Simplified.png"
     alt: "Action Cycle graph"
 ---
 Creating usable software is not easy. You are blind to the usability problems of your user interface because you know how things work. You don’t need feedback in a way that other users of your system need. You don’t need the system to tell you what actions are available in each situation. If an action takes some time, you know what is happening(right?), but it must be told for the others!
@@ -15,7 +15,7 @@ When designing an user interface, it helps if you know something about how peopl
 
 Donald A. Norman has one way to describe people’s behavior. He calls it The Seven Stages of Action (The Design of Everyday Things). The basic idea is simple and consists of four things. Everything starts from goals, the objective to the action. Second thing is the world which is the target of all actions. Goals picture states in which the user would like to see the world. Two things are between the goals and the world: execution and evaluation. In execution the user makes actions for the world and then she evaluates the state of the world after the actions and compares it to the goals. This is called the action cycle.
 
-![Action Cycle Simplified](/public/images/Action-Cycle-Simplified.png)
+![Action Cycle Simplified](/images/Action-Cycle-Simplified.png)
 
 As you can see, there is only three action related sections here and the model was called seven stages of action. Execution and evaluation can bot be divided to three subtasks.
 
@@ -23,7 +23,7 @@ As you can see, there is only three action related sections here and the model w
 
 Goals needs to be translated into intentions which are more specific executable and achievable statements of what is to be done. These intentions are then turned to sequence of actions that really result in achieving the intention. Finally, this sequence of actions is executed which changes the world.
 
-![Seven Stages of Action](/public/images/Action-Cycle.png)
+![Seven Stages of Action](/images/Action-Cycle.png)
 
 After and while executing the actions, we perceive the world and get the sense of its state. By perceiving the world we get data which we need to translate into information. In other words, we try to interpret the perception, make sense of it. Finally we judge if the change in the world is what we wanted in the first place by evaluating the interpretations.
 

@@ -4,13 +4,13 @@ pubDate: "2020-04-12"
 title: "The difficulty of saying I don't know"
 tags: ["dev"]
 featuredImage: 
-    url: "/public/images/coder-fear.jpeg"
+    url: "/images/coder-fear.jpeg"
     alt: "Illustration of stressed person"
 summary: "Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven't mastered yet. That can be a lot to bear and a source of anxiety. By being vulnerable and admitting you need help, you can start creating a safer environment."
 ---
 Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven't mastered yet. That can be a lot to bear and a source of anxiety. Kati Vilkki wrote [a good blog post on culture of fear](https://www.reaktor.com/blog/facing-up-to-a-culture-of-fear/), which inspired me to think about the subject from my perspective, on team and single developer level.
 
-![Being stuck alone brings stress and fear](/public/images/coder-fear.jpeg "Being stuck alone brings stress and fear")
+![Being stuck alone brings stress and fear](/images/coder-fear.jpeg "Being stuck alone brings stress and fear")
 
 Fear consumes energy, hinders our cognitive functions and may make us withdraw from other people. It can also increase stress, and prolonged stress can, for example, make us less creative and thus hinder our problem-solving skills. Many of these effects are interconnected and can lead to a negatively affecting reinforcing cycle. Stress and fear may distance you from colleagues which is exactly the opposite of what you should probably be doing.
 
@@ -39,7 +39,7 @@ By admitting that you need help you are creating an example for others in the te
 
 The team should usually be the smallest acting entity in building software. So what could a team do to tackle the fear? David J. Anderson has listed some team practices in his [Kanban book](https://www.goodreads.com/book/show/8086552-kanban), which can help to make it easier to ask for help and collaborate. 
 
-![Team working together](/public/images/team-kanban-dots.jpeg "Team working together")
+![Team working together](/images/team-kanban-dots.jpeg "Team working together")
 
 One option is to **agree on a practice that nobody in a team is allowed to wrestle on a blocker problem more than 30 minutes alone**. This can make it clear for everyone that asking for help is seen as a good thing and makes the team perform more efficiently. Everybody knows that you don’t only have permission to ask for help, it’s expected of you.
 
