@@ -1,6 +1,8 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import Mastodon from '../components/Mastodon.astro';
+
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout title={frontmatter.title} description={frontmatter.summary}>
@@ -16,8 +18,10 @@ const { frontmatter } = Astro.props;
     <slot />
     <hr />
     <div class="writing-ending">•</div>
+    {frontmatter.mastodon && <Mastodon statusId={frontmatter.mastodon} />}
   </article>
 </BaseLayout>
+
 <style is:global>
   .blog-post {
     max-width: 87ch;

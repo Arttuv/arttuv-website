@@ -3,6 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2024-07-22"
 title: "Agile - Still Relevant in 2024"
 tags: ["dev"]
+mastodon: "112840282925802410"
 ---
 Over 2023 and 2024 there has been quite a lot of critique against agile, which seems quite strange to someone who has started their studies and career around 2006, 5 years after the [agile manifesto](https://agilemanifesto.org).
 

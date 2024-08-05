@@ -1,0 +1,45 @@
+---
+import sanitizeHtml from 'sanitize-html';
+const { statusId } = Astro.props;
+const data = await fetch(`https://scholar.social/api/v1/statuses/${statusId}`).then(res => res.status === 200 ? res.json() : null)
+---
+{data && (
+    <div class="comments">
+        <div>
+            <a href={data.account.url}>{data.account.display_name}</a> shared this on Mastodon:
+        </div>
+        <div class="quotation" set:html={sanitizeHtml(data.content)} />
+        
+        <div class="comments-interact">
+            <a href={data.url}>&larrhk;</a>
+        </div>
+        <div class="stats">Replies {data.replies_count}, Reblogs {data.reblogs_count}, Favourites {data.favourites_count}</div> 
+    </div>
+    )}
+
+<style>
+    .comments {
+        margin-top: 2rem;
+        padding: 1rem 2rem 1rem 2rem;
+    }
+
+    .comments .stats {
+        text-align: right;
+        margin-bottom: 1rem;
+    }
+
+    .comments .quotation {
+        border-left: 1px solid white;
+        padding-left: 1rem;
+    }
+    
+    .comments-interact {
+        text-align: right;
+        font-size: larger;
+    }
+
+    .comments-interact a {
+        text-decoration: none;
+        display: inline-block;
+    }
+</style>
