@@ -7,6 +7,7 @@ featuredImage:
     url: "/images/ai-burndown-chart.jpeg"
     alt: "Cartoon version of a burndown or burn-up chart."
 summary: "Estimating software work is difficult, as we usually are in a complex, not complicated domain, and we know what the solution will look like and how long it took to create, after it has been validated with the end users. Days, weeks, months -scale should be enough for estimation, and if you need more detailed than that, you should probably stop and think why, and how to change that."
+mastodon: "110692189541870209"
 ---
 I did a post about [not asking people to commit to fulfill a forecast](https://arttuv.com/writings/commitment-vs-forecast) a while back. I wanted to emphasize that I'm a big fan of no estimates and what [37signals](https://37signals.com) is doing with their "appetites":
 - [No Estimates talk by Allen Holub (YouTube)](https://youtu.be/QVBlnCTu9Ms)
