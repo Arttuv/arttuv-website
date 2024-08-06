@@ -66,4 +66,4 @@ I try to stick to the basics:
 It is good to try to understand what the organizations's view on software development is. As Skelton and Pais write in Team Topologies
 > "The reason so many organizations experience so many problems with software delivery is because most organizations have an unhelpful model of what software development is really about."
 
-Being aware ot the local software development culture makes it easier to reason about the issues you face, and lays a starting point for changing that.
+Being aware of the local software development culture makes it easier to reason about the issues you face, and lays a starting point for changing that.

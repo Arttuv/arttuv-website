@@ -122,7 +122,7 @@ Similar to Notability, you’ll need to import PDF files to the app, but they al
 
 [Books can also be used to read & annotate PDF files.](https://support.apple.com/en-au/HT205751) I have not been using it like that and found the feature by accident, but it might be a low-cost option. Disappointedly it remembers the reading progress on the page level, so reading those one-pagers that Safari produces is not optimal. I wish I had a direct way to give feedback to developers...
 
-# Seems promising this far
+# Seems promising so far
 
 I've been using PDF for reading long web stories about a month now and it seems to be a good way to read articles I find by using a RSS reader. I tend to collect more to the reading queue than I'm able to read, but that happens with any service. I have an app idea that would make this process much more flowing, but I just don't have the time (or knowledge) to implement that now.
 

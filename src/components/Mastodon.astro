@@ -9,11 +9,10 @@ const data = await fetch(`https://scholar.social/api/v1/statuses/${statusId}`).t
             <a href={data.account.url}>{data.account.display_name}</a> shared this on <a href={data.url}>Mastodon</a>:
         </div>
         <div class="quotation" set:html={sanitizeHtml(data.content)} />
-        
+        <div class="stats">Replies {data.replies_count}, Reblogs {data.reblogs_count}, Favourites {data.favourites_count}</div> 
         <div class="comments-interact">
             <a href={data.url}>&larrhk;</a>
         </div>
-        <div class="stats">Replies {data.replies_count}, Reblogs {data.reblogs_count}, Favourites {data.favourites_count}</div> 
     </div>
     )}
 
