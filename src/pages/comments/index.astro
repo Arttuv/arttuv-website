@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+---
+
+<BaseLayout title="Comments" description="">
+	<main>
+		<section>
+            <h1>Comments</h1>
+            {comments.map(comment => 
+              <a href={`/${comment.collection}/${comment.slug}/`}>{comment.slug}</a>
+            )}	
+        </section>
+	</main>
+</BaseLayout>

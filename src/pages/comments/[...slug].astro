@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import FormattedDate from '../../components/FormattedDate.astro';
+import Mastodon from '../../components/Mastodon.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('comments');
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+const post = Astro.props;
+const { Content } = await post.render();
+---
+<BaseLayout title={Astro.props.slug} description={"comment description"}>
+  <article class="comment">
+    <Content />
+  </article>
+</BaseLayout>
+
+<style is:global>
+  
+</style>
