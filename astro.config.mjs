@@ -28,6 +28,10 @@ export default defineConfig({
         '/ux/iso-9241-210/iso-9241-210/': '/writings/iso-9241-210/',
         '/ux/platformer-ux/ux-of-a-platform-game/': '/writings/ux-of-a-platform-game/',
         '/ux/whos-fault-is-it-anyway/whos-fault-is-it-anyway/': '/writings/whos-fault-is-it-anyway/',
-        '/information-overload/rss-and-the-future-or-past-of-web/': '/writings/rss-and-the-future-or-past-of-web/'
+        '/ux/usability-of-patient-record-systems/usability-of-patient-record-systems/': '/writings/usability-of-patient-record-systems/',
+        '/information-overload/rss-and-the-future-or-past-of-web/': '/writings/rss-and-the-future-or-past-of-web/',
+
+        '/ux/web-ux-2004-vs-2016/web-ux-2016-vs-2004/': '/writings/nielsen-wb-ux-2016-vs-2004/',
+        '/automation-and-end-users/automation-and-the-role-of-users/': '/writings/automation-and-the-role-of-human-operators/'
       }
 });
