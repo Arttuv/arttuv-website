@@ -4,7 +4,6 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title = "Author";
 const description = "Arttu Viljakainen is a software developer from Finland. This page has more information about them.";
-import programming_as_human_performance from "../images/IMG_4637.jpeg"
 ---
 
 <BaseLayout title={title} description={description}>
@@ -33,9 +32,6 @@ import programming_as_human_performance from "../images/IMG_4637.jpeg"
                 I also write to <a href="https://www.swdevcollective.com">Developer Collective</a>.
             </p>
         </div>
-        <div class="author-image">
-            <Image src={programming_as_human_performance} loading="eager" alt="Psychology of Computer Programming book showing chapter 'Programming as Human Performance'." />
-        </div>
     </div>
 </BaseLayout>
 
@@ -48,25 +44,10 @@ import programming_as_human_performance from "../images/IMG_4637.jpeg"
         gap: 2rem;
         margin: 2rem 0;
     }
-    .author-image img {
-        object-fit: cover;
-        width: 40vw;
-        max-width: 30rem;
-        max-height: 85vh;
-    }
 
     @media (max-width: 800px) {
         .author-container {
             flex-direction: column-reverse;
-        }
-
-        .author-image {
-            width: 100%;
-        }
-        .author-image img {
-            min-width: 100%;
-            max-width: 100%;
-            max-height: 50vh;
         }
     }
 </style>
