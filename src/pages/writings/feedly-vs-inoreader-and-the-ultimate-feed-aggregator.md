@@ -17,7 +17,7 @@ Original text:
 
 What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs - your's will vary so take this writing as a personal journey instead of an objective comparison. 
 
-As I wrote, [I’ve started using RSS again](writings/../rss-and-the-future-or-past-of-web.md) after some five years break. [Feedly](https://feedly.com/) and [Inoreader](https://www.inoreader.com/) are two services I’ve been comparing now, and I think I will need to be using Inoreader. 
+As I wrote, [I’ve started using RSS again](/writings/rss-and-the-future-or-past-of-web) after some five years break. [Feedly](https://feedly.com/) and [Inoreader](https://www.inoreader.com/) are two services I’ve been comparing now, and I think I will need to be using Inoreader. 
 
 I will explain why, and why I might also return to Feedly.
 
