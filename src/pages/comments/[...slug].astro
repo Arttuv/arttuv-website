@@ -3,6 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import FormattedDate from '../../components/FormattedDate.astro';
 import Mastodon from '../../components/Mastodon.astro';
 import { getCollection } from 'astro:content';
+import MastodonEmbedded from '../../components/MastodonEmbedded.astro';
+import FormattedDateTime from '../../components/FormattedDateTime.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('comments');
@@ -16,10 +18,23 @@ const { Content } = await post.render();
 ---
 <BaseLayout title={Astro.props.slug} description={"comment description"}>
   <article class="comment">
+	
+	<h1>Comment on <FormattedDateTime date={post.data.pubDate} /></h1>
+	{post.data.target && (<MastodonEmbedded statusId={post.data.target} />) }
     <Content />
   </article>
 </BaseLayout>
-
 <style is:global>
-  
+
+.comment {
+	max-width: 100%;
+  	margin: 0 auto;
+  	padding: 1rem;
+}
+
+.comment h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
 </style>
