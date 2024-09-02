@@ -2,15 +2,11 @@
 import mastodonComments from '../external-data/scholar.social-arttuv.json';
 import FormattedDateTime from './FormattedDateTime.astro';
 import HtmlContent from './HtmlContent.astro';
-const { statusId, onlyContent=false } = Astro.props;
+const { statusId } = Astro.props;
 const data = mastodonComments[statusId];
 ---
 
-{data && onlyContent && (
-    <HtmlContent htmlContent={data.content.content} />
-)}
-
-{data && !onlyContent && (
+{data && (
     <div class="mastodon-comment">
         <div>
             <a href={data.content.account.url}>{data.content.account.display_name}</a> shared this on Mastodon at <a href={data.content.url}><FormattedDateTime date={new Date(data.content.created_at)} /></a>

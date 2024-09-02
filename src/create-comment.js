@@ -2,7 +2,7 @@ import { writeFile } from 'fs';
 import { join } from 'path';
 
 // Get the current timestamp
-const timestamp = new Date().toISOString().replace(/:/g, '-');
+const timestamp = new Date().toISOString();
 const filename = `${timestamp}.md`;
 
 // Content to be written in the new file

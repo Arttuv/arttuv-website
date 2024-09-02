@@ -5,6 +5,7 @@ import Mastodon from '../../components/Mastodon.astro';
 import { getCollection } from 'astro:content';
 import MastodonEmbedded from '../../components/MastodonEmbedded.astro';
 import FormattedDateTime from '../../components/FormattedDateTime.astro';
+import Comment from '../../components/Comment.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('comments');
@@ -20,8 +21,7 @@ const { Content } = await post.render();
   <article class="comment">
 	
 	<h1>Comment on <FormattedDateTime date={post.data.pubDate} /></h1>
-	{post.data.target && (<MastodonEmbedded statusId={post.data.target} />) }
-    <Content />
+	<Comment comment={post} />
   </article>
 </BaseLayout>
 <style is:global>

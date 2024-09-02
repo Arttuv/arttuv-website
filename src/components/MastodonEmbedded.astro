@@ -2,7 +2,7 @@
 import mastodonComments from '../external-data/scholar.social-arttuv.json';
 import FormattedDateTime from './FormattedDateTime.astro';
 import HtmlContent from './HtmlContent.astro';
-const { statusId, onlyContent=false } = Astro.props;
+const { statusId } = Astro.props;
 const data = mastodonComments[statusId];
 ---
 
@@ -17,15 +17,9 @@ const data = mastodonComments[statusId];
 
 <style>
     .embedded-mastodon-comment {
-        margin-top: 2rem;
         padding: 1rem 2rem 1rem 2rem;
+        font-size: smaller;
     }
-
-    .embedded-mastodon-comment .stats {
-        text-align: right;
-        margin-bottom: 1rem;
-    }
-
     :global(.embedded-mastodon-comment .html-content) {
         border-left: 1px solid white;
         padding-left: 1rem;
