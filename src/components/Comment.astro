@@ -5,7 +5,7 @@ const { Content } = await comment.render();
 ---
 
 <div class="comment">
-    {comment.data.target && <MastodonEmbedded statusId={comment.data.target} />}
+    {comment.data.mastodon && <MastodonEmbedded statusId={comment.data.mastodon} />}
     <div class="comment-content">
         <Content />
     </div>

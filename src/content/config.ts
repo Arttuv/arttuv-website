@@ -7,7 +7,7 @@ const comments = defineCollection({
 			.string()
 			.or(z.date())
 			.transform((val) => new Date(val)),
-		target: z.string()
+		mastodon: z.string()
 	}),
 });
 

@@ -15,7 +15,7 @@ Object.entries(parsedById).forEach(([id, publication]) => {
     const content = `---
 author: ${publication.content.account.username}
 pubDate: ${publication.content.created_at}
-target: "${publication.content.id}"
+mastodon: "${publication.content.id}"
 ---`;
 
     if (publication.content.content.length > 0 && !existsSync(newComment)) {
