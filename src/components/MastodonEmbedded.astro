@@ -21,8 +21,12 @@ const data = mastodonComments[statusId];
         font-size: smaller;
     }
     :global(.embedded-mastodon-comment .html-content) {
-        border-left: 1px solid white;
+        border-left: 1px solid black;
         padding-left: 1rem;
+    }
+
+    :global(.dark .embedded-mastodon-comment .html-content) {
+        border-left: 1px solid white;
     }
     
     .embedded-mastodon-details {
