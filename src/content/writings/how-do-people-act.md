@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2010-11-14"
 title: "How do people act"
 tags: ["hci"]

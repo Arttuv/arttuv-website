@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2020-08-02"
 title: "Don’t ask people to commit to fulfill a forecast"
 tags: ["dev"]

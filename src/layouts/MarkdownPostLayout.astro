@@ -2,23 +2,24 @@
 import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Mastodon from '../components/Mastodon.astro';
-
-const { frontmatter } = Astro.props;
+import type { CollectionEntry } from 'astro:content';
+type Props = CollectionEntry<'writings'>;
+const { data }  = Astro.props;
 ---
-<BaseLayout title={frontmatter.title} description={frontmatter.summary}>
+<BaseLayout title={data.title} description={data.summary}>
   <article class="blog-post">
     <div class="category">
-      {frontmatter.tags.map((tag) => (
+      {data.tags.map((tag) => (
         <span><a href={`/tags/${tag}`}>#{tag}</a></span>
       ))}
     </div>
-    <h1>{frontmatter.title}</h1>
-    <time>{<FormattedDate date={new Date(frontmatter.pubDate)}/>}</time>
+    <h1>{data.title}</h1>
+    <time>{<FormattedDate date={new Date(data.pubDate)}/>}</time>
     <hr />
     <slot />
     <hr class="content-ending-line"/>
     <div class="writing-ending">•</div>
-    {frontmatter.mastodon && <Mastodon statusId={frontmatter.mastodon} />}
+    {data.mastodon && <Mastodon statusId={data.mastodon} />}
   </article>
 </BaseLayout>
 

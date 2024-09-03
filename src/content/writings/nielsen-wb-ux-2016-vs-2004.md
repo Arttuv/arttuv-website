@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2017-06-15"
 title: "Nielsen: Web UX 2016 vs 2004"
 tags: ["hci"]

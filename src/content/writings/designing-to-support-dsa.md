@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2019-06-26"
 title: "Designing to Support (Distributed) Situation Awareness"
 tags: ["hci"]

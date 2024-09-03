@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2023-11-05"
 title: "Using Obsidian, The First Two Years"
 tags: ["research"]

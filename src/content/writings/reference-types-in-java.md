@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2017-06-15"
 title: "Reference Types in Java"
 tags: ["dev"]

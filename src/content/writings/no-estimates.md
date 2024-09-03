@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2023-07-05"
 title: "No-Estimates"
 tags: ["dev"]

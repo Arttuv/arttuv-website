@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2020-05-16"
 title: "Feeds Are The Future"
 tags: ["research"]

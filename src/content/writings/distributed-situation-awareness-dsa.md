@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2019-06-24"
 title: "Distributed Situation Awareness (DSA)"
 tags: ["hci"]

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2020-04-12"
 title: "The difficulty of saying I don't know"
 tags: ["dev"]

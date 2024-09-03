@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2017-05-11"
 title: "Designing for Usability 1985"
 tags: ["hci"]

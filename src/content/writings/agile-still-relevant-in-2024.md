@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2024-07-22"
 title: "Agile - Still Relevant in 2024"
 tags: ["dev"]

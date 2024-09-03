@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2020-07-25"
 title: "PDF as a Read It Later Service"
 tags: ["research"]

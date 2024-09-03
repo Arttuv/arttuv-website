@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2019-06-23"
 title: "Situation Awareness (SA)"
 tags: ["hci"]

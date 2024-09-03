@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2019-06-28"
 title: "Automation and the role of human operators"
 tags: ["hci"]

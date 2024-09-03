@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2010-10-11"
 title: "Who's fault is it anyway?"
 tags: ["hci"]

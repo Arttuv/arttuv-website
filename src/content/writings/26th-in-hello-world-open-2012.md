@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2012-10-18"
 title: "26th in the Hello World Open 2012"
 tags: ["dev"]

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2023-07-17"
 title: "My Thoughts on Consulting"
 tags: ["dev"]

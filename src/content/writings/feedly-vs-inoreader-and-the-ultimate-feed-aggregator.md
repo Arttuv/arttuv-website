@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2020-05-27"
 title: "Inoreader vs Feedly, and the ultimate feed reader (in 2020)"
 tags: ["research"]

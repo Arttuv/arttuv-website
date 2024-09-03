@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2019-06-30"
 title: "Platformer (game) UX"
 tags: ["hci"]

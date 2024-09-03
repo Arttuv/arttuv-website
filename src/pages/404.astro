@@ -2,9 +2,8 @@
 import '../styles/global.css'
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-const allPosts = await Astro.glob('../pages/writings/*.md');
-allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
-const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
+import { getCollection } from 'astro:content';
+const writings = (await getCollection('writings')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const title = "404 Not Found";
 const description = "This is the 404 - not found page. All the content is listed on this page.";
 ---
@@ -12,11 +11,11 @@ const description = "This is the 404 - not found page. All the content is listed
     <h1>{title}</h1>
     <p>Sorry, that particular page seems to be missing. It could be that the URL has changed as well, maybe it was one of these 🤞.</p>
 	<ul>
-		{nonDraftPosts.map((post) => (
+		{writings.map((post) => (
 			<li>
-				<FormattedDate date={new Date(post.frontmatter.pubDate)}/>
+				<FormattedDate date={new Date(post.data.pubDate)}/>
 				&emsp;
-				<a href={post.url}>{post.frontmatter.title}</a>
+				<a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a>
 			</li>))}
 	</ul>
 </BaseLayout>

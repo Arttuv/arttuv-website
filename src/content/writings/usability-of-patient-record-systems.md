@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: "2012-04-18"
 title: "Usability of Patient Record Systems 2010"
 tags: ["hci"]
