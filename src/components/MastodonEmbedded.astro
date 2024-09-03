@@ -1,0 +1,37 @@
+---
+import mastodonComments from '../external-data/scholar.social-arttuv.json';
+import FormattedDateTime from './FormattedDateTime.astro';
+import HtmlContent from './HtmlContent.astro';
+const { statusId } = Astro.props;
+const data = mastodonComments[statusId];
+---
+
+{data && (
+    <div class="embedded-mastodon-comment">
+        <HtmlContent htmlContent={data.content.content} />
+        <div class="embedded-mastodon-details">
+            <a href={data.content.account.url}>{data.content.account.display_name}</a> on Mastodon, <a href={data.content.url}><FormattedDateTime date={new Date(data.content.created_at)} /></a>
+        </div>
+    </div>
+    )}
+
+<style>
+    .embedded-mastodon-comment {
+        padding: 1rem 2rem 1rem 2rem;
+        font-size: smaller;
+    }
+    :global(.embedded-mastodon-comment .html-content) {
+        border-left: 1px solid white;
+        padding-left: 1rem;
+    }
+    
+    .embedded-mastodon-details {
+        text-align: right;
+        font-size: smaller;
+    }
+
+    .embedded-mastodon-comment-interact a {
+        text-decoration: none;
+        display: inline-block;
+    }
+</style>

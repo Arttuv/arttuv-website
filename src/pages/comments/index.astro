@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Comment from '../../components/Comment.astro';
+import FormattedDateTime from '../../components/FormattedDateTime.astro';
+const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+---
+
+<BaseLayout title="Comments" description="">
+	<main>
+		<section>
+        <h1>Comments</h1>
+        <div class="comment-listing">
+          <ul>
+        {comments.map(comment => (
+          <li>
+            <a href={`${comment.slug}`}><FormattedDateTime date={new Date(comment.data.pubDate)} /></a>
+            <Comment {comment} />
+          </li>
+          
+        ))}
+        </ul>
+        </div>
+    </section>
+	</main>
+</BaseLayout>
+
+<style>
+  ul {
+		list-style-type: none;
+		padding-left: 1rem;
+		width: 100%;
+	}
+	li {
+    margin-bottom: 4rem;
+	}
+</style>

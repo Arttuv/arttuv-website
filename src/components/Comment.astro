@@ -1,0 +1,18 @@
+---
+import MastodonEmbedded from './MastodonEmbedded.astro';
+const { comment } = Astro.props;
+const { Content } = await comment.render();
+---
+
+<div class="comment">
+    {comment.data.mastodon && <MastodonEmbedded statusId={comment.data.mastodon} />}
+    <div class="comment-content">
+        <Content />
+    </div>
+</div>
+
+<style>
+    .comment-content {
+        padding: 0rem 2rem 0rem 2rem;
+    }
+</style>

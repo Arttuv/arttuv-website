@@ -1,43 +1,46 @@
 ---
-import sanitizeHtml from 'sanitize-html';
+import mastodonComments from '../external-data/scholar.social-arttuv.json';
+import FormattedDateTime from './FormattedDateTime.astro';
+import HtmlContent from './HtmlContent.astro';
 const { statusId } = Astro.props;
-const data = await fetch(`https://scholar.social/api/v1/statuses/${statusId}`).then(res => res.status === 200 ? res.json() : null)
+const data = mastodonComments[statusId];
 ---
+
 {data && (
-    <div class="comments">
+    <div class="mastodon-comment">
         <div>
-            <a href={data.account.url}>{data.account.display_name}</a> shared this on <a href={data.url}>Mastodon</a>:
+            <a href={data.content.account.url}>{data.content.account.display_name}</a> shared this on Mastodon at <a href={data.content.url}><FormattedDateTime date={new Date(data.content.created_at)} /></a>
         </div>
-        <div class="quotation" set:html={sanitizeHtml(data.content)} />
-        <div class="stats">Replies {data.replies_count}, Reblogs {data.reblogs_count}, Favourites {data.favourites_count}</div> 
-        <div class="comments-interact">
-            <a href={data.url}>&larrhk;</a>
+        <HtmlContent htmlContent={data.content.content} />
+        <div class="stats">Replies {data.content.replies_count}, Reblogs {data.content.reblogs_count}, Favourites {data.content.favourites_count}</div> 
+        <div class="mastodon-comment-interact">
+            <a href={data.content.url}>&larrhk;</a>
         </div>
     </div>
     )}
 
 <style>
-    .comments {
+    .mastodon-comment {
         margin-top: 2rem;
         padding: 1rem 2rem 1rem 2rem;
     }
 
-    .comments .stats {
+    .mastodon-comment .stats {
         text-align: right;
         margin-bottom: 1rem;
     }
 
-    .comments .quotation {
+    :global(.mastodon-comment .html-content) {
         border-left: 1px solid white;
         padding-left: 1rem;
     }
     
-    .comments-interact {
+    .mastodon-comment-interact {
         text-align: right;
         font-size: larger;
     }
 
-    .comments-interact a {
+    .mastodon-comment-interact a {
         text-decoration: none;
         display: inline-block;
     }
