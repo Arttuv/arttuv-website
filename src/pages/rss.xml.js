@@ -16,11 +16,10 @@ export async function GET(context) {
   allItems.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
   return rss({
     // `<title>` field in output xml
-    title: 'Developer Collective',
+    title: 'arttuv.com',
     // `<description>` field in output xml
-    description: 'A collective of developers sharing their experiences',
+    description: 'Arttu Viljakainen, a software development consultant',
     // Pull in your project "site" from the endpoint context
-    // https://swdevcollective.com
     site: context.site,
     // Array of `<item>`s in output xml
     // See "Generating items" section for examples using content collections and glob imports
