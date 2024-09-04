@@ -14,7 +14,6 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
           <ul>
         {comments.map(comment => (
           <li>
-            <a href={`${comment.collection}/${comment.slug}`}><FormattedDateTime date={new Date(comment.data.pubDate)} /></a>
             <Comment {comment} />
           </li>
           
@@ -32,6 +31,6 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
 		width: 100%;
 	}
 	li {
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
 	}
 </style>

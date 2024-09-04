@@ -8,16 +8,16 @@ const data = mastodonComments[statusId];
 
 {data && (
     <div class="embedded-mastodon-comment">
-        <HtmlContent htmlContent={data.content.content} />
         <div class="embedded-mastodon-details">
             <a href={data.content.account.url}>{data.content.account.display_name}</a> on Mastodon, <a href={data.content.url}><FormattedDateTime date={new Date(data.content.created_at)} /></a>
         </div>
+        <HtmlContent htmlContent={data.content.content} />
     </div>
     )}
 
 <style>
     .embedded-mastodon-comment {
-        padding: 1rem 2rem 1rem 2rem;
+        padding: 1rem 2rem 0rem 2rem;
         font-size: smaller;
     }
     :global(.embedded-mastodon-comment .html-content) {
@@ -30,7 +30,6 @@ const data = mastodonComments[statusId];
     }
     
     .embedded-mastodon-details {
-        text-align: right;
         font-size: smaller;
     }
 

@@ -2,24 +2,37 @@
 import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Mastodon from '../components/Mastodon.astro';
-import type { CollectionEntry } from 'astro:content';
+import Comment from '../components/Comment.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import FormattedDateTime from '../components/FormattedDateTime.astro';
 type Props = CollectionEntry<'writings'>;
-const { data }  = Astro.props;
+const post  = Astro.props;
+
+const comments = (await getCollection('comments', ( comment ) => {
+	return comment.data.internalLink?.slug == post.slug // TODO BETTER
+})).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+
 ---
-<BaseLayout title={data.title} description={data.summary}>
+<BaseLayout title={post.data.title} description={post.data.summary}>
   <article class="blog-post">
     <div class="category">
-      {data.tags.map((tag) => (
+      {post.data.tags.map((tag) => (
         <span><a href={`/tags/${tag}`}>#{tag}</a></span>
       ))}
     </div>
-    <h1>{data.title}</h1>
-    <time>{<FormattedDate date={new Date(data.pubDate)}/>}</time>
+    <h1>{post.data.title}</h1>
+    <time>{<FormattedDate date={new Date(post.data.pubDate)}/>}</time>
     <hr />
+    <div class="writing-notes">
+      <h2>Notes</h2>
+      {comments.map((comment) => (
+        <Comment {comment} />
+      ))}
+    </div>
     <slot />
     <hr class="content-ending-line"/>
     <div class="writing-ending">•</div>
-    {data.mastodon && <Mastodon statusId={data.mastodon} />}
+    {post.data.mastodon && <Mastodon statusId={post.data.mastodon} />}
   </article>
 </BaseLayout>
 
@@ -33,6 +46,9 @@ const { data }  = Astro.props;
   overflow: scroll;
 }
 
+.writing-notes {
+  margin: 1rem 2rem;
+}
 .blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5 {
   padding-left: 0rem;
   margin-left: 0rem;

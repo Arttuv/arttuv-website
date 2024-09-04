@@ -1,18 +1,44 @@
 ---
+import { getEntry } from 'astro:content';
 import MastodonEmbedded from './MastodonEmbedded.astro';
+import FormattedDateTime from './FormattedDateTime.astro';
 const { comment } = Astro.props;
 const { Content } = await comment.render();
+const internalLinkTarget = comment.data.internalLink ? (await getEntry(comment.data.internalLink)) : null;
 ---
 
 <div class="comment">
+    <a href={`/${comment.collection}/${comment.slug}`}><FormattedDateTime date={new Date(comment.data.pubDate)} /></a>
+    {internalLinkTarget && <div class="internal-comment-details">On writing <a href={`/${internalLinkTarget.collection}/${internalLinkTarget.slug}`}>{internalLinkTarget.data.title}</a></div>}
     {comment.data.mastodon && <MastodonEmbedded statusId={comment.data.mastodon} />}
-    <div class="comment-content">
-        <Content />
+    <div class="internal-comment">
+        <div class="comment-content">
+            <Content />
+        </div>
     </div>
 </div>
 
 <style>
-    .comment-content {
+    .comment {
+        padding: 1rem 2rem 1rem 2rem;
+    }
+
+    .internal-comment-details {
+        font-size: smaller;
+        margin: 1rem 0rem 0rem 1rem;
+    }
+    .internal-comment{
         padding: 0rem 2rem 0rem 2rem;
+    }
+    .comment-content {
+        font-size: smaller;
+    }
+    :global(.comment-content) {
+        border-left: 1px solid black;
+        padding-left: 1rem;
+    }
+
+    :global(.dark .comment-content) {
+        border-left: 1px solid white;
     }
 </style>

@@ -17,10 +17,9 @@ export async function getStaticPaths() {
 const post = Astro.props;
 const { Content } = await post.render();
 ---
-<BaseLayout title={Astro.props.slug} description={"comment description"}>
+<BaseLayout title={Astro.props.slug} description={`This is a single comment posted on ${Astro.props.data.pubDate.toISOString}`}>
   <article class="comment">
-	
-	<h1>Comment on <FormattedDateTime date={post.data.pubDate} /></h1>
+	<h1>Comment on <br /> <FormattedDateTime date={post.data.pubDate} /></h1>
 	<Comment comment={post} />
   </article>
 </BaseLayout>
