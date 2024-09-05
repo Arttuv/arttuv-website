@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, reference, z } from "astro:content";
 
 const writings = defineCollection({
 	schema: z.object({
@@ -13,7 +13,7 @@ const writings = defineCollection({
 			alt: z.string(),
 		}).optional(),		
 		summary: z.string().optional(),
-		mastodon: z.string().optional(),
+		mastodon: z.string().optional()
 	}),
 });
 
@@ -25,7 +25,8 @@ const comments = defineCollection({
 			.string()
 			.or(z.date())
 			.transform((val) => new Date(val)),
-		mastodon: z.string()
+		mastodon: z.string().optional(),
+		internalLink: reference('writings').optional()
 	}),
 });
 
