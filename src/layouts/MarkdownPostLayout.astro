@@ -4,13 +4,12 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Mastodon from '../components/Mastodon.astro';
 import Comment from '../components/Comment.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
-import FormattedDateTime from '../components/FormattedDateTime.astro';
 type Props = CollectionEntry<'writings'>;
 const post  = Astro.props;
 
 const comments = (await getCollection('comments', ( comment ) => {
 	return comment.data.internalLink?.slug == post.slug // TODO BETTER
-})).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+})).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).filter((comment) => comment.data.mastodon !== post.data.mastodon);
 
 ---
 <BaseLayout title={post.data.title} description={post.data.summary}>
@@ -23,12 +22,12 @@ const comments = (await getCollection('comments', ( comment ) => {
     <h1>{post.data.title}</h1>
     <time>{<FormattedDate date={new Date(post.data.pubDate)}/>}</time>
     <hr />
-    <div class="writing-notes">
-      <h2>Notes</h2>
+    {comments.length > 0 && (<div class="writing-notes">
       {comments.map((comment) => (
         <Comment {comment} />
       ))}
     </div>
+    )}
     <slot />
     <hr class="content-ending-line"/>
     <div class="writing-ending">•</div>
