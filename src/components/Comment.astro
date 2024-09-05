@@ -41,4 +41,10 @@ const internalLinkTarget = comment.data.internalLink ? (await getEntry(comment.d
     :global(.dark .comment-content) {
         border-left: 1px solid white;
     }
+
+    @media screen and (max-width: 600px) {
+        .comment {
+            padding: 1rem 0rem 1rem 0rem;
+        }
+    }
 </style>
