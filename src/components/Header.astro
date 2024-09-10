@@ -3,10 +3,12 @@ import svgMastodon from '../images/icons8-mastodon.svg';
 import svgLinkedin from '../images/icons8-linkedin.svg';
 import svgRSS from '../images/rss.svg';
 import ThemeIcon from './ThemeIcon.astro';
+import MobileMenu from './MobileMenu.astro';
 
 const { title } = Astro.props;
 ---
-<header> 
+<header>
+  <div class="desktop-navigation">
    <nav>
      <ul style={{ listStyle: `none`}}>
        {title === 'Arttu Viljakainen, a software development consultant from Finland' ? <li><a href="/" style="text-decoration: underline;">Home</a></li> : <li><a href="/">Home</a></li>}
@@ -49,12 +51,19 @@ const { title } = Astro.props;
   <div class="theme-switcher">
     <ThemeIcon />
   </div>
+  </div>
 </div>
+<MobileMenu />
 </header>
 <style>
+
+
   header {
-    width: 100vw;
+    width: 100%;
+  }
+  .desktop-navigation {
     margin: 0rem auto;
+    width: 100%;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -69,11 +78,11 @@ const { title } = Astro.props;
     justify-content: space-between;
   }
   
-  header .header-social {  
+  .desktop-navigation .header-social {  
     padding-right: 1rem;
   }
 
-  header .theme-switcher {
+  .desktop-navigation .theme-switcher {
     min-width: 3vw;
     margin-right: 1.0875rem;
   }
@@ -85,8 +94,6 @@ const { title } = Astro.props;
   .header-social {
     text-align: right;
   }
-
-  
 
   nav {
     padding-top: 0.5rem;
@@ -115,8 +122,12 @@ const { title } = Astro.props;
   }  
   @media (max-width: 620px) {
   
-    header {
+    .desktop-navigation {
       margin: 1rem 0 0 0;
+    }
+
+    .desktop-navigation {
+      display: none;
     }
 
     nav {

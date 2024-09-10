@@ -67,14 +67,13 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
     <section class="feed-area">
         <h2>Feed</h2>
         <div class="comment-listing">
-          <ul>
-        {comments.map(comment => (
-          <li>
-            <Comment {comment} />
-          </li>
-          
-        ))}
-        </ul>
+            <ul>
+                {comments.map(comment => (
+                <li>
+                    <Comment {comment} />
+                </li>  
+                ))}
+            </ul>
         </div>
     </section>
 </div>
@@ -171,7 +170,7 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
     .comment-listing ul {
 		list-style-type: none;
 		padding-left: 1rem;
-		width: 100%;
+		
 	}
 	.comment-listing li {
         margin-bottom: 0rem;

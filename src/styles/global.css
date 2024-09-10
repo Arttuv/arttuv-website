@@ -11,6 +11,8 @@ body {
   font-weight: 400;
   text-rendering: optimizeLegibility;
   margin: 0px;
+  padding: 0px;
+  width: 100%;
   overflow: visible;
   min-width: 370px;
   text-underline-position: under;
@@ -33,7 +35,7 @@ p {
 
 main {
     margin: 0 auto;
-    padding: 0 1.0875rem 1.45rem;
+    padding: 0 1rem 1rem;
     padding-bottom: 0px;
     max-width: 70rem;
 }
@@ -185,7 +187,7 @@ nav a, nav a:visited, nav a:active {
     }
 
     body {
-      font-size: normal;
+      
     }
 
 }
