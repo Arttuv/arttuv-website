@@ -164,7 +164,7 @@ nav a, nav a:visited, nav a:active {
 
   }
 
-  @media (max-width: 620px) {
+  @media (max-width: 801px) {
 
     h1 {
       font-size: 2.5rem;
@@ -180,7 +180,7 @@ nav a, nav a:visited, nav a:active {
     
   }
 
-  @media (max-width: 756px) {
+  @media (max-width: 800px) {
 
   .main {
       padding: 0 0.5rem 0.5rem;
