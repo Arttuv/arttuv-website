@@ -5,7 +5,6 @@ import bw_wood from "../images/IMG_7500.jpeg"
 import flowers from "../images/IMG_8189.jpeg"
 import swimming_lapinniemi from "../images/IMG_7051.jpeg"
 import { getCollection } from 'astro:content';
-import FormattedDateTime from './FormattedDateTime.astro';
 import Comment from './Comment.astro';
 const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 ---
@@ -13,7 +12,7 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
 <div class="home-page">
     <div class="welcome-container">
         <div class="hello-text">
-            Hello! I’m a software development consultant. I write code. I strive to foster teamwork. I’m fascinated by the challenge of complexity.
+            Hello! I’m a software development consultant. I write code. I facilitate and study teamwork. I’m fascinated by the challenge of complexity.
         </div>
         <div class="arttu-photo">
             <Image src={arttu} alt="Arttu" loading="eager"/>
