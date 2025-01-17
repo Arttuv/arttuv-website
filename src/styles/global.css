@@ -117,6 +117,7 @@ header {
   position: sticky;
   top: 0px;
   background-color: white;
+  z-index: 9;
 }
 
 .dark header {

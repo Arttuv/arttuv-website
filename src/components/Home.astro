@@ -12,55 +12,45 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
 <div class="home-page">
     <div class="welcome-container">
         <div class="hello-text">
-            Hello! I’m a software development consultant. I write code. I facilitate and study teamwork. I’m fascinated by the challenge of complexity.
-        </div>
-        <div class="arttu-photo">
-            <Image src={arttu} alt="Arttu" loading="eager"/>
-        </div>
-    </div>
-    <div class="what-this-is-about">
-        <div>
-            <Image src={bw_wood} alt="Black and white wood"/>
-        </div>
-        <div class="what-this-is-about-text">
+            <h2>
+                Hello, I'm Arttu!
+            </h2>
+            <p>
+                I’m a software development consultant. I write code. I facilitate and study teamwork. I’m fascinated by and try to understand the challenge of complexity.
+            </p>
             <article>
-                <h2>What is a software development consultant?</h2>
+                <h3>What is a software development consultant?</h3>
                 <p>I define it to be a person who has a wide understanding of software development, can help others to improve their process of building digital solutions, and in general takes ownership of the outcomes.</p>
                 <p>As Block wrote in <a href="https://www.peterblock.com/books/flawless-consulting-a-guide-to-getting-your-expertise-used-3rd-edition-enhanced-ebook/">Flawless Consulting</a>, consultants are in a unique position as they don't have vested interests in problem solving. 
                     I honestly feel I have been able to do better work focusing on outcomes, when working as an "outsider". 
                     You can read more about my <a href="/writings/consulting">thoughts on consulting</a>.</p>
-                <strong>Coding</strong>
+                <h4>Coding</h4>
                 <p>I’ve been coding for a living for 15 years, and writing code for 25 years. I intend to keep on doing that.</p>
-                <strong>Teamwork</strong>
+                <h4>Teamwork</h4>
                 <p>These days, most things worth doing require a team. Skills and viewpoints needed are just too diverse for any individual.</p>
                 <p>Teams are essential in creating software: combining interdisciplinary skills in a way that makes the whole more than the sum of each individual requires intentional effort.</p>
                 <p>I intend to study teams and get better at making exceptional teams emerge.</p>
-                <strong>Processes</strong>
+                <h4>Processes</h4>
                 <p>Software happens in a complex world, in which you can’t predict the future. That’s why we have agile (<a href="/writings/agile-still-relevant-in-2024">which is still relevant, by the way</a>). I think it is essential to understand the difference between complicated and complex environments, and act accordingly. Agile never looks the same, and how to make it work is both interesting and rewarding.</p>
             </article>
-            <span class="button-container">
-                <a href="/writings/">More writings &#8594;</a>
-            </span>
+            <div class="bottom-part-text">
+                <h2>I'm a generalist</h2>
+                <p>
+                    Coding got me to the field of software development, but I may have stayed because of the people stuff.
+                </p>
+                <p>
+                    I'm increasingly interested in the human side of software development. Issues in projects are rarely related to technology, but on how to work productively and sustainably as a team, and on how to choose what to build next.
+                </p>
+                <p>
+                    Be it coding, teamwork, or processes, I feel like I have a lot to learn. I'm still excited about it.
+                </p>
+                <span class="button-container">
+                    <a href="/writings/">More writings &#8594;</a>
+                </span>
+            </div>
         </div>
-        <div>
-            <Image src={flowers} alt="Summerly flowers"/>
-        </div>
-    </div>
-    <div class="bottom-part">
-        <div class="bottom-part-image">
-            <Image src={swimming_lapinniemi} alt="Swimming spot by a lake Näsijärvi"/>
-        </div>
-        <div class="bottom-part-text">
-            <h2>I'm a generalist</h2>
-            <p>
-                Coding got me to the field of software development, but I may have stayed because of the people stuff.
-            </p>
-            <p>
-                I'm increasingly interested in the human side of software development. Issues in projects are rarely related to technology, but on how to work productively and sustainably as a team, and on how to choose what to build next.
-            </p>
-            <p>
-                Be it coding, teamwork, or processes, I feel like I have a lot to learn. I'm still excited about it.
-            </p>
+        <div class="arttu-photo">
+            <Image src={arttu} alt="Arttu" loading="eager"/>
         </div>
     </div>
     <section class="feed-area">
@@ -105,67 +95,25 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        gap: 1rem;
     }
     .hello-text {
-        max-width: 40vw;
-        font-size: 2rem;
+        max-width: 87ch;
+        align-self: start;
+    }
+    .arttu-photo {
+        align-self: start;
+        position: sticky;
+        top: 5rem;
+        z-index: 0;
     }
     .arttu-photo img {
         object-fit: cover;
-        width: 40vw;
-        max-width: 30rem;
-        max-height: 65vh;
+        width: 30vw;
+        max-width: 20rem;
+        max-height: 20vh;
         min-height: 30rem;
     }
-    
-    .what-this-is-about {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
-        gap: 2rem;
-        width: 100%;
-    }
-    .what-this-is-about-text p:not(:first-of-type) {
-        font-size: smaller;
-    }
-    .what-this-is-about img {
-        object-fit: cover;
-        width: 20vw;
-        max-width: 15rem;
-        height: 50vh;
-        max-height: 30rem;
-        min-height: 20rem;
-        border-radius: 2rem;
-    }
-    .what-this-is-about :nth-child(1 of div) {
-        display: flex;
-        align-items: start;
-    }
-    .what-this-is-about :nth-child(3 of div) {
-        display: flex;
-        align-items: end;
-    }
-
-    .bottom-part {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        gap: 2rem;
-    }
-    .bottom-part-text {
-        max-width: 40vw;
-    }
-    .bottom-part-image img {
-        object-fit: cover;
-        width: 40vw;
-        max-width: 30rem;
-        max-height: 65vh;
-        min-height: 30rem;
-    }
-
     .comment-listing ul {
 		list-style-type: none;
 		padding-left: 1rem;
@@ -189,49 +137,19 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
         }
         .hello-text {
             max-width: 100%;
-            font-size: 1.5rem;
         }
         .arttu-photo {
             width: 100%;
+            position: inherit;
+            text-align: center;
         }
         .arttu-photo img {
             object-fit: cover;
             width: 100%;
-            max-width: 100%;
-            max-height: 50vh;
+            max-width: 30ch
+            max-height: 20vh;
+            margin: 0 auto;
         }
-        .what-this-is-about {
-            margin-top: 2rem;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-        }
-        .what-this-is-about img {
-            width: auto;
-            max-width: 40vw;
-            max-height: 15vw;
-        }
-        .what-this-is-about-text {
-            width: 100%;
-        }
-        .what-this-is-about :nth-child(1 of div) {
-            order: 1;
-            display: flex;
-            align-items: start;
-            min-height: 20vw;
-            padding-bottom: 3rem;
-        }
-        .what-this-is-about :nth-child(3 of div) {
-            order: 2;
-            display: flex;
-            align-items: end;
-            justify-content: space-between;
-            padding-top: 3rem;
-        }
-        .what-this-is-about :nth-child(2) {
-            order: 3;
-        }
-
         .bottom-part {
             margin-top: 2rem;
             flex-direction: column;
