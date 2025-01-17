@@ -3,7 +3,6 @@ const platform = "github";
 const username = "withastro";
 ---
 <footer class="footer">
-  <h2>arttuv.com</h2>
   <div class="footer-content">
     <div>
       <div class="rss-subscribe">
@@ -47,8 +46,7 @@ const username = "withastro";
 
 <style>
   footer {
-    background-color: black;
-    color: #F5F5F5;
+    border-top: 1px solid lightgray;
     padding: 1rem;
   }
 
@@ -56,6 +54,7 @@ const username = "withastro";
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    font-weight: 200;
   }
 
   footer .copyright p {
@@ -75,9 +74,10 @@ const username = "withastro";
   .footer-read-more p {
     font-size: smaller;
   }
-  .rss-subscribe h1 {
-    font-size: 2rem;
+  .footer-content h3 {
+    font-size: 1rem;
     margin-bottom: 1rem;
+    font-weight: 200;
   }
 
   .rss-subscribe p {

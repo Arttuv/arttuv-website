@@ -12,7 +12,7 @@ If this is what "agile" has been to you, I understand that it doesn't feel like 
 
 Agile is fundamentally a mindset. Different frameworks and models are designed to implement its principles, but they are not synonymous to "agile".
 
-## Before agile: Deceitful predictability
+## Before agile: deceitful predictability
 
 I see the birth of agile as a reaction to what software development too often looked like: a waterfall as it is most commonly understood. One cycle of specification-planning-implementing-testing-releasing process (details and the number and names of phases vary), with fixed schedule and budget.
 
@@ -22,7 +22,7 @@ Most software development does not happen in a static environment (competition c
 
 Waterfall-like processes intend to bring predictability and clarity to a world that is neither: organisations using those processes are unable to adapt fast enough and base their plans on assumptions that do not hold.
 
-## Agile: Admitting the world is unpredictably complex
+## Agile: admitting the world is unpredictably complex
 
 Agile mindset is about admitting that the environment is quite complex, not static, and that affects the way we should be growing our software products and services. Complexity means it's impossible to predict the future, no matter how well you think you are planning it. You need to go forward in small steps and learn as much as you can, and use those learnings to guide you further.
 
