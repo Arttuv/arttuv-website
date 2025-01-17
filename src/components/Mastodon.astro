@@ -8,9 +8,9 @@ const data = mastodonComments[statusId];
 
 {data && (
     <div class="mastodon-comment">
-        <div>
+        <p>
             <a href={data.content.account.url}>{data.content.account.display_name}</a> shared this on Mastodon at <a href={data.content.url}><FormattedDateTime date={new Date(data.content.created_at)} /></a>
-        </div>
+        </p>
         <HtmlContent htmlContent={data.content.content} />
         <div class="stats">Replies {data.content.replies_count}, Reblogs {data.content.reblogs_count}, Favourites {data.content.favourites_count}</div> 
         <div class="mastodon-comment-interact">

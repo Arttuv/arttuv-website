@@ -9,12 +9,14 @@ const data = mastodonComments[statusId];
 {data && (
     <div class="embedded-mastodon-comment">
         <div class="embedded-mastodon-details">
+            <p>
             {internalLinkTarget && (
                 <><a href={data.content.account.url}>{data.content.account.display_name}</a> mentioned <a href={`/${internalLinkTarget.collection}/${internalLinkTarget.slug}`}>{internalLinkTarget.data.title}</a> on Mastodon, <a href={data.content.url}><FormattedDateTime date={new Date(data.content.created_at)} /></a> </>
             )}
             {!internalLinkTarget && (
                 <><a href={data.content.account.url}>{data.content.account.display_name}</a> on Mastodon, <a href={data.content.url}><FormattedDateTime date={new Date(data.content.created_at)} /></a> </>
             )}
+            </p>
         </div>
         <HtmlContent htmlContent={data.content.content} />
     </div>
