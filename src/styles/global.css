@@ -132,6 +132,14 @@ header {
   z-index: 9;
 }
 
+.dark .site-title a, .dark .site-title a:visited, .dark .site-title a:active {
+  color: #fff;
+}
+
+.site-title a, .site-title a:visited, .site-title a:active {
+  color: #000;
+}
+
 .dark header {
   background-color: #000;
 }
