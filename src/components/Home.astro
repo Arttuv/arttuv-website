@@ -65,10 +65,7 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
 </div>
 
 <style>
-
-    .home-page div {
-        margin: 1rem 0;
-    }
+ 
     .button-container {
         display: flex;
         justify-content: center;
@@ -95,7 +92,7 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
         gap: 1rem;
     }
     .hello-text {
-        max-width: 87ch;
+        max-width: 70ch;
         align-self: start;
     }
     .arttu-photo {
@@ -134,7 +131,14 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
         }
         .hello-text {
             max-width: 100%;
+            margin-top: 0;
         }
+        
+        h1 {
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+
         .arttu-photo {
             width: 100%;
             position: inherit;
@@ -143,9 +147,10 @@ const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate
         .arttu-photo img {
             object-fit: cover;
             width: 100%;
-            max-width: 30ch
-            max-height: 20vh;
             margin: 0 auto;
+            max-width: 30ch;
+            min-height: unset;
+            max-height: 60vh;
         }
         .bottom-part {
             margin-top: 2rem;
