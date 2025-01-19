@@ -187,6 +187,56 @@ nav a, nav a:visited, nav a:active {
   color: #F5F5F5;
 }
 
+.writing-preview {
+  padding: 0;
+  border: 1px solid lightgray;
+  font-size: smaller;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.writing-preview h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.writing-preview a, .writing-preview a:visited, .writing-preview a:active {
+  text-decoration: none;
+  font-weight: normal;
+  color: #000;
+}
+
+.writing-preview .header-area {
+  padding: 0.5rem;
+  border-bottom: 1px solid lightgray;
+}
+
+.writing-preview .summary-area {
+  padding: 0.5rem;
+}
+
+.writing-preview .summary-area p {
+  margin: 0;
+}
+
+.writing-preview .read-more {
+  color: #000;
+}
+
+.writing-preview .footer-area {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dark .writing-preview {
+  border-color: #F5F5F5;
+}
+
+.dark .writing-preview a, .dark .writing-preview a:visited, .dark .writing-preview a:active {
+  color: #F5F5F5;
+}
+
   
   /* Single column display for phones */
   @media (max-width: 459px) {

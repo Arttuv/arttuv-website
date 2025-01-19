@@ -8,23 +8,36 @@ const title = "Writings";
 const description = "A collection of my writings.";
 ---
 <BaseLayout title={title} description={description}>
+	<div class="writings-container">
 	<h1>{title}</h1>
 	<div class="writing-listing">
-	<ul>
+	
 		{writings.map((post) => (
-			<li>
-				<FormattedDate date={new Date(post.data.pubDate)}/>
-				&emsp;
-				<a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a>
-			</li>))}
-	</ul>
-</div>
+ 			<article class="writing-preview">
+				<div class="header-area">
+					<h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
+					<FormattedDate date={new Date(post.data.pubDate)}/>
+				</div>
+				<div class="summary-area">
+					<p>{post.data.summary}</p>
+					
+				</div>
+				<div class="footer-area">
+					
+					<a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
+				</div>                    
+			</article> 
+))}
+	
+	</div>
+	</div>
 </BaseLayout>
 <style>
 
 	.writing-listing {
 		min-height: 80vh;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 	}
 	a {
@@ -44,7 +57,12 @@ const description = "A collection of my writings.";
 		flex: 0 0 10rem;
 	}
 
-	@media (max-width: 756px) {
+	.writings-container {
+        max-width: 70ch;
+        margin: 0rem auto;
+    }
+
+	@media (max-width: 800px) {
 		.writing-listing ul li  {
 				font-size: smaller;
 		}

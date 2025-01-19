@@ -3,6 +3,7 @@ pubDate: "2024-07-22"
 title: "Agile - Still Relevant in 2024"
 tags: ["dev"]
 mastodon: "112840282925802410"
+summary: "During the first half of 2020's it has been common to see a lot of critique towards agile, and it can be easy to overlook how fundamental agile principles remain for surviving fast-paced, complex software projects."
 ---
 
 Changes to this text
