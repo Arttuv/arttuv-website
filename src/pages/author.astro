@@ -13,17 +13,17 @@ const description = "Arttu Viljakainen is a software developer from Finland. Thi
             <p>
                 I love solving complex problems and working collaboratively with teams to achieve great outcomes. With close to 15 years of experience in the field, I'm a generalist who enjoys taking on a variety of challenges and constantly learning new things.
             </p>
-                        <p>
-            My focus is on hands-on software development, and I pride myself on writing high-quality code that meets the needs of the business. 
+            <p>
+                My focus is on hands-on software development, and I pride myself on writing high-quality code that meets the needs of the business. 
             </p>
-                        <p> 
+            <p> 
             However, I believe that the performance of a team is more critical than any individual's skills, and that's why I am also passionate about studying and improving teamwork and shared leadership. I'm always seeking ways to help teams work more effectively together without relying on traditional command and control structures.
             </p>
-                        <p>
-            I believe that diverse teams collaborating and working together with a shared purpose are key to achieving the best outcomes. It's not something that happens automatically - it needs to be fostered and nurtured.
+            <p>
+                I believe that diverse teams collaborating and working together with a shared purpose are key to achieving the best outcomes. It's not something that happens automatically - it needs to be fostered and nurtured.
             </p>
-                        <p>
-            I find meaning in doing work that matters and being committed to achieving positive outcomes. I love an environment in whch teams have a high degree of autonomy and they can self-organise to meet the challenge at hand. Titles don't define what you can (or are allowed) to do - what matters is making good things happen.
+            <p>
+                I find meaning in doing work that matters and being committed to achieving positive outcomes. I love an environment in whch teams have a high degree of autonomy and they can self-organise to meet the challenge at hand. Titles don't define what you can (or are allowed) to do - what matters is making good things happen.
             </p>
             <p>
                 I’m still learning how to combine all my interests in an optimal way to get the best outcomes.
@@ -41,6 +41,84 @@ const description = "Arttu Viljakainen is a software developer from Finland. Thi
                 I also write to <a href="https://www.swdevcollective.com">Developer Collective</a>.
             </p>
         </div>
+        <div class="line-heading">
+            <h2>My work history</h2>
+        </div>
+        <div class="cv-listing">
+            <div class="cv-item-time">
+                <span>Now</span>
+            </div>
+            <div class="cv-item-content">
+                <p>
+                    I'm full time employed at Reaktor, and at the same time try to find my point of view to study teamwork.
+                </p>
+            </div>
+            <div class="cv-item-time">
+                <span>2019</span>
+            </div>
+            <div class="cv-item-content">
+                <span><strong>Reaktor &#8592; Current</strong></span>
+                <p>
+                    Reaktor is a software consultancy company, so I have been working as a consultant.
+                </p>
+                <p>
+                    Software development consultant describes my role well: development work, and everything related.
+                </p>
+                <p>
+                    My roles have varied from senior full-stack developer to team lead, scrum master and agile coach.
+                </p>
+            </div>
+            <div class="cv-item-time">
+                <span>2014</span>
+            </div>
+            <div class="cv-item-content">
+                <span>Insta DefSec Oy</span>
+                <p>At Insta, I worked as a senior software engineer, team lead & scrum master, and an usability specialist.</p>
+            </div>
+            <div class="cv-item-time">
+                <span>2013</span>
+            </div>
+            <div class="cv-item-content">
+                <span>Suonentieto Oy</span>
+                <p>Delphi application developer.</p>
+            </div>
+            <div class="cv-item-time">
+                <span>2010</span>
+            </div>
+            <div class="cv-item-content">
+                <span>CGI / Logica</span>
+                <p>Programmer in a large SAP PI integration project doing transformatios in Java and XSLT.</p>
+            </div>
+            <div class="cv-item-time">
+                <span>2008</span>
+            </div>
+            <div class="cv-item-content">
+                <span>European Forest Institute</span>
+                <p>I was a Java developer trainee for 3 monts in summer 2008.</p>
+            </div>
+            <div class="cv-item-time">
+                <span>2006</span>
+            </div>
+            <div class="cv-item-content">
+                <span>University of Eastern Finland</span>
+                <p>I started my studies in 2006 and graduated as a master of science in 2012.</p>
+                <p>My major was computer science, and minors psychology, cognitive science and business economics.</p>
+            </div>
+        </div>
+        <div class="cv-bottom-section">
+            <p>
+                I started programming somewhere around 1999. My first language was QBasic and later switched to Turbo Pascal, which I really liked.
+            </p>
+            <p>
+                This was the time I probably enjoyed programming the most: I had no idea what I was doing, and I was learning this alone.
+            </p>
+            <p>
+                I spent a lot of time at library trying to find relevant books or online resources for programming. I built ASCII games using IF-ELSE technology, because I knew of nothing else.
+            </p>
+            <p>
+                The spark of programming stayed and I never really thought of doing anything else for a living.
+            </p>
+        </div>
     </div>
 </BaseLayout>
 
@@ -48,6 +126,69 @@ const description = "Arttu Viljakainen is a software developer from Finland. Thi
     .author-container {
         max-width: 70ch;
         margin: 0rem auto;
+    }
+
+    .cv-listing {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cv-listing p {
+        font-size: smaller;
+    }
+
+    .cv-item-time {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        justify-content: space-between;
+        vertical-align: middle;
+        text-align: right;
+        padding-right: 0rem;
+        border-right: 1px solid lightgray;
+    }
+
+    .cv-item-content {
+        padding-left: 1rem;
+    }
+
+    .cv-item-content span {
+        margin: 0;
+        padding-left: -1.52rem;
+    }
+
+    .cv-item-time span::after {
+        content: '';
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        margin-bottom: 0.15rem;
+        left: 0.52rem;
+        height: 1rem;
+        width: 1rem;
+        min-width: 1rem;
+        min-height: 1rem;
+        background-color: lightgray;
+    }
+
+    .cv-bottom-section {
+        font-size: smaller;
+        padding: 0.5rem;
+        border-top: 1px solid lightgray;
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+    }
+
+    .cv-bottom-section p:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    @media (max-width: 800px) {
+        .cv-listing {
+            display: grid;
+            grid-template-columns: 0.2fr 0.8fr;
+        }
     }
 
 </style>
