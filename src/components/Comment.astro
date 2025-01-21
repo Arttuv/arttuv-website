@@ -8,7 +8,6 @@ const internalLinkTarget = comment.data.internalLink ? (await getEntry(comment.d
 ---
 
 <div class="comment">
-    <a href={`/${comment.collection}/${comment.slug}`}><FormattedDateTime date={new Date(comment.data.pubDate)} /></a>
     {internalLinkTarget && !comment.data.mastodon && <div class="internal-comment-details">On <a href={`/${internalLinkTarget.collection}/${internalLinkTarget.slug}`}>{internalLinkTarget.data.title}</a></div>}
     {comment.data.mastodon && <MastodonEmbedded statusId={comment.data.mastodon} internalLinkTarget={internalLinkTarget} />}
     <div class="internal-comment">
@@ -19,9 +18,6 @@ const internalLinkTarget = comment.data.internalLink ? (await getEntry(comment.d
 </div>
 
 <style>
-    .comment {
-        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    }
 
     .internal-comment-details {
         font-size: small;
