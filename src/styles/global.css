@@ -30,6 +30,14 @@ p {
   line-height: 1.5;
 }
 
+li + li {
+  margin-top: 0.2rem;
+}
+
+pre {
+  padding: 0.5rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font: 100%/1.8, sans-serif;
   font-weight: 400;
