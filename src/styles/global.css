@@ -204,8 +204,12 @@ nav a, nav a:visited, nav a:active {
 }
 
 .writing-preview h2 {
-  margin: 0 0 0.5rem 0;
+  margin: 1rem 0 0.5rem 0;
   font-size: 1rem;
+}
+
+.writing-preview h2 a {
+  font-weight: bold;
 }
 
 .writing-preview a, .writing-preview a:visited, .writing-preview a:active {
@@ -295,7 +299,7 @@ nav a, nav a:visited, nav a:active {
   @media (max-width: 800px) {
 
   .main {
-      padding: 0 0.5rem 0.5rem;
+
     }
 
 }
