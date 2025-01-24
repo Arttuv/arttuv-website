@@ -1,88 +1,89 @@
 ---
-import '../../styles/global.css';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
-import { getCollection } from 'astro:content';
-const writings = (await getCollection('writings')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-const title = "Writings";
-const description = "A collection of my writings.";
+import "../../styles/global.css"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import FormattedDate from "../../components/FormattedDate.astro"
+import { getCollection } from "astro:content"
+const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const title = "Writings"
+const description = "A collection of my writings."
 ---
 <BaseLayout title={title} description={description}>
-	<div class="writings-container">
-	<h1>{title}</h1>
-	<div class="writing-listing">
-	
-		{writings.map((post) => (
- 			<article class="writing-preview">
-				<div class="header-area">
-					<h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
-					<FormattedDate date={new Date(post.data.pubDate)}/>
-				</div>
-				<div class="summary-area">
-					<p>{post.data.summary}</p>
-					
-				</div>
-				<div class="footer-area">
-					
-					<a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
-				</div>                    
-			</article> 
-))}
-	
-	</div>
-	</div>
+  <div class="writings-container">
+    <h1>{title}</h1>
+    <div class="writing-listing">
+
+      {writings.map((post) => (
+        <article class="article-card">
+          <div class="article-card-header">
+            <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
+            <FormattedDate date={new Date(post.data.pubDate)} />
+          </div>
+          <div class="article-card-text">
+            <p>{post.data.summary}</p>
+          </div>
+          <div class="article-card-footer">
+            <a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
+          </div>
+        </article>
+      ))}
+
+    </div>
+  </div>
 </BaseLayout>
 <style>
 
-	.writing-listing {
-		min-height: 80vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	a {
-		text-decoration: none;
-	}
-	ul {
-		list-style-type: none;
-		padding-left: 1rem;
-		width: 100%;
-	}
-	ul li {
-		display: flex;
-		padding-bottom: 0.8rem;
-	}
-	ul li :global(time) {
-		text-align: right;
-		flex: 0 0 10rem;
-	}
-
-	.writings-container {
-        max-width: 70ch;
-        margin: 0rem auto;
+    .writing-listing {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-	@media (max-width: 800px) {
-		.writing-listing ul li  {
-				font-size: smaller;
-		}
+    a {
+        text-decoration: none;
+    }
 
-		ul li :global(time) {
-			flex: 0 0 6rem;
-		}
-	
-	}
+    ul {
+        list-style-type: none;
+        padding-left: 1rem;
+        width: 100%;
+    }
 
-	@media (max-width: 459px) {
-		.writing-listing ul li  {
-				padding-bottom: 0.3rem;
-		}
+    ul li {
+        display: flex;
+        padding-bottom: 0.8rem;
+    }
 
-		ul li :global(time) {
-			flex: 0 0 5rem;
-		}
-	
-	}
+    ul li :global(time) {
+        text-align: right;
+        flex: 0 0 10rem;
+    }
+
+    .writings-container {
+        max-width: 70ch;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 800px) {
+        .writing-listing ul li {
+            font-size: smaller;
+        }
+
+        ul li :global(time) {
+            flex: 0 0 6rem;
+        }
+    }
+
+    @media (max-width: 459px) {
+        .writing-listing ul li {
+            padding-bottom: 0.3rem;
+        }
+
+        ul li :global(time) {
+            flex: 0 0 5rem;
+        }
+
+    }
 
 
 </style>

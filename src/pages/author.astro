@@ -1,220 +1,234 @@
 ---
-import '../styles/global.css'
-import { Image } from 'astro:assets';
-import BaseLayout from '../layouts/BaseLayout.astro';
-const title = "Author";
-const description = "Arttu Viljakainen is a software developer from Finland. This page has more information about them.";
+import "../styles/global.css"
+import { Image } from "astro:assets"
+import BaseLayout from "../layouts/BaseLayout.astro"
+const title = "Author"
+const description = "Arttu Viljakainen is a software developer from Finland. This page has more information about them."
 ---
 
 <BaseLayout title={title} description={description}>
-    <div class="author-container">
-        <div class="author-text">
-            <h1>Arttu Viljakainen</h1>
-            <p>
-                <strong>Sofware development consultant</strong>
-            </p>
-            <p>
-                I love solving complex problems and working collaboratively with teams to achieve great outcomes. With close to 15 years of experience in the field, I'm a generalist who enjoys taking on a variety of challenges and constantly learning new things.
-            </p>
-            <p>
-                My focus is on hands-on software development, and I pride myself on writing high-quality code that meets the needs of the business. 
-            </p>
-            <p> 
-                However, I believe that the performance of a team is more critical than any individual's skills, and that's why I am also passionate about studying and improving teamwork and shared leadership. I'm always seeking ways to help teams work more effectively together without relying on traditional command and control structures.
-            </p>
-            <p>
-                I believe that diverse teams collaborating and working together with a shared purpose are key to achieving the best outcomes. It's not something that happens automatically - it needs to be fostered and nurtured.
-            </p>
-            <p>
-                I find meaning in doing work that matters and being committed to achieving positive outcomes. I love an environment in which teams have a high degree of autonomy and they can self-organise to meet the challenge at hand. Titles don't define what you can (or are allowed) to do - what matters is making good things happen.
-            </p>
-            <p>
-                I’m still learning how to combine all my interests in an optimal way to get the best outcomes.
-            </p>
-            <p>
-                I expect that learning path to take the rest of my career.
-            </p>
-            <p>
-                Humans as collaborative digital tool makers is an interesting viewpoint.
-            </p>
-            <p>
-                You can find me on <a href="https://scholar.social/@arttuv">Mastodon</a> or <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a>.
-            </p>
-            <p>
-                If you'd like to work with me or just network, approaching on <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a> is a good idea. Roles in which I can coach teams or improve my (peer) leadership skills are interesting to me.
-            </p>
-            <p>
-                I also write to <a href="https://www.swdevcollective.com">Developer Collective</a>.
-            </p>
-        </div>
-        
-        <div>
-            <div class="line-heading"><h2>CV</h2></div>
-            <h3>Technical skills</h3>
-            <p>
-                I have been building cloud native systems, applications for custom Android tablets and 
-                desktop applications for consumers, public sector and defence.
-            </p>
-            <p>
-                My roles have varied from senior software developer to team lead, scrum master and usability specialist.
-            </p>
-            <p>I have worked with various technologies, including:</p>
-            <ul>
-                <li>
-                    JVM (Java, Kotlin) (10+ years)
-                </li>
-                <li>
-                    Databases (PostgreSQL, MariaDB, ElasticSearch)
-                </li>
-                <li>
-                    Web technologies (React, Node, TypeScript, JavaScript, HTML/CSS)
-                </li>
-                <li>
-                    Cloud (Kubernetes, AWS, Containers)
-                </li>
-                <li>
-                    GoLang, Delphi, Swing, Android, Jetpack Compose
-                </li>
-            </ul>
-            <h3>Hard skills</h3>
-            <p>
-                Coaching teams to be autonomous and share leadership is especially close to my heart.
-                Some examples how I have spent time improving my teamwork, people and process skills:
-            </p>
-            <ul>
-                <li>
-                    Advanced Certified ScrumMaster (A-CSM)
-                </li>
-                <li>
-                    Certified ScrumMaster (CSM)
-                </li>
-                <li>
-                    Certified Scrum Product Owner (CSPO)
-                </li>
-                <li>
-                    Certified SAFe 5 Practitioner
-                </li>
-                <li>
-                    Reaktor Team Builder Academy (2021)
-                </li>
-                <li>
-                    Reaktor Leading Teams -training (2 days, 2021)
-                </li>
-            </ul>
-            <h3>Other activities</h3>
-            <ul>
-                <li>
-                    2022: Interview as a means of data generation (Tampere University)
-                </li>
-                <li>
-                    2022: Research data management, interviews (Tampere University)
-                </li>
-                
-                <li>
-                    2019: Fraktio: Finland’s most intensive UI/UX course
-                </li>
-                <li>
-                    2018: Ideo: Design Kit: The course for human-centred design
-                </li>
-                <li>
-                    2017: Lemanse: Tailored React/Redux course
-                </li>
-                <li>
-                    2017: FastDevCo: Node.js intro
-                </li>
-            </ul>
-            <h3>Studies</h3>
-            <p>
-                <strong>Master of Science</strong> from the University of Eastern Finland (graduated in 2012).
-            </p>
-            <ul>
-                <li>Major: Computer Science, software engineering track</li>
-                <li>Minors: psychology, cognitive science and business economics</li>
-            </ul>
-            <p>
-                I'm enrolled for PhD studies in Tampere University, but my research activities are mostly on hold for now.
-                <ul>
-                    <li>I intend to research teamwork in software development</li>
-                </ul>
-            </p>
-            <h3>Languages</h3>
-            <ul>
-                <li>Finnish (native)</li>
-                <li>English (advaned)</li>
-                <li>Swedish (basics)</li>
-            </ul>
-        </div>
-        <div class="line-heading">
-            <h2>My work history</h2>
-        </div>
-        <div class="cv-listing">
-            <div class="cv-item-time">
-                <span>Now</span>
-            </div>
-            <div class="cv-item-content">
-                <p>
-                    I'm full time employed at Reaktor, and at the same time try to find my point of view to study teamwork.
-                </p>
-            </div>
-            <div class="cv-item-time">
-                <span>2019</span>
-            </div>
-            <div class="cv-item-content">
-                <span><strong>Reaktor &#8592; Current</strong></span>
-                <p>
-                    Reaktor is a software consultancy company, so I have been working as a consultant.
-                </p>
-                <p>
-                    Software development consultant describes my role well: development work, and everything related.
-                </p>
-                <p>
-                    My roles have varied from senior full-stack developer to team lead, scrum master and agile coach.
-                </p>
-            </div>
-            <div class="cv-item-time">
-                <span>2014</span>
-            </div>
-            <div class="cv-item-content">
-                <span>Insta DefSec Oy</span>
-                <p>At Insta, I worked as a senior software engineer, team lead & scrum master, and an usability specialist.</p>
-            </div>
-            <div class="cv-item-time">
-                <span>2013</span>
-            </div>
-            <div class="cv-item-content">
-                <span>Suonentieto Oy</span>
-                <p>Delphi application developer.</p>
-            </div>
-            <div class="cv-item-time">
-                <span>2010</span>
-            </div>
-            <div class="cv-item-content">
-                <span>CGI / Logica</span>
-                <p>Programmer in a large SAP PI integration project doing transformatios in Java and XSLT.</p>
-            </div>
-            <div class="cv-item-time">
-                <span>2008</span>
-            </div>
-            <div class="cv-item-content">
-                <span>European Forest Institute</span>
-                <p>I was a Java developer trainee for 3 monts in summer 2008.</p>
-            </div>
-        </div>
-        <div class="cv-bottom-section">
-            <p>
-                I started programming somewhere around 1999. My first language was QBasic and I later switched to Turbo Pascal, which I really liked.
-            </p>
-            <p>
-                This was the time I probably enjoyed programming the most: I had no idea what I was doing, and I was learning this alone.
-            </p>
-            <p>
-                I spent a lot of time at library trying to find relevant books or online resources for programming. I built ASCII games using IF-ELSE technology, because I knew of nothing else.
-            </p>
-            <p>
-                The spark of programming stayed and I never really thought of doing anything else for a living.
-            </p>
-        </div>
+  <div class="author-container">
+    <div class="author-text">
+      <h1>Arttu Viljakainen</h1>
+      <p>
+        <strong>Sofware development consultant</strong>
+      </p>
+      <p>
+        I love solving complex problems and working collaboratively with teams to achieve great outcomes. With close to
+        15 years of experience in the field, I'm a generalist who enjoys taking on a variety of challenges and
+        constantly learning new things.
+      </p>
+      <p>
+        My focus is on hands-on software development, and I pride myself on writing high-quality code that meets the
+        needs of the business.
+      </p>
+      <p>
+        However, I believe that the performance of a team is more critical than any individual's skills, and that's why
+        I am also passionate about studying and improving teamwork and shared leadership. I'm always seeking ways to
+        help teams work more effectively together without relying on traditional command and control structures.
+      </p>
+      <p>
+        I believe that diverse teams collaborating and working together with a shared purpose are key to achieving the
+        best outcomes. It's not something that happens automatically - it needs to be fostered and nurtured.
+      </p>
+      <p>
+        I find meaning in doing work that matters and being committed to achieving positive outcomes. I love an
+        environment in which teams have a high degree of autonomy and they can self-organise to meet the challenge at
+        hand. Titles don't define what you can (or are allowed) to do - what matters is making good things happen.
+      </p>
+      <p>
+        I’m still learning how to combine all my interests in an optimal way to get the best outcomes.
+      </p>
+      <p>
+        I expect that learning path to take the rest of my career.
+      </p>
+      <p>
+        Humans as collaborative digital tool makers is an interesting viewpoint.
+      </p>
+      <p>
+        You can find me on <a href="https://scholar.social/@arttuv">Mastodon</a> or <a
+        href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a>.
+      </p>
+      <p>
+        If you'd like to work with me or just network, approaching on <a
+        href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a> is a good idea. Roles in which I can coach
+        teams or improve my (peer) leadership skills are interesting to me.
+      </p>
+      <p>
+        I also write to <a href="https://www.swdevcollective.com">Developer Collective</a>.
+      </p>
     </div>
+
+    <div>
+      <div class="line-heading"><h2>CV</h2></div>
+      <h3>Technical skills</h3>
+      <p>
+        I have been building cloud native systems, applications for custom Android tablets and
+        desktop applications for consumers, public sector and defence.
+      </p>
+      <p>
+        My roles have varied from senior software developer to team lead, scrum master and usability specialist.
+      </p>
+      <p>I have worked with various technologies, including:</p>
+      <ul>
+        <li>
+          JVM (Java, Kotlin) (10+ years)
+        </li>
+        <li>
+          Databases (PostgreSQL, MariaDB, ElasticSearch)
+        </li>
+        <li>
+          Web technologies (React, Node, TypeScript, JavaScript, HTML/CSS)
+        </li>
+        <li>
+          Cloud (Kubernetes, AWS, Containers)
+        </li>
+        <li>
+          GoLang, Delphi, Swing, Android, Jetpack Compose
+        </li>
+      </ul>
+      <h3>Hard skills</h3>
+      <p>
+        Coaching teams to be autonomous and share leadership is especially close to my heart.
+        Some examples how I have spent time improving my teamwork, people and process skills:
+      </p>
+      <ul>
+        <li>
+          Advanced Certified ScrumMaster (A-CSM)
+        </li>
+        <li>
+          Certified ScrumMaster (CSM)
+        </li>
+        <li>
+          Certified Scrum Product Owner (CSPO)
+        </li>
+        <li>
+          Certified SAFe 5 Practitioner
+        </li>
+        <li>
+          Reaktor Team Builder Academy (2021)
+        </li>
+        <li>
+          Reaktor Leading Teams -training (2 days, 2021)
+        </li>
+      </ul>
+      <h3>Other activities</h3>
+      <ul>
+        <li>
+          2022: Interview as a means of data generation (Tampere University)
+        </li>
+        <li>
+          2022: Research data management, interviews (Tampere University)
+        </li>
+
+        <li>
+          2019: Fraktio: Finland’s most intensive UI/UX course
+        </li>
+        <li>
+          2018: Ideo: Design Kit: The course for human-centred design
+        </li>
+        <li>
+          2017: Lemanse: Tailored React/Redux course
+        </li>
+        <li>
+          2017: FastDevCo: Node.js intro
+        </li>
+      </ul>
+      <h3>Studies</h3>
+      <p>
+        <strong>Master of Science</strong> from the University of Eastern Finland (graduated in 2012).
+      </p>
+      <ul>
+        <li>Major: Computer Science, software engineering track</li>
+        <li>Minors: psychology, cognitive science and business economics</li>
+      </ul>
+      <p>
+        I'm enrolled for PhD studies in Tampere University, but my research activities are mostly on hold for now.
+      <ul>
+        <li>I intend to research teamwork in software development</li>
+      </ul>
+      </p>
+      <h3>Languages</h3>
+      <ul>
+        <li>Finnish (native)</li>
+        <li>English (advaned)</li>
+        <li>Swedish (basics)</li>
+      </ul>
+    </div>
+    <div class="line-heading">
+      <h2>My work history</h2>
+    </div>
+    <div class="cv-listing">
+      <div class="cv-item-time">
+        <span>Now</span>
+      </div>
+      <div class="cv-item-content">
+        <p>
+          I'm full time employed at Reaktor, and at the same time try to find my point of view to study teamwork.
+        </p>
+      </div>
+      <div class="cv-item-time">
+        <span>2019</span>
+      </div>
+      <div class="cv-item-content">
+        <span><strong>Reaktor &#8592; Current</strong></span>
+        <p>
+          Reaktor is a software consultancy company, so I have been working as a consultant.
+        </p>
+        <p>
+          Software development consultant describes my role well: development work, and everything related.
+        </p>
+        <p>
+          My roles have varied from senior full-stack developer to team lead, scrum master and agile coach.
+        </p>
+      </div>
+      <div class="cv-item-time">
+        <span>2014</span>
+      </div>
+      <div class="cv-item-content">
+        <span>Insta DefSec Oy</span>
+        <p>At Insta, I worked as a senior software engineer, team lead & scrum master, and an usability specialist.</p>
+      </div>
+      <div class="cv-item-time">
+        <span>2013</span>
+      </div>
+      <div class="cv-item-content">
+        <span>Suonentieto Oy</span>
+        <p>Delphi application developer.</p>
+      </div>
+      <div class="cv-item-time">
+        <span>2010</span>
+      </div>
+      <div class="cv-item-content">
+        <span>CGI / Logica</span>
+        <p>Programmer in a large SAP PI integration project doing transformatios in Java and XSLT.</p>
+      </div>
+      <div class="cv-item-time">
+        <span>2008</span>
+      </div>
+      <div class="cv-item-content">
+        <span>European Forest Institute</span>
+        <p>I was a Java developer trainee for 3 monts in summer 2008.</p>
+      </div>
+    </div>
+    <div class="cv-bottom-section">
+      <p>
+        I started programming somewhere around 1999. My first language was QBasic and I later switched to Turbo Pascal,
+        which I really liked.
+      </p>
+      <p>
+        This was the time I probably enjoyed programming the most: I had no idea what I was doing, and I was learning
+        this alone.
+      </p>
+      <p>
+        I spent a lot of time at library trying to find relevant books or online resources for programming. I built
+        ASCII games using IF-ELSE technology, because I knew of nothing else.
+      </p>
+      <p>
+        The spark of programming stayed and I never really thought of doing anything else for a living.
+      </p>
+    </div>
+  </div>
 </BaseLayout>
 
 <style>

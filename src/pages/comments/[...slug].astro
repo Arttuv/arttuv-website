@@ -1,39 +1,42 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
-import FormattedDate from '../../components/FormattedDate.astro';
-import Mastodon from '../../components/Mastodon.astro';
-import { getCollection } from 'astro:content';
-import MastodonEmbedded from '../../components/MastodonEmbedded.astro';
-import FormattedDateTime from '../../components/FormattedDateTime.astro';
-import Comment from '../../components/Comment.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import FormattedDate from "../../components/FormattedDate.astro"
+import Mastodon from "../../components/Mastodon.astro"
+import { getCollection } from "astro:content"
+import MastodonEmbedded from "../../components/MastodonEmbedded.astro"
+import FormattedDateTime from "../../components/FormattedDateTime.astro"
+import Comment from "../../components/Comment.astro"
 
 export async function getStaticPaths() {
-	const posts = await getCollection('comments');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
+  const posts = await getCollection("comments")
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }))
 }
-const post = Astro.props;
-const { Content } = await post.render();
+const post = Astro.props
+const { Content } = await post.render()
 ---
-<BaseLayout title={Astro.props.slug} description={`This is a single comment posted on ${Astro.props.data.pubDate.toISOString}`}>
+<BaseLayout title={Astro.props.slug}
+            description={`This is a single comment posted on ${Astro.props.data.pubDate.toISOString}`}>
   <article class="comment">
-	<h1>Comment on <br /> <FormattedDateTime date={post.data.pubDate} /></h1>
-	<Comment comment={post} />
+    <h1>Comment on <br />
+      <FormattedDateTime date={post.data.pubDate} />
+    </h1>
+    <Comment comment={post} />
   </article>
 </BaseLayout>
 <style is:global>
 
-.comment {
-	max-width: 100%;
-  	margin: 0 auto;
-  	padding: 1rem;
-}
+    .comment {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
 
-.comment h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
+    .comment h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
 </style>

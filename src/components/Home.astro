@@ -1,103 +1,105 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets"
 import arttu from "../images/arttuv-bw.jpeg"
-import { getCollection } from 'astro:content';
-import Comment from './Comment.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-const writings = (await getCollection('writings')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+import { getCollection } from "astro:content"
+import Comment from "./Comment.astro"
+import FormattedDate from "../components/FormattedDate.astro"
+const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 ---
 
 <div class="home-page">
-    <div class="welcome-container">
-        <div class="hello-text">
-            {writings.slice(0, 3).map((post) => (
-               <article class="writing-preview">
-                    <div class="header-area">
-                        <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
-                        <FormattedDate date={new Date(post.data.pubDate)}/>
-                    </div>
-                    <div class="summary-area">
-                        <p>{post.data.summary}</p>
-                        
-                    </div>
-                    <div class="footer-area">
-                        
-                        <a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
-                    </div>                    
-                </article> 
-            ))}
-            <span class="button-container">
+  <div class="welcome-container">
+    <div class="hello-text">
+      {writings.slice(0, 3).map((post) => (
+        <article class="article-card">
+          <div class="article-card-header">
+            <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
+            <FormattedDate date={new Date(post.data.pubDate)} />
+          </div>
+          <div class="article-card-text">
+            <p>{post.data.summary}</p>
+
+          </div>
+          <div class="article-card-footer">
+            <a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
+          </div>
+        </article>
+      ))}
+      <span class="button-container">
                 <a href="/writings/">All writings →</a>
             </span>
 
-            <article>
-                <div class="line-heading">
-                    <h2>Arttu Viljakainen</h2>
-                </div>
-                    <p>
-                        At the moment I'm a software development consultant.
-                    </p>  
-                    <div class="summary-area">
-                    <p>I’ve been coding for a living for 15 years, and writing code for some 20 years. I intend to keep on doing that.</p>
-                    
-                    <p>
-                        Teams are essential in creating software: combining interdisciplinary skills in a way that makes the whole more than the sum of each individual requires intentional effort.
-                        These days, most things worth doing require a team. Skills and viewpoints needed are just too diverse for any individual.
-                    </p>
-                    
-                    <p>
-                        I intend to study teams and get better at making exceptional teams emerge.
-                    </p>
-                    
-                    <p>
-                        Software happens in a complex world, in which you can’t predict the future. That’s why we have agile (<a href="/writings/agile-still-relevant-in-2024">which is still relevant, by the way</a>). I think it is essential to understand the difference between complicated and complex environments, and act accordingly. Agile never looks the same, and how to make it work is both interesting and rewarding.
-                    </p>
-                    <h3>I'm a generalist</h3>
-                    <p>
-                        Coding got me to the field of software development, but I may have stayed because of the people stuff.
-                    </p>
-                    <p>
-                        I'm increasingly interested in the human side of software development. Issues in projects are rarely related to technology, but on how to work productively and sustainably as a team, and on how to choose what to build next.
-                    </p>
-                    <p>
-                        Be it coding, teamwork, or processes, I feel like I have a lot to learn. I'm still excited about it.
-                    </p>
-                    </div>
-                    <div class="footer-area">
-                        <a class="read-more" href={`/author/`}>Read more about the author →</a>
-                    </div>                    
-                </article> 
-               
-            </article>
-            <div class="bottom-part-text">
-                
-            </div>
-        </div>
-        <div class="arttu-photo">
-            <Image src={arttu} alt="Arttu" loading="eager"/>
-        </div>
-    </div>
-    <section class="feed-area">
+      <article>
         <div class="line-heading">
-            <h2>Mastodon Feed</h2>
+          <h2>Arttu Viljakainen</h2>
         </div>
-        <div class="comment-listing">
-            <ul>
-                {comments.map(comment => (
-                <li>
-                    <Comment {comment} />
-                </li>  
-                ))}
-            </ul>
+        <p>
+          At the moment I'm a software development consultant.
+        </p>
+        <div class="article-card-text">
+          <p>I’ve been coding for a living for 15 years, and writing code for some 20 years. I intend to keep on doing
+            that.</p>
+
+          <p>
+            Teams are essential in creating software: combining interdisciplinary skills in a way that makes the whole
+            more than the sum of each individual requires intentional effort.
+            These days, most things worth doing require a team. Skills and viewpoints needed are just too diverse for
+            any individual.
+          </p>
+
+          <p>
+            I intend to study teams and get better at making exceptional teams emerge.
+          </p>
+
+          <p>
+            Software happens in a complex world, in which you can’t predict the future. That’s why we have agile (<a
+            href="/writings/agile-still-relevant-in-2024">which is still relevant, by the way</a>). I think it is
+            essential to understand the difference between complicated and complex environments, and act accordingly.
+            Agile never looks the same, and how to make it work is both interesting and rewarding.
+          </p>
+          <h3>I'm a generalist</h3>
+          <p>
+            Coding got me to the field of software development, but I may have stayed because of the people stuff.
+          </p>
+          <p>
+            I'm increasingly interested in the human side of software development. Issues in projects are rarely related
+            to technology, but on how to work productively and sustainably as a team, and on how to choose what to build
+            next.
+          </p>
+          <p>
+            Be it coding, teamwork, or processes, I feel like I have a lot to learn. I'm still excited about it.
+          </p>
         </div>
-    </section>
+        <div class="article-card-footer">
+          <a class="read-more" href={`/author/`}>Read more about the author →</a>
+        </div>
+      </article>
+    </div>
+    <div class="author-photo">
+      <Image src={arttu} alt="Arttu" loading="eager" />
+    </div>
+  </div>
+  <section class="feed-area">
+    <div class="line-heading">
+      <h2>Mastodon Feed</h2>
+    </div>
+    <div class="comment-listing">
+      <ul>
+        {comments.map(comment => (
+          <li>
+            <Comment {comment} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
 </div>
 
 <style>
- 
-   
-    .footer-area {
+
+
+    .article-card-footer {
         text-align: right;
     }
 
@@ -115,10 +117,12 @@ const writings = (await getCollection('writings')).sort((a, b) => b.data.pubDate
         font-size: smaller;
         cursor: pointer;
     }
+
     .home-page {
         width: 100%;
         margin: auto;
     }
+
     .welcome-container {
         display: flex;
         flex-direction: row;
@@ -128,17 +132,20 @@ const writings = (await getCollection('writings')).sort((a, b) => b.data.pubDate
         width: 100%;
         gap: 1rem;
     }
+
     .hello-text {
         max-width: 70ch;
         align-self: start;
     }
-    .arttu-photo {
+
+    .author-photo {
         align-self: start;
         position: sticky;
         top: 5rem;
         z-index: 0;
     }
-    .arttu-photo img {
+
+    .author-photo img {
         object-fit: cover;
         width: 30vw;
         max-width: 20rem;
@@ -146,24 +153,21 @@ const writings = (await getCollection('writings')).sort((a, b) => b.data.pubDate
         min-height: 280px;
     }
 
-    .comment-listing {
-        
-    }
     .comment-listing ul {
-		list-style-type: none;
-		padding-left: 0rem;
+        list-style-type: none;
+        padding-left: 0;
         padding-right: 1rem;
-		margin-top: 0rem;
-	}
+        margin-top: 0;
+    }
 
-	.comment-listing li {
+    .comment-listing li {
         margin-bottom: 0.5rem;
     }
 
     .feed-area h2 {
         text-align: center;
     }
-    
+
     @media (max-width: 800px) {
         .welcome-container {
             margin-top: 2rem;
@@ -171,47 +175,29 @@ const writings = (await getCollection('writings')).sort((a, b) => b.data.pubDate
             justify-content: center;
             height: auto;
         }
+
         .hello-text {
             max-width: 100%;
             margin-top: 0;
         }
-        
+
         h1 {
             margin: 0.5rem 0;
             text-align: center;
         }
 
-        .arttu-photo {
+        .author-photo {
             width: 100%;
             position: inherit;
             text-align: center;
         }
-        .arttu-photo img {
+
+        .author-photo img {
             object-fit: cover;
             width: 100%;
             margin: 0 auto;
             max-width: 30ch;
             max-height: 50vh;
-        }
-        .bottom-part {
-            margin-top: 2rem;
-            flex-direction: column;
-            justify-content: center;
-            height: auto;
-        }
-
-        .bottom-part-text {
-            max-width: 100%;
-        }
-
-        .bottom-part-image {
-            width: 100%;
-        }
-
-        .bottom-part-image img {
-            object-fit: cover;
-            max-width: 100%;
-            width: 100%;
         }
     }
 </style>

@@ -1,36 +1,36 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Comment from '../../components/Comment.astro';
-import FormattedDateTime from '../../components/FormattedDateTime.astro';
-const comments = (await getCollection('comments')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+import { getCollection } from "astro:content"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import Comment from "../../components/Comment.astro"
+import FormattedDateTime from "../../components/FormattedDateTime.astro"
+const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 ---
 
 <BaseLayout title="Comments" description="">
-	<main>
-		<section>
-        <h1>Comments</h1>
-        <div class="comment-listing">
-          <ul>
-        {comments.map(comment => (
-          <li>
-            <Comment {comment} />
-          </li>
-          
-        ))}
+  <main>
+    <section>
+      <h1>Comments</h1>
+      <div class="comment-listing">
+        <ul>
+          {comments.map(comment => (
+            <li>
+              <Comment {comment} />
+            </li>
+          ))}
         </ul>
-        </div>
+      </div>
     </section>
-	</main>
+  </main>
 </BaseLayout>
 
 <style>
-  ul {
-		list-style-type: none;
-		padding-left: 1rem;
-		width: 100%;
-	}
-	li {
-    margin-bottom: 0rem;
-	}
+    ul {
+        list-style-type: none;
+        padding-left: 1rem;
+        width: 100%;
+    }
+
+    li {
+        margin-bottom: 0rem;
+    }
 </style>

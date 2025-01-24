@@ -1,23 +1,27 @@
 ---
-import mastodonComments from '../external-data/scholar.social-arttuv.json';
-import FormattedDateTime from './FormattedDateTime.astro';
-import HtmlContent from './HtmlContent.astro';
-const { statusId } = Astro.props;
-const data = mastodonComments[statusId];
+import mastodonComments from "../external-data/scholar.social-arttuv.json"
+import FormattedDateTime from "./FormattedDateTime.astro"
+import HtmlContent from "./HtmlContent.astro"
+const { statusId } = Astro.props
+const data = mastodonComments[statusId]
 ---
 
 {data && (
-    <div class="mastodon-comment">
-        <p>
-            <a href={data.content.account.url}>{data.content.account.display_name}</a> shared this on Mastodon at <a href={data.content.url}><FormattedDateTime date={new Date(data.content.created_at)} /></a>
-        </p>
-        <HtmlContent htmlContent={data.content.content} />
-        <div class="stats">Replies {data.content.replies_count}, Reblogs {data.content.reblogs_count}, Favourites {data.content.favourites_count}</div> 
-        <div class="mastodon-comment-interact">
-            <a href={data.content.url}>&larrhk;</a>
-        </div>
-    </div>
-    )}
+<div class="mastodon-comment">
+  <p>
+    <a href={data.content.account.url}>{data.content.account.display_name}</a> shared this on Mastodon at <a
+    href={data.content.url}>
+    <FormattedDateTime date={new Date(data.content.created_at)} />
+  </a>
+  </p>
+  <HtmlContent htmlContent={data.content.content} />
+  <div class="stats">Replies {data.content.replies_count}, Reblogs {data.content.reblogs_count},
+    Favourites {data.content.favourites_count}</div>
+  <div class="mastodon-comment-interact">
+    <a href={data.content.url}>&larrhk;</a>
+  </div>
+</div>
+  )}
 
 <style>
     .mastodon-comment {
@@ -38,7 +42,7 @@ const data = mastodonComments[statusId];
     :global(.dark .mastodon-comment .html-content) {
         border-left: 1px solid white;
     }
-    
+
     .mastodon-comment-interact {
         text-align: right;
         font-size: larger;

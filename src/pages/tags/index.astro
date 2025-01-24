@@ -1,23 +1,23 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-const allPosts = (await getCollection('writings')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
-const title = "Tag Index";
-const description = "Listing of all the tags used on this site.";
----  
+import { getCollection } from "astro:content"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+const allPosts = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
+const title = "Tag Index"
+const description = "Listing of all the tags used on this site."
+---
 <BaseLayout title={title} description={description}>
-    <div class="tags">
-      <ul>
-        {tags.map((tag) => (
-          <li class="tag"><a href={`/tags/${tag}`}>{tag}</a></li>
-        ))}
-      </ul>
-    </div>
+  <div class="tags">
+    <ul>
+      {tags.map((tag) => (
+        <li class="tag"><a href={`/tags/${tag}`}>{tag}</a></li>
+      ))}
+    </ul>
+  </div>
 </BaseLayout>
-    
+
 <style>
-  ul li {
-		padding-bottom: 0.4rem;
-	}
+    ul li {
+        padding-bottom: 0.4rem;
+    }
 </style>

@@ -1,6 +1,6 @@
 ---
-import sanitizeHtml from 'sanitize-html';
-const { htmlContent } = Astro.props;
+import sanitizeHtml from "sanitize-html"
+const { htmlContent } = Astro.props
 ---
 
 <div class="html-content" set:html={sanitizeHtml(htmlContent)} />

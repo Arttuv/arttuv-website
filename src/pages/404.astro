@@ -1,35 +1,38 @@
 ---
-import '../styles/global.css'
-import BaseLayout from '../layouts/BaseLayout.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import { getCollection } from 'astro:content';
-const writings = (await getCollection('writings')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-const title = "404 Not Found";
-const description = "This is the 404 - not found page. All the content is listed on this page.";
+import "../styles/global.css"
+import BaseLayout from "../layouts/BaseLayout.astro"
+import FormattedDate from "../components/FormattedDate.astro"
+import { getCollection } from "astro:content"
+const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const title = "404 Not Found"
+const description = "This is the 404 - not found page. All the content is listed on this page."
 ---
 <BaseLayout title={title} description={description}>
-    <h1>{title}</h1>
-    <p>Sorry, that particular page seems to be missing. It could be that the URL has changed as well, maybe it was one of these 🤞.</p>
-	<ul>
-		{writings.map((post) => (
-			<li>
-				<FormattedDate date={new Date(post.data.pubDate)}/>
-				&emsp;
-				<a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a>
-			</li>))}
-	</ul>
+  <h1>{title}</h1>
+  <p>Sorry, that particular page seems to be missing. It could be that the URL has changed as well, maybe it was one of
+    these 🤞.</p>
+  <ul>
+    {writings.map((post) => (
+      <li>
+        <FormattedDate date={new Date(post.data.pubDate)} />
+        &emsp;
+        <a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a>
+      </li>))}
+  </ul>
 </BaseLayout>
 <style>
-	ul {
-		list-style-type: none;
-		padding-left: 1rem;
-	}
-	ul li {
-		display: flex;
-		padding-bottom: 0.3rem;
-	}
-	ul li :global(time) {
-		flex: 0 0 130px;
-		color: #F5F5F5;
-	}
+    ul {
+        list-style-type: none;
+        padding-left: 1rem;
+    }
+
+    ul li {
+        display: flex;
+        padding-bottom: 0.3rem;
+    }
+
+    ul li :global(time) {
+        flex: 0 0 130px;
+        color: #F5F5F5;
+    }
 </style>

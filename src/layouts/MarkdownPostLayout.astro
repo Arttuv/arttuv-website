@@ -1,16 +1,15 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import Mastodon from '../components/Mastodon.astro';
-import Comment from '../components/Comment.astro';
-import { getCollection, type CollectionEntry } from 'astro:content';
-type Props = CollectionEntry<'writings'>;
-const post  = Astro.props;
+import BaseLayout from "./BaseLayout.astro"
+import FormattedDate from "../components/FormattedDate.astro"
+import Mastodon from "../components/Mastodon.astro"
+import Comment from "../components/Comment.astro"
+import { getCollection, type CollectionEntry } from "astro:content"
+type Props = CollectionEntry<"writings">;
+const post = Astro.props
 
-const comments = (await getCollection('comments', ( comment ) => {
-	return comment.data.internalLink?.slug == post.slug // TODO BETTER
-})).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).filter((comment) => comment.data.mastodon !== post.data.mastodon);
-
+const comments = (await getCollection("comments", (comment) => {
+  return comment.data.internalLink?.slug == post.slug // TODO BETTER
+})).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).filter((comment) => comment.data.mastodon !== post.data.mastodon)
 ---
 <BaseLayout title={post.data.title} description={post.data.summary}>
   <article class="blog-post">
@@ -20,141 +19,146 @@ const comments = (await getCollection('comments', ( comment ) => {
       ))}
     </div>
     <h1>{post.data.title}</h1>
-    <time>{<FormattedDate date={new Date(post.data.pubDate)}/>}</time>
+    <time>{
+      <FormattedDate date={new Date(post.data.pubDate)} />}</time>
     <hr />
-    {comments.length > 0 && (<div class="writing-notes">
-      {comments.map((comment) => (
-        <Comment {comment} />
-      ))}
-    </div>
+    {comments.length > 0 && (
+      <div class="writing-notes">
+        {comments.map((comment) => (
+          <Comment {comment} />
+        ))}
+      </div>
     )}
     <slot />
-    <hr class="content-ending-line"/>
+    <hr class="content-ending-line" />
     <div class="writing-ending">•</div>
-    {post.data.mastodon && <Mastodon statusId={post.data.mastodon} />}
+    {post.data.mastodon &&
+      <Mastodon statusId={post.data.mastodon} />}
   </article>
 </BaseLayout>
 
 <style is:global>
-  .blog-post {
-    max-width: 70ch;
-    margin: 2rem auto;
-  }
+    .blog-post {
+        max-width: 70ch;
+        margin: 2rem auto;
+    }
 
-  .blog-post pre {
-  overflow: scroll;
-}
+    .blog-post pre {
+        overflow: scroll;
+    }
 
-.writing-notes {
-  margin: 1rem 2rem;
-}
-.blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5 {
-  padding-left: 0rem;
-  margin-left: 0rem;
-  padding-bottom: 0rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-}
+    .writing-notes {
+        margin: 1rem 2rem;
+    }
 
-.blog-post h1:first-of-type {
-  font-size: 3rem;
-  text-align: left;
-  text-decoration: none;
-  margin-left: 0px;
-  padding-bottom: 0rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-weight: normal;
-}
+    .blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5 {
+        padding-left: 0rem;
+        margin-left: 0rem;
+        padding-bottom: 0rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
 
-.blog-post .category {
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0rem;
-  padding-top: 0px;
-  padding-left: 0rem;
-  margin-top: 1rem;
-}
-
-.blog-post time {
-  text-align: left;
-  color: #000;
-  font-weight: normal;
-  padding-left: auto;
-  margin-left: auto;
-  margin-top: 0px;
-}
-
-.blog-post .content .gatsby-resp-image-figcaption {
-  margin-top: 0.4rem;
-  text-align: center;
-  font-weight: normal;
-  font-size: smaller;
-}
-
-.blog-post ul {
-  margin-left: 0rem;
-  margin-bottom: 1rem;
-}
-
-.blog-post ul li {
-  margin-bottom: 0.5rem;
-}
-
-.blog-post p {
-  margin-bottom: 1rem;
-}
-
-.blog-post img {
-  object-fit: contain;
-  height: inherit;
-  width: 100%;
-  border: 1px solid lightslategray;
-  margin: 0 auto;
-  display: block;
-}
-
-.content-ending-line {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.writing-ending {
-  text-align: center;
-  font-size: 1em;
-  color: #000;
-  margin: 1rem 0;
-}
-
-.dark .writing-ending {
-  color: #F5F5F5;
-}
-
-@media (max-width: 756px) {
-  .blog-post h1:first-of-type {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-
-  @media (max-width: 620px) {
     .blog-post h1:first-of-type {
-      font-size: 2rem;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-    }
-
-    h3 {
-      font-size: 1.25rem;
+        font-size: 3rem;
+        text-align: left;
+        text-decoration: none;
+        margin-left: 0px;
+        padding-bottom: 0rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-weight: normal;
     }
 
-    h4 {
-      font-size: 1rem;
+    .blog-post .category {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0rem;
+        padding-top: 0px;
+        padding-left: 0rem;
+        margin-top: 1rem;
     }
-  }
+
+    .blog-post time {
+        text-align: left;
+        color: #000;
+        font-weight: normal;
+        padding-left: auto;
+        margin-left: auto;
+        margin-top: 0px;
+    }
+
+    .blog-post .content .gatsby-resp-image-figcaption {
+        margin-top: 0.4rem;
+        text-align: center;
+        font-weight: normal;
+        font-size: smaller;
+    }
+
+    .blog-post ul {
+        margin-left: 0rem;
+        margin-bottom: 1rem;
+    }
+
+    .blog-post ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .blog-post p {
+        margin-bottom: 1rem;
+    }
+
+    .blog-post img {
+        object-fit: contain;
+        height: inherit;
+        width: 100%;
+        border: 1px solid lightgray;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .content-ending-line {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .writing-ending {
+        text-align: center;
+        font-size: 1em;
+        color: #000;
+        margin: 1rem 0;
+    }
+
+    .dark .writing-ending {
+        color: #F5F5F5;
+    }
+
+    @media (max-width: 756px) {
+        .blog-post h1:first-of-type {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 620px) {
+            .blog-post h1:first-of-type {
+                font-size: 2rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+        }
+    }
 </style>

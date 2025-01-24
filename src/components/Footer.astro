@@ -1,6 +1,6 @@
 ---
-const platform = "github";
-const username = "withastro";
+const platform = "github"
+const username = "withastro"
 ---
 <footer class="footer">
   <div class="footer-content">
@@ -11,7 +11,8 @@ const username = "withastro";
           <p>
             <a href="/rss.xml">RSS Link</a>
           </p>
-          <p>Yes, RSS still exists \o/ Full text is provided in RSS so you'll never need to visit this site if you don't want to.</p>
+          <p>Yes, RSS still exists \o/ Full text is provided in RSS so you'll never need to visit this site if you don't
+            want to.</p>
           <p>Please notify if you have issues with the feed.</p>
         </div>
       </div>
@@ -21,85 +22,96 @@ const username = "withastro";
       <p>
         <a href="/author">Who am I?</a>
       </p>
-      <p>I write about <a href="http://localhost:3000/tags/dev">software development</a>, <a href="http://localhost:3000/tags/hci">human-computer intearaction</a> and <a href="http://localhost:3000/tags/research">research</a>.
+      <p>I write about <a href="http://localhost:3000/tags/dev">software development</a>, <a
+        href="http://localhost:3000/tags/hci">human-computer intearaction</a> and <a
+        href="http://localhost:3000/tags/research">research</a>.
       </p>
       <p>
-        This is my corner of the web. I use it to practice writing. Writing also helps me to think (or forces me to). Which means I write to become better.
-      </p> 
+        This is my corner of the web. I use it to practice writing. Writing also helps me to think (or forces me to).
+        Which means I write to become better.
+      </p>
       <p>
-        I don't like using LinkedIn or such for content. I try to avoid social media as much as I can. Interacting would be easier there, but you can try Mastodon or LinkedIn to contact me. I'd like it.
+        I don't like using LinkedIn or such for content. I try to avoid social media as much as I can. Interacting would
+        be easier there, but you can try Mastodon or LinkedIn to contact me. I'd like it.
       </p>
       <h3>Contact</h3>
       <p>
-        You can find me on <a href="https://scholar.social/@arttuv">Mastodon</a> or <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a>.
+        You can find me on <a href="https://scholar.social/@arttuv">Mastodon</a> or <a
+        href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a>.
       </p>
     </div>
   </div>
-    <div class="copyright">
-      <p>
-      © {new Date().getFullYear()} Arttu Viljakainen. 
-      All texts published are under <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike License</a> - attribution is required. Ask permission before using any of the photos on this site.
-      </p>
-      <p>
+  <div class="copyright">
+    <p>
+      © {new Date().getFullYear()} Arttu Viljakainen.
+      All texts published are under <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons
+      Attribution-ShareAlike License</a> - attribution is required. Ask permission before using any of the photos on
+      this site.
+    </p>
+    <p>
       Built with
       {` `}
-      <a href="https://astro.build">Astro</a>, hosted on <a href="https://pages.github.com/">GitHub Pages</a>. Icons by <a href="https://webkul.github.io/vivid/">Vivid</a> and <a href="https://www.iconfinder.com/Flatart">Flatart</a> and <a href="https://icons8.com">Icons8</a>.
-      </p>
+      <a href="https://astro.build">Astro</a>, hosted on <a href="https://pages.github.com/">GitHub Pages</a>. Icons by
+      <a href="https://webkul.github.io/vivid/">Vivid</a> and <a href="https://www.iconfinder.com/Flatart">Flatart</a>
+      and <a href="https://icons8.com">Icons8</a>.
+    </p>
   </div>
-</footer>  
+</footer>
 
 <style>
-  footer {
-    border-top: 1px solid lightgray;
-    padding: 1rem;
-  }
-
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    font-weight: 200;
-  }
-
-  footer .copyright p {
-    margin-top: 1rem;
-    font-size: small;
-  }
-
-  .rss-subscribe {
-    max-width: 45vw;
-  }
-
-  .footer-read-more {
-    width: 45vw;
-    max-width: 45vw;
-  }
-
-  .footer-read-more p {
-    font-size: normal;
-  }
-  .footer-content h3 {
-    margin-bottom: 1rem;
-    font-weight: 200;
-  }
-
-  .rss-subscribe p {
-    font-size: normal;
-  }
-
-
-  @media (max-width: 800px) {
-    .footer-content {
-      flex-direction: column;
+    footer {
+        border-top: 1px solid lightgray;
+        padding: 1rem;
     }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        font-weight: 200;
+    }
+
+    footer .copyright p {
+        margin-top: 1rem;
+        font-size: small;
+    }
+
     .rss-subscribe {
-      max-width: 100%;
+        max-width: 45vw;
     }
 
     .footer-read-more {
-      max-width: 100%;
-      width: 100%;
+        width: 45vw;
+        max-width: 45vw;
     }
-  }
+
+    .footer-read-more p {
+        font-size: normal;
+    }
+
+    .footer-content h3 {
+        margin-bottom: 1rem;
+        font-weight: 200;
+    }
+
+    .rss-subscribe p {
+        font-size: normal;
+    }
+
+
+    @media (max-width: 800px) {
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .rss-subscribe {
+            max-width: 100%;
+        }
+
+        .footer-read-more {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
 
 </style>

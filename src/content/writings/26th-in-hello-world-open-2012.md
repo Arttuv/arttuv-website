@@ -45,7 +45,7 @@ During the game server sends 15 update messages per second, telling the position
 Note that the game server doesn’t give any information of the
 
 Actual speeds
-Accleration
+Acceleration
 How the ball bounces from the walls
 Each client sends commands to the server to move the paddle:
 ```json
@@ -73,8 +73,6 @@ As the ball bounces differently depending on where it hits on the paddle, we mad
 
 Sometimes we had problems to make the prediction go exactly right which caused our AI to make a small corrective move, which sometimes caused it to miss the ball. In addition we didn’t have time to learn how to make optimal hits to the ball to make it move optimally.
 
-We had quite a lot of problems with Git and Egit during the competition and we lost valuable time solving those. The competition was quite well arranged although I would have hoped them to communicate a bit more. Some rules were not clearly stated. However this was the first time they held the competition. They didn’t expect more than 30 teams to participate and in the end there were 200 teams and almost 100 bots.
-
-![HWO Results](/images//HelloWorldOpenTop26.png)
+We had quite a lot of problems with Git and Egit during the competition, and we lost valuable time solving those. The competition was quite well arranged, although I would have hoped them to communicate a bit more. Some rules were not clearly stated. However, this was the first time they held the competition. They didn’t expect more than 30 teams to participate and in the end there were 200 teams and almost 100 bots.
 
 I’m quite happy to our rank and the competition itself was a good experience. This was my first proper introduction to Git and JSON.

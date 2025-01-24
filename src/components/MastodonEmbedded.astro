@@ -1,32 +1,40 @@
 ---
-import mastodonComments from '../external-data/scholar.social-arttuv.json';
-import FormattedDateTime from './FormattedDateTime.astro';
-import HtmlContent from './HtmlContent.astro';
-const { statusId, internalLinkTarget } = Astro.props;
-const data = mastodonComments[statusId];
+import mastodonComments from "../external-data/scholar.social-arttuv.json"
+import FormattedDateTime from "./FormattedDateTime.astro"
+import HtmlContent from "./HtmlContent.astro"
+const { statusId, internalLinkTarget } = Astro.props
+const data = mastodonComments[statusId]
 ---
 
 {data && (
-    <div class="embedded-mastodon-comment">
-        <div class="embedded-mastodon-details">
-            <p>
-            {internalLinkTarget && (
-                <><a href={data.content.account.url}>{data.content.account.display_name}</a> mentioned <a href={`/${internalLinkTarget.collection}/${internalLinkTarget.slug}`}>{internalLinkTarget.data.title}</a> on Mastodon, <a href={data.content.url}><FormattedDateTime date={new Date(data.content.created_at)} /></a> </>
-            )}
-            {!internalLinkTarget && (
-                <><a href={data.content.account.url}>{data.content.account.display_name}</a> on Mastodon, <a href={data.content.url}><FormattedDateTime date={new Date(data.content.created_at)} /></a> </>
-            )}
-            </p>
-        </div>
-        <HtmlContent htmlContent={data.content.content} />
-    </div>
-    )}
+<div class="embedded-mastodon-comment">
+  <div class="embedded-mastodon-details">
+    <p>
+      {internalLinkTarget && (
+        <><a href={data.content.account.url}>{data.content.account.display_name}</a> mentioned <a
+          href={`/${internalLinkTarget.collection}/${internalLinkTarget.slug}`}>{internalLinkTarget.data.title}</a> on
+          Mastodon, <a href={data.content.url}>
+            <FormattedDateTime date={new Date(data.content.created_at)} />
+          </a></>
+      )}
+      {!internalLinkTarget && (
+        <><a href={data.content.account.url}>{data.content.account.display_name}</a> on Mastodon, <a
+          href={data.content.url}>
+          <FormattedDateTime date={new Date(data.content.created_at)} />
+        </a></>
+      )}
+    </p>
+  </div>
+  <HtmlContent htmlContent={data.content.content} />
+</div>
+  )}
 
 <style>
     .embedded-mastodon-comment {
         padding: 1rem 2rem 0rem 0rem;
         font-size: smaller;
     }
+
     :global(.embedded-mastodon-comment .html-content) {
         border-left: 1px solid black;
         padding-left: 0.5rem;
@@ -36,7 +44,7 @@ const data = mastodonComments[statusId];
     :global(.dark .embedded-mastodon-comment .html-content) {
         border-left: 1px solid white;
     }
-    
+
     .embedded-mastodon-details {
         font-size: smaller;
         line-height: 1.6;
