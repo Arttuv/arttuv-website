@@ -3,10 +3,17 @@ html {
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font-size: 16px;
+    background-color: #fff7f4;
+    color: #000;
+}
+
+html.dark {
+    background-color: #000;
+    color: #F5F5F5;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Libre Baskerville', serif;
     font-weight: 300;
     text-rendering: optimizeLegibility;
     margin: 0;
@@ -16,6 +23,10 @@ body {
     min-width: 370px;
     text-underline-position: under;
     text-decoration-thickness: 2px;
+}
+
+strong {
+    font-weight: bold;
 }
 
 main {
@@ -67,6 +78,7 @@ a h3 {
 }
 
 nav a {
+    font-family: 'Roboto Condensed Variable', sans-serif;
     text-decoration: none;
     color: #fff;
 }
@@ -97,6 +109,7 @@ svg {
 }
 
 .blog-post .category a {
+    font-family: 'Roboto Condensed Variable', sans-serif;
     color: black;
     text-decoration: underline;
 }
@@ -115,15 +128,6 @@ svg {
     color: #F5F5F5;
 }
 
-html {
-    background-color: #fff7f4;
-    color: #000;
-}
-
-html.dark {
-    background-color: #000;
-    color: #F5F5F5;
-}
 
 header {
     width: 100%;
@@ -206,9 +210,9 @@ nav a, nav a:visited, nav a:active {
     font-weight: bold;
 }
 
-.article-card a, .article-card a:visited, .article-card a:active {
+.article-card a, .article-card a:visited, .article-card a:active, .article-card a:focus {
     text-decoration: none;
-    font-weight: normal;
+    font-weight: bold;
     color: #000;
 }
 
@@ -227,6 +231,7 @@ nav a, nav a:visited, nav a:active {
 
 .article-card .read-more {
     color: #000;
+    font-family: 'Roboto Condensed Variable', sans-serif;
 }
 
 .article-card .article-card-footer {

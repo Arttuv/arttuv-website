@@ -15,7 +15,9 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.2.1",
+    "@fontsource-variable/roboto-condensed": "^5.1.1",
     "@fontsource-variable/roboto-serif": "^5.0.4",
+    "@fontsource/libre-baskerville": "^5.1.1",
     "astro": "^4.13.1",
     "axios": "^1.7.7",
     "markdown-it": "^14.1.0",
