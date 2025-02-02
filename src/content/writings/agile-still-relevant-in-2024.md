@@ -3,7 +3,7 @@ pubDate: "2024-07-22"
 title: "Agile - Still Relevant in 2024"
 tags: ["dev"]
 mastodon: "112840282925802410"
-summary: "During the first half of 2020's it has been common to see a lot of critique towards agile, and it can be easy to overlook how fundamental agile principles remain for surviving fast-paced, complex software projects."
+summary: "It has been surprisingly common to see critique towards agile lately. I find it a bit odd, having seen the waterfall world and how much more humane agile has been. It can be easy to overlook how fundamental agile principles remain for surviving fast-paced, complex software projects."
 ---
 
 Changes to this text
@@ -11,41 +11,21 @@ Changes to this text
 
 ---
 
-During the first half of 2020's it has been common to see a lot of critique towards agile, and it can be easy to overlook how fundamental agile principles remain for surviving fast-paced, complex software projects.
-
 ## Agile is a mindset to survive in a complex environment
 
-I understand the frustration: agile frameworks tend to be marketed and branded products these days, and they are often applied in a superficial way, by people who don't understand the consequences nor carry out the responsibility of actually fulfilling the needs of the customers.
+If you knew most of your assumptions about the problem and solution are false, what would be the fastest way to find out which ones, and learn?
 
-The development teams may be allowed to play "agile" in those boundaries, as long as they do all the reporting, and deliever in time and in buget the fixed-priced project the separate sales team has sold (and received a bonus for that brilliant work).
+Agile ([agile manifesto](https://agilemanifesto.org)) is fundamentally a simple iterative and adaptive mindset to help you work in a complex environment. Having worked through both agile and waterfall-like approaches, I've seen how companies tend to crave for control in the expense of agility. It leads to inefficiency and burnouts.
 
-I would like to remind, that agile ([agile manifesto](https://agilemanifesto.org)) is fundamentally quite a simple iterative and adaptive mindset to help you work in a complex environment. Having worked through both agile and waterfall-like approaches, I've seen how companies tend to crave for control - in the expense of agility.
+Different frameworks and models can be designed to implement agile principles and values, but they are not synonymous to "agile". Most of the critique I have seen is towards agile has been more about how these frameworks and models are being sold and applied in companies. 
 
-Different frameworks and models can be designed to implement agile principles and values, but they are not synonymous to "agile".
-
-## Face the friction, early
+## Complex environment requires an adaptive approach
 
 Trivialisation is a belief that complex systems (see [Cynefin](https://en.wikipedia.org/wiki/Cynefin_framework)) can be modeled and managed the same way ordered systems can thus resorting to using existing practices better suited to ordered systems (from [Nachbauer, 2021](https://www.sciencedirect.com/science/article/pii/S2666721521000119)).
 
 As one of my more experienced colleagues said, when people try to act in a non-agile way, they want the process to feel easy and safe. Doing intensive planning, getting the predicted deadline dates and starting the work feels safe, and makes "common sense". Unfortunately that safe feeling transitions to the pain towards the end, when the plan meets the reality and the illusion of control breaks.
 
-It is easier to apply the waterfall-type of thinking that works in a static environment, and refuse to face the real complexity of reality. Some organisations do this by buying the software from subcontractors by dictating the contracts (if they have the economical power), or by demanding impossible work performance from their employees (quite often a pathological organisation by [Westrum culture classification](https://dora.dev/capabilities/generative-organizational-culture/)).
-
-It doesn't mean these people are mean or want to take advantage of others. It's quite a natural tendency to try and have some order in your environment, and that's what waterfall-like processes and contracts bring: artificial peace of mind and clarity right now. 
-
 Agile mindset indicates you should embrace the unknown and face the pain early on, during the process. That way you start learning, and the work actually gets easier and rewarding towards the end.
-
-## Agile starts by admitting the world is unpredictably complex
-
-Agile thinking begins from admitting that the environment is quite complex. Complexity means we can never fully plan our work beforehand, because even the best plans will be made obsolete by changes along the way. 
-
-Going forward in small steps that are designed to test your assumptions and maximize learning is more successful than trying to do the Big Design Up Front. This is internalizing conventions that answer to the needs of an unpredictable and complex environment ([see Cynefin for explanation](https://en.wikipedia.org/wiki/Cynefin_framework) of complex, compicated and simple domains).
-
-A better term for agile might be adaptive.
-
-Complex environment can feel out of control, if you are used to thinking that you "invest x amount of money and time and get y". That's often the premise in a public tender: We want to get <this thing>, tell us how much money and time you would need to make it happen, and we'll pick the cheapest one.
-
-That totally misses the point of learning, and will fail.
 
 ## Use the agile manifesto to guide your thinking
 
@@ -71,7 +51,7 @@ A bug is found in the production, and the first instinct is to add processes to 
 
 ## Agile never looks the same
 
-The best process is context dependant. Therefore it's impossible to say what what exactly is the optimal process you should always use. However we can say your process should be based on the correct understanding of how the world behaves.
+The best process is context dependant. Therefore it's impossible to say what exactly is the optimal process you should always use. However we can say your process should be based on the correct understanding of how the world behaves.
 
 The team should have all the needed knowledge, skills, experience, and most important, the mandate to figure the process out. If you say "we are a Scrum house", it means your teams are not agile: they don't have the freedom to select and come up with their own process to meet the demands of the task at hand.
 
@@ -81,7 +61,7 @@ This doesn't mean it is a wild west: of course the team full of competent profes
 
 One of the hardest things for the team to do is to bring the peace of mind for those stakeholders that are responsible for the success (money) and / or don't understand how software is built successfully. 
 
-I'm a big fan of showing, not telling: show them every week what has been accomplished and what the way forward looks like. 
+I'm a big fan of showing, not telling: show them every week what has been accomplished and what the way forward looks like.
 
 Have discussions using the running software, whiteboard or mockups as a shared entity, not Jira. No jira traffic light can tell you you are doing OK.
 
@@ -99,6 +79,4 @@ If a team like that is motivated and willing to have a shared responsibility ove
 
 ## Conclusion
 
-Ultimately, agile is about empowered people, continuous learning, and rapid adaptation. Whether you follow Scrum, Kanban, XP, or another framework, remember to revisit the underlying principles. If your process feels stiff, question whether it’s truly agile, or just agile in name. Give your teams autonomy, embrace experimentation, and you’ll find that agility is alive and well in the face of complexity.
-
-If you are in leadership or buying, make a thought experiment in which you consider that all of your assumptions about the problem and solution are false. What would be the fastest way to find that out and learn?
+Ultimately, agile is about empowered people, continuous learning, and rapid adaptation. Whether you follow Scrum, Kanban, XP, or another framework, remember to revisit the underlying principles. If your process feels stiff or worthless ceremonies, question whether it’s truly agile and supporting the work. Give your teams autonomy, embrace experimentation, and you’ll find that agility is alive and well in the face of complexity.
