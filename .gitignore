@@ -69,3 +69,5 @@ dist/
 .cache
 .astro
 .vscode/
+
+.idea/
