@@ -3,7 +3,7 @@ html {
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font-size: 16px;
-    background-color: #fff7f4;
+    background-color: #fffbf8;
     color: #000;
 }
 
@@ -134,7 +134,7 @@ header {
     border-bottom: 1px solid lightgray;
     position: sticky;
     top: 0;
-    background-color: #fff7f4;
+    background-color: #fffbf8;
     z-index: 9;
 }
 
