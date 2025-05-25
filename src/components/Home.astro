@@ -78,6 +78,7 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
     </div>
     <div class="author-photo">
       <Image src={arttu} alt="Arttu" loading="eager" />
+      <p class="from-eu-with-love">Code from 🇪🇺🇫🇮 with ❤️&🏳️‍🌈</p>
     </div>
   </div>
   <section class="feed-area">
@@ -143,6 +144,15 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
         position: sticky;
         top: 5rem;
         z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .from-eu-with-love {
+        font-weight: 200;
+        margin-top: 1rem;
     }
 
     .author-photo img {
