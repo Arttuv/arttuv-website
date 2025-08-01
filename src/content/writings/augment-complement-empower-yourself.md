@@ -45,9 +45,9 @@ Similarly, I think it would be beneficial to design your own work and consider w
 
 As a software developer, I want to retain the understanding of the whole, and how to design systems. Even though it's super nice that LLMs can help with the syntax, I think I still need to type code myself so I can (with the help of the compiler) produce code that actually compiles (for example so that I don't need to be pausing to wait the LLM all the time). At least in the primary languages I use. I also must have the skills to debug the system even if LLMs are sometimes really good at guessing what an error message might indicate. I need to have really good understanding of the databases.
 
-## So how do I use LLMs, then?
+Tradeoffs will change during the time as LLMs get better. If some capability requires a network connection to a hosted model, there is a high probability it will not always be available. Some capabilities can be fulfilled with a small local model, in which case I'd say it is OK to rely on it.
 
-I try to consider the tradeoffs of benefits of reliable LLM help and the expected costs, 
+## So how do I use LLMs, then?
 
 I try to force myself to think. First I'll work by myself, and then use LLMs to critique my work. I can ideate with them or ask them to find weaknesses in my thinking or plan. I can use LLM to do a critical code review on that code I have done. I can use LLM to refactor the code once it already works and just need to be organized better: extracting smaller components, common functions, adding internationalization support, etc.
 
