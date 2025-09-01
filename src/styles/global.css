@@ -19,8 +19,8 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow: visible;
-    min-width: 370px;
+    overflow-x: hidden;
+    min-width: 320px;
     text-underline-position: under;
     text-decoration-thickness: 2px;
 }
@@ -275,6 +275,29 @@ nav a, nav a:visited, nav a:active {
 
     .blog-post-container blockquote p {
         font-size: 1.02rem;
+    }
+
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    
+    main {
+        padding: 0 0.25rem 0.25rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .article-card {
+        margin-bottom: 0.5rem;
+    }
+    
+    .article-card .article-card-header,
+    .article-card .article-card-text,
+    .article-card .article-card-footer {
+        padding: 0.25rem;
     }
 
 }

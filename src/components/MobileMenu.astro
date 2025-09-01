@@ -100,7 +100,7 @@ import MobileThemeToggle from "./MobileThemeToggle.astro"
         }
 
         .menu-open .menu-flyout {
-            translate: 0;
+            transform: translateX(0);
         }
 
         .menu-wrapper a {
@@ -119,12 +119,16 @@ import MobileThemeToggle from "./MobileThemeToggle.astro"
             display: flex;
             flex-direction: column;
             font-size: var(--menu-flyout-fz, 150%);
-            inset: 0 var(--menu-flyout-offset, 0) 0 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             justify-content: space-between;
             padding: var(--menu-flyout-p, 4ch 2ch 2ch);
             position: fixed;
-            transition: translate var(--menu-trsdu) var(--menu-trstf);
-            translate: -100vw 0;
+            transition: transform var(--menu-trsdu) var(--menu-trstf);
+            transform: translateX(-100%);
+            z-index: 1000;
         }
 
         .dark .menu-flyout {
@@ -171,7 +175,7 @@ import MobileThemeToggle from "./MobileThemeToggle.astro"
             height: var(--menu-toggle-w);
             outline: none;
             place-content: center;
-            z-index: 1;
+            z-index: 1001;
         }
 
         .menu-toggle::before,
@@ -181,7 +185,7 @@ import MobileThemeToggle from "./MobileThemeToggle.astro"
             content: "";
             height: var(--menu-toggle-h);
             transform-origin: center center;
-            transition: rotate var(--menu-trsdu) var(--menu-trstf);
+            transition: transform var(--menu-trsdu) var(--menu-trstf);
             width: var(--menu-toggle-w);
         }
 
@@ -190,13 +194,11 @@ import MobileThemeToggle from "./MobileThemeToggle.astro"
         }
 
         .menu-open .menu-toggle::after {
-            rotate: 45deg;
-            translate: var(--menu-toggle-h) calc(var(--menu-toggle-h) / -2);
+            transform: translate(var(--menu-toggle-h), calc(var(--menu-toggle-h) / -2)) rotate(45deg);
         }
 
         .menu-open .menu-toggle::before {
-            rotate: -45deg;
-            translate: var(--menu-toggle-h) calc(var(--menu-toggle-h) / 2);
+            transform: translate(var(--menu-toggle-h), calc(var(--menu-toggle-h) / 2)) rotate(-45deg);
         }
 
         .icon, .icon-stroke {
@@ -235,6 +237,21 @@ import MobileThemeToggle from "./MobileThemeToggle.astro"
     @media (max-width: 800px) {
         .menu-open {
             overflow: hidden;
+        }
+    }
+
+    /* === Extra small screens === */
+    @media (max-width: 360px) {
+        .mobile-menu {
+            margin: 0 0.25rem;
+        }
+        
+        .menu-flyout {
+            padding: var(--menu-flyout-p, 2ch 1ch 1ch);
+        }
+        
+        .menu-home {
+            font-size: 0.9rem;
         }
     }
 
