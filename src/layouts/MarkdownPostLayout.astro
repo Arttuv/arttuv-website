@@ -19,8 +19,7 @@ const comments = (await getCollection("comments", (comment) => {
       ))}
     </div>
     <h1>{post.data.title}</h1>
-    <time>{
-      <FormattedDate date={new Date(post.data.pubDate)} />}</time>
+    <FormattedDate date={new Date(post.data.pubDate)} />
     <hr />
     {comments.length > 0 && (
       <div class="writing-notes">
@@ -85,7 +84,7 @@ const comments = (await getCollection("comments", (comment) => {
         text-align: left;
         color: #000;
         font-weight: normal;
-        padding-left: auto;
+        padding-left: 0;
         margin-left: auto;
         margin-top: 0px;
     }
