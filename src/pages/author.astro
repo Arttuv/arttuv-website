@@ -2,315 +2,351 @@
 import "../styles/global.css"
 import { Image } from "astro:assets"
 import BaseLayout from "../layouts/BaseLayout.astro"
-const title = "Author"
-const description = "Arttu Viljakainen is a software developer from Finland. This page has more information about them."
+import BauhausBlock from "../components/BauhausBlock.astro"
+import arttu from "../images/arttuv-bw.jpeg"
+const title = "Arttu Viljakainen"
+const description = "Arttu Viljakainen is a software development consultant from Finland."
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="author-container">
-    <div class="author-text">
-      <h1>Arttu Viljakainen</h1>
+  <div class="author-page">
+
+    <div class="author-hero">
+      <div class="author-hero-text">
+        <BauhausBlock slug="author" tags={["dev", "hci", "research"]} direction="horizontal" />
+        <h1>Arttu Viljakainen</h1>
+        <p class="author-role">Software development consultant</p>
+        <p>
+          I love solving complex problems and working collaboratively with teams to achieve great outcomes.
+          With close to 15 years of experience, I'm a generalist who enjoys a variety of challenges and
+          constantly learning new things.
+        </p>
+        <p>
+          My focus is on hands-on software development, but I believe the performance of a team matters
+          more than any individual's skills. I'm passionate about studying and improving teamwork and
+          shared leadership, helping teams work effectively together without relying on command and control.
+        </p>
+        <p>
+          I find meaning in doing work that matters. I love environments where teams have high autonomy
+          and can self-organise. Titles don't define what you can do. What matters is making good things happen.
+        </p>
+        <p>
+          Humans as collaborative digital tool makers is an interesting viewpoint.
+        </p>
+        <p class="author-links">
+          <a href="https://scholar.social/@arttuv">Mastodon</a>
+          <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a>
+          <a href="https://www.swdevcollective.com">Developer Collective</a>
+        </p>
+      </div>
+      <div class="author-hero-photo">
+        <Image src={arttu} alt="Arttu Viljakainen" loading="eager" />
+      </div>
+    </div>
+
+    <div class="author-skills">
+      <div class="skill-section skill-section--dev">
+        <p class="skill-label">Technical</p>
+        <ul>
+          <li>JVM: Java, Kotlin (10+ years)</li>
+          <li>Web: React, Node, TypeScript, HTML/CSS</li>
+          <li>Databases: PostgreSQL, MariaDB, ElasticSearch</li>
+          <li>Cloud: Kubernetes, AWS, containers</li>
+          <li>GoLang, Android, Jetpack Compose, Delphi</li>
+        </ul>
+        <p class="skill-note">Cloud native systems, Android tablets, desktop applications. Public sector, defence, and commercial.</p>
+      </div>
+      <div class="skill-section skill-section--hci">
+        <p class="skill-label">Leadership &amp; process</p>
+        <ul>
+          <li>Advanced Certified ScrumMaster (A-CSM)</li>
+          <li>Certified ScrumMaster (CSM)</li>
+          <li>Certified Scrum Product Owner (CSPO)</li>
+          <li>Certified SAFe 5 Practitioner</li>
+          <li>Reaktor Team Builder Academy (2021)</li>
+          <li>Reaktor Leading Teams (2021)</li>
+        </ul>
+        <p class="skill-note">Certifications reflect experience, not endorsement. I prefer letting teams find their own way of working.</p>
+      </div>
+      <div class="skill-section skill-section--research">
+        <p class="skill-label">Education</p>
+        <ul>
+          <li><strong>MSc</strong>, University of Eastern Finland (2012)</li>
+          <li>Major: Computer Science, software engineering</li>
+          <li>Minors: psychology, cognitive science, business economics</li>
+          <li>PhD studies at Tampere University (on hold)</li>
+          <li>Research focus: teamwork in software development</li>
+        </ul>
+        <ul>
+          <li>Finnish (native), English (advanced), Swedish (basics)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="line-heading"><h2>Work history</h2></div>
+
+    <div class="cv-listing">
+      <div class="cv-item-time"><span>Now</span></div>
+      <div class="cv-item-content">
+        <p>Full time at Reaktor, studying teamwork on the side.</p>
+      </div>
+
+      <div class="cv-item-time"><span>2019</span></div>
+      <div class="cv-item-content">
+        <p class="cv-company">Reaktor <span class="cv-current">→ current</span></p>
+        <p>Software consultancy. My roles have varied from senior full-stack developer to team lead, scrum master, and agile coach.</p>
+      </div>
+
+      <div class="cv-item-time"><span>2014</span></div>
+      <div class="cv-item-content">
+        <p class="cv-company">Insta DefSec Oy</p>
+        <p>Senior software engineer, team lead &amp; scrum master, usability specialist.</p>
+      </div>
+
+      <div class="cv-item-time"><span>2013</span></div>
+      <div class="cv-item-content">
+        <p class="cv-company">Suonentieto Oy</p>
+        <p>Delphi application developer.</p>
+      </div>
+
+      <div class="cv-item-time"><span>2010</span></div>
+      <div class="cv-item-content">
+        <p class="cv-company">CGI / Logica</p>
+        <p>Java and XSLT transformations in a large SAP PI integration project.</p>
+      </div>
+
+      <div class="cv-item-time"><span>2008</span></div>
+      <div class="cv-item-content">
+        <p class="cv-company">European Forest Institute</p>
+        <p>Java developer trainee, summer 2008.</p>
+      </div>
+    </div>
+
+    <div class="author-origin">
       <p>
-        <strong>Software development consultant</strong>
+        I started programming around 1999 in QBasic, then Turbo Pascal. No internet, just library books and trial and error —
+        building ASCII games with nothing but <code>IF-ELSE</code>.
       </p>
       <p>
-        I love solving complex problems and working collaboratively with teams to achieve great outcomes. With close to
-        15 years of experience in the field, I'm a generalist who enjoys taking on a variety of challenges and
-        constantly learning new things.
-      </p>
-      <p>
-        My focus is on hands-on software development, and I pride myself on writing high-quality code that meets the
-        needs of the business.
-      </p>
-      <p>
-        However, I believe that the performance of a team is more critical than any individual's skills, and that's why
-        I am also passionate about studying and improving teamwork and shared leadership. I'm always seeking ways to
-        help teams work more effectively together without relying on traditional command and control structures.
-      </p>
-      <p>
-        I believe that diverse teams collaborating and working together with a shared purpose are key to achieving the
-        best outcomes. It's not something that happens automatically - it needs to be fostered and nurtured.
-      </p>
-      <p>
-        I find meaning in doing work that matters and being committed to achieving positive outcomes. I love an
-        environment in which teams have a high degree of autonomy and they can self-organise to meet the challenge at
-        hand. Titles don't define what you can (or are allowed) to do - what matters is making good things happen.
-      </p>
-      <p>
-        I’m still learning how to combine all my interests in an optimal way to get the best outcomes.
-      </p>
-      <p>
-        I expect that learning path to take the rest of my career.
-      </p>
-      <p>
-        Humans as collaborative digital tool makers is an interesting viewpoint.
-      </p>
-      <p>
-        You can find me on <a href="https://scholar.social/@arttuv">Mastodon</a> or <a
-        href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a>.
-      </p>
-      <p>
-        If you'd like to work with me or just network, approaching on <a
-        href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a> is a good idea. Roles in which I can coach
-        teams or improve my (peer) leadership skills are interesting to me.
-      </p>
-      <p>
-        I also write to <a href="https://www.swdevcollective.com">Developer Collective</a>.
+        That spark never went away. I never really thought of doing anything else for a living.
       </p>
     </div>
 
-    <div>
-      <div class="line-heading"><h2>CV</h2></div>
-      <h3>Technical skills</h3>
-      <p>
-        I have been building cloud native systems, applications for custom Android tablets and
-        desktop applications for consumers, public sector and defence.
-      </p>
-      <p>
-        My roles have varied from senior software developer to team lead, scrum master and usability specialist.
-      </p>
-      <p>I have worked with various technologies, including:</p>
-      <ul>
-        <li>
-          JVM (Java, Kotlin) (10+ years)
-        </li>
-        <li>
-          Databases (PostgreSQL, MariaDB, ElasticSearch)
-        </li>
-        <li>
-          Web technologies (React, Node, TypeScript, JavaScript, HTML/CSS)
-        </li>
-        <li>
-          Cloud (Kubernetes, AWS, Containers)
-        </li>
-        <li>
-          GoLang, Delphi, Swing, Android, Jetpack Compose
-        </li>
-      </ul>
-      <h3>Hard skills</h3>
-      <p>
-        Coaching teams to be autonomous and share leadership is especially close to my heart.
-        Some examples how I have spent time improving my teamwork, people and process skills:
-      </p>
-      <ul>
-        <li>
-          Advanced Certified ScrumMaster (A-CSM)
-        </li>
-        <li>
-          Certified ScrumMaster (CSM)
-        </li>
-        <li>
-          Certified Scrum Product Owner (CSPO)
-        </li>
-        <li>
-          Certified SAFe 5 Practitioner
-        </li>
-        <li>
-          Reaktor Team Builder Academy (2021)
-        </li>
-        <li>
-          Reaktor Leading Teams -training (2 days, 2021)
-        </li>
-      </ul>
-      <p>
-        Note that even though I have Scrum and SAFe certifications, it is not an endorsement of those frameworks.
-        I have been using Scrum and SAFe in various roles, and can work in those environments, but I would recommend
-        to let teams choose and come up with their own way of working. Especially if you have experienced team members.
-      </p>
-      <h3>Other activities</h3>
-      <ul>
-        <li>
-          2025: Introduction to intelligence (2cr, University of Jyväskylä, online courses)
-        </li>
-        <li>
-          2022: Interview as a means of data generation (Tampere University)
-        </li>
-        <li>
-          2022: Research data management, interviews (Tampere University)
-        </li>
-        <li>
-          2020: Programming with Google Go (<a href="https://www.coursera.org/account/accomplishments/specialization/UR4AUFBNWVRF">Coursera</a>)
-        </li>
-        <li>
-          2020: How to manage a remote team (<a href="https://coursera.org/share/fb763ef2b97fee3cf9cc1515bafe1657">Coursera, Gitlab</a>)
-        </li>
-        <li>
-          2019: Fraktio: Finland’s most intensive UI/UX course
-        </li>
-        <li>
-          2018: Ideo: Design Kit: The course for human-centred design
-        </li>
-        <li>
-          2017: Lemanse: Tailored React/Redux course
-        </li>
-        <li>
-          2017: FastDevCo: Node.js intro
-        </li>
-      </ul>
-      <h3>Studies</h3>
-      <p>
-        <strong>Master of Science</strong> from the University of Eastern Finland (graduated in 2012).
-      </p>
-      <ul>
-        <li>Major: Computer Science, software engineering track</li>
-        <li>Minors: psychology, cognitive science and business economics</li>
-      </ul>
-      <p>
-        I'm enrolled for PhD studies in Tampere University, but my research activities are mostly on hold for now.
-      </p>
-      <p>
-        I intend to research teamwork in software development.
-      </p>
-      <h3>Languages</h3>
-      <ul>
-        <li>Finnish (native)</li>
-        <li>English (advanced)</li>
-        <li>Swedish (basics)</li>
-      </ul>
-    </div>
-    <div class="line-heading">
-      <h2>My work history</h2>
-    </div>
-    <div class="cv-listing">
-      <div class="cv-item-time">
-        <span>Now</span>
-      </div>
-      <div class="cv-item-content">
-        <p>
-          I'm full time employed at Reaktor, and at the same time try to find my point of view to study teamwork.
-        </p>
-      </div>
-      <div class="cv-item-time">
-        <span>2019</span>
-      </div>
-      <div class="cv-item-content">
-        <span><strong>Reaktor &#8592; Current</strong></span>
-        <p>
-          Reaktor is a software consultancy company, so I have been working as a consultant.
-        </p>
-        <p>
-          Software development consultant describes my role well: development work, and everything related.
-        </p>
-        <p>
-          My roles have varied from senior full-stack developer to team lead, scrum master and agile coach.
-        </p>
-      </div>
-      <div class="cv-item-time">
-        <span>2014</span>
-      </div>
-      <div class="cv-item-content">
-        <span>Insta DefSec Oy</span>
-        <p>At Insta, I worked as a senior software engineer, team lead & scrum master, and an usability specialist.</p>
-      </div>
-      <div class="cv-item-time">
-        <span>2013</span>
-      </div>
-      <div class="cv-item-content">
-        <span>Suonentieto Oy</span>
-        <p>Delphi application developer.</p>
-      </div>
-      <div class="cv-item-time">
-        <span>2010</span>
-      </div>
-      <div class="cv-item-content">
-        <span>CGI / Logica</span>
-        <p>Programmer in a large SAP PI integration project doing transformatios in Java and XSLT.</p>
-      </div>
-      <div class="cv-item-time">
-        <span>2008</span>
-      </div>
-      <div class="cv-item-content">
-        <span>European Forest Institute</span>
-        <p>I was a Java developer trainee for 3 monts in summer 2008.</p>
-      </div>
-    </div>
-    <div class="cv-bottom-section">
-      <p>
-        I started programming somewhere around 1999. My first language was QBasic and I later switched to Turbo Pascal,
-        which I really liked.
-      </p>
-      <p>
-        This was the time I probably enjoyed programming the most: I had no idea what I was doing, and I was learning
-        this alone.
-      </p>
-      <p>
-        I spent a lot of time at library trying to find relevant books or online resources for programming. I built
-        ASCII games using IF-ELSE technology, because I knew of nothing else.
-      </p>
-      <p>
-        The spark of programming stayed and I never really thought of doing anything else for a living.
-      </p>
-    </div>
   </div>
 </BaseLayout>
 
 <style>
-    .author-container {
+    .author-page {
         max-width: 70ch;
-        margin:0 auto;
+        margin: 0 auto;
     }
 
+    /* Hero */
+    .author-hero {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+
+    .author-hero-text {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .author-hero-text h1 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .author-hero-text p {
+        line-height: 1.65;
+        margin-bottom: 1rem;
+    }
+
+    .author-role {
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #666;
+        margin-bottom: 1.25rem !important;
+    }
+
+    :global(.dark) .author-role {
+        color: #aaa;
+    }
+
+    .author-links {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.85rem;
+    }
+
+    .author-links a {
+        text-decoration: none;
+    }
+
+    .author-links a:hover {
+        text-decoration: underline;
+    }
+
+    .author-hero-photo {
+        width: 160px;
+        flex-shrink: 0;
+    }
+
+    .author-hero-photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: 1px solid lightgray;
+    }
+
+    /* Skills */
+    .author-skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+        margin: 2.5rem 0;
+    }
+
+    .skill-section {
+        border-top: 3px solid;
+        padding-top: 0.75rem;
+    }
+
+    .skill-section--dev   { border-color: #C62828; }
+    .skill-section--hci   { border-color: #1565C0; }
+    .skill-section--research { border-color: #F9A825; }
+
+    .skill-label {
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #888;
+        margin: 0 0 0.75rem;
+    }
+
+    .skill-section ul {
+        padding-left: 1rem;
+        margin: 0 0 0.75rem;
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .skill-section li + li {
+        margin-top: 0.2rem;
+    }
+
+    .skill-note {
+        font-size: 0.75rem;
+        color: #777;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    :global(.dark) .skill-note {
+        color: #999;
+    }
+
+    /* CV timeline */
     .cv-listing {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .cv-listing p {
-        font-size: smaller;
+        grid-template-columns: 4.5rem 1fr;
+        margin-bottom: 1.5rem;
     }
 
     .cv-item-time {
-        display: flex;
-        flex-direction: column;
-        align-content: flex-end;
-        justify-content: space-between;
-        vertical-align: middle;
         text-align: right;
-        padding-right:0;
+        padding-right: 1rem;
         border-right: 1px solid lightgray;
-    }
-
-    .cv-item-content {
-        padding-left: 1rem;
-    }
-
-    .cv-item-content span {
-        margin: 0;
-        padding-left: 0;
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.8rem;
+        color: #666;
+        padding-top: 0.2rem;
+        position: relative;
     }
 
     .cv-item-time span::after {
         content: '';
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
+        position: absolute;
+        right: -0.45rem;
+        top: 0.45rem;
+        width: 0.8rem;
+        height: 0.8rem;
         border-radius: 50%;
-        margin-bottom: 0.15rem;
-        left: 0.69rem;
-        height: 1.3rem;
-        width: 1.3rem;
-        min-width: 1rem;
-        min-height: 1rem;
-        background-color: lightgray;
+        background-color: #C62828;
+        border: 2px solid #fffbf8;
     }
 
-    .cv-bottom-section {
-        font-size: smaller;
-        padding: 0.5rem;
+    :global(.dark) .cv-item-time span::after {
+        border-color: #000;
+    }
+
+    .cv-item-content {
+        padding: 0 0 1.25rem 1.25rem;
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+
+    .cv-item-content p {
+        margin: 0 0 0.3rem;
+    }
+
+    .cv-company {
+        font-weight: 600;
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.9rem;
+    }
+
+    .cv-current {
+        font-weight: 400;
+        color: #C62828;
+        font-size: 0.8rem;
+    }
+
+    :global(.dark) .cv-item-time {
+        color: #aaa;
+    }
+
+    /* Origin story */
+    .author-origin {
+        font-size: 0.875rem;
+        line-height: 1.65;
+        color: #555;
         border-top: 1px solid lightgray;
-        border-left: 1px solid lightgray;
-        border-right: 1px solid lightgray;
+        padding-top: 1.25rem;
+        margin-bottom: 2rem;
     }
 
-    .cv-bottom-section p:last-of-type {
-        margin-bottom: 0px;
+    .author-origin p {
+        margin-bottom: 0.75rem;
+    }
+
+    :global(.dark) .author-origin {
+        color: #aaa;
     }
 
     @media (max-width: 800px) {
-        .cv-listing {
-            display: grid;
-            grid-template-columns: 0.2fr 0.8fr;
+        .author-hero {
+            flex-direction: column-reverse;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .author-hero-photo {
+            width: 100%;
+            max-width: 20ch;
+        }
+
+        .author-skills {
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
     }
-
 </style>
