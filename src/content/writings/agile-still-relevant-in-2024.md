@@ -15,9 +15,9 @@ Changes to this text
 
 If you knew most of your assumptions about the problem and solution are false, what would be the fastest way to find out which ones, and learn?
 
-Agile ([agile manifesto](https://agilemanifesto.org)) is fundamentally a simple iterative and adaptive mindset to help you work in a complex environment. Having worked through both agile and waterfall-like approaches, I've seen how companies tend to crave for control in the expense of agility. It leads to inefficiency and burnouts.
+Agile ([agile manifesto](https://agilemanifesto.org)) is fundamentally a simple iterative and adaptive mindset to help you work in a complex environment. Having worked through both agile and waterfall-like approaches, I've seen how companies tend to crave for control in the expense of agility. It leads to inefficiency and burnouts, only giving a false sense of control and clarity in return.
 
-Different frameworks and models can be designed to implement agile principles and values, but they are not synonymous to "agile". Most of the critique I have seen is towards agile has been more about how these frameworks and models are being sold and applied in companies. 
+Different frameworks and models can be designed to implement agile principles and values, but they are not synonymous to "agile". Most of the critique I have seen is towards agile has been more about how these frameworks and models are being sold and applied in companies (read: large corporations). 
 
 ## Complex environment requires an adaptive approach
 
