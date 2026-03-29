@@ -24,6 +24,13 @@ const tagColorMap: Record<string, string> = {
             <BauhausBlock slug={post.slug} tags={post.data.tags} direction={index === 0 ? 'horizontal' : 'vertical'} />
             <div class="article-card-content">
             <div class="article-card-header">
+              {post.data.tags && post.data.tags.length > 0 && (
+                <div class="card-tags">
+                  {post.data.tags.map(tag => (
+                    <a href={`/tags/${tag}`} class="card-tag" style={`color: ${tagColorMap[tag] ?? '#212121'}`}>#{tag}</a>
+                  ))}
+                </div>
+              )}
               <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
               <FormattedDate date={new Date(post.data.pubDate)} />
             </div>

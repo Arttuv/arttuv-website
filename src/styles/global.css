@@ -222,8 +222,25 @@ nav a, nav a:visited, nav a:active {
     flex-direction: column;
 }
 
+.card-tags {
+    margin-bottom: 0.25rem;
+}
+
+.card-tag {
+    font-family: 'Roboto Condensed Variable', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    margin-right: 0.5rem;
+}
+
+.card-tag:hover {
+    text-decoration: underline;
+}
+
 .article-card h2 {
-    margin: 1rem 0 0.5rem 0;
+    margin: 0 0 0.5rem 0;
     font-size: 1rem;
 }
 

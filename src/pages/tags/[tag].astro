@@ -1,13 +1,12 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro"
-import BlogPost from "../../components/BlogPost.astro"
+import FormattedDate from "../../components/FormattedDate.astro"
+import BauhausBlock from "../../components/BauhausBlock.astro"
 import { getCollection } from "astro:content"
 
 export async function getStaticPaths() {
   const allPosts = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-
   const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
-
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter((post) => post.data.tags.includes(tag))
     return {
@@ -19,11 +18,55 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params
 const { posts } = Astro.props
+
+const tagColorMap: Record<string, string> = {
+  'hci': '#1565C0',
+  'dev': '#C62828',
+  'research': '#F9A825',
+};
 ---
-<BaseLayout title={`Tag: ${tag}`} description={`A list of all posts tagged with ${tag}`}>
-  <p>Posts tagged with {tag}</p>
-  <ul>
-    {posts.map((post) =>
-      <BlogPost url={`/${post.collection}/${post.slug}`} title={post.data.title} />)}
-  </ul>
+<BaseLayout title={`#${tag}`} description={`All posts tagged with ${tag}`}>
+  <div class="writings-container">
+    <h1>#{tag}</h1>
+    <div class="writing-listing">
+      {posts.map((post, index) => {
+        const cardColor = post.data.tags?.[0] ? (tagColorMap[post.data.tags[0]] ?? '#212121') : '#212121';
+        return (
+          <article class={`article-card${index === 0 ? ' article-card--featured' : ''}`} style={`--card-color: ${cardColor}`}>
+            <BauhausBlock slug={post.slug} tags={post.data.tags} direction={index === 0 ? 'horizontal' : 'vertical'} />
+            <div class="article-card-content">
+              <div class="article-card-header">
+                {post.data.tags && post.data.tags.length > 0 && (
+                  <div class="card-tags">
+                    {post.data.tags.map(tag => (
+                      <a href={`/tags/${tag}`} class="card-tag" style={`color: ${tagColorMap[tag] ?? '#212121'}`}>#{tag}</a>
+                    ))}
+                  </div>
+                )}
+                <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
+                <FormattedDate date={new Date(post.data.pubDate)} />
+              </div>
+              <div class="article-card-text">
+                <p>{post.data.summary}</p>
+              </div>
+              <div class="article-card-footer">
+                <a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
+              </div>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
 </BaseLayout>
+
+<style>
+  .writings-container {
+    max-width: 70ch;
+    margin: 0 auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+</style>
