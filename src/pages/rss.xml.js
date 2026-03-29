@@ -9,7 +9,7 @@ export async function GET(context) {
     title: post.data.title,
     pubDate: post.data.pubDate,
     description: post.data.summary,
-    link: `/${post.collection}/${post.slug}/`,
+    link: `/${post.collection}/${post.id}/`,
     body: post.body
   }))
   const allItems = [...posts]

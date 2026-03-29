@@ -12,7 +12,7 @@ const data = mastodonComments[statusId]
     <p>
       {internalLinkTarget && (
         <><a href={data.content.account.url}>{data.content.account.display_name}</a> mentioned <a
-          href={`/${internalLinkTarget.collection}/${internalLinkTarget.slug}`}>{internalLinkTarget.data.title}</a> on
+          href={`/${internalLinkTarget.collection}/${internalLinkTarget.id}`}>{internalLinkTarget.data.title}</a> on
           Mastodon, <a href={data.content.url}>
             <FormattedDateTime date={new Date(data.content.created_at)} />
           </a></>

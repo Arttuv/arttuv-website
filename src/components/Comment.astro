@@ -1,14 +1,15 @@
 ---
-import { getEntry } from 'astro:content';
+import { getEntry, render, type CollectionEntry } from 'astro:content';
 import MastodonEmbedded from './MastodonEmbedded.astro';
-import FormattedDateTime from './FormattedDateTime.astro';
 const { comment } = Astro.props;
-const { Content } = await comment.render();
-const internalLinkTarget = comment.data.internalLink ? (await getEntry(comment.data.internalLink)) : null;
+const { Content } = await render(comment);
+const internalLinkTarget = comment.data.internalLink
+  ? (await getEntry(comment.data.internalLink)) as CollectionEntry<"writings">
+  : null;
 ---
 
 <div class="comment">
-    {internalLinkTarget && !comment.data.mastodon && <div class="internal-comment-details">On <a href={`/${internalLinkTarget.collection}/${internalLinkTarget.slug}`}>{internalLinkTarget.data.title}</a></div>}
+    {internalLinkTarget && !comment.data.mastodon && <div class="internal-comment-details">On <a href={`/${internalLinkTarget.collection}/${internalLinkTarget.id}`}>{internalLinkTarget.data.title}</a></div>}
     {comment.data.mastodon && <MastodonEmbedded statusId={comment.data.mastodon} internalLinkTarget={internalLinkTarget} />}
     <div class="internal-comment">
         <div class="comment-content">

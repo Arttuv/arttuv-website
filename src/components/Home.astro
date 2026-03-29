@@ -25,7 +25,7 @@ const tagColorMap: Record<string, string> = {
           const cardClass = `article-card${index === 0 ? ' article-card--featured' : ''}${isSlim ? ' article-card--slim' : ''}`;
           return (
             <article class={cardClass} style={`--card-color: ${cardColor}`}>
-              <BauhausBlock slug={post.slug} tags={post.data.tags} direction={index === 0 ? 'horizontal' : 'vertical'} />
+              <BauhausBlock slug={post.id} tags={post.data.tags} direction={index === 0 ? 'horizontal' : 'vertical'} />
               <div class="article-card-content">
                 <div class="article-card-header">
                   {post.data.tags && post.data.tags.length > 0 && (
@@ -35,7 +35,7 @@ const tagColorMap: Record<string, string> = {
                       ))}
                     </div>
                   )}
-                  <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
+                  <h2><a href={`/${post.collection}/${post.id}/`}>{post.data.title}</a></h2>
                   <FormattedDate date={new Date(post.data.pubDate)} />
                 </div>
                 {!isSlim && (
@@ -44,7 +44,7 @@ const tagColorMap: Record<string, string> = {
                   </div>
                 )}
                 <div class="article-card-footer">
-                  <a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
+                  <a class="read-more" href={`/${post.collection}/${post.id}/`}>Read more →</a>
                 </div>
               </div>
             </article>

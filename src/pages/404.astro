@@ -16,7 +16,7 @@ const description = "This is the 404 - not found page. All the content is listed
       <li>
         <FormattedDate date={new Date(post.data.pubDate)} />
         &emsp;
-        <a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a>
+        <a href={`/${post.collection}/${post.id}/`}>{post.data.title}</a>
       </li>))}
   </ul>
 </BaseLayout>
