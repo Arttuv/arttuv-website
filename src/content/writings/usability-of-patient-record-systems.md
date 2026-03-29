@@ -2,7 +2,8 @@
 pubDate: "2012-04-18"
 title: "Usability of Patient Record Systems 2010"
 tags: ["hci"]
-featuredImage: 
+summary: "A look at a 2010 Finnish study on the usability of electronic patient record systems, where doctors rated most systems between poor and adequate. In Finnish."
+featuredImage:
     url: "/images/patient-record-systems-by-vendor.png"
     alt: "Patient record usability evaluation by vendor"
 ---

@@ -2,7 +2,7 @@
 pubDate: "2017-06-15"
 title: "Nielsen: Web UX 2016 vs 2004"
 tags: ["hci"]
-sumary: "A nice video of Nielsen comparing web usability on 2016 vss 2004. Information architecture is a vital thing and you should pay attention to it: Findability and and search are the biggest problems."
+summary: "Notes from Nielsen's keynote comparing web UX in 2016 vs 2004. Task success is up but findability remains the biggest problem — information architecture still matters most."
 featuredImage: 
     url: "../..//images/hci-placeholder.png"
     alt: "HCI post placeholder illustration"

@@ -2,7 +2,8 @@
 pubDate: "2010-11-14"
 title: "How do people act"
 tags: ["hci"]
-featuredImage: 
+summary: "An introduction to Norman's Seven Stages of Action model and how understanding how people plan and perceive can make software interfaces more intuitive."
+featuredImage:
     url: "/images/Action-Cycle-Simplified.png"
     alt: "Action Cycle graph"
 ---

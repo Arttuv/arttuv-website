@@ -2,7 +2,8 @@
 pubDate: "2017-05-11"
 title: "Designing for Usability 1985"
 tags: ["hci"]
-featuredImage: 
+summary: "A recap of Gould & Lewis's 1985 paper, which argued for early user focus, empirical measurement, and iterative design — principles that still sound radical in many organisations today."
+featuredImage:
     url: "../..//images/hci-placeholder.png"
     alt: "HCI placeholder"
 ---

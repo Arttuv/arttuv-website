@@ -2,7 +2,8 @@
 pubDate: "2017-06-15"
 title: "Reference Types in Java"
 tags: ["dev"]
-featuredImage: 
+summary: "An explanation of Java's four reference types — strong, soft, weak, and phantom — and how they interact with the garbage collector for caching and object lifecycle management."
+featuredImage:
     url: "../..//images/dev-placeholder.png"
     alt: "Dev post placeholder illustration"
 ---

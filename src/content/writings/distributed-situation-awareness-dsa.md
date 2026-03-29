@@ -2,7 +2,8 @@
 pubDate: "2019-06-24"
 title: "Distributed Situation Awareness (DSA)"
 tags: ["hci"]
-featuredImage: 
+summary: "An overview of Stanton et al.'s Distributed Situation Awareness model — a systemic view of awareness that spans both human and non-human agents in complex systems."
+featuredImage:
     url: "/images/Perceptual-Cycle_BW_Black-1024x907.png"
     alt: "Perceptual cycle graph"
 ---

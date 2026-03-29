@@ -2,7 +2,8 @@
 pubDate: "2019-06-28"
 title: "Automation and the role of human operators"
 tags: ["hci"]
-featuredImage: 
+summary: "How increasing automation shifts human operators from active participants to system supervisors — and why that creates serious problems in security-critical domains."
+featuredImage:
     url: "..//images/hci-placeholder.png"
     alt: "HCI placeholder"
 ---
