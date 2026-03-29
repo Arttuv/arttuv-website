@@ -3,9 +3,6 @@ pubDate: "2019-06-26"
 title: "Designing to Support (Distributed) Situation Awareness"
 tags: ["hci"]
 summary: "Situation awareness and distributed situation awareness are interesting concepts, but how does it map to the real world? How can we as designers take the concept and use it to guide our designs, to support rather than hinder the situation awareness of the end users?"
-featuredImage: 
-    url: "/images/SA-and-DSA-design-processes-combined.png"
-    alt: "DSA graph"
 ---
 Both Situation Awareness and Distributed Situation Awareness are interesting concepts to consider when designing complex systems. Both have their own design methods, processes and measurement methods, which should help system designers to support high SA on end users. But the real question is, how do you use these models to improve design?
 

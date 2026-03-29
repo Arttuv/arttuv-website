@@ -2,9 +2,6 @@
 pubDate: "2020-05-16"
 title: "Feeds Are The Future"
 tags: ["research"]
-featuredImage: 
-    url: "/images/handrawn-google-trend-rss.png"
-    alt: "Downwards going Google Trend graph of RSS"
 summary: "I was using RSS a lot around 2013, and I want to go back. I'd like to be more in control on what stories I see each day. At the same time I know the amount of items in RSS feeds can be overwhelming, so I'm excited to try out new tools to combat information overload as well. I'm glad to see that RSS is not *dead*, even though I understand it probably should evolve. Feed aggregators must evolve as well, or there might not be enough sources for them in the future."
 ---
 **Updates to This Text**

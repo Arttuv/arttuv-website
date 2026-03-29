@@ -2,9 +2,6 @@
 pubDate: "2023-07-17"
 title: "My Thoughts on Consulting"
 tags: ["dev"]
-featuredImage: 
-    url: "/images/three-developers-working-on-whiteboard.png"
-    alt: "Developers working on a whiteboard (Midjourney)"
 summary: "Consulting can be understood and done in many different ways. These are my thoughts on that."
 ---
 

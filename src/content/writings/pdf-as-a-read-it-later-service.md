@@ -2,9 +2,6 @@
 pubDate: "2020-07-25"
 title: "PDF as a Read It Later Service"
 tags: ["research"]
-featuredImage: 
-    url: "/images/pdf-longread-annotation.jpeg"
-    alt: "Annotated PDF file"
 summary: "PDF seems to be the best format to read books on iPad, and now I've started using it for reading web long reads as well. Being in control is the best part: You can decide how the website looks like, save it so it's yours to read and annotate however you like, and store it forever."
 ---
 **Updates to this text**

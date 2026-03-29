@@ -3,9 +3,6 @@ pubDate: "2020-11-15"
 title: "Becoming fluent in remote work"
 summary: "Remote work has different requirements and success factors than co-located work. Trying to mimic co-located work in a remote setting leads to inefficiencies and misses the potential benefits of working remotely. GitLab has published a Leading remote teams -course on Coursera and I went through it to get new ideas on how to improve my work, and they really do have some interesting ideas. Asynchronous workflows is one fundamental one."
 tags: ["dev"]
-featuredImage:
-    url: "/images/asynchronous-work-drawing.png"
-    alt: "Asynchronous work drawing"
 ---
 
 I have never before the year 2020 worked fully remotely with a team. Earlier experience was from working alone and only had occasional meetings with others - that’s easy and only thing you need to worry is getting lonely. Now I work with a team on things that require collaboration, so it’s much harder - you can’t just mimic the co-located way of working remotely. Or you can, but it’s suboptimal and leads into inefficiencies. By GitLab terms that stage of remote is called [skeuomorph](https://about.gitlab.com/company/culture/all-remote/phases-of-remote-adaptation/).

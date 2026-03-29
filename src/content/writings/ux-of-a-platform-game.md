@@ -3,9 +3,6 @@ pubDate: "2019-06-30"
 title: "Platformer (game) UX"
 tags: ["hci"]
 summary: "Some years ago I tried building a platformer game (PC / Android) and found the experience interesting from the UX point of view. This is my recap of what I remember. TLDR: You can cheat to make it feel more like a game. Physics simulation rarely makes a good platformer (although Trine might beg to differ). At least you'll need to fine-tune your character movement physics."
-featuredImage: 
-    url: "/images/Corner-cases-in-platformer-physics.003.png"
-    alt: "Platformer game illustration"
 ---
 Interactions in games are fascinating because usually, people have a gut feeling when the game feels right, but it’s not an easy task to replicate the experience. Controls and how the character follows players' interactions are vital in platform games – winning or losing can be determined by milliseconds of differences in the timing of button presses. The game mechanics and difficulty should match the gamers' understanding of a fair and challenging game.
 

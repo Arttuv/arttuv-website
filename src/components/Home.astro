@@ -4,6 +4,7 @@ import arttu from "../images/arttuv-bw.jpeg"
 import { getCollection } from "astro:content"
 import Comment from "./Comment.astro"
 import FormattedDate from "../components/FormattedDate.astro"
+import BauhausBlock from "./BauhausBlock.astro"
 const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 ---
@@ -13,16 +14,18 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
     <div class="hello-text">
       {writings.slice(0, 3).map((post) => (
         <article class="article-card">
-          <div class="article-card-header">
-            <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
-            <FormattedDate date={new Date(post.data.pubDate)} />
-          </div>
-          <div class="article-card-text">
-            <p>{post.data.summary}</p>
-
-          </div>
-          <div class="article-card-footer">
-            <a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
+          <BauhausBlock slug={post.slug} tags={post.data.tags} />
+          <div class="article-card-content">
+            <div class="article-card-header">
+              <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
+              <FormattedDate date={new Date(post.data.pubDate)} />
+            </div>
+            <div class="article-card-text">
+              <p>{post.data.summary}</p>
+            </div>
+            <div class="article-card-footer">
+              <a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
+            </div>
           </div>
         </article>
       ))}

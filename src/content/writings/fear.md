@@ -2,9 +2,6 @@
 pubDate: "2020-04-12"
 title: "The difficulty of saying I don't know"
 tags: ["dev"]
-featuredImage: 
-    url: "/images/coder-fear.jpeg"
-    alt: "Illustration of stressed person"
 summary: "Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven't mastered yet. That can be a lot to bear and a source of anxiety. By being vulnerable and admitting you need help, you can start creating a safer environment."
 ---
 Creating software is complex, and we are all the time facing problems we are solving for the first time in our lives, possibly with the tools we haven't mastered yet. That can be a lot to bear and a source of anxiety. Kati Vilkki wrote [a good blog post on culture of fear](https://www.reaktor.com/blog/facing-up-to-a-culture-of-fear/), which inspired me to think about the subject from my perspective, on team and single developer level.

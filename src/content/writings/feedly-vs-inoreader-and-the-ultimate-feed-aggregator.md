@@ -2,9 +2,6 @@
 pubDate: "2020-05-27"
 title: "Inoreader vs Feedly, and the ultimate feed reader (in 2020)"
 tags: ["research"]
-featuredImage: 
-    url: "/images/feed-aggregator-features.jpeg"
-    alt: "Feed aggregation illustration"
 summary: "I started to use RSS again and setting the system up requires some work. I also noticed that my needs are so specific that each service does not support them fully. I have compared Feedly and Inoreader, and in the process found out the feature set that matters to me. Choosing which service to use is hard, because none of them is perfect. Some services can also be surprisingly expensive."
 ---
 

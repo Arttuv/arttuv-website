@@ -1,0 +1,43 @@
+---
+interface Props {
+  slug: string;
+  tags?: string[];
+  direction?: 'vertical' | 'horizontal';
+}
+const { slug, tags = [], direction = 'vertical' } = Astro.props;
+
+const tagColors: Record<string, string> = {
+  'hci': '#1565C0',
+  'dev': '#C62828',
+  'research': '#F9A825',
+};
+
+const palette = ['#C62828', '#1565C0', '#F9A825', '#212121'];
+
+function hash(str: string): number {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) {
+    h = Math.imul(31, h) + str.charCodeAt(i) | 0;
+  }
+  return Math.abs(h);
+}
+
+const h = hash(slug);
+const primaryTag = tags[0] || '';
+const color1 = tagColors[primaryTag] || '#212121';
+
+const others = palette.filter(c => c !== color1);
+const color2 = others[h % others.length];
+const color3 = others[(h >> 4) % others.length] !== color2
+  ? others[(h >> 4) % others.length]
+  : others[((h >> 4) + 1) % others.length];
+
+const b1 = 25 + (h % 25);
+const b2 = 20 + ((h >> 5) % 20);
+// b3 = remainder, minimum ~11
+
+const gradientDir = direction === 'horizontal' ? 'to right' : 'to bottom';
+const gradient = `linear-gradient(${gradientDir}, ${color1} ${b1}%, ${color2} ${b1}% ${b1 + b2}%, ${color3} ${b1 + b2}%)`;
+---
+
+<div class={`bauhaus-block bauhaus-block--${direction}`} style={`background: ${gradient}`} aria-hidden="true"></div>

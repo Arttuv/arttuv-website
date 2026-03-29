@@ -3,9 +3,6 @@ pubDate: "2012-04-18"
 title: "Usability of Patient Record Systems 2010"
 tags: ["hci"]
 summary: "A look at a 2010 Finnish study on the usability of electronic patient record systems, where doctors rated most systems between poor and adequate. In Finnish."
-featuredImage:
-    url: "/images/patient-record-systems-by-vendor.png"
-    alt: "Patient record usability evaluation by vendor"
 ---
 This is about the usability of health care systems (EPR) in Finland. You can read an English summary of the usability study in the end of the article in [this link](http://www.laakariliitto.fi/files/potilastietojarjestelmatWinblad.pdf).
 

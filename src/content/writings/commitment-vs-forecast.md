@@ -2,9 +2,6 @@
 pubDate: "2020-08-02"
 title: "Don’t ask people to commit to fulfill a forecast"
 tags: ["dev"]
-featuredImage: 
-    url: "/images/estimated-end-date.jpeg"
-    alt: "Estimated end date graph"
 summary: "Estimations made in the planning are forecasts and their reliability depends on both the experience and on the length of the time scale they cover. Using the word commitment can make planning more intimidating than it needs to be. The estimation itself is hard, and I don’t think I’ve ever seen it done too well, so it would be good to get all the stakeholders to understand that, and work towards better predictability together."
 ---
 

@@ -8,10 +8,6 @@ const writings = defineCollection({
       .or(z.date())
       .transform((val) => new Date(val)),
     tags: z.array(z.string()).optional(),
-    featuredImage: z.object({
-      url: z.string(),
-      alt: z.string(),
-    }).optional(),
     summary: z.string().optional(),
     mastodon: z.string().optional(),
   }),

@@ -3,9 +3,6 @@ pubDate: "2017-05-11"
 title: "Designing for Usability 1985"
 tags: ["hci"]
 summary: "A recap of Gould & Lewis's 1985 paper, which argued for early user focus, empirical measurement, and iterative design — principles that still sound radical in many organisations today."
-featuredImage:
-    url: "../..//images/hci-placeholder.png"
-    alt: "HCI placeholder"
 ---
 
 It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key Principles and What Designers Think (Gould & Lewis, 1985). Gould and Lewis introduce three principles that they argue are vital for creating usable applications, and then they go through common arguments against them and try to justify why these principles matter.

@@ -2,9 +2,6 @@
 pubDate: "2023-07-05"
 title: "No-Estimates"
 tags: ["dev"]
-featuredImage: 
-    url: "/images/ai-burndown-chart.jpeg"
-    alt: "Cartoon version of a burndown or burn-up chart."
 summary: "Estimating software work is difficult, as we usually are in a complex, not complicated domain, and we know what the solution will look like and how long it took to create, after it has been validated with the end users. Days, weeks, months -scale should be enough for estimation, and if you need more detailed than that, you should probably stop and think why, and how to change that."
 mastodon: "110692189541870209"
 ---

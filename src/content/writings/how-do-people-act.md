@@ -3,9 +3,6 @@ pubDate: "2010-11-14"
 title: "How do people act"
 tags: ["hci"]
 summary: "An introduction to Norman's Seven Stages of Action model and how understanding how people plan and perceive can make software interfaces more intuitive."
-featuredImage:
-    url: "/images/Action-Cycle-Simplified.png"
-    alt: "Action Cycle graph"
 ---
 Creating usable software is not easy. You are blind to the usability problems of your user interface because you know how things work. You don’t need feedback in a way that other users of your system need. You don’t need the system to tell you what actions are available in each situation. If an action takes some time, you know what is happening(right?), but it must be told for the others!
 

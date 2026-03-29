@@ -3,9 +3,6 @@ pubDate: "2012-10-18"
 title: "26th in the Hello World Open 2012"
 tags: ["dev"]
 summary: "A recap of participating in the first Hello World Open coding competition in 2012 — building a Pong AI client in Java and finishing 26th out of 200 teams."
-featuredImage:
-    url: "/images/HWO_Testing2.png"
-    alt: "Technical illustration"
 ---
 
 We participated in the first Hello World Open with Louhigames’ crew. Hello World Open is a Finnish coding competition and this was the first year it was organized. 200 teams participated and around 100 of them were able to enter a working program.
