@@ -197,6 +197,8 @@ nav a, nav a:visited, nav a:active {
 .article-card {
     padding: 0;
     border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    overflow: hidden;
     font-size: smaller;
     margin-bottom: 1rem;
     width: 100%;
