@@ -10,7 +10,8 @@
     "astro": "astro",
     "comment": "node src/create-comment.js",
     "fetch-mastodon": "node src/fetch-mastodon.js",
-    "build-comments": "node src/build-comments.js"
+    "build-comments": "node src/build-comments.js",
+    "test:links": "node tests/check-links.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",
@@ -24,5 +25,8 @@
     "markdown-it": "^14.1.0",
     "sanitize-html": "^2.11.0",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "jsdom": "^27.0.1"
   }
 }
