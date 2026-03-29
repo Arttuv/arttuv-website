@@ -41,7 +41,6 @@
 
 <script>
   const theme = (() => {
-    console.log("theme", localStorage.getItem("theme"))
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme")
     }
@@ -62,7 +61,6 @@
   }
 
   const handleToggleClick = () => {
-    console.log("handleToggleClick")
     const element = document.documentElement
     element.classList.toggle("dark")
 
