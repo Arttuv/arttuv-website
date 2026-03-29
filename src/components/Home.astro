@@ -16,38 +16,47 @@ const tagColorMap: Record<string, string> = {
 
 <div class="home-page">
   <div class="welcome-container">
-    <div class="hello-text">
-      {writings.slice(0, 3).map((post, index) => {
-        const cardColor = post.data.tags?.[0] ? (tagColorMap[post.data.tags[0]] ?? '#212121') : '#212121';
-        return (
-          <article class={`article-card${index === 0 ? ' article-card--featured' : ''}`} style={`--card-color: ${cardColor}`}>
-            <BauhausBlock slug={post.slug} tags={post.data.tags} direction={index === 0 ? 'horizontal' : 'vertical'} />
-            <div class="article-card-content">
-            <div class="article-card-header">
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="card-tags">
-                  {post.data.tags.map(tag => (
-                    <a href={`/tags/${tag}`} class="card-tag" style={`color: ${tagColorMap[tag] ?? '#212121'}`}>#{tag}</a>
-                  ))}
-                </div>
-              )}
-              <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
-              <FormattedDate date={new Date(post.data.pubDate)} />
-            </div>
-            <div class="article-card-text">
-              <p>{post.data.summary}</p>
-            </div>
-            <div class="article-card-footer">
-              <a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
-            </div>
-          </div>
-        </article>
-        ); })}
-      <span class="button-container">
-                <a href="/writings/">All writings →</a>
-            </span>
 
-      <article>
+    <div class="main-content">
+      <div class="writing-listing">
+        {writings.slice(0, 5).map((post, index) => {
+          const cardColor = post.data.tags?.[0] ? (tagColorMap[post.data.tags[0]] ?? '#212121') : '#212121';
+          const isSlim = index >= 3;
+          const cardClass = `article-card${index === 0 ? ' article-card--featured' : ''}${isSlim ? ' article-card--slim' : ''}`;
+          return (
+            <article class={cardClass} style={`--card-color: ${cardColor}`}>
+              <BauhausBlock slug={post.slug} tags={post.data.tags} direction={index === 0 ? 'horizontal' : 'vertical'} />
+              <div class="article-card-content">
+                <div class="article-card-header">
+                  {post.data.tags && post.data.tags.length > 0 && (
+                    <div class="card-tags">
+                      {post.data.tags.map(tag => (
+                        <a href={`/tags/${tag}`} class="card-tag" style={`color: ${tagColorMap[tag] ?? '#212121'}`}>#{tag}</a>
+                      ))}
+                    </div>
+                  )}
+                  <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
+                  <FormattedDate date={new Date(post.data.pubDate)} />
+                </div>
+                {!isSlim && (
+                  <div class="article-card-text">
+                    <p>{post.data.summary}</p>
+                  </div>
+                )}
+                <div class="article-card-footer">
+                  <a class="read-more" href={`/${post.collection}/${post.slug}/`}>Read more →</a>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+
+      <span class="button-container">
+        <a href="/writings/">All writings →</a>
+      </span>
+
+      <article class="author-bio">
         <div class="line-heading">
           <h2>Arttu Viljakainen</h2>
         </div>
@@ -55,22 +64,19 @@ const tagColorMap: Record<string, string> = {
           At the moment I'm a software development consultant.
         </p>
         <div class="article-card-text">
-          <p>I’ve been coding for a living for 15 years, and writing code for some 20 years. I intend to keep on doing
+          <p>I've been coding for a living for 15 years, and writing code for some 20 years. I intend to keep on doing
             that.</p>
-
           <p>
             Teams are essential in creating software: combining interdisciplinary skills in a way that makes the whole
             more than the sum of each individual requires intentional effort.
             These days, most things worth doing require a team. Skills and viewpoints needed are just too diverse for
             any individual.
           </p>
-
           <p>
             I intend to study teams and get better at making exceptional teams emerge.
           </p>
-
           <p>
-            Software happens in a complex world, in which you can’t predict the future. That’s why we have agile (<a
+            Software happens in a complex world, in which you can't predict the future. That's why we have agile (<a
             href="/writings/agile-still-relevant-in-2024">which is still relevant, by the way</a>). I think it is
             essential to understand the difference between complicated and complex environments, and act accordingly.
             Agile never looks the same, and how to make it work is both interesting and rewarding.
@@ -89,53 +95,33 @@ const tagColorMap: Record<string, string> = {
           </p>
         </div>
         <div class="article-card-footer">
-          <a class="read-more" href={`/author/`}>Read more about the author →</a>
+          <a class="read-more" href="/author/">Read more about the author →</a>
         </div>
       </article>
     </div>
-    <div class="author-photo">
+
+    <aside class="author-sidebar">
       <Image src={arttu} alt="Arttu" loading="eager" />
       <p class="from-eu-with-love">Code from 🇪🇺🇫🇮 with ❤️&🏳️‍🌈</p>
-    </div>
+      <section class="feed-area">
+        <p class="feed-heading">Mastodon</p>
+        <div class="comment-listing">
+          <ul>
+            {comments.slice(0, 2).map(comment => (
+              <li>
+                <Comment {comment} />
+              </li>
+            ))}
+          </ul>
+          <a class="feed-more" href="https://scholar.social/@arttuv">More →</a>
+        </div>
+      </section>
+    </aside>
+
   </div>
-  <section class="feed-area">
-    <div class="line-heading">
-      <h2>Mastodon Feed</h2>
-    </div>
-    <div class="comment-listing">
-      <ul>
-        {comments.map(comment => (
-          <li>
-            <Comment {comment} />
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
 </div>
 
 <style>
-
-
-    .article-card-footer {
-        text-align: right;
-    }
-
-    .button-container {
-        display: flex;
-        justify-content: center;
-    }
-
-    button {
-        background-color: #000;
-        color: #F5F5F5;
-        border: none;
-        border-radius: 0.2rem;
-        padding: 0.5rem 1rem;
-        font-size: smaller;
-        cursor: pointer;
-    }
-
     .home-page {
         width: 100%;
         margin: auto;
@@ -144,88 +130,148 @@ const tagColorMap: Record<string, string> = {
     .welcome-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+        gap: 2rem;
         margin-top: 2rem;
         width: 100%;
-        gap: 1rem;
     }
 
-    .hello-text {
-        max-width: 70ch;
-        align-self: start;
+    .main-content {
+        flex: 1;
+        min-width: 0;
     }
 
-    .author-photo {
-        align-self: start;
+    .author-sidebar {
+        width: 190px;
+        flex-shrink: 0;
         position: sticky;
         top: 5rem;
-        z-index: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+    }
+
+    .author-sidebar img {
+        width: 100%;
+        max-height: 40vh;
+        object-fit: cover;
     }
 
     .from-eu-with-love {
         font-weight: 200;
         font-size: smaller;
-        margin-top: 1rem;
+        margin-top: 0.75rem;
+        text-align: center;
     }
 
-    .author-photo img {
-        object-fit: cover;
-        width: 30vw;
-        max-width: 20rem;
-        max-height: 40vh;
-        min-height: 280px;
+    .feed-area {
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+
+    .feed-heading {
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #999;
+        margin-bottom: 0.5rem;
     }
 
     .comment-listing ul {
         list-style-type: none;
         padding-left: 0;
-        padding-right: 1rem;
         margin-top: 0;
     }
 
     .comment-listing li {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
     }
 
-    .feed-area h2 {
-        text-align: center;
+    .feed-more {
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.75rem;
+        color: #999;
+        text-decoration: none;
+        display: block;
+        text-align: right;
+    }
+
+    .feed-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Compact overrides for feed inside narrow sidebar */
+    :global(.author-sidebar .internal-comment) {
+        padding: 0 0.25rem;
+    }
+
+    :global(.author-sidebar .embedded-mastodon-comment) {
+        padding: 0.25rem 0 0 0;
+    }
+
+    :global(.author-sidebar .embedded-mastodon-details p) {
+        margin-bottom: 0.25rem;
+        line-height: 1.7;
+    }
+
+    :global(.author-sidebar .html-content p) {
+        line-height: 1.7;
+        margin-bottom: 0.25rem;
+    }
+
+    :global(.author-sidebar .comment-content) {
+        font-size: 0.7rem;
+    }
+
+    :global(.author-sidebar .embedded-mastodon-comment) {
+        font-size: 0.7rem;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+    .author-bio {
+        margin-top: 1rem;
+        font-size: smaller;
+    }
+
+    .article-card-footer {
+        text-align: right;
+    }
+
+    .article-card--slim h2 {
+        font-size: 0.9rem;
     }
 
     @media (max-width: 800px) {
         .welcome-container {
-            margin-top: 2rem;
-            flex-direction: column-reverse;
-            justify-content: center;
-            height: auto;
+            flex-direction: column;
+            margin-top: 1rem;
         }
 
-        .hello-text {
-            max-width: 100%;
-            margin-top: 0;
-        }
-
-        h1 {
-            margin: 0.5rem 0;
-            text-align: center;
-        }
-
-        .author-photo {
+        .author-sidebar {
+            position: static;
             width: 100%;
-            position: inherit;
-            text-align: center;
+            align-items: center;
         }
 
-        .author-photo img {
-            object-fit: cover;
-            width: 100%;
-            margin: 0 auto;
+        .author-sidebar img {
             max-width: 30ch;
             max-height: 50vh;
+        }
+
+        .feed-area {
+            width: 100%;
+            max-width: 50ch;
+            text-align: left;
+        }
+
+        .comment-listing ul {
+            width: 100%;
         }
     }
 </style>
