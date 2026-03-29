@@ -8,12 +8,19 @@ import { getCollection, type CollectionEntry } from "astro:content"
 type Props = CollectionEntry<"writings">;
 const post = Astro.props
 
+const tagColorMap: Record<string, string> = {
+  'hci': '#1565C0',
+  'dev': '#C62828',
+  'research': '#F9A825',
+};
+const tagColor = post.data.tags?.[0] ? (tagColorMap[post.data.tags[0]] ?? '#212121') : '#212121';
+
 const comments = (await getCollection("comments", (comment) => {
   return comment.data.internalLink?.slug == post.slug // TODO BETTER
 })).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).filter((comment) => comment.data.mastodon !== post.data.mastodon)
 ---
 <BaseLayout title={post.data.title} description={post.data.summary}>
-  <article class="blog-post">
+  <article class="blog-post" style={`--tag-color: ${tagColor}`}>
     <div class="category">
       {post.data.tags.map((tag) => (
         <span><a href={`/tags/${tag}`}>#{tag}</a></span>
@@ -56,8 +63,8 @@ const comments = (await getCollection("comments", (comment) => {
         padding-left:0;
         margin-left:0;
         padding-bottom:0;
-        margin-top: 2.5rem;
-        margin-bottom: 1.5rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
     }
 
     .blog-post h1:first-of-type {
@@ -67,8 +74,8 @@ const comments = (await getCollection("comments", (comment) => {
         margin-left: 0px;
         padding-bottom:0;
         margin-top: 2rem;
-        margin-bottom: 2rem;
-        font-weight: normal;
+        margin-bottom: 1.5rem;
+        font-weight: 300;
     }
 
     .blog-post .category {
@@ -83,12 +90,25 @@ const comments = (await getCollection("comments", (comment) => {
     }
 
     .blog-post time {
-        text-align: left;
-        color: #000;
-        font-weight: normal;
-        padding-left: 0;
-        margin-left: auto;
-        margin-top: 0px;
+        display: block;
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #666;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .dark .blog-post time {
+        color: #aaa;
+    }
+
+    .blog-post hr:not(.content-ending-line) {
+        border: none;
+        border-top: 1px solid var(--tag-color, #212121);
+        opacity: 0.25;
+        margin: 0 0 2rem;
     }
 
     .blog-post .content .gatsby-resp-image-figcaption {
@@ -108,7 +128,13 @@ const comments = (await getCollection("comments", (comment) => {
     }
 
     .blog-post p {
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.65;
+    }
+
+    .blog-post > p:first-of-type {
+        font-size: 1.05em;
+        line-height: 1.65;
     }
 
     .blog-post img {
@@ -127,19 +153,21 @@ const comments = (await getCollection("comments", (comment) => {
 
     .writing-ending {
         text-align: center;
-        font-size: 1em;
-        color: #000;
+        font-size: 1.5em;
+        color: var(--tag-color, #000);
         margin: 1rem 0;
     }
 
     .dark .writing-ending {
-        color: #F5F5F5;
+        color: var(--tag-color, #F5F5F5);
     }
 
     .blog-post blockquote {
-        margin: 1rem 0;
-        padding: 0.5rem 0.5rem;
-        border-left: 4px solid #ccc;
+        margin: 2rem 0;
+        padding: 0.75rem 1.5rem;
+        border-left: 3px solid var(--tag-color, #212121);
+        font-style: italic;
+        font-size: 1.05em;
     }
     
     .blog-post blockquote p {

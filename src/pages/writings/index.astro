@@ -7,16 +7,23 @@ import { getCollection } from "astro:content"
 const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const title = "Writings"
 const description = "A collection of my writings."
+const tagColorMap: Record<string, string> = {
+  'hci': '#1565C0',
+  'dev': '#C62828',
+  'research': '#F9A825',
+};
 ---
 <BaseLayout title={title} description={description}>
   <div class="writings-container">
     <h1>{title}</h1>
     <div class="writing-listing">
 
-      {writings.map((post) => (
-        <article class="article-card">
-          <BauhausBlock slug={post.slug} tags={post.data.tags} />
-          <div class="article-card-content">
+      {writings.map((post, index) => {
+        const cardColor = post.data.tags?.[0] ? (tagColorMap[post.data.tags[0]] ?? '#212121') : '#212121';
+        return (
+          <article class={`article-card${index === 0 ? ' article-card--featured' : ''}`} style={`--card-color: ${cardColor}`}>
+            <BauhausBlock slug={post.slug} tags={post.data.tags} direction={index === 0 ? 'horizontal' : 'vertical'} />
+            <div class="article-card-content">
             <div class="article-card-header">
               <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
               <FormattedDate date={new Date(post.data.pubDate)} />
@@ -29,7 +36,7 @@ const description = "A collection of my writings."
             </div>
           </div>
         </article>
-      ))}
+        ); })}
 
     </div>
   </div>
@@ -38,9 +45,6 @@ const description = "A collection of my writings."
 
     .writing-listing {
         min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     a {

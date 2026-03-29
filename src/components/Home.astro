@@ -7,15 +7,22 @@ import FormattedDate from "../components/FormattedDate.astro"
 import BauhausBlock from "./BauhausBlock.astro"
 const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const tagColorMap: Record<string, string> = {
+  'hci': '#1565C0',
+  'dev': '#C62828',
+  'research': '#F9A825',
+};
 ---
 
 <div class="home-page">
   <div class="welcome-container">
     <div class="hello-text">
-      {writings.slice(0, 3).map((post) => (
-        <article class="article-card">
-          <BauhausBlock slug={post.slug} tags={post.data.tags} />
-          <div class="article-card-content">
+      {writings.slice(0, 3).map((post, index) => {
+        const cardColor = post.data.tags?.[0] ? (tagColorMap[post.data.tags[0]] ?? '#212121') : '#212121';
+        return (
+          <article class={`article-card${index === 0 ? ' article-card--featured' : ''}`} style={`--card-color: ${cardColor}`}>
+            <BauhausBlock slug={post.slug} tags={post.data.tags} direction={index === 0 ? 'horizontal' : 'vertical'} />
+            <div class="article-card-content">
             <div class="article-card-header">
               <h2><a href={`/${post.collection}/${post.slug}/`}>{post.data.title}</a></h2>
               <FormattedDate date={new Date(post.data.pubDate)} />
@@ -28,7 +35,7 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
             </div>
           </div>
         </article>
-      ))}
+        ); })}
       <span class="button-container">
                 <a href="/writings/">All writings →</a>
             </span>

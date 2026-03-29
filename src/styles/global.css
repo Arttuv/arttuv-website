@@ -2,7 +2,7 @@ html {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-size: 16px;
+    font-size: 17px;
     background-color: #fffbf8;
     color: #000;
 }
@@ -50,8 +50,9 @@ pre {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
-    line-height: 1.3;
+    font-family: 'Roboto Serif Variable', serif;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 h1 {
@@ -110,8 +111,8 @@ svg {
 
 .blog-post .category a {
     font-family: 'Roboto Condensed Variable', sans-serif;
-    color: black;
-    text-decoration: underline;
+    color: var(--tag-color, black);
+    text-decoration: none;
 }
 
 .blog-post a {
@@ -120,7 +121,7 @@ svg {
 }
 
 .dark .blog-post .category a {
-    color: #F5F5F5;
+    color: var(--tag-color, #F5F5F5);
     text-decoration: none;
 }
 
@@ -227,12 +228,11 @@ nav a, nav a:visited, nav a:active {
 }
 
 .article-card h2 a {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .article-card a, .article-card a:visited, .article-card a:active, .article-card a:focus {
     text-decoration: none;
-    font-weight: bold;
     color: #000;
 }
 
@@ -250,7 +250,7 @@ nav a, nav a:visited, nav a:active {
 }
 
 .article-card .read-more {
-    color: #000;
+    color: var(--card-color, #000);
     font-family: 'Roboto Condensed Variable', sans-serif;
 }
 
@@ -287,6 +287,30 @@ nav a, nav a:visited, nav a:active {
 
 .dark .article-card a, .dark .article-card a:visited, .dark .article-card a:active {
     color: #F5F5F5;
+}
+
+.dark .article-card .read-more {
+    color: var(--card-color, #F5F5F5);
+}
+
+.writing-listing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.article-card--featured {
+    grid-column: 1 / -1;
+    flex-direction: column;
+}
+
+.article-card--featured h2 {
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -335,5 +359,9 @@ nav a, nav a:visited, nav a:active {
 }
 
 @media (max-width: 800px) {
+
+    .writing-listing {
+        grid-template-columns: 1fr;
+    }
 
 }
