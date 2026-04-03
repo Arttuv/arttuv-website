@@ -5,7 +5,7 @@ tags: ["hci"]
 summary: "A recap of Gould & Lewis's 1985 paper, which argued for early user focus, empirical measurement, and iterative design — principles that still sound radical in many organisations today."
 ---
 
-It’s interesting how old many of the usability (and software engineering) ideas are. I run into an old classic: Designing for Usability: Key Principles and What Designers Think (Gould & Lewis, 1985). Gould and Lewis introduce three principles that they argue are vital for creating usable applications, and then they go through common arguments against them and try to justify why these principles matter.
+It’s interesting how old many of the usability (and software engineering) ideas are. I ran into an old classic: Designing for Usability: Key Principles and What Designers Think (Gould & Lewis, 1985). Gould and Lewis introduce three principles that they argue are vital for creating usable applications, and then they go through common arguments against them and try to justify why these principles matter.
 
 **These three principles for designing for usability are (Gould & Lewis, 1985):**
 
@@ -31,7 +31,7 @@ Problems found in empirical user tests must be fixed, which implies that the des
 
 ## Motivation for Using the Principles
 
-Gould and Lewis have listed a lot of motivations for using these principles, and I’ve listed here the ones that I felt the most importand and most relevant today.
+Gould and Lewis have listed a lot of motivations for using these principles, and I’ve listed here the ones that I felt the most important and most relevant today.
 
 ### Design is much harder than one might think
 

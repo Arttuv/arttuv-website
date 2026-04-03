@@ -57,7 +57,7 @@ Another problem in the image is jumping to a gap that is close to the ceiling. I
 
 The image below represents a classical platform game challenge. The hero has to jump from level to level – death below and ceiling just a little bit too low above. It’s important to be able to control the jump precisely.
 
-![Classical platform game challenges](/images/Corner-cases-in-platformer-physics.003.png "Patfromer challenges")
+![Classical platform game challenges](/images/Corner-cases-in-platformer-physics.003.png "Platformer challenges")
 
 So fine-tunings to fix this scenario are
 

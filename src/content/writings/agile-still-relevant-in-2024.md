@@ -17,7 +17,7 @@ If you knew most of your assumptions about the problem and solution are false, w
 
 Agile ([agile manifesto](https://agilemanifesto.org)) is fundamentally a simple iterative and adaptive mindset to help you work in a complex environment. Having worked through both agile and waterfall-like approaches, I've seen how companies tend to crave for control in the expense of agility. It leads to inefficiency and burnouts, only giving a false sense of control and clarity in return.
 
-Different frameworks and models can be designed to implement agile principles and values, but they are not synonymous to "agile". Most of the critique I have seen is towards agile has been more about how these frameworks and models are being sold and applied in companies (read: large corporations). 
+Different frameworks and models can be designed to implement agile principles and values, but they are not synonymous to "agile". Most of the critique I have seen towards agile has been more about how these frameworks and models are being sold and applied in companies (read: large corporations). 
 
 ## Complex environment requires an adaptive approach
 
@@ -63,7 +63,7 @@ One of the hardest things for the team to do is to bring the peace of mind for t
 
 I'm a big fan of showing, not telling: show them every week what has been accomplished and what the way forward looks like.
 
-Have discussions using the running software, whiteboard or mockups as a shared entity, not Jira. No jira traffic light can tell you you are doing OK.
+Have discussions using the running software, whiteboard or mockups as a shared entity, not Jira. No Jira traffic light can tell you you are doing OK.
 
 ## Agile empowers autonomous cross-functional teams
 
@@ -79,4 +79,4 @@ If a team like that is motivated and willing to have a shared responsibility ove
 
 ## Conclusion
 
-Ultimately, agile is about empowered people, continuous learning, and rapid adaptation. Whether you follow Scrum, Kanban, XP, or another framework, remember to revisit the underlying principles. If your process feels stiff or worthless ceremonies, question whether it’s truly agile and supporting the work. Give your teams autonomy, embrace experimentation, and you’ll find that agility is alive and well in the face of complexity.
+Agile is about empowered people, continuous learning, and rapid adaptation. Whether you follow Scrum, Kanban, XP, or another framework, remember to revisit the underlying principles. If your process feels stiff or its ceremonies feel worthless, question whether it’s truly supporting the work. Don't impose unneeded processes to the teams but give them the freedom to expriment.

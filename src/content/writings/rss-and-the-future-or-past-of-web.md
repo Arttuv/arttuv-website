@@ -18,7 +18,7 @@ Based on the Feedly snapshot, six years ago I was interested in Java, Delphi, so
 
 I was a [Google Reader](https://en.wikipedia.org/wiki/Google_Reader) user back in the day and continued using it until its shutdown in 2013. I switched to Feedly with many others, but it didn’t feel the same. This was the time Google+ and other social networks were trying to do better than RSS was doing (by letting algorithms decide what you see and creating ad money), and those services felt fresh and useful - after all, they also let you discuss about the shared content: It seemed to be more about interactions and I tried to embrace that. 
 
-Google+ had somewhat interesting start and it seemed to attract professional users, but then it just faded away. Twitter has been a good source for following new things and even for conversations, but somehow it has become more noicy and things like Trump and COVID-19 just bury everything else.
+Google+ had somewhat interesting start and it seemed to attract professional users, but then it just faded away. Twitter has been a good source for following new things and even for conversations, but somehow it has become more noisy and things like Trump and COVID-19 just bury everything else.
 
 ## Declining Popularity of RSS
 
@@ -56,7 +56,7 @@ For news aggregators, machine learning and AI brings opportunities, paywalls and
 
 If I'd try predicting something about the future of feed aggregators, I'd say that the focus will drift away from RSS: **Newsletters, API integrations and web crawling will be the main source for updates**, and the hardest part will be copyright issues. For now for example Twitter is easy, because they provide a great API to use. Scientific publishers on the other hand are mainly providing only email subscriptions for paying customers - you'll not get an RSS feed even if you pay. On top of feeds you can build services like Leo - AI to help get alerts and filter out duplicates and unwanted headlines. Those are only second tier features, because without the feeds they are useless. 
 
-Up until recent years feed aggregators have been able to concentrate on the feed aggregating and processing part, but in the future they are forced to build capabilities to build those feeds as well. Otherwise their users, and they as a service, are depending on other services to provide those feeds. It cuts away large portion of users
+Up until recent years feed aggregators have been able to concentrate on the feed aggregating and processing part, but in the future they are forced to build capabilities to build those feeds as well. Otherwise their users, and they as a service, are depending on other services to provide those feeds. It cuts away a large portion of users
 
 So, maybe feeds are not the future, but I'll try out if it could be for me.
 

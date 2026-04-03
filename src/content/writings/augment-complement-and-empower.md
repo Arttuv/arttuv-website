@@ -61,9 +61,9 @@ If I'm understanding correctly, I’d say that an autonomous landing system woul
 
 ## The Design Perspective
 
-Ethics Guidelines for Trustworthy AI lists principles and requirements and assessment lists, but making sure we design systems that fullfill the requirements is not easy. Also the document itself emphasizes that often different requirements are in conflict and you need to make informed decisions to balance between them. 
+Ethics Guidelines for Trustworthy AI lists principles and requirements and assessment lists, but making sure we design systems that fulfill the requirements is not easy. Also the document itself emphasizes that often different requirements are in conflict and you need to make informed decisions to balance between them. 
 
-How do you ensure human agency and make sure users can self-assess and challenge the system? If security is at all of the importance and the work requires special skills that should be kept up to pubDate: I’d say keep end-users as much in-the-loop as possible and concentrate on giving them "superpowers" by utilizing improved sensor technology, increased amounts of data and advanced analytics that can be done with it.
+How do you ensure human agency and make sure users can self-assess and challenge the system? If security is at all of the importance and the work requires special skills that should be kept up to date: I’d say keep end-users as much in-the-loop as possible and concentrate on giving them "superpowers" by utilizing improved sensor technology, increased amounts of data and advanced analytics that can be done with it.
 
 For understanding the work and environment of the end-users and how to improve them with technology there are a lot of good tools from Beyer's & Holtzblatt's Contextual Design to everything under the human-centered design umbrella. There are tools for [designing to support situation awareness](/writings/designing-to-support-dsa) and tools to measure the SA. Task analysis can be used to analyze the work and help to decide how different tasks should be allocated to both AI and humans, and what kind of information is needed to transfer SA. Providing training environments in which humans and automation can learn to work together will be important when AI is being added to systems.
 

@@ -15,7 +15,7 @@ The objective was to create an artificial intelligence client player for a Pong 
 
 ![Diagram](/images/HWO-Pong-representation.png)
 
-In the beginning the server is waiting for players. Client connects to the server using TCP/IP and sens a “join” message. Messages send between clients and server were specific JSON messages. For example, the join message looks like this:
+In the beginning the server is waiting for players. Client connects to the server using TCP/IP and sends a “join” message. Messages sent between clients and server were specific JSON messages. For example, the join message looks like this:
 ```json
  {“msgType”:”join”,”data”:”name of the bot“}
 ```
@@ -57,15 +57,15 @@ In the finals they also added missiles to the game.
 
 We wanted to use Java because we were most familiar with that. Basically any language able to run on top of JVM was acceptable. Python could have been a very good option to use because it is so fast to use compared to Java.
 
-Our first task was to recreate the Pong game visualization on our client so we could test the client easily. This was a rather simple task, but we did lose some time as we wanted to create our own server for the testing. We managed to made it, but in the end we didn’t have enough time to fully use it to improve our client. We should have concentrated on the client AI itself from the very beginning.
+Our first task was to recreate the Pong game visualization on our client so we could test the client easily. This was a rather simple task, but we did lose some time as we wanted to create our own server for the testing. We managed to make it, but in the end we didn’t have enough time to fully use it to improve our client. We should have concentrated on the client AI itself from the very beginning.
 
 In the screenshot below you can see our local visualization of the game and ball movement predictions on side of “official” game visualization.
 
 ![Local HWO testing](/images/HWO_Testing2.png)
 
-After we were able to run and visualize the game and move the paddle, it was time to create the AI itself. First we needed to simulate the ball movement so we could predict where we should move the paddle next. Teemu did very good job with this and we got the simulation work very well. Then it was quite easy to made the paddle move to the expected location.
+After we were able to run and visualize the game and move the paddle, it was time to create the AI itself. First we needed to simulate the ball movement so we could predict where we should move the paddle next. Teemu did very good job with this and we got the simulation to work very well. Then it was quite easy to make the paddle to move to the expected location.
 
-As the ball bounces differently depending on where it hits on the paddle, we made the AI move so that it would hit the ball with the edge of the paddle. If the angle of the ball was already high enough, we would then hit the ball with a different edge. We didn’t have time to optimize this so we had to rely on that our simple heuristics are enough to beat the enemy.
+As the ball bounces differently depending on where it hits on the paddle, we made the AI move so that it would hit the ball with the edge of the paddle. If the angle of the ball was already high enough, we would then hit the ball with a different edge. We didn’t have time to optimize this so we had to rely on our simple heuristics being enough to beat the enemy.
 
 ## Problems
 

@@ -11,7 +11,7 @@ summary: "I started to use RSS again and setting the system up requires some wor
 
 Original text:
 
-What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs - your's will vary so take this writing as a personal journey instead of an objective comparison. 
+What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs - yours will vary so take this writing as a personal journey instead of an objective comparison. 
 
 As I wrote, [I’ve started using RSS again](/writings/rss-and-the-future-or-past-of-web) after some five years break. [Feedly](https://feedly.com/) and [Inoreader](https://www.inoreader.com/) are two services I’ve been comparing now, and I think I will need to be using Inoreader. 
 
@@ -22,7 +22,7 @@ I noticed that I need to define more precisely what I’m gonna need, to find th
 
 ### Essential Features
 
-> Essential features are the essense of the service: Without them other features don't matter.
+> Essential features are the essence of the service: Without them other features don't matter.
 
 ![Feed aggregator essential features](/images/feed-aggregator-features.png "Feed aggregator essential features")
 
@@ -74,10 +74,10 @@ I don’t think **social features** are important to me. It’s kind of nice to 
 
 **Team or business features** are not important to me and I don’t think I would be sending newsletters either. I can see how team features could be amazing with a research group or with colleagues, but I have never had that extensive need for content monitoring.
 
-**Highlights and notes** are a mystery to me. I keep them elsewhere (and I could see myself using Evernote, Pocket, Instapaper, or even plain old PDF for that. I have a hunch that this might be something I haven’t figured out yet - maybe highlights and comments in a feedreader could be used more as a quick preprocessing step in the process.
+**Highlights and notes** are a mystery to me. I keep them elsewhere (and I could see myself using Evernote, Pocket, Instapaper, or even plain old PDF for that. I have a hunch that this might be something I haven’t figured out yet - maybe highlights and comments in a feed reader could be used more as a quick preprocessing step in the process.
 
 ## Why Inoreader is Better for Me
-Feedly's and Inoreader's margeting texts support beautifully my valuation of their features:
+Feedly's and Inoreader's marketing texts support beautifully my valuation of their features:
 
 > "Take back control of you news feed"
 

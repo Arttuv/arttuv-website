@@ -16,7 +16,7 @@ This way the performance of the system can be optimized and there should be no l
 
 Combining ever-increasing levels of automation to the work of human operators seems to be surprisingly hard and may cause many kinds of problems to the end-users working with automation. When the level of automation rises and approaches autonomy, the complexity of the system increases, which means that **mental models of the end-users must also be complex – understanding what the system does is hard**.
 
-Of course, this may not be a problem it the users don’t need to understand everything. But in many work environments, like in industry or military, users are ultimately in response and should be able to
+Of course, this may not be a problem if the users don't need to understand everything. But in many work environments, like in industry or military, users are ultimately responsible and should be able to
 
 1. notice when automation is not up to the task and
 2. be able to handle the task that automation failed

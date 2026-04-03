@@ -11,7 +11,7 @@ It comes with a few pros and cons you need to be aware of.
 
 ![team-kanban-dots.jpeg](/images/three-developers-working-on-whiteboard.png "Developers working on a whiteboard (Midjourney)")
 
-I like the flexibility using consultancies brings: at it's best it is a true win for everyone. Clients can get exactly the kind of knowhow they need, for exactly the time period they wish. Consultants can pursue the kind of work they are interested in doing, still staying with the same employer and having long-term colleagues there.
+I like the flexibility using consultancies brings: at its best it is a true win for everyone. Clients can get exactly the kind of knowhow they need, for exactly the time period they wish. Consultants can pursue the kind of work they are interested in doing, still staying with the same employer and having long-term colleagues there.
 
 As a consultant you get to see a lot of different domains and different kinds of organisations each having their own culture of doing software. As we are usually working in a complex environment, that is to be expected: the agile ways of working need to be adapted to specifics of each case. 
 
@@ -21,7 +21,7 @@ So flexibility in general is good.
 
 But what I really like is this:
 
-> Consultants, however, are in a unique position to address the people or process issues productively. As third parties, they have no vested interest in the process issues—no power to gain or lose,no territory to expand or contract, no budget to increase or decrease.
+> Consultants, however, are in a unique position to address the people or process issues productively. As third parties, they have no vested interest in the process issues—no power to gain or lose, no territory to expand or contract, no budget to increase or decrease.
 >
 > [Flawless Consulting](https://www.peterblock.com/books/flawless-consulting-a-guide-to-getting-your-expertise-used-3rd-edition-enhanced-ebook), p. 22
   

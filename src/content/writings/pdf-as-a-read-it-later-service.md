@@ -8,7 +8,7 @@ summary: "PDF seems to be the best format to read books on iPad, and now I've st
 
 * **11. April 2022** Nowadays I'm using [Reeder](https://reederapp.com) for both RSS and my read it later -needs. The application is beautiful on iOS, iPad OS and MacOS.
 
-* **22. November 2020** My joy didn't last that long - Web Archibe feature was changed in the iOS14, or at least it looks like it. Now the website is saved in webarchive format instead of PDF. You can still get the PDF but it's divided to pages, which makes it less appealing to read. 
+* **22. November 2020** My joy didn't last that long - Web Archive feature was changed in the iOS14, or at least it looks like it. Now the website is saved in webarchive format instead of PDF. You can still get the PDF but it's divided to pages, which makes it less appealing to read. 
 
 * **31. July 2020** At first I thought the only way to get a good PDF on iPad OS was to take the full page screenshot, but luckily there was also an option to create a **Web Archive** PDF in the sharing view. I changed the text to include this.
 
@@ -68,7 +68,7 @@ But... They make all the articles look the same as well. I was a bit surprised t
 Some read it later services are not able to get the content behind a paywall, even if you have the subscription, or then you’d need to give your credentials to the service. Website to PDF doesn’t have that problem, you can export any website you can open in your browser.
 
 ### Archive
-The most comforting idea of using PDF for long reads is that then they are already in an achievable format. I can dumb them to some cloud drive and forget there. Or maybe do some tagging and build a searchable database. I have the option, and I’m not depending on a single service that might go down - or more annoyingly would change their pricing model to be too aggressive.
+The most comforting idea of using PDF for long reads is that then they are already in an archivable format. I can dump them to some cloud drive and forget there. Or maybe do some tagging and build a searchable database. I have the option, and I’m not depending on a single service that might go down - or more annoyingly would change their pricing model to be too aggressive.
 
 ## Concerns
 

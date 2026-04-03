@@ -48,7 +48,7 @@ It is important to note, that if you are trapped in a feature factory, cutting s
 
 What you are missing in that environment are honesty and effective feedback loops.
 
-The end result is a pile of "MVP" implementations, none fulfilling the end user needs. Jira raports and excels look OK, though. The shit hits the fan when the product gets to the hands of the real users.
+The end result is a pile of "MVP" implementations, none fulfilling the end user needs. Jira reports and excels look OK, though. The shit hits the fan when the product gets to the hands of the real users.
 
 ## Start the change
 

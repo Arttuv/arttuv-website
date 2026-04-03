@@ -115,7 +115,7 @@ I still have some unresolved rough corners in my note-taking workflow. One of th
 
 Obsidian would be a much better home for them, but it is not possible to work efficiently on the PDF files stored in Obsidian if you are using an iPad. I use iPad for most of my reading: I love annotating the files with Apple Pencil: highlighting and writing my notes in the margins.
 
-I should probably form a workflow of having the in-progress PDF files in GoodNotes, and after reading those, export them to Obsidian (and deleting or achieving them from GoodNotes). Things get easily messy when you have files in multiple places, and you don't have a single source of truth anymore.
+I should probably form a workflow of having the in-progress PDF files in GoodNotes, and after reading those, export them to Obsidian (and deleting or archiving them from GoodNotes). Things get easily messy when you have files in multiple places, and you don't have a single source of truth anymore.
 
 Another unsolved issue is TODO items: You can add checkboxes to markdown with `- [ ]` syntax, which works alright. Finding the TODO items is not as easy. You can search with the "- [ ]" and it works, but it would be better to have a separate view for it (I might start using Dataview for this). What I like about this is that I can add the TODO items in the note they belong to. Sometimes I'm reading some article and have an idea, and then just add a TODO note there. When I come back to that note after a few months, I can remember what my plan was.
 

@@ -98,7 +98,7 @@ Documentation is always hard and it’s difficult to convince people to use thei
 # Wrap up
 
 I didn't go through the states a company transitioning to remote work go through (or could go according to GitLab), but here they are:
-* Skeumorph (imitating)
+* Skeuomorph (imitating)
 * Functional state (functional changes to promote remote work)
 * Asynchronous state (work is being done independently)
 * Intentionality (organization is built for remote)
@@ -113,9 +113,9 @@ Some of the tools proposed by GitLab are
 * Avoid synchronous meetings (and then make the most of them)
 * Document everything 
 
-My experience is that companies are more ofthen on the level of skeumorph or functional - you can do occasional remote work, but it's more imitating colocated work and making sure that the systems support remote connections etc. 
+My experience is that companies are more often on the level of skeuomorph or functional - you can do occasional remote work, but it's more imitating colocated work and making sure that the systems support remote connections etc. 
 
-What's missing is enabling asynchronous workflows and non-linear workdays, and that's something I think people should be more considerable about. Especially during COVID-19 when people oftne need to attend to their children while working at home.
+What's missing is enabling asynchronous workflows and non-linear workdays, and that's something I think people should be more considerate about. Especially during COVID-19 when people often need to attend to their children while working at home.
 
 It remains to be seen how you can keep the collaborative aspect of work while you also enable asynchronous workflows and independent working. After all solving complex problems require real collaboration and not just working on different bits of a larger whole. In complex environment working on separate parts of the whole doesn't benefit the whole but instead damages it ([Organize for Complexity](https://www.researchgate.net/publication/275605232_Organize_for_Complexity_How_to_Get_Life_Back_Into_Work_to_Build_the_High-Performance_Organization)).
 

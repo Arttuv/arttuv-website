@@ -9,7 +9,7 @@ LLMs seem to be helpful, but how should we use them? It is already known from th
 
 The title references [my earlier post on the EU's trustworthy AI guidelines](https://arttuv.com/writings/augment-complement-and-empower/). I believe that the intent behind the guidelines: **augment**, **complement**, and **empower**, also works well for thinking about how to use LLMs.
 
-This is for at least three reasons: the irony of automation, adverse skill degredation and complacency.
+This is for at least three reasons: the irony of automation, adverse skill degradation and complacency.
 
 ## The irony of automation
 
@@ -21,7 +21,7 @@ We lose the skills we don't use. We also don't get any better if we don't active
 
 ## Complacency
 
-Complacency regarding automation and artificial intelligence usage (for example [Endsley 2023](https://doi-org.libproxy.tuni.fi/10.1080/00140139.2023.2243404)) means we may fail to maintain proper oversight, critical thinking and adaptation over using them. When the LLM seems to be performing well in the task you give it, it may be difficult to stay engaged and to critically evaluate what it has produced. We get overly reliant on LLM and fail to detect obvious issues in the work as we just assume it is OK and don't verify it properly. Maintaining a realistic understanding of the LLM's capabilities is important to not fall into the trap of complacency and thinking yout are performing better than you actually are.
+Complacency regarding automation and artificial intelligence usage (for example [Endsley 2023](https://doi-org.libproxy.tuni.fi/10.1080/00140139.2023.2243404)) means we may fail to maintain proper oversight, critical thinking and adaptation over using them. When the LLM seems to be performing well in the task you give it, it may be difficult to stay engaged and to critically evaluate what it has produced. We get overly reliant on LLM and fail to detect obvious issues in the work as we just assume it is OK and don't verify it properly. Maintaining a realistic understanding of the LLM's capabilities is important to not fall into the trap of complacency and thinking you are performing better than you actually are.
 
 ## Recent studies on the effects of LLM usage
 
@@ -29,13 +29,13 @@ LLMs are so advanced compared to any other automation, that it seems probable it
 
 The results seem to indicate that while LLMs offer short term benefits in task work, they may also cause longer term issues: 1) brain connectivity seemed to decrease the more external help was used, 2) LLM users reported less ownership over the essays they had written, and 3) they had more difficulties to quote essays they had just written compared to search engine or no-help groups.
 
-My personal experience aligns well with this preprint. I have been using LLMs to support my coding work for over an year now. Often using LLMs helps tremendously, for example when trying to debug an issue or trying to figure out how certain thing in a codebase has been done, or just by offering a really smart context-aware autocomplete to ease the burden of typing - you know you need a generic React component, and based on the context Cursor will deliver just that pretty nicely.
+My personal experience aligns well with this preprint. I have been using LLMs to support my coding work for over a year now. Often using LLMs helps tremendously, for example when trying to debug an issue or trying to figure out how certain thing in a codebase has been done, or just by offering a really smart context-aware autocomplete to ease the burden of typing - you know you need a generic React component, and based on the context Cursor will deliver just that pretty nicely.
 
 However, this means I have not personally written every single line I commit, and reading code is different compared to writing it. It requires a lot of willpower and skill to really read through the code and determine if it makes sense. 
 
 Working a long time with one codebase / product is beneficial because you learn the domain and you learn the codebase. As noted in the study, I think I don't remember as precisely the features I have implemented with the help of LLM.
 
-I've struggle multiple times to answer when someone asks some detail about the feature I have done. Naturally one can't remember every single detail (I know some people that do and they are scary, scary good), and it's more important to know where to find the information. But this has happended often enough that I have started to pay attention to it.
+I've struggled multiple times to answer when someone asks some detail about the feature I have done. Naturally one can't remember every single detail (I know some people that do and they are scary, scary good), and it's more important to know where to find the information. But this has happened often enough that I have started to pay attention to it.
 
 ## Design your work: Use LLMs intentionally
 
