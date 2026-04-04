@@ -13,6 +13,10 @@ const writings = defineCollection({
     tags: z.array(z.string()).optional(),
     summary: z.string().optional(),
     mastodon: z.string().optional(),
+    updates: z.array(z.object({
+      date: z.string(),
+      text: z.string(),
+    })).optional(),
   }),
 })
 

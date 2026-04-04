@@ -3,14 +3,14 @@ pubDate: "2020-05-16"
 title: "Feeds Are The Future"
 tags: ["research"]
 summary: "I was using RSS a lot around 2013, and I want to go back. I'd like to be more in control on what stories I see each day. At the same time I know the amount of items in RSS feeds can be overwhelming, so I'm excited to try out new tools to combat information overload as well. I'm glad to see that RSS is not *dead*, even though I understand it probably should evolve. Feed aggregators must evolve as well, or there might not be enough sources for them in the future."
+updates:
+  - date: "9 March 2023"
+    text: "I switched to using Reeder and am very happy with it."
+  - date: "18 May 2020"
+    text: "I switched from Feedly to Inoreader, because Feedly is not yet able to include newsletters and doesn't generate feeds for websites that don't offer it. Inoreader is also cheaper, but misses the AI features."
+  - date: "24 May 2020"
+    text: "Daniel Miessler published 'It's Time to Get Back Into RSS' and did a much better job describing why RSS is great."
 ---
-**Updates to This Text**
-
-* **9. March 2023**: As noted [in another blog post](/writings/feedly-vs-inoreader-and-the-ultimate-feed-aggregator), I switched to using [Reeder](https://reeder.app) and am very happy with it.
-
-* **18. May 2020**: I switched from Feedly to Inoreader, because Feedly is not yet able to include newsletters and doesn't generate feeds for websites that don't offer it. Inoreader is also cheaper, but misses the AI features.
-
-* **24. May 2020**: Daniel Miessler published a post with a title "[It's Time to Get Back Into RSS](https://danielmiessler.com/blog/its-time-to-get-back-into-rss/?utm_source=hackernewsletter&utm_medium=email&utm_term=fav)" and did a much better work describing why RSS is great. He also encourages people to log in to Feedly and try following some RSS feeds. I'd like to add that [Inoreader](https://www.inoreader.com/) is also a great option if you have problems with the limitations in Feedly's free tier.
 
 You can call me a dinosaur, but I miss RSS. After a few years of break, I logged in to [Feedly](https://feedly.com/i/welcome) to find the world as it was back in 2014. There were even a few interesting articles I had saved and then forgotten - for example, “Sketching as a professional practice” from Futurice's blog (the link is dead and I couldn’t find the post anymore). This demonstrates one beautiful aspect of RSS feeds - you can easily store it and I was able the read the article even though it might have been abandoned by the original publisher already.
 

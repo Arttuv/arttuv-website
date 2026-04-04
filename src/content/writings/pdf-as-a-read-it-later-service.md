@@ -3,16 +3,14 @@ pubDate: "2020-07-25"
 title: "PDF as a Read It Later Service"
 tags: ["research"]
 summary: "PDF seems to be the best format to read books on iPad, and now I've started using it for reading web long reads as well. Being in control is the best part: You can decide how the website looks like, save it so it's yours to read and annotate however you like, and store it forever."
+updates:
+  - date: "11 April 2022"
+    text: "Nowadays I'm using Reeder for both RSS and my read it later needs. The application is beautiful on iOS, iPadOS and macOS."
+  - date: "22 November 2020"
+    text: "Web Archive feature was changed in iOS 14. Now the website is saved in webarchive format instead of PDF. You can still get the PDF but it's divided into pages, which makes it less appealing to read."
+  - date: "31 July 2020"
+    text: "At first I thought the only way to get a good PDF on iPadOS was to take the full page screenshot, but there is also an option to create a Web Archive PDF in the sharing view."
 ---
-**Updates to this text**
-
-* **11. April 2022** Nowadays I'm using [Reeder](https://reederapp.com) for both RSS and my read it later -needs. The application is beautiful on iOS, iPad OS and MacOS.
-
-* **22. November 2020** My joy didn't last that long - Web Archive feature was changed in the iOS14, or at least it looks like it. Now the website is saved in webarchive format instead of PDF. You can still get the PDF but it's divided to pages, which makes it less appealing to read. 
-
-* **31. July 2020** At first I thought the only way to get a good PDF on iPad OS was to take the full page screenshot, but luckily there was also an option to create a **Web Archive** PDF in the sharing view. I changed the text to include this.
-
-Original text:
 
 Being in control is the best aspect of using PDF as a read it later service: you can modify how the website looks like, save it so that it’s yours to read, annotate and store however you like to. 
 

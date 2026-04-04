@@ -11,15 +11,19 @@ The title references [my earlier post on the EU's trustworthy AI guidelines](htt
 
 This is for at least three reasons: the irony of automation, adverse skill degradation and complacency.
 
-## The irony of automation
+## Issues with Automation
+
+The irony of automation, adverse skill degradation and complacency are examples of potential issues automation researchers have identified.
+
+### The irony of automation
 
 The irony of automation (see [irony of automation](https://psycnet.apa.org/record/2017-05527-001)) refers to the observation that automation tends to work well when the user's mental workload is low, but fails when the mental workload is high. We succeed in automating simple actions, but real life is often complex. When something unexpected happens, automation can break down, leaving the user unprepared because they've become a passive observer. Without active participation, it's hard 'to become and remain coupled to the dynamics of their environment' and maintain situational awareness ([Stanton et al. 2017](https://pubmed.ncbi.nlm.nih.gov/28051356/)).
 
-## Inadvertent skill degradation
+### Inadvertent skill degradation
 
 We lose the skills we don't use. We also don't get any better if we don't actively try to improve our skills. Sometimes this can happen unplanned, if you don't design your work so that your essential skills stay up to date. Studies on automation have shown that increasing the automation in systems often lead to cognitive skill degradation (for example [Volz et al. 2016](https://journals-sagepub-com.libproxy.tuni.fi/doi/abs/10.1177/1541931213601043)).
 
-## Complacency
+### Complacency
 
 Complacency regarding automation and artificial intelligence usage (for example [Endsley 2023](https://doi-org.libproxy.tuni.fi/10.1080/00140139.2023.2243404)) means we may fail to maintain proper oversight, critical thinking and adaptation over using them. When the LLM seems to be performing well in the task you give it, it may be difficult to stay engaged and to critically evaluate what it has produced. We get overly reliant on LLM and fail to detect obvious issues in the work as we just assume it is OK and don't verify it properly. Maintaining a realistic understanding of the LLM's capabilities is important to not fall into the trap of complacency and thinking you are performing better than you actually are.
 

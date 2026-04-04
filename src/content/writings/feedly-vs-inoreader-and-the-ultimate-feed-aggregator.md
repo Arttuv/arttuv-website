@@ -3,13 +3,10 @@ pubDate: "2020-05-27"
 title: "Inoreader vs Feedly, and the ultimate feed reader (in 2020)"
 tags: ["research"]
 summary: "I started to use RSS again and setting the system up requires some work. I also noticed that my needs are so specific that each service does not support them fully. I have compared Feedly and Inoreader, and in the process found out the feature set that matters to me. Choosing which service to use is hard, because none of them is perfect. Some services can also be surprisingly expensive."
+updates:
+  - date: "11 April 2022"
+    text: "This post is probably obsolete already regarding the comments on Feedly and Inoreader. Nowadays I'm a happy user of Reeder for both RSS and read it later. Highly recommended."
 ---
-
-**Updates to this text**
-
-* **11. April 2022** Note that this post is probably obsolete already regarding the comments on Feedly and Inoreader. Btw nowadays I'm a happy user of [Reeder](https://reederapp.com) for both RSS and read it later. Highly recommended.
-
-Original text:
 
 What is the best feed aggregator, reader or feed service depends on your needs, so this is highly opinionated towards my personal needs - yours will vary so take this writing as a personal journey instead of an objective comparison. 
 

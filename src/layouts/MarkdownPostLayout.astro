@@ -4,7 +4,8 @@ import FormattedDate from "../components/FormattedDate.astro"
 import Mastodon from "../components/Mastodon.astro"
 import Comment from "../components/Comment.astro"
 import BauhausBlock from "../components/BauhausBlock.astro"
-import { getCollection, type CollectionEntry } from "astro:content"
+import ReadingProgress from "../components/ReadingProgress.astro"
+import { getCollection, render, type CollectionEntry } from "astro:content"
 type Props = CollectionEntry<"writings">;
 const post = Astro.props
 
@@ -18,8 +19,15 @@ const tagColor = post.data.tags?.[0] ? (tagColorMap[post.data.tags[0]] ?? '#2121
 const comments = (await getCollection("comments", (comment) => {
   return comment.data.internalLink?.id == post.id // TODO BETTER
 })).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).filter((comment) => comment.data.mastodon !== post.data.mastodon)
+
+// Reading time estimate
+const { remarkPluginFrontmatter } = await render(post);
+const body = post.body ?? '';
+const wordCount = body.split(/\s+/).filter(Boolean).length;
+const readingTime = Math.max(1, Math.round(wordCount / 220));
 ---
 <BaseLayout title={post.data.title} description={post.data.summary}>
+  <ReadingProgress tagColor={tagColor} />
   <article class="blog-post" style={`--tag-color: ${tagColor}`}>
     <div class="category">
       {post.data.tags.map((tag) => (
@@ -28,7 +36,27 @@ const comments = (await getCollection("comments", (comment) => {
     </div>
     <BauhausBlock slug={post.id} tags={post.data.tags} direction="horizontal" />
     <h1>{post.data.title}</h1>
-    <FormattedDate date={new Date(post.data.pubDate)} />
+    <div class="post-meta">
+      <FormattedDate date={new Date(post.data.pubDate)} />
+      <span class="meta-separator">·</span>
+      <span class="reading-time">{readingTime} min read</span>
+    </div>
+    {post.data.summary && (
+      <div class="abstract">
+        <span class="abstract-label">Abstract</span>
+        <p>{post.data.summary}</p>
+      </div>
+    )}
+    {post.data.updates && post.data.updates.length > 0 && (
+      <div class="post-updates">
+        <span class="post-updates-label">Updates</span>
+        <ul>
+          {post.data.updates.map((update) => (
+            <li><strong>{update.date}</strong> {update.text}</li>
+          ))}
+        </ul>
+      </div>
+    )}
     <hr />
     {comments.length > 0 && (
       <div class="writing-notes">
@@ -37,7 +65,9 @@ const comments = (await getCollection("comments", (comment) => {
         ))}
       </div>
     )}
-    <slot />
+    <div class="post-body">
+      <slot />
+    </div>
     <hr class="content-ending-line" />
     <div class="writing-ending">•</div>
     {post.data.mastodon &&
@@ -65,6 +95,25 @@ const comments = (await getCollection("comments", (comment) => {
         padding-bottom:0;
         margin-top: 3rem;
         margin-bottom: 1rem;
+        scroll-margin-top: 6rem;
+    }
+
+    .blog-post h2 {
+        font-variant: small-caps;
+        font-size: 1.5rem;
+        letter-spacing: 0.02em;
+        border-bottom: 1px solid var(--tag-color, #212121);
+        padding-bottom: 0.35rem;
+        opacity: 0.9;
+    }
+
+    .dark .blog-post h2 {
+        border-bottom-color: var(--tag-color, #F5F5F5);
+    }
+
+    .blog-post h3 {
+        font-style: italic;
+        font-weight: 400;
     }
 
     .blog-post h1:first-of-type {
@@ -74,7 +123,7 @@ const comments = (await getCollection("comments", (comment) => {
         margin-left: 0px;
         padding-bottom:0;
         margin-top: 2rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.75rem;
         font-weight: 300;
     }
 
@@ -87,6 +136,40 @@ const comments = (await getCollection("comments", (comment) => {
         padding-top: 0px;
         padding-left:0;
         margin-top: 1rem;
+    }
+
+    /* Post meta: date + reading time */
+    .blog-post .post-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .blog-post .post-meta time {
+        margin-bottom: 0;
+    }
+
+    .blog-post .meta-separator {
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.8rem;
+        color: #999;
+    }
+
+    .blog-post .reading-time {
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #666;
+    }
+
+    .dark .blog-post .reading-time {
+        color: #aaa;
+    }
+
+    .dark .blog-post .meta-separator {
+        color: #666;
     }
 
     .blog-post time {
@@ -102,6 +185,96 @@ const comments = (await getCollection("comments", (comment) => {
 
     .dark .blog-post time {
         color: #aaa;
+    }
+
+    /* Abstract / Summary */
+    .blog-post .abstract {
+        margin: 0 0 1.5rem;
+        padding: 1.25rem 1.5rem;
+        background: rgba(0, 0, 0, 0.025);
+        border-left: 3px solid var(--tag-color, #212121);
+        border-radius: 0 4px 4px 0;
+    }
+
+    .dark .blog-post .abstract {
+        background: rgba(255, 255, 255, 0.04);
+        border-left-color: var(--tag-color, #F5F5F5);
+    }
+
+    .blog-post .abstract-label {
+        display: block;
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--tag-color, #212121);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    .dark .blog-post .abstract-label {
+        color: var(--tag-color, #F5F5F5);
+    }
+
+    .blog-post .abstract p {
+        margin: 0;
+        font-size: 0.95em;
+        line-height: 1.55;
+        color: #444;
+        font-style: italic;
+    }
+
+    .dark .blog-post .abstract p {
+        color: #bbb;
+    }
+
+    /* Post Updates */
+    .blog-post .post-updates {
+        margin: 0 0 1.5rem;
+        padding: 1rem 1.5rem;
+        background: rgba(0, 0, 0, 0.02);
+        border-left: 3px solid #999;
+        border-radius: 0 4px 4px 0;
+        font-size: 0.85em;
+    }
+
+    .dark .blog-post .post-updates {
+        background: rgba(255, 255, 255, 0.03);
+        border-left-color: #666;
+    }
+
+    .blog-post .post-updates-label {
+        display: block;
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #999;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    .dark .blog-post .post-updates-label {
+        color: #666;
+    }
+
+    .blog-post .post-updates ul {
+        margin: 0;
+        padding-left: 1.2rem;
+        line-height: 1.55;
+        color: #555;
+    }
+
+    .dark .blog-post .post-updates ul {
+        color: #aaa;
+    }
+
+    .blog-post .post-updates li {
+        margin-bottom: 0.4rem;
+    }
+
+    .blog-post .post-updates li:last-child {
+        margin-bottom: 0;
     }
 
     .blog-post hr:not(.content-ending-line) {
@@ -129,14 +302,31 @@ const comments = (await getCollection("comments", (comment) => {
 
     .blog-post p {
         margin-bottom: 1.2rem;
-        line-height: 1.65;
+        line-height: 1.7;
     }
 
-    .blog-post > p:first-of-type {
+    /* Drop cap on first paragraph of the body */
+    .blog-post .post-body > p:first-child::first-letter {
+        float: left;
+        font-family: 'Roboto Serif Variable', serif;
+        font-size: 3.4em;
+        line-height: 0.8;
+        padding-right: 0.08em;
+        padding-top: 0.07em;
+        font-weight: 400;
+        color: var(--tag-color, #212121);
+    }
+
+    .dark .blog-post .post-body > p:first-child::first-letter {
+        color: var(--tag-color, #F5F5F5);
+    }
+
+    .blog-post .post-body > p:first-child {
         font-size: 1.05em;
         line-height: 1.65;
     }
 
+    /* Image captions from markdown title attribute */
     .blog-post img {
         object-fit: contain;
         height: inherit;
@@ -146,8 +336,25 @@ const comments = (await getCollection("comments", (comment) => {
         display: block;
     }
 
+    .blog-post img + em,
+    .blog-post p:has(> img) + p > em:only-child {
+        display: block;
+        text-align: center;
+        font-size: 0.85em;
+        color: #666;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-style: normal;
+    }
+
+    .dark .blog-post img + em,
+    .dark .blog-post p:has(> img) + p > em:only-child {
+        color: #999;
+    }
+
     .content-ending-line {
-        margin-top: 2rem;
+        margin-top: 3rem;
         margin-bottom: 2rem;
     }
 
@@ -164,22 +371,43 @@ const comments = (await getCollection("comments", (comment) => {
 
     .blog-post blockquote {
         margin: 2rem 0;
-        padding: 0.75rem 1.5rem;
+        padding: 1rem 1.5rem;
         border-left: 3px solid var(--tag-color, #212121);
         font-style: italic;
-        font-size: 1.05em;
+        font-size: 1em;
+        background: rgba(0, 0, 0, 0.015);
+        border-radius: 0 4px 4px 0;
     }
-    
+
+    .dark .blog-post blockquote {
+        background: rgba(255, 255, 255, 0.02);
+        border-left-color: var(--tag-color, #F5F5F5);
+    }
+
     .blog-post blockquote p {
         margin: 0;
         margin-bottom: 0rem;
         padding: 0;
+        line-height: 1.6;
+    }
+
+    /* Section spacing */
+    .blog-post .post-body > h2 {
+        margin-top: 3.5rem;
+    }
+
+    .blog-post .post-body > h2:first-child {
+        margin-top: 2rem;
     }
 
     @media (max-width: 756px) {
         .blog-post h1:first-of-type {
             margin-top: 2rem;
             margin-bottom: 2rem;
+        }
+
+        .blog-post .post-body > p:first-child::first-letter {
+            font-size: 2.8em;
         }
 
         @media (max-width: 620px) {
@@ -199,6 +427,14 @@ const comments = (await getCollection("comments", (comment) => {
 
             h4 {
                 font-size: 1rem;
+            }
+
+            .blog-post .abstract {
+                padding: 1rem 1.25rem;
+            }
+
+            .blog-post .post-body > p:first-child::first-letter {
+                font-size: 2.5em;
             }
         }
     }
