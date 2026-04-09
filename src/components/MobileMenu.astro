@@ -281,54 +281,59 @@ import MobileThemeToggle from "./MobileThemeToggle.astro"
 </style>
 
 <script is:inline>
-  const toggle = document.querySelector(".menu-toggle")
-  const flyout = document.getElementById("flyout-menu")
+  function setupMobileMenu() {
+    const toggle = document.querySelector(".menu-toggle")
+    const flyout = document.getElementById("flyout-menu")
 
-  function closeMenu() {
-    document.body.classList.remove("menu-open")
-    toggle?.setAttribute("aria-expanded", "false")
+    function closeMenu() {
+      document.body.classList.remove("menu-open")
+      toggle?.setAttribute("aria-expanded", "false")
+    }
+
+    function openMenu() {
+      document.body.classList.add("menu-open")
+      toggle?.setAttribute("aria-expanded", "true")
+    }
+
+    toggle?.addEventListener("click", () => {
+      if (document.body.classList.contains("menu-open")) {
+        closeMenu()
+      } else {
+        openMenu()
+      }
+    })
+
+    // Close menu on Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && document.body.classList.contains("menu-open")) {
+        closeMenu()
+        toggle?.focus()
+      }
+    })
+
+    // Close menu on background taps (not on links or theme toggle)
+    flyout?.addEventListener("click", (e) => {
+      if (e.target.closest("a, #mobileThemeToggle")) return
+      closeMenu()
+    })
+
+    // Trap focus inside flyout when open
+    flyout?.addEventListener("keydown", (e) => {
+      if (e.key !== "Tab" || !document.body.classList.contains("menu-open")) return
+      const focusable = flyout.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])')
+      if (focusable.length === 0) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    })
   }
 
-  function openMenu() {
-    document.body.classList.add("menu-open")
-    toggle?.setAttribute("aria-expanded", "true")
-  }
-
-  toggle?.addEventListener("click", () => {
-    if (document.body.classList.contains("menu-open")) {
-      closeMenu()
-    } else {
-      openMenu()
-    }
-  })
-
-  // Close menu on Escape key
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && document.body.classList.contains("menu-open")) {
-      closeMenu()
-      toggle?.focus()
-    }
-  })
-
-  // Close menu on background taps (not on links or theme toggle)
-  flyout?.addEventListener("click", (e) => {
-    if (e.target.closest("a, #mobileThemeToggle")) return
-    closeMenu()
-  })
-
-  // Trap focus inside flyout when open
-  flyout?.addEventListener("keydown", (e) => {
-    if (e.key !== "Tab" || !document.body.classList.contains("menu-open")) return
-    const focusable = flyout.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])')
-    if (focusable.length === 0) return
-    const first = focusable[0]
-    const last = focusable[focusable.length - 1]
-    if (e.shiftKey && document.activeElement === first) {
-      e.preventDefault()
-      last.focus()
-    } else if (!e.shiftKey && document.activeElement === last) {
-      e.preventDefault()
-      first.focus()
-    }
-  })
+  setupMobileMenu()
+  document.addEventListener("astro:page-load", setupMobileMenu)
 </script>

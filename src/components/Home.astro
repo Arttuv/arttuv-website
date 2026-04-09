@@ -101,7 +101,9 @@ const tagColorMap: Record<string, string> = {
     </div>
 
     <aside class="author-sidebar">
-      <Image src={arttu} alt="Arttu" loading="eager" />
+      <a href="/author/" class="sidebar-photo-link">
+        <Image src={arttu} alt="Arttu" loading="eager" />
+      </a>
       <p class="from-eu-with-love">Code from 🇪🇺🇫🇮, writ... prompted with ❤️🏳️‍🌈</p>
       <section class="feed-area">
         <p class="feed-heading">Mastodon</p>
@@ -156,6 +158,21 @@ const tagColorMap: Record<string, string> = {
         display: block;
         border: 1px solid lightgray;
         border-radius: 0.5rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .sidebar-photo-link {
+        display: block;
+        border-radius: 0.5rem;
+    }
+
+    .sidebar-photo-link:hover img {
+        transform: scale(1.03);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    :global(.dark) .sidebar-photo-link:hover img {
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.06);
     }
 
     .from-eu-with-love {

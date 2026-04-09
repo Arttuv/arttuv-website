@@ -4,6 +4,9 @@ title: "Agile - Still Relevant in 2024"
 tags: ["dev"]
 mastodon: "112840282925802410"
 summary: "It has been surprisingly common to see critique towards agile lately. I find it a bit odd, having seen the waterfall world and how much more humane agile has been. It can be easy to overlook how fundamental agile principles remain for surviving fast-paced, complex software projects."
+updates:
+  - date: "2025.01.19"
+    text: "I Modified the text a lot and removed parts not relevant to main point."
 ---
 
 ## Agile is a mindset to survive in a complex environment
@@ -75,10 +78,3 @@ If a team like that is motivated and willing to have a shared responsibility ove
 ## Conclusion
 
 Agile is about empowered people, continuous learning, and rapid adaptation. Whether you follow Scrum, Kanban, XP, or another framework, remember to revisit the underlying principles. If your process feels stiff or its ceremonies feel worthless, question whether it’s truly supporting the work. Don't impose unneeded processes to the teams but give them the freedom to expriment.
-
----
-
-Changes to this text
-- 2025.01.19: Modified the text a lot and removed parts not relevant to main point
-
----
