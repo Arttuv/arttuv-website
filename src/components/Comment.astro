@@ -10,7 +10,7 @@ const internalLinkTarget = comment.data.internalLink
 
 <div class="comment">
     {internalLinkTarget && !comment.data.mastodon && <div class="internal-comment-details">On <a href={`/${internalLinkTarget.collection}/${internalLinkTarget.id}`}>{internalLinkTarget.data.title}</a></div>}
-    {comment.data.mastodon && <MastodonEmbedded statusId={comment.data.mastodon} internalLinkTarget={internalLinkTarget} />}
+    {comment.data.mastodon && <MastodonEmbedded statusId={comment.data.mastodon} />}
     <div class="internal-comment">
         <div class="comment-content">
             <Content />

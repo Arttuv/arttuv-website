@@ -13,4 +13,7 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "")
   <slot />
 </a>
 <style>
+  a.active {
+    text-decoration: underline;
+  }
 </style>

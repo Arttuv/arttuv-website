@@ -102,7 +102,7 @@ const tagColorMap: Record<string, string> = {
 
     <aside class="author-sidebar">
       <Image src={arttu} alt="Arttu" loading="eager" />
-      <p class="from-eu-with-love">Code from 🇪🇺🇫🇮 with ❤️🏳️‍🌈</p>
+      <p class="from-eu-with-love">Code from 🇪🇺🇫🇮, writ... prompted with ❤️🏳️‍🌈</p>
       <section class="feed-area">
         <p class="feed-heading">Mastodon</p>
         <div class="comment-listing">
@@ -142,9 +142,8 @@ const tagColorMap: Record<string, string> = {
     }
 
     .author-sidebar {
-        width: 190px;
+        width: 160px;
         flex-shrink: 0;
-        position: sticky;
         top: 5rem;
         display: flex;
         flex-direction: column;
@@ -153,8 +152,9 @@ const tagColorMap: Record<string, string> = {
 
     .author-sidebar img {
         width: 100%;
-        max-height: 40vh;
-        object-fit: cover;
+        height: auto;
+        display: block;
+        border: 1px solid lightgray;
         border-radius: 0.5rem;
     }
 
@@ -209,11 +209,6 @@ const tagColorMap: Record<string, string> = {
 
     :global(.author-sidebar .embedded-mastodon-comment) {
         padding: 0.25rem 0 0 0;
-    }
-
-    :global(.author-sidebar .embedded-mastodon-details p) {
-        margin-bottom: 0.25rem;
-        line-height: 1.7;
     }
 
     :global(.author-sidebar .html-content p) {

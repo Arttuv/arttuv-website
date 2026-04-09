@@ -2,36 +2,22 @@
 import mastodonComments from "../external-data/scholar.social-arttuv.json"
 import FormattedDateTime from "./FormattedDateTime.astro"
 import HtmlContent from "./HtmlContent.astro"
-const { statusId, internalLinkTarget } = Astro.props
+const { statusId } = Astro.props
 const data = mastodonComments[statusId]
 ---
 
 {data && (
 <div class="embedded-mastodon-comment">
-  <div class="embedded-mastodon-details">
-    <p>
-      {internalLinkTarget && (
-        <><a href={data.content.account.url}>{data.content.account.display_name}</a> mentioned <a
-          href={`/${internalLinkTarget.collection}/${internalLinkTarget.id}`}>{internalLinkTarget.data.title}</a> on
-          Mastodon, <a href={data.content.url}>
-            <FormattedDateTime date={new Date(data.content.created_at)} />
-          </a></>
-      )}
-      {!internalLinkTarget && (
-        <><a href={data.content.account.url}>{data.content.account.display_name}</a> on Mastodon, <a
-          href={data.content.url}>
-          <FormattedDateTime date={new Date(data.content.created_at)} />
-        </a></>
-      )}
-    </p>
-  </div>
   <HtmlContent htmlContent={data.content.content} />
+  <a class="embedded-mastodon-link" href={data.content.url}>
+    <FormattedDateTime date={new Date(data.content.created_at)} />
+  </a>
 </div>
-  )}
+)}
 
 <style>
     .embedded-mastodon-comment {
-        padding: 1rem 2rem 0 0;
+        padding: 0.25rem 0 0 0;
         font-size: smaller;
     }
 
@@ -45,13 +31,15 @@ const data = mastodonComments[statusId]
         border-left: 1px solid white;
     }
 
-    .embedded-mastodon-details {
-        font-size: smaller;
-        line-height: 1.6;
+    .embedded-mastodon-link {
+        font-size: 0.75rem;
+        color: #999;
+        text-decoration: none;
+        display: block;
+        text-align: right;
     }
 
-    .embedded-mastodon-comment-interact a {
-        text-decoration: none;
-        display: inline-block;
+    .embedded-mastodon-link:hover {
+        text-decoration: underline;
     }
 </style>

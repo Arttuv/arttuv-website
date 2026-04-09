@@ -15,8 +15,6 @@ const data = mastodonComments[statusId]
   </a>
   </p>
   <HtmlContent htmlContent={data.content.content} />
-  <div class="stats">Replies {data.content.replies_count}, Reblogs {data.content.reblogs_count},
-    Favourites {data.content.favourites_count}</div>
   <div class="mastodon-comment-interact">
     <a href={data.content.url}>&larrhk;</a>
   </div>
@@ -27,11 +25,6 @@ const data = mastodonComments[statusId]
     .mastodon-comment {
         margin-top: 2rem;
         padding: 1rem 2rem 1rem 2rem;
-    }
-
-    .mastodon-comment .stats {
-        text-align: right;
-        margin-bottom: 1rem;
     }
 
     :global(.mastodon-comment .html-content) {

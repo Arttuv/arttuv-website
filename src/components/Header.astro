@@ -6,18 +6,19 @@ import ThemeIcon from "./ThemeIcon.astro"
 import MobileMenu from "./MobileMenu.astro"
 
 const { title } = Astro.props
+const pathname = Astro.url.pathname
 ---
 <header>
   <div class="desktop-navigation">
     <nav>
       <ul style={{ listStyle: `none` }}>
-        {title === "Arttu Viljakainen, a software development consultant from Finland" ?
+        {pathname === "/" ?
           <li><a href="/" style="text-decoration: underline;">Home</a></li> :
           <li><a href="/">Home</a></li>}
-        {title === "Writings" ?
+        {pathname.startsWith("/writings") ?
           <li><a href="/writings/" style="text-decoration: underline;">Writings</a></li> :
           <li><a href="/writings/">Writings</a></li>}
-        {title === "Author" ?
+        {pathname.startsWith("/author") ?
           <li><a href="/author/" style="text-decoration: underline;">Author</a></li> :
           <li><a href="/author/">Author</a></li>}
       </ul>
