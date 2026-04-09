@@ -1,0 +1,99 @@
+---
+---
+<div class="bauhaus-shapes" aria-hidden="true">
+  <div class="bauhaus-shape bauhaus-circle"></div>
+  <div class="bauhaus-shape bauhaus-triangle"></div>
+  <div class="bauhaus-shape bauhaus-square"></div>
+</div>
+
+<style>
+  .bauhaus-shapes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 2.5rem 0 1.5rem;
+  }
+
+  .bauhaus-shape {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .bauhaus-shape.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .bauhaus-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #C62828;
+    transition-delay: 0s;
+  }
+
+  .bauhaus-triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 90px solid #1565C0;
+    background: none;
+    transition-delay: 0.2s;
+  }
+
+  .bauhaus-square {
+    width: 80px;
+    height: 80px;
+    background-color: #F9A825;
+    transition-delay: 0.4s;
+  }
+
+  @media (max-width: 480px) {
+    .bauhaus-shapes {
+      gap: 1.5rem;
+    }
+
+    .bauhaus-circle {
+      width: 60px;
+      height: 60px;
+    }
+
+    .bauhaus-triangle {
+      border-left-width: 34px;
+      border-right-width: 34px;
+      border-bottom-width: 60px;
+    }
+
+    .bauhaus-square {
+      width: 54px;
+      height: 54px;
+    }
+  }
+</style>
+
+<script>
+  function initBauhausShapes() {
+    const container = document.querySelector('.bauhaus-shapes');
+    if (!container) return;
+
+    const shapes = container.querySelectorAll('.bauhaus-shape');
+
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          shapes.forEach(s => s.classList.add('visible'));
+          observer.unobserve(entry.target);
+        }
+      }
+    }, { threshold: 0.3 });
+
+    // Reset in case of page transition
+    shapes.forEach(s => s.classList.remove('visible'));
+    observer.observe(container);
+  }
+
+  document.addEventListener('astro:page-load', initBauhausShapes);
+</script>

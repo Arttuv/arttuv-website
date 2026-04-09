@@ -3,6 +3,7 @@ import "../styles/global.css"
 import { Image } from "astro:assets"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import BauhausBlock from "../components/BauhausBlock.astro"
+import BauhausArt from "../components/BauhausArt.astro"
 import arttu from "../images/arttuv-bw.jpeg"
 const title = "Arttu Viljakainen"
 const description = "Arttu Viljakainen is a software development consultant from Finland."
@@ -131,6 +132,8 @@ const description = "Arttu Viljakainen is a software development consultant from
         That spark never went away. I never really thought of doing anything else for a living.
       </p>
     </div>
+
+    <BauhausArt />
 
   </div>
 </BaseLayout>

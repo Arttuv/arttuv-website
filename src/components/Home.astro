@@ -102,7 +102,14 @@ const tagColorMap: Record<string, string> = {
 
     <aside class="author-sidebar">
       <a href="/author/" class="sidebar-photo-link">
-        <Image src={arttu} alt="Arttu" loading="eager" />
+        <div class="photo-flip">
+          <div class="photo-flip-front">
+            <Image src={arttu} alt="Arttu" loading="eager" />
+          </div>
+          <div class="photo-flip-back">
+            <span>Read more about the author →</span>
+          </div>
+        </div>
       </a>
       <p class="from-eu-with-love">Code from 🇪🇺🇫🇮, writ... prompted with ❤️🏳️‍🌈</p>
       <section class="feed-area">
@@ -152,27 +159,53 @@ const tagColorMap: Record<string, string> = {
         align-items: center;
     }
 
-    .author-sidebar img {
+    .sidebar-photo-link {
+        display: block;
+        border-radius: 0.5rem;
+        perspective: 600px;
+        text-decoration: none;
+    }
+
+    .photo-flip {
+        position: relative;
+        width: 100%;
+        transition: transform 0.5s ease;
+        transform-style: preserve-3d;
+    }
+
+    .sidebar-photo-link:hover .photo-flip {
+        transform: rotateY(180deg);
+    }
+
+    .photo-flip-front,
+    .photo-flip-back {
+        backface-visibility: hidden;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    .photo-flip-front img {
         width: 100%;
         height: auto;
         display: block;
         border: 1px solid lightgray;
         border-radius: 0.5rem;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .sidebar-photo-link {
-        display: block;
-        border-radius: 0.5rem;
-    }
-
-    .sidebar-photo-link:hover img {
-        transform: scale(1.03);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    :global(.dark) .sidebar-photo-link:hover img {
-        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.06);
+    .photo-flip-back {
+        position: absolute;
+        inset: 0;
+        transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+        background: linear-gradient(135deg, #C62828 0%, #1565C0 50%, #F9A825 100%);
+        color: #fff;
+        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 0.03em;
     }
 
     .from-eu-with-love {
@@ -226,6 +259,33 @@ const tagColorMap: Record<string, string> = {
 
     :global(.author-sidebar .embedded-mastodon-comment) {
         padding: 0.25rem 0 0 0;
+    }
+
+    @media (min-width: 801px) {
+        :global(.author-sidebar .html-content) {
+            border-left: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        :global(.author-sidebar .embedded-mastodon-comment .html-content) {
+            border-left: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        :global(.author-sidebar .comment-content) {
+            border-left: none;
+            padding-left: 0;
+        }
+
+        :global(.dark .author-sidebar .comment-content) {
+            border-left: none;
+        }
+
+        :global(.dark .author-sidebar .embedded-mastodon-comment .html-content) {
+            border-left: none;
+        }
     }
 
     :global(.author-sidebar .html-content p) {

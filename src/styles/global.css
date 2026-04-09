@@ -196,7 +196,7 @@ nav a, nav a:visited, nav a:active {
 
 .article-card {
     padding: 0;
-    border: 1px solid lightgray;
+    border: 2px solid lightgray;
     border-radius: 0.5rem;
     overflow: hidden;
     font-size: smaller;
@@ -204,18 +204,17 @@ nav a, nav a:visited, nav a:active {
     width: 100%;
     display: flex;
     flex-direction: row;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.3s ease;
     position: relative;
     cursor: pointer;
 }
 
 .article-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--card-color, #212121);
 }
 
 .dark .article-card:hover {
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.06);
+    border-color: var(--card-color, #E0E0E0);
 }
 
 .bauhaus-block {
