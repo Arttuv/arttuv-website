@@ -335,5 +335,9 @@ import MobileThemeToggle from "./MobileThemeToggle.astro"
   }
 
   setupMobileMenu()
-  document.addEventListener("astro:page-load", setupMobileMenu)
+
+  if (!window.__mobileMenuListenerRegistered) {
+    document.addEventListener("astro:page-load", setupMobileMenu)
+    window.__mobileMenuListenerRegistered = true
+  }
 </script>

@@ -31,7 +31,7 @@ const readingTime = Math.max(1, Math.round(wordCount / 220));
   <article class="blog-post" style={`--tag-color: ${tagColor}`}>
     <div class="category">
       {post.data.tags.map((tag) => (
-        <span><a href={`/tags/${tag}`}>#{tag}</a></span>
+                <span><a href={`/tags/${tag}`} class="card-tag" style={`color: ${tagColorMap[tag] ?? '#212121'}; --tag-pill-color: ${tagColorMap[tag] ?? '#212121'}`}>#{tag}</a></span>
       ))}
     </div>
     <BauhausBlock slug={post.id} tags={post.data.tags} direction="horizontal" />
@@ -128,14 +128,24 @@ const readingTime = Math.max(1, Math.round(wordCount / 220));
     }
 
     .blog-post .category {
-        text-transform: uppercase;
-        font-weight: normal;
-        font-size: 1rem;
         margin-bottom: 0.5rem;
         padding-bottom:0;
         padding-top: 0px;
         padding-left:0;
         margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .blog-post .category span {
+        display: inline-flex;
+    }
+
+    .blog-post .category .card-tag {
+        font-size: 0.8rem;
+        margin-right: 0;
     }
 
     /* Post meta: date + reading time */

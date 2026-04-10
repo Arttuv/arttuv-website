@@ -248,9 +248,13 @@ nav a, nav a:visited, nav a:active {
     margin-right: 0.5rem;
     padding: 0.1rem 0.4rem;
     border-radius: 0.25rem;
-    background-color: color-mix(in srgb, currentColor 8%, transparent);
+    background-color: color-mix(in srgb, var(--tag-pill-color, currentColor) 12%, transparent);
     position: relative;
     z-index: 1;
+}
+
+.dark .card-tag {
+    background-color: color-mix(in srgb, var(--tag-pill-color, currentColor) 20%, transparent);
 }
 
 .card-tag:hover {
@@ -293,6 +297,10 @@ nav a, nav a:visited, nav a:active {
 .article-card .read-more {
     color: var(--card-color, #000);
     font-family: 'Roboto Condensed Variable', sans-serif;
+}
+
+.article-card:hover .read-more {
+    text-decoration: underline;
 }
 
 .article-card .article-card-footer {

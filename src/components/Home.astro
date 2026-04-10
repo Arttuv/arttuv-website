@@ -101,16 +101,19 @@ const tagColorMap: Record<string, string> = {
     </div>
 
     <aside class="author-sidebar">
-      <a href="/author/" class="sidebar-photo-link">
-        <div class="photo-flip">
-          <div class="photo-flip-front">
-            <Image src={arttu} alt="Arttu" loading="eager" />
+      <div class="sidebar-photo-container">
+        <a href="/author/" class="sidebar-photo-link">
+          <div class="photo-flip">
+            <div class="photo-flip-front">
+              <Image src={arttu} alt="Arttu" loading="eager" />
+            </div>
+            <div class="photo-flip-back">
+              <span>This is Arttu, read more about them here →</span>
+            </div>
           </div>
-          <div class="photo-flip-back">
-            <span>Read more about the author →</span>
-          </div>
-        </div>
-      </a>
+        </a>
+        <button class="photo-flip-toggle" type="button" aria-label="Flip photo">↻</button>
+      </div>
       <p class="from-eu-with-love">Code from 🇪🇺🇫🇮, writ... prompted with ❤️🏳️‍🌈</p>
       <section class="feed-area">
         <p class="feed-heading">Mastodon</p>
@@ -159,6 +162,11 @@ const tagColorMap: Record<string, string> = {
         align-items: center;
     }
 
+    .sidebar-photo-container {
+        position: relative;
+        width: 100%;
+    }
+
     .sidebar-photo-link {
         display: block;
         border-radius: 0.5rem;
@@ -174,6 +182,10 @@ const tagColorMap: Record<string, string> = {
     }
 
     .sidebar-photo-link:hover .photo-flip {
+        transform: rotateY(180deg);
+    }
+
+    .photo-flip.flipped {
         transform: rotateY(180deg);
     }
 
@@ -206,6 +218,10 @@ const tagColorMap: Record<string, string> = {
         font-family: 'Roboto Condensed Variable', sans-serif;
         font-size: 0.8rem;
         letter-spacing: 0.03em;
+    }
+
+    .photo-flip-toggle {
+        display: none;
     }
 
     .from-eu-with-love {
@@ -258,7 +274,7 @@ const tagColorMap: Record<string, string> = {
     }
 
     :global(.author-sidebar .embedded-mastodon-comment) {
-        padding: 0.25rem 0 0 0;
+      padding: 0.35rem 0.4rem 0.25rem;
     }
 
     @media (min-width: 801px) {
@@ -337,6 +353,44 @@ const tagColorMap: Record<string, string> = {
             max-height: 50vh;
         }
 
+        .sidebar-photo-container {
+            max-width: 30ch;
+        }
+
+        .sidebar-photo-link {
+            perspective: 600px;
+        }
+
+        /* Disable hover flip on mobile */
+        .sidebar-photo-link:hover .photo-flip {
+            transform: none;
+        }
+
+        .photo-flip-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: -0.5rem;
+            top: -0.5rem;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: 1px solid lightgray;
+            background: #fffbf8;
+            color: #666;
+            font-size: 1rem;
+            cursor: pointer;
+            z-index: 2;
+            line-height: 1;
+        }
+
+        :global(.dark) .photo-flip-toggle {
+            background: #111;
+            color: #aaa;
+            border-color: #444;
+        }
+
         .feed-area {
             width: 100%;
             max-width: 50ch;
@@ -348,3 +402,46 @@ const tagColorMap: Record<string, string> = {
         }
     }
 </style>
+
+<script>
+  function initPhotoFlip() {
+    const container = document.querySelector('.sidebar-photo-container');
+    const flipEl = document.querySelector('.photo-flip');
+    const toggleBtn = document.querySelector('.photo-flip-toggle');
+    if (!container || !flipEl || !toggleBtn) return;
+
+    // Toggle button flips the card
+    toggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      flipEl.classList.toggle('flipped');
+    });
+
+    // Auto-flip on scroll (mobile only)
+    if (window.innerWidth <= 800) {
+      let manuallyFlipped = false;
+
+      toggleBtn.addEventListener('click', () => {
+        manuallyFlipped = !manuallyFlipped;
+      });
+
+      function checkFlip() {
+        if (manuallyFlipped) return;
+        const rect = container.getBoundingClientRect();
+        const photoMiddle = rect.top + rect.height / 2;
+        const screenCenter = window.innerHeight / 2;
+
+        if (photoMiddle < screenCenter) {
+          flipEl.classList.add('flipped');
+        } else {
+          flipEl.classList.remove('flipped');
+        }
+      }
+
+      window.addEventListener('scroll', checkFlip, { passive: true });
+      checkFlip();
+    }
+  }
+
+  document.addEventListener('astro:page-load', initPhotoFlip);
+</script>
