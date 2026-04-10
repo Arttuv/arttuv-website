@@ -1,50 +1,19 @@
 ---
 import "../../styles/global.css"
 import BaseLayout from "../../layouts/BaseLayout.astro"
-import FormattedDate from "../../components/FormattedDate.astro"
-import BauhausBlock from "../../components/BauhausBlock.astro"
+import ArticleCard from "../../components/ArticleCard.astro"
 import { getCollection } from "astro:content"
 const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const title = "Writings"
 const description = "A collection of my writings."
-const tagColorMap: Record<string, string> = {
-  'hci': '#1565C0',
-  'dev': '#C62828',
-  'research': '#F9A825',
-};
 ---
 <BaseLayout title={title} description={description}>
   <div class="writings-container">
     <h1>{title}</h1>
     <div class="writing-listing">
-
-      {writings.map((post, index) => {
-        const cardColor = post.data.tags?.[0] ? (tagColorMap[post.data.tags[0]] ?? '#212121') : '#212121';
-        return (
-          <article class={`article-card${index === 0 ? ' article-card--featured' : ''}`} style={`--card-color: ${cardColor}`}>
-            <BauhausBlock slug={post.id} tags={post.data.tags} direction={index === 0 ? 'horizontal' : 'vertical'} />
-            <div class="article-card-content">
-            <div class="article-card-header">
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="card-tags">
-                  {post.data.tags.map(tag => (
-                    <a href={`/tags/${tag}`} class="card-tag" style={`color: ${tagColorMap[tag] ?? '#212121'}`}>#{tag}</a>
-                  ))}
-                </div>
-              )}
-              <h2><a href={`/${post.collection}/${post.id}/`}>{post.data.title}</a></h2>
-              <FormattedDate date={new Date(post.data.pubDate)} />
-            </div>
-            <div class="article-card-text">
-              <p>{post.data.summary}</p>
-            </div>
-            <div class="article-card-footer">
-              <a class="read-more" href={`/${post.collection}/${post.id}/`}>Read more →</a>
-            </div>
-          </div>
-        </article>
-        ); })}
-
+      {writings.map((post, index) => (
+        <ArticleCard post={post} featured={index === 0} />
+      ))}
     </div>
   </div>
 </BaseLayout>

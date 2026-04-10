@@ -3,15 +3,9 @@ import { Image } from "astro:assets"
 import arttu from "../images/arttuv-bw.jpeg"
 import { getCollection } from "astro:content"
 import Comment from "./Comment.astro"
-import FormattedDate from "../components/FormattedDate.astro"
-import BauhausBlock from "./BauhausBlock.astro"
+import ArticleCard from "./ArticleCard.astro"
 const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-const tagColorMap: Record<string, string> = {
-  'hci': '#1565C0',
-  'dev': '#C62828',
-  'research': '#F9A825',
-};
 ---
 
 <div class="home-page">
@@ -19,37 +13,9 @@ const tagColorMap: Record<string, string> = {
 
     <div class="main-content">
       <div class="writing-listing">
-        {writings.slice(0, 5).map((post, index) => {
-          const cardColor = post.data.tags?.[0] ? (tagColorMap[post.data.tags[0]] ?? '#212121') : '#212121';
-          const isSlim = index >= 3;
-          const cardClass = `article-card${index === 0 ? ' article-card--featured' : ''}${isSlim ? ' article-card--slim' : ''}`;
-          return (
-            <article class={cardClass} style={`--card-color: ${cardColor}`}>
-              <BauhausBlock slug={post.id} tags={post.data.tags} direction={index === 0 ? 'horizontal' : 'vertical'} />
-              <div class="article-card-content">
-                <div class="article-card-header">
-                  {post.data.tags && post.data.tags.length > 0 && (
-                    <div class="card-tags">
-                      {post.data.tags.map(tag => (
-                        <a href={`/tags/${tag}`} class="card-tag" style={`color: ${tagColorMap[tag] ?? '#212121'}`}>#{tag}</a>
-                      ))}
-                    </div>
-                  )}
-                  <h2><a href={`/${post.collection}/${post.id}/`}>{post.data.title}</a></h2>
-                  <FormattedDate date={new Date(post.data.pubDate)} />
-                </div>
-                {!isSlim && (
-                  <div class="article-card-text">
-                    <p>{post.data.summary}</p>
-                  </div>
-                )}
-                <div class="article-card-footer">
-                  <a class="read-more" href={`/${post.collection}/${post.id}/`}>Read more →</a>
-                </div>
-              </div>
-            </article>
-          );
-        })}
+        {writings.slice(0, 5).map((post, index) => (
+          <ArticleCard post={post} featured={index === 0} slim={index >= 3} />
+        ))}
       </div>
 
       <span class="button-container">
@@ -213,9 +179,9 @@ const tagColorMap: Record<string, string> = {
         justify-content: center;
         text-align: center;
         padding: 1rem;
-        background: linear-gradient(135deg, #C62828 0%, #1565C0 50%, #F9A825 100%);
+        background: linear-gradient(135deg, var(--color-red) 0%, var(--color-blue) 50%, var(--color-yellow) 100%);
         color: #fff;
-        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-family: var(--font-condensed);
         font-size: 0.8rem;
         letter-spacing: 0.03em;
     }
@@ -237,7 +203,7 @@ const tagColorMap: Record<string, string> = {
     }
 
     .feed-heading {
-        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-family: var(--font-condensed);
         font-size: 0.7rem;
         text-transform: uppercase;
         letter-spacing: 0.1em;
@@ -256,7 +222,7 @@ const tagColorMap: Record<string, string> = {
     }
 
     .feed-more {
-        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-family: var(--font-condensed);
         font-size: 0.75rem;
         color: #999;
         text-decoration: none;

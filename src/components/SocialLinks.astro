@@ -1,0 +1,37 @@
+---
+import MastodonIcon from "./icons/MastodonIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import RssIcon from "./icons/RssIcon.astro";
+
+interface Props {
+  size?: string;
+}
+
+const { size = "30px" } = Astro.props;
+---
+
+<div class="social-links">
+  <a href="https://scholar.social/@arttuv" aria-label="Link to Mastodon profile">
+    <MastodonIcon size={size} />
+  </a>
+  <a href="https://www.linkedin.com/in/arttu-viljakainen/" aria-label="Link to LinkedIn profile">
+    <LinkedInIcon size={size} />
+  </a>
+  <a href="/rss.xml" aria-label="Link to RSS feed">
+    <RssIcon size={size} />
+  </a>
+</div>
+
+<style>
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+</style>

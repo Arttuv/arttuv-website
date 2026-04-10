@@ -5,8 +5,13 @@ import Footer from "../components/Footer.astro"
 import "../styles/global.css"
 import "@fontsource-variable/roboto-serif"
 import '@fontsource/libre-baskerville';
-// Supports weights 100-900
 import '@fontsource-variable/roboto-condensed';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
 const { title, description } = Astro.props
 const canonicalURL = Astro.url
 const siteName = "Arttu Viljakainen"
@@ -41,7 +46,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`
   <ClientRouter />
 </head>
 <body>
-<Header title={title} />
+<Header />
 <main>
   <slot />
 </main>

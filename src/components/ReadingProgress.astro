@@ -1,8 +1,10 @@
 ---
+import { DEFAULT_COLOR } from "../config/colors";
+
 interface Props {
   tagColor?: string;
 }
-const { tagColor = '#212121' } = Astro.props;
+const { tagColor = DEFAULT_COLOR } = Astro.props;
 ---
 <div class="reading-progress-container" id="reading-progress" style={`--tag-color: ${tagColor}`} aria-hidden="true">
   <div class="reading-progress-inner">
@@ -149,7 +151,7 @@ const { tagColor = '#212121' } = Astro.props;
   }
 
   .reading-progress-heading {
-    font-family: 'Roboto Condensed Variable', sans-serif;
+    font-family: var(--font-condensed);
     font-size: 0.75rem;
     letter-spacing: 0.03em;
     white-space: nowrap;

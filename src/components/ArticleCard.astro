@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+import BauhausBlock from "./BauhausBlock.astro";
+import { getTagColor, getCardColor } from "../config/colors";
+
+interface Props {
+  post: CollectionEntry<"writings">;
+  featured?: boolean;
+  slim?: boolean;
+}
+
+const { post, featured = false, slim = false } = Astro.props;
+
+const cardColor = getCardColor(post.data.tags);
+const cardClass = [
+  'article-card',
+  featured && 'article-card--featured',
+  slim && 'article-card--slim',
+].filter(Boolean).join(' ');
+---
+
+<article class={cardClass} style={`--card-color: ${cardColor}`}>
+  <BauhausBlock slug={post.id} tags={post.data.tags} direction={featured ? 'horizontal' : 'vertical'} />
+  <div class="article-card-content">
+    <div class="article-card-header">
+      {post.data.tags && post.data.tags.length > 0 && (
+        <div class="card-tags">
+          {post.data.tags.map(tag => (
+            <a href={`/tags/${tag}`} class="card-tag" style={`color: ${getTagColor(tag)}`}>#{tag}</a>
+          ))}
+        </div>
+      )}
+      <h2><a href={`/${post.collection}/${post.id}/`}>{post.data.title}</a></h2>
+      <FormattedDate date={new Date(post.data.pubDate)} />
+    </div>
+    {!slim && (
+      <div class="article-card-text">
+        <p>{post.data.summary}</p>
+      </div>
+    )}
+    <div class="article-card-footer">
+      <a class="read-more" href={`/${post.collection}/${post.id}/`}>Read more →</a>
+    </div>
+  </div>
+</article>

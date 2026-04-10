@@ -169,7 +169,7 @@ const description = "Arttu Viljakainen is a software development consultant from
     }
 
     .author-role {
-        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-family: var(--font-condensed);
         font-size: 0.85rem;
         text-transform: uppercase;
         letter-spacing: 0.08em;
@@ -185,7 +185,7 @@ const description = "Arttu Viljakainen is a software development consultant from
         display: flex;
         gap: 1.5rem;
         flex-wrap: wrap;
-        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-family: var(--font-condensed);
         font-size: 0.85rem;
     }
 
@@ -223,12 +223,12 @@ const description = "Arttu Viljakainen is a software development consultant from
         padding-top: 0.75rem;
     }
 
-    .skill-section--dev   { border-color: #C62828; }
-    .skill-section--hci   { border-color: #1565C0; }
-    .skill-section--research { border-color: #F9A825; }
+    .skill-section--dev   { border-color: var(--color-red); }
+    .skill-section--hci   { border-color: var(--color-blue); }
+    .skill-section--research { border-color: var(--color-yellow); }
 
     .skill-label {
-        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-family: var(--font-condensed);
         font-size: 0.7rem;
         text-transform: uppercase;
         letter-spacing: 0.1em;
@@ -269,7 +269,7 @@ const description = "Arttu Viljakainen is a software development consultant from
         text-align: right;
         padding-right: 1rem;
         border-right: 1px solid lightgray;
-        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-family: var(--font-condensed);
         font-size: 0.8rem;
         color: #666;
         padding-top: 0.2rem;
@@ -284,12 +284,8 @@ const description = "Arttu Viljakainen is a software development consultant from
         width: 0.8rem;
         height: 0.8rem;
         border-radius: 50%;
-        background-color: #C62828;
-        border: 2px solid #fffbf8;
-    }
-
-    :global(.dark) .cv-item-time span::after {
-        border-color: #000;
+        background-color: var(--color-red);
+        border: 2px solid var(--color-bg);
     }
 
     .cv-item-content {
@@ -304,13 +300,13 @@ const description = "Arttu Viljakainen is a software development consultant from
 
     .cv-company {
         font-weight: 600;
-        font-family: 'Roboto Condensed Variable', sans-serif;
+        font-family: var(--font-condensed);
         font-size: 0.9rem;
     }
 
     .cv-current {
         font-weight: 400;
-        color: #C62828;
+        color: var(--color-red);
         font-size: 0.8rem;
     }
 
