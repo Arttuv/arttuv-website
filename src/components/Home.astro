@@ -4,6 +4,7 @@ import arttu from "../images/arttuv-bw.jpeg"
 import { getCollection } from "astro:content"
 import Comment from "./Comment.astro"
 import ArticleCard from "./ArticleCard.astro"
+import BauhausDivider from "./BauhausDivider.astro"
 const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 ---
@@ -21,6 +22,8 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
       <span class="button-container">
         <a href="/writings/">All writings →</a>
       </span>
+
+      <BauhausDivider seed="home-bio" height="60px" spacing="2rem" />
 
       <article class="author-bio">
         <div class="line-heading">

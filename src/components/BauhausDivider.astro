@@ -1,0 +1,56 @@
+---
+import { BAUHAUS_PALETTE } from "../config/colors";
+
+interface Props {
+  seed?: string;
+  height?: string;
+  spacing?: string;
+}
+
+const { seed = "divider", height = "6px", spacing = "2.5rem" } = Astro.props;
+
+function hash(str: string): number {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) {
+    h = Math.imul(31, h) + str.charCodeAt(i) | 0;
+  }
+  return Math.abs(h);
+}
+
+const h = hash(seed);
+const palette = BAUHAUS_PALETTE;
+
+// Pick 2–4 color stops with varying widths
+const count = 2 + (h % 3); // 2, 3, or 4 segments
+const colors: string[] = [];
+for (let i = 0; i < count; i++) {
+  colors.push(palette[(h + i * 7) % palette.length]);
+}
+
+// Generate percentage stops
+const stops: string[] = [];
+let cursor = 0;
+for (let i = 0; i < colors.length; i++) {
+  const share = i === colors.length - 1
+    ? 100 - cursor
+    : 15 + ((h >> (i * 3)) % 30);
+  const end = Math.min(cursor + share, 100);
+  stops.push(`${colors[i]} ${cursor}% ${end}%`);
+  cursor = end;
+}
+
+const gradient = `linear-gradient(to right, ${stops.join(", ")})`;
+---
+
+<div
+  class="bauhaus-divider"
+  style={`background: ${gradient}; height: ${height}; margin: ${spacing} 0;`}
+  aria-hidden="true"
+></div>
+
+<style>
+  .bauhaus-divider {
+    width: 100%;
+    border-radius: 0;
+  }
+</style>

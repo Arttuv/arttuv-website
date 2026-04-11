@@ -1,0 +1,128 @@
+---
+import { TAG_COLORS, DEFAULT_COLOR, BAUHAUS_PALETTE } from "../config/colors";
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+  slug?: string;
+  tags?: string[];
+}
+
+const { headings, slug = "toc", tags = [] } = Astro.props;
+
+// Only show h2 and h3; skip if fewer than 2 headings
+const filtered = headings.filter(h => h.depth === 2 || h.depth === 3);
+const show = filtered.length >= 2;
+
+// Generate a vertical color bar gradient from slug, reusing BauhausBlock logic
+function hash(str: string): number {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) {
+    h = Math.imul(31, h) + str.charCodeAt(i) | 0;
+  }
+  return Math.abs(h);
+}
+
+const h = hash(slug);
+const primaryTag = tags?.[0] || '';
+const color1 = TAG_COLORS[primaryTag] || DEFAULT_COLOR;
+const others = BAUHAUS_PALETTE.filter(c => c !== color1);
+const color2 = others[h % others.length];
+const color3 = others[(h >> 4) % others.length] !== color2
+  ? others[(h >> 4) % others.length]
+  : others[((h >> 4) + 1) % others.length];
+const b1 = 25 + (h % 25);
+const b2 = 20 + ((h >> 5) % 20);
+const barGradient = `linear-gradient(to bottom, ${color1} ${b1}%, ${color2} ${b1}% ${b1 + b2}%, ${color3} ${b1 + b2}%)`;
+---
+
+{show && (
+  <aside class="toc-wrapper" aria-label="Table of contents">
+    <div class="toc-bar" style={`background: ${barGradient}`} aria-hidden="true"></div>
+    <nav class="toc">
+      <p class="toc-label">Contents</p>
+      <ol class="toc-list">
+        {filtered.map(h => (
+          <li class={h.depth === 3 ? "toc-item toc-item--sub" : "toc-item"}>
+            <a href={`#${h.slug}`}>{h.text}</a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  </aside>
+)}
+
+<style>
+  .toc-wrapper {
+    float: left;
+    width: 44%;
+    max-width: 20rem;
+    margin: 0 2rem 1.5rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .toc {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+  .toc-bar {
+    width: 10px;
+    flex-shrink: 0;
+  }
+
+  .toc-label {
+    font-family: var(--font-condensed);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+    margin: 0 0 0.4rem;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-item {
+    margin-bottom: 0.2rem;
+  }
+
+  .toc-item--sub {
+    padding-left: 0.85rem;
+  }
+
+  .toc-item a {
+    font-family: var(--font-condensed);
+    color: var(--color-text);
+    text-decoration: none;
+    opacity: 0.65;
+    transition: opacity 0.15s ease;
+  }
+
+  .toc-item a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  /* On narrow screens, go full-width above the text */
+  @media (max-width: 600px) {
+    .toc-wrapper {
+      float: none;
+      width: 100%;
+      max-width: none;
+      margin: 1rem 0 1.5rem;
+    }
+  }
+</style>
