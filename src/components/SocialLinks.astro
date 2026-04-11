@@ -5,20 +5,24 @@ import RssIcon from "./icons/RssIcon.astro";
 
 interface Props {
   size?: string;
+  showLabels?: boolean;
 }
 
-const { size = "30px" } = Astro.props;
+const { size = "24px", showLabels = false } = Astro.props;
 ---
 
-<div class="social-links">
-  <a href="https://scholar.social/@arttuv" aria-label="Link to Mastodon profile">
+<div class:list={["social-links", { "social-links--labeled": showLabels }]}>
+  <a href="https://scholar.social/@arttuv" aria-label="Link to Mastodon profile" class="social-link">
     <MastodonIcon size={size} />
+    {showLabels && <span class="social-label">Mastodon</span>}
   </a>
-  <a href="https://www.linkedin.com/in/arttu-viljakainen/" aria-label="Link to LinkedIn profile">
+  <a href="https://www.linkedin.com/in/arttu-viljakainen/" aria-label="Link to LinkedIn profile" class="social-link">
     <LinkedInIcon size={size} />
+    {showLabels && <span class="social-label">LinkedIn</span>}
   </a>
-  <a href="/rss.xml" aria-label="Link to RSS feed">
+  <a href="/rss.xml" aria-label="Link to RSS feed" class="social-link">
     <RssIcon size={size} />
+    {showLabels && <span class="social-label">RSS</span>}
   </a>
 </div>
 
@@ -26,12 +30,44 @@ const { size = "30px" } = Astro.props;
   .social-links {
     display: flex;
     align-items: center;
+    gap: 0.15rem;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    padding: 0.35rem;
+    border-radius: 0.35rem;
+    transition: background-color 0.15s ease, opacity 0.15s ease;
+    opacity: 0.7;
+  }
+
+  .social-link:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+
+  :global(.dark) .social-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .social-label {
+    font-family: var(--font-condensed);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* Labeled variant: stack vertically */
+  .social-links--labeled {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.25rem;
   }
 
-  .social-links a {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
+  .social-links--labeled .social-link {
+    padding: 0.5rem 0.75rem;
+    opacity: 0.85;
   }
 </style>
