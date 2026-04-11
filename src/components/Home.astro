@@ -5,19 +5,58 @@ import { getCollection } from "astro:content"
 import Comment from "./Comment.astro"
 import ArticleCard from "./ArticleCard.astro"
 import BauhausDivider from "./BauhausDivider.astro"
+import { featuredGroups } from "../config/featured"
 const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const allWritings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+
+// Build a lookup map for featured posts
+const postMap = new Map(allWritings.map(p => [p.id, p]));
+
+// Resolve groups: keep slug order from config
+const resolvedGroups = featuredGroups.map(group => ({
+  ...group,
+  posts: group.slugs.map(s => postMap.get(s)).filter(Boolean),
+}));
+
+// Collect all featured slugs to exclude from "Latest"
+const featuredSlugs = new Set(featuredGroups.flatMap(g => g.slugs));
+const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4);
 ---
 
 <div class="home-page">
+  <div class="home-intro">
+    <div class="line-heading"><h2>{resolvedGroups[0].title}</h2></div>
+    <p class="featured-group-desc">{resolvedGroups[0].description}</p>
+  </div>
   <div class="welcome-container">
 
     <div class="main-content">
-      <div class="writing-listing">
-        {writings.slice(0, 5).map((post, index) => (
-          <ArticleCard post={post} featured={index === 0} slim={index >= 3} />
-        ))}
-      </div>
+      {resolvedGroups.map((group, gi) => (
+        <section class={`featured-group featured-group--${gi}`}>
+          {gi > 0 && (
+            <Fragment>
+              <div class="line-heading"><h2>{group.title}</h2></div>
+              <p class="featured-group-desc">{group.description}</p>
+            </Fragment>
+          )}
+          <div class="writing-listing">
+            {group.posts.map((post, i) => (
+              <ArticleCard post={post} featured={gi === 0 && i === 0} slim={i > 0 || gi > 0} />
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {latestPosts.length > 0 && (
+        <section class={`featured-group featured-group--${resolvedGroups.length}`}>
+          <div class="line-heading"><h2>Latest</h2></div>
+          <div class="writing-listing">
+            {latestPosts.map((post) => (
+              <ArticleCard post={post} slim />
+            ))}
+          </div>
+        </section>
+      )}
 
       <span class="button-container">
         <a href="/writings/">All writings →</a>
@@ -108,12 +147,19 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
         margin: auto;
     }
 
+    .home-intro {
+        margin-top: 2rem;
+    }
+
+    .home-intro .line-heading h2 {
+        margin-top: 0;
+    }
+
     .welcome-container {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         gap: 2rem;
-        margin-top: 2rem;
         width: 100%;
     }
 
@@ -294,6 +340,18 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
         margin: 1rem 0;
     }
 
+    .featured-group {
+        margin-bottom: 2rem;
+    }
+
+    .featured-group-desc {
+        font-family: var(--font-condensed);
+        font-size: 0.82rem;
+        color: var(--color-muted);
+        margin: 0 0 0.75rem;
+        line-height: 1.5;
+    }
+
     .author-bio {
         margin-top: 1rem;
         font-size: smaller;
@@ -312,6 +370,20 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
             flex-direction: column;
             margin-top: 1rem;
         }
+
+        /* On mobile, reorder so sidebar appears after the first group */
+        .main-content {
+            display: contents;
+        }
+
+        .featured-group--0  { order: 1; }
+        .author-sidebar      { order: 2; }
+        .featured-group--1  { order: 3; }
+        .featured-group--2  { order: 4; }
+        .featured-group--3  { order: 5; }
+        .button-container    { order: 6; }
+        :global(.bauhaus-divider) { order: 7; }
+        .author-bio          { order: 8; }
 
         .author-sidebar {
             position: static;
