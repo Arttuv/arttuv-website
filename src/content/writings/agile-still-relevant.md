@@ -1,6 +1,6 @@
 ---
 pubDate: "2024-07-22"
-title: "Agile - Still Relevant in 2024"
+title: "Agile - Still Relevant"
 tags: ["dev"]
 mastodon: "112840282925802410"
 summary: "It has been surprisingly common to see critique towards agile lately. I find it a bit odd, having seen the waterfall world and how much more humane agile has been. It can be easy to overlook how fundamental agile principles remain for surviving fast-paced, complex software projects."
@@ -71,10 +71,12 @@ When we are doing complicated things, pure skill is enough. In complexity, you a
 
 Individuals more often than not don't have broad and deep enough skills and experience: you need a team. As diverse (experience, background, skills) a team as possible.
 
+> The best architectures, requirements, and designs emerge from self-organizing teams. ([Agile priciples](https://agilemanifesto.org/principles.html))
+
 A team must be autonomous so it can adapt to the changes in its environment fast. It must be cross-functional to own the experience all the way to the end users, to optimize the feedback cycle.
 
 If a team like that is motivated and willing to have a shared responsibility over the outcome (not output), you can throw them any problem in any environment, and they will come up with a process needed to solve it.
 
 ## Conclusion
 
-Agile is about empowered people, continuous learning, and rapid adaptation. Whether you follow Scrum, Kanban, XP, or another framework, remember to revisit the underlying principles. If your process feels stiff or its ceremonies feel worthless, question whether it’s truly supporting the work. Don't impose unneeded processes to the teams but give them the freedom to expriment.
+Agile is about empowered people, continuous learning, and rapid adaptation. Whether you follow Scrum, Kanban, XP, or another framework or tool, remember to revisit the underlying principles. If your process feels stiff or its ceremonies feel worthless, question whether it’s truly supporting the work. Don't impose unneeded processes to the teams but give them the freedom to experiment.

@@ -6,6 +6,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: 'https://arttuv.com',
   redirects: {
+    '/writings/agile-still-relevant-in-2024': '/writings/agile-still-relevant',
   },
   integrations: [sitemap({
     filter: (page) => !page.startsWith('https://arttuv.com/comments/'),
