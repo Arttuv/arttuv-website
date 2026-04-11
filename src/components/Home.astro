@@ -72,16 +72,16 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
     <aside class="author-sidebar">
       <div class="sidebar-photo-container">
         <a href="/author/" class="sidebar-photo-link">
-          <div class="photo-flip">
-            <div class="photo-flip-front">
+          <div class="photo-reveal">
+            <div class="photo-reveal-front">
               <Image src={arttu} alt="Arttu" loading="eager" />
             </div>
-            <div class="photo-flip-back">
+            <div class="photo-reveal-back">
               <span>This is Arttu, read more about them here →</span>
             </div>
           </div>
         </a>
-        <button class="photo-flip-toggle" type="button" aria-label="Flip photo">↻</button>
+        <button class="photo-reveal-toggle" type="button" aria-label="Show info">↻</button>
       </div>
       <p class="from-eu-with-love">Code from 🇪🇺🇫🇮, writ... prompted with ❤️🏳️‍🌈</p>
       <section class="feed-area">
@@ -139,44 +139,32 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
     .sidebar-photo-link {
         display: block;
         border-radius: 0.5rem;
-        perspective: 600px;
         text-decoration: none;
     }
 
-    .photo-flip {
+    .photo-reveal {
         position: relative;
         width: 100%;
-        transition: transform 0.5s ease;
-        transform-style: preserve-3d;
-    }
-
-    .sidebar-photo-link:hover .photo-flip {
-        transform: rotateY(180deg);
-    }
-
-    .photo-flip.flipped {
-        transform: rotateY(180deg);
-    }
-
-    .photo-flip-front,
-    .photo-flip-back {
-        backface-visibility: hidden;
         border-radius: 0.5rem;
         overflow: hidden;
     }
 
-    .photo-flip-front img {
+    .photo-reveal-front {
+        display: block;
+    }
+
+    .photo-reveal-front img {
         width: 100%;
         height: auto;
         display: block;
         border: 1px solid lightgray;
         border-radius: 0.5rem;
+        transition: opacity 0.4s ease, filter 0.4s ease;
     }
 
-    .photo-flip-back {
+    .photo-reveal-back {
         position: absolute;
         inset: 0;
-        transform: rotateY(180deg);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -187,9 +175,23 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
         font-family: var(--font-condensed);
         font-size: 0.8rem;
         letter-spacing: 0.03em;
+        border-radius: 0.5rem;
+        opacity: 0;
+        transition: opacity 0.4s ease;
     }
 
-    .photo-flip-toggle {
+    .sidebar-photo-link:hover .photo-reveal-front img,
+    .photo-reveal.revealed .photo-reveal-front img {
+        opacity: 0;
+        filter: blur(2px);
+    }
+
+    .sidebar-photo-link:hover .photo-reveal-back,
+    .photo-reveal.revealed .photo-reveal-back {
+        opacity: 1;
+    }
+
+    .photo-reveal-toggle {
         display: none;
     }
 
@@ -327,15 +329,20 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
         }
 
         .sidebar-photo-link {
-            perspective: 600px;
+            /* no perspective needed */
         }
 
-        /* Disable hover flip on mobile */
-        .sidebar-photo-link:hover .photo-flip {
-            transform: none;
+        /* Disable hover reveal on mobile (use button/scroll instead) */
+        .sidebar-photo-link:hover .photo-reveal-front img {
+            opacity: 1;
+            filter: none;
         }
 
-        .photo-flip-toggle {
+        .sidebar-photo-link:hover .photo-reveal-back {
+            opacity: 0;
+        }
+
+        .photo-reveal-toggle {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -346,18 +353,12 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
             height: 2rem;
             border-radius: 50%;
             border: 1px solid lightgray;
-            background: #fffbf8;
-            color: #666;
+            background: var(--color-bg);
+            color: var(--color-muted);
             font-size: 1rem;
             cursor: pointer;
             z-index: 2;
             line-height: 1;
-        }
-
-        :global(.dark) .photo-flip-toggle {
-            background: #111;
-            color: #aaa;
-            border-color: #444;
         }
 
         .feed-area {
@@ -373,44 +374,42 @@ const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate
 </style>
 
 <script>
-  function initPhotoFlip() {
+  function initPhotoReveal() {
     const container = document.querySelector('.sidebar-photo-container');
-    const flipEl = document.querySelector('.photo-flip');
-    const toggleBtn = document.querySelector('.photo-flip-toggle');
-    if (!container || !flipEl || !toggleBtn) return;
+    const revealEl = document.querySelector('.photo-reveal');
+    const toggleBtn = document.querySelector('.photo-reveal-toggle');
+    if (!container || !revealEl || !toggleBtn) return;
 
-    // Toggle button flips the card
     toggleBtn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      flipEl.classList.toggle('flipped');
+      revealEl.classList.toggle('revealed');
     });
 
-    // Auto-flip on scroll (mobile only)
     if (window.innerWidth <= 800) {
-      let manuallyFlipped = false;
+      let manuallyToggled = false;
 
       toggleBtn.addEventListener('click', () => {
-        manuallyFlipped = !manuallyFlipped;
+        manuallyToggled = !manuallyToggled;
       });
 
-      function checkFlip() {
-        if (manuallyFlipped) return;
+      function checkReveal() {
+        if (manuallyToggled) return;
         const rect = container.getBoundingClientRect();
         const photoMiddle = rect.top + rect.height / 2;
         const screenCenter = window.innerHeight / 2;
 
         if (photoMiddle < screenCenter) {
-          flipEl.classList.add('flipped');
+          revealEl.classList.add('revealed');
         } else {
-          flipEl.classList.remove('flipped');
+          revealEl.classList.remove('revealed');
         }
       }
 
-      window.addEventListener('scroll', checkFlip, { passive: true });
-      checkFlip();
+      window.addEventListener('scroll', checkReveal, { passive: true });
+      checkReveal();
     }
   }
 
-  document.addEventListener('astro:page-load', initPhotoFlip);
+  document.addEventListener('astro:page-load', initPhotoReveal);
 </script>
