@@ -6,8 +6,6 @@ summary: "I have used Obsidian for two years now, and I'm ready to say it works 
 ---
 I have been using [Obsidian](https://obsidian.md/) for my note-taking efforts for almost two years now, from the beginning of 2022, and it has stuck with me. I think I'm still improving the ways I'm using Obsidian, which is a good sign. I love that I have found a way of storing my notes in clear text format, and the Obsidian way of using links is making those notes and the process of creating them so much more valuable and enjoyable.
 
-![Connected post-it notes on a wall](/images/connected-post-it-notes.jpeg)
-
 I try to minimize the amount of plugins I use and stick to the built-in ones. I may start using something like the [Obsidian Dataview](https://github.com/blacksmithgu/obsidian-dataview), but I think plugins are an issue because they take you farther away from the real promise of Obsidian: data is just Markdown files on your disc and you can take it with you when you switch the app.
 
 Plugins also bring in complexity which may cause you to use more time to reiterate your notetaking process instead of writing, connecting the notes, and coming up with something new by connecting the dots. 

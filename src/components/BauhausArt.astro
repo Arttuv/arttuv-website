@@ -4,6 +4,9 @@
   <div class="bauhaus-shape bauhaus-circle"></div>
   <div class="bauhaus-shape bauhaus-triangle"></div>
   <div class="bauhaus-shape bauhaus-square"></div>
+  <div class="bauhaus-shape bauhaus-diamond"></div>
+  <div class="bauhaus-shape bauhaus-semicircle"></div>
+  <div class="bauhaus-shape bauhaus-cross"></div>
 </div>
 
 <style>
@@ -11,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     margin: 2.5rem 0 1.5rem;
   }
 
@@ -19,6 +22,7 @@
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    flex-shrink: 0;
   }
 
   .bauhaus-shape.visible {
@@ -27,8 +31,8 @@
   }
 
   .bauhaus-circle {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: var(--color-red);
     transition-delay: 0s;
@@ -37,39 +41,117 @@
   .bauhaus-triangle {
     width: 0;
     height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 90px solid var(--color-blue);
+    border-left: 38px solid transparent;
+    border-right: 38px solid transparent;
+    border-bottom: 70px solid var(--color-orange);
     background: none;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
   }
 
   .bauhaus-square {
-    width: 80px;
-    height: 80px;
+    width: 62px;
+    height: 62px;
     background-color: var(--color-yellow);
+    transition-delay: 0.2s;
+  }
+
+  .bauhaus-diamond {
+    width: 54px;
+    height: 54px;
+    background-color: var(--color-green);
+    transform: translateY(30px) rotate(45deg);
+    transition-delay: 0.3s;
+  }
+
+  .bauhaus-diamond.visible {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .bauhaus-semicircle {
+    width: 70px;
+    height: 35px;
+    background-color: var(--color-blue);
+    border-radius: 70px 70px 0 0;
     transition-delay: 0.4s;
+    align-self: flex-end;
+  }
+
+  .bauhaus-cross {
+    width: 62px;
+    height: 62px;
+    position: relative;
+    transition-delay: 0.5s;
+  }
+
+  .bauhaus-cross::before,
+  .bauhaus-cross::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-purple);
+  }
+
+  .bauhaus-cross::before {
+    width: 20px;
+    height: 62px;
+    left: 21px;
+    top: 0;
+  }
+
+  .bauhaus-cross::after {
+    width: 62px;
+    height: 20px;
+    left: 0;
+    top: 21px;
   }
 
   @media (max-width: 480px) {
     .bauhaus-shapes {
-      gap: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1.25rem;
     }
 
     .bauhaus-circle {
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
     }
 
     .bauhaus-triangle {
-      border-left-width: 34px;
-      border-right-width: 34px;
-      border-bottom-width: 60px;
+      border-left-width: 22px;
+      border-right-width: 22px;
+      border-bottom-width: 40px;
     }
 
     .bauhaus-square {
-      width: 54px;
-      height: 54px;
+      width: 36px;
+      height: 36px;
+    }
+
+    .bauhaus-diamond {
+      width: 30px;
+      height: 30px;
+    }
+
+    .bauhaus-semicircle {
+      width: 40px;
+      height: 20px;
+      border-radius: 40px 40px 0 0;
+    }
+
+    .bauhaus-cross {
+      width: 36px;
+      height: 36px;
+    }
+
+    .bauhaus-cross::before {
+      width: 12px;
+      height: 36px;
+      left: 12px;
+    }
+
+    .bauhaus-cross::after {
+      width: 36px;
+      height: 12px;
+      top: 12px;
     }
   }
 </style>

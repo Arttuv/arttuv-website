@@ -1,8 +1,11 @@
 :root {
-    /* Bauhaus color palette */
-    --color-red: #C62828;
-    --color-blue: #1565C0;
-    --color-yellow: #F9A825;
+    /* Rainbow / retro Apple palette */
+    --color-red: #E03A3E;
+    --color-orange: #F5821F;
+    --color-yellow: #FDB827;
+    --color-green: #61BB46;
+    --color-blue: #009DDC;
+    --color-purple: #963D97;
     --color-dark: #212121;
 
     /* Base colors */
