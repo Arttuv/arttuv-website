@@ -87,6 +87,7 @@ import MobileMenu from "./MobileMenu.astro"
       <rect x="8" y="11" width="1" height="1"/>
       <rect x="9" y="11" width="1" height="1"/>
     </svg>
+    <span class="cat-speech">Mau!</span>
   </div>
 </header>
 <style>
@@ -197,3 +198,21 @@ import MobileMenu from "./MobileMenu.astro"
 
     }
 </style>
+
+<script>
+  function initCatMau() {
+    const cat = document.querySelector('.header-cat');
+    if (!cat) return;
+    const speech = cat.querySelector('.cat-speech');
+    if (!speech) return;
+
+    let timeout: ReturnType<typeof setTimeout>;
+    cat.addEventListener('click', () => {
+      speech.classList.add('visible');
+      clearTimeout(timeout);
+      timeout = setTimeout(() => speech.classList.remove('visible'), 1200);
+    });
+  }
+
+  document.addEventListener('astro:page-load', initCatMau);
+</script>
