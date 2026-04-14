@@ -499,10 +499,14 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     :global(.author-sidebar .comment-content) {
         font-size: 0.7rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 
     :global(.author-sidebar .embedded-mastodon-comment) {
         font-size: 0.7rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 
     .button-container {
