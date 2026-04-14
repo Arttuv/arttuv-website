@@ -1,0 +1,171 @@
+---
+interface Props {
+  seed?: string;
+  spacing?: string;
+}
+
+const { seed = "orbit", spacing = "2.5rem" } = Astro.props;
+
+function hash(str: string): number {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) {
+    h = Math.imul(31, h) + str.charCodeAt(i) | 0;
+  }
+  return Math.abs(h);
+}
+
+const h = hash(seed);
+
+// Pride flag colors
+const pride = ['#E40303', '#FF8C00', '#FFED00', '#008026', '#24408E', '#732982'];
+const color1 = pride[h % pride.length];
+const color2 = pride[(h + 2) % pride.length];
+const color3 = pride[(h + 4) % pride.length];
+
+// Orbit ellipse radii (vary based on seed)
+const rx1 = 60 + (h % 30);
+const rx2 = 40 + ((h >> 3) % 25);
+const rx3 = 25 + ((h >> 6) % 20);
+---
+
+<div class="orbit-divider" style={`margin: ${spacing} 0;`} aria-hidden="true">
+  <svg
+    class="orbit-svg"
+    viewBox="0 0 300 70"
+    preserveAspectRatio="xMidYMid meet"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <!-- Orbit paths -->
+    <ellipse cx="150" cy="35" rx={rx1} ry="28"
+      fill="none" stroke={color1} stroke-width="1" opacity="0.5"
+      class="orbit-path orbit-path-1" />
+    <ellipse cx="150" cy="35" rx={rx2} ry="18"
+      fill="none" stroke={color2} stroke-width="1" opacity="0.4"
+      class="orbit-path orbit-path-2"
+      transform="rotate(-15, 150, 35)" />
+    <ellipse cx="150" cy="35" rx={rx3} ry="12"
+      fill="none" stroke={color3} stroke-width="1" opacity="0.35"
+      class="orbit-path orbit-path-3"
+      transform="rotate(20, 150, 35)" />
+
+    <!-- Center body -->
+    <circle cx="150" cy="35" r="3" fill={color1} opacity="0.8" />
+
+    <!-- Orbiting dots (each wrapped in a group matching its orbit's rotation) -->
+    <g>
+      <circle r="2.5" fill={color2} class="orbiter orbiter-1">
+        <animateMotion
+          dur="12s"
+          repeatCount="indefinite"
+          path={`M${150 + rx1},35 A${rx1},28 0 1,1 ${150 - rx1},35 A${rx1},28 0 1,1 ${150 + rx1},35`}
+        />
+      </circle>
+    </g>
+    <g transform="rotate(-15, 150, 35)">
+      <circle r="2" fill={color3} class="orbiter orbiter-2">
+        <animateMotion
+          dur="8s"
+          repeatCount="indefinite"
+          path={`M${150 + rx2},35 A${rx2},18 0 1,1 ${150 - rx2},35 A${rx2},18 0 1,1 ${150 + rx2},35`}
+        />
+      </circle>
+    </g>
+    <g transform="rotate(20, 150, 35)">
+      <circle r="1.5" fill={color1} opacity="0.7" class="orbiter orbiter-3">
+        <animateMotion
+          dur="5s"
+          repeatCount="indefinite"
+          path={`M${150 + rx3},35 A${rx3},12 0 1,1 ${150 - rx3},35 A${rx3},12 0 1,1 ${150 + rx3},35`}
+        />
+      </circle>
+    </g>
+
+    <!-- Horizontal "trajectory" lines extending from the orbit -->
+    <line x1="0" y1="35" x2={150 - rx1 - 5} y2="35"
+      stroke={color1} stroke-width="0.5" opacity="0.2"
+      stroke-dasharray="4 3" />
+    <line x1={150 + rx1 + 5} y1="35" x2="300" y2="35"
+      stroke={color1} stroke-width="0.5" opacity="0.2"
+      stroke-dasharray="4 3" />
+
+    <!-- Small coordinate ticks -->
+    <line x1="20" y1="33" x2="20" y2="37" stroke={color2} stroke-width="0.5" opacity="0.3" />
+    <line x1="280" y1="33" x2="280" y2="37" stroke={color2} stroke-width="0.5" opacity="0.3" />
+  </svg>
+</div>
+
+<style>
+  .orbit-divider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .orbit-divider.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .orbit-svg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .orbit-path {
+    stroke-dasharray: 3 2;
+  }
+
+  .orbit-path-1 {
+    animation: orbitPulse 6s ease-in-out infinite alternate;
+  }
+
+  .orbit-path-2 {
+    animation: orbitPulse 8s ease-in-out infinite alternate-reverse;
+  }
+
+  .orbit-path-3 {
+    animation: orbitPulse 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes orbitPulse {
+    0%   { opacity: 0.25; }
+    100% { opacity: 0.6; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .orbit-path,
+    .orbiter {
+      animation: none !important;
+    }
+    .orbiter animateMotion {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  function initOrbitDivider() {
+    const dividers = document.querySelectorAll('.orbit-divider');
+    if (!dividers.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      }
+    }, { threshold: 0.3 });
+
+    dividers.forEach(d => {
+      d.classList.remove('visible');
+      observer.observe(d);
+    });
+  }
+
+  document.addEventListener('astro:page-load', initOrbitDivider);
+</script>

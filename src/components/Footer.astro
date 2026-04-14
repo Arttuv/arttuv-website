@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© {new Date().getFullYear()} Arttu Viljakainen. Texts licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</p>
+      <p>© {new Date().getFullYear()} Arttu Viljakainen. Texts licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Map from <a href="https://simplemaps.com/resources/svg-europe">simplemaps</a>.</p>
       <p>Built with <a href="https://astro.build">Astro</a>, hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
     </div>
   </div>
@@ -51,10 +51,65 @@
 
 <style>
     footer {
-        background-color: #111;
+        background-color: #050510;
         color: #ccc;
         width: 100%;
         margin-top: 4rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Nebula / deep-space color clouds */
+    footer::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 40% 50% at 15% 60%, rgba(150, 61, 151, 0.12), transparent),
+          radial-gradient(ellipse 35% 45% at 75% 30%, rgba(0, 157, 220, 0.10), transparent),
+          radial-gradient(ellipse 30% 55% at 50% 80%, rgba(224, 58, 62, 0.07), transparent),
+          radial-gradient(ellipse 25% 35% at 85% 75%, rgba(97, 187, 70, 0.06), transparent);
+        pointer-events: none;
+    }
+
+    /* Star field */
+    footer::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(1.2px 1.2px at 10% 15%, #fff, transparent),
+          radial-gradient(1px 1px at 25% 35%, rgba(255,255,255,0.7), transparent),
+          radial-gradient(1.5px 1.5px at 40% 8%, #fff, transparent),
+          radial-gradient(1px 1px at 55% 42%, rgba(255,255,255,0.6), transparent),
+          radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.8), transparent),
+          radial-gradient(1.8px 1.8px at 85% 30%, #fff, transparent),
+          radial-gradient(1px 1px at 15% 55%, rgba(255,255,255,0.5), transparent),
+          radial-gradient(1.2px 1.2px at 30% 70%, rgba(255,255,255,0.7), transparent),
+          radial-gradient(1.5px 1.5px at 50% 60%, #fff, transparent),
+          radial-gradient(1px 1px at 65% 75%, rgba(255,255,255,0.6), transparent),
+          radial-gradient(1.3px 1.3px at 80% 55%, rgba(255,255,255,0.8), transparent),
+          radial-gradient(1.6px 1.6px at 92% 65%, #fff, transparent),
+          radial-gradient(1px 1px at 5% 85%, rgba(255,255,255,0.5), transparent),
+          radial-gradient(1.2px 1.2px at 20% 92%, rgba(255,255,255,0.7), transparent),
+          radial-gradient(1.4px 1.4px at 45% 88%, rgba(255,255,255,0.6), transparent),
+          radial-gradient(1px 1px at 60% 95%, rgba(255,255,255,0.5), transparent),
+          radial-gradient(1.7px 1.7px at 78% 82%, #fff, transparent),
+          radial-gradient(1px 1px at 95% 90%, rgba(255,255,255,0.7), transparent),
+          radial-gradient(1.3px 1.3px at 35% 48%, rgba(255,255,255,0.5), transparent),
+          radial-gradient(1.1px 1.1px at 88% 12%, rgba(255,255,255,0.8), transparent),
+          radial-gradient(0.8px 0.8px at 3% 40%, rgba(255,255,255,0.4), transparent),
+          radial-gradient(0.8px 0.8px at 47% 25%, rgba(255,255,255,0.4), transparent),
+          radial-gradient(0.8px 0.8px at 62% 50%, rgba(255,255,255,0.35), transparent),
+          radial-gradient(0.8px 0.8px at 97% 45%, rgba(255,255,255,0.4), transparent);
+        pointer-events: none;
+        animation: starTwinkle 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes starTwinkle {
+        0% { opacity: 0.7; }
+        50% { opacity: 1; }
+        100% { opacity: 0.8; }
     }
 
     .footer-accent-bar {
@@ -78,6 +133,8 @@
         max-width: 70rem;
         margin: 0 auto;
         padding: 2.5rem 1rem 1.5rem;
+        position: relative;
+        z-index: 1;
     }
 
     .footer-content {
@@ -85,7 +142,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2.5rem;
         padding-bottom: 2rem;
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .footer-col-heading {
@@ -125,13 +182,13 @@
 
     .footer-bottom p {
         font-size: 0.75rem;
-        color: #555;
+        color: rgba(255,255,255,0.3);
         margin: 0;
         line-height: 1.5;
     }
 
     .footer-bottom a {
-        color: #666;
+        color: rgba(255,255,255,0.4);
     }
 
     @media (max-width: 800px) {

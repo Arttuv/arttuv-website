@@ -6,7 +6,7 @@ export interface Props {
 const { date } = Astro.props
 ---
 
-<time datetime={date.toISOString()}>
+<time class="telemetry-date" datetime={date.toISOString()}>
   {
     date.toLocaleDateString("en-us", {
       year: "numeric",
@@ -15,3 +15,13 @@ const { date } = Astro.props
     })
   }
 </time>
+
+<style>
+  .telemetry-date {
+    font-family: var(--font-mono);
+    font-size: 0.72em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+</style>
