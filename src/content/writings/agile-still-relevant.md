@@ -6,6 +6,7 @@ summary: "It has been surprisingly common to see critique towards agile lately. 
 updates:
   - date: "2025.01.19"
     text: "I Modified the text a lot and removed parts not relevant to main point."
+mastodon: "116410776777708335"
 ---
 
 ## Agile is a mindset to survive in a complex environment

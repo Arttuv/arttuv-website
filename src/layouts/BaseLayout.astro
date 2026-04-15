@@ -43,6 +43,7 @@ const ogImage = new URL("/images/og-default.png", Astro.site)
   <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:logo" content={new URL("/favicon.svg", Astro.site)} />
   {ogType === "article" && publishedDate && (
     <meta property="article:published_time" content={publishedDate} />
   )}
