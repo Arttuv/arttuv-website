@@ -5,7 +5,7 @@ import ArticleCard from "../../components/ArticleCard.astro"
 import { getCollection } from "astro:content"
 const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const title = "Writings"
-const description = "A collection of my writings."
+const description = "Articles on software development, team leadership, human-computer interaction, and agile processes by Arttu Viljakainen."
 ---
 <BaseLayout title={title} description={description}>
   <div class="writings-container">

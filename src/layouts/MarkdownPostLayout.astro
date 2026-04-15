@@ -24,7 +24,29 @@ const body = post.body ?? '';
 const wordCount = body.split(/\s+/).filter(Boolean).length;
 const readingTime = Math.max(1, Math.round(wordCount / 220));
 ---
-<BaseLayout title={post.data.title} description={post.data.summary}>
+<BaseLayout title={post.data.title} description={post.data.summary} ogType="article" publishedDate={new Date(post.data.pubDate).toISOString()} tags={post.data.tags}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.data.title,
+    "description": post.data.summary,
+    "datePublished": new Date(post.data.pubDate).toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": "Arttu Viljakainen",
+      "url": "https://arttuv.com/author"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Arttu Viljakainen"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://arttuv.com/writings/${post.id}/`
+    },
+    "wordCount": wordCount,
+    ...(post.data.tags ? { "keywords": post.data.tags.join(", ") } : {})
+  })} />
   <ReadingProgress tagColor={tagColor} />
   <article class="blog-post" style={`--tag-color: ${tagColor}`}>
     {post.data.tags && post.data.tags.length > 0 && (
