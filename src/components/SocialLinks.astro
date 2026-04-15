@@ -12,7 +12,7 @@ const { size = "24px", showLabels = false } = Astro.props;
 ---
 
 <div class:list={["social-links", { "social-links--labeled": showLabels }]}>
-  <a href="https://mastodon.social/@arttuv" aria-label="Link to Mastodon profile" class="social-link">
+  <a href="https://mastodon.social/@arttuv" rel="me" aria-label="Link to Mastodon profile" class="social-link">
     <MastodonIcon size={size} />
     {showLabels && <span class="social-label">Mastodon</span>}
   </a>
