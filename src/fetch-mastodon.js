@@ -67,7 +67,7 @@ async function updateData(instanceUrl, username) {
     writeFileSync(filePath, JSON.stringify(mergedById, null, 2));
 }
 
-const instanceUrl = 'scholar.social';
+const instanceUrl = 'mastodon.social';
 const username = 'arttuv';
 
 updateData(instanceUrl, username);

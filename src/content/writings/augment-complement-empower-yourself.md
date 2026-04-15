@@ -4,6 +4,7 @@ title: "Augment, Complement and Empower Yourself"
 summary: "LLMs are helpful and should be used with intent. Use them as tools to enhance your
 abilities while deliberately maintaining the fundamental skills you need to perform when the automation fails."
 tags: ["hci"]
+mastodon: "116409444243256293"
 ---
 LLMs seem to be helpful, but how should we use them? It is already known from the studies on automation that using automation will change us and our work. LLMs are much more advanced tools than traditional automation, but I think human factors and human-computer interaction studies regarding automation will help us predict what kind of changes we'll experience. 
 

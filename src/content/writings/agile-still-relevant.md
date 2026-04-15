@@ -2,7 +2,6 @@
 pubDate: "2024-07-22"
 title: "Agile - Still Relevant"
 tags: ["dev"]
-mastodon: "112840282925802410"
 summary: "It has been surprisingly common to see critique towards agile lately. I find it a bit odd, having seen the waterfall world and how much more humane agile has been. It can be easy to overlook how fundamental agile principles remain for surviving fast-paced, complex software projects."
 updates:
   - date: "2025.01.19"

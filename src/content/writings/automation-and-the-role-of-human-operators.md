@@ -3,6 +3,7 @@ pubDate: "2019-06-28"
 title: "Automation and the role of human operators"
 tags: ["hci"]
 summary: "How increasing automation shifts human operators from active participants to system supervisors — and why that creates serious problems in security-critical domains."
+mastodon: "116409422988724672"
 ---
 Automation and analytics are a good means to improve operator and overall system performance. The ever-increasing amount of data means that in many situations human operators are no longer able to keep up with the pace, and using software to help is a must. 
 

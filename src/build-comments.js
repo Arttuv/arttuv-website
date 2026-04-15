@@ -1,7 +1,7 @@
 import { writeFile, readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 
-const instanceUrl = 'scholar.social';
+const instanceUrl = 'mastodon.social';
 const username = 'arttuv';
 
 const filePath = join('src/external-data/', `${instanceUrl}-${username}.json`);
