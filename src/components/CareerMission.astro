@@ -1,0 +1,665 @@
+---
+/**
+ * Space mission career timeline.
+ * A probe travels through celestial bodies (career milestones),
+ * orbiting each one — number of loops ≈ years spent there.
+ * Future trajectory shown as dotted line toward aspirational destinations.
+ */
+
+interface Milestone {
+  year: number;
+  endYear?: number; // when you left (used to calculate orbit loops)
+  label: string;
+  sublabel?: string;
+  size?: number; // planet radius
+}
+
+const past: Milestone[] = [
+  { year: 2006, endYear: 2010, label: "BSc", sublabel: "UEF — CS", size: 14 },
+  { year: 2008, endYear: 2008, label: "EFI", sublabel: "Trainee", size: 4 },
+  { year: 2010, endYear: 2012, label: "CGI", sublabel: "Integration engineer", size: 10 },
+  { year: 2010, endYear: 2012, label: "MSc", sublabel: "UEF — CS, psych, cogsci", size: 14 },
+  { year: 2013, endYear: 2014, label: "Suonentieto", sublabel: "Delphi developer", size: 9 },
+  { year: 2014, endYear: 2019, label: "Insta DefSec", sublabel: "Senior engineer & team lead", size: 20 },
+  { year: 2019, label: "Reaktor", sublabel: "Consultant", size: 26 },
+];
+
+const future: Milestone[] = [
+  { year: 2030, label: "PhD?", sublabel: "Teamwork research", size: 16 },
+  { year: 2033, label: "Write a book?", size: 14 },
+  { year: 2036, label: "Start a company?", size: 18 },
+];
+
+const currentYear = new Date().getFullYear();
+
+// Layout constants
+const SVG_W = 1240;
+const SVG_H = 420;
+const MARGIN_X = 60;
+const MARGIN_Y = 60;
+
+function displayMidpointYear(m: Milestone): number {
+  const endYear = m.endYear ?? currentYear;
+  return (m.year + endYear) / 2;
+}
+
+const allYears = [
+  ...past.flatMap((m) => [m.year, m.endYear ?? currentYear, displayMidpointYear(m)]),
+  ...future.map((m) => m.year),
+];
+const minYear = Math.min(...allYears) - 2;
+const maxYear = Math.max(...allYears) + 4;
+
+function yearToX(year: number): number {
+  return MARGIN_X + ((year - minYear) / (maxYear - minYear)) * (SVG_W - 2 * MARGIN_X);
+}
+
+// Alternating vertical positions so orbits don't overlap
+function yearToY(_year: number, i: number): number {
+  const base = SVG_H / 2;
+  const offsets = [-65, 30, -10, -95, -65, 30, -35, 45, -30];
+  return base + (offsets[i % offsets.length]);
+}
+
+// Compute years spent at each past milestone
+function yearsAt(m: Milestone): number {
+  if (m.endYear) return Math.max(1, m.endYear - m.year);
+  // Still there — use current year
+  return Math.max(1, currentYear - m.year);
+}
+
+function pointOnEllipse(
+  cx: number,
+  cy: number,
+  rx: number,
+  ry: number,
+  rotationDeg: number,
+  t: number,
+) {
+  const rotation = rotationDeg * Math.PI / 180;
+  const x = rx * Math.cos(t);
+  const y = ry * Math.sin(t);
+
+  return {
+    x: cx + x * Math.cos(rotation) - y * Math.sin(rotation),
+    y: cy + x * Math.sin(rotation) + y * Math.cos(rotation),
+  };
+}
+
+function tangentOnEllipse(
+  rx: number,
+  ry: number,
+  rotationDeg: number,
+  t: number,
+) {
+  const rotation = rotationDeg * Math.PI / 180;
+  const dx = -rx * Math.sin(t);
+  const dy = ry * Math.cos(t);
+
+  return {
+    x: dx * Math.cos(rotation) - dy * Math.sin(rotation),
+    y: dx * Math.sin(rotation) + dy * Math.cos(rotation),
+  };
+}
+
+function toLocalVector(
+  vector: { x: number; y: number },
+  rotationDeg: number,
+) {
+  const rotation = rotationDeg * Math.PI / 180;
+  return {
+    x: vector.x * Math.cos(rotation) + vector.y * Math.sin(rotation),
+    y: -vector.x * Math.sin(rotation) + vector.y * Math.cos(rotation),
+  };
+}
+
+function orientVector(
+  vector: { x: number; y: number },
+  toward: { x: number; y: number },
+) {
+  const dot = vector.x * toward.x + vector.y * toward.y;
+  return dot >= 0 ? vector : { x: -vector.x, y: -vector.y };
+}
+
+function normalizeVector(vector: { x: number; y: number }) {
+  const length = Math.hypot(vector.x, vector.y) || 1;
+  return {
+    x: vector.x / length,
+    y: vector.y / length,
+  };
+}
+
+function tangentAlongOrbit(
+  rx: number,
+  ry: number,
+  rotationDeg: number,
+  t: number,
+  sweepDir: 1 | -1,
+) {
+  const tangent = tangentOnEllipse(rx, ry, rotationDeg, t);
+  return sweepDir === 1 ? tangent : { x: -tangent.x, y: -tangent.y };
+}
+
+function angleForTravelDirection(
+  rx: number,
+  ry: number,
+  rotationDeg: number,
+  desiredDirection: { x: number; y: number },
+  sweepDir: 1 | -1,
+) {
+  const local = toLocalVector(desiredDirection, rotationDeg);
+  const base = Math.atan2(-ry * local.x, rx * local.y);
+  const candidates = [base, base + Math.PI];
+
+  return candidates.reduce((best, candidate) => {
+    const tangent = normalizeVector(tangentAlongOrbit(rx, ry, rotationDeg, candidate, sweepDir));
+    const desired = normalizeVector(desiredDirection);
+    const score = tangent.x * desired.x + tangent.y * desired.y;
+    const bestTangent = normalizeVector(tangentAlongOrbit(rx, ry, rotationDeg, best, sweepDir));
+    const bestScore = bestTangent.x * desired.x + bestTangent.y * desired.y;
+    return score > bestScore ? candidate : best;
+  }, candidates[0]);
+}
+
+function buildConnectorCommand(
+  start: { x: number; y: number },
+  end: { x: number; y: number },
+  startTangent?: { x: number; y: number },
+  endTangent?: { x: number; y: number },
+) {
+  const delta = { x: end.x - start.x, y: end.y - start.y };
+  const distance = Math.hypot(delta.x, delta.y);
+  const handle = Math.min(70, Math.max(26, distance * 0.32));
+
+  const startDirection = normalizeVector(
+    orientVector(startTangent ?? { x: delta.x, y: 0 }, delta),
+  );
+  const endDirection = normalizeVector(
+    orientVector(endTangent ?? { x: delta.x, y: 0 }, { x: -delta.x, y: -delta.y }),
+  );
+
+  const cp1 = {
+    x: start.x + startDirection.x * handle,
+    y: start.y + startDirection.y * handle,
+  };
+  const cp2 = {
+    x: end.x + endDirection.x * handle,
+    y: end.y + endDirection.y * handle,
+  };
+
+  return ` C ${cp1.x.toFixed(1)} ${cp1.y.toFixed(1)}, ${cp2.x.toFixed(1)} ${cp2.y.toFixed(1)}, ${end.x.toFixed(1)} ${end.y.toFixed(1)}`;
+}
+
+function buildOrbitCommand(
+  cx: number,
+  cy: number,
+  rx: number,
+  ry: number,
+  rotationDeg: number,
+  fromT: number,
+  toT: number,
+  sweepDir: 1 | -1,
+) {
+  const totalDelta = toT - fromT;
+  const arcChunk = Math.PI / 2;
+  const steps = Math.max(1, Math.ceil(Math.abs(totalDelta) / arcChunk));
+  let d = "";
+
+  for (let i = 1; i <= steps; i++) {
+    const t = fromT + (totalDelta * i) / steps;
+    const point = pointOnEllipse(cx, cy, rx, ry, rotationDeg, t);
+    d += ` A ${rx.toFixed(1)} ${ry.toFixed(1)} ${rotationDeg} 0 ${sweepDir === 1 ? 1 : 0} ${point.x.toFixed(1)} ${point.y.toFixed(1)}`;
+  }
+
+  return d;
+}
+
+function estimateLabelWidth(label: string, sublabel?: string) {
+  const titleWidth = label.length * 7.2;
+  const subtitleWidth = sublabel ? sublabel.length * 5.2 : 0;
+  return Math.max(56, Math.max(titleWidth, subtitleWidth) + 18);
+}
+
+function estimateLabelHeight(sublabel?: string) {
+  return sublabel ? 28 : 16;
+}
+
+const launchPoint = { x: MARGIN_X - 20, y: SVG_H / 2 };
+
+const basePastPoints = past.map((m, i) => {
+  const loops = yearsAt(m);
+  const orbitCount = Math.min(loops, 7);
+  const tilt = i % 2 === 0 ? -18 : 18;
+  const startX = yearToX(m.year);
+  const endX = yearToX(m.endYear ?? currentYear);
+  const tenureHalfSpanX = Math.abs(endX - startX) / 2;
+  const minimumClearance = (m.size || 12) * 1.7 + 18;
+  const orbitRx = Math.max(minimumClearance, tenureHalfSpanX * 1.04);
+  const orbitRy = orbitRx * 0.44;
+  const midpointYear = displayMidpointYear(m);
+
+  return {
+    x: yearToX(midpointYear),
+    y: yearToY(m.year, i),
+    loops,
+    orbitCount,
+    orbitRx,
+    orbitRy,
+    tilt,
+    midpointYear,
+    ...m,
+  };
+});
+
+const futurePoints = future.map((m, i) => ({
+  x: yearToX(m.year),
+  y: yearToY(m.year, past.length + i),
+  ...m,
+}));
+
+const firstFuture = futurePoints[0];
+
+const pastPoints = basePastPoints.map((point, index) => {
+  const previousAnchor = index === 0 ? launchPoint : { x: basePastPoints[index - 1].x, y: basePastPoints[index - 1].y };
+  const nextAnchor = index === basePastPoints.length - 1
+    ? { x: firstFuture.x, y: firstFuture.y }
+    : { x: basePastPoints[index + 1].x, y: basePastPoints[index + 1].y };
+  const incomingDirection = { x: point.x - previousAnchor.x, y: point.y - previousAnchor.y };
+  const outgoingDirection = { x: nextAnchor.x - point.x, y: nextAnchor.y - point.y };
+  const sweepDir = (index % 2 === 0 ? 1 : -1) as 1 | -1;
+  const entryT = angleForTravelDirection(point.orbitRx, point.orbitRy, point.tilt, incomingDirection, sweepDir);
+  let exitT = angleForTravelDirection(point.orbitRx, point.orbitRy, point.tilt, outgoingDirection, sweepDir);
+
+  if (sweepDir === 1) {
+    while (exitT <= entryT) {
+      exitT += Math.PI * 2;
+    }
+    exitT += Math.max(0, point.orbitCount - 1) * Math.PI * 2;
+  } else {
+    while (exitT >= entryT) {
+      exitT -= Math.PI * 2;
+    }
+    exitT -= Math.max(0, point.orbitCount - 1) * Math.PI * 2;
+  }
+
+  const isCurrent = !point.endYear;
+
+  return {
+    ...point,
+    isCurrent,
+    sweepDir,
+    entryT,
+    exitT,
+    entry: pointOnEllipse(point.x, point.y, point.orbitRx, point.orbitRy, point.tilt, entryT),
+    exit: pointOnEllipse(point.x, point.y, point.orbitRx, point.orbitRy, point.tilt, exitT),
+    entryTangent: tangentAlongOrbit(point.orbitRx, point.orbitRy, point.tilt, entryT, sweepDir),
+    exitTangent: tangentAlongOrbit(point.orbitRx, point.orbitRy, point.tilt, exitT, sweepDir),
+  };
+});
+
+const currentStop = pastPoints.findLast((point) => point.isCurrent) ?? pastPoints[pastPoints.length - 1];
+const nowX = currentStop.exit.x;
+const nowY = currentStop.exit.y;
+
+let trajectoryPath = `M ${launchPoint.x.toFixed(1)} ${launchPoint.y.toFixed(1)}`;
+let previousPoint = launchPoint;
+let previousTangent = { x: 1, y: 0 };
+
+pastPoints.forEach((point) => {
+  trajectoryPath += buildConnectorCommand(previousPoint, point.entry, previousTangent, point.entryTangent);
+  trajectoryPath += buildOrbitCommand(
+    point.x,
+    point.y,
+    point.orbitRx,
+    point.orbitRy,
+    point.tilt,
+    point.entryT,
+    point.exitT,
+    point.sweepDir,
+  );
+  previousPoint = point.exit;
+  previousTangent = point.exitTangent;
+});
+
+// Build future connecting path (dotted)
+function buildSmoothPath(points: {x: number, y: number}[]): string {
+  if (points.length < 2) return '';
+  let d = `M ${points[0].x} ${points[0].y}`;
+  for (let i = 1; i < points.length; i++) {
+    const prev = points[i - 1];
+    const curr = points[i];
+    const cpx1 = prev.x + (curr.x - prev.x) * 0.5;
+    const cpx2 = prev.x + (curr.x - prev.x) * 0.5;
+    d += ` C ${cpx1} ${prev.y}, ${cpx2} ${curr.y}, ${curr.x} ${curr.y}`;
+  }
+  return d;
+}
+
+const futurePath = buildSmoothPath([{ x: nowX, y: nowY }, ...futurePoints]);
+
+// Planet colors from Bauhaus palette
+const PLANET_COLORS = ['#E03A3E', '#F5821F', '#FDB827', '#61BB46', '#009DDC', '#963D97'];
+const FUTURE_COLORS = ['#009DDC', '#61BB46', '#963D97'];
+---
+
+<div class="mission-timeline" aria-label="Career mission timeline">
+  <div class="mission-header">
+    <span class="mission-designation">CAREER TRAJECTORY</span>
+    <span class="mission-subtitle">From {minYear + 2} to deep future</span>
+    <span class="mission-legend"></span>
+  </div>
+  <svg
+    class="mission-svg"
+    viewBox={`0 0 ${SVG_W} ${SVG_H}`}
+    preserveAspectRatio="xMidYMid meet"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <!-- Grid lines -->
+    {Array.from({ length: Math.floor((maxYear - minYear) / 5) + 1 }, (_, i) => {
+      const roundedYear = Math.ceil(minYear / 5) * 5 + i * 5;
+      if (roundedYear > maxYear) return null;
+      const x = yearToX(roundedYear);
+      return (
+        <g>
+          <line x1={x} y1={MARGIN_Y - 10} x2={x} y2={SVG_H - MARGIN_Y + 20}
+            stroke="currentColor" stroke-width="0.5" opacity="0.12" />
+          <text x={x} y={SVG_H - MARGIN_Y + 35} text-anchor="middle"
+            class="mission-year-label">{roundedYear}</text>
+        </g>
+      );
+    })}
+
+    <!-- Continuous trajectory -->
+    <path d={trajectoryPath} fill="none" stroke="#F5821F" stroke-width="2.2" opacity="0.85" stroke-linecap="round" stroke-linejoin="round" />
+    <path d={trajectoryPath} fill="none" stroke="#F5821F" stroke-width="6" opacity="0.08" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Future trajectory (dotted line) -->
+    <path d={futurePath} fill="none" stroke="#009DDC" stroke-width="2"
+      stroke-dasharray="8 6" opacity="0.5" />
+    <path d={futurePath} fill="none" stroke="#009DDC" stroke-width="6"
+      opacity="0.05" />
+
+    <!-- Past milestone planets (drawn on top of paths) -->
+    {pastPoints.map((p, i) => {
+      const color = PLANET_COLORS[i % PLANET_COLORS.length];
+      const r = p.size || 12;
+      const labelAbove = p.y < SVG_H / 2; // label goes away from center
+      const labelY = labelAbove ? p.y - r - 30 : p.y + r + 25;
+      const subLabelY = labelAbove ? labelY + 13 : labelY + 13;
+      const labelWidth = estimateLabelWidth(p.label, p.sublabel);
+      const labelHeight = estimateLabelHeight(p.sublabel);
+      const labelTop = labelY - 11;
+      return (
+        <g class="milestone-planet">
+          {/* Orbit rings: one ring roughly per year spent */}
+          {Array.from({ length: p.orbitCount }, (_, ringIndex) => {
+            const ringRx = p.orbitRx - ringIndex * 3.5;
+            const ringRy = p.orbitRy - ringIndex * 1.6;
+            return (
+              <ellipse
+                cx={p.x}
+                cy={p.y}
+                rx={ringRx}
+                ry={ringRy}
+                fill="none"
+                stroke="#F5821F"
+                stroke-width={ringIndex === 0 ? "1.6" : "1.1"}
+                opacity={ringIndex === 0 ? "0.55" : "0.28"}
+                transform={`rotate(${p.tilt}, ${p.x}, ${p.y})`}
+              />
+            );
+          })}
+          {/* Planet body */}
+          <circle cx={p.x} cy={p.y} r={r} fill={color} stroke="currentColor" stroke-width="0.7" opacity="0.9" />
+          <rect
+            x={p.x - labelWidth / 2}
+            y={labelTop}
+            width={labelWidth}
+            height={labelHeight}
+            rx="7"
+            class="mission-label-backdrop"
+            style={`--label-accent: ${color}`}
+          />
+          {/* Label */}
+          <text x={p.x} y={labelY} text-anchor="middle"
+            class="mission-label">{p.label}</text>
+          <text x={p.x} y={subLabelY} text-anchor="middle"
+            class="mission-sublabel">{p.sublabel}</text>
+        </g>
+      );
+    })}
+
+    <!-- Current position: the probe -->
+    <g class="probe-group">
+      {/* Probe signal rings */}
+      <circle cx={nowX} cy={nowY} r="12" fill="none" stroke="#F5821F"
+        stroke-width="1" opacity="0.3" class="probe-signal probe-signal-1" />
+      <circle cx={nowX} cy={nowY} r="20" fill="none" stroke="#F5821F"
+        stroke-width="0.5" opacity="0.15" class="probe-signal probe-signal-2" />
+      {/* Probe body */}
+      <polygon
+        points={`${nowX},${nowY - 8} ${nowX + 5},${nowY + 4} ${nowX - 5},${nowY + 4}`}
+        fill="#F5821F" stroke="#FDB827" stroke-width="1" />
+      {/* Solar panels */}
+      <rect x={nowX - 14} y={nowY - 2} width="8" height="4" fill="#009DDC" opacity="0.7" rx="1" />
+      <rect x={nowX + 6} y={nowY - 2} width="8" height="4" fill="#009DDC" opacity="0.7" rx="1" />
+      {/* NOW label */}
+      <text x={nowX} y={nowY + 22} text-anchor="middle"
+        class="mission-now-label">{currentYear}</text>
+    </g>
+
+    <!-- Future destination planets -->
+    {futurePoints.map((p, i) => {
+      const color = FUTURE_COLORS[i % FUTURE_COLORS.length];
+      const r = p.size || 12;
+      const labelAbove = p.y > SVG_H / 2;
+      const labelY = labelAbove ? p.y - r - 10 : p.y + r + 18;
+      const subLabelY = labelAbove ? labelY + 13 : labelY + 13;
+      const labelWidth = estimateLabelWidth(p.label, p.sublabel);
+      const labelHeight = estimateLabelHeight(p.sublabel);
+      const labelTop = labelY - 11;
+      return (
+        <g class="milestone-planet future-planet">
+          <circle cx={p.x} cy={p.y} r={r} fill="none"
+            stroke={color} stroke-width="1.5" opacity="0.55" stroke-dasharray="4 3" />
+          <rect
+            x={p.x - labelWidth / 2}
+            y={labelTop}
+            width={labelWidth}
+            height={labelHeight}
+            rx="7"
+            class="mission-label-backdrop mission-label-backdrop--future"
+            style={`--label-accent: ${color}`}
+          />
+          {/* Label */}
+          <text x={p.x} y={labelY} text-anchor="middle"
+            class="mission-label mission-label--future">{p.label}</text>
+          {p.sublabel && (
+            <text x={p.x} y={subLabelY} text-anchor="middle"
+              class="mission-sublabel mission-sublabel--future">{p.sublabel}</text>
+          )}
+        </g>
+      );
+    })}
+
+    <!-- Decorative stars -->
+    {Array.from({ length: 30 }, (_, i) => {
+      const sx = 20 + (i * 137.5 + i * i * 7) % (SVG_W - 40);
+      const sy = 10 + (i * 89.3 + i * 11) % (SVG_H - 20);
+      const sr = 0.5 + (i % 3) * 0.5;
+      return <circle cx={sx} cy={sy} r={sr} fill="currentColor" opacity={0.1 + (i % 4) * 0.05} class="star" />;
+    })}
+  </svg>
+</div>
+
+<style>
+  .mission-timeline {
+    width: min(1100px, calc(100vw - 2rem));
+    max-width: none;
+    margin: 2rem 0;
+    opacity: 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .mission-timeline.visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  .mission-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    gap: 0.15rem;
+  }
+
+  .mission-designation {
+    font-family: var(--font-condensed);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .mission-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
+    color: var(--color-muted);
+    opacity: 0.7;
+  }
+
+  .mission-legend {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.03em;
+    color: var(--color-muted);
+    opacity: 0.6;
+  }
+
+  .mission-svg {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    color: var(--color-text);
+  }
+
+  .mission-year-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    fill: currentColor;
+    opacity: 0.3;
+  }
+
+  .mission-label {
+    font-family: var(--font-condensed);
+    font-size: 12px;
+    font-weight: 700;
+    fill: currentColor;
+    letter-spacing: 0.03em;
+  }
+
+  .mission-label-backdrop {
+    fill: color-mix(in srgb, var(--label-accent) 16%, var(--color-bg));
+    stroke: color-mix(in srgb, var(--label-accent) 45%, var(--color-text));
+    stroke-width: 0.8;
+  }
+
+  .mission-label-backdrop--future {
+    fill: color-mix(in srgb, var(--label-accent) 12%, var(--color-bg));
+    stroke: color-mix(in srgb, var(--label-accent) 35%, var(--color-text));
+  }
+
+  .mission-label--future {
+    opacity: 0.5;
+    font-style: italic;
+  }
+
+  .mission-sublabel {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    fill: currentColor;
+    opacity: 0.45;
+  }
+
+  .mission-sublabel--future {
+    opacity: 0.3;
+  }
+
+  .mission-now-label {
+    font-family: var(--font-condensed);
+    font-size: 11px;
+    font-weight: 700;
+    fill: #F5821F;
+    letter-spacing: 0.1em;
+  }
+
+  /* Probe signal animation */
+  .probe-signal {
+    animation: probeSignal 3s ease-out infinite;
+  }
+
+  .probe-signal-2 {
+    animation-delay: 1.5s;
+  }
+
+  @keyframes probeSignal {
+    0% { r: 8; opacity: 0.4; }
+    100% { r: 28; opacity: 0; }
+  }
+
+  /* Star twinkle */
+  .star {
+    animation: twinkle 4s ease-in-out infinite alternate;
+  }
+
+  .star:nth-child(odd) {
+    animation-delay: -2s;
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 0.05; }
+    100% { opacity: 0.2; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .probe-signal,
+    .star {
+      animation: none !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .mission-label { font-size: 10px; }
+    .mission-sublabel { font-size: 7px; }
+    .mission-year-label { font-size: 9px; }
+  }
+</style>
+
+<script>
+  function initMissionTimeline() {
+    const timelines = document.querySelectorAll('.mission-timeline');
+    if (!timelines.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      }
+    }, { threshold: 0.2 });
+
+    timelines.forEach(t => {
+      t.classList.remove('visible');
+      observer.observe(t);
+    });
+  }
+
+  document.addEventListener('astro:page-load', initMissionTimeline);
+</script>
