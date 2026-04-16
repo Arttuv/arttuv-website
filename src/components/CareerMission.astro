@@ -26,8 +26,8 @@ const past: Milestone[] = [
 
 const future: Milestone[] = [
   { year: 2030, label: "PhD?", sublabel: "Teamwork research", size: 16 },
-  { year: 2033, label: "Write a book?", size: 14 },
-  { year: 2036, label: "Start a company?", size: 18 },
+  { year: 2033, label: "Write a book?", sublabel: "...on something", size: 14 },
+  { year: 2036, label: "Start a company?", sublabel: "Egalitarianism and research", size: 18 },
 ];
 
 const currentYear = new Date().getFullYear();
@@ -340,6 +340,121 @@ const futurePath = buildSmoothPath([{ x: nowX, y: nowY }, ...futurePoints]);
 // Planet colors from Bauhaus palette
 const PLANET_COLORS = ['#E03A3E', '#F5821F', '#FDB827', '#61BB46', '#009DDC', '#963D97'];
 const FUTURE_COLORS = ['#009DDC', '#61BB46', '#963D97'];
+
+const MOBILE_W = SVG_H;
+const MOBILE_H = SVG_W;
+
+function toMobileCoords(x: number, y: number) {
+  return {
+    x: SVG_H - y,
+    y: x,
+  };
+}
+
+function clamp(value: number, min: number, max: number) {
+  return Math.max(min, Math.min(max, value));
+}
+
+function layoutMobileLabels<T extends {
+  mobileY: number;
+  mobileLabelHeight: number;
+  mobilePreferRight: boolean;
+}>(points: T[]) {
+  const topPadding = 10;
+  const bottomPadding = 10;
+  const gap = 8;
+
+  function layoutSide(items: T[]) {
+    const sorted = [...items].sort((a, b) => a.mobileY - b.mobileY);
+    const tops = new Map<T, number>();
+    let cursor = topPadding;
+
+    for (const item of sorted) {
+      const desiredTop = item.mobileY - item.mobileLabelHeight / 2;
+      const top = Math.max(desiredTop, cursor);
+      tops.set(item, top);
+      cursor = top + item.mobileLabelHeight + gap;
+    }
+
+    let nextTopLimit = MOBILE_H - bottomPadding;
+    for (let i = sorted.length - 1; i >= 0; i--) {
+      const item = sorted[i];
+      const currentTop = tops.get(item) ?? topPadding;
+      const maxTop = nextTopLimit - item.mobileLabelHeight;
+      const adjustedTop = Math.min(currentTop, maxTop);
+      tops.set(item, adjustedTop);
+      nextTopLimit = adjustedTop - gap;
+    }
+
+    cursor = topPadding;
+    for (const item of sorted) {
+      const currentTop = tops.get(item) ?? topPadding;
+      const top = Math.max(currentTop, cursor);
+      tops.set(item, top);
+      cursor = top + item.mobileLabelHeight + gap;
+    }
+
+    return sorted.map((item) => ({
+      ...item,
+      mobileLabelTop: tops.get(item) ?? (item.mobileY - item.mobileLabelHeight / 2),
+      mobileLabelCenterY: (tops.get(item) ?? (item.mobileY - item.mobileLabelHeight / 2)) + item.mobileLabelHeight / 2,
+    }));
+  }
+
+  return [
+    ...layoutSide(points.filter((point) => point.mobilePreferRight)),
+    ...layoutSide(points.filter((point) => !point.mobilePreferRight)),
+  ];
+}
+
+const mobilePastBase = pastPoints.map((p, i) => {
+  const mobile = toMobileCoords(p.x, p.y);
+  const color = PLANET_COLORS[i % PLANET_COLORS.length];
+  const labelWidth = Math.min(160, estimateLabelWidth(p.label, p.sublabel));
+  const labelHeight = estimateLabelHeight(p.sublabel) + 2;
+  const preferRight = mobile.x < MOBILE_W * 0.5;
+  const rawCenterX = preferRight
+    ? mobile.x + p.orbitRy + 22 + labelWidth / 2
+    : mobile.x - p.orbitRy - 22 - labelWidth / 2;
+
+  return {
+    ...p,
+    color,
+    mobileX: mobile.x,
+    mobileY: mobile.y,
+    mobilePreferRight: preferRight,
+    mobileLabelWidth: labelWidth,
+    mobileLabelHeight: labelHeight,
+    mobileLabelCenterX: clamp(rawCenterX, labelWidth / 2 + 8, MOBILE_W - labelWidth / 2 - 8),
+  };
+});
+
+const mobileFutureBase = futurePoints.map((p, i) => {
+  const mobile = toMobileCoords(p.x, p.y);
+  const color = FUTURE_COLORS[i % FUTURE_COLORS.length];
+  const labelWidth = Math.min(150, estimateLabelWidth(p.label, p.sublabel));
+  const labelHeight = estimateLabelHeight(p.sublabel) + 2;
+  const preferRight = mobile.x < MOBILE_W * 0.5;
+  const rawCenterX = preferRight
+    ? mobile.x + (p.size || 12) + 22 + labelWidth / 2
+    : mobile.x - (p.size || 12) - 22 - labelWidth / 2;
+
+  return {
+    ...p,
+    color,
+    mobileX: mobile.x,
+    mobileY: mobile.y,
+    mobilePreferRight: preferRight,
+    mobileLabelWidth: labelWidth,
+    mobileLabelHeight: labelHeight,
+    mobileLabelCenterX: clamp(rawCenterX, labelWidth / 2 + 8, MOBILE_W - labelWidth / 2 - 8),
+  };
+});
+
+const mobilePastPoints = layoutMobileLabels(mobilePastBase);
+const mobileFuturePoints = layoutMobileLabels(mobileFutureBase);
+
+const mobileNow = toMobileCoords(nowX, nowY);
 ---
 
 <div class="mission-timeline" aria-label="Career mission timeline">
@@ -349,7 +464,7 @@ const FUTURE_COLORS = ['#009DDC', '#61BB46', '#963D97'];
     <span class="mission-legend"></span>
   </div>
   <svg
-    class="mission-svg"
+    class="mission-svg mission-svg--desktop"
     viewBox={`0 0 ${SVG_W} ${SVG_H}`}
     preserveAspectRatio="xMidYMid meet"
     xmlns="http://www.w3.org/2000/svg"
@@ -490,6 +605,159 @@ const FUTURE_COLORS = ['#009DDC', '#61BB46', '#963D97'];
       return <circle cx={sx} cy={sy} r={sr} fill="currentColor" opacity={0.1 + (i % 4) * 0.05} class="star" />;
     })}
   </svg>
+
+  <svg
+    class="mission-svg mission-svg--mobile"
+    viewBox={`0 0 ${MOBILE_W} ${MOBILE_H}`}
+    preserveAspectRatio="xMidYMid meet"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {Array.from({ length: Math.floor((maxYear - minYear) / 5) + 1 }, (_, i) => {
+      const roundedYear = Math.ceil(minYear / 5) * 5 + i * 5;
+      if (roundedYear > maxYear) return null;
+      const y = yearToX(roundedYear);
+      return (
+        <g>
+          <line x1="46" y1={y} x2={MOBILE_W - 18} y2={y}
+            stroke="currentColor" stroke-width="0.5" opacity="0.1" />
+          <text x="20" y={y + 4} text-anchor="middle" class="mission-year-label mission-year-label--mobile">{roundedYear}</text>
+        </g>
+      );
+    })}
+
+    <g transform={`translate(${SVG_H} 0) rotate(90)`}>
+      <path d={trajectoryPath} fill="none" stroke="#F5821F" stroke-width="2.2" opacity="0.85" stroke-linecap="round" stroke-linejoin="round" />
+      <path d={trajectoryPath} fill="none" stroke="#F5821F" stroke-width="6" opacity="0.08" stroke-linecap="round" stroke-linejoin="round" />
+
+      <path d={futurePath} fill="none" stroke="#009DDC" stroke-width="2"
+        stroke-dasharray="8 6" opacity="0.5" />
+      <path d={futurePath} fill="none" stroke="#009DDC" stroke-width="6"
+        opacity="0.05" />
+
+      {pastPoints.map((p, i) => {
+        const color = PLANET_COLORS[i % PLANET_COLORS.length];
+        const r = p.size || 12;
+        return (
+          <g>
+            {Array.from({ length: p.orbitCount }, (_, ringIndex) => {
+              const ringRx = p.orbitRx - ringIndex * 3.5;
+              const ringRy = p.orbitRy - ringIndex * 1.6;
+              return (
+                <ellipse
+                  cx={p.x}
+                  cy={p.y}
+                  rx={ringRx}
+                  ry={ringRy}
+                  fill="none"
+                  stroke="#F5821F"
+                  stroke-width={ringIndex === 0 ? "1.6" : "1.1"}
+                  opacity={ringIndex === 0 ? "0.55" : "0.28"}
+                  transform={`rotate(${p.tilt}, ${p.x}, ${p.y})`}
+                />
+              );
+            })}
+            <circle cx={p.x} cy={p.y} r={r} fill={color} stroke="currentColor" stroke-width="0.7" opacity="0.9" />
+          </g>
+        );
+      })}
+
+      <g class="probe-group">
+        <circle cx={nowX} cy={nowY} r="12" fill="none" stroke="#F5821F"
+          stroke-width="1" opacity="0.3" class="probe-signal probe-signal-1" />
+        <circle cx={nowX} cy={nowY} r="20" fill="none" stroke="#F5821F"
+          stroke-width="0.5" opacity="0.15" class="probe-signal probe-signal-2" />
+        <polygon
+          points={`${nowX},${nowY - 8} ${nowX + 5},${nowY + 4} ${nowX - 5},${nowY + 4}`}
+          fill="#F5821F" stroke="#FDB827" stroke-width="1" />
+        <rect x={nowX - 14} y={nowY - 2} width="8" height="4" fill="#009DDC" opacity="0.7" rx="1" />
+        <rect x={nowX + 6} y={nowY - 2} width="8" height="4" fill="#009DDC" opacity="0.7" rx="1" />
+      </g>
+
+      {futurePoints.map((p, i) => {
+        const color = FUTURE_COLORS[i % FUTURE_COLORS.length];
+        const r = p.size || 12;
+        return (
+          <circle cx={p.x} cy={p.y} r={r} fill="none"
+            stroke={color} stroke-width="1.5" opacity="0.55" stroke-dasharray="4 3" />
+        );
+      })}
+
+      {Array.from({ length: 30 }, (_, i) => {
+        const sx = 20 + (i * 137.5 + i * i * 7) % (SVG_W - 40);
+        const sy = 10 + (i * 89.3 + i * 11) % (SVG_H - 20);
+        const sr = 0.5 + (i % 3) * 0.5;
+        return <circle cx={sx} cy={sy} r={sr} fill="currentColor" opacity={0.1 + (i % 4) * 0.05} class="star" />;
+      })}
+    </g>
+
+    {mobilePastPoints.map((p) => {
+      const labelY = p.mobileLabelCenterY - 3;
+      const subLabelY = labelY + 13;
+      const top = p.mobileLabelTop;
+      const leaderEndX = p.mobilePreferRight
+        ? p.mobileLabelCenterX - p.mobileLabelWidth / 2
+        : p.mobileLabelCenterX + p.mobileLabelWidth / 2;
+      return (
+        <g>
+          <line
+            x1={p.mobileX}
+            y1={p.mobileY}
+            x2={leaderEndX}
+            y2={p.mobileLabelCenterY}
+            class="mission-mobile-leader"
+            style={`--label-accent: ${p.color}`}
+          />
+          <rect
+            x={p.mobileLabelCenterX - p.mobileLabelWidth / 2}
+            y={top}
+            width={p.mobileLabelWidth}
+            height={p.mobileLabelHeight}
+            rx="7"
+            class="mission-label-backdrop"
+            style={`--label-accent: ${p.color}`}
+          />
+          <text x={p.mobileLabelCenterX} y={labelY} text-anchor="middle" class="mission-label">{p.label}</text>
+          <text x={p.mobileLabelCenterX} y={subLabelY} text-anchor="middle" class="mission-sublabel">{p.sublabel}</text>
+        </g>
+      );
+    })}
+
+    {mobileFuturePoints.map((p) => {
+      const labelY = p.mobileLabelCenterY - 3;
+      const subLabelY = labelY + 13;
+      const top = p.mobileLabelTop;
+      const leaderEndX = p.mobilePreferRight
+        ? p.mobileLabelCenterX - p.mobileLabelWidth / 2
+        : p.mobileLabelCenterX + p.mobileLabelWidth / 2;
+      return (
+        <g>
+          <line
+            x1={p.mobileX}
+            y1={p.mobileY}
+            x2={leaderEndX}
+            y2={p.mobileLabelCenterY}
+            class="mission-mobile-leader mission-mobile-leader--future"
+            style={`--label-accent: ${p.color}`}
+          />
+          <rect
+            x={p.mobileLabelCenterX - p.mobileLabelWidth / 2}
+            y={top}
+            width={p.mobileLabelWidth}
+            height={p.mobileLabelHeight}
+            rx="7"
+            class="mission-label-backdrop mission-label-backdrop--future"
+            style={`--label-accent: ${p.color}`}
+          />
+          <text x={p.mobileLabelCenterX} y={labelY} text-anchor="middle" class="mission-label mission-label--future">{p.label}</text>
+          {p.sublabel && (
+            <text x={p.mobileLabelCenterX} y={subLabelY} text-anchor="middle" class="mission-sublabel mission-sublabel--future">{p.sublabel}</text>
+          )}
+        </g>
+      );
+    })}
+
+    <text x={clamp(mobileNow.x + 28, 50, MOBILE_W - 24)} y={mobileNow.y + 4} text-anchor="middle" class="mission-now-label">{currentYear}</text>
+  </svg>
 </div>
 
 <style>
@@ -549,6 +817,10 @@ const FUTURE_COLORS = ['#009DDC', '#61BB46', '#963D97'];
     color: var(--color-text);
   }
 
+  .mission-svg--mobile {
+    display: none;
+  }
+
   .mission-year-label {
     font-family: var(--font-mono);
     font-size: 11px;
@@ -573,6 +845,17 @@ const FUTURE_COLORS = ['#009DDC', '#61BB46', '#963D97'];
   .mission-label-backdrop--future {
     fill: color-mix(in srgb, var(--label-accent) 12%, var(--color-bg));
     stroke: color-mix(in srgb, var(--label-accent) 35%, var(--color-text));
+  }
+
+  .mission-mobile-leader {
+    stroke: color-mix(in srgb, var(--label-accent) 65%, transparent);
+    stroke-width: 1;
+    opacity: 0.7;
+  }
+
+  .mission-mobile-leader--future {
+    stroke-dasharray: 3 2;
+    opacity: 0.55;
   }
 
   .mission-label--future {
@@ -635,9 +918,35 @@ const FUTURE_COLORS = ['#009DDC', '#61BB46', '#963D97'];
   }
 
   @media (max-width: 600px) {
+    .mission-timeline {
+      width: min(100%, 430px);
+      left: 0;
+      transform: translate(0, 10px);
+      margin: 1.5rem auto;
+    }
+
+    .mission-timeline.visible {
+      transform: translate(0, 0);
+    }
+
+    .mission-svg--desktop {
+      display: none;
+    }
+
+    .mission-svg--mobile {
+      display: block;
+      max-height: none;
+      min-height: 860px;
+    }
+
+    .mission-header {
+      margin-bottom: 0.85rem;
+    }
+
     .mission-label { font-size: 10px; }
     .mission-sublabel { font-size: 7px; }
     .mission-year-label { font-size: 9px; }
+    .mission-year-label--mobile { font-size: 8px; }
   }
 </style>
 
