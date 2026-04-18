@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /comments/
 
 Sitemap: https://arttuv.com/sitemap-index.xml

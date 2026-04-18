@@ -13,9 +13,10 @@ interface Props {
   ogType?: string;
   publishedDate?: string;
   tags?: string[];
+  robots?: string;
 }
 
-const { title, description, ogType = "website", publishedDate, tags } = Astro.props
+const { title, description, ogType = "website", publishedDate, tags, robots } = Astro.props
 const canonicalURL = Astro.url
 const siteName = "Arttu Viljakainen"
 const fullTitle = title === siteName ? title : `${title} | ${siteName}`
@@ -32,6 +33,7 @@ const ogImage = new URL("/images/og-default.png", Astro.site)
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
   <meta name="description" content={description} />
+  {robots && <meta name="robots" content={robots} />}
   <link rel="canonical" href={canonicalURL} />
 
   <!-- Open Graph -->

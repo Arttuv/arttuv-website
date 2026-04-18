@@ -2,11 +2,10 @@
 import { getCollection } from "astro:content"
 import BaseLayout from "../../layouts/BaseLayout.astro"
 import Comment from "../../components/Comment.astro"
-import FormattedDateTime from "../../components/FormattedDateTime.astro"
 const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 ---
 
-<BaseLayout title="Comments" description="">
+<BaseLayout title="Comments" description="Recent comments and Mastodon replies." robots="noindex,follow">
   <main>
     <section>
       <h1>Comments</h1>

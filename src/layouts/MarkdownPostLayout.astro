@@ -23,6 +23,26 @@ const { remarkPluginFrontmatter, headings } = await render(post);
 const body = post.body ?? '';
 const wordCount = body.split(/\s+/).filter(Boolean).length;
 const readingTime = Math.max(1, Math.round(wordCount / 220));
+const relatedPosts = (await getCollection("writings", (entry) => {
+    if (entry.id === post.id) {
+        return false;
+    }
+
+    const entryTags = entry.data.tags ?? [];
+    const postTags = post.data.tags ?? [];
+    return entryTags.some((tag) => postTags.includes(tag));
+}))
+    .sort((left, right) => {
+        const leftSharedTags = (left.data.tags ?? []).filter((tag) => (post.data.tags ?? []).includes(tag)).length;
+        const rightSharedTags = (right.data.tags ?? []).filter((tag) => (post.data.tags ?? []).includes(tag)).length;
+
+        if (leftSharedTags !== rightSharedTags) {
+            return rightSharedTags - leftSharedTags;
+        }
+
+        return right.data.pubDate.valueOf() - left.data.pubDate.valueOf();
+    })
+    .slice(0, 3);
 ---
 <BaseLayout title={post.data.title} description={post.data.summary} ogType="article" publishedDate={new Date(post.data.pubDate).toISOString()} tags={post.data.tags}>
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -95,6 +115,19 @@ const readingTime = Math.max(1, Math.round(wordCount / 220));
     <div class="writing-ending">•</div>
     {post.data.mastodon &&
       <Mastodon statusId={post.data.mastodon} />}
+        {relatedPosts.length > 0 && (
+            <aside class="related-posts" aria-labelledby="related-posts-heading">
+                <h2 id="related-posts-heading">Read More</h2>
+                <ul class="related-posts-list">
+                    {relatedPosts.map((relatedPost) => (
+                        <li>
+                            <a href={`/${relatedPost.collection}/${relatedPost.id}/`}>{relatedPost.data.title}</a>
+                            <FormattedDate date={new Date(relatedPost.data.pubDate)} />
+                        </li>
+                    ))}
+                </ul>
+            </aside>
+        )}
   </article>
 </BaseLayout>
 
@@ -106,6 +139,55 @@ const readingTime = Math.max(1, Math.round(wordCount / 220));
 
     .blog-post pre {
         overflow: scroll;
+    }
+
+    .blog-post .related-posts {
+            margin-top: 2.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid color-mix(in srgb, var(--tag-color, #212121) 22%, transparent);
+            opacity: 0.88;
+    }
+
+    .blog-post .related-posts h2 {
+        margin-top: 0;
+            margin-bottom: 0.75rem;
+            border-bottom: 0;
+            padding-bottom: 0;
+            font-size: 0.95rem;
+            font-variant: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-family: var(--font-condensed);
+            color: var(--color-muted);
+    }
+
+        .blog-post .related-posts-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .blog-post .related-posts-list li {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem 0.75rem;
+            align-items: baseline;
+        }
+
+        .blog-post .related-posts-list a {
+            text-decoration: none;
+        }
+
+        .blog-post .related-posts-list a:hover {
+            text-decoration: underline;
+        }
+
+        .blog-post .related-posts-list time {
+            margin: 0;
+            font-size: 0.72rem;
+            color: var(--color-muted);
     }
 
     .writing-notes {

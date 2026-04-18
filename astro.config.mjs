@@ -9,6 +9,6 @@ export default defineConfig({
     '/writings/agile-still-relevant-in-2024': '/writings/agile-still-relevant',
   },
   integrations: [sitemap({
-    filter: (page) => !page.startsWith('https://arttuv.com/comments/'),
+    filter: (page) => !page.startsWith('https://arttuv.com/comments/') && !page.startsWith('https://arttuv.com/tags/'),
   })]
 });

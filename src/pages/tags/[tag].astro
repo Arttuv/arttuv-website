@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 const { tag } = Astro.params
 const { posts } = Astro.props
 ---
-<BaseLayout title={`#${tag}`} description={`All posts tagged with ${tag}`}>
+<BaseLayout title={`#${tag}`} description={`All posts tagged with ${tag}`} robots="noindex,follow">
   <div class="writings-container">
     <h1>#{tag}</h1>
     <div class="writing-listing">

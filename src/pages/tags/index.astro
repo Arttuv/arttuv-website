@@ -6,7 +6,7 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
 const title = "Tag Index"
 const description = "Listing of all the tags used on this site."
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} robots="noindex,follow">
   <div class="tags">
     <ul>
       {tags.map((tag) => (
