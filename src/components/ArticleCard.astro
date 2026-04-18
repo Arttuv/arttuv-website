@@ -30,7 +30,7 @@ const cardClass = [
       {post.data.tags && post.data.tags.length > 0 && (
         <div class="card-tags">
           {post.data.tags.map(tag => (
-            <a href={`/tags/${tag}`} class="card-tag" style={`color: ${getTagColor(tag)}`}>#{tag}</a>
+            <a href={`/tags/${tag}/`} class="card-tag" style={`color: ${getTagColor(tag)}`}>#{tag}</a>
           ))}
         </div>
       )}

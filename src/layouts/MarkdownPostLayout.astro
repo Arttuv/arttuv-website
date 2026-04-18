@@ -52,7 +52,7 @@ const readingTime = Math.max(1, Math.round(wordCount / 220));
     {post.data.tags && post.data.tags.length > 0 && (
       <div class="category">
         {post.data.tags.map((tag) => (
-                  <span><a href={`/tags/${tag}`} class="card-tag" style={`color: ${getTagColor(tag)}; --tag-pill-color: ${getTagColor(tag)}`}>#{tag}</a></span>
+                                    <span><a href={`/tags/${tag}/`} class="card-tag" style={`color: ${getTagColor(tag)}; --tag-pill-color: ${getTagColor(tag)}`}>#{tag}</a></span>
         ))}
       </div>
     )}

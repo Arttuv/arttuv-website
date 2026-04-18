@@ -18,7 +18,7 @@ export const featuredGroups: FeaturedGroup[] = [
     title: "Consulting & Process",
     description: "Thoughts on agile, estimation, and the consulting profession.",
     slugs: [
-      "agile-still-relevant-in-2024",
+      "agile-still-relevant",
       "consulting",
       "no-estimates",
       "commitment-vs-forecast",
