@@ -9,6 +9,7 @@ export const featuredGroups: FeaturedGroup[] = [
     title: "AI & Augmentation",
     description: "How AI and tools can augment human cognitive skills rather than replace them.",
     slugs: [
+      "ironies-of-automation-and-ai",
       "augment-complement-empower-yourself",
       "augment-complement-and-empower",
       "automation-and-the-role-of-human-operators"
