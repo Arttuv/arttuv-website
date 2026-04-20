@@ -43,10 +43,10 @@
         "header": "https://mastodon.social/headers/original/missing.png",
         "header_static": "https://mastodon.social/headers/original/missing.png",
         "header_description": "",
-        "followers_count": 0,
-        "following_count": 3,
-        "statuses_count": 5,
-        "last_status_at": "2026-04-15",
+        "followers_count": 1,
+        "following_count": 7,
+        "statuses_count": 7,
+        "last_status_at": "2026-04-19",
         "hide_collections": null,
         "show_media": true,
         "show_media_replies": true,
@@ -56,9 +56,9 @@
         "roles": [],
         "fields": [
           {
-            "name": "homepage",
+            "name": "Personal website",
             "value": "<a href=\"https://arttuv.com\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">arttuv.com</span><span class=\"invisible\"></span></a>",
-            "verified_at": null
+            "verified_at": "2026-04-15T21:30:31.391+00:00"
           }
         ]
       },
@@ -142,10 +142,10 @@
         "header": "https://mastodon.social/headers/original/missing.png",
         "header_static": "https://mastodon.social/headers/original/missing.png",
         "header_description": "",
-        "followers_count": 0,
-        "following_count": 3,
-        "statuses_count": 5,
-        "last_status_at": "2026-04-15",
+        "followers_count": 1,
+        "following_count": 7,
+        "statuses_count": 7,
+        "last_status_at": "2026-04-19",
         "hide_collections": null,
         "show_media": true,
         "show_media_replies": true,
@@ -155,9 +155,9 @@
         "roles": [],
         "fields": [
           {
-            "name": "homepage",
+            "name": "Personal website",
             "value": "<a href=\"https://arttuv.com\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">arttuv.com</span><span class=\"invisible\"></span></a>",
-            "verified_at": null
+            "verified_at": "2026-04-15T21:30:31.391+00:00"
           }
         ]
       },
@@ -241,10 +241,10 @@
         "header": "https://mastodon.social/headers/original/missing.png",
         "header_static": "https://mastodon.social/headers/original/missing.png",
         "header_description": "",
-        "followers_count": 0,
-        "following_count": 3,
-        "statuses_count": 5,
-        "last_status_at": "2026-04-15",
+        "followers_count": 1,
+        "following_count": 7,
+        "statuses_count": 7,
+        "last_status_at": "2026-04-19",
         "hide_collections": null,
         "show_media": true,
         "show_media_replies": true,
@@ -254,9 +254,9 @@
         "roles": [],
         "fields": [
           {
-            "name": "homepage",
+            "name": "Personal website",
             "value": "<a href=\"https://arttuv.com\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">arttuv.com</span><span class=\"invisible\"></span></a>",
-            "verified_at": null
+            "verified_at": "2026-04-15T21:30:31.391+00:00"
           }
         ]
       },
@@ -340,10 +340,10 @@
         "header": "https://mastodon.social/headers/original/missing.png",
         "header_static": "https://mastodon.social/headers/original/missing.png",
         "header_description": "",
-        "followers_count": 0,
-        "following_count": 3,
-        "statuses_count": 5,
-        "last_status_at": "2026-04-15",
+        "followers_count": 1,
+        "following_count": 7,
+        "statuses_count": 7,
+        "last_status_at": "2026-04-19",
         "hide_collections": null,
         "show_media": true,
         "show_media_replies": true,
@@ -353,9 +353,9 @@
         "roles": [],
         "fields": [
           {
-            "name": "homepage",
+            "name": "Personal website",
             "value": "<a href=\"https://arttuv.com\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">arttuv.com</span><span class=\"invisible\"></span></a>",
-            "verified_at": null
+            "verified_at": "2026-04-15T21:30:31.391+00:00"
           }
         ]
       },
@@ -439,10 +439,10 @@
         "header": "https://mastodon.social/headers/original/missing.png",
         "header_static": "https://mastodon.social/headers/original/missing.png",
         "header_description": "",
-        "followers_count": 0,
-        "following_count": 3,
-        "statuses_count": 5,
-        "last_status_at": "2026-04-15",
+        "followers_count": 1,
+        "following_count": 7,
+        "statuses_count": 7,
+        "last_status_at": "2026-04-19",
         "hide_collections": null,
         "show_media": true,
         "show_media_replies": true,
@@ -452,9 +452,9 @@
         "roles": [],
         "fields": [
           {
-            "name": "homepage",
+            "name": "Personal website",
             "value": "<a href=\"https://arttuv.com\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">arttuv.com</span><span class=\"invisible\"></span></a>",
-            "verified_at": null
+            "verified_at": "2026-04-15T21:30:31.391+00:00"
           }
         ]
       },
@@ -483,6 +483,227 @@
         "blurhash": "UHR{lUMz4URR=ti]wI#+?HM|xuM|?apII@NH",
         "published_at": "2024-07-22T00:00:00.000Z",
         "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [
+          "public"
+        ],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  },
+  "116433008977243133": {
+    "id": "116433008977243133",
+    "content": {
+      "id": "116433008977243133",
+      "created_at": "2026-04-19T19:25:23.903Z",
+      "in_reply_to_id": null,
+      "in_reply_to_account_id": null,
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/arttuv/statuses/116433008977243133",
+      "url": "https://mastodon.social/@arttuv/116433008977243133",
+      "replies_count": 0,
+      "reblogs_count": 1,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>I listed some references I&#39;ve found regarding HCI in building automation / artificial intelligence in systems. Highly relevant to situation awareness as well.</p><p><a href=\"https://arttuv.com/writings/ironies-of-automation-and-ai/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">arttuv.com/writings/ironies-of</span><span class=\"invisible\">-automation-and-ai/</span></a></p><p><a href=\"https://mastodon.social/tags/automation\" class=\"mention hashtag\" rel=\"tag\">#<span>automation</span></a> <a href=\"https://mastodon.social/tags/hci\" class=\"mention hashtag\" rel=\"tag\">#<span>hci</span></a> <a href=\"https://mastodon.social/tags/ai\" class=\"mention hashtag\" rel=\"tag\">#<span>ai</span></a> <a href=\"https://mastodon.social/tags/sa\" class=\"mention hashtag\" rel=\"tag\">#<span>sa</span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "113867395315688169",
+        "username": "arttuv",
+        "acct": "arttuv",
+        "display_name": "Arttu",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2025-01-21T00:00:00.000Z",
+        "note": "<p>I&#39;m a software developer also interested in teamwork, organizations and anything human related.</p><p>I work as a consultant and have experience from multiple domains and roles.</p>",
+        "url": "https://mastodon.social/@arttuv",
+        "uri": "https://mastodon.social/users/arttuv",
+        "avatar": "https://files.mastodon.social/accounts/avatars/113/867/395/315/688/169/original/615a352c0a086f96.jpeg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/113/867/395/315/688/169/original/615a352c0a086f96.jpeg",
+        "avatar_description": "Arttu",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "header_description": "",
+        "followers_count": 1,
+        "following_count": 7,
+        "statuses_count": 7,
+        "last_status_at": "2026-04-19",
+        "hide_collections": null,
+        "show_media": true,
+        "show_media_replies": true,
+        "show_featured": true,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Personal website",
+            "value": "<a href=\"https://arttuv.com\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">arttuv.com</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2026-04-15T21:30:31.391+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [
+        {
+          "name": "automation",
+          "url": "https://mastodon.social/tags/automation"
+        },
+        {
+          "name": "hci",
+          "url": "https://mastodon.social/tags/hci"
+        },
+        {
+          "name": "ai",
+          "url": "https://mastodon.social/tags/ai"
+        },
+        {
+          "name": "sa",
+          "url": "https://mastodon.social/tags/sa"
+        }
+      ],
+      "emojis": [],
+      "tagged_collections": [],
+      "quote": null,
+      "card": {
+        "url": "https://arttuv.com/writings/ironies-of-automation-and-ai/",
+        "title": "The Ironies of Automation and Artificial Intelligence | Arttu Viljakainen",
+        "description": "Pointing to learnings from decades of automation research that we should take into account when building LLM-powered systems.",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "Arttu Viljakainen",
+        "provider_url": "",
+        "html": "",
+        "width": 662,
+        "height": 348,
+        "image": "https://files.mastodon.social/cache/preview_cards/images/189/833/352/original/083a8ec13e1f3e6f.png",
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": "UHR{lUMz4URR=ti]wI#+?HM|xuM|?apII@NH",
+        "published_at": "2026-04-19T00:00:00.000Z",
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [
+          "public"
+        ],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  },
+  "116425426852810760": {
+    "id": "116425426852810760",
+    "content": {
+      "id": "116425426852810760",
+      "created_at": "2026-04-18T11:17:09.865Z",
+      "in_reply_to_id": null,
+      "in_reply_to_account_id": null,
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/arttuv/statuses/116425426852810760",
+      "url": "https://mastodon.social/@arttuv/116425426852810760",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Quite awesome C64 demo, I love the graphical style (and the story too):<br /><a href=\"https://www.youtube.com/watch?v=YbkTSNev78A\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"\">youtube.com/watch?v=YbkTSNev78A</span><span class=\"invisible\"></span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "113867395315688169",
+        "username": "arttuv",
+        "acct": "arttuv",
+        "display_name": "Arttu",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2025-01-21T00:00:00.000Z",
+        "note": "<p>I&#39;m a software developer also interested in teamwork, organizations and anything human related.</p><p>I work as a consultant and have experience from multiple domains and roles.</p>",
+        "url": "https://mastodon.social/@arttuv",
+        "uri": "https://mastodon.social/users/arttuv",
+        "avatar": "https://files.mastodon.social/accounts/avatars/113/867/395/315/688/169/original/615a352c0a086f96.jpeg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/113/867/395/315/688/169/original/615a352c0a086f96.jpeg",
+        "avatar_description": "Arttu",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "header_description": "",
+        "followers_count": 1,
+        "following_count": 7,
+        "statuses_count": 7,
+        "last_status_at": "2026-04-19",
+        "hide_collections": null,
+        "show_media": true,
+        "show_media_replies": true,
+        "show_featured": true,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Personal website",
+            "value": "<a href=\"https://arttuv.com\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">arttuv.com</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2026-04-15T21:30:31.391+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "tagged_collections": [],
+      "quote": null,
+      "card": {
+        "url": "https://www.youtube.com/watch?v=YbkTSNev78A",
+        "title": "Maybe the BEST C64 Demo I have yet seen !",
+        "description": "Mojo by Bonzai & Pretzel Logic 2023EnjoyPlease Subscribe. Thankyou.Gazakka 2023",
+        "language": "en",
+        "type": "video",
+        "author_name": "gazzaka",
+        "author_url": "https://www.youtube.com/@gazzaka",
+        "provider_name": "YouTube",
+        "provider_url": "https://www.youtube.com/",
+        "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/YbkTSNev78A?feature=oembed\" frameborder=\"0\" allowfullscreen=\"\" sandbox=\"allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms\"></iframe>",
+        "width": 200,
+        "height": 113,
+        "image": "https://files.mastodon.social/cache/preview_cards/images/063/876/106/original/c02fff6f4c74c08d.jpg",
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": "UGAmb]H^El%yR%ogn+bb00%hs:ICs=R%bvaL",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "gazzaka",
+            "url": "https://www.youtube.com/@gazzaka",
+            "account": null
+          }
+        ]
       },
       "poll": null,
       "quote_approval": {
