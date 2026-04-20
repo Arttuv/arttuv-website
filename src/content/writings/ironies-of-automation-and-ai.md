@@ -1,7 +1,7 @@
 ---
 pubDate: "2026-04-19"
 title: "The Ironies of Automation and Artificial Intelligence"
-summary: "Pointing to learnings from decades of automation research that we should take into account when building LLM-powered systems."
+summary: "Ironies of automation (Bainbridge, 1983) is a foundational paper on what has been learned from automating work, or adding automation to tools people use for work. Ironies of artificial intelligence (Endsley, 2023) adds new observations on how LLM-powered systems have both similar and also new kinds of issues and opportunities. I also explain my approach to designing LLM systems."
 tags: ["hci"]
 mastodon: "116433008977243133"
 ---
