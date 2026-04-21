@@ -7,6 +7,7 @@ import ArticleCard from "./ArticleCard.astro"
 import BauhausDivider from "./BauhausDivider.astro"
 import OrbitDivider from "./OrbitDivider.astro"
 import { featuredGroups } from "../config/featured"
+import type { CollectionEntry } from "astro:content"
 const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const allWritings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 
@@ -16,7 +17,7 @@ const postMap = new Map(allWritings.map(p => [p.id, p]));
 // Resolve groups: keep slug order from config
 const resolvedGroups = featuredGroups.map(group => ({
   ...group,
-  posts: group.slugs.map(s => postMap.get(s)).filter(Boolean),
+  posts: group.slugs.map(s => postMap.get(s)).filter((post): post is CollectionEntry<"writings"> => Boolean(post)),
 }));
 
 // Collect all featured slugs to exclude from "Latest"
@@ -422,7 +423,7 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     .from-eu-with-love {
         font-weight: 200;
-        font-size: 0.9rem;
+      font-size: 0.96rem;
         margin-top: 0.35rem;
         margin-bottom: 0;
         text-align: center;
@@ -445,7 +446,7 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     .feed-more {
         font-family: var(--font-condensed);
-        font-size: 0.75rem;
+      font-size: 0.82rem;
         color: #999;
         text-decoration: none;
         display: block;
@@ -498,13 +499,13 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
     }
 
     :global(.author-sidebar .comment-content) {
-        font-size: 0.7rem;
+      font-size: 0.78rem;
         overflow-wrap: break-word;
         word-break: break-word;
     }
 
     :global(.author-sidebar .embedded-mastodon-comment) {
-        font-size: 0.7rem;
+      font-size: 0.78rem;
         overflow-wrap: break-word;
         word-break: break-word;
     }
@@ -573,7 +574,7 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     .panel-title {
         font-family: var(--font-mono);
-        font-size: 0.7rem;
+      font-size: 0.76rem;
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.1em;
@@ -584,15 +585,20 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     .featured-group-desc {
         font-family: var(--font-condensed);
-        font-size: 0.82rem;
+      font-size: 0.92rem;
         color: var(--color-muted);
         margin: 0 0 0.75rem;
-        line-height: 1.5;
+      line-height: 1.55;
     }
 
     .author-bio {
         margin-top: 1rem;
-        font-size: smaller;
+      font-size: 1rem;
+      line-height: 1.72;
+    }
+
+    .author-bio p {
+      line-height: 1.72;
     }
 
     .article-card-footer {
@@ -700,34 +706,38 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
 <script>
   function initPhotoReveal() {
-    const container = document.querySelector('.sidebar-photo-container');
-    const revealEl = document.querySelector('.photo-reveal');
-    const toggleBtn = document.querySelector('.photo-reveal-toggle');
+    const container = document.querySelector<HTMLElement>('.sidebar-photo-container');
+    const revealEl = document.querySelector<HTMLElement>('.photo-reveal');
+    const toggleBtn = document.querySelector<HTMLButtonElement>('.photo-reveal-toggle');
     if (!container || !revealEl || !toggleBtn) return;
 
-    toggleBtn.addEventListener('click', (e) => {
+    const photoContainer = container;
+    const photoReveal = revealEl;
+    const photoToggleButton = toggleBtn;
+
+    photoToggleButton.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      revealEl.classList.toggle('revealed');
+      photoReveal.classList.toggle('revealed');
     });
 
     if (window.innerWidth <= 800) {
       let manuallyToggled = false;
 
-      toggleBtn.addEventListener('click', () => {
+      photoToggleButton.addEventListener('click', () => {
         manuallyToggled = !manuallyToggled;
       });
 
       function checkReveal() {
         if (manuallyToggled) return;
-        const rect = container.getBoundingClientRect();
+        const rect = photoContainer.getBoundingClientRect();
         const photoMiddle = rect.top + rect.height / 2;
         const screenCenter = window.innerHeight / 2;
 
         if (photoMiddle < screenCenter) {
-          revealEl.classList.add('revealed');
+          photoReveal.classList.add('revealed');
         } else {
-          revealEl.classList.remove('revealed');
+          photoReveal.classList.remove('revealed');
         }
       }
 

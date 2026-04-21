@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "^3.7.2",
     "@fontsource-variable/roboto-condensed": "^5.1.1",
     "@fontsource-variable/roboto-serif": "^5.0.4",
-    "@fontsource/libre-baskerville": "^5.1.1",
+    "@fontsource/newsreader": "^5.2.10",
     "astro": "^6.1.1",
     "axios": "^1.7.7",
     "markdown-it": "^14.1.0",

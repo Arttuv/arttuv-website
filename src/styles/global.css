@@ -20,14 +20,15 @@
 
     /* Base colors */
     --color-bg: #fffbf8;
-    --color-text: #000;
+    --color-text: #181512;
     --color-link: #0053B3;
     --color-muted: #666;
     --color-border: lightgray;
 
     /* Typography */
     --font-serif: 'Roboto Serif Variable', serif;
-    --font-body: 'Libre Baskerville', serif;
+    --font-body: 'Newsreader', serif;
+    --font-reading: 'Newsreader', serif;
     --font-condensed: 'Roboto Condensed Variable', sans-serif;
     --font-mono: 'SF Mono', 'Fira Mono', 'Roboto Mono', ui-monospace, monospace;
 
@@ -54,7 +55,7 @@ html {
 
 body {
     font-family: var(--font-body);
-    font-weight: 300;
+    font-weight: 400;
     text-rendering: optimizeLegibility;
     margin: 0;
     padding: 0;
@@ -76,7 +77,7 @@ main {
 }
 
 p {
-    line-height: 1.5;
+    line-height: 1.6;
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -91,7 +92,7 @@ pre {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.2;
 }
 
