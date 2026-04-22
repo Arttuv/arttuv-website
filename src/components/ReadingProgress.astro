@@ -41,7 +41,7 @@ const { tagColor = DEFAULT_COLOR } = Astro.props;
     let ticking = false;
 
     function getHeaderHeight() {
-      const header = document.querySelector('header');
+      const header = document.querySelector('.site-header');
       return header ? header.getBoundingClientRect().height : 0;
     }
 

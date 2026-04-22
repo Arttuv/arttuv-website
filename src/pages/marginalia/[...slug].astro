@@ -1,0 +1,48 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import MarginaliaEntry from "../../components/MarginaliaEntry.astro"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("marginalia")
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }))
+}
+
+type Props = {
+  entry: CollectionEntry<"marginalia">
+}
+
+const { entry } = Astro.props
+const title = entry.data.card?.title ?? `Marginalia · ${entry.data.pubDate.toISOString().slice(0, 10)}`
+const description = entry.data.card?.description ?? entry.data.spoilerText ?? "Short-form note by Arttu Viljakainen."
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="marginalia-page">
+    <p class="marginalia-back"><a href="/marginalia/">← Back to marginalia</a></p>
+    <MarginaliaEntry entry={entry} />
+  </div>
+</BaseLayout>
+
+<style>
+  .marginalia-page {
+    max-width: 46rem;
+    margin: 0 auto 4rem;
+    padding-top: 1.25rem;
+  }
+
+  .marginalia-back {
+    margin-bottom: 1rem;
+    font-family: var(--font-condensed);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 700px) {
+    .marginalia-page {
+      padding-top: 0.9rem;
+    }
+  }
+</style>

@@ -1,35 +1,21 @@
 ---
-import { getCollection } from "astro:content"
 import BaseLayout from "../../layouts/BaseLayout.astro"
-import Comment from "../../components/Comment.astro"
-const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 ---
 
-<BaseLayout title="Comments" description="Recent comments and Mastodon replies." robots="noindex,follow">
+<BaseLayout title="Comments moved" description="Marginalia and discussion now live elsewhere." robots="noindex,follow">
+  <meta http-equiv="refresh" content="0;url=/marginalia/" />
   <main>
     <section>
-      <h1>Comments</h1>
-      <div class="comment-listing">
-        <ul>
-          {comments.map(comment => (
-            <li>
-              <Comment {comment} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <h1>Marginalia</h1>
+      <p>Short-form posts now live at <a href="/marginalia/">/marginalia/</a>.</p>
+      <p>Discussion on writings happens on the linked discussion post for each article.</p>
     </section>
   </main>
 </BaseLayout>
 
 <style>
-    ul {
-        list-style-type: none;
-        padding-left: 1rem;
-        width: 100%;
-    }
-
-    li {
-        margin-bottom:0;
+    main {
+        max-width: 42rem;
+        margin: 0 auto;
     }
 </style>

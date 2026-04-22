@@ -1,0 +1,84 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import MarginaliaEntry from "../../components/MarginaliaEntry.astro"
+import { getCollection } from "astro:content"
+
+const marginalia = (await getCollection("marginalia")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const title = "Marginalia"
+const description = "Short-form notes and links by Arttu Viljakainen."
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="marginalia-container">
+    <header class="marginalia-header">
+      <p class="marginalia-kicker">Short Form</p>
+      <h1>{title}</h1>
+      <p class="marginalia-intro">
+        Fragments, links, and passing observations. These are lighter than writings, but still worth keeping.
+      </p>
+      <p class="marginalia-note">
+        The archive is website-first. Discussion, if any, continues on the linked discussion post.
+      </p>
+    </header>
+    <div class="marginalia-list">
+      {marginalia.map((entry) => (
+        <MarginaliaEntry entry={entry} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .marginalia-container {
+    max-width: 46rem;
+    margin: 0 auto 4rem;
+    padding-top: 1.25rem;
+  }
+
+  .marginalia-header {
+    margin: 0 0 2.5rem;
+    padding: 0 0 1.25rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-border) 88%, transparent);
+  }
+
+  .marginalia-kicker {
+    margin: 0 0 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-muted);
+  }
+
+  .marginalia-header h1 {
+    margin: 0;
+  }
+
+  .marginalia-intro {
+    max-width: 38rem;
+    margin: 0.7rem 0 0;
+    color: var(--color-muted);
+    font-size: 1.02rem;
+    line-height: 1.68;
+  }
+
+  .marginalia-note {
+    max-width: 34rem;
+    margin: 0.85rem 0 0;
+    font-family: var(--font-condensed);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: color-mix(in srgb, var(--color-text) 72%, #6c5d53 28%);
+  }
+
+  .marginalia-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (max-width: 700px) {
+    .marginalia-container {
+      padding-top: 0.9rem;
+    }
+  }
+</style>

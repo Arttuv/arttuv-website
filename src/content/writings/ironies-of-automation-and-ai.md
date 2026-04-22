@@ -3,7 +3,11 @@ pubDate: "2026-04-19"
 title: "The Ironies of Automation and Artificial Intelligence"
 summary: "Ironies of automation (Bainbridge, 1983) is a foundational paper on what has been learned from automating work, or adding automation to tools people use for work. Ironies of artificial intelligence (Endsley, 2023) adds new observations on how LLM-powered systems have both similar and also new kinds of issues and opportunities. I also explain my approach to designing LLM systems."
 tags: ["hci"]
-mastodon: "116433008977243133"
+discussion:
+  provider: "Mastodon"
+  id: "116433008977243133"
+  url: "https://mastodon.social/@arttuv/116433008977243133"
+  publishedAt: 2026-04-19T19:25:23.903Z
 ---
 
 We in the IT industry have been automating the work of humans for what, almost a century, and we have learned a lot along the way, even though it sometimes feels like we also forget a lot. Most of those learnings apply directly to AI-powered tools we are now developing (and using ourselves). Two papers I want to highlight in particular are Lisanne Bainbridge's "Ironies of Automation" (1983) and Mica Endsley's "Ironies of Artificial Intelligence" (2023).

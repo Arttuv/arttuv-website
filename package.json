@@ -8,9 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "comment": "node src/create-comment.js",
     "fetch-mastodon": "node src/fetch-mastodon.js",
-    "build-comments": "node src/build-comments.js",
+    "sync-marginalia-source": "node src/sync-marginalia-source.js",
+    "build-marginalia": "node src/build-marginalia.js",
     "test:links": "node tests/check-links.js"
   },
   "dependencies": {

@@ -1,0 +1,221 @@
+---
+import { render, type CollectionEntry } from "astro:content"
+import FormattedDateTime from "./FormattedDateTime.astro"
+
+type Props = {
+  entry: CollectionEntry<"marginalia">
+  compact?: boolean
+}
+
+const { entry, compact = false } = Astro.props
+const permalink = `/marginalia/${entry.id}/`
+const discussion = entry.data.discussion ?? null
+const discussionProvider = discussion?.provider ?? "Discussion"
+const isMastodonDiscussion = discussionProvider === "Mastodon"
+const discussionLabel = discussionProvider === "Mastodon"
+  ? "Discuss on Mastodon"
+  : `Discuss on ${discussionProvider}`
+const { Content } = await render(entry)
+---
+
+<article class:list={["marginalia-entry", compact && "marginalia-entry--compact"]}>
+  <header class="marginalia-meta">
+    <a class="marginalia-permalink" href={permalink}>
+      <FormattedDateTime date={new Date(entry.data.pubDate)} />
+    </a>
+    {entry.data.updatedDate && <span class="marginalia-edited">edited</span>}
+  </header>
+  <div class="marginalia-content">
+    {entry.data.spoilerText && <p class="marginalia-spoiler">{entry.data.spoilerText}</p>}
+    <div class="marginalia-body">
+      <Content />
+    </div>
+  </div>
+  {entry.data.card && (
+    <a class="marginalia-card" href={entry.data.card.url}>
+      <div class="marginalia-card-copy">
+        <span class="marginalia-card-kicker">Linked</span>
+        <span class="marginalia-card-title">{entry.data.card.title}</span>
+        {entry.data.card.description && <span class="marginalia-card-description">{entry.data.card.description}</span>}
+        {entry.data.card.providerName && <span class="marginalia-card-provider">{entry.data.card.providerName}</span>}
+      </div>
+    </a>
+  )}
+  {entry.data.tags && entry.data.tags.length > 0 && (
+    <ul class="marginalia-tags" aria-label="Tags">
+      {entry.data.tags.map((tag) => (
+        <li>#{tag}</li>
+      ))}
+    </ul>
+  )}
+  <footer class="marginalia-footer">
+    <a href={permalink}>Permalink</a>
+    {discussion && (
+      <a
+        href={discussion.url}
+        target={isMastodonDiscussion ? "_blank" : undefined}
+        rel={isMastodonDiscussion ? "noopener noreferrer" : undefined}
+      >
+        {discussionLabel}
+      </a>
+    )}
+  </footer>
+</article>
+
+<style>
+  .marginalia-entry {
+    display: grid;
+    gap: 0.95rem;
+    padding: 1.2rem 1.25rem 1.05rem;
+    border-left: 3px solid color-mix(in srgb, var(--color-link) 58%, transparent);
+    border-top: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 0;
+    background: color-mix(in srgb, var(--color-bg) 90%, #f3eee7 10%);
+  }
+
+  .marginalia-entry--compact {
+    gap: 0.55rem;
+    padding: 0.85rem 0.95rem 0.75rem;
+  }
+
+  .marginalia-meta {
+    display: flex;
+    gap: 0.65rem;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--color-muted);
+    text-transform: uppercase;
+  }
+
+  .marginalia-permalink {
+    text-decoration: none;
+  }
+
+  .marginalia-permalink:hover {
+    text-decoration: underline;
+  }
+
+  .marginalia-edited {
+    text-transform: uppercase;
+    font-size: 0.68rem;
+  }
+
+  .marginalia-spoiler {
+    margin: 0;
+    font-family: var(--font-condensed);
+    color: color-mix(in srgb, var(--color-text) 78%, #6c5d53);
+    font-size: 0.96rem;
+    line-height: 1.5;
+  }
+
+  .marginalia-content {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .marginalia-body {
+    font-family: var(--font-reading);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--color-text) 90%, #463730);
+  }
+
+  :global(.marginalia-body p) {
+    margin: 0;
+  }
+
+  :global(.marginalia-body p:last-child) {
+    margin-bottom: 0;
+  }
+
+  :global(.marginalia-body a) {
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.12em;
+    overflow-wrap: anywhere;
+  }
+
+  .marginalia-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+    padding: 0.75rem 0.85rem;
+    border: 1px solid color-mix(in srgb, var(--color-link) 18%, var(--color-border) 82%);
+    border-radius: 0.2rem;
+    text-decoration: none;
+    background: color-mix(in srgb, white 75%, var(--color-bg) 25%);
+    align-items: start;
+  }
+
+  .marginalia-card-copy {
+    display: grid;
+    gap: 0.22rem;
+  }
+
+  .marginalia-card-kicker {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: color-mix(in srgb, var(--color-link) 75%, var(--color-muted) 25%);
+  }
+
+  .marginalia-card-title {
+    font-family: var(--font-condensed);
+    font-size: 0.98rem;
+    line-height: 1.25;
+  }
+
+  .marginalia-card-description {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: var(--color-text);
+  }
+
+  .marginalia-card-provider {
+    font-size: 0.76rem;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .marginalia-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-condensed);
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
+
+  .marginalia-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .marginalia-entry--compact .marginalia-body {
+    font-size: 0.92rem;
+    line-height: 1.62;
+  }
+
+  .marginalia-entry--compact .marginalia-card {
+    padding: 0.65rem 0.7rem;
+  }
+
+  @media (max-width: 700px) {
+    .marginalia-entry {
+      padding: 1rem 0.95rem 0.85rem;
+    }
+  }
+</style>

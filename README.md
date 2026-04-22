@@ -28,9 +28,9 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build`           | Build the production site to `./dist/`                     |
 | `npm run preview`         | Preview the production build locally before deploying      |
 | `npm run astro ...`       | Run Astro CLI commands like `astro add`, `astro check`     |
-| `npm run comment`         | Create a new comment (interactive prompt)                  |
-| `npm run fetch-mastodon`  | Fetch Mastodon data for posts that have a `mastodon` field |
-| `npm run build-comments`  | Build comment files from external sources                  |
+| `npm run fetch-mastodon`  | Fetch your public Mastodon statuses from all configured Mastodon sources into local JSON |
+| `npm run sync-marginalia-source` | Rebuild the generic marginalia source file from all cached Mastodon data |
+| `npm run build-marginalia`| Build marginalia files from Mastodon statuses              |
 | `npm run test:links`      | Check all internal links in the built site for broken URLs |
 
 ### Development
@@ -41,9 +41,11 @@ All commands are run from the root of the project, from a terminal:
 
 ### Content management
 
-- **`npm run comment`** — Runs `src/create-comment.js` to create a new comment markdown file. Use when adding a manual comment to a blog post.
-- **`npm run fetch-mastodon`** — Runs `src/fetch-mastodon.js` to fetch Mastodon thread data. Use to pull in replies from Mastodon for posts that have a `mastodon` status ID in their frontmatter.
-- **`npm run build-comments`** — Runs `src/build-comments.js` to generate comment files. Use after fetching Mastodon data to build the comment markdown files.
+- **`npm run fetch-mastodon`** — Runs `src/fetch-mastodon.js` to fetch your own public Mastodon statuses from every source listed in `src/mastodon-sources.js` into `src/external-data/` and refresh the generic marginalia source file.
+- **`npm run sync-marginalia-source`** — Runs `src/sync-marginalia-source.js` to rebuild `src/external-data/marginalia-source.json` from the cached Mastodon data for every source listed in `src/mastodon-sources.js` without making network requests.
+- **`npm run build-marginalia`** — Runs `src/build-marginalia.js` to generate `src/content/marginalia/` entries from the generic marginalia source file.
+
+The file `src/external-data/marginalia-source.json` is the source-agnostic import format consumed by the marginalia generator. Mastodon is currently one adapter that writes to it, but future sources can target the same format. Multiple Mastodon instances can now contribute to the same normalized source file.
 
 ### Testing
 

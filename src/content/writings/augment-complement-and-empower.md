@@ -3,7 +3,11 @@ pubDate: "2020-05-03"
 title: "Augment, Complement and Empower Human Cognitive Skills"
 summary: "Expert group for EU has published Ethics Guidelines for Trustworthy AI. The document specifies a list of requirements the systems should meet to be considered trustworthy. They also define a rough framework and an assessment list to offer guidance on practical implementation. The objective is to empower humans and offer them meaningful work instead of replacing them. Augmenting human abilities is an approach I'm happy to advocate for."
 tags: ["hci"]
-mastodon: "116409438788961399"
+discussion:
+  provider: "Mastodon"
+  id: "116409438788961399"
+  url: "https://mastodon.social/@arttuv/116409438788961399"
+  publishedAt: 2026-04-15T15:31:11.367Z
 ---
 The expert group for the EU has published [guidelines to promote Trustworthy AI](https://ec.europa.eu/futurium/en/ai-alliance-consultation). By Trustworthy AI they mean an AI that is
 * Lawful

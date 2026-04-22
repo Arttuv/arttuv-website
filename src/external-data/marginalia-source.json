@@ -1,0 +1,178 @@
+{
+  "mastodon.social:116409397866360153": {
+    "id": "116409397866360153",
+    "pubDate": "2026-04-15T15:20:46.941Z",
+    "source": {
+      "provider": "Mastodon",
+      "id": "116409397866360153",
+      "url": "https://mastodon.social/@arttuv/116409397866360153"
+    },
+    "discussion": {
+      "provider": "Mastodon",
+      "id": "116409397866360153",
+      "url": "https://mastodon.social/@arttuv/116409397866360153",
+      "publishedAt": "2026-04-15T15:20:46.941Z"
+    },
+    "html": "<p>I'm transitioning from scholar.social to mastodon.social, this is my old profile:</p><p>I might re-post some of my old blog posts here, because I'm using Mastodon for possible comments.</p>",
+    "updatedDate": "2026-04-15T15:21:45.149Z",
+    "language": "en",
+    "card": {
+      "title": "Arttu (@arttuv@scholar.social)",
+      "url": "https://scholar.social/@arttuv",
+      "description": "11 Posts, 14 Following, 0 Followers · I'm a software developer and a PhD student/researcher in HCI.",
+      "providerName": "Scholar Social",
+      "image": "https://files.mastodon.social/cache/preview_cards/images/189/337/606/original/c8a3e44610cee71b.jpeg"
+    }
+  },
+  "mastodon.social:116425426852810760": {
+    "id": "116425426852810760",
+    "pubDate": "2026-04-18T11:17:09.865Z",
+    "source": {
+      "provider": "Mastodon",
+      "id": "116425426852810760",
+      "url": "https://mastodon.social/@arttuv/116425426852810760"
+    },
+    "discussion": {
+      "provider": "Mastodon",
+      "id": "116425426852810760",
+      "url": "https://mastodon.social/@arttuv/116425426852810760",
+      "publishedAt": "2026-04-18T11:17:09.865Z"
+    },
+    "html": "<p>Quite awesome C64 demo, I love the graphical style (and the story too):</p>",
+    "language": "en",
+    "card": {
+      "title": "Maybe the BEST C64 Demo I have yet seen !",
+      "url": "https://www.youtube.com/watch?v=YbkTSNev78A",
+      "description": "Mojo by Bonzai & Pretzel Logic 2023EnjoyPlease Subscribe. Thankyou.Gazakka 2023",
+      "providerName": "YouTube",
+      "image": "https://files.mastodon.social/cache/preview_cards/images/063/876/106/original/c02fff6f4c74c08d.jpg"
+    }
+  },
+  "mastodon.social:116449809405754463": {
+    "id": "116449809405754463",
+    "pubDate": "2026-04-22T18:37:58.094Z",
+    "source": {
+      "provider": "Mastodon",
+      "id": "116449809405754463",
+      "url": "https://mastodon.social/@arttuv/116449809405754463"
+    },
+    "discussion": {
+      "provider": "Mastodon",
+      "id": "116449809405754463",
+      "url": "https://mastodon.social/@arttuv/116449809405754463",
+      "publishedAt": "2026-04-22T18:37:58.094Z"
+    },
+    "html": "<p>I resolved a bug by politely requesting the LLM to refrain from returning literal \"null\" values as strings. I’m not sure how difficult it would be to explain this concept to myself from a decade ago.</p>",
+    "updatedDate": "2026-04-22T18:43:06.168Z",
+    "language": "en"
+  },
+  "scholar.social:113086328707664725": {
+    "id": "113086328707664725",
+    "pubDate": "2024-09-05T18:20:35.603Z",
+    "source": {
+      "provider": "Mastodon",
+      "id": "113086328707664725",
+      "url": "https://scholar.social/@arttuv/113086328707664725"
+    },
+    "discussion": {
+      "provider": "Mastodon",
+      "id": "113086328707664725",
+      "url": "https://scholar.social/@arttuv/113086328707664725",
+      "publishedAt": "2024-09-05T18:20:35.603Z"
+    },
+    "html": "<p>I've now built three static blog-style websites using  and I still quite like it. Upgrades have not been too bad either (although my sites are pretty basic). Dev experience has been good.</p>",
+    "language": "en",
+    "card": {
+      "title": "Astro",
+      "url": "https://astro.build/",
+      "description": "Astro builds fast content sites, powerful web applications, dynamic server APIs, and everything in-between.",
+      "providerName": "Astro"
+    }
+  },
+  "scholar.social:112840282925802410": {
+    "id": "112840282925802410",
+    "pubDate": "2024-07-24T07:27:54.916Z",
+    "source": {
+      "provider": "Mastodon",
+      "id": "112840282925802410",
+      "url": "https://scholar.social/@arttuv/112840282925802410"
+    },
+    "discussion": {
+      "provider": "Mastodon",
+      "id": "112840282925802410",
+      "url": "https://scholar.social/@arttuv/112840282925802410",
+      "publishedAt": "2024-07-24T07:27:54.916Z"
+    },
+    "html": "<p>Summer writing on why I think agile (as originally considered) is still relevant, and that it's more of a mindset or point of view, not any single process </p>",
+    "language": "en",
+    "card": {
+      "title": "Agile - Still Relevant in 2024",
+      "url": "https://arttuv.com/writings/agile-still-relevant-in-2024/"
+    }
+  },
+  "scholar.social:110692189541870209": {
+    "id": "110692189541870209",
+    "pubDate": "2023-07-10T22:39:31.089Z",
+    "source": {
+      "provider": "Mastodon",
+      "id": "110692189541870209",
+      "url": "https://scholar.social/@arttuv/110692189541870209"
+    },
+    "discussion": {
+      "provider": "Mastodon",
+      "id": "110692189541870209",
+      "url": "https://scholar.social/@arttuv/110692189541870209",
+      "publishedAt": "2023-07-10T22:39:31.089Z"
+    },
+    "html": "<p>Some summer holiday writing practice by writing about why I like the <a href=\"https://scholar.social/tags/noestimates\" rel=\"tag\">#noestimates</a> approach <a href=\"https://arttuv.com/writings/no-estimates/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\">arttuv.com/writings/no-estimat</a></p>",
+    "language": "en",
+    "tags": [
+      "noestimates"
+    ]
+  },
+  "scholar.social:110655761002800891": {
+    "id": "110655761002800891",
+    "pubDate": "2023-07-04T12:15:15.696Z",
+    "source": {
+      "provider": "Mastodon",
+      "id": "110655761002800891",
+      "url": "https://scholar.social/@arttuv/110655761002800891"
+    },
+    "discussion": {
+      "provider": "Mastodon",
+      "id": "110655761002800891",
+      "url": "https://scholar.social/@arttuv/110655761002800891",
+      "publishedAt": "2023-07-04T12:15:15.696Z"
+    },
+    "html": "<p>Ooh Ivory by Tapbots is so good (for Mastodon). Naturally for iOS, Mac and iPads: </p>",
+    "language": "en",
+    "card": {
+      "title": "Ivory for Mastodon",
+      "url": "https://tapbots.com/ivory/",
+      "description": "A Mastodon app based on the award-winning Twitter app for iOS.",
+      "providerName": "Tapbots, LLC.",
+      "image": "https://cdn.masto.host/scholarsocial/cache/preview_cards/images/006/414/904/original/ccad24c21a01920e.jpg"
+    }
+  },
+  "scholar.social:110650539303672451": {
+    "id": "110650539303672451",
+    "pubDate": "2023-07-03T14:07:18.891Z",
+    "source": {
+      "provider": "Mastodon",
+      "id": "110650539303672451",
+      "url": "https://scholar.social/@arttuv/110650539303672451"
+    },
+    "discussion": {
+      "provider": "Mastodon",
+      "id": "110650539303672451",
+      "url": "https://scholar.social/@arttuv/110650539303672451",
+      "publishedAt": "2023-07-03T14:07:18.891Z"
+    },
+    "html": "<p>I have rebuilt my website (<a href=\"https://arttuv.com\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\">arttuv.com</a>) with Astro (<a href=\"https://astro.build\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\">astro.build</a>). Developer experience is quite good and hosting on GitHub Pages is easy. Can recommend for static websites. 👍</p>",
+    "language": "en",
+    "card": {
+      "title": "Home",
+      "url": "https://arttuv.com/"
+    }
+  }
+}

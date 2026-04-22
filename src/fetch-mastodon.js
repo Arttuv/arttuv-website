@@ -1,6 +1,8 @@
 import axios from 'axios';
-import { writeFileSync, readFileSync } from 'fs';
+import { existsSync, writeFileSync, readFileSync } from 'fs';
 import { join } from 'path';
+import { buildMarginaliaSourceFromMastodon, marginaliaSourcePath, writeMarginaliaSource } from './marginalia-source.js';
+import { mastodonSources } from './mastodon-sources.js';
 
 async function fetchMastodonPublications(instanceUrl, username) {
     try {
@@ -41,12 +43,19 @@ async function fetchMastodonPublications(instanceUrl, username) {
         return publications;
     } catch (error) {
         console.error('Error fetching publications:', error);
+        return [];
     }
 }
 
+function readCachedStatuses(filePath) {
+    if (!existsSync(filePath)) {
+        return {};
+    }
 
-async function updateData(instanceUrl, username) {
+    return JSON.parse(readFileSync(filePath, 'utf8'));
+}
 
+async function updateData({ instanceUrl, username }) {
     const publications = await fetchMastodonPublications(instanceUrl, username);
     const fetchedById = publications.reduce( (dictionary, publication) => {
         dictionary[publication.id] = {
@@ -57,18 +66,27 @@ async function updateData(instanceUrl, username) {
     }, {});
 
     const filePath = join('src/external-data/', `${instanceUrl}-${username}.json`);
-    
-    const readById = await readFileSync(filePath, 'utf8');
-    const parsedById = JSON.parse(readById);
+
+    const parsedById = readCachedStatuses(filePath);
 
     const mergedById = {...parsedById, ...fetchedById};
-    console.log(mergedById);
 
     writeFileSync(filePath, JSON.stringify(mergedById, null, 2));
+
+    return buildMarginaliaSourceFromMastodon(mergedById, { instanceUrl, username });
 }
 
-const instanceUrl = 'mastodon.social';
-const username = 'arttuv';
+async function updateAllData() {
+    const allMarginaliaEntries = {};
 
-updateData(instanceUrl, username);
+    for (const source of mastodonSources) {
+        const sourceEntries = await updateData(source);
+        Object.assign(allMarginaliaEntries, sourceEntries);
+    }
+
+    writeMarginaliaSource(allMarginaliaEntries, marginaliaSourcePath);
+    console.log(`Wrote ${Object.keys(allMarginaliaEntries).length} normalized marginalia entries to ${marginaliaSourcePath}`);
+}
+
+updateAllData();
 

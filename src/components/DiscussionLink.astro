@@ -1,0 +1,79 @@
+---
+import FormattedDateTime from "./FormattedDateTime.astro"
+
+const { discussion } = Astro.props
+const provider = discussion?.provider ?? "Discussion"
+const isMastodon = provider === "Mastodon"
+const ariaLabel = isMastodon
+  ? "Discuss this article on Mastodon"
+  : `Discuss this article on ${provider}`
+const copy = isMastodon
+  ? "If you want to comment on this article or continue the discussion, reply on Mastodon."
+  : `If you want to comment on this article or continue the discussion, reply on ${provider}.`
+const openLabel = isMastodon ? "Open the Mastodon post" : `Open the ${provider} post`
+---
+
+{discussion && (
+<section class="discussion-link" aria-label={ariaLabel}>
+  <p class="discussion-link-label">{provider}</p>
+  <p class="discussion-link-copy">
+    {copy}
+  </p>
+  <a
+    class="discussion-link-anchor"
+    href={discussion.url}
+    target={isMastodon ? "_blank" : undefined}
+    rel={isMastodon ? "noopener noreferrer" : undefined}
+  >
+    {openLabel}
+    {discussion.publishedAt && (
+      <span class="discussion-link-date"><FormattedDateTime date={new Date(discussion.publishedAt)} /></span>
+    )}
+  </a>
+</section>
+  )}
+
+<style>
+    .discussion-link {
+        margin-top: 2rem;
+        padding: 1rem 1.25rem;
+        border: 1px solid var(--color-border);
+        border-radius: 0.25rem;
+        background: color-mix(in srgb, var(--color-card-bg) 72%, white 28%);
+    }
+
+    .discussion-link-label {
+        margin: 0 0 0.4rem;
+        font-family: var(--font-mono);
+        font-size: 0.74rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--color-muted);
+    }
+
+    .discussion-link-copy {
+        margin: 0;
+        font-family: var(--font-reading);
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+
+    .discussion-link-anchor {
+        display: inline-flex;
+        gap: 0.6rem;
+        align-items: baseline;
+        margin-top: 0.8rem;
+        font-family: var(--font-condensed);
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    .discussion-link-anchor:hover {
+        text-decoration: underline;
+    }
+
+    .discussion-link-date {
+        color: var(--color-muted);
+        font-size: 0.78rem;
+    }
+</style>

@@ -2,13 +2,13 @@
 import { Image } from "astro:assets"
 import arttu from "../images/arttuv-bw.jpeg"
 import { getCollection } from "astro:content"
-import Comment from "./Comment.astro"
+import MarginaliaEntry from "./MarginaliaEntry.astro"
 import ArticleCard from "./ArticleCard.astro"
 import BauhausDivider from "./BauhausDivider.astro"
 import OrbitDivider from "./OrbitDivider.astro"
 import { featuredGroups } from "../config/featured"
 import type { CollectionEntry } from "astro:content"
-const comments = (await getCollection("comments")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const marginalia = (await getCollection("marginalia")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const allWritings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 
 // Build a lookup map for featured posts
@@ -19,6 +19,9 @@ const resolvedGroups = featuredGroups.map(group => ({
   ...group,
   posts: group.slugs.map(s => postMap.get(s)).filter((post): post is CollectionEntry<"writings"> => Boolean(post)),
 }));
+const marginaliaInsertIndex = Math.ceil(resolvedGroups.length / 2);
+const leadingGroups = resolvedGroups.slice(0, marginaliaInsertIndex);
+const trailingGroups = resolvedGroups.slice(marginaliaInsertIndex);
 
 // Collect all featured slugs to exclude from "Latest"
 const featuredSlugs = new Set(featuredGroups.flatMap(g => g.slugs));
@@ -29,7 +32,7 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
   <div class="welcome-container">
 
     <div class="main-content">
-      {resolvedGroups.map((group, gi) => (
+      {leadingGroups.map((group, gi) => (
         <section class={`featured-group featured-group--${gi} display-panel`}>
           <div class="panel-header">
             <span class="panel-status"></span>
@@ -39,6 +42,41 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
           <div class="writing-listing">
             {group.posts.map((post, i) => (
               <ArticleCard post={post} featured={gi === 0 && i === 0} slim={i > 0 || gi > 0} />
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {marginalia.length > 0 && (
+        <section class="featured-group marginalia-panel">
+          <div class="panel-header">
+            <span class="panel-status"></span>
+            <h2 class="panel-title">Marginalia</h2>
+          </div>
+          <p class="featured-group-desc">Short-form notes, links, and fragments that stand on their own.</p>
+          <div class="marginalia-listing">
+            <ul>
+              {marginalia.slice(0, 3).map((entry) => (
+                <li>
+                  <MarginaliaEntry entry={entry} />
+                </li>
+              ))}
+            </ul>
+            <a class="feed-more" href="/marginalia/">More →</a>
+          </div>
+        </section>
+      )}
+
+      {trailingGroups.map((group, gi) => (
+        <section class={`featured-group featured-group--${gi + leadingGroups.length} display-panel`}>
+          <div class="panel-header">
+            <span class="panel-status"></span>
+            <h2 class="panel-title">{group.title}</h2>
+          </div>
+          <p class="featured-group-desc">{group.description}</p>
+          <div class="writing-listing">
+            {group.posts.map((post, i) => (
+              <ArticleCard post={post} featured={gi + leadingGroups.length === 0 && i === 0} slim={i > 0 || gi + leadingGroups.length > 0} />
             ))}
           </div>
         </section>
@@ -71,37 +109,17 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
           <h2>Arttu Viljakainen</h2>
         </div>
         <p>
-          At the moment I'm a software development consultant.
+          I'm a software development consultant from Helsinki. I write about software, teams, AI, and the human side of building complex systems.
         </p>
         <div class="article-card-text">
-          <p>I've been coding for a living for 15 years, and writing code for some 20 years. I intend to keep on doing
-            that.</p>
           <p>
-            Teams are essential in creating software: combining interdisciplinary skills in a way that makes the whole
-            more than the sum of each individual requires intentional effort.
-            These days, most things worth doing require a team. Skills and viewpoints needed are just too diverse for
-            any individual.
+            I'm interested in how good judgment, collaboration, and tools come together in real work. That means both
+            how people build software together, and what they should build for other people to use.
           </p>
           <p>
-            I intend to study teams and get better at making exceptional teams emerge.
-          </p>
-          <p>
-            Software happens in a complex world, in which you can't predict the future. That's why we have agile (<a
-            href="/writings/agile-still-relevant/">which is still relevant, by the way</a>). I think it is
-            essential to understand the difference between complicated and complex environments, and act accordingly.
-            Agile never looks the same, and how to make it work is both interesting and rewarding.
-          </p>
-          <h3>I'm a generalist</h3>
-          <p>
-            Coding got me to the field of software development, but I may have stayed because of the people stuff.
-          </p>
-          <p>
-            I'm increasingly interested in the human side of software development. Issues in projects are rarely related
-            to technology, but on how to work productively and sustainably as a team, and on how to choose what to build
-            next.
-          </p>
-          <p>
-            Be it coding, teamwork, or processes, I feel like I have a lot to learn. I'm still excited about it.
+            I keep returning to the same questions: how teams make sense of complexity, how tools can support rather
+            than constrain human thought, and how we can build software that fits the lives and work of the people who
+            depend on it.
           </p>
         </div>
         <div class="article-card-footer">
@@ -142,24 +160,6 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
           <span class="beacon-coords">60.17°N 24.94°E</span>
         </div>
         <p class="from-eu-with-love">🇪🇺 🇫🇮 ❤️ 🏳️‍🌈</p>
-      </div>
-      <div class="sidebar-panel">
-        <div class="panel-header">
-          <span class="panel-status"></span>
-          <span class="panel-title">Comms</span>
-        </div>
-        <section class="feed-area">
-          <div class="comment-listing">
-            <ul>
-              {comments.slice(0, 2).map(comment => (
-                <li>
-                  <Comment {comment} />
-                </li>
-              ))}
-            </ul>
-            <a class="feed-more" href="https://mastodon.social/@arttuv">More →</a>
-          </div>
-        </section>
       </div>
     </aside>
 
@@ -429,19 +429,48 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
         text-align: center;
     }
 
-    .feed-area {
-        margin-top: 0.25rem;
-        width: 100%;
-    }
-
-    .comment-listing ul {
+    .marginalia-listing ul {
         list-style-type: none;
         padding-left: 0;
         margin-top: 0;
+      margin-bottom: 0;
     }
 
-    .comment-listing li {
+    .marginalia-listing li {
         margin-bottom: 0.75rem;
+    }
+
+    .marginalia-panel {
+      margin: 3rem 0 2.5rem;
+      padding: 1.35rem 1.5rem 1.25rem;
+      width: 100%;
+      box-sizing: border-box;
+      border-top: 2px solid var(--color-text);
+      border-bottom: 1px solid color-mix(in srgb, var(--color-border) 88%, transparent);
+      background: linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 96%, #efe7db 4%), transparent);
+      overflow-x: clip;
+    }
+
+    .marginalia-panel .panel-header {
+      margin-bottom: 0.45rem;
+    }
+
+    .marginalia-panel .panel-status {
+      background-color: color-mix(in srgb, var(--color-link) 72%, #d66a00 28%);
+      box-shadow: 0 0 4px color-mix(in srgb, var(--color-link) 72%, #d66a00 28%);
+    }
+
+    .marginalia-panel .panel-title {
+      font-family: var(--font-condensed);
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      color: color-mix(in srgb, var(--color-text) 88%, #6a5245 12%);
+    }
+
+    .marginalia-panel .featured-group-desc {
+      max-width: 34rem;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
     }
 
     .feed-more {
@@ -455,59 +484,6 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     .feed-more:hover {
         text-decoration: underline;
-    }
-
-    /* Compact overrides for feed inside narrow sidebar */
-    :global(.author-sidebar .internal-comment) {
-        padding: 0 0.25rem;
-    }
-
-    :global(.author-sidebar .embedded-mastodon-comment) {
-      padding: 0.35rem 0.4rem 0.25rem;
-    }
-
-    @media (min-width: 801px) {
-        :global(.author-sidebar .html-content) {
-            border-left: none;
-            padding-left: 0;
-            margin-left: 0;
-        }
-
-        :global(.author-sidebar .embedded-mastodon-comment .html-content) {
-            border-left: none;
-            padding-left: 0;
-            margin-left: 0;
-        }
-
-        :global(.author-sidebar .comment-content) {
-            border-left: none;
-            padding-left: 0;
-        }
-
-        :global(.dark .author-sidebar .comment-content) {
-            border-left: none;
-        }
-
-        :global(.dark .author-sidebar .embedded-mastodon-comment .html-content) {
-            border-left: none;
-        }
-    }
-
-    :global(.author-sidebar .html-content p) {
-        line-height: 1.7;
-        margin-bottom: 0.25rem;
-    }
-
-    :global(.author-sidebar .comment-content) {
-      font-size: 0.78rem;
-        overflow-wrap: break-word;
-        word-break: break-word;
-    }
-
-    :global(.author-sidebar .embedded-mastodon-comment) {
-      font-size: 0.78rem;
-        overflow-wrap: break-word;
-        word-break: break-word;
     }
 
     .button-container {
@@ -593,7 +569,7 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     .author-bio {
         margin-top: 1rem;
-      font-size: 1rem;
+      font-size: 1.04rem;
       line-height: 1.72;
     }
 
@@ -624,16 +600,18 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
         .featured-group--0  { order: 1; }
         .author-sidebar      { order: 2; }
         .featured-group--1  { order: 3; }
-        .featured-group--2  { order: 4; }
-        .featured-group--3  { order: 5; }
-        .button-container    { order: 6; }
-        :global(.orbit-divider)   { order: 7; }
-        :global(.bauhaus-divider) { order: 8; }
-        .author-bio          { order: 9; }
+        .marginalia-panel    { order: 4; }
+        .featured-group--2  { order: 5; }
+        .featured-group--3  { order: 6; }
+        .button-container    { order: 7; }
+        :global(.orbit-divider)   { order: 8; }
+        :global(.bauhaus-divider) { order: 9; }
+        .author-bio          { order: 10; }
 
         .featured-group,
         .button-container,
         .author-bio,
+        .marginalia-panel,
         :global(.bauhaus-divider),
         :global(.orbit-divider) {
             width: 100%;
@@ -648,6 +626,10 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
         .sidebar-panel {
             max-width: 50ch;
+        }
+
+        .marginalia-panel {
+          padding: 1.15rem 1rem 1rem;
         }
 
         .author-sidebar img {
@@ -692,13 +674,7 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
             line-height: 1;
         }
 
-        .feed-area {
-            width: 100%;
-            max-width: 50ch;
-            text-align: left;
-        }
-
-        .comment-listing ul {
+        .marginalia-listing ul {
             width: 100%;
         }
     }
