@@ -170,7 +170,7 @@ svg {
 .header-cat {
     position: absolute;
     bottom: 0;
-    right: 16ch;
+    right: 20ch;
     transform: translateY(50%);
     z-index: 10;
     line-height: 0;
