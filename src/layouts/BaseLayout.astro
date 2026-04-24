@@ -68,5 +68,146 @@ const ogImage = new URL("/images/og-default.png", Astro.site)
   <slot />
 </main>
 <Footer />
+<script is:inline>
+  ;(function() {
+    if (window.__themeControllerInitialized) {
+      window.__syncThemeControls && window.__syncThemeControls()
+      return
+    }
+
+    window.__themeControllerInitialized = true
+
+    var themeKey = "theme"
+    var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+    var state = {
+      confirming: false,
+      pendingTheme: null,
+    }
+
+    function safeGetItem(key) {
+      try {
+        return typeof localStorage !== "undefined" ? localStorage.getItem(key) : null
+      } catch {
+        return null
+      }
+    }
+
+    function safeSetItem(key, value) {
+      try {
+        if (typeof localStorage !== "undefined") {
+          localStorage.setItem(key, value)
+        }
+      } catch {
+      }
+    }
+
+    function getStoredTheme() {
+      var theme = safeGetItem(themeKey)
+      return theme === "light" || theme === "dark" ? theme : null
+    }
+
+    function getSystemTheme() {
+      return mediaQuery.matches ? "dark" : "light"
+    }
+
+    function getCurrentTheme() {
+      if (state.confirming && state.pendingTheme) {
+        return state.pendingTheme
+      }
+
+      return getStoredTheme() || getSystemTheme()
+    }
+
+    function applyTheme(theme) {
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark")
+      } else {
+        document.documentElement.classList.add("dark")
+      }
+    }
+
+    function syncThemeControls() {
+      var isDark = document.documentElement.classList.contains("dark")
+      var confirming = state.confirming
+
+      document.querySelectorAll("[data-theme-control]").forEach(function(control) {
+        control.setAttribute("data-confirming", confirming ? "true" : "false")
+
+        var toggle = control.querySelector(".theme-toggle")
+        var confirmInline = control.querySelector(".theme-confirm-inline")
+
+        if (toggle) {
+          toggle.setAttribute("aria-pressed", String(isDark))
+          toggle.setAttribute("aria-expanded", String(confirming))
+        }
+
+        if (confirmInline) {
+          confirmInline.setAttribute("aria-hidden", String(!confirming))
+        }
+      })
+    }
+
+    function syncTheme() {
+      applyTheme(getCurrentTheme())
+      syncThemeControls()
+    }
+
+    window.__syncThemeControls = syncTheme
+
+    syncTheme()
+    document.addEventListener("astro:after-swap", syncTheme)
+
+    function handleSystemThemeChange() {
+      if (!getStoredTheme() && !state.confirming) {
+        syncTheme()
+      }
+    }
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", handleSystemThemeChange)
+    } else if (typeof mediaQuery.addListener === "function") {
+      mediaQuery.addListener(handleSystemThemeChange)
+    }
+
+    document.addEventListener("click", function(e) {
+      var target = e.target
+      if (!target || !target.closest) return
+
+      if (target.closest(".theme-consent-confirm")) {
+        var confirmedTheme = state.pendingTheme || getCurrentTheme()
+        state.confirming = false
+        state.pendingTheme = null
+        safeSetItem(themeKey, confirmedTheme)
+        applyTheme(confirmedTheme)
+        syncThemeControls()
+        return
+      }
+
+      if (target.closest(".theme-consent-cancel")) {
+        state.confirming = false
+        state.pendingTheme = null
+        syncTheme()
+        return
+      }
+
+      if (!target.closest(".theme-toggle")) return
+
+      var currentTheme = document.documentElement.classList.contains("dark") ? "dark" : "light"
+      var nextTheme = currentTheme === "dark" ? "light" : "dark"
+
+      if (getStoredTheme()) {
+        applyTheme(nextTheme)
+        safeSetItem(themeKey, nextTheme)
+        syncThemeControls()
+        return
+      }
+
+      state.confirming = true
+      state.pendingTheme = nextTheme
+      applyTheme(nextTheme)
+      syncThemeControls()
+    })
+  })()
+</script>
 </body>
 </html>

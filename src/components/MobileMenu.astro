@@ -282,7 +282,7 @@ import ThemeIcon from "./ThemeIcon.astro"
     // Close on background tap inside flyout (not on links or theme toggle)
     var flyout = document.getElementById("flyout-menu")
     flyout && flyout.addEventListener("click", function(e) {
-      if (e.target.closest("a, .theme-toggle")) return
+            if (e.target.closest("a, .theme-control")) return
       closeMenu()
     })
 
