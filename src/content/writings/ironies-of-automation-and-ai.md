@@ -15,10 +15,12 @@ We in the IT industry have been automating the work of humans for what, almost a
 Automating work is not as straightforward as it might seem. Bainbridge summarises findings from automating industrial processes: an environment in which automation tries to either replace humans or replace some of their work, while humans still need to be skilled and in charge of the situation whenever the automation breaks down.
 
 > There is some concern that the present generation of automated systems, which are monitored by former manual operators, are riding on their skills, which later generations of operators cannot be expected to have.
-> - Bainbridge, 1983
+>
+> — Bainbridge, 1983
 
 >The level of skill that a worker has is also a major aspect of his status, both within and outside the working community. If the job is 'deskilled' by being reduced to monitoring, this is difficult for the individuals involved to come to terms with. It also leads to the ironies of incongruous pay differentials, when the deskilled workers insist on a high pay level as the remaining symbol of a status which is no longer justified by the job content.
->- Bainbridge, 1983
+>
+> — Bainbridge, 1983
 
 Mica R. Endsley has written a paper called "Ironies of Artificial Intelligence" (2023) acknowledging the importance of the paper by Bainbridge, but also extending the topic by adding new observations from using AI to automate work. AI is still "just" automation, but it is opaque, complex, changing, and somewhat unexplainable. While being more capable than traditional automation, it's also harder to reason about, and Endsley also emphasises the out-of-the-loop issues coming from losing situational awareness.
 
@@ -29,12 +31,14 @@ I think there is also a need for ideology. My approach to system design is to au
 For example in *Our Robots, Ourselves* he goes through examples how technology has tried to replace humans, and argues we should instead defend the human agency and control over their own work. Referencing studies over automation in aviation and related incidents he notes that pilots still have a critical role in flying:
 
 >"Pilots are the glue that hold integrated systems together, making up for imperfections in protocols, communications, interfaces, or procedures."
->- David A. Mindell, *Our Robots, Ourselves*
+>
+> — David A. Mindell, *Our Robots, Ourselves*
 
 Automating actions does not mean that humans are not needed; it changes the way humans work. Mindell continues:
 
 >These findings suggest that new technologies ought to enhance human problem solving, not eliminate it. If possible, automation ought to aid humans in their tasks without distancing them from the machine, and without alienating them from their professions.
->- David A. Mindell, *Our Robots, Ourselves*
+>
+> — David A. Mindell, *Our Robots, Ourselves*
 
 This has been my guiding thought in building tools for professionals, and it's the approach I apply to designing LLM-powered systems.
 
@@ -59,39 +63,46 @@ When designers try to reduce human errors by automation, they may introduce new 
 Endsley has studied automation and situation awareness (SA) for decades, and SA is also integral in their paper "Ironies of Artificial Intelligence" (2023). One cornerstone they reference is from an earlier paper, "From Here to Autonomy: Lessons Learned from Human-Automation Research" (2017), called *automation conundrum*:
 
 >The more automation is added to a system, and the more reliable and robust that automation is, the less likely that human operators overseeing the automation will be aware of critical information and able to take over manual control when needed. More automation refers to automation use for more functions, longer durations, higher levels of automation, and automation that encompasses longer task sequences.
->- Mica R. Endsley (2017), automation conundrum
+>
+> — Mica R. Endsley (2017), automation conundrum
 
 Referencing Bainbridge and earlier studies on automation, Endsley states:
 
 >Deskilling, increases in system complexity, increases in cognitive workload, and decreases in SA remain fundamental problems to be addressed with AI systems.
->- Mica R. Endsley, 2023
+>
+> — Mica R. Endsley, 2023
 
 AI amplifies earlier automation risks by being opaque and more difficult to understand: it is difficult to form a realistic mental model of such a system, especially if it evolves over time.
 
 Endsley lists five Ironies of Artificial Intelligence:
 
 >Irony 1: Artificial intelligence is still not that intelligent
->- Endsley, 2023
+>
+> — Endsley, 2023
 
 ML-based systems do not understand causation and are unable to predict or simulate what could happen in a new situation they have not experienced yet.
 
 >Irony 2: the more intelligent and adaptive the AI, the less able people are to understand the system
->- Endsley, 2023
+>
+> — Endsley, 2023
 
 ML-based systems don't contain clear logic or rules, and forming an accurate mental model of them is difficult, and even more difficult if it evolves over time.
 
 >Irony 3: the more capable the AI, the poorer people's self-adaptive behaviours for compensating for shortcomings
->- Endsley, 2023
+>
+> — Endsley, 2023
 
 This is related to situation awareness: people are bad at determining their own SA and when using a capable AI, don't realise they should pay more attention to overcome the lost SA due to complacency, reduced engagement and the lack of understanding the AI.
 
 >Irony 4: the more intelligent the AI, the more obscure it is, and the less able people are to determine its limitations and biases and when to use the AI
->- Endsley, 2023
+>
+>— Endsley, 2023
 
 Even the developers of the systems may not fully understand its limitations and biases, and because these systems often are quite opaque to the users, it's nearly impossible for them to compensate.
 
 >Irony 5: the more natural the AI communications, the less able people are to understand the trustworthiness of the AI
->- Endsley, 2023
+>
+>— Endsley, 2023
 
 The fluent natural language without cues to determine correctness makes it difficult to calibrate trust towards the AI.
 

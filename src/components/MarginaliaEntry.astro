@@ -150,6 +150,11 @@ const { Content } = await render(entry)
     align-items: start;
   }
 
+  :global(.dark) .marginalia-card {
+    border-color: color-mix(in srgb, var(--color-link) 22%, var(--color-border) 78%);
+    background: color-mix(in srgb, var(--color-bg) 82%, white 18%);
+  }
+
   .marginalia-card-copy {
     display: grid;
     gap: 0.22rem;
@@ -173,6 +178,10 @@ const { Content } = await render(entry)
     font-size: 0.86rem;
     line-height: 1.5;
     color: var(--color-text);
+  }
+
+  :global(.dark) .marginalia-card-description {
+    color: color-mix(in srgb, var(--color-text) 88%, white 12%);
   }
 
   .marginalia-card-provider {

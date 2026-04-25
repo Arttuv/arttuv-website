@@ -167,6 +167,28 @@ svg {
     z-index: 9;
 }
 
+@media (max-width: 800px) {
+    .site-header {
+        transition: transform 0.22s ease;
+    }
+
+    .site-header.site-header--hidden {
+        transform: translateY(calc(-100% - 1px));
+    }
+
+    .site-header.site-header--hidden .header-cat {
+        transform: translateY(50%) rotate(180deg);
+    }
+
+    .site-header.site-header--hidden .header-cat:hover {
+        transform: translateY(50%) rotate(180deg) scale(1.2);
+    }
+
+    .menu-open .site-header {
+        transform: none;
+    }
+}
+
 .header-cat {
     position: absolute;
     bottom: 0;

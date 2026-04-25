@@ -559,6 +559,8 @@ const relatedPosts = (await getCollection("writings", (entry) => {
     @media (max-width: 720px) {
         .blog-post {
             margin-top: 2rem;
+            box-sizing: border-box;
+            padding-inline: clamp(0.75rem, 2.5vw, 1rem);
         }
 
         .blog-post .post-body {
