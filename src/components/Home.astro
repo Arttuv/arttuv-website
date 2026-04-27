@@ -2,50 +2,76 @@
 import { Image } from "astro:assets"
 import arttu from "../images/arttuv-bw.jpeg"
 import { getCollection } from "astro:content"
+import type { CollectionEntry } from "astro:content"
 import MarginaliaEntry from "./MarginaliaEntry.astro"
 import ArticleCard from "./ArticleCard.astro"
-import BauhausDivider from "./BauhausDivider.astro"
-import OrbitDivider from "./OrbitDivider.astro"
 import { featuredGroups } from "../config/featured"
-import type { CollectionEntry } from "astro:content"
+
 const marginalia = (await getCollection("marginalia")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const allWritings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 
-// Build a lookup map for featured posts
-const postMap = new Map(allWritings.map(p => [p.id, p]));
+const postMap = new Map(allWritings.map((post) => [post.id, post]))
 
-// Resolve groups: keep slug order from config
-const resolvedGroups = featuredGroups.map(group => ({
+const resolvedGroups = featuredGroups.map((group) => ({
   ...group,
-  posts: group.slugs.map(s => postMap.get(s)).filter((post): post is CollectionEntry<"writings"> => Boolean(post)),
-}));
-const marginaliaInsertIndex = Math.ceil(resolvedGroups.length / 2);
-const leadingGroups = resolvedGroups.slice(0, marginaliaInsertIndex);
-const trailingGroups = resolvedGroups.slice(marginaliaInsertIndex);
+  posts: group.slugs.map((slug) => postMap.get(slug)).filter((post): post is CollectionEntry<"writings"> => Boolean(post)),
+}))
 
-// Collect all featured slugs to exclude from "Latest"
-const featuredSlugs = new Set(featuredGroups.flatMap(g => g.slugs));
-const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4);
+const [firstGroup, ...remainingGroups] = resolvedGroups
+const marginaliaInsertIndex = Math.ceil(remainingGroups.length / 2)
+const leadingGroups = remainingGroups.slice(0, marginaliaInsertIndex)
+const trailingGroups = remainingGroups.slice(marginaliaInsertIndex)
+
+const featuredSlugs = new Set(featuredGroups.flatMap((group) => group.slugs))
+const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).slice(0, 4)
 ---
 
 <div class="home-page">
   <div class="welcome-container">
-
     <div class="main-content">
-      {leadingGroups.map((group, gi) => (
-        <section class={`featured-group featured-group--${gi} display-panel`}>
+      {firstGroup && (
+        <section class="featured-group featured-group--0 display-panel">
           <div class="panel-header">
             <span class="panel-status"></span>
-            <h2 class="panel-title">{group.title}</h2>
+            <h2 class="panel-title">{firstGroup.title}</h2>
           </div>
-          <p class="featured-group-desc">{group.description}</p>
+          <p class="featured-group-desc">{firstGroup.description}</p>
           <div class="writing-listing">
-            {group.posts.map((post, i) => (
-              <ArticleCard post={post} featured={gi === 0 && i === 0} slim={i > 0 || gi > 0} />
+            {firstGroup.posts.map((post, i) => (
+              <ArticleCard post={post} featured={i === 0} slim={i > 0} />
             ))}
           </div>
         </section>
-      ))}
+      )}
+
+      <article class="author-bio">
+        <div class="author-bio-top">
+          <div class="author-bio-intro">
+            <p class="author-kicker">Author</p>
+            <h2 class="author-name">Arttu</h2>
+            <p class="from-eu-with-love">🇪🇺 🇫🇮 ❤️ 🏳️‍🌈</p>
+            <p class="author-bio-deck">
+              Software development consultant writing about software, teams, AI, and the human side of building complex systems.
+            </p>
+          </div>
+
+          <div class="author-bio-aside">
+            <div class="sidebar-photo-container">
+              <a href="/author/" class="sidebar-photo-link">
+                <div class="photo-reveal">
+                  <div class="photo-reveal-front">
+                    <Image src={arttu} alt="Arttu Viljakainen" loading="eager" />
+                  </div>
+                  <div class="photo-reveal-back">
+                    <span>This is Arttu, read more about them here →</span>
+                  </div>
+                </div>
+              </a>
+              <button class="photo-reveal-toggle" type="button" aria-label="Show info">↻</button>
+            </div>
+          </div>
+        </div>
+      </article>
 
       {marginalia.length > 0 && (
         <section class="featured-group marginalia-panel">
@@ -67,16 +93,31 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
         </section>
       )}
 
-      {trailingGroups.map((group, gi) => (
-        <section class={`featured-group featured-group--${gi + leadingGroups.length} display-panel`}>
+      {leadingGroups.map((group, gi) => (
+        <section class={`featured-group featured-group--${gi + 1} display-panel`}>
           <div class="panel-header">
             <span class="panel-status"></span>
             <h2 class="panel-title">{group.title}</h2>
           </div>
           <p class="featured-group-desc">{group.description}</p>
           <div class="writing-listing">
-            {group.posts.map((post, i) => (
-              <ArticleCard post={post} featured={gi + leadingGroups.length === 0 && i === 0} slim={i > 0 || gi + leadingGroups.length > 0} />
+            {group.posts.map((post) => (
+              <ArticleCard post={post} slim />
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {trailingGroups.map((group, gi) => (
+        <section class={`featured-group featured-group--${gi + leadingGroups.length + 1} display-panel`}>
+          <div class="panel-header">
+            <span class="panel-status"></span>
+            <h2 class="panel-title">{group.title}</h2>
+          </div>
+          <p class="featured-group-desc">{group.description}</p>
+          <div class="writing-listing">
+            {group.posts.map((post) => (
+              <ArticleCard post={post} slim />
             ))}
           </div>
         </section>
@@ -100,69 +141,37 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
         <a href="/writings/">All writings →</a>
       </span>
 
-      <OrbitDivider seed="home-orbit" spacing="1.5rem" />
-
-      <BauhausDivider seed="home-bio" height="60px" spacing="2rem" />
-
-      <article class="author-bio">
-        <div class="line-heading">
-          <h2>Arttu Viljakainen</h2>
-        </div>
-        <p>
-          I'm a software development consultant from Helsinki. I write about software, teams, AI, and the human side of building complex systems.
-        </p>
-        <div class="article-card-text">
+      <section class="author-details">
+        <div class="author-details-copy">
+          <p class="author-details-kicker">Nordic thinking.</p>
           <p>
             I'm interested in how good judgment, collaboration, and tools come together in real work. That means both
             how people build software together, and what they should build for other people to use.
           </p>
           <p>
-            I keep returning to the same questions: how teams make sense of complexity, how tools can support rather
-            than constrain human thought, and how we can build software that fits the lives and work of the people who
-            depend on it.
+            I'm fascinated about how teams make sense of complexity, how tools can empower rather than constrain human
+            thought, and how we can build software that amplify the lives and work of the people who depend on it.
           </p>
-        </div>
-        <div class="article-card-footer">
-          <a class="read-more" href="/author/">Read more about the author →</a>
-        </div>
-      </article>
-    </div>
-
-    <aside class="author-sidebar">
-      <div class="sidebar-panel">
-        <div class="panel-header">
-          <span class="panel-status"></span>
-          <span class="panel-title">Author</span>
-        </div>
-        <div class="sidebar-photo-container">
-          <a href="/author/" class="sidebar-photo-link">
-            <div class="photo-reveal">
-              <div class="photo-reveal-front">
-                <Image src={arttu} alt="Arttu" loading="eager" />
-              </div>
-              <div class="photo-reveal-back">
-                <span>This is Arttu, read more about them here →</span>
-              </div>
-            </div>
-          </a>
-          <button class="photo-reveal-toggle" type="button" aria-label="Show info">↻</button>
-        </div>
-        <span class="crew-name">Arttu</span>
-        <span class="crew-role">Developer · Helsinki</span>
-        <div class="crew-map" aria-label="Map showing Helsinki, Finland">
-          <div class="map-viewport">
-            <div class="helsinki-beacon">
-              <span class="beacon-ping"></span>
-              <span class="beacon-dot"></span>
-            </div>
-            <span class="beacon-label">HEL</span>
+          <div class="article-card-footer">
+            <a class="read-more" href="/author/">Read more about the author →</a>
           </div>
-          <span class="beacon-coords">60.17°N 24.94°E</span>
         </div>
-        <p class="from-eu-with-love">🇪🇺 🇫🇮 ❤️ 🏳️‍🌈</p>
-      </div>
-    </aside>
 
+        <aside class="author-details-meta">
+          <div class="crew-map" aria-label="Map showing Helsinki, Finland">
+            <div class="map-viewport">
+              <div class="helsinki-beacon">
+                <span class="beacon-ping"></span>
+                <span class="beacon-dot"></span>
+              </div>
+              <span class="beacon-label">HEL</span>
+            </div>
+            <span class="crew-name">Helsinki</span>
+            <span class="beacon-coords">60.17°N 24.94°E</span>
+          </div>
+        </aside>
+      </section>
+    </div>
   </div>
 </div>
 
@@ -174,71 +183,39 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
     }
 
     .welcome-container {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 2rem;
         width: 100%;
     }
 
     .main-content {
-        flex: 1;
+        width: 100%;
         min-width: 0;
     }
 
-    .author-sidebar {
-        width: 180px;
-        flex-shrink: 0;
-        top: 5rem;
+    .author-bio-top {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(13rem, 0.7fr);
+        gap: 2rem;
+      align-items: center;
+    }
+
+    .author-bio-intro {
+        min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .author-bio-aside {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.75rem;
+        gap: 0.85rem;
     }
 
-    .sidebar-panel {
-        border: 1px solid var(--color-border);
-        border-radius: 0.25rem;
-        padding: 0.5rem;
-        width: 100%;
-        position: relative;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sidebar-panel::before,
-    .sidebar-panel::after {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-color: var(--color-muted);
-        border-style: solid;
-        pointer-events: none;
-    }
-
-    .sidebar-panel::before {
-        top: -1px;
-        left: -1px;
-        border-width: 2px 0 0 2px;
-        border-radius: 2px 0 0 0;
-    }
-
-    .sidebar-panel .panel-header {
-        align-self: flex-start;
-    }
-
-    .sidebar-panel .feed-area {
-        align-self: stretch;
-    }
-
-    .sidebar-panel::after {
-        bottom: -1px;
-        right: -1px;
-        border-width: 0 2px 2px 0;
-        border-radius: 0 0 2px 0;
+    .author-details-meta {
+        width: min(13rem, 100%);
     }
 
     .crew-name {
@@ -291,7 +268,6 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
         opacity: 0.6;
     }
 
-    /* Helsinki beacon - positioned relative to the visible viewport */
     .helsinki-beacon {
         position: absolute;
         top: 50%;
@@ -325,8 +301,8 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
     }
 
     @keyframes beaconPing {
-        0%   { width: 5px; height: 5px; opacity: 0.8; }
-        70%  { width: 20px; height: 20px; opacity: 0; }
+        0% { width: 5px; height: 5px; opacity: 0.8; }
+        70% { width: 20px; height: 20px; opacity: 0; }
         100% { width: 20px; height: 20px; opacity: 0; }
     }
 
@@ -359,20 +335,61 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     .sidebar-photo-container {
         position: relative;
-        width: 100%;
+        width: min(16rem, 100%);
+        min-height: 21rem;
+        padding: 1.4rem 1rem 1.35rem;
+        display: grid;
+        align-content: end;
+        border-radius: 0.65rem;
+        background:
+          linear-gradient(90deg, transparent 0 63%, color-mix(in srgb, var(--color-blue) 72%, white 28%) 63% 69%, transparent 69% 100%),
+          linear-gradient(90deg, transparent 0 12%, color-mix(in srgb, var(--color-yellow) 84%, #e3b233 16%) 12% 40%, transparent 40% 100%),
+          linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 90%, #f1e7d8 10%) 0%, color-mix(in srgb, var(--color-bg) 86%, #e5d8c7 14%) 100%);
+        box-shadow:
+          0 1rem 2.2rem color-mix(in srgb, var(--color-text) 10%, transparent),
+          inset 0 0 0 1px color-mix(in srgb, var(--color-text) 8%, transparent);
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+    .sidebar-photo-container::before {
+        content: '';
+        position: absolute;
+      left: 0;
+      top: 4.2rem;
+      width: 78%;
+      height: 3.5rem;
+      background: color-mix(in srgb, var(--color-red) 82%, white 18%);
+        pointer-events: none;
+        z-index: 0;
+      opacity: 0.92;
+    }
+
+    .sidebar-photo-container::after {
+        content: '';
+        position: absolute;
+      display: none;
+        pointer-events: none;
+        z-index: 0;
+      opacity: 0.9;
     }
 
     .sidebar-photo-link {
         display: block;
-        border-radius: 0.5rem;
+        border-radius: 0.18rem;
         text-decoration: none;
+        position: relative;
+        z-index: 2;
     }
 
     .photo-reveal {
         position: relative;
-        width: 100%;
-        border-radius: 0.5rem;
+      width: 72%;
+      margin: 0 auto 0 12%;
+        border-radius: 0.18rem;
         overflow: hidden;
+        box-shadow: 0 0.8rem 1.6rem color-mix(in srgb, var(--color-text) 14%, transparent);
+        transform: translateY(0.2rem);
     }
 
     .photo-reveal-front {
@@ -383,9 +400,10 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
         width: 100%;
         height: auto;
         display: block;
-        border: 1px solid lightgray;
-        border-radius: 0.5rem;
+        border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+        border-radius: 0.18rem;
         transition: opacity 0.4s ease, filter 0.4s ease;
+        filter: contrast(1.02) saturate(0.94);
     }
 
     .photo-reveal-back {
@@ -396,12 +414,15 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
         justify-content: center;
         text-align: center;
         padding: 1rem;
-        background: linear-gradient(135deg, var(--color-red) 0%, var(--color-orange) 20%, var(--color-yellow) 40%, var(--color-green) 60%, var(--color-blue) 80%, var(--color-purple) 100%);
-        color: #fff;
+        background:
+          linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 92%, #f1e7d8 8%) 0%, color-mix(in srgb, var(--color-bg) 88%, #e5d8c7 12%) 100%);
+        color: color-mix(in srgb, var(--color-text) 92%, #6f5b4d 8%);
         font-family: var(--font-condensed);
         font-size: 0.8rem;
         letter-spacing: 0.03em;
-        border-radius: 0.5rem;
+        border-radius: 0.18rem;
+        border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+        box-shadow: inset 0 0 0 0.45rem color-mix(in srgb, var(--color-red) 16%, transparent);
         opacity: 0;
         transition: opacity 0.4s ease;
     }
@@ -418,22 +439,37 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
     }
 
     .photo-reveal-toggle {
-        display: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: -0.5rem;
+      top: -0.5rem;
+      width: 2rem;
+      height: 2rem;
+        border-radius: 50%;
+        border: 1px solid color-mix(in srgb, var(--color-text) 14%, transparent);
+        background: color-mix(in srgb, var(--color-bg) 92%, white 8%);
+        color: color-mix(in srgb, var(--color-text) 86%, transparent);
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 2;
+      line-height: 1;
+        box-shadow: 0 0.2rem 0.6rem color-mix(in srgb, var(--color-text) 10%, transparent);
     }
 
     .from-eu-with-love {
         font-weight: 200;
-      font-size: 0.96rem;
-        margin-top: 0.35rem;
-        margin-bottom: 0;
-        text-align: center;
+        font-size: 0.96rem;
+      margin: 0 0 1rem;
+      text-align: center;
     }
 
     .marginalia-listing ul {
         list-style-type: none;
         padding-left: 0;
         margin-top: 0;
-      margin-bottom: 0;
+        margin-bottom: 0;
     }
 
     .marginalia-listing li {
@@ -441,41 +477,41 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
     }
 
     .marginalia-panel {
-      margin: 3rem 0 2.5rem;
-      padding: 1.35rem 1.5rem 1.25rem;
-      width: 100%;
-      box-sizing: border-box;
-      border-top: 2px solid var(--color-text);
-      border-bottom: 1px solid color-mix(in srgb, var(--color-border) 88%, transparent);
-      background: linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 96%, #efe7db 4%), transparent);
-      overflow-x: clip;
+        margin: 3rem 0 2.5rem;
+        padding: 1.35rem 1.5rem 1.25rem;
+        width: 100%;
+        box-sizing: border-box;
+        border-top: 1px solid color-mix(in srgb, var(--color-border) 88%, transparent);
+        border-bottom: 1px solid color-mix(in srgb, var(--color-border) 88%, transparent);
+        background: linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 96%, #efe7db 4%), transparent);
+        overflow-x: clip;
     }
 
     .marginalia-panel .panel-header {
-      margin-bottom: 0.45rem;
+        margin-bottom: 0.45rem;
     }
 
     .marginalia-panel .panel-status {
-      background-color: color-mix(in srgb, var(--color-link) 72%, #d66a00 28%);
-      box-shadow: 0 0 4px color-mix(in srgb, var(--color-link) 72%, #d66a00 28%);
+        background-color: color-mix(in srgb, var(--color-link) 72%, #d66a00 28%);
+        box-shadow: 0 0 4px color-mix(in srgb, var(--color-link) 72%, #d66a00 28%);
     }
 
     .marginalia-panel .panel-title {
-      font-family: var(--font-condensed);
-      font-size: 0.9rem;
-      letter-spacing: 0.16em;
-      color: color-mix(in srgb, var(--color-text) 88%, #6a5245 12%);
+        font-family: var(--font-condensed);
+        font-size: 0.9rem;
+        letter-spacing: 0.16em;
+        color: color-mix(in srgb, var(--color-text) 88%, #6a5245 12%);
     }
 
     .marginalia-panel .featured-group-desc {
-      max-width: 34rem;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
+        max-width: 34rem;
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
     }
 
     .feed-more {
         font-family: var(--font-condensed);
-      font-size: 0.82rem;
+        font-size: 0.82rem;
         color: #999;
         text-decoration: none;
         display: block;
@@ -496,7 +532,6 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
         margin-bottom: 2rem;
     }
 
-    /* === Display panel (sci-fi bridge panel) === */
     .display-panel {
         border: 1px solid var(--color-border);
         border-radius: 0.25rem;
@@ -505,7 +540,6 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
         box-sizing: border-box;
     }
 
-    /* Corner bracket accents */
     .display-panel::before,
     .display-panel::after {
         content: '';
@@ -550,7 +584,7 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     .panel-title {
         font-family: var(--font-mono);
-      font-size: 0.76rem;
+        font-size: 0.76rem;
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.1em;
@@ -561,24 +595,87 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     .featured-group-desc {
         font-family: var(--font-condensed);
-      font-size: 0.92rem;
+        font-size: 0.92rem;
         color: var(--color-muted);
         margin: 0 0 0.75rem;
-      line-height: 1.55;
+        line-height: 1.55;
     }
 
     .author-bio {
-        margin-top: 1rem;
-      font-size: 1.04rem;
-      line-height: 1.72;
+        margin: 2rem 0;
+        padding: 1.5rem 0;
+        font-size: 1.04rem;
+        line-height: 1.72;
     }
 
     .author-bio p {
-      line-height: 1.72;
+        line-height: 1.72;
+      text-align: center;
+    }
+
+    .author-kicker {
+      margin: 0 0 0.85rem;
+      font-family: var(--font-condensed);
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-red);
+      line-height: 1;
+    }
+
+    .author-name {
+      margin: 0 0 1rem;
+      font-family: var(--font-serif);
+      font-size: clamp(2.25rem, 5vw, 3.35rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+    }
+
+    .author-bio-deck {
+        max-width: 32rem;
+        margin: 0;
+        font-family: var(--font-condensed);
+        font-size: 1rem;
+        color: var(--color-muted);
+    }
+
+    .author-details {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid color-mix(in srgb, var(--color-text) 18%, transparent);
+      display: grid;
+      grid-template-columns: minmax(0, 40rem) minmax(13rem, 16rem);
+      gap: 2rem;
+      align-items: start;
+      justify-content: center;
+    }
+
+    .author-details-copy {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+    }
+
+    .author-details-copy p {
+      margin-top: 0;
+    }
+
+    .author-details-kicker {
+      margin: 0 0 1rem;
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: color-mix(in srgb, var(--color-text) 88%, #6f5b4d 12%);
+    }
+
+    .author-details-copy .article-card-footer {
+      text-align: center;
     }
 
     .article-card-footer {
-        text-align: right;
+        margin-top: 1rem;
+      text-align: center;
     }
 
     .article-card--slim h2 {
@@ -587,65 +684,55 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
 
     @media (max-width: 800px) {
         .welcome-container {
-            flex-direction: column;
-        align-items: stretch;
             margin-top: 1rem;
         }
-
-        /* On mobile, reorder so sidebar appears after the first group */
-        .main-content {
-            display: contents;
-        }
-
-        .featured-group--0  { order: 1; }
-        .author-sidebar      { order: 2; }
-        .featured-group--1  { order: 3; }
-        .marginalia-panel    { order: 4; }
-        .featured-group--2  { order: 5; }
-        .featured-group--3  { order: 6; }
-        .button-container    { order: 7; }
-        :global(.orbit-divider)   { order: 8; }
-        :global(.bauhaus-divider) { order: 9; }
-        .author-bio          { order: 10; }
 
         .featured-group,
         .button-container,
         .author-bio,
-        .marginalia-panel,
-        :global(.bauhaus-divider),
-        :global(.orbit-divider) {
+        .marginalia-panel {
             width: 100%;
         }
 
-        .author-sidebar {
-            position: static;
-            width: 100%;
-            align-items: center;
-            max-width: 100%;
+        .author-bio {
+          padding: 1rem 0;
         }
 
-        .sidebar-panel {
-            max-width: 50ch;
+        .author-bio-top {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .author-details {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .author-bio-intro {
+          align-items: center;
+          text-align: center;
         }
 
         .marginalia-panel {
-          padding: 1.15rem 1rem 1rem;
+            padding: 1.15rem 1rem 1rem;
         }
 
-        .author-sidebar img {
+        .author-bio img {
             max-width: 30ch;
             max-height: 50vh;
         }
 
         .sidebar-photo-container {
-            max-width: 30ch;
+          max-width: 30ch;
+          min-height: 19rem;
+          padding: 1.35rem 0.9rem 1.2rem;
         }
 
-        .sidebar-photo-link {
-            /* no perspective needed */
+        .photo-reveal {
+          margin: 0 auto;
         }
 
-        /* Disable hover reveal on mobile (use button/scroll instead) */
+
         .sidebar-photo-link:hover .photo-reveal-front img {
             opacity: 1;
             filter: none;
@@ -656,26 +743,28 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
         }
 
         .photo-reveal-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            right: -0.5rem;
-            top: -0.5rem;
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            border: 1px solid lightgray;
-            background: var(--color-bg);
-            color: var(--color-muted);
-            font-size: 1rem;
-            cursor: pointer;
-            z-index: 2;
-            line-height: 1;
+          background: var(--color-bg);
         }
 
         .marginalia-listing ul {
             width: 100%;
+        }
+
+        .author-bio-aside {
+          align-items: center;
+        }
+
+        .author-details-meta,
+        .sidebar-photo-container {
+            width: min(30ch, 100%);
+          margin-inline: auto;
+        }
+
+        .crew-name,
+        .crew-role,
+        .beacon-coords,
+        .from-eu-with-love {
+          text-align: center;
         }
     }
 </style>
@@ -686,6 +775,9 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
     const revealEl = document.querySelector<HTMLElement>('.photo-reveal');
     const toggleBtn = document.querySelector<HTMLButtonElement>('.photo-reveal-toggle');
     if (!container || !revealEl || !toggleBtn) return;
+      if (container.dataset.photoRevealInit === 'true') return;
+
+      container.dataset.photoRevealInit = 'true';
 
     const photoContainer = container;
     const photoReveal = revealEl;
@@ -722,5 +814,6 @@ const latestPosts = allWritings.filter(p => !featuredSlugs.has(p.id)).slice(0, 4
     }
   }
 
+  document.addEventListener('DOMContentLoaded', initPhotoReveal);
   document.addEventListener('astro:page-load', initPhotoReveal);
 </script>

@@ -11,16 +11,9 @@
   </div>
   <div class="footer-inner">
     <div class="footer-content">
-      <div class="footer-col">
-        <h3 class="footer-col-heading">Follow</h3>
-        <p>
-          <a href="/rss.xml">RSS Feed</a>
-        </p>
-        <p>Full text in RSS, there is no need to visit the site if you prefer not to.</p>
-        <p>Let me know if you have issues with the feed.</p>
-      </div>
-      <div class="footer-col">
+      <div class="footer-col footer-col--lead">
         <h3 class="footer-col-heading">About</h3>
+        <p class="footer-lede">A quiet corner of the web for software, teamwork, research, and the human side of complex systems.</p>
         <p><a href="/author">Who am I?</a></p>
         <p>
           This is my corner of the web. I use it to practice writing: it forces me to think.
@@ -31,6 +24,14 @@
         <p>
           I write about <a href="/tags/dev">software development</a>, <a href="/tags/hci">human-computer interaction</a> and <a href="/tags/research">research</a>.
         </p>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col-heading">Follow</h3>
+        <p>
+          <a href="/rss.xml">RSS Feed</a>
+        </p>
+        <p>Full text in RSS, there is no need to visit the site if you prefer not to.</p>
+        <p>Let me know if you have issues with the feed.</p>
       </div>
       <div class="footer-col">
         <h3 class="footer-col-heading">Contact</h3>
@@ -117,7 +118,7 @@
 
     .footer-accent-bar {
         display: flex;
-        height: 5px;
+      height: 6px;
         width: 100%;
     }
 
@@ -135,35 +136,48 @@
     .footer-inner {
         max-width: 70rem;
         margin: 0 auto;
-        padding: 2.5rem 1rem 1.5rem;
+      padding: 3.5rem 1.25rem 2rem;
         position: relative;
         z-index: 1;
     }
 
     .footer-content {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2.5rem;
-        padding-bottom: 2rem;
+      grid-template-columns: minmax(0, 1.35fr) minmax(14rem, 0.85fr) minmax(14rem, 0.95fr);
+      gap: 3rem;
+      padding-bottom: 2.5rem;
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .footer-col-heading {
         font-family: var(--font-condensed);
-        font-size: 0.7rem;
+      font-size: 0.82rem;
         font-weight: 400;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
-        color: #888;
+      letter-spacing: 0.16em;
+      color: rgba(255,255,255,0.56);
         margin-top: 0;
-        margin-bottom: 1rem;
+      margin-bottom: 1.1rem;
     }
 
     .footer-col p {
-        font-size: 0.85rem;
-        line-height: 1.6;
-        margin-bottom: 0.6rem;
-        color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.68;
+      margin-bottom: 0.75rem;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .footer-col--lead {
+      max-width: 28rem;
+    }
+
+    .footer-lede {
+      font-family: var(--font-serif);
+      font-size: clamp(1.35rem, 2.3vw, 1.85rem);
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      color: #f4efe8;
+      margin: 0 0 1.1rem;
     }
 
     footer a {
@@ -176,7 +190,7 @@
     }
 
     .footer-bottom {
-        padding-top: 1.25rem;
+      padding-top: 1.4rem;
         display: flex;
         justify-content: space-between;
         gap: 1rem;
@@ -184,20 +198,29 @@
     }
 
     .footer-bottom p {
-        font-size: 0.75rem;
-        color: rgba(255,255,255,0.3);
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.36);
         margin: 0;
         line-height: 1.5;
     }
 
     .footer-bottom a {
-        color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.5);
     }
 
     @media (max-width: 800px) {
         .footer-content {
             grid-template-columns: 1fr;
-            gap: 1.5rem;
+        gap: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .footer-inner {
+        padding: 3rem 1rem 1.75rem;
+      }
+
+      .footer-col--lead {
+        max-width: none;
         }
 
         .footer-bottom {
