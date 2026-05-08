@@ -145,12 +145,12 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
         <div class="author-details-copy">
           <p class="author-details-kicker">Nordic thinking.</p>
           <p>
-            I'm interested in how good judgment, collaboration, and tools come together in real work. That means both
-            how people build software together, and what they should build for other people to use.
+            I love it when people can work as an efficient cross-functional egalitarian team, 
+            combining multiple perspectives and skillsets to solve complex, systemic problems.
           </p>
           <p>
             I'm fascinated about how teams make sense of complexity, how tools can empower rather than constrain human
-            thought, and how we can build software that amplify the lives and work of the people who depend on it.
+            thought, and how we can build software that amplify the lives and work of humans.
           </p>
           <div class="article-card-footer">
             <a class="read-more" href="/author/">Read more about the author →</a>
@@ -478,7 +478,7 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
 
     .marginalia-panel {
         margin: 3rem 0 2.5rem;
-      padding: 1.35rem 1rem 1.25rem;
+        padding: 1.35rem 1.5rem 1.25rem;
         width: 100%;
         box-sizing: border-box;
         border-top: 1px solid color-mix(in srgb, var(--color-border) 88%, transparent);
@@ -525,7 +525,7 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
     .button-container {
         display: flex;
         justify-content: center;
-      margin: 0.5rem 0 0;
+        margin: 1rem 0;
     }
 
     .featured-group {
@@ -603,8 +603,7 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
 
     .author-bio {
         margin: 2rem 0;
-      padding: 1.5rem 1rem;
-      box-sizing: border-box;
+        padding: 1.5rem 0;
         font-size: 1.04rem;
         line-height: 1.72;
     }
@@ -642,15 +641,14 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
     }
 
     .author-details {
-      margin-top: 2rem;
-      padding: 1.5rem 1rem 0;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
       border-top: 1px solid color-mix(in srgb, var(--color-text) 18%, transparent);
       display: grid;
       grid-template-columns: minmax(0, 40rem) minmax(13rem, 16rem);
       gap: 2rem;
       align-items: start;
       justify-content: center;
-      box-sizing: border-box;
     }
 
     .author-details-copy {
@@ -685,6 +683,10 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
     }
 
     @media (max-width: 800px) {
+        .welcome-container {
+            margin-top: 1rem;
+        }
+
         .featured-group,
         .button-container,
         .author-bio,
@@ -693,7 +695,7 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
         }
 
         .author-bio {
-        padding: 1rem;
+          padding: 1rem 0;
         }
 
         .author-bio-top {

@@ -7,7 +7,7 @@ export interface FeaturedGroup {
 export const featuredGroups: FeaturedGroup[] = [
   {
     title: "AI & Augmentation",
-    description: "How AI and tools can augment human cognitive skills rather than replace them.",
+    description: "My ideological approach is to focus on how AI, automation and software tools in general can augment human cognitive skills rather than replace them.",
     slugs: [
       "ironies-of-automation-and-ai",
       "augment-complement-empower-yourself",
@@ -17,7 +17,7 @@ export const featuredGroups: FeaturedGroup[] = [
   },
   {
     title: "Consulting & Process",
-    description: "Thoughts on agile, estimation, and the consulting profession.",
+    description: "Thoughts on agile, software development, and the consulting profession.",
     slugs: [
       "agile-still-relevant",
       "consulting",
@@ -27,7 +27,7 @@ export const featuredGroups: FeaturedGroup[] = [
   },
   {
     title: "Situation Awareness",
-    description: "A deep dive into how humans maintain awareness in complex systems.",
+    description: "Situation awareness has been an especially interesting focus area to me. I'm often building tools for professionals, and it's essential to keep users engaged and in the loop. ",
     slugs: [
       "situation-awareness",
       "distributed-situation-awareness-dsa",
