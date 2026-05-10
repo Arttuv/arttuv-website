@@ -192,19 +192,13 @@ svg {
 .header-cat {
     position: absolute;
     bottom: 0;
-    right: 20ch;
+    right: 6ch;
     transform: translateY(50%);
     z-index: 10;
     line-height: 0;
     color: #000;
     cursor: pointer;
     transition: transform 0.3s ease;
-}
-
-@media (max-width: 800px) {
-    .header-cat {
-        right: 4ch;
-    }
 }
 
 .header-cat:hover {
