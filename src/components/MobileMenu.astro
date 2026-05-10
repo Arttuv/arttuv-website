@@ -13,15 +13,27 @@ import ThemeIcon from "./ThemeIcon.astro"
             aria-controls="flyout-menu"></button>
 
     <div class="menu-flyout" id="flyout-menu">
-      <nav>
+            <div class="menu-brand-intro">
+                <p class="menu-intro-name">Arttu Viljakainen</p>
+                <p class="menu-intro-tagline">A nordic approach to software, systems and people</p>
+                <div class="menu-rainbow-bar" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <nav class="menu-main">
         <HeaderLink href="/">Home</HeaderLink>
                 <HeaderLink href="/writings/">Writings</HeaderLink>
                 <HeaderLink href="/author/">Author</HeaderLink>
       </nav>
-      <ThemeIcon />
-      <nav class="menu-cta">
-        <SocialLinks size="26px" showLabels />
-      </nav>
+      <div class="menu-footer">
+        <div class="menu-controls" role="button" tabindex="0">
+          <ThemeIcon />
+          <span class="menu-controls-label">Theme</span>
+        </div>
+        <nav class="menu-cta">
+          <SocialLinks size="26px" showLabels />
+        </nav>
+      </div>
     </div>
   </div>
 </div>
@@ -39,7 +51,7 @@ import ThemeIcon from "./ThemeIcon.astro"
         width: 100%;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 768px) {
 
         .mobile-menu a {
             color: inherit;
@@ -167,11 +179,92 @@ import ThemeIcon from "./ThemeIcon.astro"
             transition: transform var(--menu-trsdu) var(--menu-trstf);
             transform: translateX(-100%);
             z-index: 1000;
+            overflow: hidden;
+        }
+
+        .menu-flyout::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(120% 60% at 5% 0%, rgba(224, 58, 62, 0.08), transparent 60%),
+                radial-gradient(90% 55% at 95% 8%, rgba(0, 157, 220, 0.08), transparent 65%),
+                linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .menu-flyout > * {
+            position: relative;
+            z-index: 1;
         }
 
         .dark .menu-flyout {
             background: black;
             color: white;
+        }
+
+        .dark .menu-flyout::before {
+            background:
+                radial-gradient(120% 60% at 5% 0%, rgba(224, 58, 62, 0.12), transparent 60%),
+                radial-gradient(90% 55% at 95% 8%, rgba(0, 157, 220, 0.12), transparent 65%),
+                linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+        }
+
+        .menu-brand-intro {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu-intro-name {
+            margin: 0;
+            font-family: var(--font-serif);
+            font-size: clamp(1.4rem, 6.5vw, 1.95rem);
+            line-height: 1.1;
+            letter-spacing: 0.01em;
+            animation: slideInUp 0.36s cubic-bezier(0.22, 1, 0.36, 1) 0.04s backwards;
+        }
+
+        .menu-intro-tagline {
+            margin: 0;
+            font-family: var(--font-condensed);
+            font-size: 0.9rem;
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            opacity: 0.8;
+            max-width: 30ch;
+            animation: slideInUp 0.36s cubic-bezier(0.22, 1, 0.36, 1) 0.08s backwards;
+        }
+
+        .menu-rainbow-bar {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            width: min(20rem, 85%);
+            height: 10px;
+            border-radius: 999px;
+            overflow: hidden;
+            margin-top: 0.25rem;
+            animation: slideInUp 0.36s cubic-bezier(0.22, 1, 0.36, 1) 0.12s backwards;
+        }
+
+        .menu-rainbow-bar span:nth-child(1) { background: var(--color-red); transition: flex 0.2s ease; }
+        .menu-rainbow-bar span:nth-child(2) { background: var(--color-orange); }
+        .menu-rainbow-bar span:nth-child(3) { background: var(--color-yellow); }
+        .menu-rainbow-bar span:nth-child(4) { background: var(--color-green); }
+        .menu-rainbow-bar span:nth-child(5) { background: var(--color-blue); }
+        .menu-rainbow-bar span:nth-child(6) { background: var(--color-purple); }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* === Menus === */
@@ -188,6 +281,35 @@ import ThemeIcon from "./ThemeIcon.astro"
 
         .menu-main {
             gap: clamp(0.5rem, -3.875rem + 14vw, 4rem);
+        }
+
+        /* === Menu Footer Controls === */
+        .menu-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid currentColor;
+            opacity: 0.7;
+        }
+
+        .menu-controls {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.75rem;
+            width: fit-content;
+            cursor: pointer;
+            padding: 0.5rem 0;
+            margin: -0.5rem 0;
+        }
+
+        .menu-controls-label {
+            font-family: var(--font-condensed);
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            user-select: none;
         }
 
         .menu-toggle {
@@ -239,6 +361,19 @@ import ThemeIcon from "./ThemeIcon.astro"
             transform: translate(var(--menu-toggle-h), calc(var(--menu-toggle-h) / 2)) rotate(-45deg);
         }
 
+        .menu-open .menu-brand-intro {
+            animation: fadeIn 0.36s ease 0.16s backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
         .icon, .icon-stroke {
             height: var(--icon-sz, 2em);
         }
@@ -272,7 +407,7 @@ import ThemeIcon from "./ThemeIcon.astro"
     }
 
     /* === Prevent Scrolling on <body>, when .menu-toggle is checked (flyout is visible) === */
-    @media (max-width: 800px) {
+    @media (max-width: 768px) {
         .menu-open {
             overflow: hidden;
         }
@@ -297,25 +432,21 @@ import ThemeIcon from "./ThemeIcon.astro"
         .menu-brand-text {
             font-size: 0.85rem;
         }
+
+            .menu-intro-name {
+                font-size: clamp(1.3rem, 6vw, 1.6rem);
+            }
+
+            .menu-rainbow-bar {
+                width: min(16rem, 75%);
+                height: 8px;
+            }
+        }
     }
 
-    @media (min-width: 821px) {
-        .menu-cta, .menu-main {
-            flex: unset;
-        }
-
-        .menu-flyout {
-            --menu-flyout-dir: row;
-            display: contents;
-            font-size: revert;
-        }
-
-        .menu-toggle {
-            display: none;
-        }
-
-        .menu-wrapper { /* stretch background-color to edge-of-screen */
-
+    @media (prefers-reduced-motion: no-preference) and (max-width: 768px) {
+        .menu-open .menu-brand-intro {
+            animation: fadeIn 0.36s ease 0.16s both;
         }
     }
 
@@ -356,7 +487,7 @@ import ThemeIcon from "./ThemeIcon.astro"
     // Close on background tap inside flyout (not on links or theme toggle)
     var flyout = document.getElementById("flyout-menu")
     flyout && flyout.addEventListener("click", function(e) {
-            if (e.target.closest("a, .theme-control")) return
+                        if (e.target.closest("a, .theme-control, .menu-controls, .menu-brand-intro")) return
       closeMenu()
     })
 
@@ -375,6 +506,27 @@ import ThemeIcon from "./ThemeIcon.astro"
       } else if (!e.shiftKey && document.activeElement === last) {
         e.preventDefault()
         first.focus()
+      }
+    })
+
+    // Theme controls click — forward to theme button
+    document.addEventListener("click", function(e) {
+      var control = e.target.closest(".menu-controls")
+      if (!control || e.target.closest(".theme-toggle")) return // ignore direct button clicks
+      var themeButton = control.querySelector(".theme-toggle")
+      if (themeButton) {
+        themeButton.click()
+      }
+    })
+
+    // Theme controls keyboard support
+    document.addEventListener("keydown", function(e) {
+      if ((e.key === "Enter" || e.key === " ") && e.target.closest(".menu-controls")) {
+        e.preventDefault()
+        var themeButton = e.target.closest(".menu-controls").querySelector(".theme-toggle")
+        if (themeButton) {
+          themeButton.click()
+        }
       }
     })
   })()

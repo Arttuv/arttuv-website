@@ -306,7 +306,7 @@ import MobileMenu from "./MobileMenu.astro"
         margin-right: 1rem;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 768px) {
 
         .desktop-navigation {
             margin: 1rem 0 0 0;
@@ -360,7 +360,7 @@ import MobileMenu from "./MobileMenu.astro"
     if (!header) return;
     const headerEl = header;
 
-    const mobileQuery = window.matchMedia('(max-width: 800px)');
+    const mobileQuery = window.matchMedia('(max-width: 768px)');
     let lastScrollY = window.scrollY;
     let ticking = false;
 

@@ -167,7 +167,7 @@ svg {
     z-index: 9;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .site-header {
         transition: transform 0.22s ease;
     }
