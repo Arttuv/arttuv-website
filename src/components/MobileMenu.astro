@@ -6,7 +6,7 @@ import ThemeIcon from "./ThemeIcon.astro"
 <div class="menu-wrapper">
   <div class="mobile-menu">
         <a href="/" class="menu-home" aria-label="Go to homepage">
-            <span class="menu-brand-mark" aria-hidden="true"><span class="menu-brand-mark-text">AV</span></span>
+            <span class="menu-brand-mark" aria-hidden="true"><span class="menu-brand-mark-stripe" style="--i:0"></span><span class="menu-brand-mark-stripe" style="--i:1"></span><span class="menu-brand-mark-stripe" style="--i:2"></span><span class="menu-brand-mark-stripe" style="--i:3"></span><span class="menu-brand-mark-stripe" style="--i:4"></span><span class="menu-brand-mark-stripe" style="--i:5"></span><span class="menu-brand-mark-text">AV</span></span>
             <span class="menu-brand-text">arttuv.com</span>
         </a>
     <button class="menu-toggle" aria-label="Toggle flyout menu" aria-expanded="false"
@@ -80,39 +80,60 @@ import ThemeIcon from "./ThemeIcon.astro"
             line-height: 1;
             text-align: center;
             letter-spacing: 0.01em;
-            transition: border-color 0.22s ease;
+            isolation: isolate;
         }
 
-        .menu-brand-mark::before {
-            content: '';
+        .menu-brand-mark-stripe {
             position: absolute;
-            inset: 0;
-            background: linear-gradient(to right,
-                var(--color-red)    0%      16.67%,
-                var(--color-orange) 16.67%  33.33%,
-                var(--color-yellow) 33.33%  50%,
-                var(--color-green)  50%     66.67%,
-                var(--color-blue)   66.67%  83.33%,
-                var(--color-purple) 83.33%  100%
-            );
-            transform: scaleX(0);
-            transform-origin: right center;
-            transition: transform 0.24s ease;
+            top: 0;
+            bottom: 0;
+            width: calc(100% / 6 + 1px);
+            left: calc(var(--i) * 100% / 6);
+            transform: translateY(-110%);
+            opacity: 0;
+        }
+
+        .menu-brand-mark-stripe:nth-child(1) { background: var(--color-red); }
+        .menu-brand-mark-stripe:nth-child(2) { background: var(--color-orange); }
+        .menu-brand-mark-stripe:nth-child(3) { background: var(--color-yellow); }
+        .menu-brand-mark-stripe:nth-child(4) { background: var(--color-green); }
+        .menu-brand-mark-stripe:nth-child(5) { background: var(--color-blue); }
+        .menu-brand-mark-stripe:nth-child(6) { background: var(--color-purple); }
+
+        @keyframes menu-stripe-slide-in {
+            0%   { transform: translateY(-110%); opacity: 0; }
+            40%  { opacity: 1; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes menu-stripe-slide-out {
+            0%   { transform: translateY(0); opacity: 1; }
+            60%  { opacity: 1; }
+            100% { transform: translateY(110%); opacity: 0; }
         }
 
         .menu-brand-mark-text {
             position: relative;
             z-index: 1;
-            transition: color 0.22s ease;
+            transition: color 0.3s ease;
         }
 
-        .menu-home:hover .menu-brand-mark::before {
-            transform: scaleX(1);
-            transform-origin: left center;
-        }
-
-        .menu-home:hover .menu-brand-mark-text {
+        .menu-brand-mark--entering .menu-brand-mark-text {
             color: #fff;
+            transition: color 0.2s ease 0.12s;
+        }
+
+        html:not(.dark) .menu-brand-mark--entering .menu-brand-mark-text {
+            color: inherit;
+            transition: none;
+        }
+
+        .menu-brand-mark--leaving .menu-brand-mark-text {
+            color: #fff;
+        }
+
+        html:not(.dark) .menu-brand-mark--leaving .menu-brand-mark-text {
+            color: inherit;
         }
 
         .menu-brand-text {
@@ -224,7 +245,6 @@ import ThemeIcon from "./ThemeIcon.astro"
             font-size: clamp(1.4rem, 6.5vw, 1.95rem);
             line-height: 1.1;
             letter-spacing: 0.01em;
-            animation: slideInUp 0.36s cubic-bezier(0.22, 1, 0.36, 1) 0.04s backwards;
         }
 
         .menu-intro-tagline {
@@ -235,7 +255,6 @@ import ThemeIcon from "./ThemeIcon.astro"
             letter-spacing: 0.02em;
             opacity: 0.8;
             max-width: 30ch;
-            animation: slideInUp 0.36s cubic-bezier(0.22, 1, 0.36, 1) 0.08s backwards;
         }
 
         .menu-rainbow-bar {
@@ -246,7 +265,6 @@ import ThemeIcon from "./ThemeIcon.astro"
             border-radius: 999px;
             overflow: hidden;
             margin-top: 0.25rem;
-            animation: slideInUp 0.36s cubic-bezier(0.22, 1, 0.36, 1) 0.12s backwards;
         }
 
         .menu-rainbow-bar span:nth-child(1) { background: var(--color-red); transition: flex 0.2s ease; }
@@ -255,17 +273,6 @@ import ThemeIcon from "./ThemeIcon.astro"
         .menu-rainbow-bar span:nth-child(4) { background: var(--color-green); }
         .menu-rainbow-bar span:nth-child(5) { background: var(--color-blue); }
         .menu-rainbow-bar span:nth-child(6) { background: var(--color-purple); }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(12px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
         /* === Menus === */
         .menu-cta, .menu-main {
@@ -361,19 +368,6 @@ import ThemeIcon from "./ThemeIcon.astro"
             transform: translate(var(--menu-toggle-h), calc(var(--menu-toggle-h) / 2)) rotate(-45deg);
         }
 
-        .menu-open .menu-brand-intro {
-            animation: fadeIn 0.36s ease 0.16s backwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
         .icon, .icon-stroke {
             height: var(--icon-sz, 2em);
         }
@@ -444,11 +438,6 @@ import ThemeIcon from "./ThemeIcon.astro"
         }
     }
 
-    @media (prefers-reduced-motion: no-preference) and (max-width: 768px) {
-        .menu-open .menu-brand-intro {
-            animation: fadeIn 0.36s ease 0.16s both;
-        }
-    }
 
 </style>
 
@@ -529,5 +518,114 @@ import ThemeIcon from "./ThemeIcon.astro"
         }
       }
     })
+    // Brand mark stripe hover animation
+    ;(function initMenuBrandHover() {
+      var brand = document.querySelector('.menu-home')
+      var mark = document.querySelector('.menu-brand-mark')
+      if (!brand || !mark) return
+
+      var stripes = Array.prototype.slice.call(mark.querySelectorAll('.menu-brand-mark-stripe'))
+      var step = 0.025
+      var activeAnims = []
+
+      function randomOrder(count) {
+        var order = []
+        for (var i = 0; i < count; i++) order.push(i)
+        for (var i = order.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1))
+          var tmp = order[i]; order[i] = order[j]; order[j] = tmp
+        }
+        return order
+      }
+
+      function cancelAll() {
+        activeAnims.forEach(function(a) { a.cancel() })
+        activeAnims = []
+      }
+
+      function resetStripes() {
+        stripes.forEach(function(s) {
+          s.style.animation = 'none'
+          s.style.transform = ''
+          s.style.opacity = ''
+        })
+      }
+
+      brand.addEventListener('mouseenter', function() {
+        cancelAll()
+        resetStripes()
+        mark.offsetHeight
+        mark.classList.remove('menu-brand-mark--leaving')
+        mark.classList.add('menu-brand-mark--entering')
+        var order = randomOrder(stripes.length)
+        stripes.forEach(function(s, idx) {
+          s.style.animation = 'menu-stripe-slide-in 0.18s ease-out ' + (order[idx] * step) + 's both'
+        })
+      })
+
+      brand.addEventListener('mouseleave', function() {
+        cancelAll()
+        mark.classList.remove('menu-brand-mark--entering')
+        mark.classList.add('menu-brand-mark--leaving')
+
+        var snapshots = stripes.map(function(s) {
+          var cs = getComputedStyle(s)
+          var opacity = parseFloat(cs.opacity)
+          var matrix = cs.transform
+          var ty = 0
+          if (matrix && matrix !== 'none') {
+            var parts = matrix.match(/matrix.*\((.+)\)/)
+            if (parts) {
+              var values = parts[1].split(',').map(Number)
+              ty = values.length === 6 ? values[5] : (values[13] || 0)
+            }
+          }
+          return { opacity: opacity, ty: ty }
+        })
+
+        resetStripes()
+
+        var visibleIndices = []
+        snapshots.forEach(function(snap, i) {
+          if (snap.opacity > 0.05) visibleIndices.push(i)
+        })
+
+        if (visibleIndices.length === 0) {
+          mark.classList.remove('menu-brand-mark--leaving')
+          return
+        }
+
+        var order = randomOrder(visibleIndices.length)
+        var finished = 0
+
+        visibleIndices.forEach(function(stripeIdx, orderIdx) {
+          var s = stripes[stripeIdx]
+          var snap = snapshots[stripeIdx]
+          var height = (s.parentElement && s.parentElement.offsetHeight) || 32
+
+          var anim = s.animate([
+            { transform: 'translateY(' + snap.ty + 'px)', opacity: snap.opacity },
+            { transform: 'translateY(' + (height * 1.1) + 'px)', opacity: 0 }
+          ], {
+            duration: 160,
+            delay: order[orderIdx] * 25,
+            easing: 'ease-in',
+            fill: 'both'
+          })
+
+          activeAnims.push(anim)
+
+          anim.onfinish = function() {
+            anim.cancel()
+            finished++
+            if (finished >= visibleIndices.length) {
+              mark.classList.remove('menu-brand-mark--leaving')
+              resetStripes()
+            }
+          }
+        })
+      })
+    })()
+
   })()
 </script>

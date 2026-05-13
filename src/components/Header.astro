@@ -8,7 +8,7 @@ import MobileMenu from "./MobileMenu.astro"
     <div class="header-left">
       <div class="header-left-top">
         <a href="/" class="site-brand" aria-label="Go to homepage">
-          <span class="brand-mark" aria-hidden="true"><span class="brand-mark-text">AV</span></span>
+          <span class="brand-mark" aria-hidden="true"><span class="brand-mark-stripe" style="--i:0"></span><span class="brand-mark-stripe" style="--i:1"></span><span class="brand-mark-stripe" style="--i:2"></span><span class="brand-mark-stripe" style="--i:3"></span><span class="brand-mark-stripe" style="--i:4"></span><span class="brand-mark-stripe" style="--i:5"></span><span class="brand-mark-text">AV</span></span>
           <span class="brand-copy">
             <span class="brand-text">arttuv.com</span>
             <span class="brand-name">Arttu Viljakainen</span>
@@ -171,6 +171,7 @@ import MobileMenu from "./MobileMenu.astro"
       text-align: center;
       letter-spacing: 0.01em;
       transition: border-color 0.22s ease, width 0.22s ease, height 0.22s ease, font-size 0.22s ease;
+      isolation: isolate;
     }
 
     .site-header.site-header--compact .brand-mark {
@@ -179,40 +180,57 @@ import MobileMenu from "./MobileMenu.astro"
       font-size: 1rem;
     }
 
-    .brand-mark::before {
-      content: '';
+    .brand-mark-stripe {
       position: absolute;
-      inset: 0;
-      background: linear-gradient(to right,
-        var(--color-red)    0%      16.67%,
-        var(--color-orange) 16.67%  33.33%,
-        var(--color-yellow) 33.33%  50%,
-        var(--color-green)  50%     66.67%,
-        var(--color-blue)   66.67%  83.33%,
-        var(--color-purple) 83.33%  100%
-      );
-      transform: scaleX(0);
-      transform-origin: right center;
-      transition: transform 0.24s ease;
+      top: 0;
+      bottom: 0;
+      width: calc(100% / 6 + 1px);
+      left: calc(var(--i) * 100% / 6);
+      transform: translateY(-110%);
+      opacity: 0;
+    }
+
+    .brand-mark-stripe:nth-child(1) { background: var(--color-red); }
+    .brand-mark-stripe:nth-child(2) { background: var(--color-orange); }
+    .brand-mark-stripe:nth-child(3) { background: var(--color-yellow); }
+    .brand-mark-stripe:nth-child(4) { background: var(--color-green); }
+    .brand-mark-stripe:nth-child(5) { background: var(--color-blue); }
+    .brand-mark-stripe:nth-child(6) { background: var(--color-purple); }
+
+    @keyframes stripe-slide-in {
+      0%   { transform: translateY(-110%); opacity: 0; }
+      40%  { opacity: 1; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes stripe-slide-out {
+      0%   { transform: translateY(0); opacity: 1; }
+      60%  { opacity: 1; }
+      100% { transform: translateY(110%); opacity: 0; }
     }
 
     .brand-mark-text {
       position: relative;
       z-index: 1;
-      transition: color 0.22s ease;
+      transition: color 0.3s ease;
     }
 
-    .site-brand:hover .brand-mark {
-      border-color: transparent;
-    }
-
-    .site-brand:hover .brand-mark::before {
-      transform: scaleX(1);
-      transform-origin: left center;
-    }
-
-    .site-brand:hover .brand-mark-text {
+    .brand-mark--entering .brand-mark-text {
       color: #fff;
+      transition: color 0.2s ease 0.12s;
+    }
+
+    html:not(.dark) .brand-mark--entering .brand-mark-text {
+      color: inherit;
+      transition: none;
+    }
+
+    .brand-mark--leaving .brand-mark-text {
+      color: #fff;
+    }
+
+    html:not(.dark) .brand-mark--leaving .brand-mark-text {
+      color: inherit;
     }
 
     .brand-text {
@@ -262,8 +280,10 @@ import MobileMenu from "./MobileMenu.astro"
     @media (prefers-reduced-motion: reduce) {
       .desktop-navigation,
       .brand-name,
-      .brand-tagline {
+      .brand-tagline,
+      .brand-mark-stripe {
         transition: none;
+        animation: none;
       }
     }
 
@@ -413,4 +433,123 @@ import MobileMenu from "./MobileMenu.astro"
   }
 
   document.addEventListener('astro:page-load', initAutoHideHeader);
+
+  function initBrandMarkHover() {
+    const brand = document.querySelector('.site-brand');
+    const mark = document.querySelector('.brand-mark');
+    if (!brand || !mark) return;
+
+    const stripes = Array.from(mark.querySelectorAll<HTMLElement>('.brand-mark-stripe'));
+    const step = 0.025;
+    let controller: AbortController | null = null;
+    let activeAnimations: Animation[] = [];
+
+    function randomOrder(count: number): number[] {
+      const order = Array.from({ length: count }, (_, i) => i);
+      for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      return order;
+    }
+
+    function cancelAll() {
+      if (controller) controller.abort();
+      controller = new AbortController();
+      activeAnimations.forEach(a => a.cancel());
+      activeAnimations = [];
+    }
+
+    function resetStripes() {
+      stripes.forEach(s => {
+        s.style.animation = 'none';
+        s.style.transform = '';
+        s.style.opacity = '';
+      });
+    }
+
+    brand.addEventListener('mouseenter', () => {
+      cancelAll();
+
+      resetStripes();
+      mark.offsetHeight; // reflow
+
+      mark.classList.remove('brand-mark--leaving');
+      mark.classList.add('brand-mark--entering');
+
+      const order = randomOrder(stripes.length);
+      stripes.forEach((s, idx) => {
+        s.style.animation = `stripe-slide-in 0.18s ease-out ${order[idx] * step}s both`;
+      });
+    });
+
+    brand.addEventListener('mouseleave', () => {
+      cancelAll();
+      const signal = controller!.signal;
+
+      mark.classList.remove('brand-mark--entering');
+      mark.classList.add('brand-mark--leaving');
+
+      // Snapshot each stripe's current transform and opacity
+      const snapshots = stripes.map(s => {
+        const cs = getComputedStyle(s);
+        const opacity = parseFloat(cs.opacity);
+        const matrix = cs.transform;
+        let ty = 0;
+        if (matrix && matrix !== 'none') {
+          const parts = matrix.match(/matrix.*\((.+)\)/);
+          if (parts) {
+            const values = parts[1].split(',').map(Number);
+            ty = values.length === 6 ? values[5] : values[13] || 0;
+          }
+        }
+        return { opacity, ty };
+      });
+
+      resetStripes();
+
+      const visibleIndices = snapshots.reduce<number[]>((acc, snap, i) => {
+        if (snap.opacity > 0.05) acc.push(i);
+        return acc;
+      }, []);
+
+      if (visibleIndices.length === 0) {
+        mark.classList.remove('brand-mark--leaving');
+        return;
+      }
+
+      let finished = 0;
+      const order = randomOrder(visibleIndices.length);
+
+      visibleIndices.forEach((stripeIdx, orderIdx) => {
+        const s = stripes[stripeIdx];
+        const snap = snapshots[stripeIdx];
+        const height = s.parentElement?.offsetHeight || 40;
+
+        // Animate from current position down and out with random stagger
+        const anim = s.animate([
+          { transform: `translateY(${snap.ty}px)`, opacity: snap.opacity },
+          { transform: `translateY(${height * 1.1}px)`, opacity: 0 }
+        ], {
+          duration: 160,
+          delay: order[orderIdx] * 25,
+          easing: 'ease-in',
+          fill: 'both'
+        });
+
+        activeAnimations.push(anim);
+
+        anim.addEventListener('finish', () => {
+          anim.cancel();
+          finished++;
+          if (finished >= visibleIndices.length) {
+            mark.classList.remove('brand-mark--leaving');
+            resetStripes();
+          }
+        }, { once: true, signal });
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initBrandMarkHover);
 </script>
