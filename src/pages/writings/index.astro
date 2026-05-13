@@ -9,7 +9,16 @@ const description = "Articles on software development, team leadership, human-co
 ---
 <BaseLayout title={title} description={description}>
   <div class="writings-container">
-    <h1>{title}</h1>
+        <header class="writings-header">
+            <p class="writings-kicker">LONG FORM</p>
+            <h1>{title}</h1>
+            <p class="writings-intro">
+                Essays and articles on software, systems, research, and people. Longer pieces where there is room to think matters through.
+            </p>
+            <p class="writings-note">
+                Comments can be posted on Mastodon.
+            </p>
+        </header>
     <div class="writing-listing">
       {writings.map((post, index) => (
         <ArticleCard post={post} featured={index === 0} />
@@ -18,6 +27,42 @@ const description = "Articles on software development, team leadership, human-co
   </div>
 </BaseLayout>
 <style>
+
+    .writings-header {
+        margin: 0 0 2.5rem;
+        padding: 0 0 1.25rem;
+        border-bottom: 1px solid color-mix(in srgb, var(--color-border) 88%, transparent);
+    }
+
+    .writings-kicker {
+        margin: 0 0 0.4rem;
+        font-family: var(--font-mono);
+        font-size: 0.74rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--color-muted);
+    }
+
+    .writings-header h1 {
+        margin: 0;
+    }
+
+    .writings-intro {
+        max-width: 38rem;
+        margin: 0.7rem 0 0;
+        color: var(--color-muted);
+        font-size: 1.02rem;
+        line-height: 1.68;
+    }
+
+    .writings-note {
+        max-width: 34rem;
+        margin: 0.85rem 0 0;
+        font-family: var(--font-condensed);
+        font-size: 0.92rem;
+        line-height: 1.55;
+        color: color-mix(in srgb, var(--color-text) 72%, #6c5d53 28%);
+    }
 
     .writing-listing {
         min-height: 80vh;
@@ -46,6 +91,7 @@ const description = "Articles on software development, team leadership, human-co
     .writings-container {
         max-width: 58rem;
         margin: 0 auto;
+        padding-top: 1.25rem;
     }
 
     @media (max-width: 800px) {
@@ -59,6 +105,10 @@ const description = "Articles on software development, team leadership, human-co
     }
 
     @media (max-width: 459px) {
+        .writings-container {
+            padding-top: 0.9rem;
+        }
+
         .writing-listing ul li {
             padding-bottom: 0.3rem;
         }
