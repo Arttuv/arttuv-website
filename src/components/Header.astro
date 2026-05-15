@@ -8,7 +8,7 @@ import MobileMenu from "./MobileMenu.astro"
     <div class="header-left">
       <div class="header-left-top">
         <a href="/" class="site-brand" aria-label="Go to homepage">
-          <span class="brand-mark" aria-hidden="true"><span class="brand-mark-stripe" style="--i:0"></span><span class="brand-mark-stripe" style="--i:1"></span><span class="brand-mark-stripe" style="--i:2"></span><span class="brand-mark-stripe" style="--i:3"></span><span class="brand-mark-stripe" style="--i:4"></span><span class="brand-mark-stripe" style="--i:5"></span><span class="brand-mark-text">AV</span></span>
+          <span class="brand-mark" aria-hidden="true"><span class="brand-mark-fill"><span class="brand-mark-stripe" style="--i:0"></span><span class="brand-mark-stripe" style="--i:1"></span><span class="brand-mark-stripe" style="--i:2"></span><span class="brand-mark-stripe" style="--i:3"></span><span class="brand-mark-stripe" style="--i:4"></span><span class="brand-mark-stripe" style="--i:5"></span></span><span class="brand-mark-text">AV</span></span>
           <span class="brand-copy">
             <span class="brand-text">arttuv.com</span>
             <span class="brand-name">Arttu Viljakainen</span>
@@ -178,6 +178,13 @@ import MobileMenu from "./MobileMenu.astro"
       width: 2rem;
       height: 2rem;
       font-size: 1rem;
+    }
+
+    .brand-mark-fill {
+      position: absolute;
+      inset: 0;
+      border-radius: calc(0.3rem - 2px);
+      overflow: hidden;
     }
 
     .brand-mark-stripe {
