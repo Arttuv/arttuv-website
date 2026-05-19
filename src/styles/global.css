@@ -406,11 +406,12 @@ nav a, nav a:visited, nav a:active {
 .article-card .article-card-header {
     padding: 0.5rem;
     border-bottom: 1px solid lightgray;
-    flex: 1;
+    flex: 0 0 auto;
 }
 
 .article-card .article-card-text {
     padding: 0.5rem;
+    flex: 1 1 auto;
 }
 
 .article-card .article-card-text p {

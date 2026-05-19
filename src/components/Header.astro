@@ -6,25 +6,23 @@ import MobileMenu from "./MobileMenu.astro"
 <header class="site-header">
   <div class="desktop-navigation">
     <div class="header-left">
-      <div class="header-left-top">
-        <a href="/" class="site-brand" aria-label="Go to homepage">
-          <span class="brand-mark" aria-hidden="true"><span class="brand-mark-fill"><span class="brand-mark-stripe" style="--i:0"></span><span class="brand-mark-stripe" style="--i:1"></span><span class="brand-mark-stripe" style="--i:2"></span><span class="brand-mark-stripe" style="--i:3"></span><span class="brand-mark-stripe" style="--i:4"></span><span class="brand-mark-stripe" style="--i:5"></span></span><span class="brand-mark-text">AV</span></span>
-          <span class="brand-copy">
-            <span class="brand-text">arttuv.com</span>
-            <span class="brand-name">Arttu Viljakainen</span>
-          </span>
-        </a>
-
-        <nav aria-label="Primary navigation">
-          <ul>
-            <li><HeaderLink href="/">Home</HeaderLink></li>
-            <li><HeaderLink href="/writings/">Writings</HeaderLink></li>
-            <li><HeaderLink href="/author/">Author</HeaderLink></li>
-          </ul>
-        </nav>
-      </div>
+      <a href="/" class="site-brand" aria-label="Go to homepage">
+        <span class="brand-mark" aria-hidden="true"><span class="brand-mark-fill"><span class="brand-mark-stripe" style="--i:0"></span><span class="brand-mark-stripe" style="--i:1"></span><span class="brand-mark-stripe" style="--i:2"></span><span class="brand-mark-stripe" style="--i:3"></span><span class="brand-mark-stripe" style="--i:4"></span><span class="brand-mark-stripe" style="--i:5"></span></span><span class="brand-mark-text">AV</span></span>
+        <span class="brand-copy">
+          <span class="brand-text">arttuv.com</span>
+          <span class="brand-name">Arttu Viljakainen</span>
+        </span>
+      </a>
       <span class="brand-tagline">A nordic approach to software, systems and people</span>
     </div>
+
+    <nav class="header-nav" aria-label="Primary navigation">
+      <ul>
+        <li><HeaderLink href="/">Home</HeaderLink></li>
+        <li><HeaderLink href="/writings/">Writings</HeaderLink></li>
+        <li><HeaderLink href="/author/">Author</HeaderLink></li>
+      </ul>
+    </nav>
 
     <div class="header-right">
       <div class="theme-switcher">
@@ -104,10 +102,10 @@ import MobileMenu from "./MobileMenu.astro"
         padding: 0.95rem 1rem;
         width: 100%;
         box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      column-gap: 1.5rem;
         align-items: center;
-        flex-direction: row;
         transition: padding 0.22s ease;
     }
 
@@ -120,6 +118,7 @@ import MobileMenu from "./MobileMenu.astro"
       flex-direction: column;
       gap: 0.35rem;
       min-width: 0;
+      justify-self: start;
       transition: gap 0.22s ease;
     }
 
@@ -127,16 +126,9 @@ import MobileMenu from "./MobileMenu.astro"
       gap: 0;
     }
 
-    .header-left-top {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      min-width: 0;
-      transition: gap 0.22s ease;
-    }
-
-    .site-header.site-header--compact .header-left-top {
-      gap: 0.85rem;
+    .header-nav {
+      justify-self: center;
+      margin: 0 auto;
     }
 
     .site-brand {
@@ -304,7 +296,8 @@ import MobileMenu from "./MobileMenu.astro"
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+      justify-content: flex-end;
+      justify-self: end;
     }
 
     .desktop-navigation .theme-switcher {
@@ -315,6 +308,13 @@ import MobileMenu from "./MobileMenu.astro"
         padding-top:0;
         padding-bottom:0;
       margin-left: 0;
+    }
+
+    .header-nav ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
     }
 
     nav ul {
@@ -337,6 +337,10 @@ import MobileMenu from "./MobileMenu.astro"
 
     nav ul li:not(:last-child) {
         margin-right: 1rem;
+    }
+
+    .header-nav ul li:not(:last-child) {
+      margin-right: 0;
     }
 
     @media (max-width: 768px) {
@@ -395,33 +399,74 @@ import MobileMenu from "./MobileMenu.astro"
 
     const mobileQuery = window.matchMedia('(max-width: 768px)');
     let lastScrollY = window.scrollY;
+    let lastDirection: 'up' | 'down' | null = null;
+    let distanceInDirection = 0;
+    let isHidden = false;
     let ticking = false;
+    const directionTolerance = 2;
+    const hideThreshold = 18;
+    const revealThreshold = 36;
+
+    function setHidden(hidden: boolean) {
+      headerEl.classList.toggle('site-header--hidden', hidden);
+      isHidden = hidden;
+    }
+
+    function resetTracking(position = window.scrollY) {
+      lastScrollY = position;
+      lastDirection = null;
+      distanceInDirection = 0;
+    }
 
     function updateHeaderVisibility() {
       ticking = false;
       const currentScrollY = window.scrollY;
+      const nearTop = currentScrollY < 24;
 
       if (!mobileQuery.matches) {
         headerEl.classList.toggle('site-header--compact', currentScrollY > 64);
-        headerEl.classList.remove('site-header--hidden');
+        setHidden(false);
+        resetTracking(currentScrollY);
         return;
       }
 
-      headerEl.classList.remove('site-header--compact');
+      headerEl.classList.toggle('site-header--compact', !nearTop);
 
       if (document.body.classList.contains('menu-open')) {
-        headerEl.classList.remove('site-header--hidden');
-        lastScrollY = window.scrollY;
+        setHidden(false);
+        resetTracking(currentScrollY);
         return;
       }
 
-      const scrollingDown = currentScrollY > lastScrollY;
-      const nearTop = currentScrollY < 24;
+      const delta = currentScrollY - lastScrollY;
 
-      if (nearTop || !scrollingDown) {
-        headerEl.classList.remove('site-header--hidden');
-      } else {
-        headerEl.classList.add('site-header--hidden');
+      if (nearTop) {
+        setHidden(false);
+        resetTracking(currentScrollY);
+        return;
+      }
+
+      let direction: 'up' | 'down' | null = null;
+      if (delta > directionTolerance) direction = 'down';
+      if (delta < -directionTolerance) direction = 'up';
+
+      if (direction) {
+        if (direction !== lastDirection) {
+          lastDirection = direction;
+          distanceInDirection = 0;
+        }
+
+        distanceInDirection += Math.abs(delta);
+
+        if (direction === 'down' && !isHidden && distanceInDirection >= hideThreshold) {
+          setHidden(true);
+          distanceInDirection = 0;
+        }
+
+        if (direction === 'up' && isHidden && distanceInDirection >= revealThreshold) {
+          setHidden(false);
+          distanceInDirection = 0;
+        }
       }
 
       lastScrollY = currentScrollY;
