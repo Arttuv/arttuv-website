@@ -1,0 +1,207 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+import { getTagColor, getCardColor, BAUHAUS_PALETTE } from "../config/colors";
+
+interface Props {
+  post: CollectionEntry<"writings">;
+  flip?: boolean;
+}
+
+const { post, flip = false } = Astro.props;
+
+function hash(str: string): number {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) {
+    h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+const primaryColor = getCardColor(post.data.tags);
+const others = BAUHAUS_PALETTE.filter((c) => c !== primaryColor);
+const h = hash(post.id);
+const accent = others[h % others.length];
+
+const body = post.body ?? "";
+const wordCount = body.split(/\s+/).filter(Boolean).length;
+const readingTime = Math.max(1, Math.round(wordCount / 220));
+const href = `/${post.collection}/${post.id}/`;
+---
+
+<article class:list={["solo-feature", { "solo-feature--flip": flip }]}>
+  <a
+    class="solo-feature-display"
+    href={href}
+    style={`--solo-bg: ${primaryColor}; --solo-accent: ${accent};`}
+    aria-label={post.data.title}
+  >
+    <h2 class="solo-feature-title">{post.data.title}</h2>
+  </a>
+  <div class="solo-feature-meta">
+    {post.data.tags && post.data.tags.length > 0 && (
+      <div class="card-tags">
+        {post.data.tags.map((tag) => (
+          <a href={`/tags/${tag}/`} class="card-tag" style={`color: ${getTagColor(tag)}`}>#{tag}</a>
+        ))}
+      </div>
+    )}
+    <FormattedDate date={new Date(post.data.pubDate)} />
+    <p class="solo-feature-dek">{post.data.summary}</p>
+    <div class="solo-feature-footer">
+      <a class="read-more" href={href}>{readingTime} min read</a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .solo-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 2rem;
+    align-items: stretch;
+    margin: 0;
+  }
+
+  .solo-feature--flip {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+
+  .solo-feature--flip .solo-feature-display {
+    order: 2;
+  }
+
+  .solo-feature--flip .solo-feature-meta {
+    order: 1;
+  }
+
+  .solo-feature-display {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.75rem 1.6rem 1.5rem;
+    min-height: 18rem;
+    background: var(--solo-bg);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.35rem;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Bauhaus stripe overlays */
+  .solo-feature-display::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        transparent 0 68%,
+        color-mix(in srgb, var(--solo-accent) 90%, white 10%) 68% 78%,
+        transparent 78% 100%
+      ),
+      linear-gradient(
+        180deg,
+        transparent 0 20%,
+        color-mix(in srgb, white 75%, transparent 25%) 20% 26%,
+        transparent 26% 100%
+      );
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.85;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.3s ease;
+  }
+
+  .solo-feature-display:hover::before {
+    transform: translate3d(0.6rem, -0.4rem, 0);
+    opacity: 1;
+  }
+
+  .solo-feature-display:focus-visible::before {
+    transform: translate3d(0.6rem, -0.4rem, 0);
+    opacity: 1;
+  }
+
+  .solo-feature-title {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: clamp(1.85rem, 4vw, 3rem);
+    line-height: 1.02;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #fff;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.22);
+  }
+
+  .solo-feature-title::after {
+    content: "";
+    display: block;
+    margin-top: 0.55rem;
+    height: 3px;
+    width: 0;
+    background: #fff;
+    transform-origin: left center;
+    transition: width 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .solo-feature-display:hover .solo-feature-title::after,
+  .solo-feature-display:focus-visible .solo-feature-title::after {
+    width: 38%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .solo-feature-display::before,
+    .solo-feature-title::after {
+      transition: none;
+    }
+  }
+
+  .solo-feature-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.7rem;
+    min-width: 0;
+  }
+
+  .solo-feature-meta .card-tags {
+    margin-bottom: 0;
+  }
+
+  .solo-feature-dek {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+
+  .solo-feature-footer {
+    margin-top: 0.35rem;
+  }
+
+  @media (max-width: 800px) {
+    .solo-feature,
+    .solo-feature--flip {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .solo-feature--flip .solo-feature-display {
+      order: 0;
+    }
+
+    .solo-feature--flip .solo-feature-meta {
+      order: 0;
+    }
+
+    .solo-feature-display {
+      min-height: 12rem;
+      padding: 1.25rem 1.1rem 1.1rem;
+    }
+  }
+</style>

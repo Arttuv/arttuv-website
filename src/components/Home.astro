@@ -5,6 +5,7 @@ import { getCollection } from "astro:content"
 import type { CollectionEntry } from "astro:content"
 import MarginaliaEntry from "./MarginaliaEntry.astro"
 import ArticleCard from "./ArticleCard.astro"
+import SoloFeature from "./SoloFeature.astro"
 import { featuredGroups } from "../config/featured"
 
 const marginalia = (await getCollection("marginalia")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -12,10 +13,18 @@ const allWritings = (await getCollection("writings")).sort((a, b) => b.data.pubD
 
 const postMap = new Map(allWritings.map((post) => [post.id, post]))
 
-const resolvedGroups = featuredGroups.map((group) => ({
-  ...group,
-  posts: group.slugs.map((slug) => postMap.get(slug)).filter((post): post is CollectionEntry<"writings"> => Boolean(post)),
-}))
+const resolvedGroups = featuredGroups.map((group) => {
+  const posts = group.slugs
+    .map((slug) => postMap.get(slug))
+    .filter((post): post is CollectionEntry<"writings"> => Boolean(post))
+  const spotlightPost = group.spotlight
+    ? posts.find((p) => p.id === group.spotlight) ?? null
+    : null
+  const restPosts = spotlightPost
+    ? posts.filter((p) => p.id !== spotlightPost.id)
+    : posts
+  return { ...group, posts, spotlightPost, restPosts }
+})
 
 const [firstGroup, ...remainingGroups] = resolvedGroups
 const marginaliaInsertIndex = Math.ceil(remainingGroups.length / 2)
@@ -30,18 +39,42 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
   <div class="welcome-container">
     <div class="main-content">
       {firstGroup && (
-        <section class="featured-group featured-group--0 display-panel">
-          <div class="panel-header">
-            <span class="panel-status"></span>
-            <h2 class="panel-title">{firstGroup.title}</h2>
-          </div>
-          <p class="featured-group-desc">{firstGroup.description}</p>
-          <div class="writing-listing">
-            {firstGroup.posts.map((post, i) => (
-              <ArticleCard post={post} featured={i === 0} slim={i > 0} />
-            ))}
-          </div>
-        </section>
+        firstGroup.spotlightPost ? (
+          <section class="featured-group featured-group--0 spotlight-group">
+            <SoloFeature post={firstGroup.spotlightPost} />
+            {firstGroup.restPosts.length > 0 && (
+              <div class="more-panel display-panel">
+                <div class="panel-header">
+                  <span class="panel-status"></span>
+                  <h2 class="panel-title">More on {firstGroup.title}</h2>
+                </div>
+                <p class="featured-group-desc">{firstGroup.description}</p>
+                <div class="writing-listing">
+                  {firstGroup.restPosts.map((post) => (
+                    <ArticleCard post={post} slim />
+                  ))}
+                </div>
+              </div>
+            )}
+          </section>
+        ) : firstGroup.posts.length === 1 ? (
+          <section class="featured-group featured-group--0 spotlight-group">
+            <SoloFeature post={firstGroup.posts[0]} />
+          </section>
+        ) : (
+          <section class="featured-group featured-group--0 display-panel">
+            <div class="panel-header">
+              <span class="panel-status"></span>
+              <h2 class="panel-title">{firstGroup.title}</h2>
+            </div>
+            <p class="featured-group-desc">{firstGroup.description}</p>
+            <div class="writing-listing">
+              {firstGroup.posts.map((post, i) => (
+                <ArticleCard post={post} featured={i === 0} slim={i > 0} />
+              ))}
+            </div>
+          </section>
+        )
       )}
 
       <article class="author-bio">
@@ -94,33 +127,81 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
       )}
 
       {leadingGroups.map((group, gi) => (
-        <section class={`featured-group featured-group--${gi + 1} display-panel`}>
-          <div class="panel-header">
-            <span class="panel-status"></span>
-            <h2 class="panel-title">{group.title}</h2>
-          </div>
-          <p class="featured-group-desc">{group.description}</p>
-          <div class="writing-listing">
-            {group.posts.map((post) => (
-              <ArticleCard post={post} slim />
-            ))}
-          </div>
-        </section>
+        group.spotlightPost ? (
+          <section class={`featured-group featured-group--${gi + 1} spotlight-group`}>
+            <SoloFeature post={group.spotlightPost} flip={(gi + 1) % 2 === 1} />
+            {group.restPosts.length > 0 && (
+              <div class="more-panel display-panel">
+                <div class="panel-header">
+                  <span class="panel-status"></span>
+                  <h2 class="panel-title">More on {group.title}</h2>
+                </div>
+                <p class="featured-group-desc">{group.description}</p>
+                <div class="writing-listing">
+                  {group.restPosts.map((post) => (
+                    <ArticleCard post={post} slim />
+                  ))}
+                </div>
+              </div>
+            )}
+          </section>
+        ) : group.posts.length === 1 ? (
+          <section class={`featured-group featured-group--${gi + 1} spotlight-group`}>
+            <SoloFeature post={group.posts[0]} flip={(gi + 1) % 2 === 1} />
+          </section>
+        ) : (
+          <section class={`featured-group featured-group--${gi + 1} display-panel`}>
+            <div class="panel-header">
+              <span class="panel-status"></span>
+              <h2 class="panel-title">{group.title}</h2>
+            </div>
+            <p class="featured-group-desc">{group.description}</p>
+            <div class="writing-listing">
+              {group.posts.map((post) => (
+                <ArticleCard post={post} slim />
+              ))}
+            </div>
+          </section>
+        )
       ))}
 
       {trailingGroups.map((group, gi) => (
-        <section class={`featured-group featured-group--${gi + leadingGroups.length + 1} display-panel`}>
-          <div class="panel-header">
-            <span class="panel-status"></span>
-            <h2 class="panel-title">{group.title}</h2>
-          </div>
-          <p class="featured-group-desc">{group.description}</p>
-          <div class="writing-listing">
-            {group.posts.map((post) => (
-              <ArticleCard post={post} slim />
-            ))}
-          </div>
-        </section>
+        group.spotlightPost ? (
+          <section class={`featured-group featured-group--${gi + leadingGroups.length + 1} spotlight-group`}>
+            <SoloFeature post={group.spotlightPost} flip={(gi + leadingGroups.length + 1) % 2 === 1} />
+            {group.restPosts.length > 0 && (
+              <div class="more-panel display-panel">
+                <div class="panel-header">
+                  <span class="panel-status"></span>
+                  <h2 class="panel-title">More on {group.title}</h2>
+                </div>
+                <p class="featured-group-desc">{group.description}</p>
+                <div class="writing-listing">
+                  {group.restPosts.map((post) => (
+                    <ArticleCard post={post} slim />
+                  ))}
+                </div>
+              </div>
+            )}
+          </section>
+        ) : group.posts.length === 1 ? (
+          <section class={`featured-group featured-group--${gi + leadingGroups.length + 1} spotlight-group`}>
+            <SoloFeature post={group.posts[0]} flip={(gi + leadingGroups.length + 1) % 2 === 1} />
+          </section>
+        ) : (
+          <section class={`featured-group featured-group--${gi + leadingGroups.length + 1} display-panel`}>
+            <div class="panel-header">
+              <span class="panel-status"></span>
+              <h2 class="panel-title">{group.title}</h2>
+            </div>
+            <p class="featured-group-desc">{group.description}</p>
+            <div class="writing-listing">
+              {group.posts.map((post) => (
+                <ArticleCard post={post} slim />
+              ))}
+            </div>
+          </section>
+        )
       ))}
 
       {latestPosts.length > 0 && (
@@ -142,34 +223,38 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
       </span>
 
       <section class="author-details">
-        <div class="author-details-copy">
-          <p class="author-details-kicker">Nordic thinking.</p>
-          <p>
-            I love it when people can work as an efficient cross-functional egalitarian team, 
-            combining multiple perspectives and skillsets to solve complex, systemic problems.
-          </p>
-          <p>
-            I'm fascinated about how teams make sense of complexity, how tools can empower rather than constrain human
-            thought, and how we can build software that amplify the lives and work of humans.
-          </p>
-          <div class="article-card-footer">
-            <a class="read-more" href="/author/">Read more about the author →</a>
-          </div>
-        </div>
-
-        <aside class="author-details-meta">
-          <div class="crew-map" aria-label="Map showing Helsinki, Finland">
-            <div class="map-viewport">
-              <div class="helsinki-beacon">
-                <span class="beacon-ping"></span>
-                <span class="beacon-dot"></span>
-              </div>
-              <span class="beacon-label">HEL</span>
+        <div class="author-details-grid">
+          <div class="author-details-copy">
+            <p class="author-details-kicker">Nordic thinking.</p>
+            <p>
+              I love it when people can work as an efficient cross-functional egalitarian team, 
+              combining multiple perspectives and skillsets to solve complex, systemic problems.
+            </p>
+            <p>
+              I'm fascinated about how teams make sense of complexity, how tools can empower rather than constrain human
+              thought, and how we can build software that amplify the lives and work of humans.
+            </p>
+            <div class="article-card-footer">
+              <a class="read-more" href="/author/">Read more about the author →</a>
             </div>
-            <span class="crew-name">Helsinki</span>
-            <span class="beacon-coords">60.17°N 24.94°E</span>
           </div>
-        </aside>
+
+          <aside class="author-details-meta">
+            <div class="map-frame">
+              <div class="crew-map" aria-label="Map showing Helsinki, Finland">
+                <div class="map-viewport">
+                  <div class="helsinki-beacon">
+                    <span class="beacon-ping"></span>
+                    <span class="beacon-dot"></span>
+                  </div>
+                  <span class="beacon-label">HEL</span>
+                </div>
+                <span class="crew-name">Helsinki</span>
+                <span class="beacon-coords">60.17°N 24.94°E</span>
+              </div>
+            </div>
+          </aside>
+        </div>
       </section>
     </div>
   </div>
@@ -532,6 +617,14 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
         margin-bottom: 2rem;
     }
 
+    .spotlight-group {
+        margin-bottom: 2.5rem;
+    }
+
+    .more-panel {
+        margin-top: 1.75rem;
+    }
+
     .display-panel {
         border: 1px solid var(--color-border);
         border-radius: 0.25rem;
@@ -642,8 +735,9 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
 
     .author-details {
       margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid color-mix(in srgb, var(--color-text) 18%, transparent);
+    }
+
+    .author-details-grid {
       display: grid;
       grid-template-columns: minmax(0, 40rem) minmax(13rem, 16rem);
       gap: 2rem;
@@ -654,7 +748,7 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
     .author-details-copy {
       width: 100%;
       margin: 0;
-      text-align: center;
+      text-align: left;
     }
 
     .author-details-copy p {
@@ -670,7 +764,70 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
     }
 
     .author-details-copy .article-card-footer {
-      text-align: center;
+      text-align: left;
+    }
+
+    .map-frame {
+      position: relative;
+      width: 100%;
+      padding: 1.4rem 1rem 1.35rem;
+      border-radius: 0.65rem;
+      background:
+        linear-gradient(90deg, transparent 0 63%, color-mix(in srgb, var(--color-blue) 72%, white 28%) 63% 69%, transparent 69% 100%),
+        linear-gradient(90deg, transparent 0 12%, color-mix(in srgb, var(--color-yellow) 84%, #e3b233 16%) 12% 40%, transparent 40% 100%),
+        linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 90%, #f1e7d8 10%) 0%, color-mix(in srgb, var(--color-bg) 86%, #e5d8c7 14%) 100%);
+      box-shadow:
+        0 1rem 2.2rem color-mix(in srgb, var(--color-text) 10%, transparent),
+        inset 0 0 0 1px color-mix(in srgb, var(--color-text) 8%, transparent);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .map-frame::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 3.2rem;
+      width: 78%;
+      height: 2.4rem;
+      background: color-mix(in srgb, var(--color-red) 82%, white 18%);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.92;
+    }
+
+    .map-frame .crew-map {
+      position: relative;
+      z-index: 1;
+      width: 78%;
+      margin: 0 auto 0 14%;
+      padding: 0.6rem 0.55rem 0.7rem;
+      background: color-mix(in srgb, var(--color-bg) 92%, #f5ecdd 8%);
+      border-radius: 0.18rem;
+      box-shadow: 0 0.3rem 0.9rem color-mix(in srgb, var(--color-text) 10%, transparent);
+    }
+
+    .map-frame .map-viewport {
+      background-color: color-mix(in srgb, var(--color-bg) 95%, #f1e7d8 5%);
+    }
+
+    .dark .map-frame {
+      background:
+        linear-gradient(90deg, transparent 0 63%, color-mix(in srgb, var(--color-blue) 60%, black 40%) 63% 69%, transparent 69% 100%),
+        linear-gradient(90deg, transparent 0 12%, color-mix(in srgb, var(--color-yellow) 65%, black 35%) 12% 40%, transparent 40% 100%),
+        linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 92%, #1a1a1a 8%) 0%, color-mix(in srgb, var(--color-bg) 88%, #1a1a1a 12%) 100%);
+    }
+
+    .dark .map-frame::before {
+      background: color-mix(in srgb, var(--color-red) 70%, black 30%);
+    }
+
+    .dark .map-frame .crew-map {
+      background: color-mix(in srgb, var(--color-bg) 90%, #1a1a1a 10%);
+    }
+
+    .dark .map-frame .map-viewport {
+      background-color: color-mix(in srgb, var(--color-bg) 85%, #2a2a2a 15%);
     }
 
     .article-card-footer {
@@ -703,7 +860,7 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
             gap: 1.5rem;
         }
 
-        .author-details {
+        .author-details-grid {
             grid-template-columns: 1fr;
             gap: 1.5rem;
         }
