@@ -70,7 +70,7 @@ const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).sl
             <p class="featured-group-desc">{firstGroup.description}</p>
             <div class="writing-listing">
               {firstGroup.posts.map((post, i) => (
-                <ArticleCard post={post} featured={i === 0} slim={i > 0} />
+                <ArticleCard post={post} slim={i > 0} />
               ))}
             </div>
           </section>

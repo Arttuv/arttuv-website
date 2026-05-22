@@ -13,15 +13,15 @@ const description = "Articles on software development, team leadership, human-co
             <p class="writings-kicker">LONG FORM</p>
             <h1>{title}</h1>
             <p class="writings-intro">
-                Essays and articles on software, systems, research, and people. Longer pieces where there is room to think matters through.
+                Essays and articles on software, systems, research, and people. Short texts and quick takes can be found in <a href="/marginalia/">/marginalia/</a>.
             </p>
             <p class="writings-note">
                 Comments can be posted on Mastodon.
             </p>
         </header>
     <div class="writing-listing">
-      {writings.map((post, index) => (
-        <ArticleCard post={post} featured={index === 0} />
+      {writings.map((post) => (
+        <ArticleCard post={post} />
       ))}
     </div>
   </div>

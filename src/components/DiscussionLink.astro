@@ -1,5 +1,5 @@
 ---
-import FormattedDateTime from "./FormattedDateTime.astro"
+import FormattedDate from "./FormattedDate.astro"
 
 const { discussion } = Astro.props
 const provider = discussion?.provider ?? "Discussion"
@@ -27,7 +27,7 @@ const openLabel = isMastodon ? "Open the Mastodon post" : `Open the ${provider} 
   >
     {openLabel}
     {discussion.publishedAt && (
-      <span class="discussion-link-date"><FormattedDateTime date={new Date(discussion.publishedAt)} /></span>
+      <span class="discussion-link-date"><FormattedDate date={new Date(discussion.publishedAt)} time /></span>
     )}
   </a>
 </section>

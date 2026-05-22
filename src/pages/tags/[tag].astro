@@ -22,8 +22,8 @@ const { posts } = Astro.props
   <div class="writings-container">
     <h1>#{tag}</h1>
     <div class="writing-listing">
-      {posts.map((post, index) => (
-        <ArticleCard post={post} featured={index === 0} />
+      {posts.map((post) => (
+        <ArticleCard post={post} />
       ))}
     </div>
   </div>

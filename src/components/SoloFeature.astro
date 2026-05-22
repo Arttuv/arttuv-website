@@ -46,10 +46,13 @@ const href = `/${post.collection}/${post.id}/`;
         ))}
       </div>
     )}
-    <FormattedDate date={new Date(post.data.pubDate)} />
+    <div class="solo-feature-datetime">
+      <FormattedDate date={new Date(post.data.pubDate)} />
+      <span class="solo-feature-readtime">{readingTime} min read</span>
+    </div>
     <p class="solo-feature-dek">{post.data.summary}</p>
     <div class="solo-feature-footer">
-      <a class="read-more" href={href}>{readingTime} min read</a>
+      <a class="continue-reading" href={href}>Continue reading <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </article>
@@ -180,8 +183,42 @@ const href = `/${post.collection}/${post.id}/`;
     color: var(--color-text);
   }
 
+  .solo-feature-datetime {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+
+  .solo-feature-readtime {
+    font-family: var(--font-mono);
+    font-size: 0.72em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .solo-feature-readtime::before {
+    content: "·";
+    margin-right: 0.5rem;
+    color: var(--color-muted);
+  }
+
   .solo-feature-footer {
     margin-top: 0.35rem;
+  }
+
+  .continue-reading {
+    font-family: var(--font-condensed);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  .continue-reading:hover,
+  .continue-reading:focus-visible {
+    text-decoration: underline;
   }
 
   @media (max-width: 800px) {

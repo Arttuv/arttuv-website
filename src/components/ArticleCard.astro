@@ -6,11 +6,10 @@ import { getTagColor, getCardColor } from "../config/colors";
 
 interface Props {
   post: CollectionEntry<"writings">;
-  featured?: boolean;
   slim?: boolean;
 }
 
-const { post, featured = false, slim = false } = Astro.props;
+const { post, slim = false } = Astro.props;
 
 const cardColor = getCardColor(post.data.tags);
 const body = post.body ?? '';
@@ -18,13 +17,12 @@ const wordCount = body.split(/\s+/).filter(Boolean).length;
 const readingTime = Math.max(1, Math.round(wordCount / 220));
 const cardClass = [
   'article-card',
-  featured && 'article-card--featured',
   slim && 'article-card--slim',
 ].filter(Boolean).join(' ');
 ---
 
 <article class={cardClass} style={`--card-color: ${cardColor}`}>
-  <BauhausBlock slug={post.id} tags={post.data.tags} direction={featured ? 'horizontal' : 'vertical'} />
+  <BauhausBlock slug={post.id} tags={post.data.tags} direction={'vertical'} />
   <div class="article-card-content">
     <div class="article-card-header">
       {post.data.tags && post.data.tags.length > 0 && (
@@ -43,7 +41,7 @@ const cardClass = [
       </div>
     )}
     <div class="article-card-footer">
-      <a class="read-more" href={`/${post.collection}/${post.id}/`}>{readingTime} min read</a>
+      <span class="read-more">{readingTime} min read</span>
     </div>
   </div>
 </article>

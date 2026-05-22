@@ -1,6 +1,6 @@
 ---
 import { render, type CollectionEntry } from "astro:content"
-import FormattedDateTime from "./FormattedDateTime.astro"
+import FormattedDate from "./FormattedDate.astro"
 
 type Props = {
   entry: CollectionEntry<"marginalia">
@@ -21,7 +21,7 @@ const { Content } = await render(entry)
 <article class:list={["marginalia-entry", compact && "marginalia-entry--compact"]}>
   <header class="marginalia-meta">
     <a class="marginalia-permalink" href={permalink}>
-      <FormattedDateTime date={new Date(entry.data.pubDate)} />
+      <FormattedDate date={new Date(entry.data.pubDate)} time />
     </a>
     {entry.data.updatedDate && <span class="marginalia-edited">edited</span>}
   </header>
@@ -48,9 +48,8 @@ const { Content } = await render(entry)
       ))}
     </ul>
   )}
-  <footer class="marginalia-footer">
-    <a href={permalink}>Permalink</a>
-    {discussion && (
+  {discussion && (
+    <footer class="marginalia-footer">
       <a
         href={discussion.url}
         target={isMastodonDiscussion ? "_blank" : undefined}
@@ -58,8 +57,8 @@ const { Content } = await render(entry)
       >
         {discussionLabel}
       </a>
-    )}
-  </footer>
+    </footer>
+  )}
 </article>
 
 <style>

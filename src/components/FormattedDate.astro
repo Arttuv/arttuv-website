@@ -1,19 +1,27 @@
 ---
 export interface Props {
   date: Date;
+  time?: boolean;
 }
 
-const { date } = Astro.props
+const { date, time = false } = Astro.props
+
+const datePart = date.toLocaleDateString("en-us", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+})
+
+const timePart = time
+  ? date.toLocaleTimeString("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+    })
+  : null
 ---
 
 <time class="telemetry-date" datetime={date.toISOString()}>
-  {
-    date.toLocaleDateString("en-us", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    })
-  }
+  {datePart}{timePart && <span class="telemetry-time"> · {timePart}</span>}
 </time>
 
 <style>

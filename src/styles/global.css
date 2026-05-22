@@ -40,7 +40,7 @@ html.dark {
     --color-bg: #000;
     --color-text: #F5F5F5;
     --color-link: #53a6ff;
-    --color-muted: #aaa;
+    --color-muted: #c2c2c2;
     --color-border: #444;
 }
 
@@ -397,7 +397,6 @@ nav a, nav a:visited, nav a:active {
     position: absolute;
     inset: 0;
 }
-
 .article-card a, .article-card a:visited, .article-card a:active, .article-card a:focus {
     text-decoration: none;
     color: var(--color-text);
@@ -457,19 +456,6 @@ nav a, nav a:visited, nav a:active {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     width: 100%;
-}
-
-.article-card--featured {
-    grid-column: 1 / -1;
-    flex-direction: column;
-}
-
-.article-card--featured h2 {
-    font-size: 1.75rem;
-    font-weight: 300;
-    line-height: 1.2;
-    margin-top: 0.75rem;
-    margin-bottom: 0.5rem;
 }
 
 
