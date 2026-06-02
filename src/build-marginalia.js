@@ -23,7 +23,14 @@ function yamlBlock(key, value) {
   return `${key}: |-\n${value.split("\n").map((line) => `  ${line}`).join("\n")}`;
 }
 
+function normalizeTags(tags = []) {
+  return tags
+    .map((tag) => typeof tag === "string" ? tag : tag?.name)
+    .filter((tag) => typeof tag === "string" && tag.trim().length > 0);
+}
+
 function buildFrontmatter(entry) {
+  const tags = normalizeTags(entry.tags);
   const lines = [
     "---",
     `pubDate: ${entry.pubDate}`,
@@ -68,10 +75,10 @@ function buildFrontmatter(entry) {
     lines.push(`spoilerText: ${yamlQuoted(entry.spoilerText)}`);
   }
 
-  if (entry.tags && entry.tags.length > 0) {
+  if (tags.length > 0) {
     lines.push("tags:");
-    entry.tags.forEach((tag) => {
-      lines.push(`  - ${yamlQuoted(tag.name)}`);
+    tags.forEach((tag) => {
+      lines.push(`  - ${yamlQuoted(tag)}`);
     });
   }
 

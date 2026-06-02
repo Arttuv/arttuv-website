@@ -66,6 +66,33 @@
     "updatedDate": "2026-04-22T18:43:06.168Z",
     "language": "en"
   },
+  "mastodon.social:116679871593381158": {
+    "id": "116679871593381158",
+    "pubDate": "2026-06-02T09:45:48.485Z",
+    "source": {
+      "provider": "Mastodon",
+      "id": "116679871593381158",
+      "url": "https://mastodon.social/@arttuv/116679871593381158"
+    },
+    "discussion": {
+      "provider": "Mastodon",
+      "id": "116679871593381158",
+      "url": "https://mastodon.social/@arttuv/116679871593381158",
+      "publishedAt": "2026-06-02T09:45:48.485Z"
+    },
+    "html": "<p>Delightful detail.</p><p><a href=\"https://mastodon.social/tags/photography\" rel=\"tag\">#photography</a></p>",
+    "language": "en",
+    "tags": [
+      "photography"
+    ],
+    "card": {
+      "title": "The Concerned Little Towel Hook | Photos",
+      "url": "https://photos.arttuv.com/photo/towel-hook-pareidolia/",
+      "description": "An old towel hook which fills me with joy. I guess it's the pareidolia in action, but I also think the designer knew what they were doing. Small delights like this are what give character to a space. I'm sad that such details are so rare in new buildings and spaces.",
+      "providerName": "Photos",
+      "image": "https://files.mastodon.social/cache/preview_cards/images/195/084/131/original/a48ada54bb092240.jpg"
+    }
+  },
   "scholar.social:113086328707664725": {
     "id": "113086328707664725",
     "pubDate": "2024-09-05T18:20:35.603Z",
@@ -151,7 +178,7 @@
       "url": "https://tapbots.com/ivory/",
       "description": "A Mastodon app based on the award-winning Twitter app for iOS.",
       "providerName": "Tapbots, LLC.",
-      "image": "https://cdn.masto.host/scholarsocial/cache/preview_cards/images/006/414/904/original/ccad24c21a01920e.jpg"
+      "image": "https://cdn.masto.host/scholarsocial/cache/preview_cards/images/006/414/904/original/d569144da898c507.jpg"
     }
   },
   "scholar.social:110650539303672451": {

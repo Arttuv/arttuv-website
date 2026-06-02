@@ -149,6 +149,12 @@ function cleanMastodonStatusHtml(status) {
   return sanitizeMarginaliaHtml(document.body.innerHTML);
 }
 
+function normalizeMastodonTags(tags = []) {
+  return tags
+    .map((tag) => tag?.name)
+    .filter((tag) => typeof tag === "string" && tag.trim().length > 0);
+}
+
 function normalizeMastodonStatus(status) {
   const entry = {
     id: status.id,
@@ -179,8 +185,10 @@ function normalizeMastodonStatus(status) {
     entry.spoilerText = status.spoiler_text;
   }
 
-  if (status.tags.length > 0) {
-    entry.tags = status.tags.map((tag) => tag.name);
+  const tags = normalizeMastodonTags(status.tags);
+
+  if (tags.length > 0) {
+    entry.tags = tags;
   }
 
   if (status.card?.url && status.card?.title) {
