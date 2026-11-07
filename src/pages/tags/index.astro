@@ -1,23 +1,60 @@
 ---
 import { getCollection } from "astro:content"
 import BaseLayout from "../../layouts/BaseLayout.astro"
+import { getTagColor } from "../../config/colors"
 const allPosts = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
-const title = "Tag Index"
+const counts = new Map(tags.map((tag) => [tag, allPosts.filter((post) => post.data.tags.includes(tag)).length]))
+const title = "Tags"
 const description = "Listing of all the tags used on this site."
 ---
 <BaseLayout title={title} description={description} robots="noindex,follow">
-  <div class="tags">
-    <ul>
+  <div class="page-column">
+    <header class="page-header">
+      <h1 class="page-title">{title}</h1>
+      <p class="page-intro">Writings are grouped under a few broad tags.</p>
+    </header>
+    <ul class="tag-list">
       {tags.map((tag) => (
-        <li class="tag"><a href={`/tags/${tag}/`}>{tag}</a></li>
+        <li>
+          <a href={`/tags/${tag}/`}><span class="tag-hash" style={`color: ${getTagColor(tag)}`}>#</span>{tag}</a>
+          <span class="tag-count">{counts.get(tag)} writings</span>
+        </li>
       ))}
     </ul>
   </div>
 </BaseLayout>
 
 <style>
-    ul li {
-        padding-bottom: 0.4rem;
-    }
+  .tag-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tag-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 0 0 0.9rem;
+  }
+
+  .tag-list a,
+  .tag-list a:visited {
+    font-family: var(--font-reading);
+    font-size: 1.35rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .tag-list a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  .tag-count {
+    font-family: var(--font-condensed);
+    font-size: 0.88rem;
+    color: var(--color-muted);
+  }
 </style>

@@ -8,17 +8,12 @@ import MobileMenu from "./MobileMenu.astro"
     <div class="header-left">
       <a href="/" class="site-brand" aria-label="Go to homepage">
         <span class="brand-mark" aria-hidden="true"><span class="brand-mark-fill"><span class="brand-mark-stripe" style="--i:0"></span><span class="brand-mark-stripe" style="--i:1"></span><span class="brand-mark-stripe" style="--i:2"></span><span class="brand-mark-stripe" style="--i:3"></span><span class="brand-mark-stripe" style="--i:4"></span><span class="brand-mark-stripe" style="--i:5"></span></span><span class="brand-mark-text">AV</span></span>
-        <span class="brand-copy">
-          <span class="brand-text">arttuv.com</span>
-          <span class="brand-name">Arttu Viljakainen</span>
-        </span>
+        <span class="brand-text">Arttu Viljakainen</span>
       </a>
-      <span class="brand-tagline">A nordic approach to software, systems and people</span>
     </div>
 
     <nav class="header-nav" aria-label="Primary navigation">
       <ul>
-        <li><HeaderLink href="/">Home</HeaderLink></li>
         <li><HeaderLink href="/writings/">Writings</HeaderLink></li>
         <li><HeaderLink href="/author/">Author</HeaderLink></li>
       </ul>
@@ -99,36 +94,28 @@ import MobileMenu from "./MobileMenu.astro"
 
     .desktop-navigation {
         margin:0 auto;
-        padding: 0.95rem 1rem;
+        padding: 0.7rem 1.25rem;
         width: 100%;
         box-sizing: border-box;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-      column-gap: 1.5rem;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      column-gap: 1.75rem;
         align-items: center;
         transition: padding 0.22s ease;
     }
 
     .site-header.site-header--compact .desktop-navigation {
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.25rem;
     }
 
     .header-left {
       display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
       min-width: 0;
       justify-self: start;
-      transition: gap 0.22s ease;
-    }
-
-    .site-header.site-header--compact .header-left {
-      gap: 0;
     }
 
     .header-nav {
-      justify-self: center;
-      margin: 0 auto;
+      justify-self: end;
     }
 
     .site-brand {
@@ -140,36 +127,23 @@ import MobileMenu from "./MobileMenu.astro"
       line-height: 1;
     }
 
-    .brand-copy {
-      display: flex;
-      flex-direction: column;
-      gap: 0.14rem;
-      line-height: 1;
-    }
-
     .brand-mark {
       display: inline-grid;
       place-items: center;
       position: relative;
       overflow: hidden;
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2.2rem;
+      height: 2.2rem;
       border-radius: 0.3rem;
       border: 2px solid currentColor;
       font-family: var(--font-condensed);
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       line-height: 1;
       text-align: center;
       letter-spacing: 0.01em;
-      transition: border-color 0.22s ease, width 0.22s ease, height 0.22s ease, font-size 0.22s ease;
+      transition: border-color 0.22s ease;
       isolation: isolate;
-    }
-
-    .site-header.site-header--compact .brand-mark {
-      width: 2rem;
-      height: 2rem;
-      font-size: 1rem;
     }
 
     .brand-mark-fill {
@@ -235,57 +209,14 @@ import MobileMenu from "./MobileMenu.astro"
     }
 
     .brand-text {
-      font-family: var(--font-condensed);
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-
-    .brand-name {
-      font-family: var(--font-serif);
-      font-size: 0.84rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      line-height: 1.1;
-      display: block;
-      padding-bottom: 0.08rem;
-      opacity: 0.9;
-      max-height: 1.3rem;
-      overflow: visible;
-      transform: translateY(0);
-      transition: opacity 0.22s ease, max-height 0.22s ease, transform 0.22s ease;
-    }
-
-    .site-header.site-header--compact .brand-name {
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-      transform: translateY(-4px);
-    }
-
-    .brand-tagline {
-      font-family: var(--font-condensed);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      opacity: 0.7;
-      max-height: 2rem;
-      overflow: hidden;
-      transform: translateY(0);
-      transition: opacity 0.22s ease, max-height 0.22s ease, transform 0.22s ease;
-      line-height: 1.3;
-    }
-
-    .site-header.site-header--compact .brand-tagline {
-      opacity: 0;
-      max-height: 0;
-      transform: translateY(-4px);
+      font-family: var(--font-reading);
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.005em;
     }
 
     @media (prefers-reduced-motion: reduce) {
       .desktop-navigation,
-      .brand-name,
-      .brand-tagline,
       .brand-mark-stripe {
         transition: none;
         animation: none;
@@ -313,8 +244,30 @@ import MobileMenu from "./MobileMenu.astro"
     .header-nav ul {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 1rem;
+      gap: 1.5rem;
+    }
+
+    .header-nav li + li {
+      margin-top: 0;
+    }
+
+    .header-nav a {
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      color: var(--color-muted);
+      text-decoration: none;
+      text-underline-offset: 0.3em;
+      text-decoration-thickness: 1px;
+      transition: color 0.15s ease;
+    }
+
+    .header-nav a:hover,
+    .header-nav a.active {
+      color: var(--color-text);
+    }
+
+    .header-nav a:hover {
+      text-decoration: underline;
     }
 
     nav ul {
@@ -492,6 +445,10 @@ import MobileMenu from "./MobileMenu.astro"
 
   document.addEventListener('astro:page-load', initAutoHideHeader);
 
+  // Set when the brand is clicked with the pointer on it. The next page renders a fresh header
+  // under the same cursor, which would otherwise replay the hover animation.
+  let brandHoverCarriesOver = false;
+
   function initBrandMarkHover() {
     const brand = document.querySelector('.site-brand');
     const mark = document.querySelector<HTMLElement>('.brand-mark');
@@ -526,7 +483,40 @@ import MobileMenu from "./MobileMenu.astro"
       });
     }
 
+    function showStripesInstantly() {
+      mark.classList.remove('brand-mark--leaving');
+      mark.classList.add('brand-mark--entering');
+      stripes.forEach(s => {
+        s.style.animation = 'stripe-slide-in 0s both';
+      });
+    }
+
+    brand.addEventListener('click', () => {
+      brandHoverCarriesOver = brand.matches(':hover');
+    });
+
+    let skipNextEnter = false;
+
+    if (brandHoverCarriesOver) {
+      brandHoverCarriesOver = false;
+      skipNextEnter = true;
+      showStripesInstantly();
+
+      // If the pointer has already moved off the logo, no mouseleave will come; tidy up on first move.
+      document.addEventListener('pointermove', (event) => {
+        skipNextEnter = false;
+        if (!(event.target instanceof Node) || !brand.contains(event.target)) {
+          brand.dispatchEvent(new MouseEvent('mouseleave'));
+        }
+      }, { once: true });
+    }
+
     brand.addEventListener('mouseenter', () => {
+      if (skipNextEnter) {
+        skipNextEnter = false;
+        return;
+      }
+
       cancelAll();
 
       resetStripes();

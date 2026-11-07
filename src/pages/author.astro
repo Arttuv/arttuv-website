@@ -93,7 +93,7 @@ const description = "Arttu Viljakainen is a software development consultant from
       </div>
     </div>
 
-    <BauhausDivider seed="author-skills" height="80px" spacing="2.5rem" />
+    <BauhausDivider seed="author-skills" height="20px" spacing="2.5rem" />
 
     <div class="line-heading"><h2>Work history</h2></div>
 
@@ -138,7 +138,7 @@ const description = "Arttu Viljakainen is a software development consultant from
       </div>
     </div>
 
-    <BauhausDivider seed="author-origin" height="60px" spacing="2.5rem" />
+    <BauhausDivider seed="author-origin" height="20px" spacing="2.5rem" />
 
     <div class="author-origin">
       <p>
@@ -157,7 +157,7 @@ const description = "Arttu Viljakainen is a software development consultant from
 
 <style>
     .author-page {
-      max-width: 58rem;
+      max-width: 54rem;
         margin: 0 auto;
     }
 
@@ -186,17 +186,13 @@ const description = "Arttu Viljakainen is a software development consultant from
         margin-bottom: 1rem;
     }
 
-    .author-role {
+    .author-hero-text .author-role {
         font-family: var(--font-condensed);
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        color: #666;
-        margin-bottom: 1.25rem !important;
-    }
-
-    :global(.dark) .author-role {
-        color: #aaa;
+        color: var(--color-muted);
+        margin-bottom: 1.25rem;
     }
 
     .author-links {
@@ -204,7 +200,7 @@ const description = "Arttu Viljakainen is a software development consultant from
         gap: 1.5rem;
         flex-wrap: wrap;
         font-family: var(--font-condensed);
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 
     .author-links a {
@@ -224,8 +220,8 @@ const description = "Arttu Viljakainen is a software development consultant from
         width: 100%;
         height: auto;
         display: block;
-        border: 1px solid lightgray;
-        border-radius: 0.5rem;
+        border: 1px solid var(--color-border);
+        border-radius: 0.25rem;
     }
 
     /* Skills */
@@ -237,7 +233,7 @@ const description = "Arttu Viljakainen is a software development consultant from
     }
 
     .skill-section {
-        border-top: 3px solid;
+        border-top: 2px solid;
         padding-top: 0.75rem;
     }
 
@@ -247,18 +243,18 @@ const description = "Arttu Viljakainen is a software development consultant from
 
     .skill-label {
         font-family: var(--font-condensed);
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: #888;
+        letter-spacing: 0.08em;
+        color: var(--color-muted);
         margin: 0 0 0.75rem;
     }
 
     .skill-section ul {
         padding-left: 1rem;
         margin: 0 0 0.75rem;
-        font-size: 0.8rem;
-        line-height: 1.6;
+        font-size: 0.95rem;
+        line-height: 1.55;
     }
 
     .skill-section li + li {
@@ -266,14 +262,11 @@ const description = "Arttu Viljakainen is a software development consultant from
     }
 
     .skill-note {
-        font-size: 0.75rem;
-        color: #777;
+        font-family: var(--font-condensed);
+        font-size: 0.88rem;
+        color: var(--color-muted);
         line-height: 1.5;
         margin: 0;
-    }
-
-    :global(.dark) .skill-note {
-        color: #999;
     }
 
     /* CV timeline */
@@ -286,10 +279,10 @@ const description = "Arttu Viljakainen is a software development consultant from
     .cv-item-time {
         text-align: right;
         padding-right: 1rem;
-        border-right: 1px solid lightgray;
+        border-right: 1px solid var(--color-border);
         font-family: var(--font-condensed);
-        font-size: 0.8rem;
-        color: #666;
+        font-size: 0.9rem;
+        color: var(--color-muted);
         padding-top: 0.2rem;
         position: relative;
     }
@@ -308,7 +301,7 @@ const description = "Arttu Viljakainen is a software development consultant from
 
     .cv-item-content {
         padding: 0 0 1.25rem 1.25rem;
-      font-size: 0.94rem;
+      font-size: 1rem;
       line-height: 1.66;
     }
 
@@ -319,35 +312,27 @@ const description = "Arttu Viljakainen is a software development consultant from
     .cv-company {
         font-weight: 600;
         font-family: var(--font-condensed);
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .cv-current {
         font-weight: 400;
         color: var(--color-red);
-        font-size: 0.8rem;
-    }
-
-    :global(.dark) .cv-item-time {
-        color: #aaa;
+        font-size: 0.9rem;
     }
 
     /* Origin story */
     .author-origin {
-      font-size: 1rem;
+      font-size: 1.02rem;
       line-height: 1.72;
-        color: #555;
-        border-top: 1px solid lightgray;
+        color: var(--color-muted);
+        border-top: 1px solid var(--color-border);
         padding-top: 1.25rem;
         margin-bottom: 2rem;
     }
 
     .author-origin p {
         margin-bottom: 0.75rem;
-    }
-
-    :global(.dark) .author-origin {
-        color: #aaa;
     }
 
     @media (max-width: 800px) {

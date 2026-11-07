@@ -1,5 +1,5 @@
 ---
-import { TAG_COLORS, DEFAULT_COLOR, BAUHAUS_PALETTE } from "../config/colors";
+import { TAG_COLORS, DEFAULT_COLOR } from "../config/colors";
 
 interface Heading {
   depth: number;
@@ -13,115 +13,234 @@ interface Props {
   tags?: string[];
 }
 
-const { headings, slug = "toc", tags = [] } = Astro.props;
+const { headings, tags = [] } = Astro.props;
 
 // Only show h2 and h3; skip if fewer than 2 headings
 const filtered = headings.filter(h => h.depth === 2 || h.depth === 3);
 const show = filtered.length >= 2;
 
-// Generate a vertical color bar gradient from slug, reusing BauhausBlock logic
-function hash(str: string): number {
-  let h = 5381;
-  for (let i = 0; i < str.length; i++) {
-    h = Math.imul(31, h) + str.charCodeAt(i) | 0;
-  }
-  return Math.abs(h);
-}
+// Number the top-level sections 01, 02…; subsections sit under their parent unnumbered
+let section = 0;
+const numbered = filtered.map(h => ({
+  ...h,
+  number: h.depth === 2 ? String(++section).padStart(2, "0") : "",
+}));
 
-const h = hash(slug);
-const primaryTag = tags?.[0] || '';
-const color1 = TAG_COLORS[primaryTag] || DEFAULT_COLOR;
-const others = BAUHAUS_PALETTE.filter(c => c !== color1);
-const color2 = others[h % others.length];
-const color3 = others[(h >> 4) % others.length] !== color2
-  ? others[(h >> 4) % others.length]
-  : others[((h >> 4) + 1) % others.length];
-const b1 = 25 + (h % 25);
-const b2 = 20 + ((h >> 5) % 20);
-const barGradient = `linear-gradient(to bottom, ${color1} ${b1}%, ${color2} ${b1}% ${b1 + b2}%, ${color3} ${b1 + b2}%)`;
+const accent = TAG_COLORS[tags?.[0] ?? ""] || DEFAULT_COLOR;
 ---
 
 {show && (
-  <aside class="toc-wrapper" aria-label="Table of contents">
-    <div class="toc-bar" style={`background: ${barGradient}`} aria-hidden="true"></div>
-    <nav class="toc">
-      <p class="toc-label">Contents</p>
-      <ol class="toc-list">
-        {filtered.map(h => (
-          <li class={h.depth === 3 ? "toc-item toc-item--sub" : "toc-item"}>
-            <a href={`#${h.slug}`}>{h.text}</a>
-          </li>
-        ))}
-      </ol>
-    </nav>
+  <aside class="toc-wrapper" aria-label="Table of contents" style={`--toc-accent: ${accent}`}>
+    <details class="toc-details">
+      <summary class="toc-label">Contents <span class="toc-count">{filtered.length} sections</span></summary>
+      <nav class="toc">
+        <ol class="toc-list">
+          {numbered.map(h => (
+            <li class={h.depth === 3 ? "toc-item toc-item--sub" : "toc-item"}>
+              <a href={`#${h.slug}`} data-toc-slug={h.slug}>
+                {h.number && <span class="toc-num">{h.number}</span>}
+                <span class="toc-text">{h.text}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </details>
   </aside>
 )}
 
+<script>
+  // Wide screens show the contents as an always-open sidebar; narrow screens start collapsed.
+  const wide = window.matchMedia('(min-width: 1240px)');
+
+  function syncToc() {
+    document.querySelectorAll<HTMLDetailsElement>('.toc-details').forEach((details) => {
+      details.open = wide.matches;
+    });
+  }
+
+  wide.addEventListener('change', syncToc);
+  document.addEventListener('astro:page-load', syncToc);
+  syncToc();
+</script>
+
+<script>
+  // Highlight the section being read in the sidebar contents
+  let stopTocSpy: (() => void) | undefined;
+
+  function initTocSpy() {
+    stopTocSpy?.();
+    stopTocSpy = undefined;
+
+    const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.toc-item a[data-toc-slug]'));
+    if (links.length === 0) return;
+
+    const headings = links
+      .map((link) => document.getElementById(link.dataset.tocSlug ?? ''))
+      .filter((el): el is HTMLElement => el !== null);
+
+    let ticking = false;
+
+    function update() {
+      ticking = false;
+      const line = window.innerHeight * 0.3;
+      let current = '';
+      for (const heading of headings) {
+        if (heading.getBoundingClientRect().top <= line) current = heading.id;
+      }
+      for (const link of links) {
+        link.classList.toggle('is-current', link.dataset.tocSlug === current);
+      }
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    stopTocSpy = () => window.removeEventListener('scroll', onScroll);
+    update();
+  }
+
+  document.addEventListener('astro:page-load', initTocSpy);
+</script>
+
 <style>
   .toc-wrapper {
-    float: left;
-    width: 44%;
-    max-width: 20rem;
-    margin: 0 2rem 1.5rem 0;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
+    margin: 0 0 2rem;
   }
 
-  .toc {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    font-size: 0.8rem;
-    line-height: 1.55;
-  }
-
-  .toc-bar {
-    width: 10px;
-    flex-shrink: 0;
+  /* The article's rule above already separates it from the abstract */
+  .toc-details {
+    border-bottom: 1px solid var(--color-border);
   }
 
   .toc-label {
     font-family: var(--font-condensed);
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
     color: var(--color-muted);
-    margin: 0 0 0.5rem;
+    padding: 0.6rem 0;
+    cursor: pointer;
+    list-style-position: inside;
   }
 
+  .toc-count {
+    margin-left: 0.4rem;
+    opacity: 0.7;
+  }
+
+  .toc {
+    padding: 0;
+  }
+
+  /* Numbered entries separated by hairlines */
   .toc-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    font-family: var(--font-condensed);
+    font-size: 0.92rem;
+    line-height: 1.4;
   }
 
+  /* A rule above each section keeps its subsections grouped with it */
   .toc-item {
-    margin-bottom: 0.2rem;
+    margin: 0;
+    line-height: 1.4;
+    border-top: 1px solid var(--color-border);
   }
 
   .toc-item--sub {
-    padding-left: 0.85rem;
+    border-top: 0;
+  }
+
+  .toc-item--sub + .toc-item:not(.toc-item--sub) {
+    margin-top: 0.25rem;
   }
 
   .toc-item a {
-    font-family: var(--font-condensed);
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    padding: 0.55rem 0;
     color: var(--color-text);
     text-decoration: none;
-    opacity: 0.65;
-    transition: opacity 0.15s ease;
+    transition: color 0.15s ease;
   }
 
-  .toc-item a:hover {
-    opacity: 1;
+  .toc-item--sub a {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    color: var(--color-muted);
+  }
+
+  .toc-item--sub .toc-text {
+    grid-column: 2;
+  }
+
+  .toc-num {
+    font-family: var(--font-mono);
+    font-size: 0.78em;
+    line-height: 1.8;
+    color: var(--color-muted);
+    font-variant-numeric: tabular-nums;
+    transition: color 0.15s ease;
+  }
+
+  .toc-item a:hover .toc-text {
     text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
   }
 
-  @media (max-width: 600px) {
+  .toc-item a.is-current .toc-num {
+    color: var(--toc-accent);
+  }
+
+  .toc-item a.is-current .toc-text {
+    color: var(--color-text);
+  }
+
+  /* Sidebar in the empty left margin; the wrapper spans the post body so the nav can stick. */
+  @media (min-width: 1240px) {
     .toc-wrapper {
-      float: none;
-      width: 100%;
-      max-width: none;
-      margin: 1rem 0 1.5rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: calc(100% + 3.5rem);
+      width: 14rem;
+      margin: 0;
+    }
+
+    .toc-details {
+      position: sticky;
+      top: 7rem;
+      border: 0;
+    }
+
+    .toc-label {
+      display: none;
+    }
+
+    .toc {
+      padding: 0;
+    }
+
+    .toc-list {
+      font-size: 0.88rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    /* Only the section being read is at full strength */
+    .toc-item a {
+      color: var(--color-muted);
+    }
+
+    .toc-item a:hover {
+      color: var(--color-text);
     }
   }
 </style>

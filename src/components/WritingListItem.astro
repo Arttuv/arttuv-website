@@ -1,0 +1,114 @@
+---
+import type { CollectionEntry } from "astro:content"
+import { getTagColor } from "../config/colors"
+
+interface Props {
+  post: CollectionEntry<"writings">;
+  showYear?: boolean;
+  showSummary?: boolean;
+}
+
+const { post, showYear = false, showSummary = true } = Astro.props
+
+const date = new Date(post.data.pubDate)
+const tag = post.data.tags?.[0]
+const wordCount = (post.body ?? '').split(/\s+/).filter(Boolean).length
+const readingTime = Math.max(1, Math.round(wordCount / 220))
+const dateLabel = date.toLocaleDateString("en-us", showYear
+  ? { year: "numeric", month: "short", day: "numeric" }
+  : { month: "short", day: "numeric" })
+---
+<li class="writing-entry" style={tag ? `--tag-color: ${getTagColor(tag)}` : undefined}>
+  <h3 class="writing-title">
+    <a href={`/${post.collection}/${post.id}/`}>{post.data.title}</a>
+  </h3>
+  <p class="writing-meta">
+    <time datetime={date.toISOString()}>{dateLabel}</time>
+    {tag && <><span class="writing-meta-sep">·</span><a class="writing-tag" href={`/tags/${tag}/`}>{tag}</a></>}
+    <span class="writing-meta-sep">·</span>
+    <span>{readingTime} min read</span>
+  </p>
+  {showSummary && post.data.summary && <p class="writing-summary">{post.data.summary}</p>}
+</li>
+
+<style>
+  .writing-entry {
+    margin: 0 0 1.9rem;
+  }
+
+  .writing-entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .writing-title {
+    margin: 0;
+    font-family: var(--font-reading);
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+
+  .writing-title a,
+  .writing-title a:visited {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .writing-title a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+    text-decoration-color: var(--tag-color, currentColor);
+  }
+
+  .writing-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.45rem;
+    margin: 0.3rem 0 0;
+    font-family: var(--font-condensed);
+    font-size: 0.88rem;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    color: var(--color-muted);
+  }
+
+  .writing-meta-sep {
+    opacity: 0.6;
+  }
+
+  .writing-tag,
+  .writing-tag:visited {
+    color: var(--tag-color, var(--color-muted));
+    text-decoration: none;
+  }
+
+  .writing-tag:hover {
+    text-decoration: underline;
+  }
+
+  .writing-summary {
+    margin: 0.45rem 0 0;
+    font-family: var(--font-reading);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--color-text) 78%, transparent);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @media (max-width: 720px) {
+    .writing-title {
+      font-size: 1.22rem;
+    }
+
+    .writing-summary {
+      font-size: 1rem;
+    }
+  }
+</style>

@@ -8,9 +8,8 @@ import ThemeIcon from "./ThemeIcon.astro"
   <div class="menu-home-block">
         <a href="/" class="menu-home" aria-label="Go to homepage">
             <span class="menu-brand-mark" aria-hidden="true"><span class="menu-brand-mark-stripe" style="--i:0"></span><span class="menu-brand-mark-stripe" style="--i:1"></span><span class="menu-brand-mark-stripe" style="--i:2"></span><span class="menu-brand-mark-stripe" style="--i:3"></span><span class="menu-brand-mark-stripe" style="--i:4"></span><span class="menu-brand-mark-stripe" style="--i:5"></span><span class="menu-brand-mark-text">AV</span></span>
-            <span class="menu-brand-text">arttuv.com</span>
+            <span class="menu-brand-text">Arttu Viljakainen</span>
         </a>
-    <p class="menu-home-tagline">A nordic approach to software, systems and people</p>
   </div>
     <button class="menu-toggle" aria-label="Toggle flyout menu" aria-expanded="false"
             aria-controls="flyout-menu"></button>
@@ -149,39 +148,9 @@ import ThemeIcon from "./ThemeIcon.astro"
         }
 
         .menu-brand-text {
-            font-family: var(--font-condensed);
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-        }
-
-        .menu-home-tagline {
-          display: block;
-          margin: 0;
-          font-family: var(--font-condensed);
-          font-size: 0.68rem;
-          line-height: 1.25;
-          letter-spacing: 0.01em;
-          opacity: 0.75;
-          max-width: 100%;
-          max-height: 2rem;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          transform: translateY(0);
-          transition: opacity 0.22s ease, max-height 0.22s ease, transform 0.22s ease;
-          white-space: nowrap;
-          padding-bottom: 4px;
-        }
-
-        .site-header.site-header--compact .menu-home-block {
-          gap: 0;
-        }
-
-        .site-header.site-header--compact .menu-home-tagline {
-          opacity: 0;
-          max-height: 0;
-          transform: translateY(-4px);
-          padding-bottom: 0;
+            font-family: var(--font-reading);
+            font-size: 1.08rem;
+            font-weight: 400;
         }
 
         .mobile-menu nav a {
@@ -203,8 +172,8 @@ import ThemeIcon from "./ThemeIcon.astro"
         }
 
         .dark .menu-wrapper {
-            background: black;
-            color: white;
+            background: var(--color-bg);
+            color: var(--color-text);
         }
 
         .menu-open .menu-flyout {
@@ -269,8 +238,8 @@ import ThemeIcon from "./ThemeIcon.astro"
         }
 
         .dark .menu-flyout {
-            background: black;
-            color: white;
+            background: var(--color-bg);
+            color: var(--color-text);
         }
 
         .dark .menu-flyout::before {
@@ -434,7 +403,7 @@ import ThemeIcon from "./ThemeIcon.astro"
         }
 
         .dark .mobile-menu a, .dark .mobile-menu a:visited, .dark .mobile-menu a:active {
-            color: #F5F5F5;
+            color: var(--color-text);
         }
 
         .menu-wrapper {
@@ -464,9 +433,6 @@ import ThemeIcon from "./ThemeIcon.astro"
         padding: 0.625rem 0.125rem;
         }
 
-      .menu-home-tagline {
-        font-size: 0.62rem;
-      }
         
         .menu-flyout {
             padding: var(--menu-flyout-p, 2ch 1ch 1ch);
@@ -479,7 +445,7 @@ import ThemeIcon from "./ThemeIcon.astro"
         }
 
         .menu-brand-text {
-            font-size: 0.85rem;
+            font-size: 1rem;
         }
 
             .menu-intro-name {

@@ -97,9 +97,39 @@ const relatedPosts = (await getCollection("writings", (entry) => {
     <hr />
     <div class="post-body">
       <TableOfContents headings={headings} slug={post.id} tags={post.data.tags} />
+      <aside class="post-details" aria-label="Article details">
+        <dl>
+          <div class="post-details-row">
+            <dt>Published</dt>
+            <dd><FormattedDate date={new Date(post.data.pubDate)} /></dd>
+          </div>
+          <div class="post-details-row">
+            <dt>Reading time</dt>
+            <dd>{readingTime} min</dd>
+          </div>
+          {post.data.tags && post.data.tags.length > 0 && (
+            <div class="post-details-row">
+              <dt>Topics</dt>
+              <dd>
+                <ul class="post-details-tags">
+                  {post.data.tags.map((tag) => (
+                    <li><a href={`/tags/${tag}/`} style={`--tag: ${getTagColor(tag)}`}>{tag}</a></li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          )}
+          {post.data.discussion && (
+            <div class="post-details-row">
+              <dt>Discuss</dt>
+              <dd><a href={post.data.discussion.url} target="_blank" rel="noopener noreferrer">{post.data.discussion.provider ?? "Discussion"} ↗</a></dd>
+            </div>
+          )}
+        </dl>
+      </aside>
       <slot />
     </div>
-    <BauhausDivider seed={post.id} height="80px" spacing="2.5rem" />
+    <BauhausDivider seed={post.id} height="20px" spacing="2.5rem" />
     <div class="writing-ending">•</div>
         {post.data.discussion &&
             <DiscussionLink discussion={post.data.discussion} />}
@@ -120,125 +150,120 @@ const relatedPosts = (await getCollection("writings", (entry) => {
 </BaseLayout>
 
 <style is:global>
+    /* Roughly 80-85 characters per line at the body size below */
     .blog-post {
-        max-width: 46rem;
+        max-width: 42rem;
         margin: 3rem auto 4rem;
         color: color-mix(in srgb, var(--color-text) 90%, #463730);
     }
 
+    .dark .blog-post {
+        color: var(--color-text);
+    }
+
     .blog-post pre {
-        overflow: scroll;
+        overflow: auto;
     }
 
     .blog-post .post-body {
+        position: relative;
         font-family: var(--font-reading);
-        font-size: 1.04rem;
-        line-height: 1.74;
-        font-weight: 400;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        font-weight: 300;
         text-wrap: pretty;
+        hanging-punctuation: first;
+    }
+
+    .blog-post strong {
+        font-weight: 600;
     }
 
     .blog-post .related-posts {
-            margin-top: 2.5rem;
-            padding-top: 1rem;
-            border-top: 1px solid color-mix(in srgb, var(--tag-color, #212121) 22%, transparent);
-            opacity: 0.88;
+        margin-top: 2.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid color-mix(in srgb, var(--tag-color, #212121) 22%, transparent);
     }
 
     .blog-post .related-posts h2 {
         margin-top: 0;
-            margin-bottom: 0.75rem;
-            border-bottom: 0;
-            padding-bottom: 0;
-            font-size: 0.95rem;
-            font-variant: normal;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-family: var(--font-condensed);
-            color: var(--color-muted);
+        margin-bottom: 0.75rem;
+        font-family: var(--font-condensed);
+        font-size: 0.85rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-muted);
     }
 
-        .blog-post .related-posts-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            gap: 0.5rem;
-        }
-
-        .blog-post .related-posts-list li {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.35rem 0.75rem;
-            align-items: baseline;
-        }
-
-        .blog-post .related-posts-list a {
-            text-decoration: none;
-        }
-
-        .blog-post .related-posts-list a:hover {
-            text-decoration: underline;
-        }
-
-        .blog-post .related-posts-list time {
-            margin: 0;
-            font-size: 0.72rem;
-            color: var(--color-muted);
+    .blog-post .related-posts-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 0.6rem;
+        font-family: var(--font-reading);
+        font-size: 1.05rem;
     }
 
+    .blog-post .related-posts-list li {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 0.75rem;
+        align-items: baseline;
+    }
+
+    .blog-post .related-posts-list a {
+        text-decoration: none;
+    }
+
+    .blog-post .related-posts-list a:hover {
+        text-decoration: underline;
+    }
+
+    .blog-post .related-posts-list time {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    /* One serif voice for the whole article: Newsreader for headings as well as body */
     .blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5 {
-        padding-left:0;
-        margin-left:0;
-        padding-bottom:0;
-        margin-top: 3.25rem;
-        margin-bottom: 1rem;
+        font-family: var(--font-reading);
+        padding-left: 0;
+        margin-left: 0;
+        padding-bottom: 0;
+        margin-top: 3rem;
+        margin-bottom: 0.75rem;
         scroll-margin-top: 6rem;
+        text-wrap: balance;
     }
 
     .blog-post h2 {
-        font-variant: small-caps;
-        font-size: 1.58rem;
-        font-weight: 400;
+        font-size: 1.6rem;
+        font-weight: 600;
         line-height: 1.2;
-        letter-spacing: 0.02em;
-        border-bottom: 1px solid var(--tag-color, #212121);
-        padding-bottom: 0.35rem;
-        opacity: 0.92;
-    }
-
-    .dark .blog-post h2 {
-        border-bottom-color: var(--tag-color, #F5F5F5);
+        letter-spacing: -0.005em;
     }
 
     .blog-post h3 {
         font-size: 1.3rem;
         font-weight: 400;
         font-style: italic;
-        line-height: 1.32;
-        color: color-mix(in srgb, var(--color-text) 82%, transparent);
+        line-height: 1.3;
+        margin-top: 2.25rem;
     }
 
     .blog-post h1:first-of-type {
-        font-size: clamp(2.75rem, 7vw, 4.25rem);
+        font-size: clamp(2.4rem, 6vw, 3.5rem);
         text-align: left;
-        text-decoration: none;
-        margin-left: 0px;
-        padding-bottom:0;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
+        margin-top: 1.25rem;
+        margin-bottom: 0.9rem;
         font-weight: 400;
-        line-height: 1.02;
-        letter-spacing: -0.02em;
-        text-wrap: balance;
+        line-height: 1.06;
+        letter-spacing: -0.015em;
     }
 
     .blog-post .category {
-        margin-bottom: 0.5rem;
-        padding-bottom:0;
-        padding-top: 0px;
-        padding-left:0;
-        margin-top: 1rem;
+        margin: 1rem 0 0.5rem;
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
@@ -250,141 +275,98 @@ const relatedPosts = (await getCollection("writings", (entry) => {
     }
 
     .blog-post .category .card-tag {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         margin-right: 0;
     }
 
     /* Post meta: date + reading time */
     .blog-post .post-meta {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         gap: 0.5rem;
-        margin-bottom: 1.75rem;
-        color: color-mix(in srgb, var(--color-text) 66%, transparent);
-    }
-
-    .blog-post .post-meta time {
-        margin-bottom: 0;
+        margin-bottom: 2rem;
+        font-family: var(--font-condensed);
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+        color: var(--color-muted);
     }
 
     .blog-post .meta-separator {
+        opacity: 0.6;
+    }
+
+    /* Override the site-wide monospace date inside articles */
+    .blog-post time.telemetry-date {
+        display: inline;
         font-family: var(--font-condensed);
+        font-size: inherit;
+        letter-spacing: 0.02em;
+        text-transform: none;
+        color: var(--color-muted);
+        margin: 0;
+    }
+
+    .blog-post .related-posts-list time.telemetry-date {
         font-size: 0.8rem;
-        color: color-mix(in srgb, var(--color-text) 40%, transparent);
     }
 
-    .blog-post .reading-time {
-        font-family: var(--font-condensed);
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: color-mix(in srgb, var(--color-text) 58%, transparent);
-    }
-
-    .dark .blog-post .reading-time {
-        color: #aaa;
-    }
-
-    .dark .blog-post .meta-separator {
-        color: #666;
-    }
-
-    .blog-post time {
-        display: block;
-        font-family: var(--font-condensed);
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: color-mix(in srgb, var(--color-text) 58%, transparent);
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-    }
-
-    .dark .blog-post time {
-        color: #aaa;
-    }
-
-    /* Abstract / Summary */
+    /* Abstract / Summary: the one framed element at the top */
     .blog-post .abstract {
-        margin: 0 0 1.75rem;
-        padding: 1.2rem 1.4rem;
+        margin: 0 0 2rem;
+        padding: 1.1rem 1.3rem;
         background: color-mix(in srgb, var(--tag-color, #212121) 5%, transparent);
         border-left: 3px solid var(--tag-color, #212121);
         border-radius: 0 6px 6px 0;
     }
 
     .dark .blog-post .abstract {
-        background: color-mix(in srgb, var(--tag-color, #F5F5F5) 7%, transparent);
-        border-left-color: var(--tag-color, #F5F5F5);
+        background: color-mix(in srgb, var(--tag-color, #F5F5F5) 8%, transparent);
+    }
+
+    .blog-post .abstract-label,
+    .blog-post .post-updates-label {
+        display: block;
+        font-family: var(--font-condensed);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
     }
 
     .blog-post .abstract-label {
-        display: block;
-        font-family: var(--font-condensed);
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
         color: var(--tag-color, #212121);
-        margin-bottom: 0.5rem;
-        font-weight: 600;
     }
 
     .dark .blog-post .abstract-label {
-        color: var(--tag-color, #F5F5F5);
+        color: color-mix(in srgb, var(--tag-color, #F5F5F5) 75%, white);
     }
 
     .blog-post .abstract p {
         margin: 0;
         font-family: var(--font-reading);
-        font-size: 0.98rem;
-        line-height: 1.68;
-        color: color-mix(in srgb, var(--color-text) 82%, transparent);
-        font-style: normal;
-    }
-
-    .dark .blog-post .abstract p {
-        color: color-mix(in srgb, var(--color-text) 86%, transparent);
+        font-size: 1.05rem;
+        font-weight: 300;
+        line-height: 1.6;
     }
 
     /* Post Updates */
     .blog-post .post-updates {
-        margin: 0 0 1.5rem;
-        padding: 1rem 1.5rem;
-        background: rgba(0, 0, 0, 0.02);
-        border-left: 3px solid #999;
-        border-radius: 0 4px 4px 0;
-        font-size: 0.85em;
-    }
-
-    .dark .blog-post .post-updates {
-        background: rgba(255, 255, 255, 0.03);
-        border-left-color: #666;
+        margin: 0 0 2rem;
+        padding: 0.9rem 1.3rem;
+        border-left: 3px solid var(--color-border);
+        font-size: 0.95rem;
     }
 
     .blog-post .post-updates-label {
-        display: block;
-        font-family: var(--font-condensed);
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        color: #999;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-    }
-
-    .dark .blog-post .post-updates-label {
-        color: #666;
+        color: var(--color-muted);
     }
 
     .blog-post .post-updates ul {
         margin: 0;
         padding-left: 1.2rem;
         line-height: 1.55;
-        color: #555;
-    }
-
-    .dark .blog-post .post-updates ul {
-        color: #aaa;
+        color: var(--color-muted);
     }
 
     .blog-post .post-updates li {
@@ -402,52 +384,38 @@ const relatedPosts = (await getCollection("writings", (entry) => {
         margin: 0 0 2rem;
     }
 
-    .blog-post .content .gatsby-resp-image-figcaption {
-        margin-top: 0.4rem;
-        text-align: center;
-        font-weight: normal;
-        font-size: smaller;
+    .blog-post .post-body hr {
+        width: 4rem;
+        margin: 2.5rem auto;
     }
 
     .blog-post ul {
-        margin-left:0;
+        margin-left: 0;
         margin-bottom: 1.5rem;
         padding-left: 1.4rem;
     }
 
     .blog-post ul li {
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.5rem;
     }
 
     .blog-post p {
-        margin-bottom: 1.45rem;
-        line-height: 1.74;
+        margin-bottom: 1.3rem;
         max-width: 100%;
     }
 
-    .blog-post .post-body > h2,
-    .blog-post .post-body > h3,
-    .blog-post .post-body > h4,
-    .blog-post .post-body > blockquote,
-    .blog-post .post-body > ul,
-    .blog-post .post-body > ol,
-    .blog-post .post-body > pre,
-    .blog-post .post-body > hr {
-        clear: left;
-    }
-
-    .blog-post .post-body > p:first-of-type {
-        line-height: 1.74;
+    .blog-post .post-body p {
+        line-height: inherit;
     }
 
     .blog-post .post-body > p:first-of-type::first-letter {
         float: left;
-        font-family: var(--font-serif);
-        font-size: 3.1em;
-        line-height: 0.82;
+        font-family: var(--font-reading);
+        font-size: 3.3em;
+        line-height: 0.8;
         padding-right: 0.08em;
-        padding-top: 0.06em;
-        font-weight: 500;
+        padding-top: 0.08em;
+        font-weight: 600;
         color: var(--tag-color, #212121);
     }
 
@@ -459,12 +427,13 @@ const relatedPosts = (await getCollection("writings", (entry) => {
     .blog-post .related-posts-list a {
         color: var(--color-link);
         text-decoration-thickness: 1px;
-        text-underline-offset: 0.12em;
+        text-underline-offset: 0.15em;
+        text-decoration-color: color-mix(in srgb, var(--color-link) 45%, transparent);
     }
 
     .blog-post .post-body a:hover,
     .blog-post .related-posts-list a:hover {
-        color: color-mix(in srgb, var(--color-link) 75%, black);
+        text-decoration-color: currentColor;
     }
 
     /* Image captions from markdown title attribute */
@@ -472,7 +441,8 @@ const relatedPosts = (await getCollection("writings", (entry) => {
         object-fit: contain;
         height: inherit;
         width: 100%;
-        border: 1px solid lightgray;
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
         margin: 0 auto;
         display: block;
     }
@@ -481,17 +451,12 @@ const relatedPosts = (await getCollection("writings", (entry) => {
     .blog-post p:has(> img) + p > em:only-child {
         display: block;
         text-align: center;
-        font-size: 0.85em;
-        color: #666;
+        font-size: 0.85rem;
+        color: var(--color-muted);
         margin-top: 0.5rem;
         margin-bottom: 1.5rem;
         font-family: var(--font-condensed);
         font-style: normal;
-    }
-
-    .dark .blog-post img + em,
-    .dark .blog-post p:has(> img) + p > em:only-child {
-        color: #999;
     }
 
     .content-ending-line {
@@ -510,31 +475,26 @@ const relatedPosts = (await getCollection("writings", (entry) => {
         color: var(--tag-color, #F5F5F5);
     }
 
+    /* Quotes: a quiet indent with a thin rule, no box */
     .blog-post blockquote {
-        margin: 2.1rem 0;
-        padding: 1rem 1.5rem;
-        border-left: 3px solid var(--tag-color, #212121);
-        font-style: normal;
-        font-size: 1em;
-        background: color-mix(in srgb, var(--tag-color, #212121) 4%, transparent);
-        border-radius: 0 6px 6px 0;
-    }
-
-    .dark .blog-post blockquote {
-        background: color-mix(in srgb, var(--tag-color, #F5F5F5) 5%, transparent);
-        border-left-color: var(--tag-color, #F5F5F5);
+        margin: 2rem 0;
+        padding: 0.1rem 0 0.1rem 1.25rem;
+        border-left: 2px solid color-mix(in srgb, var(--tag-color, #212121) 70%, transparent);
     }
 
     .blog-post blockquote p {
-        margin: 0;
-        padding: 0;
-        font-family: var(--font-reading);
-        line-height: 1.68;
-        color: color-mix(in srgb, var(--color-text) 82%, transparent);
+        margin: 0 0 0.6rem;
+        font-style: italic;
+        line-height: 1.62;
+        color: color-mix(in srgb, var(--color-text) 80%, transparent);
     }
 
-    .blog-post .post-body > h2 {
-        margin-top: 3.5rem;
+    .blog-post blockquote p:last-child {
+        margin-bottom: 0;
+    }
+
+    .blog-post blockquote em {
+        font-style: normal;
     }
 
     .blog-post ol {
@@ -546,13 +506,93 @@ const relatedPosts = (await getCollection("writings", (entry) => {
         line-height: 1.6;
     }
 
-    @media (max-width: 756px) {
-        .blog-post h1:first-of-type {
-            margin-top: 2rem;
+    /* Article details: a quiet label/value column in the right margin on wide screens */
+    .blog-post .post-details {
+        display: none;
+    }
+
+    @media (min-width: 1240px) {
+        .blog-post .post-meta {
+            display: none;
         }
 
-        .blog-post .post-body > h2 {
-            margin-top: 2rem;
+        .blog-post .post-details {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: calc(100% + 3.5rem);
+            width: 13rem;
+        }
+
+        .blog-post .post-details dl {
+            position: sticky;
+            top: 7rem;
+            margin: 0;
+            font-family: var(--font-condensed);
+            font-size: 0.88rem;
+            font-weight: 400;
+            line-height: 1.4;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .blog-post .post-details-row {
+            display: grid;
+            grid-template-columns: 5.75rem minmax(0, 1fr);
+            gap: 0.5rem;
+            padding: 0.55rem 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .blog-post .post-details dt {
+            color: var(--color-text);
+        }
+
+        .blog-post .post-details dd {
+            margin: 0;
+            color: var(--color-muted);
+        }
+
+        .blog-post .post-details time.telemetry-date {
+            font-size: inherit;
+            letter-spacing: 0;
+        }
+
+        .blog-post .post-details-tags {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .blog-post .post-details-tags li {
+            margin: 0 0 0.3rem;
+            line-height: 1.4;
+        }
+
+        .blog-post .post-details-tags li:last-child {
+            margin-bottom: 0;
+        }
+
+        .blog-post .post-details a {
+            color: var(--color-muted);
+            text-decoration: none;
+        }
+
+        .blog-post .post-details-tags a::before {
+            content: "";
+            display: inline-block;
+            width: 0.45rem;
+            height: 0.45rem;
+            margin-right: 0.45rem;
+            border-radius: 50%;
+            background: var(--tag);
+            vertical-align: 0.05em;
+        }
+
+        .blog-post .post-details a:hover {
+            color: var(--color-text);
+            text-decoration: underline;
+            text-underline-offset: 0.15em;
         }
     }
 
@@ -564,31 +604,26 @@ const relatedPosts = (await getCollection("writings", (entry) => {
         }
 
         .blog-post .post-body {
-            font-size: 1rem;
+            font-size: 1.07rem;
         }
 
-        .blog-post h1:first-of-type {
-            margin-top: 1.25rem;
-        }
-
-        .writing-notes {
-            margin: 1rem 0;
+        .blog-post .post-body > h2 {
+            margin-top: 2.25rem;
         }
     }
 
     @media (max-width: 620px) {
         .blog-post h1:first-of-type {
             font-size: 2.3rem;
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .blog-post h2 {
-            font-size: 1.45rem;
+            font-size: 1.4rem;
         }
 
         .blog-post h3 {
-            font-size: 1.14rem;
+            font-size: 1.18rem;
         }
 
         .blog-post .abstract {
@@ -596,7 +631,7 @@ const relatedPosts = (await getCollection("writings", (entry) => {
         }
 
         .blog-post .post-body > p:first-of-type::first-letter {
-            font-size: 2.5em;
+            font-size: 2.9em;
         }
     }
 </style>

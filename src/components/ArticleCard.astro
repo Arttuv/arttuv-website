@@ -33,15 +33,20 @@ const cardClass = [
         </div>
       )}
       <h2><a href={`/${post.collection}/${post.id}/`}>{post.data.title}</a></h2>
-      <FormattedDate date={new Date(post.data.pubDate)} />
+      <p class="article-card-meta">
+        <FormattedDate date={new Date(post.data.pubDate)} />
+        {slim && <><span class="article-card-sep" aria-hidden="true">·</span><span class="read-more">{readingTime} min read</span></>}
+      </p>
     </div>
     {!slim && (
       <div class="article-card-text">
         <p>{post.data.summary}</p>
       </div>
     )}
-    <div class="article-card-footer">
-      <span class="read-more">{readingTime} min read</span>
-    </div>
+    {!slim && (
+      <div class="article-card-footer">
+        <span class="read-more">{readingTime} min read</span>
+      </div>
+    )}
   </div>
 </article>

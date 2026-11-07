@@ -1,0 +1,113 @@
+---
+import { getCardColor, BAUHAUS_PALETTE } from "../config/colors";
+
+interface Props {
+  slug: string;
+  tags?: string[];
+  class?: string;
+}
+
+const { slug, tags, class: className } = Astro.props;
+
+// Deterministic Bauhaus composition per article: a field in the tag colour, an accent stripe,
+// a pale band, and sometimes a circle. Each article always gets the same picture.
+function hash(str: string): number {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) {
+    h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+const h = hash(slug);
+const field = getCardColor(tags);
+const others = BAUHAUS_PALETTE.filter((c) => c !== field);
+const accent = others[h % others.length];
+const accent2 = others[(h >> 3) % others.length] === accent
+  ? others[((h >> 3) + 1) % others.length]
+  : others[(h >> 3) % others.length];
+
+const stripeAt = 52 + ((h >> 5) % 30);
+const stripeWidth = 7 + ((h >> 8) % 8);
+const bandAt = 14 + ((h >> 11) % 46);
+const bandHeight = 5 + ((h >> 14) % 5);
+const circle = (h >> 17) % 3 !== 0;
+const circleX = 18 + ((h >> 19) % 30);
+const circleY = 55 + ((h >> 22) % 25);
+
+const style = [
+  `--art-field: ${field}`,
+  `--art-accent: ${accent}`,
+  `--art-accent-2: ${accent2}`,
+  `--art-stripe-at: ${stripeAt}%`,
+  `--art-stripe-end: ${stripeAt + stripeWidth}%`,
+  `--art-band-at: ${bandAt}%`,
+  `--art-band-end: ${bandAt + bandHeight}%`,
+  `--art-circle-x: ${circleX}%`,
+  `--art-circle-y: ${circleY}%`,
+].join("; ");
+---
+
+<div class:list={["story-art", { "story-art--circle": circle }, className]} style={style} aria-hidden="true"></div>
+
+<style>
+  .story-art {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--art-field);
+    border-radius: 0.3rem;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .story-art::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        transparent 0 var(--art-stripe-at),
+        color-mix(in srgb, var(--art-accent) 90%, white 10%) var(--art-stripe-at) var(--art-stripe-end),
+        transparent var(--art-stripe-end) 100%
+      ),
+      linear-gradient(
+        180deg,
+        transparent 0 var(--art-band-at),
+        color-mix(in srgb, white 75%, transparent) var(--art-band-at) var(--art-band-end),
+        transparent var(--art-band-end) 100%
+      );
+    transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .story-art--circle::after {
+    content: "";
+    position: absolute;
+    left: var(--art-circle-x);
+    top: var(--art-circle-y);
+    width: 22%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--art-accent-2);
+    transform: translate(-50%, -50%);
+    transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  /* The composition shifts slightly when its story is hovered */
+  :global(.story:hover) .story-art::before,
+  :global(.story:focus-within) .story-art::before {
+    transform: translate3d(0.5rem, -0.3rem, 0);
+  }
+
+  :global(.story:hover) .story-art--circle::after,
+  :global(.story:focus-within) .story-art--circle::after {
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .story-art::before,
+    .story-art--circle::after {
+      transition: none;
+    }
+  }
+</style>

@@ -180,7 +180,7 @@ const { tagColor = DEFAULT_COLOR } = Astro.props;
   }
 
   .reading-progress-inner {
-    background: #fffbf8;
+    background: var(--color-bg);
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     padding: 0.3rem 1rem;
     display: flex;
@@ -190,7 +190,6 @@ const { tagColor = DEFAULT_COLOR } = Astro.props;
   }
 
   .dark .reading-progress-inner {
-    background: #000;
     border-bottom-color: rgba(255, 255, 255, 0.08);
   }
 
@@ -248,6 +247,12 @@ const { tagColor = DEFAULT_COLOR } = Astro.props;
 
   .dark .reading-progress-section {
     color: var(--tag-color, #F5F5F5);
+  }
+
+  @media (min-width: 1240px) {
+    .reading-progress-inner {
+      display: none;
+    }
   }
 
   .reading-progress-bar {

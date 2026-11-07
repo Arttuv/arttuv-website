@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro"
-import ArticleCard from "../../components/ArticleCard.astro"
+import WritingListItem from "../../components/WritingListItem.astro"
+import { getTagColor } from "../../config/colors"
 import { getCollection } from "astro:content"
 
 export async function getStaticPaths() {
@@ -19,23 +20,21 @@ const { tag } = Astro.params
 const { posts } = Astro.props
 ---
 <BaseLayout title={`#${tag}`} description={`All posts tagged with ${tag}`} robots="noindex,follow">
-  <div class="writings-container">
-    <h1>#{tag}</h1>
-    <div class="writing-listing">
-      {posts.map((post) => (
-        <ArticleCard post={post} />
-      ))}
-    </div>
+  <div class="page-column">
+    <header class="page-header">
+      <h1 class="page-title"><span class="tag-hash" style={`color: ${getTagColor(tag ?? "")}`}>#</span>{tag}</h1>
+      <p class="page-intro">
+        {posts.length} {posts.length === 1 ? "writing" : "writings"} tagged {tag}. See <a href="/writings/">all writings</a> or <a href="/tags/">all tags</a>.
+      </p>
+    </header>
+    <ul class="writing-list">
+      {posts.map((post) => <WritingListItem post={post} showYear />)}
+    </ul>
   </div>
 </BaseLayout>
 
 <style>
-  .writings-container {
-    max-width: 58rem;
-    margin: 0 auto;
-  }
-
-  a {
-    text-decoration: none;
+  .tag-hash {
+    margin-right: 0.04em;
   }
 </style>

@@ -21,28 +21,24 @@ const description = entry.data.card?.description ?? entry.data.spoilerText ?? "S
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="marginalia-page">
+  <div class="page-column">
     <p class="marginalia-back"><a href="/marginalia/">← Back to marginalia</a></p>
     <MarginaliaEntry entry={entry} />
   </div>
 </BaseLayout>
 
 <style>
-  .marginalia-page {
-    max-width: 46rem;
-    margin: 0 auto 4rem;
-    padding-top: 1.25rem;
-  }
-
   .marginalia-back {
-    margin-bottom: 1rem;
+    margin: 0 0 2rem;
     font-family: var(--font-condensed);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
-  @media (max-width: 700px) {
-    .marginalia-page {
-      padding-top: 0.9rem;
-    }
+  .marginalia-back a {
+    text-decoration: none;
+  }
+
+  .marginalia-back a:hover {
+    text-decoration: underline;
   }
 </style>
