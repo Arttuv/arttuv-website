@@ -21,10 +21,14 @@ const { posts } = Astro.props
 ---
 <BaseLayout title={`#${tag}`} description={`All posts tagged with ${tag}`} robots="noindex,follow">
   <div class="page-column">
+    <header class="front-masthead">
+      <a class="front-masthead-link" href="/tags/">← Topics</a>
+      <span class="front-dateline">{posts.length} {posts.length === 1 ? "writing" : "writings"}</span>
+    </header>
     <header class="page-header">
       <h1 class="page-title"><span class="tag-hash" style={`color: ${getTagColor(tag ?? "")}`}>#</span>{tag}</h1>
       <p class="page-intro">
-        {posts.length} {posts.length === 1 ? "writing" : "writings"} tagged {tag}. See <a href="/writings/">all writings</a> or <a href="/tags/">all tags</a>.
+        Everything tagged {tag}, newest first. See also <a href="/writings/">all writings</a>.
       </p>
     </header>
     <ul class="writing-list">

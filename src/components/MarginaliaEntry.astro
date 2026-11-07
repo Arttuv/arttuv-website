@@ -16,6 +16,10 @@ const discussionLabel = discussionProvider === "Mastodon"
   ? "Discuss on Mastodon"
   : `Discuss on ${discussionProvider}`
 const { Content } = await render(entry)
+
+// Notes imported from Mastodon often carry their hashtags in the text already; don't list those twice
+const body = (entry.body ?? "").toLowerCase()
+const extraTags = (entry.data.tags ?? []).filter((tag) => !body.includes(`#${tag.toLowerCase()}`))
 ---
 
 <article class:list={["marginalia-entry", compact && "marginalia-entry--compact"]}>
@@ -41,9 +45,9 @@ const { Content } = await render(entry)
       </div>
     </a>
   )}
-  {entry.data.tags && entry.data.tags.length > 0 && (
+  {extraTags.length > 0 && (
     <ul class="marginalia-tags" aria-label="Tags">
-      {entry.data.tags.map((tag) => (
+      {extraTags.map((tag) => (
         <li>#{tag}</li>
       ))}
     </ul>

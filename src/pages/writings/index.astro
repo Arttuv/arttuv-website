@@ -18,9 +18,14 @@ for (const post of writings) {
         years.push({ year, posts: [post] })
     }
 }
+const yearSpan = `${years.at(-1)?.year}–${years[0]?.year}`
 ---
 <BaseLayout title={title} description={description}>
   <div class="page-column">
+    <header class="front-masthead">
+      <span class="front-masthead-title">Archive</span>
+      <span class="front-dateline">{writings.length} essays · {yearSpan}</span>
+    </header>
     <header class="page-header">
       <h1 class="page-title">{title}</h1>
       <p class="page-intro">

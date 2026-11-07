@@ -10,6 +10,10 @@ const description = "Short-form notes and links by Arttu Viljakainen."
 
 <BaseLayout title={title} description={description}>
   <div class="page-column">
+    <header class="front-masthead">
+      <span class="front-masthead-title">Notes</span>
+      <span class="front-dateline">{marginalia.length} {marginalia.length === 1 ? "note" : "notes"}</span>
+    </header>
     <header class="page-header">
       <h1 class="page-title">{title}</h1>
       <p class="page-intro">

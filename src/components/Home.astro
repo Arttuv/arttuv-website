@@ -159,6 +159,13 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
         padding: 2.5rem 0 4rem;
     }
 
+    /* Until the column has room to spare, keep a gutter so the column rules stay on screen */
+    @media (max-width: 1080px) {
+        .home-page {
+            padding-inline: 1.5rem;
+        }
+    }
+
     /* Front page: a newspaper-style grid of stories separated by hairline column rules */
     .front {
         display: grid;
