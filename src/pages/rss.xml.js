@@ -18,7 +18,7 @@ export async function GET(context) {
     // `<title>` field in output xml
     title: 'arttuv.com',
     // `<description>` field in output xml
-    description: 'Arttu Viljakainen, a software development consultant',
+    description: 'Arttu V., a software development consultant',
     // Pull in your project "site" from the endpoint context
     site: context.site,
     // Array of `<item>`s in output xml

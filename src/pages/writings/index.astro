@@ -5,7 +5,7 @@ import WritingListItem from "../../components/WritingListItem.astro"
 import { getCollection } from "astro:content"
 const writings = (await getCollection("writings")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const title = "Writings"
-const description = "Articles on software development, team leadership, human-computer interaction, and agile processes by Arttu Viljakainen."
+const description = "Articles on software development, team leadership, human-computer interaction, and agile processes by Arttu V."
 
 // Group by publication year, newest first (writings are already sorted)
 const years: { year: number; posts: typeof writings }[] = []

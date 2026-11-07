@@ -153,18 +153,42 @@ svg {
 }
 
 
+/* No rule under the header at the top of the page; it fades in once content scrolls beneath it */
 .site-header {
     width: 100%;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
     position: sticky;
     top: 0;
     background-color: var(--color-bg);
     z-index: 9;
 }
 
+.site-header.site-header--compact {
+    border-bottom-color: var(--color-border);
+}
+
+
+/* Header edges line up with the 58rem content column; the gutter follows the page padding at each width */
+:root {
+    --header-gutter: 1rem;
+}
+
+@media (max-width: 1080px) {
+    :root { --header-gutter: 2.5rem; }
+}
+
+@media (max-width: 801px) {
+    :root { --header-gutter: 2rem; }
+}
+
+@media (max-width: 720px) {
+    :root { --header-gutter: calc(0.5rem + clamp(0.75rem, 2.5vw, 1rem)); }
+}
+
 @media (max-width: 768px) {
     .site-header {
-        transition: transform 0.22s ease;
+        transition: transform 0.22s ease, border-color 0.2s ease;
     }
 
     .site-header.site-header--hidden {
@@ -184,10 +208,11 @@ svg {
     }
 }
 
+/* Measured from the content column's right edge, so the cat stays inside the page frame */
 .header-cat {
     position: absolute;
     bottom: 0;
-    right: 6ch;
+    right: calc((100% - min(100%, 58rem + 2 * var(--header-gutter))) / 2 + var(--header-gutter) + 2rem);
     transform: translateY(50%);
     z-index: 10;
     line-height: 0;
@@ -198,6 +223,20 @@ svg {
 
 .header-cat:hover {
     transform: translateY(50%) scale(1.2);
+}
+
+/* The cat keeps a short perch of its own while the header rule is hidden. Its feet sit at its
+   vertical middle, under the body in the left third of the drawing (the rest is tail space). */
+.header-cat::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% * 3.5 / 21);
+    width: 1.6rem;
+    height: 1px;
+    background: var(--color-border);
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .header-cat svg {
@@ -437,6 +476,12 @@ nav a, nav a:visited, nav a:active {
 .page-intro a {
     text-decoration-thickness: 1px;
     text-underline-offset: 0.15em;
+}
+
+@media (max-width: 1080px) {
+    .page-column {
+        padding-inline: 1.5rem;
+    }
 }
 
 @media (max-width: 720px) {

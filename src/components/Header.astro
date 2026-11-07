@@ -8,7 +8,7 @@ import MobileMenu from "./MobileMenu.astro"
     <div class="header-left">
       <a href="/" class="site-brand" aria-label="Go to homepage">
         <span class="brand-mark" aria-hidden="true"><span class="brand-mark-fill"><span class="brand-mark-stripe" style="--i:0"></span><span class="brand-mark-stripe" style="--i:1"></span><span class="brand-mark-stripe" style="--i:2"></span><span class="brand-mark-stripe" style="--i:3"></span><span class="brand-mark-stripe" style="--i:4"></span><span class="brand-mark-stripe" style="--i:5"></span></span><span class="brand-mark-text">AV</span></span>
-        <span class="brand-text">Arttu Viljakainen</span>
+        <span class="brand-text">Arttu V.</span>
       </a>
     </div>
 
@@ -94,8 +94,9 @@ import MobileMenu from "./MobileMenu.astro"
 
     .desktop-navigation {
         margin:0 auto;
-        padding: 0.7rem 1.25rem;
+        padding: 0.7rem var(--header-gutter);
         width: 100%;
+        max-width: calc(58rem + 2 * var(--header-gutter));
         box-sizing: border-box;
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto auto;
@@ -105,7 +106,7 @@ import MobileMenu from "./MobileMenu.astro"
     }
 
     .site-header.site-header--compact .desktop-navigation {
-      padding: 0.5rem 1.25rem;
+      padding: 0.5rem var(--header-gutter);
     }
 
     .header-left {
@@ -134,8 +135,9 @@ import MobileMenu from "./MobileMenu.astro"
       overflow: hidden;
       width: 2.2rem;
       height: 2.2rem;
-      border-radius: 0.3rem;
-      border: 2px solid currentColor;
+      /* A hairline frame with near-square corners, matching the rules elsewhere on the page */
+      border-radius: 2px;
+      border: 1.5px solid currentColor;
       font-family: var(--font-condensed);
       font-weight: 700;
       font-size: 1.05rem;
@@ -149,10 +151,10 @@ import MobileMenu from "./MobileMenu.astro"
     .brand-mark-fill {
       position: absolute;
       inset: 0;
-      border-radius: calc(0.3rem - 2px);
+      border-radius: 1px;
       overflow: hidden;
-      clip-path: inset(0 round calc(0.3rem - 2px));
-      -webkit-clip-path: inset(0 round calc(0.3rem - 2px));
+      clip-path: inset(0 round 1px);
+      -webkit-clip-path: inset(0 round 1px);
     }
 
     .brand-mark-stripe {
@@ -213,6 +215,8 @@ import MobileMenu from "./MobileMenu.astro"
       font-size: 1.1rem;
       font-weight: 400;
       letter-spacing: 0.005em;
+      /* Newsreader carries extra space above its capitals; nudge the letters to the mark's centre */
+      transform: translateY(0.16em);
     }
 
     @media (prefers-reduced-motion: reduce) {

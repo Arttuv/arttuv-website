@@ -8,7 +8,7 @@ import ThemeIcon from "./ThemeIcon.astro"
   <div class="menu-home-block">
         <a href="/" class="menu-home" aria-label="Go to homepage">
             <span class="menu-brand-mark" aria-hidden="true"><span class="menu-brand-mark-stripe" style="--i:0"></span><span class="menu-brand-mark-stripe" style="--i:1"></span><span class="menu-brand-mark-stripe" style="--i:2"></span><span class="menu-brand-mark-stripe" style="--i:3"></span><span class="menu-brand-mark-stripe" style="--i:4"></span><span class="menu-brand-mark-stripe" style="--i:5"></span><span class="menu-brand-mark-text">AV</span></span>
-            <span class="menu-brand-text">Arttu Viljakainen</span>
+            <span class="menu-brand-text">Arttu V.</span>
         </a>
   </div>
     <button class="menu-toggle" aria-label="Toggle flyout menu" aria-expanded="false"
@@ -16,7 +16,7 @@ import ThemeIcon from "./ThemeIcon.astro"
 
     <div class="menu-flyout" id="flyout-menu">
             <div class="menu-brand-intro">
-                <p class="menu-intro-name">Arttu Viljakainen</p>
+                <p class="menu-intro-name">Arttu V.</p>
                 <p class="menu-intro-tagline">A nordic approach to software, systems and people</p>
                 <div class="menu-rainbow-bar" aria-hidden="true">
                     <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -48,9 +48,9 @@ import ThemeIcon from "./ThemeIcon.astro"
 
     .mobile-menu {
         display: none;
-      padding: 0.625rem 0.25rem;
-        margin: 0 0.5rem;
+        padding: 0.625rem var(--header-gutter);
         width: 100%;
+        box-sizing: border-box;
     }
 
     @media screen and (max-width: 768px) {
@@ -83,8 +83,8 @@ import ThemeIcon from "./ThemeIcon.astro"
             overflow: hidden;
             width: 2rem;
             height: 2rem;
-            border: 2px solid currentColor;
-            border-radius: 0.3rem;
+            border: 1.5px solid currentColor;
+            border-radius: 2px;
             font-family: var(--font-condensed);
             font-size: 1rem;
             font-weight: 700;
@@ -151,6 +151,8 @@ import ThemeIcon from "./ThemeIcon.astro"
             font-family: var(--font-reading);
             font-size: 1.08rem;
             font-weight: 400;
+            /* Newsreader carries extra space above its capitals; nudge the letters to the mark's centre */
+            transform: translateY(0.16em);
         }
 
         .mobile-menu nav a {
@@ -428,11 +430,6 @@ import ThemeIcon from "./ThemeIcon.astro"
 
     /* === Extra small screens === */
     @media (max-width: 360px) {
-        .mobile-menu {
-            margin: 0 0.25rem;
-        padding: 0.625rem 0.125rem;
-        }
-
         
         .menu-flyout {
             padding: var(--menu-flyout-p, 2ch 1ch 1ch);
@@ -470,6 +467,10 @@ import ThemeIcon from "./ThemeIcon.astro"
       document.body.classList.remove("menu-open")
       var toggle = document.querySelector(".menu-toggle")
       toggle && toggle.setAttribute("aria-expanded", "false")
+      // The panel covered the logo; keep its stripes for a beat so they're seen leaving
+      setTimeout(function() {
+        if (!menuIsOpen()) menuStripes.slideOut()
+      }, 350)
     }
 
     // Toggle menu — event delegation
@@ -481,6 +482,8 @@ import ThemeIcon from "./ThemeIcon.astro"
       } else {
         document.body.classList.add("menu-open")
         toggle.setAttribute("aria-expanded", "true")
+        menuStripes.slideIn()
+        menuStripes.dropBar()
       }
     })
 
@@ -538,15 +541,19 @@ import ThemeIcon from "./ThemeIcon.astro"
         }
       }
     })
-    // Brand mark stripe hover animation
-    ;(function initMenuBrandHover() {
-      var brand = document.querySelector('.menu-home')
-      var mark = document.querySelector('.menu-brand-mark')
-      if (!brand || !mark) return
-
-      var stripes = Array.prototype.slice.call(mark.querySelectorAll('.menu-brand-mark-stripe'))
+    // Brand mark stripes. Touch screens have no hover, so the stripes also greet a visitor once per
+    // session and stay in while the menu is open. The mark is looked up on each call because page
+    // transitions swap the header, while this script only runs once.
+    var menuStripes = (function() {
       var step = 0.025
       var activeAnims = []
+      var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+      function parts() {
+        var mark = document.querySelector('.menu-brand-mark')
+        if (!mark) return null
+        return { mark: mark, stripes: Array.prototype.slice.call(mark.querySelectorAll('.menu-brand-mark-stripe')) }
+      }
 
       function randomOrder(count) {
         var order = []
@@ -563,7 +570,7 @@ import ThemeIcon from "./ThemeIcon.astro"
         activeAnims = []
       }
 
-      function resetStripes() {
+      function resetStripes(stripes) {
         stripes.forEach(function(s) {
           s.style.animation = 'none'
           s.style.transform = ''
@@ -571,19 +578,27 @@ import ThemeIcon from "./ThemeIcon.astro"
         })
       }
 
-      brand.addEventListener('mouseenter', function() {
+      function slideIn() {
+        var p = parts()
+        if (!p || p.mark.classList.contains('menu-brand-mark--entering')) return
         cancelAll()
-        resetStripes()
-        mark.offsetHeight
-        mark.classList.remove('menu-brand-mark--leaving')
-        mark.classList.add('menu-brand-mark--entering')
-        var order = randomOrder(stripes.length)
-        stripes.forEach(function(s, idx) {
-          s.style.animation = 'menu-stripe-slide-in 0.18s ease-out ' + (order[idx] * step) + 's both'
+        resetStripes(p.stripes)
+        p.mark.offsetHeight
+        p.mark.classList.remove('menu-brand-mark--leaving')
+        p.mark.classList.add('menu-brand-mark--entering')
+        var duration = reducedMotion.matches ? 0 : 0.18
+        var order = randomOrder(p.stripes.length)
+        p.stripes.forEach(function(s, idx) {
+          var delay = reducedMotion.matches ? 0 : order[idx] * step
+          s.style.animation = 'menu-stripe-slide-in ' + duration + 's ease-out ' + delay + 's both'
         })
-      })
+      }
 
-      brand.addEventListener('mouseleave', function() {
+      function slideOut() {
+        var p = parts()
+        if (!p || !p.mark.classList.contains('menu-brand-mark--entering')) return
+        var mark = p.mark
+        var stripes = p.stripes
         cancelAll()
         mark.classList.remove('menu-brand-mark--entering')
         mark.classList.add('menu-brand-mark--leaving')
@@ -603,7 +618,7 @@ import ThemeIcon from "./ThemeIcon.astro"
           return { opacity: opacity, ty: ty }
         })
 
-        resetStripes()
+        resetStripes(stripes)
 
         var visibleIndices = []
         snapshots.forEach(function(snap, i) {
@@ -627,8 +642,8 @@ import ThemeIcon from "./ThemeIcon.astro"
             { transform: 'translateY(' + snap.ty + 'px)', opacity: snap.opacity },
             { transform: 'translateY(' + (height * 1.1) + 'px)', opacity: 0 }
           ], {
-            duration: 160,
-            delay: order[orderIdx] * 25,
+            duration: reducedMotion.matches ? 0 : 160,
+            delay: reducedMotion.matches ? 0 : order[orderIdx] * 25,
             easing: 'ease-in',
             fill: 'both'
           })
@@ -640,11 +655,73 @@ import ThemeIcon from "./ThemeIcon.astro"
             finished++
             if (finished >= visibleIndices.length) {
               mark.classList.remove('menu-brand-mark--leaving')
-              resetStripes()
+              resetStripes(stripes)
             }
           }
         })
-      })
+      }
+
+      // The panel hides the logo, so its rainbow bar drops in stripe by stripe the same way
+      function dropBar() {
+        if (reducedMotion.matches) return
+        var bar = document.querySelector('.menu-rainbow-bar')
+        if (!bar || !bar.animate) return
+        var spans = Array.prototype.slice.call(bar.children)
+        var order = randomOrder(spans.length)
+        spans.forEach(function(span, idx) {
+          span.animate([
+            { transform: 'translateY(-110%)', opacity: 0 },
+            { opacity: 1, offset: 0.4 },
+            { transform: 'translateY(0)', opacity: 1 }
+          ], {
+            duration: 220,
+            delay: 80 + order[idx] * 45,
+            easing: 'ease-out',
+            fill: 'backwards'
+          })
+        })
+      }
+
+      return { slideIn: slideIn, slideOut: slideOut, dropBar: dropBar }
+    })()
+
+    function menuIsOpen() {
+      return document.body.classList.contains("menu-open")
+    }
+
+    // Mouse hover, delegated so it keeps working after page transitions
+    document.addEventListener('pointerover', function(e) {
+      if (e.pointerType !== 'mouse' || menuIsOpen()) return
+      var home = e.target.closest && e.target.closest('.menu-home')
+      if (!home || home.contains(e.relatedTarget)) return
+      menuStripes.slideIn()
+    })
+
+    document.addEventListener('pointerout', function(e) {
+      if (e.pointerType !== 'mouse' || menuIsOpen()) return
+      var home = e.target.closest && e.target.closest('.menu-home')
+      if (!home || home.contains(e.relatedTarget)) return
+      menuStripes.slideOut()
+    })
+
+    // Once per session, the stripes say hello on small screens
+    ;(function greetOnce() {
+      var mark = document.querySelector('.menu-brand-mark')
+      if (!mark || mark.offsetParent === null) return
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+      try {
+        if (sessionStorage.getItem('av-stripes-greeted')) return
+        sessionStorage.setItem('av-stripes-greeted', '1')
+      } catch (err) {
+        return
+      }
+      setTimeout(function() {
+        if (menuIsOpen()) return
+        menuStripes.slideIn()
+        setTimeout(function() {
+          if (!menuIsOpen()) menuStripes.slideOut()
+        }, 1300)
+      }, 600)
     })()
 
   })()

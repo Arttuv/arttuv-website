@@ -23,7 +23,7 @@ interface Props {
 
 const { title, description, ogType = "website", publishedDate, tags, robots } = Astro.props
 const canonicalURL = Astro.url
-const siteName = "Arttu Viljakainen"
+const siteName = "Arttu V."
 const fullTitle = title === siteName ? title : `${title} | ${siteName}`
 const ogImage = new URL("/images/og-default.png", Astro.site)
 ---

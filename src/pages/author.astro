@@ -4,8 +4,8 @@ import { Image } from "astro:assets"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import BauhausArt from "../components/BauhausArt.astro"
 import arttu from "../images/arttuv-bw.jpeg"
-const title = "Arttu Viljakainen"
-const description = "Arttu Viljakainen is a software development consultant from Finland."
+const title = "Arttu V."
+const description = "Arttu V. is a software development consultant from Finland."
 ---
 
 <BaseLayout title={title} description={description}>
@@ -13,12 +13,12 @@ const description = "Arttu Viljakainen is a software development consultant from
 
     <header class="front-masthead">
       <span class="front-masthead-title">Author</span>
-      <span class="front-dateline">Helsinki · 60.17°N 24.94°E</span>
+      <span class="front-dateline">Helsinki</span>
     </header>
 
     <div class="author-hero">
       <div class="author-hero-text">
-        <h1>Arttu Viljakainen</h1>
+        <h1>Arttu V.</h1>
         <p class="author-role">Software development consultant</p>
         <p>
           I'm a generalist software developer interested in teamwork, research and complex systems. Generalist means that I'm usually
@@ -52,7 +52,7 @@ const description = "Arttu Viljakainen is a software development consultant from
         </p>
       </div>
       <figure class="author-hero-photo">
-        <Image src={arttu} alt="Arttu Viljakainen" loading="eager" />
+        <Image src={arttu} alt="Arttu V." loading="eager" />
         <figcaption>Arttu, Helsinki</figcaption>
       </figure>
     </div>
@@ -366,16 +366,23 @@ const description = "Arttu Viljakainen is a software development consultant from
         font-size: 0.9rem;
     }
 
-    /* Origin story */
+    /* Origin story: set in two newspaper columns so it spans the page at a readable line length */
     .author-origin {
-        max-width: 40rem;
         padding-top: 1.5rem;
         font-size: 1.02rem;
         line-height: 1.72;
+        columns: 2;
+        column-gap: 3rem;
+        column-rule: 1px solid var(--color-border);
     }
 
+    /* Newspaper paragraphs: an indent instead of a gap, so the columns balance */
     .author-origin p {
-        margin-bottom: 0.75rem;
+        margin: 0;
+    }
+
+    .author-origin p + p {
+        text-indent: 1.5em;
     }
 
     @media (max-width: 1080px) {
@@ -386,23 +393,72 @@ const description = "Arttu Viljakainen is a software development consultant from
 
     @media (max-width: 800px) {
         .author-page {
-            padding: 1.5rem clamp(0.75rem, 2.5vw, 1rem) 1rem;
+            padding-block: 1.5rem 1rem;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .author-page {
+            padding-inline: clamp(0.75rem, 2.5vw, 1rem);
+        }
+    }
+
+    @media (max-width: 800px) {
+
+        /* Byline layout: a small photo beside the name and role, the text below at full width.
+           The text wrapper dissolves so its children can share the hero grid with the photo. */
+        .author-hero {
+            grid-template-columns: 5.5rem minmax(0, 1fr);
+            column-gap: 1rem;
+            row-gap: 0;
+            align-items: center;
         }
 
-        .author-hero {
-            grid-template-columns: minmax(0, 1fr);
-            gap: 1.5rem;
+        .author-hero-text {
+            display: contents;
+        }
+
+        .author-hero-text > * {
+            grid-column: 1 / -1;
+        }
+
+        .author-hero-text h1,
+        .author-hero-text .author-role {
+            grid-column: 2;
+        }
+
+        .author-hero-text h1 {
+            grid-row: 1;
+            align-self: end;
+        }
+
+        .author-hero-text .author-role {
+            grid-row: 2;
+            align-self: start;
+            margin-bottom: 0;
+        }
+
+        .author-hero-text h1 + .author-role + * {
+            margin-top: 1.5rem;
         }
 
         .author-hero-photo {
-            order: -1;
-            max-width: 14rem;
+            grid-column: 1;
+            grid-row: 1 / span 2;
             margin: 0;
+        }
+
+        .author-hero-photo figcaption {
+            display: none;
         }
 
         .author-skills {
             grid-template-columns: minmax(0, 1fr);
             margin: 0;
+        }
+
+        .author-origin {
+            columns: 1;
         }
 
         .skill-section {

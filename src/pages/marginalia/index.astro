@@ -5,7 +5,7 @@ import { getCollection } from "astro:content"
 
 const marginalia = (await getCollection("marginalia")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 const title = "Marginalia"
-const description = "Short-form notes and links by Arttu Viljakainen."
+const description = "Short-form notes and links by Arttu V."
 ---
 
 <BaseLayout title={title} description={description}>
