@@ -572,3 +572,46 @@ nav a, nav a:visited, nav a:active {
         padding: 2rem clamp(0.75rem, 2.5vw, 1rem) 3rem;
     }
 }
+
+/* Section header bar shared by the newspaper-style pages: a dark rule, a label, and an optional note on the right */
+.front-masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    font-family: var(--font-condensed);
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
+
+.front-masthead-title {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    line-height: inherit;
+    color: var(--color-text);
+}
+
+.front-date,
+.front-dateline {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--color-muted);
+}
+
+.front-masthead-link,
+.front-masthead-link:visited {
+    color: var(--color-muted);
+    text-decoration: none;
+}
+
+.front-masthead-link:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+}

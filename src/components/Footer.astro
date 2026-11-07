@@ -1,7 +1,7 @@
 ---
 ---
 <footer class="footer">
-  <div class="footer-accent-bar">
+  <div class="footer-accent-bar" aria-hidden="true">
     <div class="accent-segment accent-red"></div>
     <div class="accent-segment accent-orange"></div>
     <div class="accent-segment accent-yellow"></div>
@@ -11,117 +11,48 @@
   </div>
   <div class="footer-inner">
     <div class="footer-content">
-      <div class="footer-col footer-col--lead">
-        <h3 class="footer-col-heading">About</h3>
-        <p class="footer-lede">
-          This website is about software development, teamwork, research, and the human side of complex systems.
+      <section class="footer-col">
+        <h2 class="footer-col-heading">About</h2>
         <p>
-          I enjoy reading and writing. Publishing texts gives me some extra motivation to really think matters through and clarify my opinions.
+          Writing on software development, teamwork, research, and the human side of complex systems.
+          Grouped under <a href="/tags/dev/">software development</a>, <a href="/tags/hci/">human-computer interaction</a> and <a href="/tags/research/">research</a>.
         </p>
+        <p class="footer-note">Opinions are my own, not those of my current, past or future employers.</p>
+      </section>
+      <section class="footer-col">
+        <h2 class="footer-col-heading">Follow</h2>
+        <ul class="footer-links">
+          <li><a href="/rss.xml">RSS feed</a> <span class="footer-note">full text</span></li>
+          <li><a href="https://mastodon.social/@arttuv" target="_blank" rel="noopener noreferrer">Mastodon</a></li>
+        </ul>
+      </section>
+      <section class="footer-col">
+        <h2 class="footer-col-heading">Contact</h2>
         <p>
-          Texts are grouped under tags <a href="/tags/dev/">software development</a>, <a href="/tags/hci/">human-computer interaction</a> and <a href="/tags/research/">research</a>.
-        </p>
-        <p>
-          Opinions expressed here are my own, and do not reflect my current, past or future employers.
-        </p>
-      </div>
-      <div class="footer-col">
-        <h3 class="footer-col-heading">Follow</h3>
-        <p>
-          <a href="/rss.xml">RSS Feed</a>
-        </p>
-        <p>Full text in RSS, there is no need to visit the site if you prefer not to.</p>
-        <p>Let me know if you have issues with the feed.</p>
-      </div>
-      <div class="footer-col">
-        <h3 class="footer-col-heading">Contact</h3>
-        <p>
-          <a href="/author/">Read about the author</a>
-        </p>
-        <p>
-          You can find me on <a href="https://mastodon.social/@arttuv" target="_blank" rel="noopener noreferrer">Mastodon</a> or <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a>.
-        </p>
-        <p>
-          If you'd like to work together or just connect, <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a> is the best way to reach me.
-        </p>
-        <p>
+          To work together or just connect, <a href="https://www.linkedin.com/in/arttu-viljakainen/">LinkedIn</a> is the best way to reach me.
           In Helsinki and want to have a beer? Sure, just drop a message. :)
         </p>
-      </div>
+      </section>
     </div>
     <div class="footer-bottom">
-      <p>© {new Date().getFullYear()} Arttu Viljakainen. Texts licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Map from <a href="https://simplemaps.com/resources/svg-europe">simplemaps</a>.</p>
+      <p>© {new Date().getFullYear()} Arttu Viljakainen. Texts licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</p>
       <p>Built with <a href="https://astro.build">Astro</a>, hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
     </div>
   </div>
 </footer>
 
 <style>
+    /* A colophon on the same paper as the page, under the Bauhaus stripe */
     footer {
-        background-color: #050510;
-        color: #ccc;
         width: 100%;
-        margin-top: 4rem;
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* Nebula / deep-space color clouds */
-    footer::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background:
-          radial-gradient(ellipse 40% 50% at 15% 60%, rgba(150, 61, 151, 0.12), transparent),
-          radial-gradient(ellipse 35% 45% at 75% 30%, rgba(0, 157, 220, 0.10), transparent),
-          radial-gradient(ellipse 30% 55% at 50% 80%, rgba(224, 58, 62, 0.07), transparent),
-          radial-gradient(ellipse 25% 35% at 85% 75%, rgba(97, 187, 70, 0.06), transparent);
-        pointer-events: none;
-    }
-
-    /* Star field */
-    footer::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background:
-          radial-gradient(1.2px 1.2px at 10% 15%, #fff, transparent),
-          radial-gradient(1px 1px at 25% 35%, rgba(255,255,255,0.7), transparent),
-          radial-gradient(1.5px 1.5px at 40% 8%, #fff, transparent),
-          radial-gradient(1px 1px at 55% 42%, rgba(255,255,255,0.6), transparent),
-          radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.8), transparent),
-          radial-gradient(1.8px 1.8px at 85% 30%, #fff, transparent),
-          radial-gradient(1px 1px at 15% 55%, rgba(255,255,255,0.5), transparent),
-          radial-gradient(1.2px 1.2px at 30% 70%, rgba(255,255,255,0.7), transparent),
-          radial-gradient(1.5px 1.5px at 50% 60%, #fff, transparent),
-          radial-gradient(1px 1px at 65% 75%, rgba(255,255,255,0.6), transparent),
-          radial-gradient(1.3px 1.3px at 80% 55%, rgba(255,255,255,0.8), transparent),
-          radial-gradient(1.6px 1.6px at 92% 65%, #fff, transparent),
-          radial-gradient(1px 1px at 5% 85%, rgba(255,255,255,0.5), transparent),
-          radial-gradient(1.2px 1.2px at 20% 92%, rgba(255,255,255,0.7), transparent),
-          radial-gradient(1.4px 1.4px at 45% 88%, rgba(255,255,255,0.6), transparent),
-          radial-gradient(1px 1px at 60% 95%, rgba(255,255,255,0.5), transparent),
-          radial-gradient(1.7px 1.7px at 78% 82%, #fff, transparent),
-          radial-gradient(1px 1px at 95% 90%, rgba(255,255,255,0.7), transparent),
-          radial-gradient(1.3px 1.3px at 35% 48%, rgba(255,255,255,0.5), transparent),
-          radial-gradient(1.1px 1.1px at 88% 12%, rgba(255,255,255,0.8), transparent),
-          radial-gradient(0.8px 0.8px at 3% 40%, rgba(255,255,255,0.4), transparent),
-          radial-gradient(0.8px 0.8px at 47% 25%, rgba(255,255,255,0.4), transparent),
-          radial-gradient(0.8px 0.8px at 62% 50%, rgba(255,255,255,0.35), transparent),
-          radial-gradient(0.8px 0.8px at 97% 45%, rgba(255,255,255,0.4), transparent);
-        pointer-events: none;
-        animation: starTwinkle 8s ease-in-out infinite alternate;
-    }
-
-    @keyframes starTwinkle {
-        0% { opacity: 0.7; }
-        50% { opacity: 1; }
-        100% { opacity: 0.8; }
+        margin-top: 5rem;
+        background: var(--color-bg);
+        color: var(--color-text);
     }
 
     .footer-accent-bar {
         display: flex;
-      height: 6px;
+        height: 6px;
         width: 100%;
     }
 
@@ -137,93 +68,111 @@
     .accent-purple { background-color: var(--color-purple); }
 
     .footer-inner {
-        max-width: 70rem;
+        max-width: 58rem;
         margin: 0 auto;
-      padding: 3.5rem 1.25rem 2rem;
-        position: relative;
-        z-index: 1;
+        padding: 2.25rem 0 1.75rem;
     }
 
     .footer-content {
         display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(14rem, 0.85fr) minmax(14rem, 0.95fr);
-      gap: 3rem;
-      padding-bottom: 2.5rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr) minmax(0, 1.1fr);
+        gap: 2.5rem;
+        padding-bottom: 1.75rem;
     }
 
     .footer-col-heading {
+        margin: 0 0 0.75rem;
+        padding: 0 0 0.5rem;
+        border-bottom: 1px solid var(--color-border);
         font-family: var(--font-condensed);
-      font-size: 0.82rem;
-        font-weight: 400;
-        text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: rgba(255,255,255,0.56);
-        margin-top: 0;
-      margin-bottom: 1.1rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: var(--color-text);
     }
 
     .footer-col p {
-      font-size: 0.95rem;
-      line-height: 1.68;
-      margin-bottom: 0.75rem;
-      color: rgba(255,255,255,0.82);
+        margin: 0 0 0.6rem;
+        font-family: var(--font-reading);
+        font-size: 0.98rem;
+        font-weight: 300;
+        line-height: 1.6;
     }
 
-    .footer-col--lead {
-      max-width: 28rem;
+    .footer-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-reading);
+        font-size: 0.98rem;
+        line-height: 1.6;
     }
 
-    .footer-lede {
-      font-family: var(--font-serif);
-      font-size: clamp(1.35rem, 2.3vw, 1.85rem);
-      line-height: 1.22;
-      letter-spacing: -0.02em;
-      color: #f4efe8;
-      margin: 0 0 1.1rem;
+    .footer-links li {
+        margin: 0 0 0.3rem;
     }
 
-    footer a {
-        color: #aac4f0;
+    .footer-col .footer-note,
+    .footer-links .footer-note {
+        font-family: var(--font-condensed);
+        font-size: 0.85rem;
+        color: var(--color-muted);
+    }
+
+    .footer-links .footer-note {
+        margin-left: 0.35rem;
+    }
+
+    footer a,
+    footer a:visited {
+        color: var(--color-link);
         text-decoration: none;
     }
 
     footer a:hover {
         text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.15em;
     }
 
     .footer-bottom {
-      padding-top: 1.4rem;
         display: flex;
         justify-content: space-between;
         gap: 1rem;
         flex-wrap: wrap;
+        padding-top: 1rem;
+        border-top: 1px solid var(--color-border);
     }
 
     .footer-bottom p {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.36);
         margin: 0;
+        font-family: var(--font-condensed);
+        font-size: 0.8rem;
         line-height: 1.5;
+        color: var(--color-muted);
     }
 
-    .footer-bottom a {
-      color: rgba(255,255,255,0.5);
+    .footer-bottom a,
+    .footer-bottom a:visited {
+        color: var(--color-muted);
+        text-decoration: underline;
+        text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    }
+
+    @media (max-width: 1000px) {
+        .footer-inner {
+            padding-inline: 1.25rem;
+        }
     }
 
     @media (max-width: 800px) {
         .footer-content {
             grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-bottom: 2rem;
-      }
+            gap: 1.75rem;
+        }
 
-      .footer-inner {
-        padding: 3rem 1rem 1.75rem;
-      }
-
-      .footer-col--lead {
-        max-width: none;
+        .footer-inner {
+            padding: 2rem clamp(0.75rem, 2.5vw, 1rem) 1.5rem;
         }
 
         .footer-bottom {

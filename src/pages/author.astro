@@ -2,10 +2,7 @@
 import "../styles/global.css"
 import { Image } from "astro:assets"
 import BaseLayout from "../layouts/BaseLayout.astro"
-import BauhausBlock from "../components/BauhausBlock.astro"
 import BauhausArt from "../components/BauhausArt.astro"
-import BauhausDivider from "../components/BauhausDivider.astro"
-import CareerMission from "../components/CareerMission.astro"
 import arttu from "../images/arttuv-bw.jpeg"
 const title = "Arttu Viljakainen"
 const description = "Arttu Viljakainen is a software development consultant from Finland."
@@ -14,9 +11,13 @@ const description = "Arttu Viljakainen is a software development consultant from
 <BaseLayout title={title} description={description}>
   <div class="author-page">
 
+    <header class="front-masthead">
+      <span class="front-masthead-title">Author</span>
+      <span class="front-dateline">Helsinki · 60.17°N 24.94°E</span>
+    </header>
+
     <div class="author-hero">
       <div class="author-hero-text">
-        <BauhausBlock slug="author" tags={["dev", "hci", "research"]} direction="horizontal" />
         <h1>Arttu Viljakainen</h1>
         <p class="author-role">Software development consultant</p>
         <p>
@@ -50,11 +51,16 @@ const description = "Arttu Viljakainen is a software development consultant from
           My very occasional photos can be found on <a href="https://photos.arttuv.com" target="_blank" rel="noopener noreferrer">photos.arttuv.com</a>.
         </p>
       </div>
-      <div class="author-hero-photo">
+      <figure class="author-hero-photo">
         <Image src={arttu} alt="Arttu Viljakainen" loading="eager" />
-      </div>
+        <figcaption>Arttu, Helsinki</figcaption>
+      </figure>
     </div>
 
+    <section class="author-section" aria-labelledby="skills-heading">
+    <header class="front-masthead">
+      <h2 class="front-masthead-title" id="skills-heading">Skills &amp; education</h2>
+    </header>
     <div class="author-skills">
       <div class="skill-section skill-section--dev">
         <p class="skill-label">Technical</p>
@@ -92,10 +98,13 @@ const description = "Arttu Viljakainen is a software development consultant from
         </ul>
       </div>
     </div>
+    </section>
 
-    <BauhausDivider seed="author-skills" height="20px" spacing="2.5rem" />
-
-    <div class="line-heading"><h2>Work history</h2></div>
+    <section class="author-section" aria-labelledby="work-heading">
+    <header class="front-masthead">
+      <h2 class="front-masthead-title" id="work-heading">Work history</h2>
+      <span class="front-dateline">2008 – now</span>
+    </header>
 
     <div class="cv-listing">
       <div class="cv-item-time"><span>Now</span></div>
@@ -137,9 +146,13 @@ const description = "Arttu Viljakainen is a software development consultant from
         <p>Worked on a desktop application for sustainability impact assessment focusing on improving the user experience and XML processing.</p>
       </div>
     </div>
+    </section>
 
-    <BauhausDivider seed="author-origin" height="20px" spacing="2.5rem" />
-
+    <section class="author-section" aria-labelledby="origin-heading">
+    <header class="front-masthead">
+      <h2 class="front-masthead-title" id="origin-heading">Beginnings</h2>
+      <span class="front-dateline">1999</span>
+    </header>
     <div class="author-origin">
       <p>
         I started programming around 1999 in QBasic, and then in Turbo Pascal. No internet, just library books and trial and error —
@@ -149,6 +162,7 @@ const description = "Arttu Viljakainen is a software development consultant from
         That spark never went away. I never really thought of doing anything else for a living.
       </p>
     </div>
+    </section>
 
     <BauhausArt />
 
@@ -156,33 +170,35 @@ const description = "Arttu Viljakainen is a software development consultant from
 </BaseLayout>
 
 <style>
+    /* Same 58rem column and section bars as the home page */
     .author-page {
-      max-width: 54rem;
+        max-width: 58rem;
         margin: 0 auto;
+        padding: 2.5rem 0 1rem;
     }
 
-    /* Hero */
+    /* Hero: text at a readable measure, the photo as a captioned picture beside it */
     .author-hero {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-        align-items: flex-start;
-        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 15rem;
+        gap: 3rem;
+        align-items: start;
+        padding-top: 1.75rem;
     }
 
     .author-hero-text {
-        flex: 1;
         min-width: 0;
+        max-width: 40rem;
     }
 
     .author-hero-text h1 {
-        margin-top: 1.5rem;
+        margin-top: 0;
         margin-bottom: 0.25rem;
     }
 
     .author-hero-text p {
-      font-size: 1.02rem;
-      line-height: 1.72;
+        font-size: 1.02rem;
+        line-height: 1.72;
         margin-bottom: 1rem;
     }
 
@@ -212,42 +228,70 @@ const description = "Arttu Viljakainen is a software development consultant from
     }
 
     .author-hero-photo {
-        width: 160px;
-        flex-shrink: 0;
+        margin: 0.5rem 0 0;
     }
 
     .author-hero-photo img {
         width: 100%;
         height: auto;
         display: block;
-        border: 1px solid var(--color-border);
         border-radius: 0.25rem;
     }
 
-    /* Skills */
+    .author-hero-photo figcaption {
+        margin-top: 0.5rem;
+        padding-top: 0.45rem;
+        border-top: 1px solid var(--color-border);
+        font-family: var(--font-condensed);
+        font-size: 0.82rem;
+        letter-spacing: 0.02em;
+        color: var(--color-muted);
+    }
+
+    .author-section {
+        margin-top: 3.5rem;
+    }
+
+    /* Skills: three columns separated by hairline rules, each marked with its colour */
     .author-skills {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1.5rem;
-        margin: 2.5rem 0;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin: 0 -1.5rem;
+        padding-top: 1.5rem;
     }
 
     .skill-section {
-        border-top: 2px solid;
-        padding-top: 0.75rem;
+        --skill-color: var(--color-red);
+        padding: 0 1.5rem;
+        border-left: 1px solid var(--color-border);
     }
 
-    .skill-section--dev   { border-color: var(--color-red); }
-    .skill-section--hci   { border-color: var(--color-blue); }
-    .skill-section--research { border-color: var(--color-yellow); }
+    .skill-section:first-child {
+        border-left: 0;
+    }
+
+    .skill-section--dev      { --skill-color: var(--color-red); }
+    .skill-section--hci      { --skill-color: var(--color-blue); }
+    .skill-section--research { --skill-color: var(--color-yellow); }
 
     .skill-label {
         font-family: var(--font-condensed);
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--color-muted);
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: var(--color-text);
         margin: 0 0 0.75rem;
+    }
+
+    .skill-label::before {
+        content: "";
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+        background: var(--skill-color);
+        vertical-align: 0.05em;
     }
 
     .skill-section ul {
@@ -273,7 +317,7 @@ const description = "Arttu Viljakainen is a software development consultant from
     .cv-listing {
         display: grid;
         grid-template-columns: 4.5rem 1fr;
-        margin-bottom: 1.5rem;
+        padding-top: 1.5rem;
     }
 
     .cv-item-time {
@@ -300,9 +344,10 @@ const description = "Arttu Viljakainen is a software development consultant from
     }
 
     .cv-item-content {
+        max-width: 44rem;
         padding: 0 0 1.25rem 1.25rem;
-      font-size: 1rem;
-      line-height: 1.66;
+        font-size: 1rem;
+        line-height: 1.66;
     }
 
     .cv-item-content p {
@@ -323,12 +368,10 @@ const description = "Arttu Viljakainen is a software development consultant from
 
     /* Origin story */
     .author-origin {
-      font-size: 1.02rem;
-      line-height: 1.72;
-        color: var(--color-muted);
-        border-top: 1px solid var(--color-border);
-        padding-top: 1.25rem;
-        margin-bottom: 2rem;
+        max-width: 40rem;
+        padding-top: 1.5rem;
+        font-size: 1.02rem;
+        line-height: 1.72;
     }
 
     .author-origin p {
@@ -336,20 +379,35 @@ const description = "Arttu Viljakainen is a software development consultant from
     }
 
     @media (max-width: 800px) {
+        .author-page {
+            padding: 1.5rem clamp(0.75rem, 2.5vw, 1rem) 1rem;
+        }
+
         .author-hero {
-            flex-direction: column-reverse;
-            gap: 1rem;
-            align-items: center;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 1.5rem;
         }
 
         .author-hero-photo {
-            width: 100%;
-            max-width: 20ch;
+            order: -1;
+            max-width: 14rem;
+            margin: 0;
         }
 
         .author-skills {
-            grid-template-columns: 1fr;
-            gap: 1rem;
+            grid-template-columns: minmax(0, 1fr);
+            margin: 0;
+        }
+
+        .skill-section {
+            padding: 0;
+            border-left: 0;
+        }
+
+        .skill-section + .skill-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-border);
         }
     }
 </style>

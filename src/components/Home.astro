@@ -72,15 +72,29 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
     </section>
   )}
 
-  <article class="author-bio">
+  <section class="author-bio" aria-labelledby="author-label">
+    <header class="front-masthead">
+      <h2 class="front-masthead-title" id="author-label">Author</h2>
+      <span class="front-dateline">Helsinki · 60.17°N 24.94°E</span>
+    </header>
     <div class="author-bio-top">
       <div class="author-bio-intro">
-        <p class="author-kicker">Author</p>
-        <h2 class="author-name">Arttu</h2>
+        <p class="author-name">Arttu</p>
         <p class="from-eu-with-love">🇪🇺 🇫🇮 ❤️ 🏳️‍🌈</p>
         <p class="author-bio-deck">
           Software development consultant writing about software, teams, AI, and the human side of building complex systems.
         </p>
+        <div class="author-bio-text">
+          <p>
+            I love it when people can work as an efficient cross-functional egalitarian team,
+            combining multiple perspectives and skillsets to solve complex, systemic problems.
+          </p>
+          <p>
+            I'm fascinated about how teams make sense of complexity, how tools can empower rather than constrain human
+            thought, and how we can build software that amplify the lives and work of humans.
+          </p>
+        </div>
+        <a class="section-more author-bio-more" href="/author/">Read more about the author →</a>
       </div>
 
       <div class="author-bio-aside">
@@ -99,7 +113,7 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
         </div>
       </div>
     </div>
-  </article>
+  </section>
 
 
   {marginalia.length > 0 && (
@@ -136,33 +150,6 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
     </section>
   ))}
 
-  <section class="home-section home-about">
-    <div class="home-about-grid">
-      <div class="home-about-copy">
-        <p class="home-about-kicker">Nordic thinking.</p>
-        <p>
-          I love it when people can work as an efficient cross-functional egalitarian team,
-          combining multiple perspectives and skillsets to solve complex, systemic problems.
-        </p>
-        <p>
-          I'm fascinated about how teams make sense of complexity, how tools can empower rather than constrain human
-          thought, and how we can build software that amplify the lives and work of humans.
-        </p>
-        <a class="section-more" href="/author/">Read more about the author →</a>
-      </div>
-
-      <div class="crew-map" aria-label="Map showing Helsinki, Finland">
-        <div class="map-viewport">
-          <div class="helsinki-beacon">
-            <span class="beacon-ping"></span>
-            <span class="beacon-dot"></span>
-          </div>
-          <span class="beacon-label">HEL</span>
-        </div>
-        <span class="beacon-coords">Helsinki · 60.17°N 24.94°E</span>
-      </div>
-    </div>
-  </section>
 </div>
 
 <style>
@@ -173,46 +160,6 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
     }
 
     /* Front page: a newspaper-style grid of stories separated by hairline column rules */
-    .front-masthead {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 1rem;
-        padding: 0.7rem 0;
-        border-top: 1px solid var(--color-text);
-        border-bottom: 1px solid var(--color-border);
-        font-family: var(--font-condensed);
-        font-size: 0.9rem;
-        letter-spacing: 0.02em;
-    }
-
-    .front-masthead-title {
-        margin: 0;
-        padding: 0;
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: 600;
-        color: var(--color-text);
-    }
-
-    .front-date {
-        margin: 0;
-        font-family: inherit;
-        font-size: inherit;
-        color: var(--color-muted);
-    }
-
-    .front-masthead-link,
-    .front-masthead-link:visited {
-        color: var(--color-muted);
-        text-decoration: none;
-    }
-
-    .front-masthead-link:hover {
-        color: var(--color-text);
-        text-decoration: underline;
-    }
-
     .front {
         display: grid;
         grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
@@ -388,11 +335,6 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
 
     .author-bio-intro {
         min-width: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
     }
 
     .author-bio-aside {
@@ -519,31 +461,17 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
     .from-eu-with-love {
         font-weight: 200;
         font-size: 0.96rem;
-      margin: 0 0 1rem;
-      text-align: center;
+        margin: 0 0 1rem;
     }
 
     .author-bio {
-        margin: 2rem 0;
-        padding: 1.5rem 0;
-        font-size: 1.04rem;
-        line-height: 1.72;
+        margin-top: 3.5rem;
     }
 
-    .author-bio p {
-        line-height: 1.72;
-      text-align: center;
+    .author-bio .author-bio-top {
+        padding-top: 1.75rem;
     }
 
-    .author-kicker {
-      margin: 0 0 0.85rem;
-      font-family: var(--font-condensed);
-      font-size: 0.9rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-red);
-      line-height: 1;
-    }
 
     .author-name {
       margin: 0 0 1rem;
@@ -556,10 +484,24 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
 
     .author-bio-deck {
         max-width: 32rem;
-        margin: 0;
+        margin: 0 0 1.25rem;
         font-family: var(--font-condensed);
         font-size: 1rem;
+        line-height: 1.5;
         color: var(--color-muted);
+    }
+
+    .author-bio-text p {
+        max-width: 36rem;
+        margin: 0 0 1rem;
+        font-family: var(--font-reading);
+        font-size: 1.1rem;
+        font-weight: 300;
+        line-height: 1.65;
+    }
+
+    .author-bio .author-bio-more {
+        margin-top: 0.25rem;
     }
 
     .sidebar-photo-link:hover .photo-reveal-front img,
@@ -571,127 +513,6 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
     .sidebar-photo-link:hover .photo-reveal-back,
     .photo-reveal.revealed .photo-reveal-back {
         opacity: 1;
-    }
-
-    .home-about {
-        margin-top: 4.5rem;
-    }
-
-    .home-about-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 46rem) 11rem;
-        justify-content: space-between;
-        gap: 2.5rem;
-        align-items: start;
-    }
-
-    .home-about-copy p {
-        font-family: var(--font-reading);
-        font-size: 1.1rem;
-        font-weight: 300;
-        line-height: 1.65;
-    }
-
-    .home-about-copy .home-about-kicker {
-        margin: 0 0 0.75rem;
-        font-size: 1.35rem;
-        font-weight: 400;
-        font-style: italic;
-    }
-
-    .home-about-copy .section-more {
-        margin-top: 0.25rem;
-    }
-
-    .map-viewport {
-        width: 100%;
-        aspect-ratio: 5 / 4;
-        background: url('/europe-borders.svg') no-repeat;
-        background-size: 280%;
-        background-position: 72% 30%;
-        position: relative;
-        opacity: 0.5;
-        transition: opacity 0.4s ease;
-    }
-
-    .map-viewport:hover {
-        opacity: 0.8;
-    }
-
-    .dark .map-viewport {
-        filter: invert(1);
-        opacity: 0.4;
-    }
-
-    .dark .map-viewport:hover {
-        opacity: 0.6;
-    }
-
-    .helsinki-beacon {
-        position: absolute;
-        top: 50%;
-        left: 60%;
-        transform: translate(-50%, -50%);
-        width: 12px;
-        height: 12px;
-    }
-
-    .beacon-dot,
-    .beacon-ping {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-    }
-
-    .beacon-dot {
-        background: var(--color-red);
-    }
-
-    .beacon-ping {
-        border: 2px solid var(--color-red);
-        animation: beaconPing 3s ease-out infinite;
-    }
-
-    @keyframes beaconPing {
-        0% { width: 5px; height: 5px; opacity: 0.8; }
-        70% { width: 20px; height: 20px; opacity: 0; }
-        100% { width: 20px; height: 20px; opacity: 0; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        .beacon-ping {
-            animation: none;
-        }
-    }
-
-    .beacon-label {
-        position: absolute;
-        top: 42%;
-        left: 63%;
-        font-family: var(--font-condensed);
-        font-size: 0.65rem;
-        color: var(--color-red);
-        letter-spacing: 0.05em;
-    }
-
-    /* Undo the map's dark-mode inversion so the marker stays red */
-    .dark .beacon-label,
-    .dark .helsinki-beacon {
-        filter: invert(1);
-    }
-
-    .beacon-coords {
-        display: block;
-        margin-top: 0.4rem;
-        font-family: var(--font-condensed);
-        font-size: 0.8rem;
-        color: var(--color-muted);
-        text-align: center;
-        letter-spacing: 0.03em;
     }
 
     @media (max-width: 800px) {
@@ -742,15 +563,6 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
 
         .home-section {
             margin-top: 2.75rem;
-        }
-
-        .home-about-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .crew-map {
-            max-width: 13rem;
         }
     }
 </style>
