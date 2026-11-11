@@ -354,15 +354,15 @@ nav a, nav a:visited, nav a:active {
 
 /* Extra small screens */
 @media (max-width: 360px) {
-    
+
     main {
         padding: 0 0.25rem 0.25rem;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
-    
+
 
 }
 

@@ -110,7 +110,7 @@ In general, Endsley argues that as AI-systems get more advanced, more issues peo
 
 ## Don't add bullshit jobs to the world
 
-Graeber's 'bullshit jobs' idea (*Bullshit Jobs*, 2018) is a reminder that the danger isn't just automating work: it's scaling meaningless work. When designing LLM systems, the goal shouldn't be to produce more output faster, but to eliminate work that shouldn't exist and support people in doing work that actually matters.
+Graeber's 'bullshit jobs' idea (*Bullshit Jobs*, 2018) is a reminder that automation can also scale meaningless work. When designing LLM systems, the goal shouldn't be to produce more output faster, but to eliminate work that shouldn't exist and support people in doing work that actually matters.
 
 As Bainbridge and Endsley note, one irony is that the pursuit to automate everything that can be automated leaves the human to handle a random selection of tasks that could not be automated. There is a risk that their work does not make sense anymore. When people are in control of the process, their tools have good ergonomics, and their work consists of varied tasks, it seems to contribute to feelings of achievement (Bainbridge, 1983, referencing [Ekkers et al., 1977](https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780080220123500106)).
 
