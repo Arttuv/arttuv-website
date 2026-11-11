@@ -2,7 +2,7 @@
 pubDate: "2017-06-15"
 title: "Reference Types in Java"
 tags: ["dev"]
-summary: "An explanation of Java's four reference types — strong, soft, weak, and phantom — and how they interact with the garbage collector for caching and object lifecycle management."
+summary: "Java has four reference types: strong, soft, weak and phantom. This is how they work with the garbage collector, and how they can be used for caching and managing object lifecycles."
 ---
 
 Different reference types in Java provide access to the object lifecycle, giving us tools for object reuse (object pools) and even a possibility to achieve a reliable object finalization. Differences between references can be explained by reachability. This is how Java API Specification defines reachability:

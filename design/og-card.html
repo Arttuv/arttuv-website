@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>OG card (1200×630)</title>
+<!-- Source for public/images/og-default.png. Screenshot at 1200×630, device scale 2. -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Roboto+Condensed:wght@400;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #fffbf8;
+    color: #181512;
+    font-family: 'Newsreader', serif;
+  }
+
+  .card {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    padding: 72px 96px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .mark {
+    display: grid;
+    place-items: center;
+    width: 76px;
+    height: 76px;
+    border: 3px solid currentColor;
+    border-radius: 4px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+  }
+
+  .name {
+    font-size: 44px;
+    transform: translateY(0.12em);
+  }
+
+  .rule {
+    margin-top: 64px;
+    border-top: 2px solid currentColor;
+  }
+
+  h1 {
+    margin-top: 40px;
+    font-size: 72px;
+    text-wrap: balance;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+
+  .site {
+    margin-top: auto;
+    margin-bottom: 52px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 28px;
+    color: #666;
+  }
+
+  .bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 16px;
+    display: flex;
+  }
+
+  .bar span { flex: 1; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand">
+      <span class="mark">AV</span>
+      <span class="name">Arttu V.</span>
+    </div>
+    <div class="rule"></div>
+    <h1>A nordic approach to software, systems and people</h1>
+    <p class="site">arttuv.com</p>
+    <div class="bar">
+      <span style="background:#E03A3E"></span><span style="background:#F5821F"></span><span style="background:#FDB827"></span><span style="background:#61BB46"></span><span style="background:#009DDC"></span><span style="background:#963D97"></span>
+    </div>
+  </div>
+</body>
+</html>

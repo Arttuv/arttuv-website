@@ -2,7 +2,7 @@
 pubDate: "2010-10-11"
 title: "Who's fault is it anyway?"
 tags: ["hci"]
-summary: "When people can't use a device, they blame themselves. They shouldn't — bad design is almost always the culprit."
+summary: "When people can't use a device, they blame themselves. Usually the design is to blame, not the user."
 ---
 People tend to use faulty mental models when thinking what caused some action to fail or succeed.
 

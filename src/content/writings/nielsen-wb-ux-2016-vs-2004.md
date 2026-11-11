@@ -2,7 +2,7 @@
 pubDate: "2017-06-15"
 title: "Nielsen: Web UX 2016 vs 2004"
 tags: ["hci"]
-summary: "Notes from Nielsen's keynote comparing web UX in 2016 vs 2004. Task success is up but findability remains the biggest problem — information architecture still matters most."
+summary: "Notes from Nielsen's keynote comparing web UX in 2016 and 2004. Users succeed in their tasks more often now, but finding things is still the biggest problem, so information architecture matters most."
 ---
 Jakob Nielsen had a keynote at the UX Conference on Web UX 2016 vs 2004. They made a study on web UX in 2016 and reflected that to the results from a similar study in 2004. The video is only 20 minutes and worth watching. Below you can find a summary.
 

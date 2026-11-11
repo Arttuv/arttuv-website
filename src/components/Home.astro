@@ -34,16 +34,11 @@ const otherThemes = resolvedGroups.slice(1).map((group) => {
 
 const featuredSlugs = new Set(featuredGroups.flatMap((group) => group.slugs))
 const latestPosts = allWritings.filter((post) => !featuredSlugs.has(post.id)).slice(0, 3)
-
-// The masthead shows today's date like a newspaper; the build date is the fallback without JavaScript
-const mastheadDateOptions: Intl.DateTimeFormatOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric" }
-const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
 ---
 
 <div class="home-page">
   <header class="front-masthead">
     <h2 class="front-masthead-title">Front page</h2>
-    <time class="front-date" data-front-date>{buildDate}</time>
   </header>
 
   <div class="front">
@@ -64,7 +59,7 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
     <section class="front-latest" aria-labelledby="front-latest-label">
       <header class="front-masthead">
         <h2 class="front-masthead-title" id="front-latest-label">Latest</h2>
-        <a class="front-masthead-link" href="/writings/">All writings →</a>
+        <a class="front-masthead-link" href="/writings/">All writings</a>
       </header>
       <div class="front-row">
         {latestPosts.map((post) => <Story post={post} variant="column" />)}
@@ -82,7 +77,7 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
         <p class="author-name">Arttu</p>
         <p class="from-eu-with-love">🇪🇺 🇫🇮 ❤️ 🏳️‍🌈</p>
         <p class="author-bio-deck">
-          Software development consultant writing about software, teams, AI, and the human side of building complex systems.
+          I'm a software development consultant from Helsinki. I write about software development, teams and AI.
         </p>
         <div class="author-bio-text">
           <p>
@@ -94,7 +89,7 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
             thought, and how we can build software that amplify the lives and work of humans.
           </p>
         </div>
-        <a class="section-more author-bio-more" href="/author/">Read more about the author →</a>
+        <a class="section-more author-bio-more" href="/author/">Read more about the author</a>
       </div>
 
       <div class="author-bio-aside">
@@ -105,7 +100,7 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
                 <Image src={arttu} alt="Arttu V." loading="eager" />
               </div>
               <div class="photo-reveal-back">
-                <span>This is Arttu, read more about them here →</span>
+                <span>This is Arttu, read more about them here</span>
               </div>
             </div>
           </a>
@@ -120,9 +115,9 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
     <section class="home-section">
       <header class="front-masthead">
         <h2 class="front-masthead-title">Marginalia</h2>
-        <a class="front-masthead-link" href="/marginalia/">All marginalia →</a>
+        <a class="front-masthead-link" href="/marginalia/">All marginalia</a>
       </header>
-      <p class="home-section-desc">Short notes, links, and fragments that stand on their own.</p>
+      <p class="home-section-desc">Short notes and links, mostly cross-posted from Mastodon.</p>
       <ul class="marginalia-list">
         {marginalia.slice(0, 3).map((entry) => (
           <li>
@@ -621,14 +616,4 @@ const buildDate = new Date().toLocaleDateString("en-us", mastheadDateOptions)
 
   document.addEventListener('DOMContentLoaded', initPhotoReveal);
   document.addEventListener('astro:page-load', initPhotoReveal);
-
-  function setFrontDate() {
-    const el = document.querySelector('[data-front-date]');
-    if (!el) return;
-    const today = new Date();
-    el.textContent = today.toLocaleDateString('en-us', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-    el.setAttribute('datetime', today.toISOString().slice(0, 10));
-  }
-
-  document.addEventListener('astro:page-load', setFrontDate);
 </script>

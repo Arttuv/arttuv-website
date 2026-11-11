@@ -24,7 +24,7 @@ export const featuredGroups: FeaturedGroup[] = [
   },
   {
     title: "Consulting & Process",
-    description: "Thoughts on agile, software development, and the consulting profession.",
+    description: "My thoughts on agile, software development and consulting.",
     spotlight: "agile-still-relevant",
     slugs: [
       "agile-still-relevant",
@@ -35,7 +35,7 @@ export const featuredGroups: FeaturedGroup[] = [
   },
   {
     title: "Situation Awareness",
-    description: "Situation awareness has been an especially interesting focus area to me. I'm often building tools for professionals, and it's essential to keep users engaged and in the loop. ",
+    description: "Situation awareness has been an especially interesting focus area to me. I'm often building tools for professionals, and it's essential to keep users engaged and in the loop.",
     spotlight: "designing-to-support-dsa",
     slugs: [
       "situation-awareness",

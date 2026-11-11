@@ -514,7 +514,6 @@ nav a, nav a:visited, nav a:active {
     color: var(--color-text);
 }
 
-.front-date,
 .front-dateline {
     margin: 0;
     font-family: inherit;
